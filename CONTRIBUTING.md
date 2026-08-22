@@ -19,7 +19,7 @@ Prefer the `add-mod` skill, or by hand:
 ## Test on Prism
 
 1. Create a Prism instance whose Minecraft version and loader match `pack/pack.toml`.
-2. Download `packwiz-installer-bootstrap.jar` from the latest release of https://github.com/packwiz/packwiz-installer-bootstrap/releases into the instance `.minecraft` folder (same folder as `options.txt`).
+2. Download `packwiz-installer-bootstrap.jar` from https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar into the instance `.minecraft` folder (same folder as `options.txt`).
 3. From `pack/` run `packwiz serve` and leave it running (`http://localhost:8080/pack.toml`).
 4. Instance settings → Custom commands → enable Custom Commands. Pre-launch:
 
