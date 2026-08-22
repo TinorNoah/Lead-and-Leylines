@@ -1,0 +1,3 @@
+# Keep export artifacts out of the pack index
+*.zip
+*.mrpack
