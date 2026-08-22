@@ -1,0 +1,30 @@
+# Exported packs
+*.zip
+*.mrpack
+
+# Never commit jars
+*.jar
+
+# Local Minecraft / launcher instances
+.minecraft/
+minecraft/
+instances/
+prismlauncher/
+*.prism
+
+# packwiz cache
+.packwiz/
+packwiz-cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*credentials*
+*secret*
+*.pem
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
