@@ -5,7 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
+import os
 import tomllib
 from pathlib import Path
 
@@ -49,9 +49,10 @@ def main() -> None:
         raise SystemExit(f"missing {PACK_TOML}")
     result = read_pack(PACK_TOML)
     if args.github_output:
-        github_output = Path(sys.environ.get("GITHUB_OUTPUT", ""))
-        if not github_output:
+        github_output_path = os.environ.get("GITHUB_OUTPUT")
+        if not github_output_path:
             raise SystemExit("GITHUB_OUTPUT is not set")
+        github_output = Path(github_output_path)
         with github_output.open("a", encoding="utf-8") as handle:
             for key, value in result.items():
                 handle.write(f"{key}={value}\n")
