@@ -4,7 +4,7 @@
 
 Follow current docs: https://packwiz.infra.link/tutorials/creating/getting-started/
 
-Confirm with `packwiz --version`. Work inside `pack/` for packwiz commands.
+Confirm with `packwiz help`. Work inside `pack/` for packwiz commands.
 
 ## Add a mod
 

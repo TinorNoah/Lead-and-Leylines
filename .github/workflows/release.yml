@@ -44,7 +44,6 @@ jobs:
         run: |
           go install github.com/packwiz/packwiz@latest
           echo "$HOME/go/bin" >> "$GITHUB_PATH"
-          packwiz --version
 
       - name: Refresh and export
         working-directory: pack
