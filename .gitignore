@@ -20,8 +20,6 @@ packwiz-cache/
 .env
 .env.*
 !.env.example
-*credentials*
-*secret*
 *.pem
 
 # OS
