@@ -1,25 +1,26 @@
 ---
 name: add-mod
-description: Search CurseForge or Modrinth, verify the candidate matches pack.toml Minecraft and loader versions, add it with packwiz, and run packwiz refresh. Use when adding a mod to The End Game pack.
+description: Use after minecraft-modding approval when installing a researched mod into Lead and Leylines with packwiz. Trigger when the user approved a specific file, or when running packwiz install/refresh for this pack. Do not use this skill to skip compatibility research.
 ---
 
 # Add a mod
+
+Do not run this until `minecraft-modding` Steps 1–4 are done and the user approved the specific file. This skill is Step 6 (install) only.
 
 Do not hardcode Minecraft or loader versions. Read them from `pack/pack.toml` (`[versions]`).
 
 ## Steps
 
-1. Read `minecraft` and the loader key/version from `pack/pack.toml` (or `python scripts/read_pack_versions.py`).
-2. Search CurseForge and/or Modrinth for the requested mod.
-3. Open the file/version that claims support for that Minecraft version and loader. If none exists, stop and tell the user. Do not add it "to try".
-4. From `pack/`, install:
+1. Re-verify the approved store file still lists this pack’s Minecraft version and loader.
+2. From `pack/`, install only that file (and **required** deps that also match):
    - `packwiz curseforge install <slug-or-url>` or
    - `packwiz modrinth install <slug-or-url>`
-   Aliases `packwiz cf add` / `packwiz mr add` are fine.
-5. Accept dependencies only when they also match the pack versions (or packwiz will prompt).
-6. `packwiz refresh`.
-7. Stage TOML only (`mods/*.pw.toml`, `index.toml`, `pack.toml` if changed). Never stage `.jar` files.
+   - Pin Modrinth with `packwiz modrinth install --project-id <id> --version-id <id> -y` (do not pass a slug together with `--version-id`)
+3. Set packwiz `side` to `client`, `server`, or `both` as approved. Server-logic mods needed in singleplayer are `both`.
+4. `packwiz refresh`.
+5. Update `docs/mods/manifest.md` (and the relevant `docs/mods/` decision log). Confirm it matches `pack/mods/*.pw.toml`.
+6. Stage TOML and docs only. Never stage `.jar` files.
 
 ## Side
 
-Set packwiz `side` to `client`, `server`, or `both` based on the mod's documented environment. Client-only mods must not be treated as server requirements.
+Client-only mods must not be treated as server requirements. Dedicated-server-only `side = "server"` is rare; do not leave packwiz’s default `server` on mods that should run in Prism singleplayer.

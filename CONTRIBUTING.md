@@ -8,22 +8,26 @@ Confirm with `packwiz help`. Work inside `pack/` for packwiz commands.
 
 ## Add a mod
 
-Prefer the `add-mod` skill, or by hand:
+Prefer the `minecraft-modding` skill (research and approval), then `add-mod` (packwiz install), or by hand:
 
 1. Read Minecraft version and loader from `pack/pack.toml`.
 2. Confirm the mod supports that Minecraft version and loader on CurseForge or Modrinth.
 3. `packwiz curseforge install <slug-or-url>` or `packwiz modrinth install <slug-or-url>`.
 4. `packwiz refresh`.
-5. Commit the new `*.pw.toml` and `index.toml` / `pack.toml` changes. Never commit jars.
+5. Commit the new `*.pw.toml`, `index.toml` / `pack.toml`, and `docs/mods/` updates. Never commit jars.
 
 ## Test on Prism
 
 1. Create a Prism instance whose Minecraft version and loader match `pack/pack.toml`.
 2. Download `packwiz-installer-bootstrap.jar` from https://github.com/packwiz/packwiz-installer-bootstrap/releases/download/v0.0.3/packwiz-installer-bootstrap.jar into the instance `.minecraft` folder (same folder as `options.txt`).
 3. From `pack/` run `packwiz serve` and leave it running (`http://localhost:8080/pack.toml`).
-4. Instance settings → Custom commands → enable Custom Commands. Pre-launch:
+4. Instance settings → Custom commands → enable Custom Commands. Paste this **exactly** (no extra quotes around `$INST_JAVA`; Prism's INI parser will smash those into `javaw.exe-jar`):
 
-   `"$INST_JAVA" -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml`
+   `$INST_JAVA -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml`
+
+   Pre-launch runs in the instance `.minecraft` folder, where the bootstrap jar lives. If you edit `instance.cfg` by hand, quote the **whole** value:
+
+   `PreLaunchCommand="$INST_JAVA -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml"`
 
 5. Launch. The installer syncs the instance to the current pack. If serve is down, pre-launch fails.
 
