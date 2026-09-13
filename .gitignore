@@ -1,4 +1,5 @@
 # Exported packs
+dist/
 *.zip
 *.mrpack
 

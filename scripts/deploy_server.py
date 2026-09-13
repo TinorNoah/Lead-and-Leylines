@@ -21,10 +21,16 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pack_artifacts import atlauncher_instructions, build_all
+from wings import Wings, node_configuration, wings_base_url
 from read_pack_versions import PACK_TOML, read_pack
 
 CURSEFORGE_GENERIC_UUID = "019bbf16-a3f3-470a-9c0b-f3995b5e032a"
 CURSEFORGE_GENERIC_NAME = "CurseForge Generic"
+FORGE_EGG_UUID = "ed072427-f209-4603-875c-f540c6dd5a65"
+FORGE_EGG_NAME = "Forge Minecraft"
+SERVER_MODS_REMOTE = "lead-and-leylines-server-mods.zip"
+OVERLAY_FILES = ("user_jvm_args.txt", "ops.json")
 EGG_IMPORT_URL = (
     "https://raw.githubusercontent.com/panel-eggs/minecraft/refs/heads/main"
     "/java/curseforge/egg-curse-forge-generic.json"
@@ -204,14 +210,53 @@ def find_node(client: PanelClient, fqdn: str, name: str) -> dict[str, Any]:
     raise SystemExit(f"no the panel node matching fqdn={fqdn!r} or name={name!r}; have: {listing}")
 
 
-def find_egg(client: PanelClient) -> dict[str, Any] | None:
+def find_egg_by(client: PanelClient, uuid: str, name: str) -> dict[str, Any] | None:
+    uuid_l = uuid.lower()
+    name_l = name.lower()
     for item in client.paginate("/api/application/eggs"):
         egg = attrs(item)
-        if str(egg.get("uuid") or "").lower() == CURSEFORGE_GENERIC_UUID:
+        if str(egg.get("uuid") or "").lower() == uuid_l:
             return egg
-        if str(egg.get("name") or "").lower() == CURSEFORGE_GENERIC_NAME.lower():
+        if str(egg.get("name") or "").lower() == name_l:
             return egg
     return None
+
+
+def find_egg(client: PanelClient) -> dict[str, Any] | None:
+    return find_egg_by(client, CURSEFORGE_GENERIC_UUID, CURSEFORGE_GENERIC_NAME)
+
+
+def find_forge_egg(client: PanelClient) -> dict[str, Any] | None:
+    return find_egg_by(client, FORGE_EGG_UUID, FORGE_EGG_NAME)
+
+
+def egg_with_variables(client: PanelClient, egg_id: int) -> dict[str, Any]:
+    return attrs(client.get(f"/api/application/eggs/{egg_id}", {"include": "variables"}))
+
+
+def environment_from_egg(egg: dict[str, Any], overrides: dict[str, str]) -> dict[str, str]:
+    values: dict[str, str] = {}
+    rel = (egg.get("relationships") or {}).get("variables") or {}
+    for raw in rel.get("data") or []:
+        variable = attrs(raw)
+        key = variable.get("env_variable")
+        if key:
+            values[str(key)] = str(variable.get("default_value") or "")
+    values.update(overrides)
+    return values
+
+
+def forge_environment(pack: dict[str, str]) -> dict[str, str]:
+    if pack["loader"].lower() != "forge":
+        raise SystemExit(
+            f"local panel deploy expects Forge; pack.toml loader is {pack['loader']!r}"
+        )
+    return {
+        "MC_VERSION": pack["minecraft"],
+        "FORGE_VERSION": f"{pack['minecraft']}-{pack['loader_version']}",
+        "BUILD_TYPE": "recommended",
+        "SERVER_JARFILE": "server.jar",
+    }
 
 
 def import_egg(client: PanelClient) -> dict[str, Any]:
@@ -433,9 +478,143 @@ def wait_installed(client: PanelClient, server_id: int, timeout: int) -> dict[st
     raise SystemExit(f"timed out waiting for install ({last})")
 
 
+def upsert_server(
+    client: PanelClient,
+    *,
+    server: dict[str, Any] | None,
+    server_name: str,
+    owner_id: int,
+    egg: dict[str, Any],
+    image: str,
+    environment: dict[str, str],
+    description: str,
+    external_id: str,
+    allocation: dict[str, Any] | None,
+    memory: int,
+    disk: int,
+    skip_scripts: bool,
+    start: bool,
+) -> dict[str, Any]:
+    if server is None:
+        if allocation is None:
+            raise SystemExit("no allocation available to create the panel server")
+        created = create_server(
+            client,
+            name=server_name,
+            description=description,
+            owner_id=owner_id,
+            egg=egg,
+            image=image,
+            environment=environment,
+            allocation_id=int(allocation["id"]),
+            memory=memory,
+            disk=disk,
+            external_id=external_id,
+            start=start,
+            skip_scripts=skip_scripts,
+        )
+        print("created the panel server")
+        return created
+    client.patch(
+        f"/api/application/servers/{server['id']}/details",
+        {
+            "name": server_name,
+            "user": owner_id,
+            "description": description,
+            "external_id": external_id,
+        },
+    )
+    updated = update_startup(
+        client,
+        int(server["id"]),
+        egg=egg,
+        image=image,
+        environment=environment,
+        skip_scripts=skip_scripts,
+    )
+    print("updated the panel server startup/environment")
+    return updated
+
+
+def connect_wings(client: PanelClient, node: dict[str, Any], server: dict[str, Any]) -> Wings:
+    payload = client.get(f"/api/application/nodes/{node['id']}/configuration")
+    configuration = node_configuration(payload)
+    token = str(configuration.get("token") or "")
+    if not token:
+        raise SystemExit("node configuration did not include a Wings token")
+    fqdn = str(node.get("fqdn") or "")
+    if not fqdn:
+        raise SystemExit("node has no fqdn for Wings")
+    uuid = str(server.get("uuid") or "")
+    if not uuid:
+        raise SystemExit("server has no uuid for Wings")
+    return Wings(wings_base_url(fqdn, configuration), token, uuid)
+
+
+def write_overlay(wings: Wings) -> None:
+    overlay = ROOT / "server"
+    for name in OVERLAY_FILES:
+        path = overlay / name
+        if path.is_file():
+            print(f"  uploading overlay {name}")
+            wings.write_file(f"/{name}", path.read_bytes(), "text/plain")
+
+
+def upload_server_mods(wings: Wings, zip_path: Path) -> None:
+    print("stopping server so mods can be replaced")
+    wings.power("stop", ignore_http=(409,))
+    try:
+        wings.wait_state({"offline", "stopped"}, timeout=90)
+    except SystemExit as exc:
+        print(f"  {exc}")
+        print("  sending kill")
+        wings.power("kill", ignore_http=(409,))
+        try:
+            wings.wait_state({"offline", "stopped"}, timeout=30)
+        except SystemExit:
+            print("  continuing; Wings did not report offline")
+
+    print(f"uploading {zip_path.name} ({zip_path.stat().st_size} bytes)")
+    wings.delete(["mods", SERVER_MODS_REMOTE])
+    wings.write_file(f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip")
+    print("decompressing server mods zip")
+    wings.decompress(SERVER_MODS_REMOTE)
+    wings.delete([SERVER_MODS_REMOTE])
+    wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
+    write_overlay(wings)
+    deadline = time.time() + 120
+    while time.time() < deadline:
+        try:
+            names = wings.names("/mods") if wings.has("mods") else set()
+        except SystemExit:
+            names = set()
+        jars = [name for name in names if name.endswith(".jar")]
+        if jars:
+            print(f"  mods/ has {len(jars)} jars")
+            return
+        print("  waiting for mods/ jars")
+        time.sleep(3)
+    raise SystemExit("mods/ did not appear after decompress")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Create or update the Lead and Leylines test server"
+    )
+    parser.add_argument(
+        "--from-local",
+        action="store_true",
+        help="export the current pack tree and push server mods to the dedicated server (no CurseForge file)",
+    )
+    parser.add_argument(
+        "--share-only",
+        action="store_true",
+        help="export ATLauncher zip/mrpack (and server mods zip) without touching the panel",
+    )
+    parser.add_argument(
+        "--curseforge",
+        action="store_true",
+        help="use the CurseForge Generic egg and a published CurseForge project id",
     )
     parser.add_argument(
         "--dry-run",
@@ -445,7 +624,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--reinstall",
         action="store_true",
-        help="reinstall after create/update so the egg pulls the current CurseForge file",
+        help="reinstall the egg (wipes the world). Local deploys reinstall automatically when Forge is missing or versions changed",
     )
     parser.add_argument(
         "--skip-install",
@@ -457,7 +636,7 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=0,
         metavar="SECONDS",
-        help="poll until the egg reports installed",
+        help="poll until the egg reports installed (local reinstall defaults to 600)",
     )
     parser.add_argument(
         "--status",
@@ -467,47 +646,185 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def main() -> None:
-    load_env_file(ROOT / ".env")
-    load_env_file(ROOT / "server" / ".env")
-    args = parse_args()
+def print_plan(
+    pack: dict[str, str],
+    *,
+    panel: str,
+    node: dict[str, Any],
+    egg: dict[str, Any],
+    owner: dict[str, Any],
+    image: str,
+    memory: int,
+    disk: int,
+    extra: str,
+) -> None:
+    print(
+        f"pack {pack['pack_version']} Minecraft {pack['minecraft']} "
+        f"{pack['loader']} {pack['loader_version']}"
+    )
+    print(f"panel {panel}")
+    print(f"node id={node['id']} name={node.get('name')} fqdn={node.get('fqdn')}")
+    print(f"egg id={egg.get('id')} name={egg.get('name')}")
+    print(f"owner id={owner.get('id')} username={owner.get('username')}")
+    print(f"image {image}")
+    print(f"memory {memory}MiB disk {disk or 'unlimited'}")
+    print(extra)
 
-    pack = read_pack(PACK_TOML)
-    panel = env("PANEL_URL", DEFAULT_PANEL)
-    token = require_env("PANEL_API_KEY")
-    node_fqdn = env("PANEL_NODE_FQDN", DEFAULT_NODE_FQDN)
-    node_name = env("PANEL_NODE_NAME", DEFAULT_NODE_NAME)
-    owner_name = env("PANEL_OWNER_USERNAME", "tinor")
-    server_name = env("PANEL_SERVER_NAME") or pack["name"]
-    external_id = env("PANEL_EXTERNAL_ID", DEFAULT_EXTERNAL_ID)
-    memory = int(env("PANEL_MEMORY_MB", "8192"))
-    disk = int(env("PANEL_DISK_MB", "0"))
-    port = env("PANEL_PORT") or None
-    project_id = env("CURSEFORGE_PROJECT_ID")
-    version_id = env("CURSEFORGE_VERSION_ID", "latest")
-    cf_api_key = env("CURSEFORGE_API_KEY")
 
-    client = PanelClient(panel, token)
-    node = find_node(client, node_fqdn, node_name)
+def deploy_from_local(
+    args: argparse.Namespace,
+    *,
+    client: PanelClient,
+    pack: dict[str, str],
+    panel: str,
+    node: dict[str, Any],
+    owner: dict[str, Any],
+    server: dict[str, Any] | None,
+    server_name: str,
+    external_id: str,
+    memory: int,
+    disk: int,
+    port: str | None,
+) -> None:
+    egg = find_forge_egg(client)
+    if egg is None:
+        raise SystemExit(
+            f"the panel is missing the {FORGE_EGG_NAME!r} egg "
+            f"(uuid {FORGE_EGG_UUID}). Import it on the panel, then rerun."
+        )
+    if egg.get("id"):
+        egg = egg_with_variables(client, int(egg["id"]))
+    image = docker_image(egg, pack["minecraft"]) if egg.get("docker_images") else "(unknown)"
+    allocation = None if server else pick_allocation(client, int(node["id"]), port)
+    forge_env = forge_environment(pack)
+    environment = environment_from_egg(egg, forge_env)
+    previous_egg = int((server or {}).get("egg") or 0)
+    previous_env = ((server or {}).get("container") or {}).get("environment") or {}
+    print_plan(
+        pack,
+        panel=panel,
+        node=node,
+        egg=egg,
+        owner=owner,
+        image=image,
+        memory=memory,
+        disk=disk,
+        extra=(
+            f"local deploy FORGE_VERSION={forge_env['FORGE_VERSION']} "
+            f"(CurseForge listing not required)"
+        ),
+    )
+    if server:
+        print("existing server:")
+        print_server(client, server)
+    elif allocation:
+        ip = allocation.get("ip_alias") or allocation.get("ip")
+        print(f"new allocation id={allocation.get('id')} {ip}:{allocation.get('port')}")
+
+    if args.dry_run:
+        print(
+            "dry-run: would export ATLauncher files, switch this server to the Forge egg, "
+            "install Forge, then upload server-side mods from the current pack tree"
+        )
+        return
+
+    print("building local pack artifacts")
+    _pack, paths = build_all()
+    print(atlauncher_instructions(paths))
+
+    description = (
+        f"{server_name} test server. Local pack tree via Wings until a CurseForge file exists."
+    )
+    server = upsert_server(
+        client,
+        server=server,
+        server_name=server_name,
+        owner_id=int(owner["id"]),
+        egg=egg,
+        image=image,
+        environment=environment,
+        description=description,
+        external_id=external_id,
+        allocation=allocation,
+        memory=memory,
+        disk=disk,
+        skip_scripts=False,
+        start=False,
+    )
+    if not server.get("uuid"):
+        server = attrs(client.get(f"/api/application/servers/{server['id']}"))
+    wings = connect_wings(client, node, server)
+    forge_files = wings.has("unix_args.txt") or wings.has("libraries")
+    needs_reinstall = bool(
+        args.reinstall
+        or previous_egg != int(egg["id"])
+        or str(previous_env.get("MC_VERSION") or "") != pack["minecraft"]
+        or str(previous_env.get("FORGE_VERSION") or "") != forge_env["FORGE_VERSION"]
+        or not forge_files
+    )
+    wait_seconds = args.wait or (600 if needs_reinstall else 0)
+    if needs_reinstall:
+        print(
+            "reinstalling Forge egg (this wipes the world and other files on the volume)"
+        )
+        try:
+            client.post(f"/api/application/servers/{server['id']}/reinstall")
+        except SystemExit as exc:
+            if "HTTP 409" not in str(exc):
+                raise
+            print("  reinstall already in progress")
+        server = wait_installed(client, int(server["id"]), wait_seconds or 600)
+        wings.wait_any({"unix_args.txt", "libraries"}, timeout=max(wait_seconds or 0, 300))
+    elif wait_seconds:
+        server = wait_installed(client, int(server["id"]), wait_seconds)
+
+    upload_server_mods(wings, paths["server_zip"])
+    print("starting server")
+    wings.power("start")
+    detail = attrs(client.get(f"/api/application/servers/{server['id']}"))
+    print_server(client, detail)
+    print(
+        "Watch the panel console for Forge 'Done'. Application API keys cannot read live logs."
+    )
+    print(atlauncher_instructions(paths))
+
+
+def deploy_from_curseforge(
+    args: argparse.Namespace,
+    *,
+    client: PanelClient,
+    pack: dict[str, str],
+    panel: str,
+    node: dict[str, Any],
+    owner: dict[str, Any],
+    server: dict[str, Any] | None,
+    server_name: str,
+    external_id: str,
+    memory: int,
+    disk: int,
+    port: str | None,
+    project_id: str,
+    version_id: str,
+    cf_api_key: str,
+) -> None:
     egg = find_egg(client)
     if egg is None:
         if args.dry_run:
-            print(f"egg {CURSEFORGE_GENERIC_NAME!r} is missing; would import from {EGG_IMPORT_URL}")
-            egg = {"id": None, "name": CURSEFORGE_GENERIC_NAME, "docker_images": {}, "startup": ""}
+            print(
+                f"egg {CURSEFORGE_GENERIC_NAME!r} is missing; "
+                f"would import from {EGG_IMPORT_URL}"
+            )
+            egg = {
+                "id": None,
+                "name": CURSEFORGE_GENERIC_NAME,
+                "docker_images": {},
+                "startup": "",
+            }
         else:
             egg = import_egg(client)
             found = find_egg(client)
             if found:
                 egg = found
-    owner = find_owner(client, owner_name)
-    server = find_server(client, external_id, server_name)
-
-    if args.status:
-        if not server:
-            raise SystemExit(f"no the panel server named {server_name!r} / external_id={external_id}")
-        print_server(client, server)
-        return
-
     if not cf_api_key and egg.get("id"):
         cf_api_key = copy_curseforge_api_key(client, int(egg["id"])) or ""
 
@@ -519,7 +836,8 @@ def main() -> None:
         skip_scripts = True
         print(
             "CURSEFORGE_PROJECT_ID is unset and the pack is not public on CurseForge yet. "
-            "Creating/updating the panel server with install skipped (blocked-on-publish)."
+            "Use `python scripts/deploy_server.py --from-local` until a store file exists, "
+            "or set CURSEFORGE_PROJECT_ID and rerun with --curseforge --reinstall."
         )
     if not cf_api_key:
         blocked = True
@@ -531,24 +849,24 @@ def main() -> None:
         cf_api_key = "missing"
 
     image = docker_image(egg, pack["minecraft"]) if egg.get("docker_images") else "(unknown)"
-    allocation = None
-    if server is None:
-        allocation = pick_allocation(client, int(node["id"]), port)
-
-    print(f"pack {pack['pack_version']} Minecraft {pack['minecraft']} {pack['loader']} {pack['loader_version']}")
-    print(f"panel {panel}")
-    print(f"node id={node['id']} name={node.get('name')} fqdn={node.get('fqdn')}")
-    print(f"egg id={egg.get('id')} name={egg.get('name')}")
-    print(f"owner id={owner.get('id')} username={owner.get('username')}")
-    print(f"image {image}")
-    print(f"memory {memory}MiB disk {disk or 'unlimited'}")
+    allocation = None if server else pick_allocation(client, int(node["id"]), port)
+    print_plan(
+        pack,
+        panel=panel,
+        node=node,
+        egg=egg,
+        owner=owner,
+        image=image,
+        memory=memory,
+        disk=disk,
+        extra=f"PROJECT_ID={project_id} VERSION_ID={version_id} skip_scripts={skip_scripts}",
+    )
     if server:
         print("existing server:")
         print_server(client, server)
     elif allocation:
         ip = allocation.get("ip_alias") or allocation.get("ip")
         print(f"new allocation id={allocation.get('id')} {ip}:{allocation.get('port')}")
-    print(f"PROJECT_ID={project_id} VERSION_ID={version_id} skip_scripts={skip_scripts}")
 
     if args.dry_run:
         print("dry-run: no writes")
@@ -558,59 +876,106 @@ def main() -> None:
     description = (
         f"{server_name} test server. Egg tracks the last published CurseForge file, not git."
     )
-
-    if server is None:
-        assert allocation is not None
-        server = create_server(
-            client,
-            name=server_name,
-            description=description,
-            owner_id=int(owner["id"]),
-            egg=egg,
-            image=image,
-            environment=environment,
-            allocation_id=int(allocation["id"]),
-            memory=memory,
-            disk=disk,
-            external_id=external_id,
-            start=not skip_scripts,
-            skip_scripts=skip_scripts,
-        )
-        print("created the panel server")
-    else:
-        client.patch(
-            f"/api/application/servers/{server['id']}/details",
-            {
-                "name": server_name,
-                "user": int(owner["id"]),
-                "description": description,
-                "external_id": external_id,
-            },
-        )
-        server = update_startup(
-            client,
-            int(server["id"]),
-            egg=egg,
-            image=image,
-            environment=environment,
-            skip_scripts=skip_scripts,
-        )
-        print("updated the panel server startup/environment")
-
+    server = upsert_server(
+        client,
+        server=server,
+        server_name=server_name,
+        owner_id=int(owner["id"]),
+        egg=egg,
+        image=image,
+        environment=environment,
+        description=description,
+        external_id=external_id,
+        allocation=allocation,
+        memory=memory,
+        disk=disk,
+        skip_scripts=skip_scripts,
+        start=not skip_scripts,
+    )
     if args.reinstall and not skip_scripts:
         client.post(f"/api/application/servers/{server['id']}/reinstall")
         print("reinstall requested")
-
     if args.wait and not skip_scripts:
         server = wait_installed(client, int(server["id"]), args.wait)
-
     detail = attrs(client.get(f"/api/application/servers/{server['id']}"))
     print_server(client, detail)
     if blocked:
         raise SystemExit(
-            "blocked-on-publish: set CURSEFORGE_PROJECT_ID in .env, then rerun "
-            "python scripts/deploy_server.py --reinstall"
+            "blocked-on-publish: use `python scripts/deploy_server.py --from-local` "
+            "or set CURSEFORGE_PROJECT_ID and rerun with --curseforge --reinstall"
         )
+
+
+def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(line_buffering=True)
+    load_env_file(ROOT / ".env")
+    load_env_file(ROOT / "server" / ".env")
+    args = parse_args()
+    if args.from_local and args.curseforge:
+        raise SystemExit("use either --from-local or --curseforge, not both")
+
+    pack = read_pack(PACK_TOML)
+    project_id = env("CURSEFORGE_PROJECT_ID")
+    from_local = bool(args.from_local or args.share_only or (not args.curseforge and not project_id))
+
+    if args.share_only:
+        if args.dry_run:
+            print("dry-run: would export ATLauncher zip/mrpack and server mods zip to dist/")
+            return
+        _pack, paths = build_all()
+        print(atlauncher_instructions(paths))
+        return
+
+    panel = env("PANEL_URL", DEFAULT_PANEL)
+    token = require_env("PANEL_API_KEY")
+    node_fqdn = env("PANEL_NODE_FQDN", DEFAULT_NODE_FQDN)
+    node_name = env("PANEL_NODE_NAME", DEFAULT_NODE_NAME)
+    owner_name = env("PANEL_OWNER_USERNAME", "tinor")
+    server_name = env("PANEL_SERVER_NAME") or pack["name"]
+    external_id = env("PANEL_EXTERNAL_ID", DEFAULT_EXTERNAL_ID)
+    memory = int(env("PANEL_MEMORY_MB", "8192"))
+    disk = int(env("PANEL_DISK_MB", "0"))
+    port = env("PANEL_PORT") or None
+    version_id = env("CURSEFORGE_VERSION_ID", "latest")
+    cf_api_key = env("CURSEFORGE_API_KEY")
+
+    client = PanelClient(panel, token)
+    node = find_node(client, node_fqdn, node_name)
+    owner = find_owner(client, owner_name)
+    server = find_server(client, external_id, server_name)
+    if server:
+        server = attrs(client.get(f"/api/application/servers/{server['id']}"))
+
+    if args.status:
+        if not server:
+            raise SystemExit(f"no the panel server named {server_name!r} / external_id={external_id}")
+        print_server(client, server)
+        return
+
+    common = {
+        "client": client,
+        "pack": pack,
+        "panel": panel,
+        "node": node,
+        "owner": owner,
+        "server": server,
+        "server_name": server_name,
+        "external_id": external_id,
+        "memory": memory,
+        "disk": disk,
+        "port": port,
+    }
+    if from_local:
+        deploy_from_local(args, **common)
+        return
+    deploy_from_curseforge(
+        args,
+        **common,
+        project_id=project_id,
+        version_id=version_id,
+        cf_api_key=cf_api_key,
+    )
 
 
 if __name__ == "__main__":
