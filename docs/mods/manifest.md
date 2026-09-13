@@ -100,12 +100,12 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-13. Minecraft, loader, and pack ver
 - Download source: https://modrinth.com/mod/placebo
 - packwiz `side`: both
 - Category: library
-- Why chosen: Required by FastWorkbench.
+- Why chosen: Required by FastWorkbench and FastSuite.
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
 - Config changes: none — defaults
-- World-data / removability: do not remove while FastWorkbench is installed
+- World-data / removability: do not remove while FastWorkbench or FastSuite is installed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
 
@@ -229,6 +229,126 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-13. Minecraft, loader, and pack ver
 - License / attribution: see CurseForge project page
 - Date added: 2026-09-13
 
+### Entity Culling
+
+- Pinned file / version: `entityculling-forge-1.10.5-mc1.20.1.jar` (Modrinth version `MloBcsQQ`)
+- Download source: https://modrinth.com/mod/entityculling/version/MloBcsQQ
+- packwiz `side`: client
+- Category: optimization (entity / block-entity visibility)
+- Why chosen: Async line-of-sight hide. Official Forge. Different layer from Embeddium Extra (not leaf culling).
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: tr7zw Protective License — CurseForge/Modrinth packs allowed; do not rehost the jar elsewhere
+- Date added: 2026-09-13
+
+### Dynamic FPS
+
+- Pinned file / version: `dynamic-fps-3.11.4+minecraft-1.20.0-forge.jar` (Modrinth version `EjdIWWqG`; file lists 1.20 / 1.20.1)
+- Download source: https://modrinth.com/mod/dynamic-fps/version/EjdIWWqG
+- packwiz `side`: client
+- Category: optimization (background CPU)
+- Why chosen: Lowers resource use when Minecraft is unfocused. Official Forge. Not in-game FPS.
+- Required dependencies: none
+- Optional dependencies: Cloth Config (in-game screen only; not shipped)
+- Recommended companions: none
+- Config changes: none — defaults without Cloth Config
+- World-data / removability: client; clean to remove
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-13
+
+### FastSuite
+
+- Pinned file / version: `FastSuite-1.20.1-5.1.2.jar` (Modrinth version `nhk4VpGm`)
+- Download source: https://modrinth.com/mod/fastsuite/version/nhk4VpGm
+- packwiz `side`: both
+- Category: optimization (recipes)
+- Why chosen: Indexes all JSON recipes. Same author as FastWorkbench. Helps Apotheosis / AE2 / MI / magic / utility recipes. Does not replace FastWorkbench or FastFurnace.
+- Required dependencies: Placebo (already in)
+- Optional dependencies: none
+- Recommended companions: FastWorkbench, FastFurnace
+- Config changes: none — defaults
+- World-data / removability: clean to remove (no new blocks)
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-13
+
+### Noisium
+
+- Pinned file / version: `noisium-forge-2.3.0+mc1.20-1.20.1.jar` (Modrinth version `gbYUKrDP`)
+- Download source: https://modrinth.com/mod/noisium/version/gbYUKrDP
+- packwiz `side`: both
+- Category: optimization (worldgen CPU)
+- Why chosen: Faster vanilla-parity chunk generation. For exploration hitch and planned biome mods. Does not change terrain.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove; worlds stay vanilla-shaped
+- License / attribution: LGPL-3.0-only; see Modrinth project page
+- Date added: 2026-09-13
+
+### Clumps
+
+- Pinned file / version: `Clumps-forge-1.20.1-12.0.0.4.jar` (Modrinth version `nAHGB5ls`)
+- Download source: https://modrinth.com/mod/clumps/version/nAHGB5ls
+- packwiz `side`: both
+- Category: optimization (XP orbs)
+- Why chosen: Merges XP orbs. Needed when Mob Grinding Utils and other farms spawn orb spam.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove (orbs are entities, not world blocks)
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-13
+
+### Smooth Chunk Save
+
+- Pinned file / version: `smoothchunk-1.20.1-4.1.jar` (CurseForge file id `6296598`, project `582327`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/smooth-chunk-save
+- packwiz `side`: both
+- Category: optimization (chunk autosave)
+- Why chosen: Spreads disk writes so autosave does not hitch in singleplayer or on the dedicated server.
+- Required dependencies: Cupboard
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove
+- License / attribution: All Rights Reserved on CurseForge; allowed in CurseForge/Modrinth packs via store distribution of this pack
+- Date added: 2026-09-13
+
+### Cupboard
+
+- Pinned file / version: `cupboard-1.20.1-4.1.jar` (CurseForge file id `8746423`, project `326652`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/cupboard
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Smooth Chunk Save. Keep for later Connectivity if needed.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: do not remove while Smooth Chunk Save is installed
+- License / attribution: All Rights Reserved on CurseForge; store pack distribution
+- Date added: 2026-09-13
+
+### Neruina
+
+- Pinned file / version: `neruina-3.3.3+1.20.1-forge.jar` (Modrinth version `7Pn5jnNB`)
+- Download source: https://modrinth.com/mod/neruina/version/7Pn5jnNB
+- packwiz `side`: both
+- Category: reliability (ticking crash isolation)
+- Why chosen: Prevents a broken entity/block tick from bricking the world as farms, magic, and tech land.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: Crash Assistant (client crash UI)
+- Config changes: none — defaults
+- World-data / removability: clean to remove; does not add blocks
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-13
+
 ## Credits / Attribution
 
 Credit each author via the project URL above when distributing the pack. Recheck licenses before a public store upload if a project is All Rights Reserved or requires explicit permission.
@@ -250,6 +370,14 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Let Me Despawn | https://modrinth.com/mod/lmd |
 | Almanac | https://modrinth.com/mod/almanac |
 | AllTheLeaks | https://www.curseforge.com/minecraft/mc-mods/alltheleaks |
+| Entity Culling | https://modrinth.com/mod/entityculling |
+| Dynamic FPS | https://modrinth.com/mod/dynamic-fps |
+| FastSuite | https://modrinth.com/mod/fastsuite |
+| Noisium | https://modrinth.com/mod/noisium |
+| Clumps | https://modrinth.com/mod/clumps |
+| Smooth Chunk Save | https://www.curseforge.com/minecraft/mc-mods/smooth-chunk-save |
+| Cupboard | https://www.curseforge.com/minecraft/mc-mods/cupboard |
+| Neruina | https://modrinth.com/mod/neruina |
 
 ## Future / Deferred Mods
 
@@ -258,9 +386,12 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Shader packs | Loader (Oculus) is in; packs chosen later | Pick a pack on purpose and ship it |
 | ServerCore | Overlaps Radium / Let Me Despawn; activation range is gameplay | Explicit ruleset decision |
 | Better Beds Reforged | Tiny FPS; last file 1.0.0 (2023) | Want beds later |
-| Iris & Oculus Flywheel Compat | Needs Create’s Flywheel | When Create is in |
-| Entity Culling | Not in first cut | Stronger entity FPS later |
-| Noisium | Not in first cut | When exploration/worldgen mods land |
+| Iris & Oculus Flywheel Compat | Needs Create’s Flywheel | When Create is in (required with Oculus) |
+| Connectivity | Packet/timeout fixer; Cupboard already in | Create/AE2/Mekanism/TACZ multiplayer packet issues |
+| Particle Core | Needs Kotlin + Fzzy; can hide gun/spell FX | Only with a whitelist config |
+| Create: Nowheel | Create + Entity Culling; shader path ≠ Oculus compat | Research at Create install |
+| Chunky | Pregen/admin, writes world | the panel pregen decision |
+| C2ME / C2MEF / VMP / Krypton / Indium / More Culling / Debugify (asked slugs) | Fabric or unofficial/overlapping | See [performance.md](performance.md) Fabric video list |
 
 ## Deferred Ecosystem Upgrades
 

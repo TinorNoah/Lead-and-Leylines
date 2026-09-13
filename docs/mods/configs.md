@@ -13,4 +13,4 @@ Shaders are a pack feature. Players drop shader packs into the Oculus/Iris shade
 | ModernFix | No | Mixin defaults stay. Change only if a crash log names a mixin. |
 | ServerCore | N/A until added | Activation range is gameplay; do not add silently. |
 
-FerriteCore, FastWorkbench, FastFurnace, BadOptimizations, Crash Assistant, Radium, and AllTheLeaks: no pack overrides.
+FerriteCore, FastWorkbench, FastFurnace, FastSuite, BadOptimizations, Crash Assistant, Radium, AllTheLeaks, Entity Culling, Dynamic FPS, Clumps, Noisium, Smooth Chunk Save, Cupboard, and Neruina: no pack overrides. Cloth Config is not shipped; Dynamic FPS uses defaults without its optional config screen.

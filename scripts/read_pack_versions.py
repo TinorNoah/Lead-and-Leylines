@@ -30,6 +30,7 @@ def read_pack(path: Path) -> dict[str, str]:
         )
     loader = loader_keys[0]
     return {
+        "name": str(data.get("name") or "Lead and Leylines"),
         "pack_version": str(pack_version),
         "minecraft": str(minecraft),
         "loader": str(loader),
@@ -54,8 +55,8 @@ def main() -> None:
             raise SystemExit("GITHUB_OUTPUT is not set")
         github_output = Path(github_output_path)
         with github_output.open("a", encoding="utf-8") as handle:
-            for key, value in result.items():
-                handle.write(f"{key}={value}\n")
+            for key in ("pack_version", "minecraft", "loader", "loader_version"):
+                handle.write(f"{key}={result[key]}\n")
     print(json.dumps(result, indent=2))
 
 

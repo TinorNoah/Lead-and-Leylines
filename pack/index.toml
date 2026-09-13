@@ -16,8 +16,23 @@ hash = "b8c29dac6fb7c1cf18ca53b7a96c6c4854307999b77a751e803bdd9650a125e0"
 metafile = true
 
 [[files]]
+file = "mods/clumps.pw.toml"
+hash = "903352ffbd84d4b95fed905893f4715d9c3f88ec9fff6fb06f6e359e0b839dc3"
+metafile = true
+
+[[files]]
 file = "mods/crash-assistant.pw.toml"
 hash = "8dd23156830a68809e6449dbd64b83a47de1b1fa36c95785662ce5d04b39102b"
+metafile = true
+
+[[files]]
+file = "mods/cupboard.pw.toml"
+hash = "2ff90a53074619faf78a7e34e718fff3f2558076e116ac43180134b91c2d61a9"
+metafile = true
+
+[[files]]
+file = "mods/dynamic-fps.pw.toml"
+hash = "b67251b53eb4685d349bda68fde30b021e99900fe4d445e6c0f3e9fa0a908580"
 metafile = true
 
 [[files]]
@@ -26,8 +41,18 @@ hash = "5ec0c37f3f4ad07a40c10376668bca80334ddb7ad2bab06eb4de8f7aac339c8e"
 metafile = true
 
 [[files]]
+file = "mods/entityculling.pw.toml"
+hash = "fbad2488da791994cbb4a0541e2dd22c536dbe6ca8f7edfdd9af12120e283fd2"
+metafile = true
+
+[[files]]
 file = "mods/fastfurnace.pw.toml"
 hash = "372aabbdc69fe63317c017cd8a323e6b8f52ebf070780a3a135be9f67555b8d4"
+metafile = true
+
+[[files]]
+file = "mods/fastsuite.pw.toml"
+hash = "ecac0e58853b90c2208ec25738b43f212d92c89f7742b61aca817b681deca352"
 metafile = true
 
 [[files]]
@@ -56,6 +81,16 @@ hash = "f35748c9b332d0ff68203197dd648b9daf9b8e1c4060a3222d3e91cd08860637"
 metafile = true
 
 [[files]]
+file = "mods/neruina.pw.toml"
+hash = "3cd1bbe268a8183a07bf11d09b746a4b65be737b965d23c1e4f4f15faf967674"
+metafile = true
+
+[[files]]
+file = "mods/noisium.pw.toml"
+hash = "2448ee89974f5934aa9114270f3e6666cbe203bffe5be6c2905231bb5dc1af81"
+metafile = true
+
+[[files]]
 file = "mods/oculus.pw.toml"
 hash = "f83b253ca6a8e6f2f847952704da0e1fb00e65cbb10b7c9cb15d1a1780618da0"
 metafile = true
@@ -73,4 +108,9 @@ metafile = true
 [[files]]
 file = "mods/rubidium-extra.pw.toml"
 hash = "817b4a47826bd99c69957fe07131d5704984f89fec96287cdc20c6fbe46100cf"
+metafile = true
+
+[[files]]
+file = "mods/smooth-chunk-save.pw.toml"
+hash = "e80b940cd9a3aa703d0462101e4a8f0840f69d969a202aaa1294816fc6bc64e7"
 metafile = true

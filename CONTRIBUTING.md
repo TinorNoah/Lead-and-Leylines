@@ -47,4 +47,11 @@ Secrets (repo Settings → Secrets; never commit):
 
 ## test server
 
-See `server/README.md`. The CurseForge Generic egg tracks the last published CurseForge file, not `main`. After a store upload, reinstall the egg. Overlay files must be re-copied after reinstall.
+See `server/README.md`. Copy `.env.example` to `.env` and set `PANEL_API_KEY`. Then:
+
+```text
+python scripts/deploy_server.py
+python scripts/deploy_server.py --reinstall --wait 600
+```
+
+The CurseForge Generic egg tracks the last published CurseForge file, not `main`. After a store upload, set `CURSEFORGE_PROJECT_ID` if needed and reinstall. Overlay files must be re-copied after reinstall.

@@ -11,27 +11,15 @@ If no CurseForge project/file exists yet, report **blocked-on-publish** and stop
 
 ## Steps
 
-1. Confirm egg vars in the panel (do not print secret values):
-   - `PROJECT_ID` — CurseForge modpack id
-   - `VERSION_ID` — `latest` on the test box
-   - `API_KEY` — present in the panel, never in git
-2. Reinstall or restart so the egg pulls the current CurseForge file.
-3. Wait until the console shows a boot-complete pattern (Forge "Done" / "For help, type") or a crash.
-4. Pull recent console output.
+1. Confirm `.env` exists at the repo root (never commit it). Required: `PANEL_API_KEY`. For a real egg install also `CURSEFORGE_PROJECT_ID`. The CurseForge console `API_KEY` can be copied from another CurseForge Generic server on the panel.
+2. From the repo root, run `python scripts/deploy_server.py --status` to find the server, or without `--status` to create/update it.
+3. Reinstall so the egg pulls the current CurseForge file:
+
+   `python scripts/deploy_server.py --reinstall --wait 600`
+
+4. Wait until the panel console shows a boot-complete pattern (Forge "Done" / "For help, type") or a crash. Application API keys cannot read live console output; use the panel console (or a `pacc_` client key later).
 5. Flag:
    - `Exception`, `Error`, crash reports
    - egg message that the file is not a server pack (expected until a distinct server pack exists; still report it)
    - missing overlay after reinstall (`ops.json`, `user_jvm_args.txt` not re-copied)
-
-## Dedicated server API (placeholder)
-
-Replace these when an MCP or API client exists. Do not guess URLs, keys, or server UUIDs.
-
-```text
-# TODO panel API: authenticate (panel URL + API key from user/MCP, never commit)
-# TODO panel API: POST reinstall or power restart for the test server
-# TODO panel API: GET websocket/console log since restart
-# TODO panel API: map HTTP errors (401/404) to a clear operator message
-```
-
-Until those exist, ask the user to reinstall/restart in the panel and paste console output, then apply the flag rules above.
+   - HTTP 401 from the script: wrong panel URL or key (panel is `https://example.invalid`, not Dokploy at `example.invalid`)

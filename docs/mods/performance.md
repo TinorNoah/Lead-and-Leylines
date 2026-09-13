@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-13. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml) (at snapshot: Minecraft 1.20.1, Forge 47.4.23). Re-check store pages before install; do not add a file that does not list that pair.
 
-**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Dynamic lights stay out. Flywheel compat stays out until Create. packwiz `side` is set as in the tables.
+**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Second client cut: Entity Culling `1.10.5` + Dynamic FPS `3.11.4`. Smoothness cut: FastSuite, Noisium, Clumps, Smooth Chunk Save + Cupboard, Neruina. Dynamic lights stay out. Flywheel compat stays out until Create. packwiz `side` is set as in the tables.
 
 ## Side (packwiz)
 
@@ -45,6 +45,40 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | AllTheLeaks | [curseforge.com/.../alltheleaks](https://www.curseforge.com/minecraft/mc-mods/alltheleaks) (CurseForge only) | both | Leak patches for vanilla and popular mods. Cheap insurance before the pack grows. |
 | Placebo | FastWorkbench dependency | both | Library. Pulled in by packwiz. |
 | Almanac | Let Me Despawn dependency | both | Library. Pulled in by packwiz. Set `both` so singleplayer gets it. |
+| Entity Culling | [modrinth.com/mod/entityculling](https://modrinth.com/mod/entityculling) | client | Async line-of-sight hide for entities/block entities. Official Forge `1.10.5` (version `MloBcsQQ`). Different layer from Embeddium Extra. Cloth Config not required. |
+| Dynamic FPS | [modrinth.com/mod/dynamic-fps](https://modrinth.com/mod/dynamic-fps) | client | Lowers CPU when the window is unfocused. Official Forge `3.11.4` (version `EjdIWWqG`). Not in-game FPS. Cloth Config optional and not shipped. |
+| FastSuite | [modrinth.com/mod/fastsuite](https://modrinth.com/mod/fastsuite) | both | Recipe index for all JSON recipes. Same author as FastWorkbench / Apotheosis. Placebo already in. Does not replace FastWorkbench/FastFurnace. Helps magic/tech/utility recipes as the pack grows. |
+| Noisium | [modrinth.com/mod/noisium](https://modrinth.com/mod/noisium) | both | Faster vanilla-parity worldgen. Official Forge `2.3.0+mc1.20-1.20.1`. `both` so Prism singleplayer gets it. For planned biome mods. |
+| Clumps | [modrinth.com/mod/clumps](https://modrinth.com/mod/clumps) | both | Merges XP orbs. For Mob Grinding Utils and other farm XP spam. |
+| Smooth Chunk Save | [curseforge.com/.../smooth-chunk-save](https://www.curseforge.com/minecraft/mc-mods/smooth-chunk-save) | both | Spreads autosave disk writes. Forge `4.1` file id `6296598`. |
+| Cupboard | Smooth Chunk Save dependency | both | someaddon library. Forge `4.1` file id `8746423`. Reuse later if Connectivity is added. |
+| Neruina | [modrinth.com/mod/neruina](https://modrinth.com/mod/neruina) | both | Isolates ticking entity/block crashes so a bad farm or magic tick does not brick the world. |
+
+---
+
+## Fabric video list (2026-09-13)
+
+Checked against Minecraft 1.20.1 Forge in `pack/pack.toml`. The linked projects are a **Fabric** performance set. Do not install those slugs as-is.
+
+| Asked as | Forge 1.20.1 file? | Outcome |
+|---|---|---|
+| Sodium | No (Fabric / NeoForge only) | **Already covered:** Embeddium |
+| Sodium Extra | No | **Already covered:** Embeddium Extra (`rubidium-extra`) |
+| Indium | No (Fabric/Quilt). Sodium FRAPI shim | **Dropped.** Embeddium ships integrated Fabric Rendering API support. Installing Indium on Forge would crash. |
+| ImmediatelyFast | Yes (`1.5.5+1.20.4`, version `rvsLEEZU`) | **Already installed** (same pin) |
+| Entity Culling | Yes (`1.10.5`, version `MloBcsQQ`, 2026-06-20) | **Chosen**, client. Official Forge. Different layer from Embeddium Extra (async LOS vs leaf/fog settings). License allows CurseForge/Modrinth packs; do not rehost the jar. Cloth Config not required. |
+| More Culling | No on the official project (Fabric/NeoForge/Quilt) | **Dropped** the asked slug. Unofficial CurseForge [More Culling Reforged](https://www.curseforge.com/minecraft/mc-mods/more-culling-reforged) exists; leaf culling overlaps Embeddium Extra; needs Cloth Config. Do not add a second leaf culler. |
+| Lithium | No | **Already covered:** Radium (Reforged-Hub) |
+| C2ME (`c2me-fabric`) | No (Fabric). NeoForge is a different project | **Dropped** the asked slug. Unofficial [C2MEF](https://modrinth.com/mod/c2mef) is an alpha mixin port. Worldgen hitch is covered by **Noisium**. |
+| Chunky | Yes (`1.3.146`, version `4FTDk9wv`, 2024-05-06) | **Held.** Official Forge. Pregen/admin tool, not FPS. Writes world data. Revisit when we want the panel pregen. |
+| FerriteCore | Yes | **Already installed** |
+| ModernFix | Yes | **Already installed** |
+| Krypton | No (Fabric). 1.20.1 file is `0.2.3` (2023) | **Dropped** the asked slug. [Pluto](https://modrinth.com/mod/pluto) (unofficial Krypton fork) has **no 1.20.1**. [Krypton Reforged](https://www.curseforge.com/minecraft/mc-mods/krypton-reforged) is unofficial. [Connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) is a timeout/packet-size fixer (needs Cupboard), not a Netty rewrite — hold until real MP connection issues. |
+| VeryManyPlayers (`vmp-fabric`) | No. [vmp-forge](https://modrinth.com/mod/vmp-forge) last 1.20.1 file 2023-07; README still says early development | **Dropped.** High-playercount mixin pack; stale Forge port; overlaps the kind of work Radium already does. |
+| Debugify | No Forge on 1.20.1 (Fabric/Quilt `1.20.1+2.0`, 2023-07) | **Dropped.** ModernFix already ships vanilla bugfixes. Unofficial CurseForge Debugify Reforge is a tiny port — skip. |
+| Dynamic FPS | Yes (`3.11.4`, version `EjdIWWqG`, 2026-01-29) | **Chosen**, client. Official Forge, MIT. Lowers CPU when unfocused. Cloth Config is **optional** and not shipped. No world data. |
+
+Do not add Sinytra Connector just to run the Fabric jars.
 
 ---
 
@@ -55,8 +89,10 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | ServerCore | [modrinth.com/mod/servercore](https://modrinth.com/mod/servercore) | both | Overlaps Radium / Let Me Despawn. Activation range and mobcaps **change gameplay** (distant mobs freeze). Not a silent optimizer. |
 | Better Beds Reforged | [modrinth.com/mod/better-beds-reforged](https://modrinth.com/mod/better-beds-reforged) | client | Correct Forge port (upstream Better Beds has no Forge 1.20.1). Tiny FPS. Last file is 1.0.0 (2023). Optional later. |
 | Iris & Oculus Flywheel Compat | [modrinth.com/mod/iris-flw-compat](https://modrinth.com/mod/iris-flw-compat) | client | Only useful with Create’s Flywheel + Oculus. No Create in the pack yet. |
-| Entity Culling | [modrinth.com/mod/entityculling](https://modrinth.com/mod/entityculling) | client | Not on the original ask. Stronger FPS than CullLessLeaves. Consider later. |
-| Noisium | [modrinth.com/mod/noisium](https://modrinth.com/mod/noisium) | both | Not on the original ask. Worldgen CPU. Consider when exploration/worldgen mods land. |
+| Chunky | [modrinth.com/plugin/chunky](https://modrinth.com/plugin/chunky) | both | Official Forge pregen. Admin tool; writes chunks. Wait for a the panel pregen decision. |
+| Connectivity | [curseforge.com/.../connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | both | Packet/timeout fixer. Cupboard is already in. Add with Create / AE2 / Mekanism / TACZ multiplayer, not as FPS. |
+| Particle Core | [modrinth.com/mod/particle-core](https://modrinth.com/mod/particle-core) | client | Particle cull/cap. Needs Kotlin for Forge + Fzzy Config. Could hide TACZ / Superb Warfare / Ars Nouveau VFX. Only with a config that does not strip gun/spell particles. |
+| Create: Nowheel | [modrinth.com/mod/create-nowheel](https://modrinth.com/mod/create-nowheel) | client | Create + Entity Culling companion. Shader path wants Colorwheel, which is a different stack than Oculus + iris-flw-compat. Research at Create install; do not stack blindly. |
 
 ---
 
@@ -74,6 +110,32 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | Iris & Oculus Flywheel Compat (now) | iris-flw-compat | client | Dead weight without Create. |
 | ServerCore (as a silent add) | servercore | both | See Held. Dropped from the first cut because it is a ruleset, not a free FPS win. |
 | Not Enough Crashes | (alternative to Crash Assistant) | client | Worse crash-on-crash reputation. Crash Assistant is the replacement. |
+| Optimized Block Entities (OBE) | [modrinth.com/mod/obe](https://modrinth.com/mod/obe) | client | Author notes 1.20.1 Forge **crashes with Embeddium** unless extra Fabric-API-shaped deps. We ship Embeddium. |
+| Ksyxis | [modrinth.com/mod/ksyxis](https://modrinth.com/mod/ksyxis) | both | Speeds load by skipping spawn chunks. Breaks chunkloaders / Create / AE2 / Mekanism-style always-on machines. |
+| Does It Tick / Immersive Optimization / APTweaks Spawn | various | both | Freeze or skip distant entity ticks. Same class of problem as ServerCore vs Create farms, Mekanism, AE2, Apotheosis spawners. |
+| Starlight (Forge unofficial) | CurseForge starlight-forge | both | Lighting engine rewrite. Unofficial on Forge; fights Embeddium/Oculus/Create lighting. Official Starlight is Fabric. |
+| MemoryLeakFix | [modrinth.com/mod/memoryleakfix](https://modrinth.com/mod/memoryleakfix) | both | AllTheLeaks is the 1.20.1 replacement. Do not stack. |
+| Saturn / Graphene / Tritium / Palladium | all-in-one opt packs | — | Overlap FerriteCore, ModernFix, Radium. Prefer one job per mod. |
+| Fast Noise (`zfastnoise`) | [modrinth.com/mod/zfastnoise](https://modrinth.com/mod/zfastnoise) | both | Worldgen mixin. Incompat tagged vs other noise/xray/Moonrise projects. Prefer official Noisium if we want worldgen CPU. |
+
+---
+
+## Planned content (do not sabotage)
+
+Target content named 2026-09-13: TACZ, Superb Warfare, Apotheosis, Create, AE2, Ars Nouveau, Modern Industrialization, Building Gadgets, Mining Gadgets, Mekanism, Mob Grinding Utils, plus later biome / magic / tech / utility mods.
+
+Rules for extra opt mods:
+
+1. **No distant-tick freezers** (ServerCore, Does It Tick, Immersive Optimization, APTweaks Spawn). Create contraptions, AE2 grids, Mekanism machines, and Apotheosis spawners must keep ticking.
+2. **No second Lithium / redstone rewrite** (Canary, Alternate Current). Radium stays. Create uses redstone; Apotheosis historically fought Canary.
+3. **No spawn-chunk strippers** (Ksyxis). Tech mods need loaded machines.
+4. **Shaders + Create** need [Iris & Oculus Flywheel Compat](https://modrinth.com/mod/iris-flw-compat) **when Create is added**, not before. Pair with the then-current Oculus/Embeddium files. Do not add Colorwheel/Nowheel in the same cut without a dedicated check.
+5. **Entity Culling** is already in. When Create lands, watch for invisible contraption entities; Nowheel claims to fix one Entity Culling + simulated-contraption case.
+6. **Particle caps** (Particle Core, Embeddium Extra particle settings) must not eat TACZ / Superb Warfare tracers or Ars Nouveau spell FX.
+7. **ImmediatelyFast `hud_batching`** may need off later if gadget/JEI/Apotheosis tooltips glitch.
+8. TACZ and Superb Warfare are **two gun systems**. That is a content overlap for later, not an optimizer problem.
+
+Safe opt that **helps** that list: FastSuite (Apotheosis/AE2/MI/magic recipes), Clumps (Mob Grinding Utils XP), Noisium (biome worldgen hitch), Smooth Chunk Save (autosave with bigger worlds), AllTheLeaks (already in), Neruina (bad tick isolation), Connectivity later (large mod packets), Flywheel compat later (Create + Oculus).
 
 ---
 
@@ -92,6 +154,9 @@ Do not combine:
 | Oculus + CullLessLeaves | Holey trees under shaders |
 | Flywheel compat without Create | No effect |
 | Embeddium + Oculus with unmatched versions | Common 1.20.1 crash source. Pair store files; do not mix random builds. |
+| Embeddium Extra leaf culling + More Culling (or CullLessLeaves) | Duplicate leaf pass |
+| Official Fabric slugs (Sodium, Lithium, C2ME, Krypton, VMP, Indium, Debugify 1.20.1) on this Forge pack | Wrong loader; crash or no file |
+| Unofficial C2MEF / VMP-Forge / Pluto-on-1.20.1 | Stale or alpha mixin ports; not a substitute for the Fabric originals |
 
 Soft (later content, not this cut): ImmediatelyFast `hud_batching` vs fancy tooltip/HUD mods; ServerCore activation range vs spawner/AI mods.
 
@@ -99,7 +164,7 @@ Soft (later content, not this cut): ImmediatelyFast `hud_batching` vs fancy tool
 
 ## Configs worth documenting (only these)
 
-Do **not** hand-tune Embeddium, FerriteCore, FastWorkbench, FastFurnace, BadOptimizations, Crash Assistant, or AllTheLeaks unless a log names them.
+Do **not** hand-tune Embeddium, FerriteCore, FastWorkbench, FastFurnace, BadOptimizations, Crash Assistant, AllTheLeaks, Entity Culling, or Dynamic FPS unless a log names them.
 
 When the chosen mods are installed, ship notes (and config overrides only if defaults are wrong). Details: [configs.md](configs.md).
 

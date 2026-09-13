@@ -50,13 +50,13 @@ Never hardcode those values. Missing secrets must skip with an explicit log, not
 
 ## Dedicated server
 
-CurseForge Generic egg. Tracks the last published CurseForge file, not git. See `server/README.md`. `test-server` skill: if no CF file yet, report blocked-on-publish.
+CurseForge Generic egg. Tracks the last published CurseForge file, not git. See `server/README.md`. Deploy with `python scripts/deploy_server.py` (Application API `papp_` key in gitignored `.env`; default panel `https://example.invalid`, node `node` / `example.invalid`). `test-server` skill: if no CF file yet, report blocked-on-publish.
 
 ## Skills
 
 - `minecraft-modding` — research, compatibility, approval, manifest (read before any install)
 - `add-mod` — packwiz install after `minecraft-modding` approval; then refresh
-- `test-server` — the panel reinstall/console; API calls are placeholders until MCP exists
+- `test-server` — the panel reinstall via `scripts/deploy_server.py`; console still from the panel until a client API key exists
 - `publish-release` — only on explicit `/publish-release`
 
 ## Learned User Preferences
@@ -81,6 +81,7 @@ CurseForge Generic egg. Tracks the last published CurseForge file, not git. See 
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file and keep the README Pack details table in sync in the same change. Do not hardcode versions in skills or workflows.
 - One pack uses packwiz `side` (`client` / `server` / `both`); server overlay/JVM overlay lives in `server/` and is never exported.
 - Local Prism testing uses `packwiz serve` plus packwiz-installer-bootstrap against `http://localhost:8080/pack.toml`.
+- panel is `https://example.invalid`; Wings node display name `node`, FQDN `example.invalid`. Deploy with `python scripts/deploy_server.py`.
 - The test server uses the CurseForge Generic egg and tracks the last published CurseForge file, not live git.
 - On `v*` tags, CI exports a CurseForge zip and Modrinth mrpack, always attaches both to a GitHub Release, and gates store uploads on secrets.
 - Use `.gitattributes` `* -text` so Windows line endings do not break packwiz hashes.
