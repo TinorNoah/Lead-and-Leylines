@@ -1,0 +1,7 @@
+{
+	# Pack default: Xaero's Minimap is the HUD map.
+	# Copied to world/serverconfig/ftbchunks-world.snbt on first world load.
+	# Existing worlds already have that file; set this there too, or delete
+	# the world copy so this default is copied on next start.
+	force_disable_minimap: true
+}

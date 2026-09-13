@@ -11,6 +11,7 @@ Copy [`.env.example`](../.env.example) to `.env` at the repo root (gitignored). 
 Until a CurseForge file exists, the default path is **local**: export the current `pack/` tree, switch the test server to the **Forge Minecraft** egg, install Forge from `pack.toml`, and upload `side` `server`/`both` jars through Wings. Do not fall back to a GitHub raw `pack.toml` URL.
 
 ```text
+python scripts/release.py
 python scripts/deploy_server.py
 python scripts/deploy_server.py --from-local
 python scripts/deploy_server.py --share-only
@@ -18,6 +19,8 @@ python scripts/deploy_server.py --status
 python scripts/deploy_server.py --dry-run
 python scripts/deploy_server.py --curseforge --reinstall --wait 600
 ```
+
+`python scripts/release.py` is the usual ship path: tag `vX.Y.Z` from `pack.toml`, wait for the GitHub Release, then `--from-local` the panel. Use `deploy_server.py` alone when you only need the test server.
 
 `--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export and then pushes the server mods zip. Reinstalling the Forge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/Forge versions are unchanged.
 

@@ -1,0 +1,8 @@
+{
+	# Pack default: Xaero's Minimap is the HUD map.
+	# FTB Chunks also auto-disables this when xaero's minimap is loaded;
+	# keep the override explicit so it survives a missing Xaero jar.
+	minimap: {
+		enabled: false
+	}
+}

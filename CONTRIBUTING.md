@@ -35,9 +35,16 @@ The Prism instance is local only. Do not commit it.
 
 ## Release
 
-1. Set `pack.toml` `version` to `X.Y.Z` (no `v`).
-2. Merge to `main`.
-3. Tag and push `vX.Y.Z` (or use `/publish-release`).
+1. Set `pack.toml` `version` to `X.Y.Z` (no `v`) and keep the README Pack details table in sync.
+2. Merge to `main` with a clean working tree.
+3. From the repo root:
+
+   ```text
+   python scripts/release.py
+   ```
+
+   That tags `vX.Y.Z`, pushes `main` and the tag, waits for the GitHub Release workflow, then deploys the panel (`--from-local` until CurseForge is public). `--dry-run`, `--no-panel`, and `--no-wait` are available. Do not upload zip/mrpack from your machine; CI does that.
+
 4. GitHub Actions exports zip + mrpack and creates a GitHub Release. CurseForge/Modrinth upload if those secrets are set.
 
 Secrets (repo Settings → Secrets; never commit):

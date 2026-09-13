@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-13. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml) (at snapshot: Minecraft 1.20.1, Forge 47.4.23). Re-check store pages before install; do not add a file that does not list that pair.
 
-**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Second client cut: Entity Culling `1.10.5` + Dynamic FPS `3.11.4`. Smoothness cut: FastSuite, Noisium, Clumps, Smooth Chunk Save + Cupboard, Neruina. Dynamic lights stay out. Flywheel compat stays out until Create. packwiz `side` is set as in the tables.
+**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Second client cut: Entity Culling `1.10.5` + Dynamic FPS `3.11.4`. Smoothness cut: FastSuite, Noisium, Clumps, Smooth Chunk Save + Cupboard, Neruina. Dynamic lights stay out. Create + Colorwheel (not iris-flw-compat) landed in the QoL cut; see [utility.md](utility.md). packwiz `side` is set as in the tables.
 
 ## Side (packwiz)
 
@@ -18,7 +18,7 @@ Nothing in the chosen set is dedicated-server-only. Let Me Despawn, Radium, Fast
 
 1. Compatibility first. Mixin overlap or two mods solving the same subsystem → keep one.
 2. Prefer the maintained Forge 1.20.1 project, not an abandoned fork with a familiar name.
-3. Do not add a compat mod until the content mod it compatibilizes exists (Create → Flywheel compat).
+3. Do not add a compat mod until the content mod it compatibilizes exists. Create + Oculus uses Colorwheel, not iris-flw-compat.
 4. Do not add a second leaf-culler, second dynamic-lights mod, or a second Lithium port.
 5. Gameplay-changing “optimizers” (mob freeze range, redstone rewrite) are hold/skip unless explicitly wanted.
 
@@ -88,11 +88,10 @@ Do not add Sinytra Connector just to run the Fabric jars.
 |---|---|---|---|
 | ServerCore | [modrinth.com/mod/servercore](https://modrinth.com/mod/servercore) | both | Overlaps Radium / Let Me Despawn. Activation range and mobcaps **change gameplay** (distant mobs freeze). Not a silent optimizer. |
 | Better Beds Reforged | [modrinth.com/mod/better-beds-reforged](https://modrinth.com/mod/better-beds-reforged) | client | Correct Forge port (upstream Better Beds has no Forge 1.20.1). Tiny FPS. Last file is 1.0.0 (2023). Optional later. |
-| Iris & Oculus Flywheel Compat | [modrinth.com/mod/iris-flw-compat](https://modrinth.com/mod/iris-flw-compat) | client | Only useful with Create’s Flywheel + Oculus. No Create in the pack yet. |
 | Chunky | [modrinth.com/plugin/chunky](https://modrinth.com/plugin/chunky) | both | Official Forge pregen. Admin tool; writes chunks. Wait for a the panel pregen decision. |
 | Connectivity | [curseforge.com/.../connectivity](https://www.curseforge.com/minecraft/mc-mods/connectivity) | both | Packet/timeout fixer. Cupboard is already in. Add with Create / AE2 / Mekanism / TACZ multiplayer, not as FPS. |
 | Particle Core | [modrinth.com/mod/particle-core](https://modrinth.com/mod/particle-core) | client | Particle cull/cap. Needs Kotlin for Forge + Fzzy Config. Could hide TACZ / Superb Warfare / Ars Nouveau VFX. Only with a config that does not strip gun/spell particles. |
-| Create: Nowheel | [modrinth.com/mod/create-nowheel](https://modrinth.com/mod/create-nowheel) | client | Create + Entity Culling companion. Shader path wants Colorwheel, which is a different stack than Oculus + iris-flw-compat. Research at Create install; do not stack blindly. |
+| Create: Nowheel | [modrinth.com/mod/create-nowheel](https://modrinth.com/mod/create-nowheel) | client | Create + Entity Culling companion. Colorwheel is already the shader path. Add only if contraptions go invisible. |
 
 ---
 
@@ -107,7 +106,7 @@ Do not add Sinytra Connector just to run the Fabric jars.
 | Alternate Current | [modrinth.com/mod/alternate-current](https://modrinth.com/mod/alternate-current) | both | Rewrites redstone dust. Radium/Lithium already touches that subsystem. Mixin overlap; pick Radium (broader). |
 | Canary | [modrinth.com/mod/canary](https://modrinth.com/mod/canary) | both | Second Lithium port. Older 1.20.1 build than Radium; reports of disabled Lithium opts and Apotheosis issues. |
 | Radium Reforged **as a second jar** | CurseForge [radium-reforged](https://www.curseforge.com/minecraft/mc-mods/radium-reforged) (Asek3) vs Modrinth Radium (Reforged-Hub) | both | One Lithium port only. Chosen project is Modrinth **Radium**. Do not install both listings. |
-| Iris & Oculus Flywheel Compat (now) | iris-flw-compat | client | Dead weight without Create. |
+| Iris & Oculus Flywheel Compat | iris-flw-compat | client | Colorwheel replaced this for Create + Oculus. Do not stack. |
 | ServerCore (as a silent add) | servercore | both | See Held. Dropped from the first cut because it is a ruleset, not a free FPS win. |
 | Not Enough Crashes | (alternative to Crash Assistant) | client | Worse crash-on-crash reputation. Crash Assistant is the replacement. |
 | Optimized Block Entities (OBE) | [modrinth.com/mod/obe](https://modrinth.com/mod/obe) | client | Author notes 1.20.1 Forge **crashes with Embeddium** unless extra Fabric-API-shaped deps. We ship Embeddium. |
@@ -129,13 +128,13 @@ Rules for extra opt mods:
 1. **No distant-tick freezers** (ServerCore, Does It Tick, Immersive Optimization, APTweaks Spawn). Create contraptions, AE2 grids, Mekanism machines, and Apotheosis spawners must keep ticking.
 2. **No second Lithium / redstone rewrite** (Canary, Alternate Current). Radium stays. Create uses redstone; Apotheosis historically fought Canary.
 3. **No spawn-chunk strippers** (Ksyxis). Tech mods need loaded machines.
-4. **Shaders + Create** need [Iris & Oculus Flywheel Compat](https://modrinth.com/mod/iris-flw-compat) **when Create is added**, not before. Pair with the then-current Oculus/Embeddium files. Do not add Colorwheel/Nowheel in the same cut without a dedicated check.
+4. **Shaders + Create** use Colorwheel + Colorwheel Patcher (beta). Do **not** add [Iris & Oculus Flywheel Compat](https://modrinth.com/mod/iris-flw-compat).
 5. **Entity Culling** is already in. When Create lands, watch for invisible contraption entities; Nowheel claims to fix one Entity Culling + simulated-contraption case.
 6. **Particle caps** (Particle Core, Embeddium Extra particle settings) must not eat TACZ / Superb Warfare tracers or Ars Nouveau spell FX.
 7. **ImmediatelyFast `hud_batching`** may need off later if gadget/JEI/Apotheosis tooltips glitch.
 8. TACZ and Superb Warfare are **two gun systems**. That is a content overlap for later, not an optimizer problem.
 
-Safe opt that **helps** that list: FastSuite (Apotheosis/AE2/MI/magic recipes), Clumps (Mob Grinding Utils XP), Noisium (biome worldgen hitch), Smooth Chunk Save (autosave with bigger worlds), AllTheLeaks (already in), Neruina (bad tick isolation), Connectivity later (large mod packets), Flywheel compat later (Create + Oculus).
+Safe opt that **helps** that list: FastSuite (Apotheosis/AE2/MI/magic recipes), Clumps (Mob Grinding Utils XP), Noisium (biome worldgen hitch), Smooth Chunk Save (autosave with bigger worlds), AllTheLeaks (already in), Neruina (bad tick isolation), Connectivity later (large mod packets), Colorwheel (already in) for Create + Oculus.
 
 ---
 
@@ -152,7 +151,7 @@ Do not combine:
 | CullLessLeaves + Embeddium Extra leaf culling | Duplicate leaf pass |
 | Oculus + dynamic lights | Shader lighting vs extra DL |
 | Oculus + CullLessLeaves | Holey trees under shaders |
-| Flywheel compat without Create | No effect |
+| Colorwheel + Iris/Oculus Flywheel Compat | Incompatible; Colorwheel is the chosen Create + Oculus path |
 | Embeddium + Oculus with unmatched versions | Common 1.20.1 crash source. Pair store files; do not mix random builds. |
 | Embeddium Extra leaf culling + More Culling (or CullLessLeaves) | Duplicate leaf pass |
 | Official Fabric slugs (Sodium, Lithium, C2ME, Krypton, VMP, Indium, Debugify 1.20.1) on this Forge pack | Wrong loader; crash or no file |
@@ -199,7 +198,7 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 | Sodium/Embeddium Extras | Chosen as Embeddium Extra, client |
 | Crash Assistant | Chosen, client |
 | Radium Reforged | Chosen as Modrinth **Radium**, both; not Canary; not two Radium jars |
-| Iris & Oculus Flywheel Compat | Held until Create |
+| Iris & Oculus Flywheel Compat | **Dropped** — Colorwheel is in with Create |
 | CullLessLeaves Reforged (Unofficial) | Dropped |
 | ServerCore | Held / not in first cut |
 
@@ -207,4 +206,4 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 
 ## Locked: shaders
 
-Shaders are a pack feature. Oculus is the Forge shader loader. Dynamic lights mods stay out. Flywheel shader compat is still held until Create.
+Shaders are a pack feature. Oculus is the Forge shader loader. Dynamic lights mods stay out. Create + Oculus uses Colorwheel (beta), not iris-flw-compat.
