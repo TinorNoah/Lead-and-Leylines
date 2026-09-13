@@ -9,7 +9,7 @@ Until a CurseForge file exists, deploy the current `pack/` tree with `python scr
 
 ## Steps
 
-1. Confirm `.env` exists at the repo root (never commit it). Required: `PANEL_API_KEY`. For the CurseForge Generic egg also `CURSEFORGE_PROJECT_ID`. The CurseForge console `API_KEY` can be copied from another CurseForge Generic server on the panel.
+1. Confirm `.env` exists at the repo root (never commit it). Required: `PANEL_URL`, `PANEL_API_KEY`, `PANEL_NODE_FQDN`. For the CurseForge Generic egg also `CURSEFORGE_PROJECT_ID`. The CurseForge console `API_KEY` can be copied from another CurseForge Generic server on the panel.
 2. From the repo root, run `python scripts/deploy_server.py --status` to find the server.
 3. Push the current pack (default while CurseForge is unpublished):
 
@@ -21,4 +21,4 @@ Until a CurseForge file exists, deploy the current `pack/` tree with `python scr
    - `Exception`, `Error`, crash reports
    - egg message that the file is not a server pack (CurseForge Generic only; expected until a distinct server pack exists; still report it)
    - missing overlay after reinstall (`ops.json`, `user_jvm_args.txt` not re-copied)
-   - HTTP 401 from the script: wrong panel URL or key (panel is `https://example.invalid`, not Dokploy at `example.invalid`)
+   - HTTP 401 from the script: wrong `PANEL_URL` or key in `.env` (not the Dokploy host)

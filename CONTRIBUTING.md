@@ -37,39 +37,19 @@ The Prism instance is local only. Do not commit it.
 
 1. Set `pack.toml` `version` to `X.Y.Z` (no `v`) and keep the README Pack details table in sync.
 2. Merge to `main` with a clean working tree.
-3. From the repo root:
+3. Write markdown notes for this version (GitHub Release body, CurseForge changelog, and Modrinth changelog). Do not put private server or hosting details in those notes.
+4. From the repo root:
 
    ```text
-   python scripts/release.py
+   python scripts/release.py vX.Y.Z --changelog notes.md
    ```
 
-   That tags `vX.Y.Z`, pushes `main` and the tag, waits for the GitHub Release workflow, then deploys the panel (`--from-local` until CurseForge is public). `--dry-run`, `--no-panel`, and `--no-wait` are available. Do not upload zip/mrpack from your machine; CI does that.
+   `--notes "..."` works instead of a file. `--channel alpha|beta|release` (default `alpha`). `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release from that changelog, and uploads CurseForge/Modrinth when those values are set.
 
-4. GitHub Actions exports zip + mrpack and creates a GitHub Release. CurseForge/Modrinth upload if those secrets are set.
+Secrets (gitignored `.env` at the repo root; never commit):
 
-Secrets (repo Settings → Secrets; never commit):
-
+- `GH_TOKEN` — GitHub token that can create releases and upload assets
 - `CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`
-- `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID`
+- `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID` (the 8-character id from the Modrinth dashboard, not the slug `lead-and-leylines`; token must be able to read unpublished projects)
 
-## test server
-
-See `server/README.md` for egg variables and overlay files. Copy `.env.example` to `.env` and set `PANEL_API_KEY`. Never commit `.env`.
-
-Until CurseForge is public, the default command pushes the current `pack/` tree:
-
-```text
-python scripts/deploy_server.py
-```
-
-That installs the **Forge Minecraft** egg from `pack.toml`, uploads `side` `server`/`both` jars, and writes ATLauncher files under `dist/` (gitignored). Re-running replaces `mods/` only. `--reinstall` (or a Minecraft/Forge bump) wipes the world. `--status` prints the join address.
-
-Friends on ATLauncher (no store listing yet):
-
-```text
-python scripts/deploy_server.py --share-only
-```
-
-Send them `dist/Lead-and-Leylines-<pack version>.mrpack` (or the `.zip`). They: **Instances → Import → Browse** → that file → **Import** → name it → **Install**. Send the file; URL import often fails for GitHub links.
-
-After a CurseForge file exists, set `CURSEFORGE_PROJECT_ID` and run `python scripts/deploy_server.py --curseforge --reinstall`. Overlay files under `server/` must be re-copied after a full egg reinstall.
+Missing CurseForge or Modrinth values skip that store with a log line. A missing `GH_TOKEN` fails the run. Copy `.env.example` to `.env`.

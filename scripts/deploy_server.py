@@ -16,11 +16,13 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
+import zipfile
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from envfile import load_env_file
 from pack_artifacts import atlauncher_instructions, build_all
 from wings import Wings, node_configuration, wings_base_url
 from read_pack_versions import PACK_TOML, read_pack
@@ -35,25 +37,9 @@ EGG_IMPORT_URL = (
     "https://raw.githubusercontent.com/panel-eggs/minecraft/refs/heads/main"
     "/java/curseforge/egg-curse-forge-generic.json"
 )
-DEFAULT_PANEL = "https://example.invalid"
-DEFAULT_NODE_FQDN = "example.invalid"
 DEFAULT_NODE_NAME = "node"
 DEFAULT_EXTERNAL_ID = "lead-and-leylines"
 SECRET_MARKERS = ("KEY", "TOKEN", "SECRET", "PASSWORD", "AUTHORIZATION")
-
-
-def load_env_file(path: Path) -> None:
-    if not path.is_file():
-        return
-    for raw in path.read_text(encoding="utf-8").splitlines():
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, _, value = line.partition("=")
-        key = key.strip()
-        value = value.strip().strip("'").strip('"')
-        if key and key not in os.environ:
-            os.environ[key] = value
 
 
 def env(name: str, default: str = "") -> str:
@@ -551,6 +537,23 @@ def connect_wings(client: PanelClient, node: dict[str, Any], server: dict[str, A
     return Wings(wings_base_url(fqdn, configuration), token, uuid)
 
 
+def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
+    with zipfile.ZipFile(zip_path) as archive:
+        members = [
+            info
+            for info in archive.infolist()
+            if not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
+        ]
+        if not members:
+            raise SystemExit(f"{zip_path.name} contains no jars")
+        print(f"uploading {len(members)} jars to /mods")
+        for info in members:
+            name = Path(info.filename.replace("\\", "/")).name
+            data = archive.read(info)
+            print(f"  {name} ({len(data)} bytes)")
+            wings.write_file(f"/mods/{name}", data, "application/java-archive")
+
+
 def write_overlay(wings: Wings) -> None:
     overlay = ROOT / "server"
     for name in OVERLAY_FILES:
@@ -576,10 +579,15 @@ def upload_server_mods(wings: Wings, zip_path: Path) -> None:
 
     print(f"uploading {zip_path.name} ({zip_path.stat().st_size} bytes)")
     wings.delete(["mods", SERVER_MODS_REMOTE])
-    wings.write_file(f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip")
-    print("decompressing server mods zip")
-    wings.decompress(SERVER_MODS_REMOTE)
-    wings.delete([SERVER_MODS_REMOTE])
+    try:
+        wings.write_file(f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip")
+        print("decompressing server mods zip")
+        wings.decompress(SERVER_MODS_REMOTE)
+        wings.delete([SERVER_MODS_REMOTE])
+    except SystemExit as exc:
+        print(f"  zip upload failed ({exc}); uploading jars individually")
+        wings.delete([SERVER_MODS_REMOTE])
+        upload_jars_from_zip(wings, zip_path)
     wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
     write_overlay(wings)
     deadline = time.time() + 120
@@ -927,9 +935,9 @@ def main() -> None:
         print(atlauncher_instructions(paths))
         return
 
-    panel = env("PANEL_URL", DEFAULT_PANEL)
+    panel = require_env("PANEL_URL")
     token = require_env("PANEL_API_KEY")
-    node_fqdn = env("PANEL_NODE_FQDN", DEFAULT_NODE_FQDN)
+    node_fqdn = require_env("PANEL_NODE_FQDN")
     node_name = env("PANEL_NODE_NAME", DEFAULT_NODE_NAME)
     owner_name = env("PANEL_OWNER_USERNAME", "tinor")
     server_name = env("PANEL_SERVER_NAME") or pack["name"]

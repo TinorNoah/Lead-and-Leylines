@@ -99,14 +99,26 @@ class Wings:
     ) -> None:
         if not remote_path.startswith("/"):
             remote_path = "/" + remote_path
-        self.request(
-            "POST",
-            f"/api/servers/{self.uuid}/files/write",
-            query={"file": remote_path},
-            raw_body=data,
-            content_type=content_type,
-            timeout=timeout or max(self.timeout, 300),
-        )
+        wait = timeout or max(self.timeout, 300, 60 + len(data) // 50_000)
+        last_error: SystemExit | None = None
+        for attempt in range(1, 4):
+            try:
+                self.request(
+                    "POST",
+                    f"/api/servers/{self.uuid}/files/write",
+                    query={"file": remote_path},
+                    raw_body=data,
+                    content_type=content_type,
+                    timeout=wait,
+                )
+                return
+            except SystemExit as exc:
+                if "urlopen error" not in str(exc):
+                    raise
+                last_error = exc
+                print(f"  upload attempt {attempt}/3 failed: {exc}")
+                time.sleep(2 * attempt)
+        raise last_error or SystemExit(f"Wings write failed for {remote_path}")
 
     def delete(self, names: list[str], root: str = "/") -> None:
         existing = self.names(root)
