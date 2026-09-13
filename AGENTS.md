@@ -74,7 +74,8 @@ CurseForge Generic egg. Tracks the last published CurseForge file, not git. See 
 
 - Pack display name is **Lead and Leylines** (`pack/pack.toml` `name`). GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`.
 - This is a long-term Minecraft Forge modpack managed with packwiz; never commit jars.
-- Modrinth pack slug is still `the-end-game2` (`https://modrinth.com/modpack/the-end-game2`) until that project is renamed on Modrinth.
+- Modrinth pack slug is `lead-and-leylines` (`https://modrinth.com/modpack/lead-and-leylines`).
+- Pack files are MIT (`LICENSE`). Third-party mods keep their own licenses. Modrinth listing: description from README pitch, license MIT, version environment client and server.
 - Packwiz root is `pack/`; docs (including `docs/mods/` decision logs), CI, and `.agents/` stay at the repo root and are not exported. Shaders are a pack feature (Oculus + Embeddium); do not add a separate dynamic-lights mod while Oculus is in.
 - Branching is GitHub Flow (`main`, feature branches, PRs); `v*` tags trigger release; `pack.toml` version matches the tag without the `v`.
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file and keep the README Pack details table in sync in the same change. Do not hardcode versions in skills or workflows.

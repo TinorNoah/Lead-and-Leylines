@@ -23,11 +23,16 @@ A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.1`).
 
 ## Play
 
-Install from the latest [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases) (CurseForge zip and Modrinth `.mrpack`). CI also uploads those files to CurseForge and Modrinth when a version tag is pushed.
+Install from the latest [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases) (CurseForge zip and Modrinth `.mrpack`), or from [Modrinth](https://modrinth.com/modpack/lead-and-leylines). CI also uploads those files to CurseForge and Modrinth when a version tag is pushed.
 
 The pack is in early development. The current cut is performance mods plus Oculus (shader loader). Shader packs come later.
 
 Prism and other launchers must use Minecraft **1.20.1** and Forge **47.4.23**.
+
+## License
+
+Pack files in this repo (TOML, configs, docs, CI) are [MIT](LICENSE). The Minecraft mods the pack downloads stay under each author’s own license.
+
 
 ## Repository layout
 

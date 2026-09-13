@@ -97,6 +97,7 @@ jobs:
           game-versions: ${{ steps.pack.outputs.minecraft }}
           version: ${{ steps.pack.outputs.pack_version }}
           version-type: alpha
+          environment: client | server
 
       - name: Skip Modrinth if secrets missing
         if: ${{ steps.publish.outputs.modrinth != 'true' }}
@@ -113,3 +114,4 @@ jobs:
           game-versions: ${{ steps.pack.outputs.minecraft }}
           version: ${{ steps.pack.outputs.pack_version }}
           version-type: alpha
+          environment: client | server
