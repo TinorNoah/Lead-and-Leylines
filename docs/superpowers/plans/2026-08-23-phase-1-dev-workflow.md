@@ -16,7 +16,7 @@
 - Never commit `.jar` files, Minecraft instance folders, `.env`, or API tokens/project IDs.
 - Do not add mods in Phase 1. If empty-pack export fails, stop and report; do not add a dummy mod.
 - Re-search current packwiz/Forge/Actions docs immediately before running install or CLI commands.
-- Existing remote: `https://github.com/TinorNoah/The-End-Game.git`. Do not create a second repo.
+- Existing remote: `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not create a second repo.
 - Push `main` and tag `v0.0.1` only with explicit user approval (Task 9).
 - Preserve `AGENTS.md` learned sections; retarget any bullets that pin MC/Forge numbers to `pack.toml`.
 - Skills live under `.agents/skills/`, not `.cursor/skills/`.
@@ -56,18 +56,18 @@
 
 - [ ] **Step 1: Confirm git state**
 
-Run from `C:\Users\tinor\Desktop\The End Game`:
+Run from `C:\Users\tinor\Desktop\Lead and Leylines`:
 
 ```powershell
 git rev-parse --is-inside-work-tree 2>$null
 git remote -v
 ```
 
-Expected: either not a repo yet, or a repo with no commits. If `origin` exists, it must be `https://github.com/TinorNoah/The-End-Game.git` (or the `git@github.com:TinorNoah/The-End-Game.git` equivalent). Do not change remotes. If not a repo:
+Expected: either not a repo yet, or a repo with no commits. If `origin` exists, it must be `https://github.com/TinorNoah/Lead-and-Leylines.git` (or the `git@github.com:TinorNoah/Lead-and-Leylines.git` equivalent). Do not change remotes. If not a repo:
 
 ```powershell
 git init -b main
-git remote add origin https://github.com/TinorNoah/The-End-Game.git
+git remote add origin https://github.com/TinorNoah/Lead-and-Leylines.git
 ```
 
 Skip `remote add` if origin already points at that URL.
@@ -161,7 +161,7 @@ Open https://files.minecraftforge.net/net/minecraftforge/forge/index_1.20.1.html
 ```powershell
 New-Item -ItemType Directory -Force -Path pack | Out-Null
 Set-Location pack
-packwiz init --name "The End Game" --author TinorNoah --version 0.0.1 --mc-version 1.20.1 --modloader forge --forge-version 47.4.22 -y
+packwiz init --name "Lead and Leylines" --author TinorNoah --version 0.0.1 --mc-version 1.20.1 --modloader forge --forge-version 47.4.22 -y
 Set-Location ..
 ```
 
@@ -498,7 +498,7 @@ git commit -m "docs: describe the panel CurseForge Generic egg overlay"
 Keep the file under ~200 lines. Do not put Minecraft or Forge version numbers anywhere.
 
 ```markdown
-# The End Game
+# Lead and Leylines
 
 Long-lived Minecraft Forge modpack. Source of truth is git + packwiz TOML under `pack/`.
 
@@ -569,7 +569,7 @@ CurseForge Generic egg. Tracks the last published CurseForge file, not git. See 
 ## Learned Workspace Facts
 
 - This is a long-term Minecraft Forge modpack managed with packwiz; never commit jars.
-- GitHub remote is `https://github.com/TinorNoah/The-End-Game.git`.
+- GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`.
 - Packwiz root is `pack/`; docs, CI, and `.agents/` stay at the repo root and are not exported.
 - Branching is GitHub Flow (`main`, feature branches, PRs); `v*` tags trigger release; `pack.toml` version matches the tag without the `v`.
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file, never prose.
@@ -594,7 +594,7 @@ No extra newline-only variations beyond a single trailing newline.
 - [ ] **Step 3: Write `README.md`**
 
 ```markdown
-# The End Game
+# Lead and Leylines
 
 A git-managed Minecraft Forge modpack using [packwiz](https://packwiz.infra.link/). Mods are TOML metadata, never committed jars.
 
@@ -697,7 +697,7 @@ git commit -m "docs: add packwiz workflow conventions and contributor loop"
 ```markdown
 ---
 name: add-mod
-description: Search CurseForge or Modrinth, verify the candidate matches pack.toml Minecraft and loader versions, add it with packwiz, and run packwiz refresh. Use when adding a mod to The End Game pack.
+description: Search CurseForge or Modrinth, verify the candidate matches pack.toml Minecraft and loader versions, add it with packwiz, and run packwiz refresh. Use when adding a mod to Lead and Leylines pack.
 ---
 
 # Add a mod

@@ -1,6 +1,6 @@
 # Phase 1 Developer Workflow Design
 
-Forge modpack “The End Game”. This spec covers **Phase 1 only**: git, packwiz, Prism, GitHub Actions, agent skills, and docs. Zero mods. Implementation starts only after this spec is approved.
+Forge modpack “Lead and Leylines”. This spec covers **Phase 1 only**: git, packwiz, Prism, GitHub Actions, agent skills, and docs. Zero mods. Implementation starts only after this spec is approved.
 
 Verified against current packwiz docs (`packwiz init` flags, installer, export), Forge files (latest 1.20.1 build as of 2026-07-21 used only as the **init seed**), the panel CurseForge Generic egg (`PROJECT_ID`, `VERSION_ID`, `API_KEY`), and `Kira-NT/mc-publish@v3`.
 
@@ -19,7 +19,7 @@ An empty packwiz pack in git, a local Prism loop driven by packwiz-installer, an
 - the panel: CurseForge Generic egg. Tracks the last **published CurseForge file**, not live git.
 - CI: one tag workflow. GitHub Release always. CurseForge/Modrinth gated on secrets.
 - **Versions live only in `pack/pack.toml`.** Docs, skills, CI, and CONTRIBUTING read Minecraft, loader, and loader version from that file. They must not hardcode those numbers. Bump by editing `pack.toml` (and verifying current Forge/MC docs), never by editing prose.
-- Existing remote: `https://github.com/TinorNoah/The-End-Game.git` (currently empty). Do not create a second repo.
+- Existing remote: `https://github.com/TinorNoah/Lead-and-Leylines.git` (currently empty). Do not create a second repo.
 
 ## Single source of truth (`pack.toml`)
 
@@ -38,7 +38,7 @@ When implementing, rewrite any continual-learning bullets that currently pin For
 Phase 1 init seed (written once into `pack.toml`, then forgotten by other files). Re-check the current recommended Forge build for the chosen Minecraft version immediately before running init:
 
 ```text
-packwiz init --name "The End Game" --author TinorNoah --version 0.0.1 --mc-version 1.20.1 --modloader forge --forge-version 47.4.22 -y
+packwiz init --name "Lead and Leylines" --author TinorNoah --version 0.0.1 --mc-version 1.20.1 --modloader forge --forge-version 47.4.22 -y
 ```
 
 ## Architecture
@@ -46,7 +46,7 @@ packwiz init --name "The End Game" --author TinorNoah --version 0.0.1 --mc-versi
 Source of truth is git + packwiz TOML. Jars are never committed.
 
 ```
-The-End-Game/
+Lead-and-Leylines/
   pack/                         # packwiz root — only this tree is indexed/exported
     pack.toml
     index.toml

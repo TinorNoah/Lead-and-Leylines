@@ -23,7 +23,7 @@ A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.1`).
 
 ## Play
 
-Install from the latest [GitHub Release](https://github.com/TinorNoah/The-End-Game/releases) (CurseForge zip and Modrinth `.mrpack`). CI also uploads those files to CurseForge and Modrinth when a version tag is pushed.
+Install from the latest [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases) (CurseForge zip and Modrinth `.mrpack`). CI also uploads those files to CurseForge and Modrinth when a version tag is pushed.
 
 The pack is in early development. The current cut is performance mods plus Oculus (shader loader). Shader packs come later.
 

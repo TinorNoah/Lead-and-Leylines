@@ -17,7 +17,7 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Local test | Prism + `packwiz serve` (see CONTRIBUTING.md) |
 | Dedicated server | server overlay in `server/` (not exported); same pack, packwiz `side` |
 
-GitHub remote and Modrinth/CurseForge slugs may still use the old repo id. Do not rename remotes or store projects as part of adding a mod.
+GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.
 
 ## Never drop a jar in
 
