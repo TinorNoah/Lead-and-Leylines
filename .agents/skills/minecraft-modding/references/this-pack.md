@@ -14,8 +14,8 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Live manifest | `docs/mods/manifest.md` |
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |
-| Local test | Prism + `packwiz serve` (see CONTRIBUTING.md) |
-| Dedicated server | server overlay in `server/` (not exported); same pack, packwiz `side` |
+| Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
+| Dedicated server | `python scripts/deploy_server.py` (Forge egg + local mods until CurseForge is public). Overlay in `server/` is not exported; same pack, packwiz `side` |
 
 GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.
 
@@ -44,7 +44,7 @@ The git tree (TOML + `docs/mods/`) is the reproducible backup. The Prism `mods/`
 1. Re-verify the store file still lists this pack’s Minecraft + Forge from `pack.toml`.
 2. Install with packwiz (required deps only). Do not bump Minecraft, Forge, or shared libraries in `pack.toml` to make a mod fit.
 3. `packwiz refresh`.
-4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared.
+4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` and watch the panel console.
 5. Update `docs/mods/manifest.md` and the relevant `docs/mods/` decision log. Confirm the manifest matches `pack/mods/*.pw.toml`.
 
 Shaders: Oculus is the loader. Do not add a separate dynamic-lights mod while Oculus is in. Shader packs are a later pack feature, not a silent add.

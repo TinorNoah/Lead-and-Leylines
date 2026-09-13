@@ -47,11 +47,22 @@ Secrets (repo Settings → Secrets; never commit):
 
 ## test server
 
-See `server/README.md`. Copy `.env.example` to `.env` and set `PANEL_API_KEY`. Then:
+See `server/README.md` for egg variables and overlay files. Copy `.env.example` to `.env` and set `PANEL_API_KEY`. Never commit `.env`.
+
+Until CurseForge is public, the default command pushes the current `pack/` tree:
 
 ```text
 python scripts/deploy_server.py
-python scripts/deploy_server.py --reinstall --wait 600
 ```
 
-The CurseForge Generic egg tracks the last published CurseForge file, not `main`. After a store upload, set `CURSEFORGE_PROJECT_ID` if needed and reinstall. Overlay files must be re-copied after reinstall.
+That installs the **Forge Minecraft** egg from `pack.toml`, uploads `side` `server`/`both` jars, and writes ATLauncher files under `dist/` (gitignored). Re-running replaces `mods/` only. `--reinstall` (or a Minecraft/Forge bump) wipes the world. `--status` prints the join address.
+
+Friends on ATLauncher (no store listing yet):
+
+```text
+python scripts/deploy_server.py --share-only
+```
+
+Send them `dist/Lead-and-Leylines-<pack version>.mrpack` (or the `.zip`). They: **Instances → Import → Browse** → that file → **Import** → name it → **Install**. Send the file; URL import often fails for GitHub links.
+
+After a CurseForge file exists, set `CURSEFORGE_PROJECT_ID` and run `python scripts/deploy_server.py --curseforge --reinstall`. Overlay files under `server/` must be re-copied after a full egg reinstall.
