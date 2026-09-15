@@ -38,13 +38,13 @@ Set `CURSEFORGE_PROJECT_ID` (numeric modpack id) in `.env`. `CURSEFORGE_API_KEY`
 python scripts/deploy_server.py --curseforge --reinstall --wait 600
 ```
 
-## panel egg
+## Eggs
 
-**Local testing (default):** [Forge Minecraft]() already on the panel (`MC_VERSION` and `FORGE_VERSION` from `pack.toml`; `FORGE_VERSION` is `{minecraft}-{forge}`).
+**Local testing (default):** Forge Minecraft already on the panel (`MC_VERSION` and `FORGE_VERSION` from `pack.toml`; `FORGE_VERSION` is `{minecraft}-{forge}`).
 
-**Store listing:** [CurseForge Generic]().
+**Store listing:** CurseForge Generic egg, imported via `EGG_IMPORT_URL` in `.env`.
 
-| panel env (CurseForge Generic) | Value |
+| Panel env (CurseForge Generic) | Value |
 |---|---|
 | `PROJECT_ID` | CurseForge modpack project ID (set in `.env` / the panel, never in git) |
 | `VERSION_ID` | `latest` on the test server |

@@ -33,10 +33,6 @@ FORGE_EGG_UUID = "ed072427-f209-4603-875c-f540c6dd5a65"
 FORGE_EGG_NAME = "Forge Minecraft"
 SERVER_MODS_REMOTE = "lead-and-leylines-server-mods.zip"
 OVERLAY_FILES = ("user_jvm_args.txt", "ops.json")
-EGG_IMPORT_URL = (
-    "https://raw.githubusercontent.com/panel-eggs/minecraft/refs/heads/main"
-    "/java/curseforge/egg-curse-forge-generic.json"
-)
 DEFAULT_NODE_NAME = "node"
 DEFAULT_EXTERNAL_ID = "lead-and-leylines"
 SECRET_MARKERS = ("KEY", "TOKEN", "SECRET", "PASSWORD", "AUTHORIZATION")
@@ -246,8 +242,9 @@ def forge_environment(pack: dict[str, str]) -> dict[str, str]:
 
 
 def import_egg(client: PanelClient) -> dict[str, Any]:
-    print(f"importing missing egg from {EGG_IMPORT_URL}")
-    egg_json = fetch_json(EGG_IMPORT_URL)
+    egg_url = require_env("EGG_IMPORT_URL")
+    print("importing missing egg")
+    egg_json = fetch_json(egg_url)
     created = client.post(
         "/api/application/eggs/import",
         raw_body=json.dumps(egg_json).encode("utf-8"),
@@ -820,7 +817,7 @@ def deploy_from_curseforge(
         if args.dry_run:
             print(
                 f"egg {CURSEFORGE_GENERIC_NAME!r} is missing; "
-                f"would import from {EGG_IMPORT_URL}"
+                "would import from EGG_IMPORT_URL"
             )
             egg = {
                 "id": None,

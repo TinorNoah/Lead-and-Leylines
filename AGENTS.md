@@ -58,7 +58,7 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 
 - `minecraft-modding` — research, compatibility, approval, manifest (read before any install)
 - `add-mod` — packwiz install after `minecraft-modding` approval; then refresh
-- `test-server` — the panel via `scripts/deploy_server.py` (`--from-local` until CurseForge is public); console still from the panel until a client API key exists
+- `test-server` — dedicated server via `scripts/deploy_server.py` (`--from-local` until CurseForge is public); console still from the panel until a client API key exists
 - `publish-release` — only on explicit `/publish-release`; runs `python scripts/release.py`
 
 ## Learned User Preferences
@@ -81,8 +81,8 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file and keep the README Pack details table in sync in the same change. Do not hardcode versions in skills.
 - One pack uses packwiz `side` (`client` / `server` / `both`); server overlay/JVM overlay lives in `server/` and is never exported. Server-logic optimizers we ship use `both` so Prism singleplayer matches the dedicated server.
 - Local Prism testing uses `packwiz serve` plus packwiz-installer-bootstrap against `http://localhost:8080/pack.toml`.
-- panel URL and Wings node FQDN come from gitignored `.env` (`PANEL_URL`, `PANEL_NODE_FQDN`). Deploy with `python scripts/deploy_server.py` (local pack tree via Forge egg + Wings until CurseForge is public; Generic egg tracks the last published CurseForge file after that).
-- `python scripts/release.py` exports zip + mrpack, creates the GitHub Release from the supplied changelog, uploads CurseForge/Modrinth from `.env` when set, then updates the panel locally. Do not mention the dedicated server, the panel, or the join address in GitHub Release notes or other GitHub-facing copy. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+- Panel URL and Wings node FQDN come from gitignored `.env` (`PANEL_URL`, `PANEL_NODE_FQDN`). Deploy with `python scripts/deploy_server.py` (local pack tree via Forge egg + Wings until CurseForge is public; Generic egg tracks the last published CurseForge file after that).
+- `python scripts/release.py` exports zip + mrpack, creates the GitHub Release from the supplied changelog, uploads CurseForge/Modrinth from `.env` when set, then updates the panel locally. Do not mention the dedicated server, the panel, or the join address in GitHub Release notes, commit messages, or other GitHub-facing copy. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
 - Use `.gitattributes` `* -text` so Windows line endings do not break packwiz hashes.
 - `CLAUDE.md` is a one-line `@AGENTS.md` pointer.
-- Planned content to stay compatible with: TACZ, Superb Warfare, Apotheosis, Create, AE2, Ars Nouveau, Modern Industrialization, Building Gadgets, Mining Gadgets, Mekanism, Mob Grinding Utils, plus later biome / magic / tech / utility mods. Do not add distant-tick freezers, a second Lithium port, a second claim mod, or a second map UI. Create + Oculus uses Colorwheel (not Iris/Oculus Flywheel Compat).
+- Planned content to stay compatible with: TACZ, Superb Warfare, Apotheosis, Create, AE2, Ars Nouveau, Modern Industrialization, Building Gadgets, Mining Gadgets, Mekanism, Mob Grinding Utils, plus later biome / magic / tech / utility mods. Do not add distant-tick freezers, a second Lithium port, a second claim mod, or a second map UI. FTB Chunks is the claim layer (minimap off; unbind Open Map); Xaero is the map UI. EMI is the recipe viewer (not JEI). Create + Oculus uses Colorwheel + Colorwheel Patcher (not Iris/Oculus Flywheel Compat).
