@@ -12,14 +12,14 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.0.2 |
+| Pack version | 0.0.3 |
 | Minecraft | 1.20.1 |
 | Mod loader | Forge 47.4.23 |
 | Java | 17 |
 | Packwiz format | packwiz:1.1.0 |
-| Mods | Performance/shader first cut plus QoL, FTB, Xaero, and Create (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
+| Mods | Storage, Nether, Overworld biomes/terrain, and structure cut (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
-A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.2`).
+A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.3`).
 
 ## Play
 

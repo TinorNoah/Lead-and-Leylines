@@ -1,0 +1,13 @@
+name = "Aquamirae"
+filename = "aquamirae-forge-1.20.1-7.1.13.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/k23mNPhZ/versions/72GwOBcB/aquamirae-forge-1.20.1-7.1.13.jar"
+hash-format = "sha512"
+hash = "7f9d07be7df0509eb28d902f974edc98c6de54c9c9b8f5f54a2ce54c2c342854eddf01fe0d836b437b5091c5763e9347f198620d9da5cc1a1aa977eebc2d4314"
+
+[update]
+[update.modrinth]
+mod-id = "k23mNPhZ"
+version = "72GwOBcB"
