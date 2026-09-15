@@ -58,6 +58,7 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 
 - `minecraft-modding` — research, compatibility, approval, manifest (read before any install)
 - `add-mod` — packwiz install after `minecraft-modding` approval; then refresh
+- `update-changelog` — player-facing `[Unreleased]` bullet when a change is noticeable
 - `test-server` — dedicated server via `scripts/deploy_server.py` (`--from-local` until CurseForge is public); console still from the panel until a client API key exists
 - `publish-release` — only on explicit `/publish-release`; runs `python scripts/release.py`
 

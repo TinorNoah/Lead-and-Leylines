@@ -35,16 +35,19 @@ The Prism instance is local only. Do not commit it.
 
 ## Release
 
+Policy: [docs/RELEASING.md](docs/RELEASING.md). Keep `CHANGELOG.md` `[Unreleased]` current as you work (player-facing bullets), not an ad hoc `notes.md` at the last minute.
+
+The Pelican test server address is shared with testers out of band (Discord/DM/etc.), never in the repo or GitHub Release text.
+
 1. Set `pack.toml` `version` to `X.Y.Z` (no `v`) and keep the README Pack details table in sync.
-2. Merge to `main` with a clean working tree.
-3. Write markdown notes for this version (GitHub Release body, CurseForge changelog, and Modrinth changelog). Do not put private server or hosting details in those notes.
-4. From the repo root:
+2. Promote `[Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and re-scaffold an empty `[Unreleased]` (see docs/RELEASING.md). Merge to `main` with a clean working tree.
+3. From the repo root:
 
    ```text
-   python scripts/release.py vX.Y.Z --changelog notes.md
+   python scripts/release.py vX.Y.Z --channel alpha
    ```
 
-   `--notes "..."` works instead of a file. `--channel alpha|beta|release` (default `alpha`). `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release from that changelog, and uploads CurseForge/Modrinth when those values are set.
+   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. `--channel release` is the only channel that uploads CurseForge/Modrinth (default `alpha`). `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, and creates the GitHub Release from that changelog.
 
 Secrets (gitignored `.env` at the repo root; never commit):
 

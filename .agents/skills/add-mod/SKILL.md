@@ -19,7 +19,8 @@ Do not hardcode Minecraft or loader versions. Read them from `pack/pack.toml` (`
 3. Set packwiz `side` to `client`, `server`, or `both` as approved. Server-logic mods needed in singleplayer are `both`.
 4. `packwiz refresh`.
 5. Update `docs/mods/manifest.md` (and the relevant `docs/mods/` decision log). Confirm it matches `pack/mods/*.pw.toml`.
-6. Stage TOML and docs only. Never stage `.jar` files.
+6. Call `update-changelog` to log the mod addition/removal in `[Unreleased]`.
+7. Stage TOML and docs only. Never stage `.jar` files.
 
 ## Side
 
