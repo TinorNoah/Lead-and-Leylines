@@ -1,0 +1,13 @@
+name = "BCLib Forge"
+filename = "BCLib-20.0.13.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/obMZk452/versions/TIteCm8O/BCLib-20.0.13.jar"
+hash-format = "sha512"
+hash = "4f5a331f3e1c330c296ebc4c1d4daed35707663c34952b642446283cc6cb9e7f5ddfe0a8c79b51720407c2e95627654c67bf3925ac83479a4192f358359af5f4"
+
+[update]
+[update.modrinth]
+mod-id = "obMZk452"
+version = "TIteCm8O"

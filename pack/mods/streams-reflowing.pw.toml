@@ -1,0 +1,13 @@
+name = "Streams Reflowing"
+filename = "StreamsReflowing-1.20.1-forge-2.13.5.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/oLS8HdJ1/versions/4HOteI74/StreamsReflowing-1.20.1-forge-2.13.5.jar"
+hash-format = "sha512"
+hash = "a4c96be4117fcefa6591b321b18ae726ffe1478fe65a92b8a3aff1cb34499069433b4e7421023b7fcefe0ec457f4c7a0fbc9831c42be32684a375e82fb6ccd05"
+
+[update]
+[update.modrinth]
+mod-id = "oLS8HdJ1"
+version = "4HOteI74"
