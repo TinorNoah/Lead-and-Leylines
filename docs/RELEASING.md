@@ -39,11 +39,14 @@ Git tags are `vX.Y.Z`. Changelog headers are `## [X.Y.Z]` with **no** `v`, plus 
 
 `scripts/release.py` is **read-only** on `CHANGELOG.md`. It does not promote, rewrite, or append that file.
 
+`[Unreleased]` always has the four empty-ready subheaders so `update-changelog` knows where the next bullet goes. Versioned sections omit empty categories (Keep a Changelog): a cut with no bugfixes has no `### Fixed`. That is why `[0.0.2]` is Added and Removed only.
+
 Editorial promotion happens in the `publish-release` skill **before** running the script, in the same commit as the `pack.toml` / README version bump:
 
 1. If `[Unreleased]` has no real bullets, stop.
 2. Rename `[Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` (today’s date).
-3. Re-scaffold an empty `[Unreleased]` with `### Added`, `### Changed`, `### Fixed`, `### Removed`.
+3. Drop any `###` category in that versioned section that has no bullets. Do not invent entries to fill them.
+4. Re-scaffold an empty `[Unreleased]` with `### Added`, `### Changed`, `### Fixed`, `### Removed`.
 
 Then `python scripts/release.py vX.Y.Z --channel …` extracts the `## [X.Y.Z]` section (from that heading through the next `## [` heading) as the GitHub Release body and the CurseForge/Modrinth notes. `--changelog FILE` and `--notes TEXT` override that extract. If the section is missing or has no real bullets, the script hard-fails **before** tagging or calling any API.
 
