@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Publish a Lead and Leylines pack version from this machine.
 
-Pass a tag and a changelog. The script tags git, creates the GitHub Release
-with that changelog as the body, uploads CurseForge zip + Modrinth mrpack,
-then updates the dedicated test server. Do not put server or hosting details
-in the changelog; they are not part of the public release.
+Pass a tag. Notes default to the matching ## [X.Y.Z] section in CHANGELOG.md
+(the GitHub Release body and CurseForge/Modrinth notes). Only --channel release
+uploads to CurseForge/Modrinth; alpha/beta are GitHub prereleases plus the
+test-server update. This script never edits CHANGELOG.md. Do not put server or
+hosting details in the notes; they are not part of the public release.
 
+  python scripts/release.py v0.0.3 --channel alpha --dry-run
+  python scripts/release.py v0.0.3 --channel release
   python scripts/release.py v0.0.3 --changelog notes.md
   python scripts/release.py 0.0.3 --notes "- EMI and Create"
-  python scripts/release.py v0.0.3 --changelog notes.md --dry-run
-  python scripts/release.py v0.0.3 --changelog notes.md --skip-server
+  python scripts/release.py v0.0.3 --skip-server
 """
 
 from __future__ import annotations
@@ -33,7 +35,10 @@ from publish_stores import (
 from read_pack_versions import ROOT, read_pack
 
 README = ROOT / "README.md"
+CHANGELOG_FILE = ROOT / "CHANGELOG.md"
 CHANNELS = ("alpha", "beta", "release")
+SECTION_HEADING = re.compile(r"^## \[")
+BULLET_LINE = re.compile(r"^[-*+]\s+\S")
 
 
 def run(
@@ -81,7 +86,28 @@ def normalize_tag(raw: str) -> tuple[str, str]:
     return f"v{version}", version
 
 
-def read_changelog(args: argparse.Namespace) -> str:
+def changelog_has_real_bullets(text: str) -> bool:
+    for line in text.splitlines():
+        if BULLET_LINE.match(line.strip()):
+            return True
+    return False
+
+
+def extract_changelog_section(text: str, version: str) -> str | None:
+    heading = re.compile(rf"^## \[{re.escape(version)}\](?:\s|$)")
+    lines = text.splitlines()
+    start = next((i for i, line in enumerate(lines) if heading.match(line)), None)
+    if start is None:
+        return None
+    end = len(lines)
+    for index in range(start + 1, len(lines)):
+        if SECTION_HEADING.match(lines[index]):
+            end = index
+            break
+    return "\n".join(lines[start:end]).strip()
+
+
+def read_changelog(args: argparse.Namespace, version: str) -> str:
     if args.changelog and args.notes:
         raise SystemExit("use either --changelog or --notes, not both")
     if args.changelog:
@@ -89,13 +115,52 @@ def read_changelog(args: argparse.Namespace) -> str:
         if not path.is_file():
             raise SystemExit(f"changelog file not found: {path}")
         text = path.read_text(encoding="utf-8").strip()
-    elif args.notes:
+        if not text:
+            raise SystemExit("changelog is empty")
+        return text
+    if args.notes:
         text = str(args.notes).strip()
-    else:
-        raise SystemExit("pass --changelog FILE or --notes TEXT")
-    if not text:
-        raise SystemExit("changelog is empty")
-    return text
+        if not text:
+            raise SystemExit("changelog is empty")
+        return text
+    if not CHANGELOG_FILE.is_file():
+        raise SystemExit(
+            "changelog required: CHANGELOG.md is missing "
+            "(or pass --changelog FILE / --notes TEXT)"
+        )
+    section = extract_changelog_section(
+        CHANGELOG_FILE.read_text(encoding="utf-8"),
+        version,
+    )
+    if section is None:
+        raise SystemExit(
+            f"changelog required: CHANGELOG.md has no ## [{version}] section "
+            "(or pass --changelog FILE / --notes TEXT)"
+        )
+    if not changelog_has_real_bullets(section):
+        raise SystemExit(
+            f"changelog required: ## [{version}] has no bullet entries "
+            "(category headers alone do not count)"
+        )
+    return section
+
+
+def store_skip_reason(
+    store: str,
+    *,
+    channel: str,
+    publish_to_stores: bool,
+    skip_flag: bool,
+    flag_name: str,
+    has_creds: bool,
+) -> str | None:
+    if not publish_to_stores:
+        return f"{store}: skip (channel is {channel!r}, not 'release')"
+    if skip_flag:
+        return f"{store}: skip ({flag_name})"
+    if not has_creds:
+        return f"{store}: skip (missing token/id)"
+    return None
 
 
 def readme_pack_version() -> str | None:
@@ -161,7 +226,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--changelog",
         metavar="FILE",
-        help="markdown changelog used as the GitHub/CurseForge/Modrinth notes",
+        help=(
+            "markdown notes used as the GitHub/CurseForge/Modrinth body "
+            "(default: ## [X.Y.Z] section in CHANGELOG.md)"
+        ),
     )
     parser.add_argument(
         "--notes",
@@ -205,29 +273,52 @@ def main() -> None:
     load_secrets()
     args = parse_args()
     tag, version = normalize_tag(args.tag)
-    changelog = read_changelog(args)
+    publish_to_stores = args.channel == "release"
+    skip_curseforge = args.skip_curseforge or not publish_to_stores
+    skip_modrinth = args.skip_modrinth or not publish_to_stores
+    changelog = read_changelog(args, version)
+    cf_token = env("CURSEFORGE_TOKEN")
+    cf_project = env("CURSEFORGE_PROJECT_ID")
+    mr_token = env("MODRINTH_TOKEN")
+    mr_project = env("MODRINTH_PROJECT_ID")
+    print(f"channel {args.channel}")
+    for reason in (
+        store_skip_reason(
+            "CurseForge",
+            channel=args.channel,
+            publish_to_stores=publish_to_stores,
+            skip_flag=args.skip_curseforge,
+            flag_name="--skip-curseforge",
+            has_creds=bool(cf_token and cf_project),
+        ),
+        store_skip_reason(
+            "Modrinth",
+            channel=args.channel,
+            publish_to_stores=publish_to_stores,
+            skip_flag=args.skip_modrinth,
+            flag_name="--skip-modrinth",
+            has_creds=bool(mr_token and mr_project),
+        ),
+    ):
+        if reason:
+            print(reason)
+    print("--- changelog ---")
+    print(changelog)
+    print("---")
+    sys.stdout.flush()
     pack = read_pack(ROOT / "pack" / "pack.toml")
     assert_ready(pack, tag, version, dry_run=args.dry_run)
     owner, repo = origin_owner_repo()
     name = f"{pack['name']} {version}"
     gh_token = env("GH_TOKEN") or env("GITHUB_TOKEN")
-    cf_token = env("CURSEFORGE_TOKEN")
-    cf_project = env("CURSEFORGE_PROJECT_ID")
-    mr_token = env("MODRINTH_TOKEN")
-    mr_project = env("MODRINTH_PROJECT_ID")
     print(
         f"release {name} "
         f"(Minecraft {pack['minecraft']} {pack['loader']} {pack['loader_version']})"
     )
     print(f"tag {tag}")
-    print(f"channel {args.channel}")
     print(f"github {owner}/{repo}")
     if not gh_token:
         print("GitHub: missing GH_TOKEN in .env")
-    if args.skip_curseforge or not (cf_token and cf_project):
-        print("CurseForge: skip (missing token/id or --skip-curseforge)")
-    if args.skip_modrinth or not (mr_token and mr_project):
-        print("Modrinth: skip (missing token/id or --skip-modrinth)")
     if args.skip_server:
         print("dedicated server: skip")
     if args.dry_run:
@@ -264,7 +355,7 @@ def main() -> None:
         owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
     )
     print(f"github release {url}")
-    if not args.skip_curseforge and cf_token and cf_project:
+    if not skip_curseforge and cf_token and cf_project:
         upload_curseforge(
             project_id=cf_project,
             token=cf_token,
@@ -274,9 +365,9 @@ def main() -> None:
             minecraft=pack["minecraft"],
             channel=args.channel,
         )
-    elif not args.skip_curseforge:
+    elif not skip_curseforge:
         print("CurseForge upload skipped: CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID not set")
-    if not args.skip_modrinth and mr_token and mr_project:
+    if not skip_modrinth and mr_token and mr_project:
         upload_modrinth(
             project=mr_project,
             token=mr_token,
@@ -288,7 +379,7 @@ def main() -> None:
             loader=pack["loader"],
             channel=args.channel,
         )
-    elif not args.skip_modrinth:
+    elif not skip_modrinth:
         print("Modrinth upload skipped: MODRINTH_TOKEN or MODRINTH_PROJECT_ID not set")
     if not args.skip_server:
         deploy_server()
