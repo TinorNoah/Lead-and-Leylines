@@ -1,12 +1,12 @@
 name = "Lead and Leylines"
 author = "TinorNoah"
-version = "0.0.8"
+version = "0.0.9"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "c1e9384bd0617a19b7a08c7843a07503de996e4465cb40b34b8e1ce76922faea"
+hash = "92a3f67b4e1e302144bbdb67a346eb78170177c8a57afa7992966c8a4175670d"
 
 [versions]
 forge = "47.4.23"

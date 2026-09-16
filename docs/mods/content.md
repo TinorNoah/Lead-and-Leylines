@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** combat/magic cut **installed** (2026-09-16). Distant Horizons is **dropped**. No extra EMI addon jar — AE2 15.4.10 has native EMI; Ars, Supplementaries, Waystones, Twilight Forest, and Lootr ship their plugins in-jar. Polymorph stays on 0.49.10 because 0.49.11 fails next to TMRV's JEI stub. EMI Loot was not added; Fzzy Config is in only as Simply Swords’ library. Ice and Fire is **Community Edition**, not the original AlexThe666 jar.
+**Status:** combat/magic cut **installed** (2026-09-16). Kitchen-sink cut **installed** (2026-09-16): Epic Fight + ParCool instead of Better Combat; Mekanism; dual AE2+RS; Alchemistry; Lost Cities. Distant Horizons is **dropped**. EMI Enchants + EMI WorldGen were added on request. Polymorph stays on 0.49.10 because 0.49.11 fails next to TMRV's JEI stub. Ice and Fire is **Community Edition**, not the original AlexThe666 jar.
 
 ## Side (packwiz)
 
@@ -17,7 +17,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 2. One recipe browser (EMI). Do not add JEI for AE2. Do not add EMI Loot unless loot-table pages are requested.
 3. Official Twilight Forest CurseForge file only. Do not add the Modrinth “Unofficial” port.
 4. FancyMenu + Drippy is the menu/loading stack. No custom title art unless chosen on purpose. FancyMenu must not customize Create / AE2 / Xaero / Supplementaries / Twilight Forest screens (upstream blocks those packages). When we start custom layouts, use [FancyMenu docs (en-US home)](https://docs.fancymenu.net/docs/en-US/home).
-5. Default Options is how the pack unbinds FTB Chunks **Open Map**. Ship `keybindings.txt` only. Do not ship a full `options.txt`.
+5. Default Options is how the pack unbinds FTB Chunks **Open Map** and Oculus **Reload Shaders**, and sets Epic Fight battle/mining to **V**. Ship `keybindings.txt` only. Do not ship a full `options.txt`.
 6. Ice and Fire is [Community Edition](https://www.curseforge.com/minecraft/mc-mods/iceandfire-ce). Do not also install the original [Ice and Fire](https://modrinth.com/mod/ice-and-fire-dragons) jar — they share a mod id and CE warns that swapping on an existing save corrupts it. New worlds can start on CE.
 
 ## Chosen
@@ -52,7 +52,8 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Drippy Loading Screen | [modrinth.com/mod/drippy-loading-screen](https://modrinth.com/mod/drippy-loading-screen) `3.1.5` (`Nof419YS`) | client | Loading overlay. Needs FancyMenu. |
 | Konkrete | [modrinth.com/mod/konkrete](https://modrinth.com/mod/konkrete) `1.8.0` (`skYziQQL`) | client | FancyMenu / Drippy library |
 | Melody | [modrinth.com/mod/melody](https://modrinth.com/mod/melody) `1.0.3` (`lJlW5r8R`) | client | FancyMenu 3.9 library |
-| Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default keybind: FTB Open Map unbound |
+| Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default keybinds: FTB Open Map unbound, Oculus Reload Shaders unbound, Epic Fight battle/mining **V** |
+| Euphoria Patches | [modrinth.com/mod/euphoria-patches](https://modrinth.com/mod/euphoria-patches) `1.10.5-r5.9.3` (`fhNVBg6d`) | client | Complementary r5.9.3 extras. Off until a Complementary pack is enabled. |
 | Amendments | [modrinth.com/mod/amendments](https://modrinth.com/mod/amendments) `1.20-2.2.6` (`nJORWvdh`) | both | Supplementaries 3.x moved wall lanterns, skull candles, ceiling pots/banners, skull piles here. Moonlight already in. |
 | Trash Cans | [modrinth.com/mod/trash-cans](https://modrinth.com/mod/trash-cans) `1.1.0a` (`iiNJsz5q`) | both | Placeable item/fluid/energy voids. Not TrashSlot. Needs Core Lib + Config Lib. |
 | SuperMartijn642's Core Lib | [modrinth.com/mod/supermartijn642s-core-lib](https://modrinth.com/mod/supermartijn642s-core-lib) `1.1.24a` (`Rty5QRB6`) | both | Required by Trash Cans |
@@ -75,11 +76,29 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Fzzy Config | [modrinth.com/mod/fzzy-config](https://modrinth.com/mod/fzzy-config) `0.7.7` (`53kg5uoF`) | both | Required by Simply Swords 1.70. Kotlin for Forge already in. Not EMI Loot. |
 | Simply Tooltips | [modrinth.com/mod/simply-tooltips](https://modrinth.com/mod/simply-tooltips) `0.1.5` (`s87jNabF`) | client | Required by Simply Swords 1.70 |
 | Simply More | [modrinth.com/mod/simplymore](https://modrinth.com/mod/simplymore) `1.1.4` (`u4dfPRHB`) | both | Holdover so Simply More does not crash on Simply Swords 1.70 |
-| Better Combat | [modrinth.com/mod/better-combat](https://modrinth.com/mod/better-combat) `1.9.0` (`rnhiaw3t`) | both | Melee animations. Guns stay TACZ. |
-| playerAnimator | [modrinth.com/mod/playeranimator](https://modrinth.com/mod/playeranimator) `1.0.2-rc1` (`xe2EVE6q`) | both | Required by Better Combat |
-| Ice and Fire Dragons X Better Combat | [modrinth.com/mod/ice-and-fire-dragons-x-better-combat](https://modrinth.com/mod/ice-and-fire-dragons-x-better-combat) `1.0` (`d5Vp1w6z`) | both | IAF weapons under Better Combat |
-| Alex's Caves Better Combat | [modrinth.com/mod/alexs-caves-better-combat](https://modrinth.com/mod/alexs-caves-better-combat) `1.0` (`25y1lqsO`) | both | Alex's Caves weapons under Better Combat |
+| Epic Fight | [modrinth.com/mod/epic-fight](https://modrinth.com/mod/epic-fight) `20.14.17` (`KEBfkBat`) | both | Melee animations. Replaces Better Combat. Guns stay TACZ. Battle/mining toggle pack-default **V** (not **R**). |
+| ParCool! | [modrinth.com/mod/parcool](https://modrinth.com/mod/parcool) `1.20.1-3.4.3.3` (`uEY441aP`) | both | Parkour. Pinned on 3.4 — Official Epic × ParCool mixins still target `com.alrex.parcool.common.action.Action`, which ParCool 4.0 removed. |
+| [Official] Epic x ParCool | [modrinth.com/mod/official-epic-x-parcool](https://modrinth.com/mod/official-epic-x-parcool) `20.12.0.1` (`mb9nyTpS`) | both | Official EF+ParCool animations. Names Epic Fight 20.12.1; pack keeps EF 20.14.17. Needs ParCool 3.4, not 4.0. |
 | Ars Elemental | CurseForge file `8399870` (`1.20.1-0.6.8.0`) | both | Elemental foci/glyphs for Ars Nouveau 4.12.7. CurseForge only. |
+| Ars Additions | [modrinth.com/mod/ars-additions](https://modrinth.com/mod/ars-additions) `1.6.7` (`309LIQ2b`) | both | Extra Ars utility. File is Oct 2024 vs Ars 4.12.7. |
+| Ars Énergistique | [modrinth.com/mod/ars-energistique](https://modrinth.com/mod/ars-energistique) `1.2.0` (`xpgyRm6m`) | both | Ars + AE2. Jul 2024 vs AE2 15.4.10. AECapFix not added (optional). Watch first boot. |
+| Mekanism | [modrinth.com/mod/mekanism](https://modrinth.com/mod/mekanism) `10.4.16.80` (`uxe1WQp4`) | both | Planned tech line. Ores and machines are world data. |
+| Mekanism Generators | [modrinth.com/mod/mekanism-generators](https://modrinth.com/mod/mekanism-generators) `10.4.16.80` (`Th4Czz4N`) | both | Power gen. |
+| Mekanism Tools | [modrinth.com/mod/mekanism-tools](https://modrinth.com/mod/mekanism-tools) `10.4.16.80` (`VzpFbUpF`) | both | Armor/tools. |
+| Almost Unified | [modrinth.com/mod/almostunified](https://modrinth.com/mod/almostunified) `0.11.0` (`9qc7KIeg`) | both | One ingot per tag (Mek/Create/ATO). First-launch `unify.json`. |
+| ATO - All the Ores | CurseForge file `5348605` (`1.20.1-47.1.3-2.2.4`) | both | Extra ores next to Mekanism. New chunks. Tune `alltheores-common.toml` after first launch. |
+| Mekanism: More Machine | [modrinth.com/mod/mekanismmoremachine](https://modrinth.com/mod/mekanismmoremachine) `1.20.1-1.2.1` (`PQ3IlR98`) | both | Extra Mek factories. **Beta.** |
+| Alchemistry | CurseForge `alchemistry-1.20.1-2.3.4` | both | Element crafting. Needs ChemLib + AlchemyLib (pulled). |
+| The Lost Cities | [modrinth.com/mod/the-lost-cities](https://modrinth.com/mod/the-lost-cities) `1.20-7.5.5` (`Ec9sXB06`) | both | City worldgen. Store tag is server; packwiz `both` for Prism. New chunks. `/rtp` cost. |
+| Construction Sticks | [modrinth.com/mod/construction-sticks](https://modrinth.com/mod/construction-sticks) `1.2.7` (`WotgB3nY`) | both | Cheap building until Building Gadgets. |
+| Tempad | [modrinth.com/mod/tempad](https://modrinth.com/mod/tempad) `2.3.4` (`tfbtBBGB`) | both | Portable teleporter. Needs Resourceful Lib + Config. Waystones stay public warps. |
+| Perfect Graves | [modrinth.com/mod/perfect-graves](https://modrinth.com/mod/perfect-graves) `1.0.2` (`BxFOugjG`) | both | Death graves. World data. |
+| Delightful | [modrinth.com/mod/delightful](https://modrinth.com/mod/delightful) `3.8.1` (`HbEQIqIu`) | both | FD extra food. |
+| Corn Delight | [modrinth.com/mod/corn-delight](https://modrinth.com/mod/corn-delight) `1.2.11` (`nT3l0ApB`) | both | Needs Mysterious Mountain Lib. |
+| Twilight's Flavor & Delight | [modrinth.com/mod/twilight-delight](https://modrinth.com/mod/twilight-delight) `2.2.2` (`toJxHyZ0`) | both | TF food. Farmer's Cutting TF stays. |
+| Botany Pots / Trees | Modrinth `13.0.43` / `9.0.20` | both | Needs Bookshelf. |
+| Dyenamics + Friends | CurseForge `3.2.0` + CurseForge `1.9.3` (`6755420`) | both | Extra dyes. 1.6.0 crashed on Connected Glass 1.1.14 (`CGPaneBakedModel` removed). |
+| Connected Glass | [modrinth.com/mod/connected-glass](https://modrinth.com/mod/connected-glass) `1.1.14` (`5rewtxLD`) | both | Needs Fusion (client) + Core Lib. |
 
 Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 
@@ -96,15 +115,20 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 | FancyMenu custom title art | **Held.** Framework only until a layout is chosen. Docs: https://docs.fancymenu.net/docs/en-US/home |
 | Ice and Fire (original `2.1.13-1.20.1-beta-5`) | **Dropped.** Community Edition replaces it. Do not install both. |
 | Maxstuff / Elite X Quality Guns / more random TACZ packs | **Held.** LesRaisins + Gucci + Daffa is the extra-pack set. More packs overlap IDs and quality. |
-| Better Combat Particle / Better Mob Combat | **Skipped.** Not requested. Player Better Combat is in. |
+| Better Combat / playerAnimator / IAF×BC / Alex's Caves BC | **Removed 2026-09-16.** Epic Fight is the melee layer. |
+| Better Combat Particle / Better Mob Combat | **Skipped.** Epic Fight is the melee layer. |
+| ParCool `4.0.0.4` | **Held.** Alpha rewrite dropped `com.alrex.parcool.common.action.Action`. Official Epic × ParCool still mixins that class. Stay on 3.4.3.3 until the bridge is rewritten. |
+| Gateways to Eternity | **Held.** Needs Apothic Attributes, which changes armor math on TACZ / EF / IAF. |
+| Refined Storage – Mekanism Integration | **Skipped.** Official project is 1.21.1 NeoForge only. Applied Mekanistics covers AE2 chemicals. |
 | Auth Me / AuthAgain | **Skipped.** Auth Me is Fabric-only; AuthAgain duplicates NeoAuth. |
 
 ## Configs worth documenting
 
 | Mod | Why a pack note |
 |---|---|
-| Default Options | `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map`. Existing instances that already saved **M** keep that bind — unbind once in Controls if it still fights Xaero. |
+| Default Options | `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload`, and sets `key.epicfight.switch_mode` to **V** so **R** stays TACZ reload. Existing instances that already saved those binds keep them. |
 | AE2 / Ars / Twilight Forest / Supplementaries / Waystones | Worldgen and blocks. New chunks for meteors, Archwood, TF overworld portals, village waystones. TF dimension still works on the current world. |
 | Lootr | Converts loot-table chests. Player-placed Sophisticated Storage is unchanged. |
 | IceAndFire CE / TACZ / Simply Swords / Ars Elemental / Amendments / Trash Cans | World data. New chunks for dragon roosts and IAF structures. Guns, weapons, elemental blocks, and trash cans stay in the save if removed. Existing Supplementaries worlds keep wall lanterns only with Amendments. |
 | Legendary Tooltips / Equipment Compare / AppleSkin | If hover frames or the hunger overlay glitch, disable ImmediatelyFast `hud_batching`. |
+| ATO / Mekanism More Machine / Ars Énergistique | World data. New chunks for ATO ores. Tune `alltheores-common.toml` after first launch. |

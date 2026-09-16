@@ -127,7 +127,7 @@ Rules for extra opt mods:
 
 1. **No distant-tick freezers** (ServerCore, Does It Tick, Immersive Optimization, APTweaks Spawn). Create contraptions, AE2 grids, Mekanism machines, and Apotheosis spawners must keep ticking.
 2. **No second Lithium / redstone rewrite** (Canary, Alternate Current). Radium stays. Create uses redstone; Apotheosis historically fought Canary.
-3. **No spawn-chunk strippers** (Ksyxis). Tech mods need loaded machines. Dedicated spawn hanging on “Preparing spawn area” with a Streams stallwatch is a Streams version problem — pin `2.13.7`, do not add Ksyxis.
+3. **No spawn-chunk strippers** (Ksyxis). Tech mods need loaded machines. Dedicated spawn hanging on “Preparing spawn area” is a worldgen cost problem, not a reason to strip spawn chunks.
 4. **Shaders + Create** use Colorwheel + Colorwheel Patcher (beta). Do **not** add [Iris & Oculus Flywheel Compat](https://modrinth.com/mod/iris-flw-compat).
 5. **Entity Culling** is already in. When Create lands, watch for invisible contraption entities; Nowheel claims to fix one Entity Culling + simulated-contraption case.
 6. **Particle caps** (Particle Core, Embeddium Extra particle settings) must not eat TACZ / Superb Warfare tracers or Ars Nouveau spell FX.
@@ -214,6 +214,7 @@ A **test set** of Iris packs ships in `pack/shaderpacks/` (client). None is enab
 |---|---|---|
 | Complementary Reimagined `r5.9.3` | `Bqen1mJX` | Vanilla-like; usual first pick next to Create |
 | Complementary Unbound `r5.9.3` | `B1kyfoUZ` | Same family, cinematic |
+| Euphoria Patches `1.10.5-r5.9.3` | `fhNVBg6d` | Client extras for Complementary r5.9.3. Off until a Complementary pack is enabled. |
 | BSL `10.1.5` | `yFTiE1Nc` | Bright/colorful classic |
 | Photon `v1.3b` | `gUv7fBPN` | Modern look |
 | MakeUp Ultra Fast `9.5e` | `T3EhqZo1` | Low GPU |

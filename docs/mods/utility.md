@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-13. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml) (at snapshot: Minecraft 1.20.1, Forge 47.4.23). Re-check store pages before a file bump.
 
-**Status:** this cut **installed** (2026-09-13). JEI, Item Filters, and Iris/Oculus Flywheel Compat were skipped on purpose. Colorwheel (beta) is the Create + Oculus path. packwiz `side` is set as in the tables.
+**Status:** this cut **installed** (2026-09-13). Kitchen-sink QoL **installed** (2026-09-16): extra EMI pages, Inventory Essentials, graves/travel/build sticks. JEI, Item Filters, and Iris/Oculus Flywheel Compat were skipped on purpose. Colorwheel (beta) is the Create + Oculus path. packwiz `side` is set as in the tables.
 
 ## Side (packwiz)
 
@@ -61,6 +61,31 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | Xaero's World Map | [modrinth.com/mod/xaeros-world-map](https://modrinth.com/mod/xaeros-world-map) (`rlPmwaQX`) | client | Fullscreen map (keep **M**) |
 | Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default: FTB Open Map unbound. See [content.md](content.md) |
 | Too Fast | [modrinth.com/mod/too-fast](https://modrinth.com/mod/too-fast) `0.4.3.5` (`2pix3xrW`) | server | Dedicated-server “moved too quickly” rubber-band fix. Create trains. |
+| EMI Enchants | [modrinth.com/mod/emienchants](https://modrinth.com/mod/emienchants) `1.0.0` (`Lzvq7JEE`) | client | Enchantment pages in EMI. |
+| JEI / REI / EMI WorldGen | [modrinth.com/mod/jei-worldgen](https://modrinth.com/mod/jei-worldgen) `1.4.4` (`pKNlzNVH`) | client | Worldgen pages. No real JEI. TMRV stays. |
+| Inventory Essentials | [modrinth.com/mod/inventory-essentials](https://modrinth.com/mod/inventory-essentials) `8.2.19` (`BhuVHyaA`) | both | Extra inventory keys. Mouse Tweaks stays. |
+| Item Borders | [modrinth.com/mod/item-borders](https://modrinth.com/mod/item-borders) `1.2.2` (`JUW31p4D`) | client | Rarity borders. Iceberg + Prism already in. Overlaps Legendary Tooltips a bit. |
+| Elytra Slot | [modrinth.com/mod/elytra-slot](https://modrinth.com/mod/elytra-slot) `6.4.4+1.20.1` (`k6lA080t`) | both | Curios elytra. Needs Caelus. |
+| Caelus API | [modrinth.com/mod/caelus](https://modrinth.com/mod/caelus) `3.2.0+1.20.1` (`mRry0DgY`) | both | Required by Elytra Slot. |
+| Cosmetic Armor Reworked | CurseForge file `4600191` (`1.20.1-v1a`) | both | Cosmetic armor slots. Last 1.20.1 file 2023. |
+| Colorful Hearts | [modrinth.com/mod/colorfulhearts](https://modrinth.com/mod/colorfulhearts) `4.3.16` (`LkhTyd10`) | client | Heart HUD. |
+| Durability Tooltip | [modrinth.com/mod/durabilitytooltip](https://modrinth.com/mod/durabilitytooltip) `1.2.0` (`9fyihfLD`) | client | Durability in tooltip. |
+| Toast Control | [modrinth.com/mod/toast-control](https://modrinth.com/mod/toast-control) (`q8jNIVj8`) | client | Toast spam. Placebo already in. |
+| Bad Wither No Cookie - Reloaded | [modrinth.com/mod/bwncr](https://modrinth.com/mod/bwncr) `3.17.2` (`lL2MtE37`) | client | Mute wither/dragon sounds. |
+| Model Gap Fix | [modrinth.com/mod/modelfix](https://modrinth.com/mod/modelfix) (`QdG47OkI`) | client | Item model gaps. |
+| Clean Swing Through Grass | CurseForge `cleanswing-1.20-1.8` | both | Hits through grass. |
+| Harvest with ease | [modrinth.com/mod/harvest-with-ease](https://modrinth.com/mod/harvest-with-ease) `9.4.0` (`TqAYmcOy`) | both | Right-click harvest. Store tag is server; packwiz `both` for Prism. |
+| No Farmland Trample | [modrinth.com/mod/no-trampling-on-farmland](https://modrinth.com/mod/no-trampling-on-farmland) (`3r3u14ce`) | both | Forge file, not the Fabric-only slug. |
+| Login Protection | CurseForge `login-protection` | both | Spawn i-frames after join. |
+| Packing Tape | CurseForge `packing-tape` | both | Move tile entities. |
+| Packet Fixer | [modrinth.com/mod/packet-fixer](https://modrinth.com/mod/packet-fixer) `3.3.2` (`9F4NGhGR`) | both | Packet size. Cupboard already in. |
+| Observable | [modrinth.com/mod/observable](https://modrinth.com/mod/observable) (`QtSVNyjm`) | both | Tick profiler. Architectury + Kotlin already in. |
+| Crash Utilities | [modrinth.com/mod/crash-utilities](https://modrinth.com/mod/crash-utilities) `8.1.4` (`2IKVjueV`) | both | Admin crash dump. Not Crash Assistant. Store tag is server; packwiz `both` for Prism. |
+| EMI QoL Tweaks | CurseForge file `8713840` (`1.2`) | client | Extra EMI buttons. CurseForge third-party API still excludes this file, so packwiz pins the ForgeCDN URL instead of `metadata:curseforge`. |
+| Inventory Tweaks: ReFoxed | [modrinth.com/mod/inventory-tweaks-refoxed](https://modrinth.com/mod/inventory-tweaks-refoxed) `1.20.1-1.2.0` (`eyPkQyNd`) | both | Sort/auto-refill. Store tag is client; packwiz `both` for dedicated auto-refill. Mouse Tweaks + Inventory Essentials stay — watch first boot. |
+| Structure Compass | [modrinth.com/mod/structure-compass](https://modrinth.com/mod/structure-compass) `2.3.0` (`B63GJIMm`) | both | Locate a chosen structure. Explorer’s Compass stays. |
+| Clickable Advancements | CurseForge file `7886729` (`1.20.1-3.9`) | both | Click chat advancements. Cupboard `4.1` already in. Better Advancements stays. |
+| Better Compatibility Checker | [modrinth.com/mod/better-compatibility-checker](https://modrinth.com/mod/better-compatibility-checker) `3.0.3-build.65` (`90T01ZgN`) | both | Rejects mismatched clients. Last 1.20.1 file Sep 2023. |
 
 ## Dropped / skipped this cut
 
@@ -71,7 +96,6 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | Iris & Oculus Flywheel Compat | **Skipped.** Colorwheel is incompatible with it. Create 6 + Oculus uses Colorwheel instead. |
 | JourneyMap / voxelmap / a second world map | **Dropped.** Xaero is the map UI. |
 | Open Parties and Claims (or any second claim mod) | **Dropped.** FTB Chunks is the claim system. |
-| EMI QoL Tweaks | **Removed.** CurseForge file `8713840` is excluded from the third-party API, so packwiz-installer cannot download it. No Modrinth/GitHub file. EMI + TMRV + FTB XMod Compat stay. |
 | Random Patches | **Skipped.** Conflicts with Too Fast. Too Fast is the speed-limit mixin we want. |
 | I'm Fast | **Skipped.** Same job as Too Fast; Too Fast is the maintained Noobanidus file. |
 | Auth Me | **Skipped.** Fabric only on 1.20.1. NeoAuth is the Forge port. |

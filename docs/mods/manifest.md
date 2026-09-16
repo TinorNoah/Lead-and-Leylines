@@ -487,7 +487,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Architectury API
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/defaultconfigs/ftbessentials-server.snbt` — `/rtp` `max_distance` 2000, `max_tries` 3, dimension blacklist End/Nether/Maelstrom. Stops the server-thread chunk search from tripping the 60s watchdog on ungenerated Tectonic terrain.
+- Config changes: `pack/defaultconfigs/ftbessentials-server.snbt` — `/rtp` `max_distance` 2000, `max_tries` 3, dimension blacklist End/Nether/Maelstrom. Stops the server-thread chunk search from tripping the 60s watchdog on ungenerated land.
 - World-data / removability: homes/warps are world data
 - License / attribution: All Rights Reserved; store pack distribution
 - Date added: 2026-09-13
@@ -1342,7 +1342,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Citadel
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults. New world. Tectonic can hide some cave biomes; best-effort.
+- Config changes: none — defaults. New world.
 - World-data / removability: biomes, blocks, and mobs stay in the save if removed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1356,7 +1356,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Why chosen: Extra Overworld biomes. Next to RU+BWG they generate rarer and smaller (author-documented).
 - Required dependencies: none
 - Optional dependencies: none
-- Recommended companions: Tectonic (shipped)
+- Recommended companions: none
 - Config changes: none — defaults. New world.
 - World-data / removability: biomes stay in chunks if removed
 - License / attribution: Stardust Labs License; store pack distribution
@@ -1377,43 +1377,13 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: Stardust Labs License; store pack distribution
 - Date added: 2026-09-16
 
-### Tectonic
-
-- Pinned file / version: `tectonic-3.0.17-forge-1.20.1.jar` (Modrinth version `KLmvRxwh`)
-- Download source: https://modrinth.com/mod/tectonic/version/KLmvRxwh
-- packwiz `side`: both
-- Category: worldgen (terrain)
-- Why chosen: Big continents and mountains. Not Lithosphere. Forge jar already blends with Terralith (not Terratonic).
-- Required dependencies: Lithostitched 1.4.11+ (Modrinth version metadata lists none; the jar still fails without it)
-- Optional dependencies: none
-- Recommended companions: Terralith (shipped)
-- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.16` (was `0.125`; still larger than Tectonic default `0.25`), Vertical Scale `0.80` (was `1.125`; ~40 blocks lower on typical highlands). Elevation Boost stays `0.0`. Extra gen off: cheese/noodle/spaghetti caves, jungle pillars, underground rivers, river lanterns, rolling hills, lava tunnels, ocean islands. New chunks; 1.20 restart. ([configs.md](configs.md))
-- World-data / removability: changes Overworld shape; old chunks stay old
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-
-### Lithostitched
-
-- Pinned file / version: `lithostitched-forge-1.20.1-1.4.11.jar` (Modrinth version `srPoHKt8`)
-- Download source: https://modrinth.com/mod/lithostitched/version/srPoHKt8
-- packwiz `side`: both
-- Category: library (worldgen)
-- Why chosen: Hard requirement of Tectonic 3.0.17 (`lithostitched` 1.4.11 or above). Missing it is a boot error, not optional.
-- Required dependencies: none
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: none
-- World-data / removability: library; remove only with Tectonic
-- License / attribution: MIT; https://modrinth.com/mod/lithostitched
-- Date added: 2026-09-16
-
 ### YUNG's Bridges
 
 - Pinned file / version: `YungsBridges-1.20-Forge-4.0.3.jar` (Modrinth version `KgO1gfM2`)
 - Download source: https://modrinth.com/mod/yungs-bridges/version/KgO1gfM2
 - packwiz `side`: both
 - Category: worldgen (features)
-- Why chosen: River bridges. Tectonic/Terralith make them rarer; 4.0.3 bakes `rarity_filter` chance `3` in the jar.
+- Why chosen: River bridges. Terralith can make them rarer; 4.0.3 bakes `rarity_filter` chance `3` in the jar.
 - Required dependencies: YUNG's API (present)
 - Optional dependencies: none
 - Recommended companions: none
@@ -1497,22 +1467,6 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
-### Epic Structures: Dungeons
-
-- Pinned file / version: `epic-structures-dungeons-1.0.jar` (Modrinth version `fMMms6dF`)
-- Download source: https://modrinth.com/mod/epic-structures-dungeons/version/fMMms6dF
-- packwiz `side`: both
-- Category: worldgen (dungeons)
-- Why chosen: Dungeon overhaul from the Epic Structures set. Pin the 1.20-native 1.0 jar (`pack_format` 15). 1.1+ (including files tagged 1.20) bake 1.21 `components` NBT into item frames, so 1.20.1 logs “Unable to load item” / hanging entity at invalid position and can hitch the server.
-- Required dependencies: none
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: none. Do not bump to 1.2.5 (`tcsK0UPh`) or the later unified jars.
-- World-data / removability: generated structures stay in chunks. Chunks already generated with 1.2.5 keep empty frames until those chunks are wiped.
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-- Date updated: 2026-09-16 (1.2.5 → 1.0 1.20-native)
-
 ### Epic Structures: Witch Huts
 
 - Pinned file / version: `Epic Witch Huts v1.3.1.jar` (Modrinth version `WAWShTQy`)
@@ -1587,22 +1541,6 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - World-data / removability: generated structures stay in chunks
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
-
-### Streams Reflowing
-
-- Pinned file / version: `StreamsReflowing-1.20.1-forge-2.13.7.jar` (Modrinth version `OZN2NMml`)
-- Download source: https://modrinth.com/mod/streams-reflowing/version/OZN2NMml
-- packwiz `side`: both
-- Category: worldgen (rivers)
-- Why chosen: Real flowing rivers on Tectonic terrain. 2.13.7 is the spawn-chunk stall fix: currents prepare several times faster on multi-core, arrive with the land, and large plates no longer rebuild every stream network on dedicated start. Worlds from 2.12.9+ keep existing streams.
-- Required dependencies: none
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: `pack/config/streamsreflowing-common.toml` — `terrainAccuracyLevel` / `qualityPreset` `POTATO` (author default MEDIUM; pack was LOW), sparser rivers, rebiome/flora/bank passes off, `flowVanillaRivers` false. New chunks only after restart. Do not add Ksyxis or C2ME.
-- World-data / removability: river shape stays in chunks
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-- Date updated: 2026-09-16 (2.13.5 → 2.13.7)
 
 ### Countered's Terrain Slabs
 
@@ -2045,11 +1983,11 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Download source: https://modrinth.com/mod/default-options/version/AVz3mvZZ
 - packwiz `side`: client
 - Category: utility (pack defaults)
-- Why chosen: Unbind FTB Chunks Open Map without shipping a full `options.txt`.
+- Why chosen: Unbind FTB Chunks Open Map and Oculus Reload Shaders without shipping a full `options.txt`.
 - Required dependencies: Balm
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` ([configs.md](configs.md))
+- Config changes: `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload` ([configs.md](configs.md))
 - World-data / removability: client; removing it does not restore **M** on instances that already saved the unbound key
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -2168,7 +2106,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Why chosen: Maintained fork of Ice and Fire for 1.20.1. Original `2.1.13-beta-5` cannot load beside it.
 - Required dependencies: Jupiter, Uranus
 - Optional dependencies: EMI, Jade, Farmer's Delight (already in)
-- Recommended companions: Ice and Fire Dragons X Better Combat
+- Recommended companions: none (Better Combat bridge removed)
 - Config changes: none — defaults. Tune spawn/structure rates in Jupiter if TPS drops.
 - World-data / removability: dragons, structures, and blocks stay in the save. Do not swap to original Ice and Fire on an existing world.
 - License / attribution: unofficial fork; see CurseForge project page
@@ -2347,7 +2285,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Category: content (weapons)
 - Why chosen: Extra weapon types. This file’s loot inject works with Lootr.
 - Required dependencies: Fzzy Config, Simply Tooltips, Architectury (already in)
-- Optional dependencies: Better Combat (installed)
+- Optional dependencies: Better Combat (removed; melee is Epic Fight)
 - Recommended companions: Simply More
 - Config changes: none — defaults
 - World-data / removability: weapons stay in the save if removed
@@ -2369,64 +2307,49 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: All Rights Reserved; see Modrinth project page
 - Date added: 2026-09-16
 
-### playerAnimator
+### Epic Fight
 
-- Pinned file / version: `player-animation-lib-forge-1.0.2-rc1+1.20.jar` (Modrinth version `xe2EVE6q`)
-- Download source: https://modrinth.com/mod/playeranimator/version/xe2EVE6q
-- packwiz `side`: both
-- Category: library
-- Why chosen: Required by Better Combat
-- Required dependencies: none
-- Optional dependencies: bendy-lib (not added)
-- Recommended companions: none
-- Config changes: none — defaults
-- World-data / removability: library; keep while Better Combat is in
-- License / attribution: MIT; see Modrinth project page
-- Date added: 2026-09-16
-
-### Better Combat
-
-- Pinned file / version: `bettercombat-forge-1.9.0+1.20.1.jar` (Modrinth version `rnhiaw3t`)
-- Download source: https://modrinth.com/mod/better-combat/version/rnhiaw3t
+- Pinned file / version: `epic-fight-20.14.17-mc1.20.1-forge.jar` (Modrinth version `KEBfkBat`)
+- Download source: https://modrinth.com/mod/epic-fight/version/KEBfkBat
 - packwiz `side`: both
 - Category: combat
-- Why chosen: Melee animations for Simply Swords / IAF / Alex's Caves. Guns stay TACZ.
-- Required dependencies: playerAnimator, Cloth Config (already in)
-- Optional dependencies: none
-- Recommended companions: IAF x Better Combat, Alex's Caves Better Combat
-- Config changes: none — defaults
+- Why chosen: Melee animations. Replaces Better Combat. Guns stay TACZ.
+- Required dependencies: none
+- Optional dependencies: ParCool (installed)
+- Recommended companions: Official Epic × ParCool
+- Config changes: pack default `key.epicfight.switch_mode` **V** so **R** stays TACZ reload (`pack/config/defaultoptions/keybindings.txt`)
 - World-data / removability: mixin/animations; clean to remove
-- License / attribution: All Rights Reserved; see Modrinth project page
+- License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
-### Ice and Fire Dragons X Better Combat
+### ParCool!
 
-- Pinned file / version: `iceandfirebettercombat.jar` (Modrinth version `d5Vp1w6z`)
-- Download source: https://modrinth.com/mod/ice-and-fire-dragons-x-better-combat/version/d5Vp1w6z
+- Pinned file / version: `ParCool-1.20.1-3.4.3.3.jar` (Modrinth version `uEY441aP`)
+- Download source: https://modrinth.com/mod/parcool/version/uEY441aP
+- packwiz `side`: both
+- Category: movement
+- Why chosen: Parkour next to Epic Fight. Stay on 3.4; Official Epic × ParCool mixins require `com.alrex.parcool.common.action.Action`, which 4.0.0.4 removed.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: Official Epic × ParCool
+- Config changes: none — defaults
+- World-data / removability: movement mixin; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### [Official] Epic x ParCool
+
+- Pinned file / version: `epic x parcool-forge-20.12.0.1-1.20.1.jar` (Modrinth version `mb9nyTpS`)
+- Download source: https://modrinth.com/mod/official-epic-x-parcool/version/mb9nyTpS
 - packwiz `side`: both
 - Category: combat (compat)
-- Why chosen: Maps Ice and Fire weapons onto Better Combat. packwiz `both` so Prism singleplayer gets it (store tag is server-only).
-- Required dependencies: Better Combat, IceAndFire CE
+- Why chosen: Official EF+ParCool animation bridge. Names Epic Fight 20.12.1; pack keeps EF 20.14.17. Mixins need ParCool 3.4 (`Action` class), not 4.0.
+- Required dependencies: Epic Fight, ParCool
 - Optional dependencies: none
 - Recommended companions: none
 - Config changes: none — defaults
 - World-data / removability: animation map; clean to remove
-- License / attribution: MIT; see Modrinth project page
-- Date added: 2026-09-16
-
-### Alex's Caves Better Combat
-
-- Pinned file / version: `alexscavesbettercombat.jar` (Modrinth version `25y1lqsO`)
-- Download source: https://modrinth.com/mod/alexs-caves-better-combat/version/25y1lqsO
-- packwiz `side`: both
-- Category: combat (compat)
-- Why chosen: Maps Alex's Caves weapons onto Better Combat. packwiz `both` so Prism singleplayer gets it.
-- Required dependencies: Better Combat, Alex's Caves (already in)
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: none — defaults
-- World-data / removability: animation map; clean to remove
-- License / attribution: MIT; see Modrinth project page
+- License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
 ### Ars Elemental
@@ -2443,6 +2366,78 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - World-data / removability: blocks, foci, and familiars stay in the save if removed
 - License / attribution: see CurseForge project page
 - Date added: 2026-09-16
+
+### Kitchen-sink cut (2026-09-16)
+
+Pins match `pack/mods/*.pw.toml`. Decision logs: [content.md](content.md), [storage.md](storage.md), [utility.md](utility.md), [worldgen.md](worldgen.md). World-data mods need a world backup; new chunks for Lost Cities / Mek ores.
+
+| Mod | Pin | `side` | Why |
+|---|---|---|---|
+| Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-forge.jar` (`fhNVBg6d`) | client | Complementary r5.9.3 extras |
+| Mekanism | `Mekanism-1.20.1-10.4.16.80.jar` (`uxe1WQp4`) | both | Planned tech |
+| Mekanism Generators | `10.4.16.80` (`Th4Czz4N`) | both | Power |
+| Mekanism Tools | `10.4.16.80` (`VzpFbUpF`) | both | Armor/tools |
+| Almost Unified | `0.11.0` (`9qc7KIeg`) | both | One ingot per tag; no ATO |
+| Applied Mekanistics | `1.4.3` (`9n9p68Qq`) | both | AE2 chemicals |
+| Glodium | `1.20-1.5` (`eoUaDkZf`) | both | Extended AE / Applied Flux lib |
+| Extended AE | `1.4.18` (`uq3lO4ER`) | both | AE2 machines (stacked on purpose) |
+| AdvancedAE | `1.3.6` (`d83Wdhdn`) | both | AE2 machines; GeckoLib already in |
+| Applied Flux | `1.3.7` (`cAcdjzEn`) | both | FE on the AE network |
+| MEGA Cells | `2.4.6` (`SH2D1n3s`) | both | 1M–256M cells |
+| AE Additions | `5.1.1` (`BlkC64Gz`) | both | ExtraCells2 fork; overlaps MEGA |
+| Better P2P | `1.5.0` (`9fICjMvt`) | both | P2P GUI |
+| AE2 Import Export Card | `1.3.0` (`v8c3El4q`) | both | Jul 2024 vs AE2 15.4.10 |
+| AE2 Things [Forge] | CurseForge `4616683` (`1.2.1`) | both | DISK cells; Jun 2023 vs AE2 15.4.10 |
+| Refined Storage | `1.12.4` (`ZITLFjjf`) | both | Second item network; Nov 2023 |
+| Extra Disks | `3.0.3` (`bBzUlSat`) | both | Bigger RS disks |
+| ExtraStorage | `4.0.7` (`LSn2z31g`) | both | Needs EdivadLib |
+| Cable Tiers | `1.2.2` (`i99hKWi2`) | both | Faster RS cables |
+| Refined Storage Addons | `0.10.0` (`tdH61AWD`) | both | Wireless crafting; archived Jul 2023 |
+| Refined Polymorphism | `0.1.1` (`XSjAWIAk`) | both | Polymorph in RS GUIs |
+| Alchemistry | CurseForge `2.3.4` (`4770614`) | both | Element crafting |
+| ChemLib | CurseForge `2.0.19` | both | Required by Alchemistry |
+| AlchemyLib | CurseForge `1.0.30` | both | Required by Alchemistry |
+| The Lost Cities | `1.20-7.5.5` (`Ec9sXB06`) | both | City worldgen; packwiz `both` |
+| Ars Additions | `1.6.7` (`309LIQ2b`) | both | Extra Ars; Oct 2024 vs Ars 4.12.7 |
+| Construction Sticks | `1.2.7` (`WotgB3nY`) | both | Until Building Gadgets |
+| Tempad | `2.3.4` (`tfbtBBGB`) | both | Portable teleporter; Resourceful Lib |
+| Perfect Graves | `1.0.2` (`BxFOugjG`) | both | Death graves |
+| Delightful | `3.8.1` (`HbEQIqIu`) | both | FD extra food |
+| Corn Delight | `1.2.11` (`nT3l0ApB`) | both | Needs Mysterious Mountain Lib |
+| Twilight's Flavor & Delight | `2.2.2` (`toJxHyZ0`) | both | TF food |
+| Botany Pots / Trees | `13.0.43` / `9.0.20` | both | Needs Bookshelf |
+| Dyenamics + Friends | CF `3.2.0` + `1.9.3` (`6755420`) | both | Extra dyes. 1.6.0 crashed on Connected Glass 1.1.14 (`CGPaneBakedModel`). |
+| Connected Glass | `1.1.14` (`5rewtxLD`) | both | Needs Fusion (client) |
+| EMI Enchants | `1.0.0` (`Lzvq7JEE`) | client | Enchant pages |
+| JEI / REI / EMI WorldGen | `1.4.4` (`pKNlzNVH`) | client | Worldgen pages; no real JEI |
+| Inventory Essentials | `8.2.19` (`BhuVHyaA`) | both | Extra inventory keys |
+| Item Borders | `1.2.2` (`JUW31p4D`) | client | Rarity borders |
+| Elytra Slot | `6.4.4` (`k6lA080t`) | both | Curios elytra; Caelus |
+| Cosmetic Armor Reworked | CF `4600191` (`v1a`) | both | Cosmetic slots; 2023 file |
+| Colorful Hearts | `4.3.16` (`LkhTyd10`) | client | Heart HUD |
+| Durability Tooltip | `1.2.0` (`9fyihfLD`) | client | Durability text |
+| Toast Control | (`q8jNIVj8`) | client | Toast spam; Placebo in |
+| Bad Wither No Cookie | `3.17.2` | client | Mute wither/dragon |
+| Model Gap Fix | (`QdG47OkI`) | client | Item model gaps |
+| Clean Swing Through Grass | CF `cleanswing-1.20-1.8` | both | Hits through grass |
+| Harvest with ease | `9.4.0` (`TqAYmcOy`) | both | Right-click harvest |
+| No Farmland Trample | (`3r3u14ce`) | both | Forge file |
+| Login Protection | CurseForge | both | Join i-frames |
+| Packing Tape | CurseForge | both | Move tile entities |
+| Packet Fixer | `3.3.2` (`9F4NGhGR`) | both | Packet size |
+| Observable | (`QtSVNyjm`) | both | Tick profiler |
+| Crash Utilities | `8.1.4` (`2IKVjueV`) | both | Admin dump; not Crash Assistant |
+| Fusion / Caelus / Bookshelf / EdivadLib / Resourceful Lib+Config / Cobweb / MMLib | pulled | as above | Required libraries |
+| ATO - All the Ores | CurseForge `5348605` (`2.2.4`) | both | Extra ores; Almost Unified still unifies |
+| Mekanism: More Machine | `1.20.1-1.2.1` (`PQ3IlR98`) | both | Extra Mek factories. Beta |
+| Ars Énergistique | `1.2.0` (`xpgyRm6m`) | both | Ars + AE2. Jul 2024 vs AE2 15.4.10 |
+| Polymorphic Energistics | `0.1.1` (`tCb9SvuL`) | both | Polymorph in AE2 terminals |
+| AEInfinityBooster | CF `6482257` (`1.0.0+51`) | both | Infinite/dimension AE2 cards |
+| Structure Compass | `2.3.0` (`B63GJIMm`) | both | Chosen-structure locator |
+| Inventory Tweaks: ReFoxed | `1.20.1-1.2.0` (`eyPkQyNd`) | both | Sort/auto-refill |
+| Better Compatibility Checker | `3.0.3-build.65` (`90T01ZgN`) | both | Reject mismatched clients |
+| Clickable Advancements | CF `7886729` (`3.9`) | both | Click chat advancements |
+| EMI QoL Tweaks | CF `8713840` (`1.2`), ForgeCDN URL | client | Extra EMI buttons. Not `metadata:curseforge` (API-excluded). |
 
 ## Credits / Attribution
 
@@ -2541,21 +2536,17 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Citadel | https://modrinth.com/mod/citadel |
 | Alex's Caves | https://modrinth.com/mod/alexs-caves |
 | Terralith | https://modrinth.com/mod/terralith |
-| Tectonic | https://modrinth.com/mod/tectonic |
-| Lithostitched | https://modrinth.com/mod/lithostitched |
 | YUNG's Bridges | https://modrinth.com/mod/yungs-bridges |
 | YUNG's Better Caves | https://modrinth.com/mod/yungs-better-caves |
 | YetAnotherConfigLib | https://modrinth.com/mod/yacl |
 | Structurify | https://modrinth.com/mod/structurify |
 | Sparse Structures | https://modrinth.com/mod/sparsestructures |
 | Epic Structures: Villages | https://modrinth.com/mod/epic-structures-villages |
-| Epic Structures: Dungeons | https://modrinth.com/mod/epic-structures-dungeons |
 | Epic Structures: Witch Huts | https://modrinth.com/mod/epic-structures-witch-huts |
 | Epic Structures: Jungle Temples | https://modrinth.com/mod/epic-structures-jungle-temples |
 | When Dungeons Arise | https://modrinth.com/mod/when-dungeons-arise |
 | When Dungeons Arise: Seven Seas | https://modrinth.com/mod/when-dungeons-arise-seven-seas |
 | Create: Sky Village | https://modrinth.com/mod/create-sky-village |
-| Streams Reflowing | https://modrinth.com/mod/streams-reflowing |
 | Countered's Terrain Slabs | https://modrinth.com/mod/countereds-terrain-slabs |
 | Nature's Compass | https://modrinth.com/mod/natures-compass |
 | Explorer's Compass | https://modrinth.com/mod/explorers-compass |
@@ -2616,21 +2607,91 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Simply Tooltips | https://modrinth.com/mod/simply-tooltips |
 | Simply Swords | https://modrinth.com/mod/simply-swords |
 | Simply More | https://modrinth.com/mod/simplymore |
-| playerAnimator | https://modrinth.com/mod/playeranimator |
-| Better Combat | https://modrinth.com/mod/better-combat |
-| Ice and Fire Dragons X Better Combat | https://modrinth.com/mod/ice-and-fire-dragons-x-better-combat |
-| Alex's Caves Better Combat | https://modrinth.com/mod/alexs-caves-better-combat |
+| Epic Fight | https://modrinth.com/mod/epic-fight |
+| ParCool! | https://modrinth.com/mod/parcool |
+| [Official] Epic x ParCool | https://modrinth.com/mod/official-epic-x-parcool |
 | Ars Elemental | https://www.curseforge.com/minecraft/mc-mods/ars-elemental |
+| Euphoria Patches | https://modrinth.com/mod/euphoria-patches |
+| Mekanism | https://modrinth.com/mod/mekanism |
+| Mekanism Generators | https://modrinth.com/mod/mekanism-generators |
+| Mekanism Tools | https://modrinth.com/mod/mekanism-tools |
+| Almost Unified | https://modrinth.com/mod/almostunified |
+| Applied Mekanistics | https://modrinth.com/mod/applied-mekanistics |
+| Glodium | https://modrinth.com/mod/glodium |
+| Extended AE | https://modrinth.com/mod/extended-ae |
+| AdvancedAE | https://modrinth.com/mod/advancedae |
+| Applied Flux | https://modrinth.com/mod/appflux |
+| MEGA Cells | https://modrinth.com/mod/mega |
+| AE Additions | https://modrinth.com/mod/ae-additions |
+| Better P2P | https://modrinth.com/mod/betterp2p |
+| AE2 Import Export Card | https://modrinth.com/mod/ae2-import-export-card |
+| AE2 Things [Forge] | https://www.curseforge.com/minecraft/mc-mods/ae2-things-forge |
+| Refined Storage | https://modrinth.com/mod/refined-storage |
+| Extra Disks | https://modrinth.com/mod/extra-disks |
+| ExtraStorage | https://modrinth.com/mod/extrastorage |
+| Cable Tiers | https://modrinth.com/mod/cable-tiers |
+| Refined Storage Addons | https://modrinth.com/mod/refined-storage-addons |
+| Refined Polymorphism | https://modrinth.com/mod/refined-polymorphism |
+| Alchemistry | https://www.curseforge.com/minecraft/mc-mods/alchemistry |
+| ChemLib | https://www.curseforge.com/minecraft/mc-mods/chemlib |
+| AlchemyLib | https://www.curseforge.com/minecraft/mc-mods/alchemylib |
+| The Lost Cities | https://modrinth.com/mod/the-lost-cities |
+| Ars Additions | https://modrinth.com/mod/ars-additions |
+| Construction Sticks | https://modrinth.com/mod/construction-sticks |
+| Tempad | https://modrinth.com/mod/tempad |
+| Perfect Graves | https://modrinth.com/mod/perfect-graves |
+| Delightful | https://modrinth.com/mod/delightful |
+| Corn Delight | https://modrinth.com/mod/corn-delight |
+| Twilight's Flavor & Delight | https://modrinth.com/mod/twilight-delight |
+| Botany Pots | https://modrinth.com/mod/botany-pots |
+| Botany Trees | https://modrinth.com/mod/botany-trees |
+| Dyenamics | https://www.curseforge.com/minecraft/mc-mods/dyenamics |
+| Dyenamics and Friends | https://www.curseforge.com/minecraft/mc-mods/dyenamicsandfriends |
+| Connected Glass | https://modrinth.com/mod/connected-glass |
+| EMI Enchants | https://modrinth.com/mod/emienchants |
+| JEI / REI / EMI WorldGen | https://modrinth.com/mod/jei-worldgen |
+| Inventory Essentials | https://modrinth.com/mod/inventory-essentials |
+| Item Borders | https://modrinth.com/mod/item-borders |
+| Elytra Slot | https://modrinth.com/mod/elytra-slot |
+| Cosmetic Armor Reworked | https://www.curseforge.com/minecraft/mc-mods/cosmetic-armor-reworked |
+| Colorful Hearts | https://modrinth.com/mod/colorfulhearts |
+| Durability Tooltip | https://modrinth.com/mod/durabilitytooltip |
+| Toast Control | https://modrinth.com/mod/toast-control |
+| Bad Wither No Cookie - Reloaded | https://modrinth.com/mod/bwncr |
+| Model Gap Fix | https://modrinth.com/mod/modelfix |
+| Clean Swing Through Grass | https://www.curseforge.com/minecraft/mc-mods/clean-swing-through-grass |
+| Harvest with ease | https://modrinth.com/mod/harvest-with-ease |
+| No Farmland Trample | https://modrinth.com/mod/no-trampling-on-farmland |
+| Login Protection | https://www.curseforge.com/minecraft/mc-mods/login-protection |
+| Packing Tape | https://www.curseforge.com/minecraft/mc-mods/packing-tape |
+| Packet Fixer | https://modrinth.com/mod/packet-fixer |
+| Observable | https://modrinth.com/mod/observable |
+| Crash Utilities | https://modrinth.com/mod/crash-utilities |
+| ATO - All the Ores | https://www.curseforge.com/minecraft/mc-mods/ato |
+| Mekanism: More Machine | https://modrinth.com/mod/mekanismmoremachine |
+| Ars Énergistique | https://modrinth.com/mod/ars-energistique |
+| Polymorphic Energistics | https://modrinth.com/mod/polymorphic-energistics |
+| AEInfinityBooster | https://www.curseforge.com/minecraft/mc-mods/aeinfinitybooster |
+| Structure Compass | https://modrinth.com/mod/structure-compass |
+| Inventory Tweaks: ReFoxed | https://modrinth.com/mod/inventory-tweaks-refoxed |
+| Better Compatibility Checker | https://modrinth.com/mod/better-compatibility-checker |
+| Clickable Advancements | https://www.curseforge.com/minecraft/mc-mods/clickable-advancements |
+| EMI QoL Tweaks | https://www.curseforge.com/minecraft/mc-mods/emi-qol-tweaks |
 
 ## Future / Deferred Mods
 
 | Mod | Why not now | What would change that |
 |---|---|---|
 | Distant Horizons | Dropped — optional LOD; was client-only and off by default | Explicit request to re-add |
+| Tectonic 3 + Lithostitched | Dropped — Forge 3.x chunkgen too slow for live `/rtp`. Vanilla Overworld height | Pin 2.4.1 (`ubqOXeYf`) if mountains are wanted back |
+| Epic Structures: Dungeons | Dropped — 1.0 uppercase loot IDs abort chunk gen; 1.1+ 1.20 files still use 1.21 item-frame `components` | A 1.20.1 file with lowercase `epic:chests/*` IDs and 1.20 item NBT |
+| Streams Reflowing | Held — `/rtp` test. Rivers stay in already-generated chunks | If rivers are wanted back on vanilla terrain |
 | Geophilic / Terraphilic | Needs Terraphilic with Terralith; vanilla slices are already rare next to RU/BWG | Explicit request |
 | Dungeons and Taverns / Structory / Towns and Towers / Explorify | Extra Overworld structures on WDA + Epic Structures; `/rtp` already expensive | Explicit request |
-| Extended AE / AdvancedAE / Expanded AE / Applied Flux | AE2 expansion kits; do not stack | Pick one later |
-| Ars Énergistique | Last 1.20.1 file 1.2.0 (Jul 2024); risky on AE2 15.4.10 | A 15.4-era Forge file |
+| Extended AE / AdvancedAE / Applied Flux | Stacked on purpose (2026-09-16 request) | Already installed; do not drop one without a new decision |
+| Gateways to Eternity | Needs Apothic Attributes, which changes armor math on TACZ / EF / IAF | After Apotheosis is an intentional combat change |
+| ParCool 4.0.0.4 | Alpha rewrite dropped `com.alrex.parcool.common.action.Action`; Official Epic × ParCool mixins still target 3.4 | After the official bridge ships a 4.x rewrite |
+| Refined Storage – Mekanism Integration | 1.21.1 NeoForge only | A 1.20.1 Forge file |
 | Applied Cooking | 4.0.0 from 2023 vs AE2 15.4.10 | A current Forge file |
 | ME Requester | Autocraft requests, not cross-mod glue | Explicit request |
 | Shader packs | Loader (Oculus) is in; a test set ships in `pack/shaderpacks/` | After in-game testing, remove packs we do not want. Do not enable a default until one is chosen. |
@@ -2644,14 +2705,14 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Create: Nowheel | Create + Entity Culling companion | Contraptions go invisible |
 | Fast Item Frames | Needs Forge Config API Port; no Forge 1.20.1 file | Fabric-only FCAP or a native Forge FIF build |
 | Expanded Ecosphere | Feature Order Cycle with RU + BWG | Drop RU/BWG first |
-| Terratonic | Datapack-only Terralith+Tectonic blend | Stay on the Forge mod jars |
-| Lithosphere | Same noise job as Tectonic | Drop Tectonic first |
+| Terratonic | Datapack-only Terralith+Tectonic blend | Stay off while Tectonic is out |
+| Lithosphere | Same expensive noise class as Tectonic 3 | Do not add as a faster stand-in |
 | Sodium / Enhanced Block Entities | Embeddium + Oculus is the renderer | Do not add |
 | Larion / Voxy / Atmospherics / Wet Sand / Luki's Ancient Cities | No usable Forge 1.20.1 file | A real 1.20.1 Forge build |
 | C2ME / C2MEF / VMP / Krypton / Indium / More Culling / Debugify (asked slugs) | Fabric or unofficial/overlapping | See [performance.md](performance.md) Fabric video list |
 | Storage Drawers | Functional Storage is the drawer line | Do not add both |
 | Iron Chests | Sophisticated Storage is the chest-upgrade line | Do not add both |
-| Tom’s Simple Storage | Would be a second item network next to AE2 | Do not add unless we drop AE2 |
+| Tom’s Simple Storage | Would be a third item network next to AE2 and RS | Do not add unless we drop both networks |
 | Incendium | Incompatible with Amplified Nether | Do not add |
 | Infernal Expansion (original) | No 1.20.1 file | Stay on Infernal Expansion Redux |
 | Nether’s Delight (`nethers-delight`) | Unmaintained 2023; My Nether’s Delight is the 1.20.1 addon | Do not add both |
@@ -2669,7 +2730,8 @@ None. Do not bump Minecraft or Forge to accommodate a single mod without a separ
 
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
-| EMI QoL Tweaks | 2026-09-13 | CurseForge third-party API download is disabled (`packwiz-installer` cannot fetch file `8713840`). No Modrinth/GitHub file. | Only if the author enables API distribution or posts the same file on Modrinth |
+| EMI QoL Tweaks | 2026-09-13 | CurseForge third-party API still excludes file `8713840`. Re-added 2026-09-17 with a pinned ForgeCDN URL so packwiz-installer can fetch it. | Installed (URL pin) |
+| Better Combat / playerAnimator / IAF×BC / Alex’s Caves BC | 2026-09-16 | Melee is Epic Fight + ParCool | Do not re-add next to Epic Fight |
 | StructureOverlapless | 2026-09-16 | Skips placement when a section is “occupied,” including by the same structure start. Dedicated logs skipped Sky Villages and WDA bandit towers at the `/locate` coords | Do not re-add unless a relocate-not-skip tool exists |
 | Dungeons Arise Sparse Structures compat | 2026-09-16 | Extra thinning on top of Sparse Structures made WDA unfindable | Do not re-add while Sparse spread is 1 |
 | Dungeons Arise Seven Seas Sparse Structures compat | 2026-09-16 | Same extra thinning for ocean WDA | Do not re-add while Sparse spread is 1 |
