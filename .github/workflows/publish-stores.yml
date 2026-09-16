@@ -1,0 +1,180 @@
+name: Publish stores
+
+# GitHub Release + live instance stay on the operator machine (release.py).
+# This job publishes the already-attached client zip and mrpack to CurseForge
+# and Modrinth. Default channel is alpha (GitHub prerelease). Do not put
+# Minecraft or loader version literals in this file.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to publish (for example v0.0.4)
+        required: true
+        type: string
+      channel:
+        description: Store channel
+        type: choice
+        options:
+          - alpha
+          - beta
+          - release
+        default: alpha
+
+concurrency:
+  group: publish-stores-${{ inputs.tag || github.ref_name }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    if: github.event.repository.fork == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve tag
+        id: ref
+        env:
+          INPUT_TAG: ${{ inputs.tag }}
+        run: |
+          set -euo pipefail
+          TAG="${INPUT_TAG:-${GITHUB_REF_NAME}}"
+          TAG="${TAG#refs/tags/}"
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "Publishing stores for $TAG"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.ref.outputs.tag }}
+          fetch-tags: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Read pack.toml
+        id: pack
+        run: python scripts/read_pack_versions.py --github-output
+
+      - name: Assert tag matches pack version
+        env:
+          TAG: ${{ steps.ref.outputs.tag }}
+          PACK_VERSION: ${{ steps.pack.outputs.pack_version }}
+        run: |
+          set -euo pipefail
+          EXPECTED="v${PACK_VERSION}"
+          if [ "$TAG" != "$EXPECTED" ]; then
+            echo "Tag $TAG does not match pack.toml version $PACK_VERSION (expected $EXPECTED)"
+            exit 1
+          fi
+
+      - name: Resolve channel
+        id: channel
+        env:
+          INPUT_CHANNEL: ${{ inputs.channel }}
+          TAG: ${{ steps.ref.outputs.tag }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -n "${INPUT_CHANNEL:-}" ]; then
+            CHANNEL="$INPUT_CHANNEL"
+          else
+            TAG_CHANNEL=$(git for-each-ref "refs/tags/$TAG" --format='%(contents)' \
+              | awk -F: '/^channel:/{gsub(/[[:space:]]/,"",$2); print $2; exit}')
+            if [ "$TAG_CHANNEL" = "alpha" ] || [ "$TAG_CHANNEL" = "beta" ] || [ "$TAG_CHANNEL" = "release" ]; then
+              CHANNEL="$TAG_CHANNEL"
+            else
+              PRE=$(gh release view "$TAG" --json isPrerelease --jq .isPrerelease)
+              if [ "$PRE" = "true" ]; then
+                CHANNEL=alpha
+              else
+                CHANNEL=release
+              fi
+            fi
+          fi
+          echo "channel=$CHANNEL" >> "$GITHUB_OUTPUT"
+          echo "Store channel $CHANNEL"
+
+      - name: Wait for GitHub Release assets
+        env:
+          TAG: ${{ steps.ref.outputs.tag }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          mkdir -p artifacts
+          for i in $(seq 1 40); do
+            if gh release download "$TAG" --dir artifacts --pattern "*.mrpack" --pattern "*.zip"; then
+              rm -f artifacts/*-server-mods.zip
+              zips=(artifacts/*.zip)
+              mrpacks=(artifacts/*.mrpack)
+              if [ ${#zips[@]} -eq 1 ] && [ ${#mrpacks[@]} -eq 1 ]; then
+                echo "zip=${zips[0]}"
+                echo "mrpack=${mrpacks[0]}"
+                exit 0
+              fi
+            fi
+            echo "GitHub Release assets not ready yet (attempt $i)"
+            rm -rf artifacts
+            mkdir -p artifacts
+            sleep 15
+          done
+          echo "Timed out waiting for GitHub Release zip and mrpack on $TAG"
+          exit 1
+
+      - name: Write store notes from CHANGELOG.md
+        run: python scripts/write_store_notes.py --output notes.md
+
+      - name: Require store secrets
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          MODRINTH_PROJECT_ID: ${{ secrets.MODRINTH_PROJECT_ID }}
+        run: |
+          set -euo pipefail
+          missing=0
+          if [ -z "${CURSEFORGE_TOKEN}" ] || [ -z "${CURSEFORGE_PROJECT_ID}" ]; then
+            echo "Missing CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID"
+            missing=1
+          fi
+          if [ -z "${MODRINTH_TOKEN}" ] || [ -z "${MODRINTH_PROJECT_ID}" ]; then
+            echo "Missing MODRINTH_TOKEN or MODRINTH_PROJECT_ID"
+            missing=1
+          fi
+          exit "$missing"
+
+      - name: Upload to CurseForge
+        uses: Kira-NT/mc-publish@v3.3.1
+        with:
+          curseforge-id: ${{ secrets.CURSEFORGE_PROJECT_ID }}
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          curseforge-files: artifacts/*.zip
+          name: Lead and Leylines ${{ steps.pack.outputs.pack_version }}
+          version: ${{ steps.pack.outputs.pack_version }}
+          version-type: ${{ steps.channel.outputs.channel }}
+          changelog-file: notes.md
+          loaders: ${{ steps.pack.outputs.loader }}
+          game-versions: ${{ steps.pack.outputs.minecraft }}
+          environment: client,server
+
+      - name: Upload to Modrinth
+        uses: Kira-NT/mc-publish@v3.3.1
+        with:
+          modrinth-id: ${{ secrets.MODRINTH_PROJECT_ID }}
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          modrinth-files: artifacts/*.mrpack
+          modrinth-featured: false
+          name: Lead and Leylines ${{ steps.pack.outputs.pack_version }}
+          version: ${{ steps.pack.outputs.pack_version }}
+          version-type: ${{ steps.channel.outputs.channel }}
+          changelog-file: notes.md
+          loaders: ${{ steps.pack.outputs.loader }}
+          game-versions: ${{ steps.pack.outputs.minecraft }}
+          environment: client,server

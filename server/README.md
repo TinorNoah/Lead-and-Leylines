@@ -20,7 +20,7 @@ python scripts/deploy_server.py --dry-run
 python scripts/deploy_server.py --curseforge --reinstall --wait 600
 ```
 
-`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release + store uploads from the changelog, then `--from-local` on this test server. Every release updates the test server unless you pass `--skip-server`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
+`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this test server, then local Prism. GitHub Actions uploads CurseForge/Modrinth from the tag (default alpha). Every release updates the test server unless you pass `--skip-server`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
 
 `--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release when `GH_TOKEN` is set, and has Wings pull it (or writes the local zip if GitHub is skipped). Reinstalling the Forge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/Forge versions are unchanged.
 

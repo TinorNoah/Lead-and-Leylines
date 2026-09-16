@@ -14,7 +14,7 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Live manifest | `docs/mods/manifest.md` |
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |
-| Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
+| Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). `python scripts/update_prism.py` after a GitHub Release (also invoked from `release.py`). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
 | Dedicated server | `python scripts/deploy_server.py` (Forge egg + local mods until CurseForge is public). Overlay in `server/` is not exported; same pack, packwiz `side` |
 
 GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.

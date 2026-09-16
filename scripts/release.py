@@ -2,16 +2,18 @@
 """Publish a Lead and Leylines pack version from this machine.
 
 Pass a tag. Notes default to the matching ## [X.Y.Z] section in CHANGELOG.md
-(the GitHub Release body and CurseForge/Modrinth notes). Only --channel release
-uploads to CurseForge/Modrinth; alpha/beta are GitHub prereleases plus the
-test-server update. This script never edits CHANGELOG.md. Do not put server or
-hosting details in the notes; they are not part of the public release.
+(the GitHub Release body). Default --channel alpha creates a GitHub prerelease;
+release is a stable GitHub Latest. CurseForge/Modrinth upload from GitHub Actions
+on the tag (default alpha). Pass --upload-stores to also upload from this machine.
+This script never edits CHANGELOG.md. Do not put server or hosting details in the
+notes; they are not part of the public release.
 
   python scripts/release.py v0.0.3 --channel alpha --dry-run
   python scripts/release.py v0.0.3 --channel release
   python scripts/release.py v0.0.3 --changelog notes.md
   python scripts/release.py 0.0.3 --notes "- EMI and Create"
   python scripts/release.py v0.0.3 --skip-server
+  python scripts/release.py v0.0.3 --skip-prism
 """
 
 from __future__ import annotations
@@ -154,10 +156,13 @@ def store_skip_reason(
     flag_name: str,
     has_creds: bool,
 ) -> str | None:
-    if not publish_to_stores:
-        return f"{store}: skip (channel is {channel!r}, not 'release')"
     if skip_flag:
         return f"{store}: skip ({flag_name})"
+    if not publish_to_stores:
+        return (
+            f"{store}: skip (GitHub Actions publishes from the tag as {channel}; "
+            "pass --upload-stores to also upload from this machine)"
+        )
     if not has_creds:
         return f"{store}: skip (missing token/id)"
     return None
@@ -218,8 +223,9 @@ def assert_ready(pack: dict[str, str], tag: str, version: str, *, dry_run: bool)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Tag, create a GitHub Release from a changelog, and upload "
-            "CurseForge/Modrinth artifacts"
+            "Tag, create a GitHub Release from a changelog, then update the "
+            "live instance and local Prism. CurseForge/Modrinth upload from "
+            "GitHub Actions on the tag unless --upload-stores is set."
         )
     )
     parser.add_argument("tag", help="release tag (vX.Y.Z or X.Y.Z)")
@@ -239,7 +245,12 @@ def parse_args() -> argparse.Namespace:
         "--channel",
         choices=CHANNELS,
         default="alpha",
-        help="store release channel (default alpha)",
+        help="GitHub prerelease vs Latest, and store channel (default alpha)",
+    )
+    parser.add_argument(
+        "--upload-stores",
+        action="store_true",
+        help="also upload CurseForge/Modrinth from this machine (default: GitHub Actions)",
     )
     parser.add_argument(
         "--dry-run",
@@ -261,6 +272,11 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="do not update the dedicated test server",
     )
+    parser.add_argument(
+        "--skip-prism",
+        action="store_true",
+        help="do not sync the local Prism instance",
+    )
     return parser.parse_args()
 
 
@@ -269,13 +285,18 @@ def deploy_server() -> None:
     run([sys.executable, str(script), "--from-local"])
 
 
+def update_prism() -> None:
+    script = ROOT / "scripts" / "update_prism.py"
+    run([sys.executable, str(script)])
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
     load_secrets()
     args = parse_args()
     tag, version = normalize_tag(args.tag)
-    publish_to_stores = args.channel == "release"
+    publish_to_stores = args.upload_stores
     skip_curseforge = args.skip_curseforge or not publish_to_stores
     skip_modrinth = args.skip_modrinth or not publish_to_stores
     changelog = read_changelog(args, version)
@@ -325,6 +346,10 @@ def main() -> None:
         print("WARNING: skipping dedicated server update (--skip-server)")
     else:
         print("dedicated server: will update after GitHub (or immediately if GitHub is skipped)")
+    if args.skip_prism:
+        print("WARNING: skipping local Prism sync (--skip-prism)")
+    else:
+        print("Prism: will sync the local instance after GitHub")
     if args.dry_run:
         print("dry-run: not tagging, uploading, or deploying")
         return
@@ -340,7 +365,7 @@ def main() -> None:
         if git_output(["status", "--porcelain"]):
             raise SystemExit("packwiz export dirtied the tree; commit the refresh and rerun")
         run(["git", "push", "origin", "HEAD"])
-        run(["git", "tag", "-a", tag, "-m", name])
+        run(["git", "tag", "-a", tag, "-m", f"{name}\nchannel:{args.channel}"])
         run(["git", "push", "origin", tag])
         sha = git_output(["rev-parse", "HEAD"])
         print(f"commit {sha}")
@@ -368,6 +393,10 @@ def main() -> None:
             token=gh_token,
         )
         print(f"github release {url}")
+        print(
+            "CurseForge/Modrinth: GitHub Actions Publish stores runs on this tag "
+            f"as {args.channel}"
+        )
         if not skip_curseforge and cf_token and cf_project:
             upload_curseforge(
                 project_id=cf_project,
@@ -396,6 +425,8 @@ def main() -> None:
             print("Modrinth upload skipped: MODRINTH_TOKEN or MODRINTH_PROJECT_ID not set")
     if not args.skip_server:
         deploy_server()
+    if not args.skip_prism:
+        update_prism()
     if not gh_token:
         raise SystemExit("set GH_TOKEN in .env to create the GitHub Release (never commit it)")
     print("done")

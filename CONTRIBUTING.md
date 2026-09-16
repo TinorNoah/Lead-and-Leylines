@@ -31,7 +31,7 @@ Prefer the `minecraft-modding` skill (research and approval), then `add-mod` (pa
 
 5. Launch. The installer syncs the instance to the current pack. If serve is down, pre-launch fails.
 
-The Prism instance is local only. Do not commit it.
+`python scripts/release.py` also runs `python scripts/update_prism.py` after GitHub (packwiz serve on a free port, then installer `-g`). Use `--skip-prism` to opt out. Set `PRISM_INSTANCE_DIR` in `.env` if discovery cannot find the instance. The Prism instance is local only. Do not commit it.
 
 ## Release
 
@@ -47,12 +47,11 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
    python scripts/release.py vX.Y.Z --channel alpha
    ```
 
-   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. `--channel release` is the only channel that uploads CurseForge/Modrinth (default `alpha`). `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, and creates the GitHub Release from that changelog.
+   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. Default `--channel alpha` is a GitHub prerelease; GitHub Actions then uploads CurseForge/Modrinth as alpha from the tag. `--channel release` is GitHub Latest plus store release. `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release from that changelog, then updates the live instance and syncs local Prism.
 
 Secrets (gitignored `.env` at the repo root; never commit):
 
 - `GH_TOKEN` — GitHub token that can create releases and upload assets
-- `CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`
-- `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID` (the 8-character id from the Modrinth dashboard, not the slug `lead-and-leylines`; token must be able to read unpublished projects)
+- Optional local `CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`, `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID` (only with `--upload-stores`)
 
-Missing CurseForge or Modrinth values skip that store with a log line. A missing `GH_TOKEN` fails the run. Copy `.env.example` to `.env`.
+CurseForge/Modrinth tokens and project ids for the default path live as GitHub Actions secrets. `MODRINTH_PROJECT_ID` is the 8-character id from the Modrinth dashboard, not the slug `lead-and-leylines`. A missing `GH_TOKEN` fails the GitHub Release. Copy `.env.example` to `.env`.
