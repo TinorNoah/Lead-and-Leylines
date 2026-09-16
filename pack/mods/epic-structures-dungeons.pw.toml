@@ -1,13 +1,13 @@
 name = "Epic Structures: Dungeons"
-filename = "epic-structures-dungeons-1.2.5.jar"
+filename = "epic-structures-dungeons-1.0.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/t0YT91nL/versions/tcsK0UPh/epic-structures-dungeons-1.2.5.jar"
+url = "https://cdn.modrinth.com/data/t0YT91nL/versions/fMMms6dF/epic-structures-dungeons-1.0.jar"
 hash-format = "sha512"
-hash = "f5a2944b2b648ee161180bcee6199302d5e2fbf934ec7ef6f0839f1277b323e6a19387c7cb61c87569474f224cb410a7f63945b5f610856af8f47a9287216d05"
+hash = "6600e8caed804d9ad68baa07495eabcfbf4daa666e7614d7eded20b69390153be5b5528036588b2c57c506a11dc158716f87ee597adb3bd3850c6af3760e649f"
 
 [update]
 [update.modrinth]
 mod-id = "t0YT91nL"
-version = "tcsK0UPh"
+version = "fMMms6dF"

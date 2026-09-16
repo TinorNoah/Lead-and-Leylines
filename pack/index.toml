@@ -21,6 +21,10 @@ file = "config/sparsestructures.json5"
 hash = "7d8d2d747303b743049ade352f13939fa06fe3701d71910f345a2e08cc9fc782"
 
 [[files]]
+file = "config/streamsreflowing-common.toml"
+hash = "aa25a459b2d083dbf7070a3e920752e22ed5747e85ac89e7f3d7da072f842839"
+
+[[files]]
 file = "config/structurify.json"
 hash = "40e77545f6f15513b33cb9ccc2566a0138d4c1aa64a46ff10d1ed9f8d660d48f"
 
@@ -55,6 +59,11 @@ hash = "74bbdad7434bc02ec767c15c0136269f885331601f73fa2365252c24e58c09bd"
 metafile = true
 
 [[files]]
+file = "mods/alexs-caves-better-combat.pw.toml"
+hash = "cab5408939052345f0144c2fe70df496c06c62862a0dbc736488bb6710851f22"
+metafile = true
+
+[[files]]
 file = "mods/alexs-caves.pw.toml"
 hash = "0cbc4b2c6b58b7a94f030ae84f18057e5dc78a17bad429f40b8884926a6ab233"
 metafile = true
@@ -70,6 +79,11 @@ hash = "f3c12f6320ce830c9f8f846e82c461239c14bc57a8d41940caf7bead656295f0"
 metafile = true
 
 [[files]]
+file = "mods/amendments.pw.toml"
+hash = "5922845f6c9bb57548eca500857ebd2268bffe3799373b7306c2bdfb706d5f95"
+metafile = true
+
+[[files]]
 file = "mods/amplified-nether.pw.toml"
 hash = "786993e5bb314f53039578ace75997775d59b1c3766acd506781c1b170b0d791"
 metafile = true
@@ -82,6 +96,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
+metafile = true
+
+[[files]]
+file = "mods/ars-elemental.pw.toml"
+hash = "75f86a754e146de4246da9efa839bab8a0becd9d637567bafd2d02ca813a7f48"
 metafile = true
 
 [[files]]
@@ -117,6 +136,11 @@ metafile = true
 [[files]]
 file = "mods/better-advancements.pw.toml"
 hash = "23fdf44b148ca550c78d1125d24ed0a6c04b0d47a3c391d0b9a1567a50ffd58a"
+metafile = true
+
+[[files]]
+file = "mods/better-combat.pw.toml"
+hash = "52b4f29eb4a4392ef085617292842dc9fc84d86c318da5ce470b24eab77f6bdc"
 metafile = true
 
 [[files]]
@@ -210,6 +234,11 @@ hash = "9eefd607e0d54ec444e798ccdeede1a09a3939440bd1e11c11b84c07a5134be2"
 metafile = true
 
 [[files]]
+file = "mods/daffasarsenal.pw.toml"
+hash = "a0bf72538eaa608ef3b6e0479bf35f138bddd059b2a14930d53bdaa035a7c111"
+metafile = true
+
+[[files]]
 file = "mods/default-options.pw.toml"
 hash = "6311134242af3f639923e825caea40821c7e7ee7caadf4105234f5d7fa44ec8b"
 metafile = true
@@ -246,7 +275,7 @@ metafile = true
 
 [[files]]
 file = "mods/epic-structures-dungeons.pw.toml"
-hash = "7eb344e630f1ecc3634001c987f3f43f81cf547a5c01b8836cd554f312b71835"
+hash = "221e6e342f334d735b359523fd7a2520d4356a3f30690a3cc36d1c907693ecbe"
 metafile = true
 
 [[files]]
@@ -262,6 +291,11 @@ metafile = true
 [[files]]
 file = "mods/epic-structures-witch-huts.pw.toml"
 hash = "e443f28505199d87df8201e7bc2416714dfb5253a13e63c85df5a550f8bfc4d1"
+metafile = true
+
+[[files]]
+file = "mods/equipment-compare.pw.toml"
+hash = "817b393c48091dd022e7b53700453ed27b3335b95d003184add59d9e89e930a9"
 metafile = true
 
 [[files]]
@@ -350,6 +384,11 @@ hash = "9b05d7e7b0656cb566ee148ed77de8c23d9a1f93d9adf2c63813172d2e2f6719"
 metafile = true
 
 [[files]]
+file = "mods/fzzy-config.pw.toml"
+hash = "dd18fd6bae21df582b4fffc3dd18a4972e783a859c0295e5ea8582a6617dceb5"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "7ffae05c3b8101588b231db8116c34b36a77a0c6e6d7e6af867ae1c5b47e4d10"
 metafile = true
@@ -357,6 +396,21 @@ metafile = true
 [[files]]
 file = "mods/guideme.pw.toml"
 hash = "7cbc557e23729a2ab1a0dfa8832359edb640a9c4b2f1919e7c43cd5c7ccfdf3c"
+metafile = true
+
+[[files]]
+file = "mods/ice-and-fire-dragons-x-better-combat.pw.toml"
+hash = "09da924d40d71dd171409f3fbee40dc418801bb568fa83bda6f2e7796b5776b2"
+metafile = true
+
+[[files]]
+file = "mods/iceandfire-ce.pw.toml"
+hash = "a1aa574376145f891576902b94004a498c757ac0e0c9081d7b0b5e9e42da43fc"
+metafile = true
+
+[[files]]
+file = "mods/iceberg.pw.toml"
+hash = "c1d1a0476c58e3c011de6f750f48eb4f48493a1b9cef7bd59c008e87e0c0984c"
 metafile = true
 
 [[files]]
@@ -375,6 +429,11 @@ hash = "5d03d20b037a8b7a4765ded0e25146fc970964be46401dff5f9b1059875084e8"
 metafile = true
 
 [[files]]
+file = "mods/jupiter.pw.toml"
+hash = "cd6b5fa044f26728b65cc1ccfe2c8e68b2a4860f6ed95398ac24251d7a186f03"
+metafile = true
+
+[[files]]
 file = "mods/konkrete.pw.toml"
 hash = "646e07186d74573a2fbe26164fb39f037ae614c9ddcda21e969603d825d2aae5"
 metafile = true
@@ -382,6 +441,16 @@ metafile = true
 [[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "70a4ecd9d0c04ad20aeb976c1ee28933ce48a0a1f43df42deafaeb2ad7235297"
+metafile = true
+
+[[files]]
+file = "mods/legendary-tooltips.pw.toml"
+hash = "bc4c7d42fd94d57b020a43dbb3aa3caaa8395c77bd872f252a8302a39b2256a9"
+metafile = true
+
+[[files]]
+file = "mods/lesraisins-weapon.pw.toml"
+hash = "199449c61573ecbda4e3caa7b76f5f0f9aa8d23ffd2b8c8c116b274d97e87073"
 metafile = true
 
 [[files]]
@@ -402,6 +471,11 @@ metafile = true
 [[files]]
 file = "mods/lootr.pw.toml"
 hash = "66bcfe786e6bbdee6f7ea0805ec3d2561b41285a5c77f1e465e80f4c2fd9200c"
+metafile = true
+
+[[files]]
+file = "mods/lr-tactical.pw.toml"
+hash = "143569673f10c7517a0b1f09beaa9ccaf97478908d55923c1f5a6a37547d51f6"
 metafile = true
 
 [[files]]
@@ -490,8 +564,18 @@ hash = "969078b157cd783f7c38ac33407abc4f532c244c973d52810d559f02be06db90"
 metafile = true
 
 [[files]]
+file = "mods/playeranimator.pw.toml"
+hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
+metafile = true
+
+[[files]]
 file = "mods/polymorph.pw.toml"
 hash = "4ab869d8784f4ac318b5c92fa3d9e65f997352b8b57f34b409ca6f171637f0fe"
+metafile = true
+
+[[files]]
+file = "mods/prism-lib.pw.toml"
+hash = "f79cb80b6ea599fe4ca9404465277ff7edf25118976170c28827590febfcee7a"
 metafile = true
 
 [[files]]
@@ -512,6 +596,21 @@ metafile = true
 [[files]]
 file = "mods/searchables.pw.toml"
 hash = "b8c7497acbf4890b4609b6b20de7affdd3482fc99af975d9ff6b29c075e1d8a7"
+metafile = true
+
+[[files]]
+file = "mods/simply-swords.pw.toml"
+hash = "29068859ba1ef7215264705703de009d57730c059ad963ec5d54bedfa65c5861"
+metafile = true
+
+[[files]]
+file = "mods/simply-tooltips.pw.toml"
+hash = "58b6c58f8c7b8886048fd2028079d4a58162b4ca9bdc997882d2f8ae1be6aabb"
+metafile = true
+
+[[files]]
+file = "mods/simplymore.pw.toml"
+hash = "b9074b10d254cc939f7553d33ef9c65db35df15fd7fccb840defc9a40ce887c4"
 metafile = true
 
 [[files]]
@@ -556,7 +655,7 @@ metafile = true
 
 [[files]]
 file = "mods/streams-reflowing.pw.toml"
-hash = "82ec17c744c8f7ff0313cf456fa99f55abd35352debd24024737fd76df991835"
+hash = "b6b4f0c838e946b94173e8f1383995e0a4b7abc59b6b18f6de5263e904c789aa"
 metafile = true
 
 [[files]]
@@ -565,8 +664,23 @@ hash = "9aad7a7db6ed7c09f1a166da320f376e4de23c29e144cd3b07bf29231d9fc677"
 metafile = true
 
 [[files]]
+file = "mods/supermartijn642s-config-lib.pw.toml"
+hash = "1cf9cb3955b075664ea4fba13b47fe7160975740a28864983aebd53d39c1946e"
+metafile = true
+
+[[files]]
+file = "mods/supermartijn642s-core-lib.pw.toml"
+hash = "b24db752c75eab67cdd3c1166be78a1357748eb341a966ab102a3dd9844fdb92"
+metafile = true
+
+[[files]]
 file = "mods/supplementaries.pw.toml"
 hash = "168b3ee3fa2fe18f712c593d9d90e8b3a8a6a10564376af98bcc6f9719506641"
+metafile = true
+
+[[files]]
+file = "mods/tacz-gucci-vuitton-attachments.pw.toml"
+hash = "dd600f6fe8ced6d3c1ccbe597d708fe26f1f385db474e0489a93ed69b7f14047"
 metafile = true
 
 [[files]]
@@ -590,6 +704,11 @@ hash = "d1f859de9867b7433305aef1631aa22a436a4c3924474a21c0a22ab5f2093c04"
 metafile = true
 
 [[files]]
+file = "mods/timeless-and-classics-zero.pw.toml"
+hash = "c1e1644e1af423c59740258a3a23212af5dce7a4199bf1f4f260191cf985467b"
+metafile = true
+
+[[files]]
 file = "mods/titanium.pw.toml"
 hash = "c906ced020f34952105f7a77cab5a546cc0bf643885656fad3b76b5788a1b5f2"
 metafile = true
@@ -605,8 +724,18 @@ hash = "c24febd1fd6db1cf87dc4ba9caf9ecedba0e7326c06456dcce71c390ba98b424"
 metafile = true
 
 [[files]]
+file = "mods/trash-cans.pw.toml"
+hash = "15c8d40ab6da445e2dfb7dd6e95870ab664a7fe01488fe051b03dee696b59b87"
+metafile = true
+
+[[files]]
 file = "mods/trashslot.pw.toml"
 hash = "4d18e1f93525f313ccba193e0600373f4c117616fda26dcb33bf3361d106dca0"
+metafile = true
+
+[[files]]
+file = "mods/uranus.pw.toml"
+hash = "0bbfbeabd0b7fdb20a85cb7cb1b07b95366dc6f6b71170e9ae0e3d1f4a0b4087"
 metafile = true
 
 [[files]]

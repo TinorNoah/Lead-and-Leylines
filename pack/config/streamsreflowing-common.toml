@@ -1,0 +1,7 @@
+# Lead and Leylines — Streams Reflowing pack override.
+# terrainAccuracyLevel is the generation-cost dial (POTATO, LOW, MEDIUM, HIGH, EXTREME, MAX).
+# LOW is coarser rivers so Tectonic watersheds do not stall chunk gen. New chunks only, after a restart.
+# Do not set HIGH/EXTREME/MAX without Chunky pregen.
+
+[performance]
+	terrainAccuracyLevel = "LOW"
