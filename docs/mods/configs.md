@@ -2,14 +2,14 @@
 
 Defaults are the pack unless a row below says otherwise. Do not dump every mod’s full config into git.
 
-Shaders are a pack feature. Players drop shader packs into the Oculus/Iris shader folder; this repo does not ship a default pack until one is chosen on purpose.
+Shaders are a pack feature. Oculus is the loader. Ten Iris packs ship in `pack/shaderpacks/` for in-game testing; **none is enabled by default**. Dynamic lights mods stay out. Create + Oculus uses Colorwheel (beta), not iris-flw-compat.
 
 | Mod | Touch? | Note |
 |---|---|---|
-| Embeddium + Oculus | Version pair only | Keep the Forge 1.20.1 files that match each other. Do not mix random Embeddium/Oculus builds. No extra dynamic-lights mod. |
+| Embeddium + Oculus | Version pair only | Keep the Forge 1.20.1 files that match each other. Do not mix random Embeddium/Oculus builds. No extra dynamic-lights mod. Shader list is `pack/shaderpacks/*.pw.toml`. Do not ship an Oculus default-pack option until one pack is chosen. |
 | Embeddium Extra | Only if a leaf or DL mod is added later | Turn off Extra’s leaf culling / dynamic lights so they do not stack. With Oculus in, leave Extra lights off. |
 | Let Me Despawn | Gameplay | Equipped-mob despawn. After first launch, if raid/named mobs vanish unexpectedly, tighten the equipment whitelist. Do not change until that happens. |
-| ImmediatelyFast | Later HUD mods only | If Legendary Tooltips / Equipment Compare / Simply Tooltips glitch, disable `hud_batching`. Otherwise leave default. |
+| ImmediatelyFast | Later HUD mods only | If Legendary Tooltips / Equipment Compare / Simply Tooltips / AppleSkin glitch, disable `hud_batching`. Otherwise leave default. |
 | ModernFix | No | Mixin defaults stay. Change only if a crash log names a mixin. |
 | ServerCore | N/A until added | Activation range is gameplay; do not add silently. |
 | FTB Chunks | Pack override | Xaero is the map UI. Ship `pack/defaultconfigs/ftbchunks/client-config.snbt` (`minimap.enabled: false`) and `pack/defaultconfigs/ftbchunks/ftbchunks-world.snbt` (`force_disable_minimap: true`). FTB also auto-disables its minimap when `xaerominimap` is loaded. Existing worlds already have `world/serverconfig/ftbchunks-world.snbt` — set `force_disable_minimap: true` there, or delete that file so the default is copied on next start. |
@@ -28,7 +28,7 @@ Shaders are a pack feature. Players drop shader packs into the Oculus/Iris shade
 | Infernal Expansion Redux | Optional lights | Leave LambDynamicLights out; Oculus is the light path. Cloth Config is shipped for the GUI. |
 | Farmer's Delight / My Nether's Delight | World data | Crops, blocks, and kitchen pieces stay in the save if removed. Keep MND `1.10.4-backport.1` with Farmer's Delight 1.3.x. |
 | Terralith / RU / BWG / Tectonic / YUNG caves / structures | Worldgen | New world. Do not add Expanded Ecosphere or Lithosphere. Do not re-add StructureOverlapless. |
-| Tectonic | Pack override | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes). Do not raise Ocean Offset toward `0`. |
+| Tectonic | Pack override | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes). Vertical Scale `0.80` (was `1.125`) so typical highlands sit ~40 blocks lower. Elevation Boost stays `0.0` (not a block offset). Do not raise Ocean Offset toward `0`. New chunks; 1.20 restart. |
 | TerraBlender | Pack override | `pack/config/terrablender.toml`: `overworld_region_size` 6, `nether_region_size` 4. |
 | Sparse Structures | Pack override | `pack/config/sparsestructures.json5`: `spreadFactor` 1, `idBasedSalt` true. |
 | Structurify | Pack override | `pack/config/structurify.json`: global spacing modifier **off**. |

@@ -17,6 +17,18 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.7] - 2026-09-16
+
+### Added
+
+- AppleSkin hunger and saturation overlay on the HUD.
+- NeoAuth in-game Microsoft re-login when a session expires (client only).
+- Ten Iris shader packs for testing (Complementary Reimagined and Unbound, BSL, Photon, MakeUp Ultra Fast, Super Duper Vanilla, Mellow, Miniature, Noble, Solas). None is on by default; pick one in Video Settings → Shader Packs.
+
+### Changed
+
+- Overworld terrain is about 40 blocks lower (Tectonic vertical scale 0.80; Terralith still only adds biomes). New chunks only; restart required.
+
 ## [0.0.6] - 2026-09-16
 
 ### Added

@@ -61,6 +61,8 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | LesRaisins Append Pack | [modrinth.com/mod/lesraisins-weapon](https://modrinth.com/mod/lesraisins-weapon) `0.3.0` (`KbReepVU`) | both | Extra LesRaisins guns |
 | Gucci & Vuitton Attachments | [modrinth.com/mod/tacz-gucci-vuitton-attachments](https://modrinth.com/mod/tacz-gucci-vuitton-attachments) `0.2.2` (`NnUWhMdw`) | both | Extra TACZ attachments |
 | Daffa's Arsenal | [modrinth.com/mod/daffasarsenal](https://modrinth.com/mod/daffasarsenal) `3.7.1.1` (`1Q9ypxVQ`) | both | Large extra TACZ gun pack |
+| AppleSkin | [modrinth.com/mod/appleskin](https://modrinth.com/mod/appleskin) `2.5.1+mc1.20.1` (`XdXDExVF`) | both | Hunger/saturation HUD. Official squeek502. `both` so saturation syncs. |
+| NeoAuth | [modrinth.com/mod/neoauth](https://modrinth.com/mod/neoauth) `1.0.3` (`9xLXbEMY`) | client | Microsoft session re-login in the multiplayer screen. Auth Me’s Forge port. Not a cracked-server login mod. |
 | Legendary Tooltips | [modrinth.com/mod/legendary-tooltips](https://modrinth.com/mod/legendary-tooltips) `1.4.5` (`JhxD2e6J`) | client | Rarity frames. Needs Iceberg + Prism lib. |
 | Iceberg | [modrinth.com/mod/iceberg](https://modrinth.com/mod/iceberg) `1.1.25` (`BQ8rJPXV`) | client | Grend library for Legendary Tooltips / Equipment Compare |
 | Prism | [modrinth.com/mod/prism-lib](https://modrinth.com/mod/prism-lib) `1.0.5` (`FFyss87M`) | client | Color helper for Legendary Tooltips (not the launcher) |
@@ -91,6 +93,7 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 | Ice and Fire (original `2.1.13-1.20.1-beta-5`) | **Dropped.** Community Edition replaces it. Do not install both. |
 | Maxstuff / Elite X Quality Guns / more random TACZ packs | **Held.** LesRaisins + Gucci + Daffa is the extra-pack set. More packs overlap IDs and quality. |
 | Better Combat Particle / Better Mob Combat | **Skipped.** Not requested. Player Better Combat is in. |
+| Auth Me / AuthAgain | **Skipped.** Auth Me is Fabric-only; AuthAgain duplicates NeoAuth. |
 
 ## Configs worth documenting
 
@@ -101,4 +104,4 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 | AE2 / Ars / Twilight Forest / Supplementaries / Waystones | Worldgen and blocks. New chunks for meteors, Archwood, TF overworld portals, village waystones. TF dimension still works on the current world. |
 | Lootr | Converts loot-table chests. Player-placed Sophisticated Storage is unchanged. |
 | IceAndFire CE / TACZ / Simply Swords / Ars Elemental / Amendments / Trash Cans | World data. New chunks for dragon roosts and IAF structures. Guns, weapons, elemental blocks, and trash cans stay in the save if removed. Existing Supplementaries worlds keep wall lanterns only with Amendments. |
-| Legendary Tooltips / Equipment Compare | If hover frames glitch, disable ImmediatelyFast `hud_batching`. |
+| Legendary Tooltips / Equipment Compare / AppleSkin | If hover frames or the hunger overlay glitch, disable ImmediatelyFast `hud_batching`. |

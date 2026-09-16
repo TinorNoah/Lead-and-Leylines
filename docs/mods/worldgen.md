@@ -35,7 +35,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Alex's Caves | [modrinth.com/mod/alexs-caves](https://modrinth.com/mod/alexs-caves) `2.0.2` (`lC8HHXOF`) | both | Six rare cave biomes |
 | Citadel | [modrinth.com/mod/citadel](https://modrinth.com/mod/citadel) `2.6.3` (`lTAAe4sZ`) | both | Required by Alex's Caves |
 | Terralith | [modrinth.com/mod/terralith](https://modrinth.com/mod/terralith) `2.5.4` (`WeYhEb5d`) | both | Extra Overworld biomes |
-| Tectonic | [modrinth.com/mod/tectonic](https://modrinth.com/mod/tectonic) `3.0.17` (`KLmvRxwh`) | both | Big terrain. Continent + climate scales in [configs.md](configs.md) |
+| Tectonic | [modrinth.com/mod/tectonic](https://modrinth.com/mod/tectonic) `3.0.17` (`KLmvRxwh`) | both | Big terrain. Continent + climate scales and Vertical Scale `0.80` in [configs.md](configs.md) |
 | Lithostitched | [modrinth.com/mod/lithostitched](https://modrinth.com/mod/lithostitched) `1.4.11-forge-1.20` (`srPoHKt8`) | both | Required by Tectonic 3.0.17. Modrinth does not list the dep; the jar still requires it. |
 | YUNG's Bridges | [modrinth.com/mod/yungs-bridges](https://modrinth.com/mod/yungs-bridges) `1.20-Forge-4.0.3` (`KgO1gfM2`) | both | River bridges. Rate is baked into the jar (`rarity_filter` chance 3) |
 | YUNG's Better Caves | [modrinth.com/mod/yungs-better-caves](https://modrinth.com/mod/yungs-better-caves) `1.20.1-Forge-2.0.7` (`BO1vVvun`) | both | Overworld caves only |
@@ -74,7 +74,7 @@ GeckoLib was already in from Infernal Expansion Redux.
 | Mod | Why a pack note |
 |---|---|
 | All of this cut | New world. Old chunks stay old-gen. |
-| Tectonic | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (default `0.25` — smaller scale = larger biomes). Do not raise Ocean Offset toward `0`. |
+| Tectonic | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (default `0.25` — smaller scale = larger biomes). Vertical Scale `0.80` (was `1.125`) so surface above sea is ~40 blocks lower on typical highlands. Do not use Elevation Boost for this — that value is a mountain multiplier, not blocks. Do not raise Ocean Offset toward `0`. New chunks; 1.20 restart. |
 | TerraBlender | `pack/config/terrablender.toml`: `overworld_region_size` 6 (max), `nether_region_size` 4. |
 | Sparse Structures | `pack/config/sparsestructures.json5`: `spreadFactor` 1, `idBasedSalt` true. Do not set 2; that doubles rarity and locates still report starts. |
 | Structurify | `pack/config/structurify.json`: global spacing modifier **off**. |
