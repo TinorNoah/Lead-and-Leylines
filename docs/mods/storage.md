@@ -34,6 +34,7 @@ Research snapshot: 2026-09-15. Target is whatever Minecraft + Forge are in [`pac
 | Sophisticated Backpacks Create Integration | [modrinth.com/mod/sophisticated-backpacks-create-integration](https://modrinth.com/mod/sophisticated-backpacks-create-integration) `1.20.1-0.1.10.167` (`gzpoJdRt`) | both | Same for backpacks on contraptions |
 | Applied Energistics 2 | [modrinth.com/mod/ae2](https://modrinth.com/mod/ae2) `15.4.10` (`7KVs6HMQ`) | both | Item/fluid network. Native EMI in this file. See [content.md](content.md) |
 | GuideME | [modrinth.com/mod/guideme](https://modrinth.com/mod/guideme) `20.1.15` (`i7Tp1AHw`) | both | Required by AE2 15.4 |
+| Applied Energistics 2 Wireless Terminals | [modrinth.com/mod/applied-energistics-2-wireless-terminals](https://modrinth.com/mod/applied-energistics-2-wireless-terminals) `15.3.3` (`z8QXeyI0`) | both | Wireless crafting/pattern terminals |
 
 ## Dropped / skipped this cut
 
@@ -48,7 +49,7 @@ Research snapshot: 2026-09-15. Target is whatever Minecraft + Forge are in [`pac
 
 | Mod | Why wait |
 |---|---|
-| AE2 wireless / backpack-network bridges | Wait until someone asks |
+| Extended AE / AdvancedAE / Applied Flux | Expansion kits; do not stack |
 
 ## Incompatibility (this set)
 

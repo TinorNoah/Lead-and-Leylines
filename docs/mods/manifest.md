@@ -537,6 +537,21 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
 
+### Jade Addons (Neo/Forge)
+
+- Pinned file / version: `JadeAddons-1.20.1-Forge-5.5.1.jar` (Modrinth version `l9IrZYLt`)
+- Download source: https://modrinth.com/mod/jade-addons-forge/version/l9IrZYLt
+- packwiz `side`: both
+- Category: compatibility (Jade)
+- Why chosen: Create 6 contraptions, Lootr, and Supplementaries in Jade.
+- Required dependencies: Jade (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: overlay only; clean to remove
+- License / attribution: ARR; modpack OK on CurseForge/Modrinth
+- Date added: 2026-09-16
+
 ### AppleSkin
 
 - Pinned file / version: `appleskin-forge-mc1.20.1-2.5.1.jar` (Modrinth version `XdXDExVF`)
@@ -626,6 +641,66 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - World-data / removability: kinetic blocks and contraptions stay in the save if Create is removed
 - License / attribution: MIT; see Modrinth project page
 - Date added: 2026-09-13
+
+### Create Slice & Dice
+
+- Pinned file / version: `sliceanddice-forge-3.6.0.jar` (Modrinth version `KWLI8Ng7`)
+- Download source: https://modrinth.com/mod/slice-and-dice/version/KWLI8Ng7
+- packwiz `side`: both
+- Category: compatibility (Create + Farmer’s Delight)
+- Why chosen: Automatic cutting board (Slicer) and cooking-pot recipes as heated mixing. Create 6.0.7+.
+- Required dependencies: Create (present). Kotlin for Forge already in.
+- Optional dependencies: Farmer’s Delight (present)
+- Recommended companions: Create: Central Kitchen (shipped; different automation, not a conflict)
+- Config changes: none — defaults
+- World-data / removability: Slicer blocks stay if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Create: Central Kitchen
+
+- Pinned file / version: `create_central_kitchen-1.20.1-for-create-6.0.8-1.5.1.jar` (Modrinth version `jMB94kRJ`)
+- Download source: https://modrinth.com/mod/create-central-kitchen/version/jMB94kRJ
+- packwiz `side`: both
+- Category: compatibility (Create + Farmer’s Delight)
+- Why chosen: Deployer knives and cooking-pot automation. File is pinned to Create 6.0.8.
+- Required dependencies: Create (present)
+- Optional dependencies: Farmer’s Delight (present)
+- Recommended companions: Slice & Dice (shipped)
+- Config changes: none — defaults
+- World-data / removability: kitchen blocks stay if removed
+- License / attribution: LGPL-3.0-or-later
+- Date added: 2026-09-16
+
+### Create: Alex's Caves Compat
+
+- Pinned file / version: `create_alexscaves_compat-1.20.1-1.6.2.jar` (Modrinth version `aqpInCWh`)
+- Download source: https://modrinth.com/mod/create-alexs-caves-compat/version/aqpInCWh
+- packwiz `side`: both
+- Category: compatibility (Create + Alex’s Caves)
+- Why chosen: Crushing and sequenced-assembly recipes for cave ores and items.
+- Required dependencies: Create, Alex’s Caves (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: recipes only; clean to remove
+- License / attribution: MIT
+- Date added: 2026-09-16
+
+### Create: Applied Kinetics
+
+- Pinned file / version: `createappliedkinetics-1.5.1-1.20.1.jar` (Modrinth version `DjaJgxhC`)
+- Download source: https://modrinth.com/mod/create-applied-kinetics/version/DjaJgxhC
+- packwiz `side`: both
+- Category: compatibility (Create + AE2)
+- Why chosen: Create machines for AE2 inscriber/charger work.
+- Required dependencies: Create, AE2 (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: machine blocks stay if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
 
 ### Create Ultimine
 
@@ -1002,6 +1077,51 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: MIT; see Modrinth project page
 - Date added: 2026-09-16
 
+### Farmer's Cutting: Regions Unexplored
+
+- Pinned file / version: `farmers-cutting-regions-unexplored-1.20.1-1.1b-forge.jar` (Modrinth version `kkwIGh7i`)
+- Download source: https://modrinth.com/mod/farmers-cutting-regions-unexplored/version/kkwIGh7i
+- packwiz `side`: both
+- Category: compatibility (Farmer’s Delight recipes)
+- Why chosen: Cutting-board recipes for RU woods. Forge jar so it applies pack-wide (not a per-world zip).
+- Required dependencies: Farmer’s Delight, Regions Unexplored (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: recipes only; clean to remove
+- License / attribution: MIT
+- Date added: 2026-09-16
+
+### Farmer's Cutting: Oh The Biomes We've Gone
+
+- Pinned file / version: `farmers-cutting-oh-the-biomes-weve-gone-1.20.1-1.1-forge.jar` (Modrinth version `4pcjIbg5`)
+- Download source: https://modrinth.com/mod/farmers-cutting-oh-the-biomes-weve-gone/version/4pcjIbg5
+- packwiz `side`: both
+- Category: compatibility (Farmer’s Delight recipes)
+- Why chosen: Cutting-board recipes for BWG woods.
+- Required dependencies: Farmer’s Delight, Oh The Biomes We’ve Gone (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: recipes only; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Farmer's Cutting: Twilight Forest
+
+- Pinned file / version: `farmers-cutting-twilight-forest-1.20.1-1.0.jar` (Modrinth version `BIxQGaf2`)
+- Download source: https://modrinth.com/mod/farmers-cutting-twilight-forest/version/BIxQGaf2
+- packwiz `side`: both
+- Category: compatibility (Farmer’s Delight recipes)
+- Why chosen: Cutting-board recipes for Twilight Forest woods. No Terralith cutting file exists on Modrinth.
+- Required dependencies: Farmer’s Delight (present). Twilight Forest present.
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: recipes only; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
 ### My Nether's Delight
 
 - Pinned file / version: `MyNethersDelight-1.20.1-1.10.4-backport.1.jar` (Modrinth version `pOBasFQT`)
@@ -1242,6 +1362,21 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: Stardust Labs License; store pack distribution
 - Date added: 2026-09-16
 
+### Nullscape
+
+- Pinned file / version: `Nullscape_1.20.x_v1.2.8.jar` (Modrinth version `QsRKydVt`)
+- Download source: https://modrinth.com/mod/nullscape/version/QsRKydVt
+- packwiz `side`: both
+- Category: worldgen (End biomes)
+- Why chosen: Stardust End overhaul. Pairs with Terralith. Does not touch Overworld or Nether (Incendium stays out). Forge jar so it loads pack-wide.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: Terralith (shipped)
+- Config changes: none — defaults. New End chunks; restart required.
+- World-data / removability: End biome shape stays in generated chunks
+- License / attribution: Stardust Labs License; store pack distribution
+- Date added: 2026-09-16
+
 ### Tectonic
 
 - Pinned file / version: `tectonic-3.0.17-forge-1.20.1.jar` (Modrinth version `KLmvRxwh`)
@@ -1252,7 +1387,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Lithostitched 1.4.11+ (Modrinth version metadata lists none; the jar still fails without it)
 - Optional dependencies: none
 - Recommended companions: Terralith (shipped)
-- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes), Vertical Scale `0.80` (was `1.125`; ~40 blocks lower on typical highlands). Elevation Boost stays `0.0`. New chunks; 1.20 restart. ([configs.md](configs.md))
+- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.16` (was `0.125`; still larger than Tectonic default `0.25`), Vertical Scale `0.80` (was `1.125`; ~40 blocks lower on typical highlands). Elevation Boost stays `0.0`. Extra gen off: cheese/noodle/spaghetti caves, jungle pillars, underground rivers, river lanterns, rolling hills, lava tunnels, ocean islands. New chunks; 1.20 restart. ([configs.md](configs.md))
 - World-data / removability: changes Overworld shape; old chunks stay old
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1463,7 +1598,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/streamsreflowing-common.toml` — `terrainAccuracyLevel = "LOW"` (author default MEDIUM). Coarser rivers, cheaper plates on Tectonic. New chunks only after restart. Do not add Ksyxis or C2ME.
+- Config changes: `pack/config/streamsreflowing-common.toml` — `terrainAccuracyLevel` / `qualityPreset` `POTATO` (author default MEDIUM; pack was LOW), sparser rivers, rebiome/flora/bank passes off, `flowVanillaRivers` false. New chunks only after restart. Do not add Ksyxis or C2ME.
 - World-data / removability: river shape stays in chunks
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1527,21 +1662,6 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Config changes: none — run a radius on purpose ([configs.md](configs.md))
 - World-data / removability: already-written chunks stay; the mod itself is clean to remove
 - License / attribution: MIT; see Modrinth project page
-- Date added: 2026-09-16
-
-### Distant Horizons
-
-- Pinned file / version: `DistantHorizons-3.2.0-b-1.20.1-fabric-forge.jar` (Modrinth version `FWGxbEM3`)
-- Download source: https://modrinth.com/mod/distanthorizons/version/FWGxbEM3
-- packwiz `side`: client
-- Category: rendering (LOD)
-- Why chosen: Optional far terrain. **Beta.** Dedicated server must not run it.
-- Required dependencies: none
-- Optional dependencies: none
-- Recommended companions: Oculus 1.8.0 (already claims DH 2.2+ shader support)
-- Config changes: `pack/config/DistantHorizons.toml` — renderer off, distant gen off, floor quality if enabled. Launcher JVM: `pack/user_jvm_args.txt` (`-XX:+UseZGC` on Java 17). Prism sync applies it ([configs.md](configs.md), CONTRIBUTING.md).
-- World-data / removability: LOD databases under the instance; clean to remove the mod. Existing LODs stay on disk until deleted.
-- License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
 ### Balm
@@ -1664,6 +1784,21 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
+### Ars Creo
+
+- Pinned file / version: `ars_creo-1.20.1-4.3.0.jar` (Modrinth version `bLLhDnY2`)
+- Download source: https://modrinth.com/mod/ars-creo/version/bLLhDnY2
+- packwiz `side`: both
+- Category: compatibility (Ars + Create)
+- Why chosen: Official baileyholl glue: Starbuncle wheel, spell turrets and source jars on Create contraptions.
+- Required dependencies: Ars Nouveau, Create (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: wheel/turret blocks stay if removed
+- License / attribution: GPL-3.0-only
+- Date added: 2026-09-16
+
 ### Applied Energistics 2
 
 - Pinned file / version: `appliedenergistics2-forge-15.4.10.jar` (Modrinth version `7KVs6HMQ`)
@@ -1676,6 +1811,21 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Recommended companions: none
 - Config changes: none — defaults
 - World-data / removability: cables, drives, and meteors stay in the save if removed. New chunks for meteorites.
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Applied Energistics 2 Wireless Terminals
+
+- Pinned file / version: `ae2wtlib-15.3.3-forge.jar` (Modrinth version `z8QXeyI0`)
+- Download source: https://modrinth.com/mod/applied-energistics-2-wireless-terminals/version/z8QXeyI0
+- packwiz `side`: both
+- Category: compatibility (AE2 QoL)
+- Why chosen: Wireless crafting/pattern terminals. Latest 1.20.1 Forge 15.3.x on AE2 15.4.10.
+- Required dependencies: AE2, Curios, Architectury, Cloth Config (present)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: terminals stay as items if removed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
@@ -2410,7 +2560,15 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Nature's Compass | https://modrinth.com/mod/natures-compass |
 | Explorer's Compass | https://modrinth.com/mod/explorers-compass |
 | Chunky | https://modrinth.com/mod/chunky |
-| Distant Horizons | https://modrinth.com/mod/distanthorizons |
+| Jade Addons (Neo/Forge) | https://modrinth.com/mod/jade-addons-forge |
+| Create Slice & Dice | https://modrinth.com/mod/slice-and-dice |
+| Create: Central Kitchen | https://modrinth.com/mod/create-central-kitchen |
+| Create: Alex's Caves Compat | https://modrinth.com/mod/create-alexs-caves-compat |
+| Create: Applied Kinetics | https://modrinth.com/mod/create-applied-kinetics |
+| Nullscape | https://modrinth.com/mod/nullscape |
+| Farmer's Cutting: Regions Unexplored | https://modrinth.com/mod/farmers-cutting-regions-unexplored |
+| Farmer's Cutting: Oh The Biomes We've Gone | https://modrinth.com/mod/farmers-cutting-oh-the-biomes-weve-gone |
+| Farmer's Cutting: Twilight Forest | https://modrinth.com/mod/farmers-cutting-twilight-forest |
 | Balm | https://modrinth.com/mod/balm |
 | Moonlight Lib | https://modrinth.com/mod/moonlight |
 | Patchouli | https://modrinth.com/mod/patchouli |
@@ -2420,6 +2578,8 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Melody | https://modrinth.com/mod/melody |
 | Ars Nouveau | https://modrinth.com/mod/ars-nouveau |
 | Applied Energistics 2 | https://modrinth.com/mod/ae2 |
+| Applied Energistics 2 Wireless Terminals | https://modrinth.com/mod/applied-energistics-2-wireless-terminals |
+| Ars Creo | https://modrinth.com/mod/ars-creo |
 | The Twilight Forest | https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest |
 | Supplementaries | https://modrinth.com/mod/supplementaries |
 | Waystones | https://modrinth.com/mod/waystones |
@@ -2466,6 +2626,13 @@ Credit each author via the project URL above when distributing the pack. Recheck
 
 | Mod | Why not now | What would change that |
 |---|---|---|
+| Distant Horizons | Dropped — optional LOD; was client-only and off by default | Explicit request to re-add |
+| Geophilic / Terraphilic | Needs Terraphilic with Terralith; vanilla slices are already rare next to RU/BWG | Explicit request |
+| Dungeons and Taverns / Structory / Towns and Towers / Explorify | Extra Overworld structures on WDA + Epic Structures; `/rtp` already expensive | Explicit request |
+| Extended AE / AdvancedAE / Expanded AE / Applied Flux | AE2 expansion kits; do not stack | Pick one later |
+| Ars Énergistique | Last 1.20.1 file 1.2.0 (Jul 2024); risky on AE2 15.4.10 | A 15.4-era Forge file |
+| Applied Cooking | 4.0.0 from 2023 vs AE2 15.4.10 | A current Forge file |
+| ME Requester | Autocraft requests, not cross-mod glue | Explicit request |
 | Shader packs | Loader (Oculus) is in; a test set ships in `pack/shaderpacks/` | After in-game testing, remove packs we do not want. Do not enable a default until one is chosen. |
 | Bliss / Potato / Nostalgia / Pastel / Shrimple / Insanity | ARR or no store-system grant | Do not add without a written modpack clause |
 | SEUS / Continuum | OptiFine-oriented or paid | Stay on Iris packs |

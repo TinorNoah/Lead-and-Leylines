@@ -29,7 +29,7 @@ Prefer the `minecraft-modding` skill (research and approval), then `add-mod` (pa
 
    `PreLaunchCommand="$INST_JAVA -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml"`
 
-5. JVM args live in `pack/user_jvm_args.txt` (`-XX:+UseZGC` for Distant Horizons on Java 17). `python scripts/update_prism.py` writes those flags into the instance. If you are not using that script, Instance settings → Java → enable **Custom JVM arguments** and paste the same flags. Do not add `-XX:+ZGenerational` (Java 21+). Memory (`-Xmx`) stays in Prism's Memory tab.
+5. JVM args live in `pack/user_jvm_args.txt` (`-XX:+UseZGC` on Java 17). `python scripts/update_prism.py` writes those flags into the instance. If you are not using that script, Instance settings → Java → enable **Custom JVM arguments** and paste the same flags. Do not add `-XX:+ZGenerational` (Java 21+). Memory (`-Xmx`) stays in Prism's Memory tab.
 
 6. Launch. The installer syncs the instance to the current pack. If serve is down, pre-launch fails.
 

@@ -15,7 +15,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 1. One Overworld *height/noise* mod. Tectonic, not Lithosphere, not both.
 2. Terratonic only if Terralith and Tectonic are datapacks. This pack uses the Forge **mod** jars; Tectonic already blends with Terralith.
 3. Do not stack William Wythers’ Expanded Ecosphere with Regions Unexplored / Oh The Biomes We’ve Gone (Feature Order Cycle).
-4. Terralith + RU + BWG is three surface biome injectors. Terralith would become postage stamps at TerraBlender defaults. Pack ships `overworld_region_size` 6 and Tectonic climate scale 0.125.
+4. Terralith + RU + BWG is three surface biome injectors. Terralith would become postage stamps at TerraBlender defaults. Pack ships `overworld_region_size` 6 and Tectonic climate scale 0.16 (was 0.125).
 5. One mineshaft line: MMR (already in). Do not add YUNG’s Better Mineshafts.
 6. YUNG Better Caves is Overworld-only (`#minecraft:is_overworld`). Leave the Nether to Amplified Nether + BetterNether.
 
@@ -35,6 +35,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Alex's Caves | [modrinth.com/mod/alexs-caves](https://modrinth.com/mod/alexs-caves) `2.0.2` (`lC8HHXOF`) | both | Six rare cave biomes |
 | Citadel | [modrinth.com/mod/citadel](https://modrinth.com/mod/citadel) `2.6.3` (`lTAAe4sZ`) | both | Required by Alex's Caves |
 | Terralith | [modrinth.com/mod/terralith](https://modrinth.com/mod/terralith) `2.5.4` (`WeYhEb5d`) | both | Extra Overworld biomes |
+| Nullscape | [modrinth.com/mod/nullscape](https://modrinth.com/mod/nullscape) `1.2.8` (`QsRKydVt`) | both | End biomes. Stardust; Forge jar. New End chunks. |
 | Tectonic | [modrinth.com/mod/tectonic](https://modrinth.com/mod/tectonic) `3.0.17` (`KLmvRxwh`) | both | Big terrain. Continent + climate scales and Vertical Scale `0.80` in [configs.md](configs.md) |
 | Lithostitched | [modrinth.com/mod/lithostitched](https://modrinth.com/mod/lithostitched) `1.4.11-forge-1.20` (`srPoHKt8`) | both | Required by Tectonic 3.0.17. Modrinth does not list the dep; the jar still requires it. |
 | YUNG's Bridges | [modrinth.com/mod/yungs-bridges](https://modrinth.com/mod/yungs-bridges) `1.20-Forge-4.0.3` (`KgO1gfM2`) | both | River bridges. Rate is baked into the jar (`rarity_filter` chance 3) |
@@ -74,13 +75,14 @@ GeckoLib was already in from Infernal Expansion Redux.
 | Mod | Why a pack note |
 |---|---|
 | All of this cut | New world. Old chunks stay old-gen. |
-| Tectonic | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (default `0.25` — smaller scale = larger biomes). Vertical Scale `0.80` (was `1.125`) so surface above sea is ~40 blocks lower on typical highlands. Do not use Elevation Boost for this — that value is a mountain multiplier, not blocks. Do not raise Ocean Offset toward `0`. New chunks; 1.20 restart. |
+| Tectonic | `pack/config/tectonic.json`: Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.16` (was `0.125`; Tectonic default `0.25` — smaller scale = larger biomes). Vertical Scale `0.80` (was `1.125`) so surface above sea is ~40 blocks lower on typical highlands. Do not use Elevation Boost for this — that value is a mountain multiplier, not blocks. Extra gen off for live `/rtp`: cheese/noodle/spaghetti caves, jungle pillars, underground rivers, river lanterns, rolling hills, lava tunnels, ocean islands. Vanilla carvers stay on. Do not raise Ocean Offset toward `0`. New chunks; 1.20 restart. |
 | TerraBlender | `pack/config/terrablender.toml`: `overworld_region_size` 6 (max), `nether_region_size` 4. |
 | Sparse Structures | `pack/config/sparsestructures.json5`: `spreadFactor` 1, `idBasedSalt` true. Do not set 2; that doubles rarity and locates still report starts. |
 | Structurify | `pack/config/structurify.json`: global spacing modifier **off**. |
 | Create: Sky Village | `pack/config/create_sky_village-common.toml`: spacing 32 / separation 16 (was 80/40), height offset 64 so Tectonic peaks are less likely to eat islands. `/locate` still teleports to ground Y — look up. |
+| Nullscape | Forge jar `1.2.8`. End biomes only. New End chunks. |
 | YUNG’s Bridges | 4.0.3 has `rarity_filter` chance `3` baked into the jar. Tectonic/Terralith make bridges rarer. No pack toml to turn that up without a datapack overlay. |
 | YUNG’s Better Caves | Already Overworld-only. |
 | Chunky | Pregen writes the world. Use on purpose; do not leave a huge radius running unattended. Pregen around spawn before relying on `/rtp`. |
-| Streams Reflowing | Pin `2.13.7`. Pack `pack/config/streamsreflowing-common.toml`: `terrainAccuracyLevel = "LOW"` (default MEDIUM). Tectonic makes MEDIUM spawn-chunk gen stall; LOW is coarser rivers, cheaper watersheds. Network change in **new chunks** after a restart. Do not drop to POTATO unless LOW is still too slow. Do not add Ksyxis/C2ME. Use Chunky if you want HIGH quality without hitching. |
+| Streams Reflowing | Pin `2.13.7`. Pack `pack/config/streamsreflowing-common.toml`: `terrainAccuracyLevel` / `qualityPreset` `POTATO` (author default MEDIUM; pack was LOW). Coarser, sparser rivers so live `/rtp` does not stall on Tectonic watersheds. Network change in **new chunks** after a restart. Do not add Ksyxis/C2ME. Use Chunky if you want HIGH quality without hitching. |
 | Terrain Slabs | Beta. |

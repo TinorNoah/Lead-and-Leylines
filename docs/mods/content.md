@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** combat/magic cut **installed** (2026-09-16). Distant Horizons is **off** until the player enables it. No extra EMI addon jar — AE2 15.4.10 has native EMI; Ars, Supplementaries, Waystones, Twilight Forest, and Lootr ship their plugins in-jar. Polymorph stays on 0.49.10 because 0.49.11 fails next to TMRV's JEI stub. EMI Loot was not added; Fzzy Config is in only as Simply Swords’ library. Ice and Fire is **Community Edition**, not the original AlexThe666 jar.
+**Status:** combat/magic cut **installed** (2026-09-16). Distant Horizons is **dropped**. No extra EMI addon jar — AE2 15.4.10 has native EMI; Ars, Supplementaries, Waystones, Twilight Forest, and Lootr ship their plugins in-jar. Polymorph stays on 0.49.10 because 0.49.11 fails next to TMRV's JEI stub. EMI Loot was not added; Fzzy Config is in only as Simply Swords’ library. Ice and Fire is **Community Edition**, not the original AlexThe666 jar.
 
 ## Side (packwiz)
 
@@ -13,7 +13,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 
 ## Decision rules
 
-1. Distant Horizons stays **client** and **renderer off** (`rendererMode = "DISABLED"`, no distant generation). Floor quality is only a safety net if someone turns it on. Do not put DH on the dedicated server. Launcher Java 17 uses `-XX:+UseZGC` from `pack/user_jvm_args.txt` (DH's G1 warning). Prism sync writes it into `instance.cfg`; other launchers still need that flag in Java settings.
+1. Do not add Distant Horizons. Launcher Java 17 uses `-XX:+UseZGC` from `pack/user_jvm_args.txt`. Prism sync writes it into `instance.cfg`; other launchers still need that flag in Java settings.
 2. One recipe browser (EMI). Do not add JEI for AE2. Do not add EMI Loot unless loot-table pages are requested.
 3. Official Twilight Forest CurseForge file only. Do not add the Modrinth “Unofficial” port.
 4. FancyMenu + Drippy is the menu/loading stack. No custom title art unless chosen on purpose. FancyMenu must not customize Create / AE2 / Xaero / Supplementaries / Twilight Forest screens (upstream blocks those packages). When we start custom layouts, use [FancyMenu docs (en-US home)](https://docs.fancymenu.net/docs/en-US/home).
@@ -24,11 +24,15 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 
 | Mod | Project | `side` | Why add |
 |---|---|---|---|
-| Distant Horizons | [modrinth.com/mod/distanthorizons](https://modrinth.com/mod/distanthorizons) `3.2.0-b` (`FWGxbEM3`) | client | Optional LOD view. **Beta.** Off by default. Oculus 1.8.0 already claims DH 2.2+ shader support. Java 17: `pack/user_jvm_args.txt` (`-XX:+UseZGC`). |
 | Ars Nouveau | [modrinth.com/mod/ars-nouveau](https://modrinth.com/mod/ars-nouveau) `4.12.7` (`Hw2aD01e`) | both | Spellcraft. Planned magic line. |
 | Patchouli | [modrinth.com/mod/patchouli](https://modrinth.com/mod/patchouli) `1.20.1-85` (`94dtOLgZ`) | both | Ars (and other) books |
 | Applied Energistics 2 | [modrinth.com/mod/ae2](https://modrinth.com/mod/ae2) `15.4.10` (`7KVs6HMQ`) | both | Storage network. Native EMI in this file. |
 | GuideME | [modrinth.com/mod/guideme](https://modrinth.com/mod/guideme) `20.1.15` (`i7Tp1AHw`) | both | Required by AE2 15.4 |
+| Ars Creo | [modrinth.com/mod/ars-creo](https://modrinth.com/mod/ars-creo) `4.3.0` (`bLLhDnY2`) | both | Ars + Create: wheel, turrets on contraptions |
+| Create Slice & Dice | [modrinth.com/mod/slice-and-dice](https://modrinth.com/mod/slice-and-dice) `3.6.0` (`KWLI8Ng7`) | both | FD cutting/cooking automation |
+| Create: Central Kitchen | [modrinth.com/mod/create-central-kitchen](https://modrinth.com/mod/create-central-kitchen) `1.5.1` (`jMB94kRJ`) | both | FD + Create 6.0.8 |
+| Create: Applied Kinetics | [modrinth.com/mod/create-applied-kinetics](https://modrinth.com/mod/create-applied-kinetics) `1.5.1` (`DjaJgxhC`) | both | Create machines for AE2 |
+| Create: Alex's Caves Compat | [modrinth.com/mod/create-alexs-caves-compat](https://modrinth.com/mod/create-alexs-caves-compat) `1.6.2` (`aqpInCWh`) | both | Cave ore crushing / sequenced recipes |
 | Twilight Forest | CurseForge file `5468648` (`4.3.2508`) | both | Adventure dimension. Official jar. |
 | Supplementaries | [modrinth.com/mod/supplementaries](https://modrinth.com/mod/supplementaries) `3.1.43` (`S0TIJ1hU`) | both | Vanilla-plus blocks/items |
 | Moonlight Lib | [modrinth.com/mod/moonlight](https://modrinth.com/mod/moonlight) `2.16.35` (`W0ZWjZib`) | both | Supplementaries + Target Dummy |
@@ -88,7 +92,7 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 | Twilight Forest Unofficial (Modrinth) | **Dropped.** Official CurseForge `4.3.2508`. |
 | JEI (for AE2) | **Skipped.** EMI is the viewer. AE2 15.4.10 has native EMI. |
 | Polymorph `0.49.11` (`5lNATnbO`) | **Held.** Only change vs 0.49.10 is a JEI 15.57+ recipe-transfer API. TMRV 0.9.0 provides `jei` at 15.20.0.132, so Forge aborts. Revisit if TMRV bumps that stub on 1.20.1. |
-| DH on the dedicated server | **Skipped.** LOD gen on the server is the same class of hitch as `/rtp`. |
+| Distant Horizons | **Dropped.** Optional far-terrain LODs; was client-only and off by default. Do not re-add unless requested. |
 | FancyMenu custom title art | **Held.** Framework only until a layout is chosen. Docs: https://docs.fancymenu.net/docs/en-US/home |
 | Ice and Fire (original `2.1.13-1.20.1-beta-5`) | **Dropped.** Community Edition replaces it. Do not install both. |
 | Maxstuff / Elite X Quality Guns / more random TACZ packs | **Held.** LesRaisins + Gucci + Daffa is the extra-pack set. More packs overlap IDs and quality. |
@@ -99,7 +103,6 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 
 | Mod | Why a pack note |
 |---|---|
-| Distant Horizons | `pack/config/DistantHorizons.toml`: renderer off, distant gen off. Options → DH to enable. |
 | Default Options | `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map`. Existing instances that already saved **M** keep that bind — unbind once in Controls if it still fights Xaero. |
 | AE2 / Ars / Twilight Forest / Supplementaries / Waystones | Worldgen and blocks. New chunks for meteors, Archwood, TF overworld portals, village waystones. TF dimension still works on the current world. |
 | Lootr | Converts loot-table chests. Player-placed Sophisticated Storage is unchanged. |
