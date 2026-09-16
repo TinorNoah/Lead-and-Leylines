@@ -42,11 +42,11 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Structurify | [modrinth.com/mod/structurify](https://modrinth.com/mod/structurify) `2.0.37` (`FMlB4OQ1`) | both | Structure Control. Global spacing modifier **off** |
 | YetAnotherConfigLib | [modrinth.com/mod/yacl](https://modrinth.com/mod/yacl) `3.6.6+1.20.1-forge` (`sCWgXDYQ`) | both | Required by Structurify |
 | Sparse Structures | [modrinth.com/mod/sparsestructures](https://modrinth.com/mod/sparsestructures) `3.0` (`oqEnX6AN`) | both | `idBasedSalt` only. `spreadFactor` 1 (vanilla density) |
-| Epic Structures: Villages / Dungeons / Witch Huts / Jungle Temples | Modrinth `hCRa4eFr` / `tcsK0UPh` / `WAWShTQy` / `aN4PmOt6` | both | Vanilla-structure overhauls |
+| Epic Structures: Villages / Dungeons / Witch Huts / Jungle Temples | Modrinth `hCRa4eFr` / `fMMms6dF` (dungeons **1.0**) / `WAWShTQy` / `aN4PmOt6` | both | Vanilla-structure overhauls. Dungeons stay on 1.0 — later jars use 1.21 item NBT |
 | When Dungeons Arise | [modrinth.com/mod/when-dungeons-arise](https://modrinth.com/mod/when-dungeons-arise) `2.1.58` (`6hQpx5Tc`) | both | Extra dungeons |
 | When Dungeons Arise: Seven Seas | `DungeonsAriseSevenSeas-1.20.x-1.0.2-forge.jar` (`Ak226ElN`) | both | Ocean dungeons. Not the 1.19.2-named jar |
 | Create: Sky Village | [modrinth.com/mod/create-sky-village](https://modrinth.com/mod/create-sky-village) `0.0.38` (`630wzTP1`) | both | Create is already in. Spacing 32 / height offset 64 |
-| Streams Reflowing | [modrinth.com/mod/streams-reflowing](https://modrinth.com/mod/streams-reflowing) `2.13.5` (`4HOteI74`) | both | Real rivers |
+| Streams Reflowing | [modrinth.com/mod/streams-reflowing](https://modrinth.com/mod/streams-reflowing) `2.13.7` (`OZN2NMml`) | both | Real rivers. 2.13.7 is the dedicated spawn/current stall fix (not Ksyxis, not C2ME) |
 | Countered's Terrain Slabs | [modrinth.com/mod/countereds-terrain-slabs](https://modrinth.com/mod/countereds-terrain-slabs) `4.0.3-beta` (`fhdOSK5I`) | both | Smooth terrain steps. **Beta** |
 | Nature's Compass | [modrinth.com/mod/natures-compass](https://modrinth.com/mod/natures-compass) `1.12.0` (`eRSDvCjN`) | both | Find biomes |
 | Explorer's Compass | [modrinth.com/mod/explorers-compass](https://modrinth.com/mod/explorers-compass) `1.4.0` (`7ZdJbCOx`) | both | Find structures |
@@ -82,4 +82,5 @@ GeckoLib was already in from Infernal Expansion Redux.
 | YUNG’s Bridges | 4.0.3 has `rarity_filter` chance `3` baked into the jar. Tectonic/Terralith make bridges rarer. No pack toml to turn that up without a datapack overlay. |
 | YUNG’s Better Caves | Already Overworld-only. |
 | Chunky | Pregen writes the world. Use on purpose; do not leave a huge radius running unattended. Pregen around spawn before relying on `/rtp`. |
+| Streams Reflowing | Pin `2.13.7`. Pack `pack/config/streamsreflowing-common.toml`: `terrainAccuracyLevel = "LOW"` (default MEDIUM). Tectonic makes MEDIUM spawn-chunk gen stall; LOW is coarser rivers, cheaper watersheds. Network change in **new chunks** after a restart. Do not drop to POTATO unless LOW is still too slow. Do not add Ksyxis/C2ME. Use Chunky if you want HIGH quality without hitching. |
 | Terrain Slabs | Beta. |

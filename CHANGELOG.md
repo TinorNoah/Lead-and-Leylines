@@ -17,6 +17,26 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.6] - 2026-09-16
+
+### Added
+
+- Ice and Fire Community Edition (dragons and other mythical creatures). The original Ice and Fire jar cannot sit next to it.
+- Timeless and Classics Zero with extra gun packs: LesRaisins Tactical, LesRaisins Append, Gucci attachments, and Daffa's Arsenal.
+- Simply Swords, Simply More, and Better Combat melee (guns stay TACZ).
+- Ars Elemental foci and glyphs on top of Ars Nouveau.
+- Placeable Trash Cans for item/fluid/energy voids. The inventory trash slot is unchanged.
+- Legendary Tooltips and Equipment Compare.
+- Amendments, so Supplementaries wall lanterns, skull candles, ceiling pots/banners, and skull piles stay.
+
+### Changed
+
+- Streams Reflowing 2.13.7 with **LOW** river accuracy so new land generates faster on Tectonic (currents still arrive with the land; dedicated worlds no longer rebuild every stream network on each start). Rivers in new chunks are coarser.
+
+### Fixed
+
+- Epic Structure dungeons no longer spawn item frames with 1.21 item data (empty frames, hanging-entity errors, and a chunk-gen hitch). Dungeons pin the 1.20-native 1.0 jar.
+
 ## [0.0.5] - 2026-09-16
 
 ### Changed

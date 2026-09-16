@@ -1311,18 +1311,19 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 
 ### Epic Structures: Dungeons
 
-- Pinned file / version: `epic-structures-dungeons-1.2.5.jar` (Modrinth version `tcsK0UPh`)
-- Download source: https://modrinth.com/mod/epic-structures-dungeons/version/tcsK0UPh
+- Pinned file / version: `epic-structures-dungeons-1.0.jar` (Modrinth version `fMMms6dF`)
+- Download source: https://modrinth.com/mod/epic-structures-dungeons/version/fMMms6dF
 - packwiz `side`: both
 - Category: worldgen (dungeons)
-- Why chosen: Dungeon overhaul from the Epic Structures set.
+- Why chosen: Dungeon overhaul from the Epic Structures set. Pin the 1.20-native 1.0 jar (`pack_format` 15). 1.1+ (including files tagged 1.20) bake 1.21 `components` NBT into item frames, so 1.20.1 logs “Unable to load item” / hanging entity at invalid position and can hitch the server.
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults. New world.
-- World-data / removability: generated structures stay in chunks
+- Config changes: none. Do not bump to 1.2.5 (`tcsK0UPh`) or the later unified jars.
+- World-data / removability: generated structures stay in chunks. Chunks already generated with 1.2.5 keep empty frames until those chunks are wiped.
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
+- Date updated: 2026-09-16 (1.2.5 → 1.0 1.20-native)
 
 ### Epic Structures: Witch Huts
 
@@ -1401,18 +1402,19 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 
 ### Streams Reflowing
 
-- Pinned file / version: `StreamsReflowing-1.20.1-forge-2.13.5.jar` (Modrinth version `4HOteI74`)
-- Download source: https://modrinth.com/mod/streams-reflowing/version/4HOteI74
+- Pinned file / version: `StreamsReflowing-1.20.1-forge-2.13.7.jar` (Modrinth version `OZN2NMml`)
+- Download source: https://modrinth.com/mod/streams-reflowing/version/OZN2NMml
 - packwiz `side`: both
 - Category: worldgen (rivers)
-- Why chosen: Real flowing rivers on Tectonic terrain.
+- Why chosen: Real flowing rivers on Tectonic terrain. 2.13.7 is the spawn-chunk stall fix: currents prepare several times faster on multi-core, arrive with the land, and large plates no longer rebuild every stream network on dedicated start. Worlds from 2.12.9+ keep existing streams.
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults. New world.
+- Config changes: `pack/config/streamsreflowing-common.toml` — `terrainAccuracyLevel = "LOW"` (author default MEDIUM). Coarser rivers, cheaper plates on Tectonic. New chunks only after restart. Do not add Ksyxis or C2ME.
 - World-data / removability: river shape stays in chunks
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
+- Date updated: 2026-09-16 (2.13.5 → 2.13.7)
 
 ### Countered's Terrain Slabs
 
@@ -1864,6 +1866,381 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - License / attribution: MIT; see Modrinth project page
 - Date added: 2026-09-16
 
+### Amendments
+
+- Pinned file / version: `amendments-1.20-2.2.6.jar` (Modrinth version `nJORWvdh`)
+- Download source: https://modrinth.com/mod/amendments/version/nJORWvdh
+- packwiz `side`: both
+- Category: vanilla-plus
+- Why chosen: Supplementaries 3.x moved wall lanterns, skull candles, ceiling pots/banners, and skull piles here. Without it those placed blocks vanish.
+- Required dependencies: Moonlight Lib (already in)
+- Optional dependencies: none
+- Recommended companions: Supplementaries
+- Config changes: none — defaults
+- World-data / removability: blocks stay in the save if removed
+- License / attribution: Supplementaries Team License 1.1; see Modrinth project page
+- Date added: 2026-09-16
+
+### SuperMartijn642's Core Lib
+
+- Pinned file / version: `supermartijn642corelib-1.1.24a-forge-mc1.20.1.jar` (Modrinth version `Rty5QRB6`)
+- Download source: https://modrinth.com/mod/supermartijn642s-core-lib/version/Rty5QRB6
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Trash Cans
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while Trash Cans is in
+- License / attribution: All Rights Reserved; see Modrinth project page
+- Date added: 2026-09-16
+
+### SuperMartijn642's Config Lib
+
+- Pinned file / version: `supermartijn642configlib-1.1.8-forge-mc1.20.jar` (Modrinth version `ZKor79dR`)
+- Download source: https://modrinth.com/mod/supermartijn642s-config-lib/version/ZKor79dR
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Trash Cans
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while Trash Cans is in
+- License / attribution: All Rights Reserved; see Modrinth project page
+- Date added: 2026-09-16
+
+### Trash Cans
+
+- Pinned file / version: `trashcans-1.1.0a-forge-mc1.20.4.jar` (Modrinth version `iiNJsz5q`; file lists 1.20–1.20.4 Forge)
+- Download source: https://modrinth.com/mod/trash-cans/version/iiNJsz5q
+- packwiz `side`: both
+- Category: utility (void)
+- Why chosen: Placeable item/fluid/energy voids for Create/AE2 lines. Different from TrashSlot and FTB `/trashcan`.
+- Required dependencies: Core Lib, Config Lib
+- Optional dependencies: Mekanism (not in)
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: blocks stay in the save if removed
+- License / attribution: All Rights Reserved; see Modrinth project page
+- Date added: 2026-09-16
+
+### Jupiter
+
+- Pinned file / version: `jupiter-2.3.7-1.20.1-forge.jar` (CurseForge file `7738299`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/jupiter/files/7738299
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by IceAndFire Community Edition (config GUI)
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — IAF settings live in the Jupiter GUI
+- World-data / removability: library; keep while IceAndFire CE is in
+- License / attribution: see CurseForge project page
+- Date added: 2026-09-16
+
+### Uranus
+
+- Pinned file / version: `uranus-2.2.6-bugfix.2-1.20.1-forge.jar` (CurseForge file `7745532`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/uranus/files/7745532
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by IceAndFire Community Edition (animation/util; replaces Citadel for CE)
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while IceAndFire CE is in. Citadel stays for Alex's Caves.
+- License / attribution: see CurseForge project page
+- Date added: 2026-09-16
+
+### IceAndFire Community Edition
+
+- Pinned file / version: `IceAndFireCE-1.2.8-1.20.1-forge.jar` (CurseForge file `8757817`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/iceandfire-ce/files/8757817
+- packwiz `side`: both
+- Category: content (dragons)
+- Why chosen: Maintained fork of Ice and Fire for 1.20.1. Original `2.1.13-beta-5` cannot load beside it.
+- Required dependencies: Jupiter, Uranus
+- Optional dependencies: EMI, Jade, Farmer's Delight (already in)
+- Recommended companions: Ice and Fire Dragons X Better Combat
+- Config changes: none — defaults. Tune spawn/structure rates in Jupiter if TPS drops.
+- World-data / removability: dragons, structures, and blocks stay in the save. Do not swap to original Ice and Fire on an existing world.
+- License / attribution: unofficial fork; see CurseForge project page
+- Date added: 2026-09-16
+
+### [TaCZ] Timeless and Classics Zero
+
+- Pinned file / version: `tacz-1.20.1-1.1.8-hotfix.jar` (Modrinth version `yOVIzIJR`)
+- Download source: https://modrinth.com/mod/timeless-and-classics-zero/version/yOVIzIJR
+- packwiz `side`: both
+- Category: content (guns)
+- Why chosen: Official TACZ. Default gun pack is in this jar. Planned content.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: extra gun packs below
+- Config changes: none — defaults
+- World-data / removability: guns/ammo stay in the save if removed
+- License / attribution: GPL-3.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### [TACZ] LesRaisins Tactical Equipements
+
+- Pinned file / version: `lrtactical-1.20.1-0.4.3.jar` (Modrinth version `eygQmqIl`)
+- Download source: https://modrinth.com/mod/lr-tactical/version/eygQmqIl
+- packwiz `side`: both
+- Category: content (TACZ addon)
+- Why chosen: Extra TACZ throwables/melee. Needs TACZ 1.1.8.
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: LesRaisins Append Pack
+- Config changes: none — defaults
+- World-data / removability: items stay in the save if removed
+- License / attribution: GPL-3.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### [TACZ] LesRaisins Append Pack
+
+- Pinned file / version: `lradd-1.20.1-0.3.0.jar` (Modrinth version `KbReepVU`)
+- Download source: https://modrinth.com/mod/lesraisins-weapon/version/KbReepVU
+- packwiz `side`: both
+- Category: content (TACZ gun pack)
+- Why chosen: Extra LesRaisins guns
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: LesRaisins Tactical
+- Config changes: none — defaults
+- World-data / removability: guns stay in the save if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### [TACZ] Gucci & Vuitton Attachments
+
+- Pinned file / version: `guccivuitton-1.20.1-0.2.2.jar` (Modrinth version `NnUWhMdw`)
+- Download source: https://modrinth.com/mod/tacz-gucci-vuitton-attachments/version/NnUWhMdw
+- packwiz `side`: both
+- Category: content (TACZ attachments)
+- Why chosen: Extra TACZ attachments listed with community packs
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: attachments stay in the save if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### [TACZ Addons] Daffa's Arsenal
+
+- Pinned file / version: `daffas_arsenal-3.7.1.1.jar` (Modrinth version `1Q9ypxVQ`)
+- Download source: https://modrinth.com/mod/daffasarsenal/version/1Q9ypxVQ
+- packwiz `side`: both
+- Category: content (TACZ gun pack)
+- Why chosen: Large extra gun pack, still updated
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: guns stay in the save if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Iceberg
+
+- Pinned file / version: `Iceberg-1.20.1-forge-1.1.25.jar` (Modrinth version `BQ8rJPXV`)
+- Download source: https://modrinth.com/mod/iceberg/version/BQ8rJPXV
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by Legendary Tooltips and Equipment Compare
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while those tooltip mods are in
+- License / attribution: CC-BY-NC-ND-4.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### Prism
+
+- Pinned file / version: `Prism-1.20.1-forge-1.0.5.jar` (Modrinth version `FFyss87M`)
+- Download source: https://modrinth.com/mod/prism-lib/version/FFyss87M
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by Legendary Tooltips. Not Prism Launcher.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while Legendary Tooltips is in
+- License / attribution: CC-BY-NC-ND-4.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### Legendary Tooltips
+
+- Pinned file / version: `LegendaryTooltips-1.20.1-forge-1.4.5.jar` (Modrinth version `JhxD2e6J`)
+- Download source: https://modrinth.com/mod/legendary-tooltips/version/JhxD2e6J
+- packwiz `side`: client
+- Category: utility (UI)
+- Why chosen: Rarity frames on item hover
+- Required dependencies: Iceberg, Prism
+- Optional dependencies: Equipment Compare
+- Recommended companions: Equipment Compare
+- Config changes: none — defaults. If frames glitch, disable ImmediatelyFast `hud_batching`.
+- World-data / removability: client; clean to remove
+- License / attribution: CC-BY-NC-ND-4.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### Equipment Compare
+
+- Pinned file / version: `EquipmentCompare-1.20.1-forge-1.3.7.jar` (Modrinth version `x1lxEKIp`)
+- Download source: https://modrinth.com/mod/equipment-compare/version/x1lxEKIp
+- packwiz `side`: client
+- Category: utility (UI)
+- Why chosen: Shift-compare equipped gear
+- Required dependencies: Iceberg
+- Optional dependencies: Legendary Tooltips
+- Recommended companions: Legendary Tooltips
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: CC-BY-NC-ND-4.0; see Modrinth project page
+- Date added: 2026-09-16
+
+### Fzzy Config
+
+- Pinned file / version: `fzzy_config-0.7.7+1.20.1+forge.jar` (Modrinth version `53kg5uoF`)
+- Download source: https://modrinth.com/mod/fzzy-config/version/53kg5uoF
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Simply Swords 1.70. Not EMI Loot.
+- Required dependencies: Kotlin for Forge (already in)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while Simply Swords is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Simply Tooltips
+
+- Pinned file / version: `SimplyTooltips-forge-0.1.5-1.20.1.jar` (Modrinth version `s87jNabF`)
+- Download source: https://modrinth.com/mod/simply-tooltips/version/s87jNabF
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by Simply Swords 1.70
+- Required dependencies: Fzzy Config, Architectury (already in)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while Simply Swords is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Simply Swords
+
+- Pinned file / version: `simplyswords-forge-neoforge-1.70.2-1.20.1.jar` (Modrinth version `Na6e94J1`)
+- Download source: https://modrinth.com/mod/simply-swords/version/Na6e94J1
+- packwiz `side`: both
+- Category: content (weapons)
+- Why chosen: Extra weapon types. This file’s loot inject works with Lootr.
+- Required dependencies: Fzzy Config, Simply Tooltips, Architectury (already in)
+- Optional dependencies: Better Combat (installed)
+- Recommended companions: Simply More
+- Config changes: none — defaults
+- World-data / removability: weapons stay in the save if removed
+- License / attribution: custom; see Modrinth project page
+- Date added: 2026-09-16
+
+### Simply More
+
+- Pinned file / version: `simplymore-forge-neoforge-1.1.4+1.20.1.jar` (Modrinth version `u4dfPRHB`)
+- Download source: https://modrinth.com/mod/simplymore/version/u4dfPRHB
+- packwiz `side`: both
+- Category: content (weapons)
+- Why chosen: More Simply Swords types. 1.1.4 is the holdover that boots with Simply Swords 1.70.
+- Required dependencies: Simply Swords
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: weapons stay in the save if removed
+- License / attribution: All Rights Reserved; see Modrinth project page
+- Date added: 2026-09-16
+
+### playerAnimator
+
+- Pinned file / version: `player-animation-lib-forge-1.0.2-rc1+1.20.jar` (Modrinth version `xe2EVE6q`)
+- Download source: https://modrinth.com/mod/playeranimator/version/xe2EVE6q
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Better Combat
+- Required dependencies: none
+- Optional dependencies: bendy-lib (not added)
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while Better Combat is in
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-16
+
+### Better Combat
+
+- Pinned file / version: `bettercombat-forge-1.9.0+1.20.1.jar` (Modrinth version `rnhiaw3t`)
+- Download source: https://modrinth.com/mod/better-combat/version/rnhiaw3t
+- packwiz `side`: both
+- Category: combat
+- Why chosen: Melee animations for Simply Swords / IAF / Alex's Caves. Guns stay TACZ.
+- Required dependencies: playerAnimator, Cloth Config (already in)
+- Optional dependencies: none
+- Recommended companions: IAF x Better Combat, Alex's Caves Better Combat
+- Config changes: none — defaults
+- World-data / removability: mixin/animations; clean to remove
+- License / attribution: All Rights Reserved; see Modrinth project page
+- Date added: 2026-09-16
+
+### Ice and Fire Dragons X Better Combat
+
+- Pinned file / version: `iceandfirebettercombat.jar` (Modrinth version `d5Vp1w6z`)
+- Download source: https://modrinth.com/mod/ice-and-fire-dragons-x-better-combat/version/d5Vp1w6z
+- packwiz `side`: both
+- Category: combat (compat)
+- Why chosen: Maps Ice and Fire weapons onto Better Combat. packwiz `both` so Prism singleplayer gets it (store tag is server-only).
+- Required dependencies: Better Combat, IceAndFire CE
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: animation map; clean to remove
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-16
+
+### Alex's Caves Better Combat
+
+- Pinned file / version: `alexscavesbettercombat.jar` (Modrinth version `25y1lqsO`)
+- Download source: https://modrinth.com/mod/alexs-caves-better-combat/version/25y1lqsO
+- packwiz `side`: both
+- Category: combat (compat)
+- Why chosen: Maps Alex's Caves weapons onto Better Combat. packwiz `both` so Prism singleplayer gets it.
+- Required dependencies: Better Combat, Alex's Caves (already in)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: animation map; clean to remove
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-16
+
+### Ars Elemental
+
+- Pinned file / version: `ars_elemental-1.20.1-0.6.8.0.jar` (CurseForge file `8399870`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/ars-elemental/files/8399870
+- packwiz `side`: both
+- Category: magic (Ars addon)
+- Why chosen: Elemental foci, glyphs, and armor for Ars Nouveau 4.12.7. Author ships 1.20.1 on CurseForge only.
+- Required dependencies: Ars Nouveau (kept on Modrinth `Hw2aD01e`)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: blocks, foci, and familiars stay in the save if removed
+- License / attribution: see CurseForge project page
+- Date added: 2026-09-16
+
 ## Credits / Attribution
 
 Credit each author via the project URL above when distributing the pack. Recheck licenses before a public store upload if a project is All Rights Reserved or requires explicit permission.
@@ -1994,6 +2371,31 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Drippy Loading Screen | https://modrinth.com/mod/drippy-loading-screen |
 | Default Options | https://modrinth.com/mod/default-options |
 | Too Fast | https://modrinth.com/mod/too-fast |
+| Amendments | https://modrinth.com/mod/amendments |
+| SuperMartijn642's Core Lib | https://modrinth.com/mod/supermartijn642s-core-lib |
+| SuperMartijn642's Config Lib | https://modrinth.com/mod/supermartijn642s-config-lib |
+| Trash Cans | https://modrinth.com/mod/trash-cans |
+| Jupiter | https://www.curseforge.com/minecraft/mc-mods/jupiter |
+| Uranus | https://www.curseforge.com/minecraft/mc-mods/uranus |
+| IceAndFire Community Edition | https://www.curseforge.com/minecraft/mc-mods/iceandfire-ce |
+| [TaCZ] Timeless and Classics Zero | https://modrinth.com/mod/timeless-and-classics-zero |
+| LesRaisins Tactical Equipements | https://modrinth.com/mod/lr-tactical |
+| LesRaisins Append Pack | https://modrinth.com/mod/lesraisins-weapon |
+| Gucci & Vuitton Attachments | https://modrinth.com/mod/tacz-gucci-vuitton-attachments |
+| Daffa's Arsenal | https://modrinth.com/mod/daffasarsenal |
+| Iceberg | https://modrinth.com/mod/iceberg |
+| Prism | https://modrinth.com/mod/prism-lib |
+| Legendary Tooltips | https://modrinth.com/mod/legendary-tooltips |
+| Equipment Compare | https://modrinth.com/mod/equipment-compare |
+| Fzzy Config | https://modrinth.com/mod/fzzy-config |
+| Simply Tooltips | https://modrinth.com/mod/simply-tooltips |
+| Simply Swords | https://modrinth.com/mod/simply-swords |
+| Simply More | https://modrinth.com/mod/simplymore |
+| playerAnimator | https://modrinth.com/mod/playeranimator |
+| Better Combat | https://modrinth.com/mod/better-combat |
+| Ice and Fire Dragons X Better Combat | https://modrinth.com/mod/ice-and-fire-dragons-x-better-combat |
+| Alex's Caves Better Combat | https://modrinth.com/mod/alexs-caves-better-combat |
+| Ars Elemental | https://www.curseforge.com/minecraft/mc-mods/ars-elemental |
 
 ## Future / Deferred Mods
 
@@ -2004,7 +2406,7 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Better Beds Reforged | Tiny FPS; last file 1.0.0 (2023) | Want beds later |
 | Iris & Oculus Flywheel Compat | Colorwheel is the Create + Oculus path and is incompatible with this jar | Do not add |
 | Connectivity | Packet/timeout fixer; Cupboard already in | Create/AE2/Mekanism/TACZ multiplayer packet issues |
-| Particle Core | Needs Fzzy Config; Kotlin is now in. Can hide gun/spell FX | Only with a whitelist config |
+| Particle Core | Fzzy Config is now in for Simply Swords. Can hide gun/spell FX | Only with a whitelist config that does not strip TACZ / Ars particles |
 | Create: Nowheel | Create + Entity Culling companion | Contraptions go invisible |
 | Fast Item Frames | Needs Forge Config API Port; no Forge 1.20.1 file | Fabric-only FCAP or a native Forge FIF build |
 | Expanded Ecosphere | Feature Order Cycle with RU + BWG | Drop RU/BWG first |
