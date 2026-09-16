@@ -29,9 +29,9 @@ def write_github_output(values: dict[str, str]) -> None:
             handle.write(f"{key}={value}\n")
 
 
-def fetch_project(project: str, token: str) -> dict[str, object] | None:
+def fetch_json(url: str, token: str) -> object | None:
     request = urllib.request.Request(
-        f"https://api.modrinth.com/v2/project/{urllib.parse.quote(project, safe='')}",
+        url,
         headers={
             "User-Agent": USER_AGENT,
             "Authorization": token,
@@ -43,26 +43,58 @@ def fetch_project(project: str, token: str) -> dict[str, object] | None:
     except urllib.error.HTTPError as exc:
         if exc.code in {401, 403, 404}:
             return None
-        raise SystemExit(f"Modrinth project lookup failed: HTTP {exc.code}") from exc
+        raise SystemExit(f"Modrinth lookup failed: HTTP {exc.code} for {url}") from exc
     except urllib.error.URLError as exc:
-        raise SystemExit(f"Modrinth project lookup failed: {exc}") from exc
+        raise SystemExit(f"Modrinth lookup failed: {exc}") from exc
+
+
+def fetch_project(project: str, token: str) -> dict[str, object] | None:
+    data = fetch_json(
+        f"https://api.modrinth.com/v2/project/{urllib.parse.quote(project, safe='')}",
+        token,
+    )
+    return data if isinstance(data, dict) else None
+
+
+def fetch_owned_project_id(slug: str, token: str) -> str | None:
+    user = fetch_json("https://api.modrinth.com/v2/user", token)
+    if not isinstance(user, dict) or not user.get("id"):
+        return None
+    projects = fetch_json(
+        f"https://api.modrinth.com/v2/user/{urllib.parse.quote(str(user['id']), safe='')}/projects",
+        token,
+    )
+    if not isinstance(projects, list):
+        return None
+    needle = slug.strip().lower()
+    for project in projects:
+        if not isinstance(project, dict):
+            continue
+        if str(project.get("slug") or "").lower() == needle:
+            resolved = str(project.get("id") or "")
+            if ID_RE.fullmatch(resolved):
+                return resolved
+    return None
 
 
 def resolve(project: str, token: str) -> tuple[str | None, str]:
     if ID_RE.fullmatch(project):
         return project, "already an id"
     data = fetch_project(project, token)
-    if not data:
-        return (
-            None,
-            "could not resolve Modrinth slug to an id (listing unpublished or "
-            "token missing PROJECT_READ). Set MODRINTH_PROJECT_ID to the "
-            "8-character id from the Modrinth dashboard, not the slug",
-        )
-    resolved = str(data.get("id") or "")
-    if not ID_RE.fullmatch(resolved):
+    if data:
+        resolved = str(data.get("id") or "")
+        if ID_RE.fullmatch(resolved):
+            return resolved, "resolved from slug"
         return None, "Modrinth API did not return an 8-character project id"
-    return resolved, "resolved from slug"
+    owned = fetch_owned_project_id(project, token)
+    if owned:
+        return owned, "resolved from owned project list"
+    return (
+        None,
+        "could not resolve Modrinth slug to an id (listing unpublished or "
+        "token missing PROJECT_READ). Set MODRINTH_PROJECT_ID to the "
+        "8-character id from the Modrinth dashboard, not the slug",
+    )
 
 
 def main() -> None:
