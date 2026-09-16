@@ -29,9 +29,11 @@ Prefer the `minecraft-modding` skill (research and approval), then `add-mod` (pa
 
    `PreLaunchCommand="$INST_JAVA -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml"`
 
-5. Launch. The installer syncs the instance to the current pack. If serve is down, pre-launch fails.
+5. JVM args live in `pack/user_jvm_args.txt` (`-XX:+UseZGC` for Distant Horizons on Java 17). `python scripts/update_prism.py` writes those flags into the instance. If you are not using that script, Instance settings → Java → enable **Custom JVM arguments** and paste the same flags. Do not add `-XX:+ZGenerational` (Java 21+). Memory (`-Xmx`) stays in Prism's Memory tab.
 
-`python scripts/release.py` also runs `python scripts/update_prism.py` after GitHub (packwiz serve on a free port, then installer `-g`). Use `--skip-prism` to opt out. Set `PRISM_INSTANCE_DIR` in `.env` if discovery cannot find the instance. The Prism instance is local only. Do not commit it.
+6. Launch. The installer syncs the instance to the current pack. If serve is down, pre-launch fails.
+
+`python scripts/release.py` also runs `python scripts/update_prism.py` after GitHub (packwiz serve on a free port, then installer `-g`, then pack JVM args). Use `--skip-prism` to opt out. Set `PRISM_INSTANCE_DIR` in `.env` if discovery cannot find the instance. The Prism instance is local only. Do not commit it.
 
 ## Release
 
@@ -47,7 +49,7 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
    python scripts/release.py vX.Y.Z --channel alpha
    ```
 
-   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. Default `--channel alpha` is a GitHub prerelease; GitHub Actions then uploads CurseForge/Modrinth as alpha from the tag. `--channel release` is GitHub Latest plus store release. `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release from that changelog, then updates the live instance and syncs local Prism.
+   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. Default `--channel alpha` is a GitHub prerelease; after Wings, GitHub Actions uploads CurseForge/Modrinth as alpha (client pack + server-mods zip). `--channel release` is GitHub Latest plus store release. `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release, updates the live instance, publishes the stores, then syncs local Prism.
 
 Secrets (gitignored `.env` at the repo root; never commit):
 
