@@ -185,41 +185,73 @@ def replace_github_release_asset(
     return github_download_url(owner=owner, repo=repo, tag=tag, filename=path.name)
 
 
+def curseforge_version_types(token: str) -> dict[int, str]:
+    payload = _request(
+        f"{CURSEFORGE_UPLOAD}/game/version-types",
+        headers={"X-Api-Token": token, "User-Agent": USER_AGENT, "Accept": "application/json"},
+    )
+    if not isinstance(payload, list):
+        raise SystemExit("CurseForge game version types response was not a list")
+    types: dict[int, str] = {}
+    for item in payload:
+        if not isinstance(item, dict) or "id" not in item:
+            continue
+        types[int(item["id"])] = str(item.get("name") or "")
+    if not types:
+        raise SystemExit("CurseForge returned no game version types")
+    return types
+
+
 def curseforge_game_version_ids(
     token: str,
     minecraft: str,
     loader: str,
 ) -> list[int]:
+    types = curseforge_version_types(token)
     payload = _request(
         f"{CURSEFORGE_UPLOAD}/game/versions",
         headers={"X-Api-Token": token, "User-Agent": USER_AGENT, "Accept": "application/json"},
     )
     if not isinstance(payload, list):
         raise SystemExit("CurseForge game versions response was not a list")
+    family = ".".join(minecraft.split(".")[:2])
     slug = minecraft.replace(".", "-")
-    minecraft_ids: list[int] = []
+    minecraft_hits: list[tuple[int, str]] = []
     loader_ids: list[int] = []
     environment_ids: list[int] = []
     for item in payload:
         if not isinstance(item, dict) or "id" not in item:
             continue
-        if int(item.get("gameVersionTypeID") or 0) in {0, 1}:
+        type_id = int(item.get("gameVersionTypeID") or 0)
+        type_name = types.get(type_id, "")
+        if type_id not in types:
             continue
         version_id = int(item["id"])
         name = str(item.get("name") or "")
         item_slug = str(item.get("slug") or "")
         if name == minecraft and (not item_slug or item_slug in {slug, minecraft}):
-            minecraft_ids.append(version_id)
+            minecraft_hits.append((version_id, type_name))
         elif name.lower() == loader.lower():
             loader_ids.append(version_id)
         elif name in {"Client", "Server"}:
             environment_ids.append(version_id)
-    minecraft_ids = list(dict.fromkeys(minecraft_ids))
+
+    def minecraft_rank(hit: tuple[int, str]) -> tuple[int, int, int]:
+        type_name = hit[1].lower()
+        return (
+            int(type_name.startswith("minecraft")),
+            int(family in type_name),
+            len(type_name),
+        )
+
+    minecraft_hits.sort(key=minecraft_rank, reverse=True)
+    minecraft_ids = [minecraft_hits[0][0]] if minecraft_hits else []
     loader_ids = list(dict.fromkeys(loader_ids))
     environment_ids = list(dict.fromkeys(environment_ids))
     if len(minecraft_ids) != 1:
         raise SystemExit(
-            f"CurseForge expected one {minecraft!r} game version, found {minecraft_ids}"
+            f"CurseForge expected one {minecraft!r} game version, found "
+            f"{[(hit[0], hit[1]) for hit in minecraft_hits]}"
         )
     if len(loader_ids) != 1:
         raise SystemExit(
@@ -230,7 +262,9 @@ def curseforge_game_version_ids(
             "CurseForge expected Client and Server environments, "
             f"found {environment_ids}"
         )
-    return minecraft_ids + loader_ids + environment_ids
+    chosen = minecraft_ids + loader_ids + environment_ids
+    print(f"curseforge gameVersions {chosen}")
+    return chosen
 
 
 def upload_curseforge(
