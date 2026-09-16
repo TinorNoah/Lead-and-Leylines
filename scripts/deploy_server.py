@@ -544,15 +544,16 @@ def origin_owner_repo() -> tuple[str, str]:
     return parts[0], parts[1]
 
 
-def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str:
+def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str | None:
     token = env("GH_TOKEN") or env("GITHUB_TOKEN")
-    if not token:
-        raise SystemExit(
-            "set GH_TOKEN in .env so Wings can pull the GitHub Release server-mods zip "
-            "(never commit the token)"
-        )
     if not zip_path.is_file():
         raise SystemExit(f"server mods zip missing: {zip_path}")
+    if not token:
+        print(
+            "GH_TOKEN unset: Wings will take the local server-mods zip "
+            "(set GH_TOKEN in .env to attach it to the GitHub Release)"
+        )
+        return None
     owner, repo = origin_owner_repo()
     tag = f"v{pack['pack_version']}"
     print(f"attaching {zip_path.name} to GitHub Release {tag}")
@@ -591,6 +592,19 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
             data = archive.read(info)
             print(f"  {name} ({len(data)} bytes)")
             wings.write_file(f"/mods/{name}", data, "application/java-archive")
+        configs = [
+            info
+            for info in archive.infolist()
+            if not info.is_dir()
+            and info.filename.replace("\\", "/").startswith("config/")
+        ]
+        if configs:
+            print(f"uploading {len(configs)} pack configs")
+            for info in configs:
+                name = info.filename.replace("\\", "/")
+                data = archive.read(info)
+                print(f"  {name} ({len(data)} bytes)")
+                wings.write_file(f"/{name}", data, "application/octet-stream")
 
 
 def write_overlay(wings: Wings) -> None:
@@ -812,8 +826,8 @@ def deploy_from_local(
         disk=disk,
         extra=(
             f"local deploy FORGE_VERSION={forge_env['FORGE_VERSION']}; "
-            "Wings pulls the GitHub Release server-mods zip "
-            "(CurseForge listing not required)"
+            "Wings pulls the GitHub Release server-mods zip when GH_TOKEN is set, "
+            "otherwise the local zip (CurseForge listing not required)"
         ),
     )
     if server:
