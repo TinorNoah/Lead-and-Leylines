@@ -48,7 +48,7 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | FTB Filter System | CurseForge file `6466153` (`20.0.1`) | both | Item filters for FTB Quests. Replaces Item Filters |
 | Jade | [modrinth.com/mod/jade](https://modrinth.com/mod/jade) (`xJQHCmWJ`) | both | Block/entity overlay. `both` so server info matches |
 | EMI | [modrinth.com/mod/emi](https://modrinth.com/mod/emi) `1.1.24` (`Axuu9I9R`) | both | Recipe browser. Not JEI |
-| Too Many Recipe Viewers | [modrinth.com/mod/tmrv](https://modrinth.com/mod/tmrv) (`PSC3dlCl`) | client | EMI layout helper. Incompatible with JEI |
+| Too Many Recipe Viewers | [modrinth.com/mod/tmrv](https://modrinth.com/mod/tmrv) (`PSC3dlCl`) | client | EMI layout helper. Provides a `jei` stub at 15.20.0.132. Incompatible with a real JEI jar |
 | Accelerated Decay | CurseForge file `4863307` (`3.0.1+mc1.20.1`) | both | Leaves/decay catch-up. Last Forge 1.20.1 file |
 | Create | [modrinth.com/mod/create](https://modrinth.com/mod/create) `6.0.8` (`8amzvn9x`) | both | Kinetic content. Bundles Flywheel |
 | Create Ultimine | [modrinth.com/mod/create-ultimine](https://modrinth.com/mod/create-ultimine) (`v1WWGazc`) | both | Ultimine + Create blocks. Needs Kotlin |
@@ -84,7 +84,8 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 
 | Pair | Result |
 |---|---|
-| EMI/TMRV + JEI | TMRV refuses JEI |
+| EMI/TMRV + JEI | TMRV refuses a real JEI jar |
+| TMRV JEI stub + Polymorph 0.49.11+ | Forge treats TMRV's `jei` 15.20.0.132 as too old for Polymorph's optional `[15.57.0.207,)`. Keep Polymorph at 0.49.10. |
 | Colorwheel + Iris/Oculus Flywheel Compat | Colorwheel lists incompat |
 | FTB Chunks minimap + Xaero minimap | Two HUD maps. Pack disables FTB minimap |
 | FTB Open Map (M) + Xaero World Map (M) | Both fire. Unbind FTB Open Map |

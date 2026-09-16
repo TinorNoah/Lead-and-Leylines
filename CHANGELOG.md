@@ -17,6 +17,16 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.5] - 2026-09-16
+
+### Changed
+
+- Distant Horizons uses ZGC (`user_jvm_args.txt`) so far terrain does not hitch on the default G1 collector.
+
+### Fixed
+
+- The overlapping-recipe picker no longer crashes on launch with EMI.
+
 ## [0.0.4] - 2026-09-16
 
 ### Added

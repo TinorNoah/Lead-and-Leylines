@@ -11,6 +11,7 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Pack display name | `pack/pack.toml` `name` (Lead and Leylines) |
 | Pack version | `pack/pack.toml` `version` (must match git tag `vX.Y.Z` without the `v`) |
 | Source of truth | `pack/mods/*.pw.toml` + `pack/index.toml` |
+| Java 17 JVM flags | `pack/user_jvm_args.txt` (`-XX:+UseZGC`). `scripts/update_prism.py` writes them into Prism `instance.cfg`. |
 | Live manifest | `docs/mods/manifest.md` |
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |

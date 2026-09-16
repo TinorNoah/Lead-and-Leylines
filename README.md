@@ -12,20 +12,20 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.0.4 |
+| Pack version | 0.0.5 |
 | Minecraft | 1.20.1 |
 | Mod loader | Forge 47.4.23 |
-| Java | 17 |
+| Java | 17 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
 | Packwiz format | packwiz:1.1.0 |
 | Mods | Content, QoL, and worldgen density fixes (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
-A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.4`).
+A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.5`).
 
 ## Play
 
 The pack is in early development. The current cut is performance mods, Oculus (shader loader), FTB/EMI/Jade/Xaero QoL, and Create. Shader packs come later. CurseForge and Modrinth listings are not public yet.
 
-**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. After store listings exist, install from [Modrinth](https://modrinth.com/modpack/lead-and-leylines) or CurseForge instead.
+**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder). After store listings exist, install from [Modrinth](https://modrinth.com/modpack/lead-and-leylines) or CurseForge instead.
 
 Prism developers: [CONTRIBUTING.md](CONTRIBUTING.md).
 

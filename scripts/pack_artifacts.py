@@ -153,7 +153,9 @@ def atlauncher_instructions(paths: dict[str, Path]) -> str:
         f"     {mrpack_path}\n"
         f"     {zip_path}\n"
         "  2. Instances tab -> Import -> Browse -> select that file -> Import.\n"
-        "  3. Name the instance and click Install, then Play.\n"
+        "  3. Name the instance and click Install.\n"
+        "  4. Set that instance's Java arguments to -XX:+UseZGC (pack/user_jvm_args.txt).\n"
+        "  5. Play.\n"
         "  CurseForge/Modrinth search will not find this pack until those listings are public."
     )
 
