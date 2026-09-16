@@ -23,6 +23,10 @@ on:
           - beta
           - release
         default: alpha
+      skip_curseforge:
+        description: Skip CurseForge (retry after a successful CurseForge upload)
+        type: boolean
+        default: false
 
 concurrency:
   group: publish-stores-${{ inputs.tag || github.ref_name }}
@@ -158,7 +162,15 @@ jobs:
           fi
           exit "$missing"
 
+      - name: Resolve Modrinth project id
+        id: modrinth
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+          MODRINTH_PROJECT_ID: ${{ secrets.MODRINTH_PROJECT_ID }}
+        run: python scripts/resolve_modrinth_project.py --github-output
+
       - name: Upload to CurseForge
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.skip_curseforge != true }}
         uses: Kira-NT/mc-publish@v3.3.1
         with:
           curseforge-id: ${{ secrets.CURSEFORGE_PROJECT_ID }}
@@ -175,7 +187,7 @@ jobs:
       - name: Upload to Modrinth
         uses: Kira-NT/mc-publish@v3.3.1
         with:
-          modrinth-id: ${{ secrets.MODRINTH_PROJECT_ID }}
+          modrinth-id: ${{ steps.modrinth.outputs.id }}
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
           modrinth-files: artifacts/*.mrpack
           modrinth-featured: false
