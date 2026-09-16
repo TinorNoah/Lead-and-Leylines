@@ -8,7 +8,7 @@ The panel URL and Wings node FQDN live in gitignored `.env` (`PANEL_URL`, `PANEL
 
 Copy [`.env.example`](../.env.example) to `.env` at the repo root. Set `PANEL_API_KEY` to an Application API key (`papp_`). Do not commit `.env`.
 
-Until a CurseForge file exists, the default path is **local**: export the current `pack/` tree, switch the test server to the **Forge Minecraft** egg, install Forge from `pack.toml`, and upload `side` `server`/`both` jars through Wings. Do not fall back to a GitHub raw `pack.toml` URL.
+Until a CurseForge file exists, the default path is **GitHub + Forge Minecraft**: export the current `pack/` tree, attach `Lead-and-Leylines-<version>-server-mods.zip` to the matching GitHub Release (`vX.Y.Z`), switch the test server to the **Forge Minecraft** egg, install Forge from `pack.toml`, and have Wings **pull** that public Release asset. Do not fall back to a GitHub raw `pack.toml` URL.
 
 ```text
 python scripts/release.py vX.Y.Z --changelog notes.md
@@ -22,7 +22,7 @@ python scripts/deploy_server.py --curseforge --reinstall --wait 600
 
 `python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release + store uploads from the changelog, then `--from-local` on this test server. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
 
-`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export and then pushes the server mods zip. Reinstalling the Forge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/Forge versions are unchanged.
+`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release for this pack version (`GH_TOKEN` required), and has Wings pull it. Reinstalling the Forge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/Forge versions are unchanged.
 
 The script owns the server as `PANEL_OWNER_USERNAME` and uses a free allocation on that node. Java image is chosen from the egg from `pack/pack.toml` Minecraft version.
 
@@ -40,7 +40,7 @@ python scripts/deploy_server.py --curseforge --reinstall --wait 600
 
 ## Eggs
 
-**Local testing (default):** Forge Minecraft already on the panel (`MC_VERSION` and `FORGE_VERSION` from `pack.toml`; `FORGE_VERSION` is `{minecraft}-{forge}`).
+**Local testing (default):** Forge Minecraft already on the panel (`MC_VERSION` and `FORGE_VERSION` from `pack.toml`; `FORGE_VERSION` is `{minecraft}-{forge}`). Mods come from the GitHub Release server-mods zip, not a Wings push of the zip from this machine.
 
 **Store listing:** CurseForge Generic egg, imported via `EGG_IMPORT_URL` in `.env`.
 

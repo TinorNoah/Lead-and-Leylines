@@ -1,6 +1,6 @@
 # Lead and Leylines — mod manifest
 
-Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md). Config notes: [configs.md](configs.md).
+Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md).
 
 ## Installed
 
@@ -164,7 +164,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults
+- Config changes: `pack/config/crash_assistant/config.toml` — Request Help → `https://discord.gg/Ck7TP4btRy`; pack name / Discord placeholders; piracy notice on ([configs.md](configs.md))
 - World-data / removability: client; clean to remove
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
@@ -464,7 +464,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: Architectury API
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults
+- Config changes: `pack/defaultconfigs/ftbessentials-server.snbt` — `/rtp` `max_distance` 2000, `max_tries` 3, dimension blacklist End/Nether/Maelstrom. Stops the server-thread chunk search from tripping the 60s watchdog on ungenerated Tectonic terrain.
 - World-data / removability: homes/warps are world data
 - License / attribution: All Rights Reserved; store pack distribution
 - Date added: 2026-09-13
@@ -854,7 +854,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: YUNG’s API
 - Optional dependencies: Create (present; optional fortress pieces)
 - Recommended companions: none
-- Config changes: none — defaults. New world for fortress placement.
+- Config changes: none on YUNG’s toml. `/locate` reports `~` for Y; in Amplified Nether the fortress is often far above or below the player. New world.
 - World-data / removability: generated structures stay in chunks
 - License / attribution: LGPL-3.0-only; see Modrinth project page
 - Date added: 2026-09-16
@@ -1049,7 +1049,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults
+- Config changes: `pack/config/terrablender.toml` — `overworld_region_size` 6, `nether_region_size` 4 ([configs.md](configs.md))
 - World-data / removability: do not remove while RU or BWG is installed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1196,12 +1196,27 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - packwiz `side`: both
 - Category: worldgen (terrain)
 - Why chosen: Big continents and mountains. Not Lithosphere. Forge jar already blends with Terralith (not Terratonic).
-- Required dependencies: none
+- Required dependencies: Lithostitched 1.4.11+ (Modrinth version metadata lists none; the jar still fails without it)
 - Optional dependencies: none
 - Recommended companions: Terralith (shipped)
-- Config changes: after first launch, Continents Scale `0.11` and Ocean Offset `-0.92` ([configs.md](configs.md))
+- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes) ([configs.md](configs.md))
 - World-data / removability: changes Overworld shape; old chunks stay old
 - License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Lithostitched
+
+- Pinned file / version: `lithostitched-forge-1.20.1-1.4.11.jar` (Modrinth version `srPoHKt8`)
+- Download source: https://modrinth.com/mod/lithostitched/version/srPoHKt8
+- packwiz `side`: both
+- Category: library (worldgen)
+- Why chosen: Hard requirement of Tectonic 3.0.17 (`lithostitched` 1.4.11 or above). Missing it is a boot error, not optional.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none
+- World-data / removability: library; remove only with Tectonic
+- License / attribution: MIT; https://modrinth.com/mod/lithostitched
 - Date added: 2026-09-16
 
 ### YUNG's Bridges
@@ -1258,8 +1273,8 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Why chosen: Structure Control for ruined portals, villages, strongholds, custom ids.
 - Required dependencies: YACL
 - Optional dependencies: none
-- Recommended companions: Sparse Structures (shipped)
-- Config changes: none — defaults until density needs a pass
+- Recommended companions: Sparse Structures (shipped at spread 1)
+- Config changes: `pack/config/structurify.json` — global spacing modifier **off** so it does not stack with Sparse
 - World-data / removability: clean to remove; already-generated structures stay
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1270,28 +1285,13 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Download source: https://modrinth.com/mod/sparsestructures/version/oqEnX6AN
 - packwiz `side`: both
 - Category: worldgen (structure spacing)
-- Why chosen: Global spacing so WDA / Epic / vanilla are not stacked on every chunk.
-- Required dependencies: none
-- Optional dependencies: none
-- Recommended companions: WDA sparse compat packs (shipped)
-- Config changes: none — defaults
-- World-data / removability: clean to remove
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-
-### StructureOverlapless
-
-- Pinned file / version: `overlapless-1.20.1-1.2.0.jar` (CurseForge file `7722757`, project `1451998`)
-- Download source: https://www.curseforge.com/minecraft/mc-mods/structureoverlapless/files/7722757
-- packwiz `side`: both
-- Category: worldgen (overlap)
-- Why chosen: First-come skip when structures collide.
+- Why chosen: Unique salts per structure set (`idBasedSalt`). Spread factor is **1** (vanilla density) so locates match placed structures.
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults
+- Config changes: `pack/config/sparsestructures.json5` `spreadFactor` 1 ([configs.md](configs.md))
 - World-data / removability: clean to remove
-- License / attribution: see CurseForge project page
+- License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
 ### Epic Structures: Villages
@@ -1360,10 +1360,10 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Download source: https://modrinth.com/mod/when-dungeons-arise/version/6hQpx5Tc
 - packwiz `side`: both
 - Category: worldgen (dungeons)
-- Why chosen: Extra overworld dungeons. Sparse compat shipped so they stay a bit rare.
+- Why chosen: Extra overworld dungeons.
 - Required dependencies: none
 - Optional dependencies: none
-- Recommended companions: Seven Seas, sparse compat (both shipped)
+- Recommended companions: Seven Seas (shipped)
 - Config changes: none — defaults. New world.
 - World-data / removability: generated structures stay in chunks
 - License / attribution: see Modrinth project page
@@ -1384,36 +1384,6 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
-### Dungeons Arise Sparse Structures compat
-
-- Pinned file / version: `wdasscompat.jar` (Modrinth version `bI23vAlR`)
-- Download source: https://modrinth.com/mod/dungeons-arise-sparse-structures-compat/version/bI23vAlR
-- packwiz `side`: both
-- Category: compatibility
-- Why chosen: Keeps WDA spaced with Sparse Structures.
-- Required dependencies: When Dungeons Arise, Sparse Structures (present)
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: none — defaults
-- World-data / removability: do not remove while WDA + Sparse Structures are installed
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-
-### Dungeons Arise Seven Seas Sparse Structures compat
-
-- Pinned file / version: `wdasspiratecompat.jar` (Modrinth version `BzLuY8LF`)
-- Download source: https://modrinth.com/mod/dungeons-arise-seven-seas-sparse-structures-compat/version/BzLuY8LF
-- packwiz `side`: both
-- Category: compatibility
-- Why chosen: Same spacing for Seven Seas.
-- Required dependencies: Seven Seas, Sparse Structures (present)
-- Optional dependencies: none
-- Recommended companions: none
-- Config changes: none — defaults
-- World-data / removability: do not remove while Seven Seas + Sparse Structures are installed
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
-
 ### Create: Sky Village
 
 - Pinned file / version: `create_sky_village-0.0.38 Forge 1.20.1.jar` (Modrinth version `630wzTP1`)
@@ -1424,7 +1394,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: Create (present)
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — rarity via Sparse/Structurify defaults
+- Config changes: `pack/config/create_sky_village-common.toml` — spacing 32 / separation 16, height offset 64 ([configs.md](configs.md))
 - World-data / removability: generated structures stay in chunks
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1501,6 +1471,396 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Recommended companions: none
 - Config changes: none — run a radius on purpose ([configs.md](configs.md))
 - World-data / removability: already-written chunks stay; the mod itself is clean to remove
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-16
+
+### Distant Horizons
+
+- Pinned file / version: `DistantHorizons-3.2.0-b-1.20.1-fabric-forge.jar` (Modrinth version `FWGxbEM3`)
+- Download source: https://modrinth.com/mod/distanthorizons/version/FWGxbEM3
+- packwiz `side`: client
+- Category: rendering (LOD)
+- Why chosen: Optional far terrain. **Beta.** Dedicated server must not run it.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: Oculus 1.8.0 (already claims DH 2.2+ shader support)
+- Config changes: `pack/config/DistantHorizons.toml` — renderer off, distant gen off, floor quality if enabled ([configs.md](configs.md))
+- World-data / removability: LOD databases under the instance; clean to remove the mod. Existing LODs stay on disk until deleted.
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Balm
+
+- Pinned file / version: `balm-forge-1.20.1-7.3.43.jar` (Modrinth version `1VlYVa3k`)
+- Download source: https://modrinth.com/mod/balm/version/1VlYVa3k
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Waystones, Crafting Tweaks, NetherPortalFix, TrashSlot, Default Options.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while those mods are in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Moonlight Lib
+
+- Pinned file / version: `moonlight-1.20-2.16.35-forge.jar` (Modrinth version `W0ZWjZib`)
+- Download source: https://modrinth.com/mod/moonlight/version/W0ZWjZib
+- packwiz `side`: both
+- Category: library
+- Why chosen: Required by Supplementaries and MmmMmmMmmMmm.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while those mods are in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Patchouli
+
+- Pinned file / version: `Patchouli-1.20.1-85-FORGE.jar` (Modrinth version `94dtOLgZ`)
+- Download source: https://modrinth.com/mod/patchouli/version/94dtOLgZ
+- packwiz `side`: both
+- Category: library (books)
+- Why chosen: Required by Ars Nouveau.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while Ars is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### GuideME
+
+- Pinned file / version: `guideme-20.1.15.jar` (Modrinth version `i7Tp1AHw`)
+- Download source: https://modrinth.com/mod/guideme/version/i7Tp1AHw
+- packwiz `side`: both
+- Category: library (guides)
+- Why chosen: Required by AE2 15.4.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: library; keep while AE2 is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Searchables
+
+- Pinned file / version: `Searchables-forge-1.20.1-1.0.3.jar` (Modrinth version `PM9yAW1G`)
+- Download source: https://modrinth.com/mod/searchables/version/PM9yAW1G
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by Controlling.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while Controlling is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Konkrete
+
+- Pinned file / version: `konkrete_forge_1.8.0_MC_1.20-1.20.1.jar` (Modrinth version `skYziQQL`)
+- Download source: https://modrinth.com/mod/konkrete/version/skYziQQL
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by FancyMenu and Drippy.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while FancyMenu/Drippy are in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Melody
+
+- Pinned file / version: `melody_forge_1.0.3_MC_1.20.1-1.20.4.jar` (Modrinth version `lJlW5r8R`)
+- Download source: https://modrinth.com/mod/melody/version/lJlW5r8R
+- packwiz `side`: client
+- Category: library
+- Why chosen: Required by FancyMenu 3.9.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client library; keep while FancyMenu is in
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Ars Nouveau
+
+- Pinned file / version: `ars_nouveau-1.20.1-4.12.7-all.jar` (Modrinth version `Hw2aD01e`)
+- Download source: https://modrinth.com/mod/ars-nouveau/version/Hw2aD01e
+- packwiz `side`: both
+- Category: magic
+- Why chosen: Spellcraft. Planned magic line. EMI plugin in-jar.
+- Required dependencies: Patchouli, Geckolib (already in)
+- Optional dependencies: Curios (already in)
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: blocks, glyphs, and Archwood stay in the save if removed. New chunks for wild Archwood.
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Applied Energistics 2
+
+- Pinned file / version: `appliedenergistics2-forge-15.4.10.jar` (Modrinth version `7KVs6HMQ`)
+- Download source: https://modrinth.com/mod/ae2/version/7KVs6HMQ
+- packwiz `side`: both
+- Category: storage (network)
+- Why chosen: Item/fluid network. Native EMI in this file — no JEI, no extra EMI addon.
+- Required dependencies: GuideME
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: cables, drives, and meteors stay in the save if removed. New chunks for meteorites.
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### The Twilight Forest
+
+- Pinned file / version: `twilightforest-1.20.1-4.3.2508-universal.jar` (CurseForge file `5468648`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest/files/5468648
+- packwiz `side`: both
+- Category: dimension
+- Why chosen: Adventure dimension. Official CurseForge jar, not the Modrinth unofficial port.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: the TF dimension and portal blocks stay if removed. New overworld chunks for portals.
+- License / attribution: see CurseForge project page
+- Date added: 2026-09-16
+
+### Supplementaries
+
+- Pinned file / version: `supplementaries-1.20-3.1.43-forge.jar` (Modrinth version `S0TIJ1hU`)
+- Download source: https://modrinth.com/mod/supplementaries/version/S0TIJ1hU
+- packwiz `side`: both
+- Category: vanilla-plus
+- Why chosen: Extra blocks/items. EMI plugin in-jar.
+- Required dependencies: Moonlight Lib
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: blocks and items stay in the save if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Waystones
+
+- Pinned file / version: `waystones-forge-1.20.1-14.1.21.jar` (Modrinth version `Y0IgdaoP`)
+- Download source: https://modrinth.com/mod/waystones/version/Y0IgdaoP
+- packwiz `side`: both
+- Category: utility (warps)
+- Why chosen: Public warps. Homes stay FTB Essentials.
+- Required dependencies: Balm
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: waystone blocks stay in the save if removed. New village chunks may place waystones.
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Lootr
+
+- Pinned file / version: `lootr-forge-1.20-0.7.35.94.jar` (Modrinth version `mWTXC1ZX`)
+- Download source: https://modrinth.com/mod/lootr/version/mWTXC1ZX
+- packwiz `side`: both
+- Category: loot
+- Why chosen: Per-player dungeon loot. Does not replace Sophisticated Storage.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: converted loot chests stay as Lootr blocks if removed until converted back
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### MmmMmmMmmMmm
+
+- Pinned file / version: `dummmmmmy-1.20-2.0.12-forge.jar` (Modrinth version `c1HMqDvI`)
+- Download source: https://modrinth.com/mod/mmmmmmmmmmmm/version/c1HMqDvI
+- packwiz `side`: both
+- Category: combat (dummy)
+- Why chosen: Target dummy for testing damage.
+- Required dependencies: Moonlight Lib
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: placed dummies stay in the save if removed
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Polymorph
+
+- Pinned file / version: `polymorph-forge-0.49.11+1.20.1.jar` (Modrinth version `5lNATnbO`)
+- Download source: https://modrinth.com/mod/polymorph/version/5lNATnbO
+- packwiz `side`: both
+- Category: recipes
+- Why chosen: Overlapping recipes (Farmer's Delight / Create / AE2 / Ars). EMI plugin in-jar.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Crafting Tweaks
+
+- Pinned file / version: `craftingtweaks-forge-1.20.1-18.2.9.jar` (Modrinth version `KOqT9kSZ`)
+- Download source: https://modrinth.com/mod/crafting-tweaks/version/KOqT9kSZ
+- packwiz `side`: both
+- Category: utility (crafting UI)
+- Why chosen: Rotate/balance/clear crafting grids.
+- Required dependencies: Balm
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### NetherPortalFix
+
+- Pinned file / version: `netherportalfix-forge-1.20-13.0.1.jar` (Modrinth version `cWPAnu7u`)
+- Download source: https://modrinth.com/mod/netherportalfix/version/cWPAnu7u
+- packwiz `side`: both
+- Category: utility (portals)
+- Why chosen: Return-portal linking. `both` so Prism singleplayer matches the dedicated server (Modrinth marks the file server-only).
+- Required dependencies: Balm
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove; vanilla linking returns
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### TrashSlot
+
+- Pinned file / version: `trashslot-forge-1.20.1-15.1.5.jar` (Modrinth version `r0K8IYd7`)
+- Download source: https://modrinth.com/mod/trashslot/version/r0K8IYd7
+- packwiz `side`: both
+- Category: utility (inventory)
+- Why chosen: Inventory trash slot. Different from FTB `/trashcan`.
+- Required dependencies: Balm
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Controlling
+
+- Pinned file / version: `Controlling-forge-1.20.1-12.0.2.jar` (Modrinth version `LH6Bi6Am`)
+- Download source: https://modrinth.com/mod/controlling/version/LH6Bi6Am
+- packwiz `side`: client
+- Category: utility (controls)
+- Why chosen: Searchable keybind screen.
+- Required dependencies: Searchables
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Mouse Tweaks
+
+- Pinned file / version: `MouseTweaks-forge-mc1.20.1-2.25.1.jar` (Modrinth version `7JVXOe3K`)
+- Download source: https://modrinth.com/mod/mouse-tweaks/version/7JVXOe3K
+- packwiz `side`: client
+- Category: utility (inventory)
+- Why chosen: Drag-to-move stacks in inventories.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Better Advancements
+
+- Pinned file / version: `BetterAdvancements-Forge-1.20.1-0.6.0.73.jar` (Modrinth version `zKOCnRdK`)
+- Download source: https://modrinth.com/mod/better-advancements/version/zKOCnRdK
+- packwiz `side`: client
+- Category: utility (UI)
+- Why chosen: Readable advancement tree.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### FancyMenu
+
+- Pinned file / version: `fancymenu_forge_3.9.12_MC_1.20.1.jar` (Modrinth version `ucAaUjAE`)
+- Download source: https://modrinth.com/mod/fancymenu/version/ucAaUjAE
+- packwiz `side`: client
+- Category: menu framework
+- Why chosen: Required by Drippy. No custom title art yet.
+- Required dependencies: Konkrete, Melody
+- Optional dependencies: none
+- Recommended companions: Drippy Loading Screen
+- Config changes: none — no custom layout until one is chosen
+- World-data / removability: client; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Drippy Loading Screen
+
+- Pinned file / version: `drippyloadingscreen_forge_3.1.5_MC_1.20.1.jar` (Modrinth version `Nof419YS`)
+- Download source: https://modrinth.com/mod/drippy-loading-screen/version/Nof419YS
+- packwiz `side`: client
+- Category: loading overlay
+- Why chosen: Loading screen. Needs FancyMenu.
+- Required dependencies: FancyMenu, Konkrete
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Default Options
+
+- Pinned file / version: `defaultoptions-forge-1.20.1-18.0.5.jar` (Modrinth version `AVz3mvZZ`)
+- Download source: https://modrinth.com/mod/default-options/version/AVz3mvZZ
+- packwiz `side`: client
+- Category: utility (pack defaults)
+- Why chosen: Unbind FTB Chunks Open Map without shipping a full `options.txt`.
+- Required dependencies: Balm
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` ([configs.md](configs.md))
+- World-data / removability: client; removing it does not restore **M** on instances that already saved the unbound key
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-16
+
+### Too Fast
+
+- Pinned file / version: `toofast-1.20-0.4.3.5.jar` (Modrinth version `2pix3xrW`)
+- Download source: https://modrinth.com/mod/too-fast/version/2pix3xrW
+- packwiz `side`: server
+- Category: utility (movement checks)
+- Why chosen: Stops dedicated-server “moved too quickly” rubber-banding on Create trains and other fast travel. Noobanidus (same author as Lootr). Modrinth marks it server-only.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: mixin only; clean to remove. Vanilla speed checks return.
 - License / attribution: MIT; see Modrinth project page
 - Date added: 2026-09-16
 
@@ -1590,26 +1950,50 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Alex's Caves | https://modrinth.com/mod/alexs-caves |
 | Terralith | https://modrinth.com/mod/terralith |
 | Tectonic | https://modrinth.com/mod/tectonic |
+| Lithostitched | https://modrinth.com/mod/lithostitched |
 | YUNG's Bridges | https://modrinth.com/mod/yungs-bridges |
 | YUNG's Better Caves | https://modrinth.com/mod/yungs-better-caves |
 | YetAnotherConfigLib | https://modrinth.com/mod/yacl |
 | Structurify | https://modrinth.com/mod/structurify |
 | Sparse Structures | https://modrinth.com/mod/sparsestructures |
-| StructureOverlapless | https://www.curseforge.com/minecraft/mc-mods/structureoverlapless |
 | Epic Structures: Villages | https://modrinth.com/mod/epic-structures-villages |
 | Epic Structures: Dungeons | https://modrinth.com/mod/epic-structures-dungeons |
 | Epic Structures: Witch Huts | https://modrinth.com/mod/epic-structures-witch-huts |
 | Epic Structures: Jungle Temples | https://modrinth.com/mod/epic-structures-jungle-temples |
 | When Dungeons Arise | https://modrinth.com/mod/when-dungeons-arise |
 | When Dungeons Arise: Seven Seas | https://modrinth.com/mod/when-dungeons-arise-seven-seas |
-| Dungeons Arise Sparse Structures compat | https://modrinth.com/mod/dungeons-arise-sparse-structures-compat |
-| Dungeons Arise Seven Seas Sparse Structures compat | https://modrinth.com/mod/dungeons-arise-seven-seas-sparse-structures-compat |
 | Create: Sky Village | https://modrinth.com/mod/create-sky-village |
 | Streams Reflowing | https://modrinth.com/mod/streams-reflowing |
 | Countered's Terrain Slabs | https://modrinth.com/mod/countereds-terrain-slabs |
 | Nature's Compass | https://modrinth.com/mod/natures-compass |
 | Explorer's Compass | https://modrinth.com/mod/explorers-compass |
 | Chunky | https://modrinth.com/mod/chunky |
+| Distant Horizons | https://modrinth.com/mod/distanthorizons |
+| Balm | https://modrinth.com/mod/balm |
+| Moonlight Lib | https://modrinth.com/mod/moonlight |
+| Patchouli | https://modrinth.com/mod/patchouli |
+| GuideME | https://modrinth.com/mod/guideme |
+| Searchables | https://modrinth.com/mod/searchables |
+| Konkrete | https://modrinth.com/mod/konkrete |
+| Melody | https://modrinth.com/mod/melody |
+| Ars Nouveau | https://modrinth.com/mod/ars-nouveau |
+| Applied Energistics 2 | https://modrinth.com/mod/ae2 |
+| The Twilight Forest | https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest |
+| Supplementaries | https://modrinth.com/mod/supplementaries |
+| Waystones | https://modrinth.com/mod/waystones |
+| Lootr | https://modrinth.com/mod/lootr |
+| MmmMmmMmmMmm | https://modrinth.com/mod/mmmmmmmmmmmm |
+| Polymorph | https://modrinth.com/mod/polymorph |
+| Crafting Tweaks | https://modrinth.com/mod/crafting-tweaks |
+| NetherPortalFix | https://modrinth.com/mod/netherportalfix |
+| TrashSlot | https://modrinth.com/mod/trashslot |
+| Controlling | https://modrinth.com/mod/controlling |
+| Mouse Tweaks | https://modrinth.com/mod/mouse-tweaks |
+| Better Advancements | https://modrinth.com/mod/better-advancements |
+| FancyMenu | https://modrinth.com/mod/fancymenu |
+| Drippy Loading Screen | https://modrinth.com/mod/drippy-loading-screen |
+| Default Options | https://modrinth.com/mod/default-options |
+| Too Fast | https://modrinth.com/mod/too-fast |
 
 ## Future / Deferred Mods
 
@@ -1631,7 +2015,7 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | C2ME / C2MEF / VMP / Krypton / Indium / More Culling / Debugify (asked slugs) | Fabric or unofficial/overlapping | See [performance.md](performance.md) Fabric video list |
 | Storage Drawers | Functional Storage is the drawer line | Do not add both |
 | Iron Chests | Sophisticated Storage is the chest-upgrade line | Do not add both |
-| Tom’s Simple Storage | Would be a second item network next to planned AE2 | After an AE2 decision, still skip unless we drop AE2 |
+| Tom’s Simple Storage | Would be a second item network next to AE2 | Do not add unless we drop AE2 |
 | Incendium | Incompatible with Amplified Nether | Do not add |
 | Infernal Expansion (original) | No 1.20.1 file | Stay on Infernal Expansion Redux |
 | Nether’s Delight (`nethers-delight`) | Unmaintained 2023; My Nether’s Delight is the 1.20.1 addon | Do not add both |
@@ -1648,5 +2032,8 @@ None. Do not bump Minecraft or Forge to accommodate a single mod without a separ
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
 | EMI QoL Tweaks | 2026-09-13 | CurseForge third-party API download is disabled (`packwiz-installer` cannot fetch file `8713840`). No Modrinth/GitHub file. | Only if the author enables API distribution or posts the same file on Modrinth |
+| StructureOverlapless | 2026-09-16 | Skips placement when a section is “occupied,” including by the same structure start. Dedicated logs skipped Sky Villages and WDA bandit towers at the `/locate` coords | Do not re-add unless a relocate-not-skip tool exists |
+| Dungeons Arise Sparse Structures compat | 2026-09-16 | Extra thinning on top of Sparse Structures made WDA unfindable | Do not re-add while Sparse spread is 1 |
+| Dungeons Arise Seven Seas Sparse Structures compat | 2026-09-16 | Same extra thinning for ocean WDA | Do not re-add while Sparse spread is 1 |
 
 

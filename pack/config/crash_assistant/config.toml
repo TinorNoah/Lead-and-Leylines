@@ -1,0 +1,24 @@
+# Pack: crash GUI Request Help opens the Lead and Leylines Discord.
+# NightConfig fills unspecified keys from Crash Assistant defaults on first launch.
+
+[general]
+	# Must start with https:// or www.
+	help_link = "https://discord.gg/Ck7TP4btRy"
+	formulation_type = "DISCORD"
+
+[text]
+	support_name = "Lead and Leylines Discord"
+	support_place = "#support"
+	modpack_name = "Lead and Leylines"
+
+[generated_message]
+	text_under_crashed = "Upload the logs with the button above, paste the message in Discord, and say what you were doing.\n"
+
+[modpack_modlist]
+	enabled = true
+	modpack_creators = ["Tinor_"]
+	auto_update = true
+
+[piracy]
+	# Recommended once help_link is set (ignored while help_link is CHANGE_ME).
+	enabled = true

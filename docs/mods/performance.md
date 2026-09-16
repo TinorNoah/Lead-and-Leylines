@@ -39,7 +39,7 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | BadOptimizations | [modrinth.com/mod/badoptimizations](https://modrinth.com/mod/badoptimizations) | client | CPU work that is not chunk meshing (toasts, sky, etc.). Complements Embeddium. |
 | Embeddium Extra | [modrinth.com/mod/rubidium-extra](https://modrinth.com/mod/rubidium-extra) (listed as Embeddium/Rubidium Extra) | client | Sodium Extra port: fog, particles, animation, leaf *settings*. One extras mod only. |
 | Oculus | [modrinth.com/mod/oculus](https://modrinth.com/mod/oculus) | client | Iris for Forge. Shaders are a pack feature. Pair with Embeddium `0.3.31` + Oculus `1.8.0` (latest 1.20.1 files at research). No separate dynamic-lights mod. |
-| Crash Assistant | [modrinth.com/mod/crash-assistant](https://modrinth.com/mod/crash-assistant) | client | Crash GUI and log analysis. Better default than Not Enough Crashes. Does not raise FPS. |
+| Crash Assistant | [modrinth.com/mod/crash-assistant](https://modrinth.com/mod/crash-assistant) | client | Crash GUI and log analysis. Request Help opens the pack Discord. Does not raise FPS. |
 | Radium | [modrinth.com/mod/radium](https://modrinth.com/mod/radium) (Reforged-Hub Lithium port) | both | Lithium for Forge: AI, block updates, ticking. Chosen instead of Canary and instead of CurseForge “Radium Reforged” as a second jar. |
 | Let Me Despawn | [modrinth.com/mod/lmd](https://modrinth.com/mod/lmd) | both | Despawn for mobs that picked up gear and would otherwise live forever. Real server stutter fix. |
 | AllTheLeaks | [curseforge.com/.../alltheleaks](https://www.curseforge.com/minecraft/mc-mods/alltheleaks) (CurseForge only) | both | Leak patches for vanilla and popular mods. Cheap insurance before the pack grows. |
@@ -163,7 +163,7 @@ Soft (later content, not this cut): ImmediatelyFast `hud_batching` vs fancy tool
 
 ## Configs worth documenting (only these)
 
-Do **not** hand-tune Embeddium, FerriteCore, FastWorkbench, FastFurnace, BadOptimizations, Crash Assistant, AllTheLeaks, Entity Culling, or Dynamic FPS unless a log names them.
+Do **not** hand-tune Embeddium, FerriteCore, FastWorkbench, FastFurnace, BadOptimizations, AllTheLeaks, Entity Culling, or Dynamic FPS unless a log names them. Crash Assistant Discord / pack-name keys are in [configs.md](configs.md).
 
 When the chosen mods are installed, ship notes (and config overrides only if defaults are wrong). Details: [configs.md](configs.md).
 

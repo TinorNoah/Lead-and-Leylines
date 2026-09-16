@@ -120,6 +120,69 @@ def upload_github_asset(
     print(f"github asset {path.name}")
 
 
+def github_release_by_tag(
+    *,
+    owner: str,
+    repo: str,
+    tag: str,
+    token: str,
+) -> dict[str, Any]:
+    payload = _request(
+        f"{GITHUB_API}/repos/{owner}/{repo}/releases/tags/{urllib.parse.quote(tag)}",
+        headers=github_headers(token),
+    )
+    if not isinstance(payload, dict) or not payload.get("id"):
+        raise SystemExit(f"GitHub has no release for tag {tag}")
+    return payload
+
+
+def delete_github_asset(
+    *,
+    owner: str,
+    repo: str,
+    asset_id: int,
+    token: str,
+) -> None:
+    _request(
+        f"{GITHUB_API}/repos/{owner}/{repo}/releases/assets/{asset_id}",
+        method="DELETE",
+        headers=github_headers(token),
+    )
+
+
+def github_download_url(*, owner: str, repo: str, tag: str, filename: str) -> str:
+    return (
+        f"https://github.com/{owner}/{repo}/releases/download/"
+        f"{urllib.parse.quote(tag)}/{urllib.parse.quote(filename)}"
+    )
+
+
+def replace_github_release_asset(
+    *,
+    owner: str,
+    repo: str,
+    tag: str,
+    path: Path,
+    token: str,
+) -> str:
+    release = github_release_by_tag(owner=owner, repo=repo, tag=tag, token=token)
+    release_id = int(release["id"])
+    for asset in release.get("assets") or []:
+        if not isinstance(asset, dict):
+            continue
+        if str(asset.get("name") or "") != path.name:
+            continue
+        delete_github_asset(
+            owner=owner, repo=repo, asset_id=int(asset["id"]), token=token
+        )
+        print(f"github replaced {path.name}")
+        break
+    upload_github_asset(
+        owner=owner, repo=repo, release_id=release_id, path=path, token=token
+    )
+    return github_download_url(owner=owner, repo=repo, tag=tag, filename=path.name)
+
+
 def curseforge_minecraft_version_ids(token: str, minecraft: str) -> list[int]:
     payload = _request(
         f"{CURSEFORGE_UPLOAD}/game/versions",

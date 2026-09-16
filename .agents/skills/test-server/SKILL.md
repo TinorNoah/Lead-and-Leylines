@@ -5,7 +5,7 @@ description: Restart the panel-hosted test server, wait for boot, pull recent co
 
 # Test dedicated server
 
-Until a CurseForge file exists, deploy the current `pack/` tree with `python scripts/deploy_server.py --from-local`. That uses the Forge Minecraft egg plus Wings file upload. Do not invent a GitHub raw pack.toml fallback. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
+Until a CurseForge file exists, deploy the current `pack/` tree with `python scripts/deploy_server.py --from-local`. That uses the Forge Minecraft egg and has Wings pull the GitHub Release server-mods zip (`GH_TOKEN` required to attach the zip). Do not invent a GitHub raw pack.toml fallback. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
 
 ## Steps
 
