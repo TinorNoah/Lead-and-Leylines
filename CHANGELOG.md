@@ -17,6 +17,23 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.8] - 2026-09-16
+
+### Added
+
+- Cross-mod glue: Jade Addons (Create, Lootr, Supplementaries), Ars Creo (Ars on Create contraptions), Slice & Dice and Create: Central Kitchen (Farmer’s Delight automation), Create + Alex’s Caves recipes, Create: Applied Kinetics (AE2 machines), and AE2 wireless terminals.
+- Farmer’s Delight cutting recipes for Regions Unexplored, Oh The Biomes We’ve Gone, and Twilight Forest woods.
+- Nullscape End biomes. New End chunks only; restart required.
+
+### Changed
+
+- Overworld biomes are a bit smaller (Tectonic climate scale 0.16). New chunks only; restart required.
+- New Overworld chunks generate cheaper: Tectonic extra caves, jungle pillars, underground rivers, lava tunnels, rolling hills, and ocean islands are off; Streams uses the Potato accuracy preset with sparser rivers. Restart required; already-generated land is unchanged.
+
+### Removed
+
+- Distant Horizons. Far terrain LODs are gone; vanilla/shader view distance is the cap.
+
 ## [0.0.7] - 2026-09-16
 
 ### Added

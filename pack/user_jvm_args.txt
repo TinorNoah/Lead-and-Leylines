@@ -1,4 +1,4 @@
-# Lead and Leylines — Java 17 (see pack.toml). Distant Horizons wants ZGC, not G1.
+# Lead and Leylines — Java 17 (see pack.toml). Use ZGC, not G1.
 # Prism: scripts/update_prism.py copies these flags into instance.cfg.
 # Other launchers: paste the same flags into that instance's Java arguments.
 # Do not add -XX:+ZGenerational (Java 21+; this pack's Java 17 rejects it).

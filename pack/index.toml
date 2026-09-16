@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/DistantHorizons.toml"
-hash = "cf518773abf39ca86e4f7a082e2c947aebebc09a606b8428163681e4ac4b2e04"
-
-[[files]]
 file = "config/crash_assistant/config.toml"
 hash = "c251fe9443c206f34cc590cf5c857ab939a7f0b9c63059c23ca784e0a8654945"
 
@@ -22,7 +18,7 @@ hash = "7d8d2d747303b743049ade352f13939fa06fe3701d71910f345a2e08cc9fc782"
 
 [[files]]
 file = "config/streamsreflowing-common.toml"
-hash = "aa25a459b2d083dbf7070a3e920752e22ed5747e85ac89e7f3d7da072f842839"
+hash = "f0cfe9a18174429d779b7c00a0ef7f2e95f12f9d740ce2be758c0a233b1e98d3"
 
 [[files]]
 file = "config/structurify.json"
@@ -30,7 +26,7 @@ hash = "40e77545f6f15513b33cb9ccc2566a0138d4c1aa64a46ff10d1ed9f8d660d48f"
 
 [[files]]
 file = "config/tectonic.json"
-hash = "623bd3d403c59151e4a4064fd7ffc6c6ca53a5925cd758bf9817bad16b74cd07"
+hash = "ce605901afa77e3fcbd56bc32bdce21c86f10b0659287c32ab9ca7901229861e"
 
 [[files]]
 file = "config/terrablender.toml"
@@ -94,6 +90,11 @@ hash = "793693a85f3c87d4e899ee0c58deabc53690bf5a70f17343f28fd5063ce8a1e1"
 metafile = true
 
 [[files]]
+file = "mods/applied-energistics-2-wireless-terminals.pw.toml"
+hash = "36c1d9057db42df7c2573c8673bef9a2d6ac0c43599ee0f8209573bbd3dd3bcf"
+metafile = true
+
+[[files]]
 file = "mods/aquamirae.pw.toml"
 hash = "a4d1140391c85c8666d277301eaa53dc7720937dc9e2b6318789850eec5183ae"
 metafile = true
@@ -101,6 +102,11 @@ metafile = true
 [[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "4e81241ba2da06f425efc5e09fb6b38470125c1581c39e1310c5843a0b96ec76"
+metafile = true
+
+[[files]]
+file = "mods/ars-creo.pw.toml"
+hash = "37674bd20bdb8a375ecd0fdcefd50b7c4b10134aeb0f6a5413293841e39af8f3"
 metafile = true
 
 [[files]]
@@ -214,6 +220,21 @@ hash = "8dd23156830a68809e6449dbd64b83a47de1b1fa36c95785662ce5d04b39102b"
 metafile = true
 
 [[files]]
+file = "mods/create-alexs-caves-compat.pw.toml"
+hash = "a5b279a4fb95c2d2342903d06bf78c2188157657de59d0c38afc1b6da4c16411"
+metafile = true
+
+[[files]]
+file = "mods/create-applied-kinetics.pw.toml"
+hash = "2abfac150d6c52601ed1d666381e9992f1be1eb88ba2c2cd0d11c6a863215986"
+metafile = true
+
+[[files]]
+file = "mods/create-central-kitchen.pw.toml"
+hash = "674b1efa0d61bd1f422ed674cb8196d06150dc1b79f4e0c4096ddee800b31176"
+metafile = true
+
+[[files]]
 file = "mods/create-sky-village.pw.toml"
 hash = "4b8a98a19e2fa4976b2d7b731e236b64222fd243b213e80b94c8f622342aac93"
 metafile = true
@@ -246,11 +267,6 @@ metafile = true
 [[files]]
 file = "mods/default-options.pw.toml"
 hash = "6311134242af3f639923e825caea40821c7e7ee7caadf4105234f5d7fa44ec8b"
-metafile = true
-
-[[files]]
-file = "mods/distanthorizons.pw.toml"
-hash = "fe326f4571e4563e883c51c9eed627feb03a08213c7b4ded1b34257f1e0ed60f"
 metafile = true
 
 [[files]]
@@ -311,6 +327,21 @@ metafile = true
 [[files]]
 file = "mods/fancymenu.pw.toml"
 hash = "c33972ac6bb702fb7454f637c64891145442886dbc8886bee0d4fe9550c48230"
+metafile = true
+
+[[files]]
+file = "mods/farmers-cutting-oh-the-biomes-weve-gone.pw.toml"
+hash = "67b0ce0da3b745cf5b7540ea0d8131063aef06272042d0dca706bdb5787ad578"
+metafile = true
+
+[[files]]
+file = "mods/farmers-cutting-regions-unexplored.pw.toml"
+hash = "65bf28db98739507310b7e5ac592c00eb55fbed0e1817683c59b69c55c7b5fe5"
+metafile = true
+
+[[files]]
+file = "mods/farmers-cutting-twilight-forest.pw.toml"
+hash = "a1798e6c2a659fd6fccd9351f300af5f7fb97257992dec4cafbf9caeec6307a2"
 metafile = true
 
 [[files]]
@@ -426,6 +457,11 @@ metafile = true
 [[files]]
 file = "mods/infernal-expansion-redux.pw.toml"
 hash = "023e146c6ad927adadd96592fc6a470f5f392dd7f486e1abfae07683bbf2cbaf"
+metafile = true
+
+[[files]]
+file = "mods/jade-addons-forge.pw.toml"
+hash = "2e88de6ccb041493cc6fa75ce102892ddb88529d5c380ba288c7b5f928a4f998"
 metafile = true
 
 [[files]]
@@ -549,6 +585,11 @@ hash = "2448ee89974f5934aa9114270f3e6666cbe203bffe5be6c2905231bb5dc1af81"
 metafile = true
 
 [[files]]
+file = "mods/nullscape.pw.toml"
+hash = "e5e76b305f6e8fd611fb70695f42014c62e5f46b926d626eaf5ca0c78e394c5c"
+metafile = true
+
+[[files]]
 file = "mods/oculus.pw.toml"
 hash = "f83b253ca6a8e6f2f847952704da0e1fb00e65cbb10b7c9cb15d1a1780618da0"
 metafile = true
@@ -621,6 +662,11 @@ metafile = true
 [[files]]
 file = "mods/simplymore.pw.toml"
 hash = "b9074b10d254cc939f7553d33ef9c65db35df15fd7fccb840defc9a40ce887c4"
+metafile = true
+
+[[files]]
+file = "mods/slice-and-dice.pw.toml"
+hash = "f49c7302f7a044aae67740fac3a7558ca2f26b3a89a69a3940d516a40e3b75b7"
 metafile = true
 
 [[files]]
@@ -855,4 +901,4 @@ metafile = true
 
 [[files]]
 file = "user_jvm_args.txt"
-hash = "73a034451626cd8771222efd785a6bd74991d8dab125b0c951c9cedd7f35bad5"
+hash = "01df36a2513fde68b9fe007530d67399c98ec731abdf4721abf8b0bedd1b4466"
