@@ -218,7 +218,6 @@ def curseforge_game_version_ids(
     slug = minecraft.replace(".", "-")
     minecraft_hits: list[tuple[int, str]] = []
     loader_ids: list[int] = []
-    environment_ids: list[int] = []
     for item in payload:
         if not isinstance(item, dict) or "id" not in item:
             continue
@@ -233,8 +232,6 @@ def curseforge_game_version_ids(
             minecraft_hits.append((version_id, type_name))
         elif name.lower() == loader.lower():
             loader_ids.append(version_id)
-        elif name in {"Client", "Server"}:
-            environment_ids.append(version_id)
 
     def minecraft_rank(hit: tuple[int, str]) -> tuple[int, int, int]:
         type_name = hit[1].lower()
@@ -247,7 +244,6 @@ def curseforge_game_version_ids(
     minecraft_hits.sort(key=minecraft_rank, reverse=True)
     minecraft_ids = [minecraft_hits[0][0]] if minecraft_hits else []
     loader_ids = list(dict.fromkeys(loader_ids))
-    environment_ids = list(dict.fromkeys(environment_ids))
     if len(minecraft_ids) != 1:
         raise SystemExit(
             f"CurseForge expected one {minecraft!r} game version, found "
@@ -257,12 +253,7 @@ def curseforge_game_version_ids(
         raise SystemExit(
             f"CurseForge expected one {loader!r} loader version, found {loader_ids}"
         )
-    if len(environment_ids) != 2:
-        raise SystemExit(
-            "CurseForge expected Client and Server environments, "
-            f"found {environment_ids}"
-        )
-    chosen = minecraft_ids + loader_ids + environment_ids
+    chosen = minecraft_ids + loader_ids
     print(f"curseforge gameVersions {chosen}")
     return chosen
 
