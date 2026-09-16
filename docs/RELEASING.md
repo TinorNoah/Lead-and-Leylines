@@ -8,21 +8,23 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
 
 `python scripts/release.py vX.Y.Z --channel <channel>` (default `alpha`).
 
-| Channel | GitHub | CurseForge | Modrinth | Test server |
-|---|---|---|---|---|
-| `alpha` | Prerelease | Not uploaded | Not uploaded | Updated |
-| `beta` | Prerelease | Not uploaded | Not uploaded | Updated |
-| `release` | Stable release (not a prerelease) | Uploaded | Uploaded | Updated |
+| Channel | GitHub | CurseForge | Modrinth | Test server | Local Prism |
+|---|---|---|---|---|---|
+| `alpha` | Prerelease | Alpha | Alpha | Updated | Synced |
+| `beta` | Prerelease | Beta | Beta | Updated | Synced |
+| `release` | Stable release (not a prerelease) | Release | Release | Updated | Synced |
 
-Only `--channel release` uploads to CurseForge or Modrinth. `alpha` and `beta` create a GitHub prerelease and update the test server; they do not touch the stores.
+Default is `alpha`: GitHub prerelease, CurseForge alpha, Modrinth alpha. Use `--channel release` only for a public stable.
 
-`--skip-curseforge` / `--skip-modrinth` still skip a store even on `release`. Missing `CURSEFORGE_*` / `MODRINTH_*` in `.env` also skip that store with a log line. Missing `GH_TOKEN` skips GitHub tagging and store uploads, but still updates the test server. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+The operator machine runs `scripts/release.py`: tag, GitHub Release (client zip, mrpack, server-mods zip), then the live instance unless `--skip-server`, then local Prism unless `--skip-prism`. Missing `GH_TOKEN` skips GitHub tagging, but still updates the test server and Prism.
 
-There is no tag GitHub Actions publish job. The operator machine runs `scripts/release.py`. Every `release.py` run updates the test server unless `--skip-server` is passed.
+GitHub Actions (`.github/workflows/publish-stores.yml`) publishes CurseForge and Modrinth from every `v*` tag, using the GitHub Release zip/mrpack (not the server-mods zip). The annotated tag body includes `channel:alpha|beta|release`; if that line is missing, a GitHub prerelease maps to store `alpha` and GitHub Latest maps to store `release`. `workflow_dispatch` can set the channel for an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`, `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID`). Do not hardcode those values. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+
+`--upload-stores` also uploads from the operator machine when `.env` has those values. `--skip-curseforge` / `--skip-modrinth` still skip a local store upload.
 
 ### No promoting a prerelease tag
 
-An `alpha` or `beta` tag is never “promoted” later to a store build. If a build should go to CurseForge/Modrinth, cut a **new** version tag and run `release.py` with `--channel release`.
+Do not later re-upload the same `X.Y.Z` as a store `release`. An alpha or beta tag stays that channel on the stores. Cut a **new** version tag and run `release.py --channel release` for a stable store build.
 
 ## Changelog
 

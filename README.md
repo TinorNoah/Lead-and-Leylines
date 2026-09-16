@@ -42,7 +42,7 @@ Pack files in this repo (TOML, configs, docs) are [MIT](LICENSE). The Minecraft 
 |---|---|
 | `pack/` | Packwiz root. This tree is what gets exported. |
 | `server/` | Dedicated-server overlay. Never indexed or exported. |
-| `scripts/` | Pack export and `release.py` (tag, GitHub Release, CurseForge, Modrinth). |
+| `scripts/` | Pack export, `release.py`, `deploy_server.py`, and `update_prism.py`. |
 | `.agents/skills/` | Shared agent skills (`minecraft-modding`, `add-mod`, `test-server`, `publish-release`). |
 | `docs/mods/` | Manifest, decision logs, and config notes (not exported). |
 
