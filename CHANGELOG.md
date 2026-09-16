@@ -17,6 +17,38 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.9] - 2026-09-17
+
+### Added
+
+- Epic Fight melee with ParCool parkour (and the official Epic × ParCool bridge). Guns stay TACZ.
+- Mekanism, Generators, and Tools, plus Applied Mekanistics so AE2 can handle Mekanism chemicals.
+- AE2 extras: Extended AE, AdvancedAE, Applied Flux, MEGA Cells, AE Additions, Better P2P, import/export cards, and AE2 Things DISKs.
+- Refined Storage as a second item network (Extra Disks, ExtraStorage, Cable Tiers, wireless addons). Polymorph still picks overlapping recipes.
+- Alchemistry (with ChemLib) for element crafting.
+- The Lost Cities. New chunks only.
+- Complementary Euphoria Patches for Complementary Reimagined/Unbound r5.9.3 (client; off until a Complementary pack is enabled).
+- Construction sticks, Tempad, Perfect Graves, Ars Additions, Farmer’s Delight add-ons (Delightful, Corn Delight, Twilight’s Flavors), Botany Pots/Trees, and inventory/QoL extras (Inventory Essentials, Elytra Slot, cosmetic armor, EMI Enchants, EMI worldgen pages).
+- AllTheOres, Mekanism More Machine (beta), Ars Énergistique, AEInfinityBooster, Polymorph on AE2 terminals, Structure Compass, Inventory Tweaks ReFoxed, Better Compatibility Checker, Clickable Advancements, and EMI QoL Tweaks.
+
+### Changed
+
+- Oculus Reload Shaders is unbound so **R** is TACZ reload. New installs get that default. Existing instances that already saved **R** keep it — unbind once in Controls → Oculus → **Reload Shaders**.
+- Epic Fight battle/mining toggle is **V** so it does not steal TACZ reload. Existing instances that already saved **R** for Epic Fight keep it — rebind once in Controls → Epic Fight → **Toggle Battle/Mining Mode**.
+
+### Fixed
+
+- Epic Fight × ParCool boots: ParCool is on 3.4.3.3 so the official bridge can find its parkour classes (4.0 removed them).
+- Dyenamics and Friends is on 1.9.3 so extra dye glass loads with Connected Glass 1.1.14.
+
+### Removed
+
+- Better Combat (and the Ice and Fire / Alex’s Caves bridges). Melee is Epic Fight.
+
+- Epic Structures: Dungeons. Their chests used invalid loot table names (`DungeonZombie` / `DungeonPoop1`) and aborted Overworld chunk generation. Villages, witch huts, and jungle temples stay. When Dungeons Arise still covers extra dungeons.
+- Streams Reflowing (held). Vanilla/Tectonic rivers only while we compared `/rtp` cost.
+- Tectonic 3 and Lithostitched. Overworld height is vanilla again so live `/rtp` is cheaper. New world required.
+
 ## [0.0.8] - 2026-09-16
 
 ### Added
