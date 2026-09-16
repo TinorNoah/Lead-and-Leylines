@@ -82,7 +82,6 @@ def main() -> None:
     print(reason)
     if args.github_output:
         write_github_output({"ok": "false", "id": "", "reason": reason})
-        return
     raise SystemExit(reason)
 
 
