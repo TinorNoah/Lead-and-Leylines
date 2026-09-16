@@ -30,7 +30,7 @@ hash = "40e77545f6f15513b33cb9ccc2566a0138d4c1aa64a46ff10d1ed9f8d660d48f"
 
 [[files]]
 file = "config/tectonic.json"
-hash = "cd727ebd2d0bf1ac51aedcf8d1a7bc2bf2a68c92ec92c1da682c16876d789a35"
+hash = "623bd3d403c59151e4a4064fd7ffc6c6ca53a5925cd758bf9817bad16b74cd07"
 
 [[files]]
 file = "config/terrablender.toml"
@@ -86,6 +86,11 @@ metafile = true
 [[files]]
 file = "mods/amplified-nether.pw.toml"
 hash = "786993e5bb314f53039578ace75997775d59b1c3766acd506781c1b170b0d791"
+metafile = true
+
+[[files]]
+file = "mods/appleskin.pw.toml"
+hash = "793693a85f3c87d4e899ee0c58deabc53690bf5a70f17343f28fd5063ce8a1e1"
 metafile = true
 
 [[files]]
@@ -524,6 +529,11 @@ hash = "8cad1023bbc6e5c13961de6248a88b91538f3ad315dfdbb40c969e25606d98eb"
 metafile = true
 
 [[files]]
+file = "mods/neoauth.pw.toml"
+hash = "c08be23e759904d50962351be693fbf06f96039c7b1fb6c703a726fef66fb113"
+metafile = true
+
+[[files]]
 file = "mods/neruina.pw.toml"
 hash = "3cd1bbe268a8183a07bf11d09b746a4b65be737b965d23c1e4f4f15faf967674"
 metafile = true
@@ -791,6 +801,56 @@ metafile = true
 [[files]]
 file = "mods/yungs-bridges.pw.toml"
 hash = "2c40cfe9099281acc57efa8d168dc685fd739cc067afce92c8d4a0697a00b67a"
+metafile = true
+
+[[files]]
+file = "shaderpacks/bsl-shaders.pw.toml"
+hash = "2d56ff34cd1810acca8d9b1fe4190373b1ee002fba9675ebbc6e9eb618df30cf"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "75d1d2488a0c332a9a58af7e57f980a1b006c02b3a1c580fbd50443088e4eab0"
+metafile = true
+
+[[files]]
+file = "shaderpacks/complementary-unbound.pw.toml"
+hash = "1a3d3663c44dc21e227c39c42ea9b5e3c4f3b2e3b5272ed55b45da9e247a46d7"
+metafile = true
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
+hash = "48315d549b833de247f955a174cd9935f96b066df90832980c2ecc93a81381bd"
+metafile = true
+
+[[files]]
+file = "shaderpacks/mellow.pw.toml"
+hash = "6dc75e9071152946e61392c1dcf89863c836f3848aa83f1e11ea86c7b533b927"
+metafile = true
+
+[[files]]
+file = "shaderpacks/miniature-shader.pw.toml"
+hash = "ef5725a80fad1f9ffe4715a36772e12bf1ca0415894016fc834b0014beba1455"
+metafile = true
+
+[[files]]
+file = "shaderpacks/noble.pw.toml"
+hash = "0ac65439c7c92df06c97c2ab9bf292d13bcaac313022a47d5ab0d394f902dea8"
+metafile = true
+
+[[files]]
+file = "shaderpacks/photon-shader.pw.toml"
+hash = "e9112a2da03f65451c8c949331d71b92546bbd75ff78eac554d27f6c41e1ba29"
+metafile = true
+
+[[files]]
+file = "shaderpacks/solas-shader.pw.toml"
+hash = "ca905561def034cbfa51127dd55967fbb552a7eb2a7fc2481d16676c6aa59083"
+metafile = true
+
+[[files]]
+file = "shaderpacks/super-duper-vanilla.pw.toml"
+hash = "a8d349403d1c4b03c42f1962ba993e8b3dd65b9176176eec256f3fc6cbd9f40a"
 metafile = true
 
 [[files]]

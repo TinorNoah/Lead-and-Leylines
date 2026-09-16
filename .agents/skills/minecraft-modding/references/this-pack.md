@@ -48,7 +48,7 @@ The git tree (TOML + `docs/mods/`) is the reproducible backup. The Prism `mods/`
 4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` and watch the panel console.
 5. Update `docs/mods/manifest.md` and the relevant `docs/mods/` decision log. Confirm the manifest matches `pack/mods/*.pw.toml`.
 
-Shaders: Oculus is the loader. Colorwheel + Patcher is the Create + Oculus path; do not add Iris/Oculus Flywheel Compat. Do not add a separate dynamic-lights mod while Oculus is in. Shader packs are a later pack feature, not a silent add.
+Shaders: Oculus is the loader. Colorwheel + Patcher is the Create + Oculus path; do not add Iris/Oculus Flywheel Compat. Do not add a separate dynamic-lights mod while Oculus is in. A test set of Iris packs lives in `pack/shaderpacks/` (client). Do not enable a default pack until one is chosen on purpose.
 
 ## Rollback on this pack
 

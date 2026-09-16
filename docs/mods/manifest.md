@@ -28,11 +28,34 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Why chosen: Iris for Forge. Shaders are a pack feature. No separate dynamic-lights mod.
 - Required dependencies: Embeddium (paired `0.3.31`)
 - Optional dependencies: none
-- Recommended companions: shader packs (not shipped yet)
+- Recommended companions: shader packs in `pack/shaderpacks/` (test set; none enabled by default)
 - Config changes: none — no default shader pack until one is chosen on purpose
 - World-data / removability: client; clean to remove (shader packs are files, not world data)
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
+
+### Shader packs (Iris / Oculus test set)
+
+Client-only. Installer drops the zips into the instance `shaderpacks/` folder. None is selected by default — Video Settings → Shader Packs. All list Iris + 1.20.1. Colorwheel stays the Create path; some packs may still look wrong on contraptions. Trim after in-game testing.
+
+| Pack | Pin | Look | License / notes |
+|---|---|---|---|
+| Complementary Reimagined `r5.9.3` | `HVnmMxH1` / `Bqen1mJX` | Vanilla-like, default pick for most packs | Complementary Agreement: unmodified, via Modrinth/CurseForge only |
+| Complementary Unbound `r5.9.3` | `R6NEzAwj` / `B1kyfoUZ` | Cinematic / dramatic | Same agreement as Reimagined |
+| BSL `10.1.5` | `Q1vvjJYV` / `yFTiE1Nc` | Bright, colorful | ARR; do not rehost the zip |
+| Photon `v1.3b` | `lLqFfGNs` / `gUv7fBPN` | Modern PBR-ish | Allows unmodified modpack inclusion |
+| MakeUp Ultra Fast `9.5e` | `izsIPI7a` / `T3EhqZo1` | Cheap / low-end | LGPL-3.0-or-later |
+| Super Duper Vanilla `1.3.8` | `LMIZZNxZ` / `KB0sOLSc` | Vanilla+ | FlameRender license; credit Eldeston |
+| Mellow `3.4` | `BUxf36AP` / `fORiOdHS` | Soft / stylized | MIT |
+| Miniature `2.19` | `UaS8ROxa` / `LWmZ94RG` | Tiny / potato-friendly | MIT |
+| Noble `1.9.8hf` | `sclYVqbt` / `LVmYSHp2` | Stylized | GPL-3.0-only |
+| Solas `3.7b` | `EpQFjzrQ` / `KcfQaN5J` | Fantasy | ARR; official Modrinth link only |
+
+Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Pastel/Shrimple/Insanity (ARR without a clear store-system grant), SEUS/Continuum (OptiFine or paid).
+
+- packwiz `side`: client
+- Config changes: none — do not enable a default pack
+- Date added: 2026-09-16
 
 ### FerriteCore
 
@@ -513,6 +536,36 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - World-data / removability: clean to remove
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
+
+### AppleSkin
+
+- Pinned file / version: `appleskin-forge-mc1.20.1-2.5.1.jar` (Modrinth version `XdXDExVF`)
+- Download source: https://modrinth.com/mod/appleskin/version/XdXDExVF
+- packwiz `side`: both
+- Category: HUD (hunger/saturation)
+- Why chosen: Shows hunger, saturation, and exhaustion on the vanilla bar. Official squeek502 Forge 1.20.1. Latest matching file.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults. If the overlay glitches, disable ImmediatelyFast `hud_batching`.
+- World-data / removability: HUD only; clean to remove
+- License / attribution: Unlicense; https://modrinth.com/mod/appleskin
+- Date added: 2026-09-16
+
+### NeoAuth
+
+- Pinned file / version: `NeoAuth-1.20.1-1.0.3.jar` (Modrinth version `9xLXbEMY`)
+- Download source: https://modrinth.com/mod/neoauth/version/9xLXbEMY
+- packwiz `side`: client
+- Category: utility (session)
+- Why chosen: In-game Microsoft re-login when the launcher session expires. Official Mrbysco Forge 1.20.1 port of Auth Me. Latest matching file (`1.0.3` reobf crash fix).
+- Required dependencies: none (Forge 47.1+ already in)
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults. Button is on the multiplayer screen and can be dragged. Do not also install Auth Me or AuthAgain.
+- World-data / removability: client only; clean to remove
+- License / attribution: MIT; https://modrinth.com/mod/neoauth (credits Axieum / Auth Me)
+- Date added: 2026-09-16
 
 ### EMI
 
@@ -1199,7 +1252,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: Lithostitched 1.4.11+ (Modrinth version metadata lists none; the jar still fails without it)
 - Optional dependencies: none
 - Recommended companions: Terralith (shipped)
-- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes) ([configs.md](configs.md))
+- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.125` (larger biomes), Vertical Scale `0.80` (was `1.125`; ~40 blocks lower on typical highlands). Elevation Boost stays `0.0`. New chunks; 1.20 restart. ([configs.md](configs.md))
 - World-data / removability: changes Overworld shape; old chunks stay old
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -2249,6 +2302,16 @@ Credit each author via the project URL above when distributing the pack. Recheck
 |---|---|
 | Embeddium | https://modrinth.com/mod/embeddium |
 | Oculus | https://modrinth.com/mod/oculus |
+| Complementary Shaders - Reimagined | https://modrinth.com/shader/complementary-reimagined |
+| Complementary Shaders - Unbound | https://modrinth.com/shader/complementary-unbound |
+| BSL Shaders | https://modrinth.com/shader/bsl-shaders |
+| Photon Shaders | https://modrinth.com/shader/photon-shader |
+| MakeUp - Ultra Fast | https://modrinth.com/shader/makeup-ultra-fast-shaders |
+| Super Duper Vanilla | https://modrinth.com/shader/super-duper-vanilla |
+| Mellow | https://modrinth.com/shader/mellow |
+| Miniature Shader | https://modrinth.com/shader/miniature-shader |
+| Noble Shaders | https://modrinth.com/shader/noble |
+| Solas Shader | https://modrinth.com/shader/solas-shader |
 | FerriteCore | https://modrinth.com/mod/ferrite-core |
 | ImmediatelyFast | https://modrinth.com/mod/immediatelyfast |
 | ModernFix | https://modrinth.com/mod/modernfix |
@@ -2281,6 +2344,8 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | FTB XMod Compat | https://www.curseforge.com/minecraft/mc-mods/ftb-xmod-compat |
 | FTB Filter System | https://www.curseforge.com/minecraft/mc-mods/ftb-filter-system |
 | Jade | https://modrinth.com/mod/jade |
+| AppleSkin | https://modrinth.com/mod/appleskin |
+| NeoAuth | https://modrinth.com/mod/neoauth |
 | EMI | https://modrinth.com/mod/emi |
 | Too Many Recipe Viewers | https://modrinth.com/mod/tmrv |
 | Accelerated Decay | https://www.curseforge.com/minecraft/mc-mods/accelerated-decay |
@@ -2401,7 +2466,9 @@ Credit each author via the project URL above when distributing the pack. Recheck
 
 | Mod | Why not now | What would change that |
 |---|---|---|
-| Shader packs | Loader (Oculus) is in; packs chosen later | Pick a pack on purpose and ship it |
+| Shader packs | Loader (Oculus) is in; a test set ships in `pack/shaderpacks/` | After in-game testing, remove packs we do not want. Do not enable a default until one is chosen. |
+| Bliss / Potato / Nostalgia / Pastel / Shrimple / Insanity | ARR or no store-system grant | Do not add without a written modpack clause |
+| SEUS / Continuum | OptiFine-oriented or paid | Stay on Iris packs |
 | ServerCore | Overlaps Radium / Let Me Despawn; activation range is gameplay | Explicit ruleset decision |
 | Better Beds Reforged | Tiny FPS; last file 1.0.0 (2023) | Want beds later |
 | Iris & Oculus Flywheel Compat | Colorwheel is the Create + Oculus path and is incompatible with this jar | Do not add |
@@ -2424,6 +2491,8 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | YUNG’s Better Mineshafts | MMR is the mineshaft line | Do not add both |
 | Awesome Dungeon End / Ocean | Held this cut (overworld + Nether only) | If dungeon density still feels sparse |
 | LambDynamicLights | Infernal Redux optional; Oculus is the light path | Do not add |
+| Auth Me | Fabric-only on 1.20.1 | NeoAuth is the Forge port |
+| AuthAgain | Same Microsoft re-login job as NeoAuth | Do not ship two session UIs |
 
 ## Deferred Ecosystem Upgrades
 

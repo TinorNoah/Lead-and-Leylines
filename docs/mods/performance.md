@@ -172,7 +172,7 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 | Let Me Despawn | Gameplay: which equipped mobs may despawn. Document equipment / whitelist so named or raid mobs are not surprising. |
 | Embeddium Extra | If any other leaf or dynamic-light mod is added later, turn those Extra toggles off. |
 | ImmediatelyFast | If a later HUD/tooltip mod glitches, disable `hud_batching`. Otherwise leave default. |
-| Oculus | Version pair with Embeddium is the real “config”. No default shader pack until one is chosen on purpose. |
+| Oculus | Version pair with Embeddium is the real “config”. Test packs are in `pack/shaderpacks/`. No default pack until one is chosen on purpose. |
 | ServerCore (if held → chosen) | Activation range and mobcaps must be written down; they change what players see in the distance. |
 | ModernFix | Defaults are the feature. Do not edit mixin flags unless a crash log points at one. |
 
@@ -207,3 +207,20 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 ## Locked: shaders
 
 Shaders are a pack feature. Oculus is the Forge shader loader. Dynamic lights mods stay out. Create + Oculus uses Colorwheel (beta), not iris-flw-compat.
+
+A **test set** of Iris packs ships in `pack/shaderpacks/` (client). None is enabled by default. Players pick one in Video Settings → Shader Packs. After testing, remove packs we do not want; do not turn one on by default until that choice is made.
+
+| Pack | Pin | Why in the test set |
+|---|---|---|
+| Complementary Reimagined `r5.9.3` | `Bqen1mJX` | Vanilla-like; usual first pick next to Create |
+| Complementary Unbound `r5.9.3` | `B1kyfoUZ` | Same family, cinematic |
+| BSL `10.1.5` | `yFTiE1Nc` | Bright/colorful classic |
+| Photon `v1.3b` | `gUv7fBPN` | Modern look |
+| MakeUp Ultra Fast `9.5e` | `T3EhqZo1` | Low GPU |
+| Super Duper Vanilla `1.3.8` | `KB0sOLSc` | Vanilla+ |
+| Mellow `3.4` | `fORiOdHS` | Soft stylized (MIT) |
+| Miniature `2.19` | `LWmZ94RG` | Cheapest (MIT) |
+| Noble `1.9.8hf` | `LVmYSHp2` | Stylized (GPL-3) |
+| Solas `3.7b` | `KcfQaN5J` | Fantasy / DH-aware |
+
+Skipped: Bliss (Chocapic ARR), Potato/Nostalgia/Pastel/Shrimple/Insanity (ARR without a store-system grant), SEUS/Continuum (OptiFine/paid).

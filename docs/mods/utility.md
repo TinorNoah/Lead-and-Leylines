@@ -29,6 +29,7 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 3. Colorwheel + Colorwheel Patcher with Oculus + Create 6. Do **not** add Iris/Oculus Flywheel Compat; Colorwheel lists that as incompatible.
 4. One claim mod. One map UI. Do not add JourneyMap or Open Parties and Claims next to this set.
 5. Create writes world data. Back up existing worlds before first boot with Create in.
+6. One in-game session re-login (NeoAuth). Do not also add Auth Me or AuthAgain.
 
 ---
 
@@ -47,6 +48,8 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | FTB XMod Compat | CurseForge file `6402486` (`forge-2.1.3`) | both | FTB Quests + EMI (and other FTB bridges) |
 | FTB Filter System | CurseForge file `6466153` (`20.0.1`) | both | Item filters for FTB Quests. Replaces Item Filters |
 | Jade | [modrinth.com/mod/jade](https://modrinth.com/mod/jade) (`xJQHCmWJ`) | both | Block/entity overlay. `both` so server info matches |
+| AppleSkin | [modrinth.com/mod/appleskin](https://modrinth.com/mod/appleskin) `2.5.1+mc1.20.1` (`XdXDExVF`) | both | Hunger/saturation HUD. Official squeek502 Forge 1.20.1. `both` so saturation syncs on the dedicated server and Prism singleplayer |
+| NeoAuth | [modrinth.com/mod/neoauth](https://modrinth.com/mod/neoauth) `1.0.3` (`9xLXbEMY`) | client | In-game Microsoft session re-login (Auth Me for Forge). Mrbysco. No extra libs. Do not put on the dedicated server |
 | EMI | [modrinth.com/mod/emi](https://modrinth.com/mod/emi) `1.1.24` (`Axuu9I9R`) | both | Recipe browser. Not JEI |
 | Too Many Recipe Viewers | [modrinth.com/mod/tmrv](https://modrinth.com/mod/tmrv) (`PSC3dlCl`) | client | EMI layout helper. Provides a `jei` stub at 15.20.0.132. Incompatible with a real JEI jar |
 | Accelerated Decay | CurseForge file `4863307` (`3.0.1+mc1.20.1`) | both | Leaves/decay catch-up. Last Forge 1.20.1 file |
@@ -71,6 +74,8 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | EMI QoL Tweaks | **Removed.** CurseForge file `8713840` is excluded from the third-party API, so packwiz-installer cannot download it. No Modrinth/GitHub file. EMI + TMRV + FTB XMod Compat stay. |
 | Random Patches | **Skipped.** Conflicts with Too Fast. Too Fast is the speed-limit mixin we want. |
 | I'm Fast | **Skipped.** Same job as Too Fast; Too Fast is the maintained Noobanidus file. |
+| Auth Me | **Skipped.** Fabric only on 1.20.1. NeoAuth is the Forge port. |
+| AuthAgain | **Skipped.** Same session-refresh job as NeoAuth. Do not ship two re-login UIs. |
 
 ## Held
 
@@ -78,7 +83,6 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 |---|---|
 | FTB Chunks × Xaero’s Compat | Third-party claim overlay on Xaero. Not requested. Claim UI stays FTB sidebar / claim manager. |
 | Create: Nowheel | Entity Culling + Create contraptions. Watch for invisible contraptions before adding. |
-| Shader packs | Loader + Colorwheel are in; packs still chosen later. |
 
 ## Incompatibility (this set)
 
