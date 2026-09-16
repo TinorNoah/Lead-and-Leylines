@@ -60,6 +60,7 @@ def main() -> None:
             name=name,
             changelog=changelog,
             minecraft=pack["minecraft"],
+            loader=pack["loader"],
             channel=args.channel,
         )
         upload_curseforge(
@@ -69,6 +70,7 @@ def main() -> None:
             name=f"{name} (server)",
             changelog=changelog,
             minecraft=pack["minecraft"],
+            loader=pack["loader"],
             channel=args.channel,
             parent_file_id=parent_id,
         )
