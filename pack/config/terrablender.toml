@@ -1,0 +1,7 @@
+# Pack: largest TerraBlender regions so RU / BWG / vanilla-Terralith slices are not postage stamps.
+
+[generation_settings]
+overworld_region_size = 6
+nether_region_size = 4
+vanilla_overworld_region_weight = 10
+vanilla_nether_region_weight = 10

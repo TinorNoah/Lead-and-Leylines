@@ -56,6 +56,8 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | Colorwheel Patcher | [modrinth.com/mod/colorwheel-patcher](https://modrinth.com/mod/colorwheel-patcher) (`REyG66M8`) | client | Required companion for Colorwheel |
 | Xaero's Minimap | [modrinth.com/mod/xaeros-minimap](https://modrinth.com/mod/xaeros-minimap) (`Juh6inLY`) | client | HUD map |
 | Xaero's World Map | [modrinth.com/mod/xaeros-world-map](https://modrinth.com/mod/xaeros-world-map) (`rlPmwaQX`) | client | Fullscreen map (keep **M**) |
+| Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default: FTB Open Map unbound. See [content.md](content.md) |
+| Too Fast | [modrinth.com/mod/too-fast](https://modrinth.com/mod/too-fast) `0.4.3.5` (`2pix3xrW`) | server | Dedicated-server “moved too quickly” rubber-band fix. Create trains. |
 
 ## Dropped / skipped this cut
 
@@ -67,12 +69,13 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | JourneyMap / voxelmap / a second world map | **Dropped.** Xaero is the map UI. |
 | Open Parties and Claims (or any second claim mod) | **Dropped.** FTB Chunks is the claim system. |
 | EMI QoL Tweaks | **Removed.** CurseForge file `8713840` is excluded from the third-party API, so packwiz-installer cannot download it. No Modrinth/GitHub file. EMI + TMRV + FTB XMod Compat stay. |
+| Random Patches | **Skipped.** Conflicts with Too Fast. Too Fast is the speed-limit mixin we want. |
+| I'm Fast | **Skipped.** Same job as Too Fast; Too Fast is the maintained Noobanidus file. |
 
 ## Held
 
 | Mod | Why wait |
 |---|---|
-| Default Options | Would let the pack unbind FTB Chunks “Open Map” without touching `options.txt`. Not installed. Unbind in Controls instead (see [configs.md](configs.md)). |
 | FTB Chunks × Xaero’s Compat | Third-party claim overlay on Xaero. Not requested. Claim UI stays FTB sidebar / claim manager. |
 | Create: Nowheel | Entity Culling + Create contraptions. Watch for invisible contraptions before adding. |
 | Shader packs | Loader + Colorwheel are in; packs still chosen later. |
@@ -87,3 +90,4 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | FTB Open Map (M) + Xaero World Map (M) | Both fire. Unbind FTB Open Map |
 | Two claim mods | Overlapping protection / UX |
 | Create without a world backup | Sticky block entities / contraption data |
+| Too Fast + Random Patches | Author conflict. Do not stack. |

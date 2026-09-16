@@ -17,6 +17,32 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Removed
 
+## [0.0.4] - 2026-09-16
+
+### Added
+
+- Distant Horizons is in but **off**. Turn it on in Options → Distant Horizons if you want LODs; quality stays at the floor until you raise it.
+- Ars Nouveau, Applied Energistics 2 (recipes show in EMI), Twilight Forest, Supplementaries, Waystones, Lootr, and target dummies.
+- QoL: searchable keybinds, inventory mouse drag, better advancement UI, crafting-grid buttons, overlapping-recipe picker, Nether portal linking, inventory trash slot, and a loading-screen framework. FTB Chunks **Open Map** is unbound on new installs so it does not fight Xaero on **M**.
+
+### Changed
+
+- Terralith, Regions Unexplored, and Oh The Biomes We’ve Gone biomes are larger (Tectonic climate scale 0.125, TerraBlender regions at max size).
+- Create Sky Villages spawn more often and higher, so Tectonic mountains are less likely to eat them.
+- After a crash, Crash Assistant **Request Help** opens the Lead and Leylines Discord.
+
+### Fixed
+
+- Tectonic now loads: Lithostitched 1.4.11 is in the pack (Tectonic 3.0.17 requires it).
+- `/rtp` no longer searches 25,000 blocks (that hung on new Tectonic terrain). It now stays within 2,000 blocks of origin and gives up after 3 tries.
+- Fast travel (Create trains and similar) should no longer rubber-band with “moved too quickly”.
+- `/locate` and Explorer’s Compass should stop pointing at empty spots. StructureOverlapless was skipping placement (including Create Sky Villages and When Dungeons Arise towers) after the start was already registered. Needs a **new world**. Sky villages sit high — look up from the locate ground Y. In the amplified Nether, fortress locate still uses `~` for Y.
+
+### Removed
+
+- StructureOverlapless (it skipped colliding structures instead of moving them, so locates were empty).
+- When Dungeons Arise Sparse Structures compat packs (they made WDA almost unfindable).
+
 ## [0.0.3] - 2026-09-16
 
 ### Added

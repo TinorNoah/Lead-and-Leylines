@@ -15,7 +15,7 @@ Research snapshot: 2026-09-15. Target is whatever Minecraft + Forge are in [`pac
 1. One drawer mod. Functional Storage, not Storage Drawers, and not both.
 2. One upgradeable chest/barrel line. Sophisticated Storage, not Iron Chests.
 3. One backpack mod. Sophisticated Backpacks. Curios for the back slot so it does not eat the chestplate.
-4. AE2 (when it lands) is the storage *network*. Do not add Tom’s Simple Storage as a second network.
+4. AE2 is the storage *network*. Do not add Tom’s Simple Storage as a second network.
 5. Create is already in. Ship the official Sophisticated Create integration jars so chests/backpacks on contraptions do not dupe.
 
 ---
@@ -32,6 +32,8 @@ Research snapshot: 2026-09-15. Target is whatever Minecraft + Forge are in [`pac
 | Curios API | [modrinth.com/mod/curios](https://modrinth.com/mod/curios) `5.14.1+1.20.1` (`IPQlZkz1`) | both | Back slot so a backpack does not occupy chest armor |
 | Sophisticated Storage Create Integration | [modrinth.com/mod/sophisticated-storage-create-integration](https://modrinth.com/mod/sophisticated-storage-create-integration) `1.20.1-0.1.24.221` (`o8dwHKKj`) | both | Stops contraption dupes; Create is already in |
 | Sophisticated Backpacks Create Integration | [modrinth.com/mod/sophisticated-backpacks-create-integration](https://modrinth.com/mod/sophisticated-backpacks-create-integration) `1.20.1-0.1.10.167` (`gzpoJdRt`) | both | Same for backpacks on contraptions |
+| Applied Energistics 2 | [modrinth.com/mod/ae2](https://modrinth.com/mod/ae2) `15.4.10` (`7KVs6HMQ`) | both | Item/fluid network. Native EMI in this file. See [content.md](content.md) |
+| GuideME | [modrinth.com/mod/guideme](https://modrinth.com/mod/guideme) `20.1.15` (`i7Tp1AHw`) | both | Required by AE2 15.4 |
 
 ## Dropped / skipped this cut
 
@@ -39,12 +41,14 @@ Research snapshot: 2026-09-15. Target is whatever Minecraft + Forge are in [`pac
 |---|---|
 | Storage Drawers | **Skipped.** Functional Storage is the drawer line. |
 | Iron Chests | **Skipped.** Sophisticated Storage is the chest-upgrade line. |
-| Tom’s Simple Storage | **Skipped.** Would be a second item network next to planned AE2. |
+| Tom’s Simple Storage | **Skipped.** Would be a second item network next to AE2. |
 | JEI (optional on Sophisticated pages) | **Skipped.** EMI is the recipe viewer. |
 
 ## Held
 
-None for this cut. AE2 wireless / backpack-network bridges wait until AE2 is in.
+| Mod | Why wait |
+|---|---|
+| AE2 wireless / backpack-network bridges | Wait until someone asks |
 
 ## Incompatibility (this set)
 

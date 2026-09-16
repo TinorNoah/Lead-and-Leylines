@@ -1,0 +1,20 @@
+{
+	# Pack default: /rtp loads destination chunks on the server thread.
+	# Tectonic + biomes + Streams Reflowing can take longer than the vanilla
+	# 60s watchdog at the mod default (25k blocks, 100 tries).
+	# Copied to world/serverconfig/ftbessentials.snbt on first world load.
+	# Existing worlds already have that file; copy these rtp keys there too,
+	# or delete the world copy so this default is copied on next start.
+	teleportation: {
+		rtp: {
+			max_tries: 3
+			min_distance: 500
+			max_distance: 2000
+			dimension_blacklist: [
+				"minecraft:the_end"
+				"minecraft:the_nether"
+				"aquamirae:the_maelstrom"
+			]
+		}
+	}
+}

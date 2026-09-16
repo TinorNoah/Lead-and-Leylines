@@ -90,6 +90,23 @@ class Wings:
     def has(self, name: str, directory: str = "/") -> bool:
         return name in self.names(directory)
 
+    def read_file(self, remote_path: str, timeout: int | None = None) -> bytes:
+        if not remote_path.startswith("/"):
+            remote_path = "/" + remote_path
+        payload = self.request(
+            "GET",
+            f"/api/servers/{self.uuid}/files/contents",
+            query={"file": remote_path},
+            timeout=timeout or self.timeout,
+        )
+        if payload is None:
+            return b""
+        if isinstance(payload, bytes):
+            return payload
+        if isinstance(payload, str):
+            return payload.encode("utf-8")
+        raise SystemExit(f"unexpected Wings contents payload for {remote_path}")
+
     def write_file(
         self,
         remote_path: str,
@@ -131,12 +148,36 @@ class Wings:
             body={"root": root, "files": targets},
         )
 
+    def pull_file(
+        self,
+        url: str,
+        *,
+        root: str = "/",
+        file_name: str | None = None,
+        foreground: bool = True,
+        timeout: int | None = None,
+    ) -> Any:
+        body: dict[str, Any] = {
+            "url": url,
+            "root": root,
+            "foreground": foreground,
+            "use_header": False,
+        }
+        if file_name:
+            body["file_name"] = file_name
+        return self.request(
+            "POST",
+            f"/api/servers/{self.uuid}/files/pull",
+            body=body,
+            timeout=timeout or 1800,
+        )
+
     def decompress(self, filename: str, root: str = "/") -> None:
         self.request(
             "POST",
             f"/api/servers/{self.uuid}/files/decompress",
             body={"root": root, "file": filename},
-            timeout=max(self.timeout, 180),
+            timeout=max(self.timeout, 600),
         )
 
     def power(self, action: str, ignore_http: tuple[int, ...] = ()) -> None:

@@ -11,6 +11,7 @@ import argparse
 import json
 import os
 import ssl
+import subprocess
 import sys
 import time
 import urllib.error
@@ -24,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from envfile import load_env_file
 from pack_artifacts import atlauncher_instructions, build_all
+from publish_stores import replace_github_release_asset
 from wings import Wings, node_configuration, wings_base_url
 from read_pack_versions import PACK_TOML, read_pack
 
@@ -519,6 +521,46 @@ def upsert_server(
     return updated
 
 
+def origin_owner_repo() -> tuple[str, str]:
+    result = subprocess.run(
+        ["git", "remote", "get-url", "origin"],
+        cwd=ROOT,
+        check=False,
+        text=True,
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        raise SystemExit("git remote get-url origin failed")
+    raw = (result.stdout or "").strip().removesuffix(".git")
+    if raw.startswith("git@github.com:"):
+        owner_repo = raw.split(":", 1)[1]
+    elif "github.com/" in raw:
+        owner_repo = raw.split("github.com/", 1)[1]
+    else:
+        raise SystemExit(f"origin is not a GitHub URL: {raw}")
+    parts = [part for part in owner_repo.strip("/").split("/") if part]
+    if len(parts) < 2:
+        raise SystemExit(f"cannot parse GitHub owner/repo from {raw}")
+    return parts[0], parts[1]
+
+
+def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str:
+    token = env("GH_TOKEN") or env("GITHUB_TOKEN")
+    if not token:
+        raise SystemExit(
+            "set GH_TOKEN in .env so Wings can pull the GitHub Release server-mods zip "
+            "(never commit the token)"
+        )
+    if not zip_path.is_file():
+        raise SystemExit(f"server mods zip missing: {zip_path}")
+    owner, repo = origin_owner_repo()
+    tag = f"v{pack['pack_version']}"
+    print(f"attaching {zip_path.name} to GitHub Release {tag}")
+    return replace_github_release_asset(
+        owner=owner, repo=repo, tag=tag, path=zip_path, token=token
+    )
+
+
 def connect_wings(client: PanelClient, node: dict[str, Any], server: dict[str, Any]) -> Wings:
     payload = client.get(f"/api/application/nodes/{node['id']}/configuration")
     configuration = node_configuration(payload)
@@ -560,7 +602,25 @@ def write_overlay(wings: Wings) -> None:
             wings.write_file(f"/{name}", path.read_bytes(), "text/plain")
 
 
-def upload_server_mods(wings: Wings, zip_path: Path) -> None:
+def _follow_redirects(url: str) -> str:
+    headers = {"User-Agent": "LeadAndLeylines-deploy/1.0"}
+    request = urllib.request.Request(url, method="HEAD", headers=headers)
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            return response.geturl()
+    except urllib.error.HTTPError as exc:
+        if exc.code not in {403, 405}:
+            raise
+    request = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(request, timeout=60) as response:
+        final = response.geturl()
+        response.read(0)
+        return final
+
+
+def upload_server_mods(
+    wings: Wings, zip_path: Path, *, github_url: str | None = None
+) -> None:
     print("stopping server so mods can be replaced")
     wings.power("stop", ignore_http=(409,))
     try:
@@ -576,17 +636,53 @@ def upload_server_mods(wings: Wings, zip_path: Path) -> None:
 
     print(f"uploading {zip_path.name} ({zip_path.stat().st_size} bytes)")
     wings.delete(["mods", SERVER_MODS_REMOTE])
-    try:
-        wings.write_file(f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip")
-        print("decompressing server mods zip")
-        wings.decompress(SERVER_MODS_REMOTE)
-        wings.delete([SERVER_MODS_REMOTE])
-    except SystemExit as exc:
-        print(f"  zip upload failed ({exc}); uploading jars individually")
-        wings.delete([SERVER_MODS_REMOTE])
-        upload_jars_from_zip(wings, zip_path)
+    pulled = False
+    if github_url:
+        print("Wings pulling server mods zip from the GitHub Release")
+        try:
+            wings.pull_file(
+                github_url,
+                root="/",
+                file_name=SERVER_MODS_REMOTE,
+                foreground=True,
+                timeout=1800,
+            )
+            pulled = True
+        except SystemExit as exc:
+            print(f"  GitHub pull failed ({exc}); retrying via redirect target")
+            try:
+                wings.pull_file(
+                    _follow_redirects(github_url),
+                    root="/",
+                    file_name=SERVER_MODS_REMOTE,
+                    foreground=True,
+                    timeout=1800,
+                )
+                pulled = True
+            except SystemExit as exc2:
+                print(f"  GitHub pull failed ({exc2}); trying a local zip write")
+    if not pulled:
+        try:
+            wings.write_file(
+                f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip"
+            )
+        except SystemExit as exc:
+            print(f"  zip upload failed ({exc}); uploading jars individually")
+            wings.delete([SERVER_MODS_REMOTE])
+            upload_jars_from_zip(wings, zip_path)
+            wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
+            write_overlay(wings)
+            _wait_for_mods(wings)
+            return
+    print("decompressing server mods zip")
+    wings.decompress(SERVER_MODS_REMOTE)
+    wings.delete([SERVER_MODS_REMOTE])
     wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
     write_overlay(wings)
+    _wait_for_mods(wings)
+
+
+def _wait_for_mods(wings: Wings) -> None:
     deadline = time.time() + 120
     while time.time() < deadline:
         try:
@@ -609,7 +705,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--from-local",
         action="store_true",
-        help="export the current pack tree and push server mods to the dedicated server (no CurseForge file)",
+        help="export the current pack tree, attach the server-mods zip to the GitHub Release, and have Wings pull it",
     )
     parser.add_argument(
         "--share-only",
@@ -715,8 +811,9 @@ def deploy_from_local(
         memory=memory,
         disk=disk,
         extra=(
-            f"local deploy FORGE_VERSION={forge_env['FORGE_VERSION']} "
-            f"(CurseForge listing not required)"
+            f"local deploy FORGE_VERSION={forge_env['FORGE_VERSION']}; "
+            "Wings pulls the GitHub Release server-mods zip "
+            "(CurseForge listing not required)"
         ),
     )
     if server:
@@ -728,8 +825,9 @@ def deploy_from_local(
 
     if args.dry_run:
         print(
-            "dry-run: would export ATLauncher files, switch this server to the Forge egg, "
-            "install Forge, then upload server-side mods from the current pack tree"
+            "dry-run: would export ATLauncher files, attach the server-mods zip to "
+            "the GitHub Release, switch this server to the Forge egg, install Forge, "
+            "then have Wings pull that zip"
         )
         return
 
@@ -738,7 +836,8 @@ def deploy_from_local(
     print(atlauncher_instructions(paths))
 
     description = (
-        f"{server_name} test server. Local pack tree via Wings until a CurseForge file exists."
+        f"{server_name} test server. Wings pulls the GitHub Release server-mods zip "
+        "until a CurseForge file exists."
     )
     server = upsert_server(
         client,
@@ -783,7 +882,11 @@ def deploy_from_local(
     elif wait_seconds:
         server = wait_installed(client, int(server["id"]), wait_seconds)
 
-    upload_server_mods(wings, paths["server_zip"])
+    upload_server_mods(
+        wings,
+        paths["server_zip"],
+        github_url=publish_server_zip_to_github(pack, paths["server_zip"]),
+    )
     print("starting server")
     wings.power("start")
     detail = attrs(client.get(f"/api/application/servers/{server['id']}"))

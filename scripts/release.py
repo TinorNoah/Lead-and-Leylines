@@ -25,7 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from envfile import load_env_file
-from pack_artifacts import export_client_artifacts
+from pack_artifacts import build_server_mods_zip, export_client_artifacts
 from publish_stores import (
     create_github_release,
     upload_curseforge,
@@ -331,6 +331,8 @@ def main() -> None:
     mrpack_path = paths["mrpack"]
     if not zip_path.is_file() or not mrpack_path.is_file():
         raise SystemExit("packwiz export did not produce zip and mrpack")
+    print(f"exporting server mods zip -> {paths['server_zip'].name}")
+    build_server_mods_zip(pack, paths["server_zip"])
     if git_output(["status", "--porcelain"]):
         raise SystemExit("packwiz export dirtied the tree; commit the refresh and rerun")
     run(["git", "push", "origin", "HEAD"])
@@ -353,6 +355,13 @@ def main() -> None:
     )
     upload_github_asset(
         owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
+    )
+    upload_github_asset(
+        owner=owner,
+        repo=repo,
+        release_id=release_id,
+        path=paths["server_zip"],
+        token=gh_token,
     )
     print(f"github release {url}")
     if not skip_curseforge and cf_token and cf_project:

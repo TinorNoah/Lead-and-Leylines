@@ -1,0 +1,28 @@
+# Pack default: Distant Horizons is off. Turn it on in Options → DH if you want LODs.
+# If you enable it, quality stays at the floor so it is not heavy.
+_version = 3
+
+[common.worldGenerator]
+enableDistantGeneration = false
+distantGeneratorMode = "PRE_EXISTING_ONLY"
+showGenerationProgress = "DISABLED"
+
+[common.multiThreading]
+numberOfThreads = 1
+threadRunTimeRatio = "0.25"
+
+[client.advanced.autoUpdater]
+enableAutoUpdater = false
+enableSilentUpdates = false
+
+[client.advanced.debugging]
+rendererMode = "DISABLED"
+
+[client.advanced.graphics.quality]
+lodChunkRenderDistanceRadius = 64
+maxHorizontalResolution = "CHUNK"
+verticalQuality = "HEIGHT_MAP"
+horizontalQuality = "LOWEST"
+
+[client.advanced.graphics.ssao]
+enableSsao = false
