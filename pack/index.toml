@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/DistantHorizons.toml"
-hash = "acf515e9a4d6bd33f4c69a856ce1617c1c0d1c1171eea5ec6356adfcc79bed0c"
+hash = "cf518773abf39ca86e4f7a082e2c947aebebc09a606b8428163681e4ac4b2e04"
 
 [[files]]
 file = "config/crash_assistant/config.toml"
@@ -491,7 +491,7 @@ metafile = true
 
 [[files]]
 file = "mods/polymorph.pw.toml"
-hash = "ea8571ba9dc8e74bad5e4257d50e9bb80d02be8f3d5de7fe3dede969e26fa15c"
+hash = "4ab869d8784f4ac318b5c92fa3d9e65f997352b8b57f34b409ca6f171637f0fe"
 metafile = true
 
 [[files]]
@@ -663,3 +663,7 @@ metafile = true
 file = "mods/yungs-bridges.pw.toml"
 hash = "2c40cfe9099281acc57efa8d168dc685fd739cc067afce92c8d4a0697a00b67a"
 metafile = true
+
+[[files]]
+file = "user_jvm_args.txt"
+hash = "73a034451626cd8771222efd785a6bd74991d8dab125b0c951c9cedd7f35bad5"

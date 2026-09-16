@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** this cut **installed** (2026-09-16). Distant Horizons is **off** until the player enables it. No extra EMI addon jar — AE2 15.4.10 has native EMI; Ars, Polymorph, Supplementaries, Waystones, Twilight Forest, and Lootr ship their plugins in-jar. EMI Loot (needs Fzzy Config) was not added.
+**Status:** this cut **installed** (2026-09-16). Distant Horizons is **off** until the player enables it. No extra EMI addon jar — AE2 15.4.10 has native EMI; Ars, Supplementaries, Waystones, Twilight Forest, and Lootr ship their plugins in-jar. Polymorph stays on 0.49.10 because 0.49.11 fails next to TMRV's JEI stub. EMI Loot (needs Fzzy Config) was not added.
 
 ## Side (packwiz)
 
@@ -13,7 +13,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 
 ## Decision rules
 
-1. Distant Horizons stays **client** and **renderer off** (`rendererMode = "DISABLED"`, no distant generation). Floor quality is only a safety net if someone turns it on. Do not put DH on the dedicated server.
+1. Distant Horizons stays **client** and **renderer off** (`rendererMode = "DISABLED"`, no distant generation). Floor quality is only a safety net if someone turns it on. Do not put DH on the dedicated server. Launcher Java 17 uses `-XX:+UseZGC` from `pack/user_jvm_args.txt` (DH's G1 warning). Prism sync writes it into `instance.cfg`; other launchers still need that flag in Java settings.
 2. One recipe browser (EMI). Do not add JEI for AE2. Do not add EMI Loot unless loot-table pages are requested.
 3. Official Twilight Forest CurseForge file only. Do not add the Modrinth “Unofficial” port.
 4. FancyMenu + Drippy is the menu/loading stack. No custom title art unless chosen on purpose. FancyMenu must not customize Create / AE2 / Xaero / Supplementaries / Twilight Forest screens (upstream blocks those packages).
@@ -23,7 +23,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 
 | Mod | Project | `side` | Why add |
 |---|---|---|---|
-| Distant Horizons | [modrinth.com/mod/distanthorizons](https://modrinth.com/mod/distanthorizons) `3.2.0-b` (`FWGxbEM3`) | client | Optional LOD view. **Beta.** Off by default. Oculus 1.8.0 already claims DH 2.2+ shader support. |
+| Distant Horizons | [modrinth.com/mod/distanthorizons](https://modrinth.com/mod/distanthorizons) `3.2.0-b` (`FWGxbEM3`) | client | Optional LOD view. **Beta.** Off by default. Oculus 1.8.0 already claims DH 2.2+ shader support. Java 17: `pack/user_jvm_args.txt` (`-XX:+UseZGC`). |
 | Ars Nouveau | [modrinth.com/mod/ars-nouveau](https://modrinth.com/mod/ars-nouveau) `4.12.7` (`Hw2aD01e`) | both | Spellcraft. Planned magic line. |
 | Patchouli | [modrinth.com/mod/patchouli](https://modrinth.com/mod/patchouli) `1.20.1-85` (`94dtOLgZ`) | both | Ars (and other) books |
 | Applied Energistics 2 | [modrinth.com/mod/ae2](https://modrinth.com/mod/ae2) `15.4.10` (`7KVs6HMQ`) | both | Storage network. Native EMI in this file. |
@@ -34,7 +34,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Waystones | [modrinth.com/mod/waystones](https://modrinth.com/mod/waystones) `14.1.21` (`Y0IgdaoP`) | both | Public warps. Homes stay FTB Essentials. |
 | Lootr | [modrinth.com/mod/lootr](https://modrinth.com/mod/lootr) `0.7.35.94` (`mWTXC1ZX`) | both | Per-player dungeon loot. Does not replace Sophisticated Storage. |
 | MmmMmmMmmMmm | [modrinth.com/mod/mmmmmmmmmmmm](https://modrinth.com/mod/mmmmmmmmmmmm) `1.20-2.0.12-forge` (`c1HMqDvI`) | both | Target dummy for combat testing |
-| Polymorph | [modrinth.com/mod/polymorph](https://modrinth.com/mod/polymorph) `0.49.11` (`5lNATnbO`) | both | Overlapping recipes (FD / Create / AE2 / Ars). EMI plugin in-jar. |
+| Polymorph | [modrinth.com/mod/polymorph](https://modrinth.com/mod/polymorph) `0.49.10` (`UZBKtFyR`) | both | Overlapping recipes (FD / Create / AE2 / Ars). Do not bump to 0.49.11 while TMRV stubs JEI 15.20.0.132. |
 | Crafting Tweaks | [modrinth.com/mod/crafting-tweaks](https://modrinth.com/mod/crafting-tweaks) `18.2.9` (`KOqT9kSZ`) | both | Crafting-grid buttons |
 | Nether Portal Fix | [modrinth.com/mod/netherportalfix](https://modrinth.com/mod/netherportalfix) `13.0.1` (`cWPAnu7u`) | both | Return-portal linking |
 | TrashSlot | [modrinth.com/mod/trashslot](https://modrinth.com/mod/trashslot) `15.1.5` (`r0K8IYd7`) | both | Inventory trash. Different from FTB `/trashcan`. |
@@ -59,6 +59,7 @@ Geckolib and Curios were already in (Ars).
 | Extra Mod Integrations (EMI) | **Skipped.** No Forge 1.20.1 file. |
 | Twilight Forest Unofficial (Modrinth) | **Dropped.** Official CurseForge `4.3.2508`. |
 | JEI (for AE2) | **Skipped.** EMI is the viewer. AE2 15.4.10 has native EMI. |
+| Polymorph `0.49.11` (`5lNATnbO`) | **Held.** Only change vs 0.49.10 is a JEI 15.57+ recipe-transfer API. TMRV 0.9.0 provides `jei` at 15.20.0.132, so Forge aborts. Revisit if TMRV bumps that stub on 1.20.1. |
 | DH on the dedicated server | **Skipped.** LOD gen on the server is the same class of hitch as `/rtp`. |
 | FancyMenu custom title art | **Held.** Framework only until a layout is chosen. |
 

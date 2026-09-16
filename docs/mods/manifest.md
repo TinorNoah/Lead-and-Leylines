@@ -535,7 +535,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Download source: https://modrinth.com/mod/tmrv/version/PSC3dlCl
 - packwiz `side`: client
 - Category: recipe browser (EMI layout)
-- Why chosen: EMI list/UI helper. Incompatible with JEI.
+- Why chosen: EMI list/UI helper. Ships a `jei` stub at 15.20.0.132 so JEI plugins can run on EMI. Incompatible with a real JEI jar, and with mods that require a newer JEI version (Polymorph 0.49.11+).
 - Required dependencies: EMI
 - Optional dependencies: none
 - Recommended companions: none
@@ -1484,7 +1484,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: Oculus 1.8.0 (already claims DH 2.2+ shader support)
-- Config changes: `pack/config/DistantHorizons.toml` — renderer off, distant gen off, floor quality if enabled ([configs.md](configs.md))
+- Config changes: `pack/config/DistantHorizons.toml` — renderer off, distant gen off, floor quality if enabled. Launcher JVM: `pack/user_jvm_args.txt` (`-XX:+UseZGC` on Java 17). Prism sync applies it ([configs.md](configs.md), CONTRIBUTING.md).
 - World-data / removability: LOD databases under the instance; clean to remove the mod. Existing LODs stay on disk until deleted.
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1701,13 +1701,13 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 
 ### Polymorph
 
-- Pinned file / version: `polymorph-forge-0.49.11+1.20.1.jar` (Modrinth version `5lNATnbO`)
-- Download source: https://modrinth.com/mod/polymorph/version/5lNATnbO
+- Pinned file / version: `polymorph-forge-0.49.10+1.20.1.jar` (Modrinth version `UZBKtFyR`)
+- Download source: https://modrinth.com/mod/polymorph/version/UZBKtFyR
 - packwiz `side`: both
 - Category: recipes
-- Why chosen: Overlapping recipes (Farmer's Delight / Create / AE2 / Ars). EMI plugin in-jar.
+- Why chosen: Overlapping recipes (Farmer's Delight / Create / AE2 / Ars). Stay on 0.49.10 — 0.49.11 optionally requires JEI 15.57.0.207+, which TMRV's stub reports as 15.20.0.132 and Forge treats as a load failure.
 - Required dependencies: none
-- Optional dependencies: none
+- Optional dependencies: JEI (not declared on 0.49.10; skipped — EMI + TMRV is the viewer)
 - Recommended companions: none
 - Config changes: none — defaults
 - World-data / removability: clean to remove

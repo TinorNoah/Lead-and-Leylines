@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from envfile import load_env_file
+from pack_jvm import apply_to_prism_instance
 from read_pack_versions import PACK_TOML, read_pack
 
 PACK_DIR = ROOT / "pack"
@@ -249,6 +250,8 @@ def update_prism() -> Path | None:
         run_installer(java, bootstrap, pack_url, minecraft)
     finally:
         stop_serve(proc)
+    jvm_args = apply_to_prism_instance(instance)
+    print(f"Prism JVM args {jvm_args}")
     print(f"Prism synced to pack {pack['pack_version']}")
     return instance
 
