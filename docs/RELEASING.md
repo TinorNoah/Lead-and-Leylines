@@ -8,23 +8,30 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
 
 `python scripts/release.py vX.Y.Z --channel <channel>` (default `alpha`).
 
-| Channel | GitHub | CurseForge | Modrinth | Test server | Local Prism |
+| Channel | GitHub | CurseForge | Modrinth | Live instance | Local Prism |
 |---|---|---|---|---|---|
-| `alpha` | Prerelease | Alpha | Alpha | Updated | Synced |
-| `beta` | Prerelease | Beta | Beta | Updated | Synced |
-| `release` | Stable release (not a prerelease) | Release | Release | Updated | Synced |
+| `alpha` | Prerelease | Alpha (client zip + server zip) | Alpha (mrpack + server zip) | Updated first | Synced last |
+| `beta` | Prerelease | Beta (client zip + server zip) | Beta (mrpack + server zip) | Updated first | Synced last |
+| `release` | Official Latest | Release (client zip + server zip) | Release (mrpack + server zip) | Updated first | Synced last |
 
-Default is `alpha`: GitHub prerelease, CurseForge alpha, Modrinth alpha. Use `--channel release` only for a public stable.
+Default is `alpha`: GitHub prerelease, then Wings updates the live instance, then CurseForge/Modrinth **alpha**. `--channel release` is GitHub Latest, then Wings, then CurseForge/Modrinth **release**. Use `--channel release` only for a public stable.
 
-The operator machine runs `scripts/release.py`: tag, GitHub Release (client zip, mrpack, server-mods zip), then the live instance unless `--skip-server`, then local Prism unless `--skip-prism`. Missing `GH_TOKEN` skips GitHub tagging, but still updates the test server and Prism.
+Order on the operator machine:
 
-GitHub Actions (`.github/workflows/publish-stores.yml`) publishes CurseForge and Modrinth from every `v*` tag, using the GitHub Release zip/mrpack (not the server-mods zip). The annotated tag body includes `channel:alpha|beta|release`; if that line is missing, a GitHub prerelease maps to store `alpha` and GitHub Latest maps to store `release`. `workflow_dispatch` can set the channel for an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`, `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID`). Do not hardcode those values. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+1. Tag and GitHub Release (client zip, mrpack, server-mods zip)
+2. Wings pull / live instance update (unless `--skip-server`)
+3. GitHub Actions publishes CurseForge and Modrinth (unless `--skip-stores`)
+4. Local Prism sync (unless `--skip-prism`)
 
-`--upload-stores` also uploads from the operator machine when `.env` has those values. `--skip-curseforge` / `--skip-modrinth` still skip a local store upload.
+Missing `GH_TOKEN` skips GitHub tagging and store dispatch, but still updates the live instance and Prism.
+
+GitHub Actions (`.github/workflows/publish-stores.yml`) is **dispatched after** the live instance update. It does not run on tag push. It uploads the GitHub Release client zip as the CurseForge primary file and the server-mods zip as an additional file of that primary. Modrinth gets the mrpack as primary and the same server-mods zip as an extra file. `workflow_dispatch` can retry an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`, `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID`). Do not hardcode those values. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+
+`--upload-stores` also uploads from the operator machine when `.env` has those values (same client + server files, after Wings). `--skip-curseforge` / `--skip-modrinth` still skip a store.
 
 ### No promoting a prerelease tag
 
-Do not later re-upload the same `X.Y.Z` as a store `release`. An alpha or beta tag stays that channel on the stores. Cut a **new** version tag and run `release.py --channel release` for a stable store build.
+Do not later re-upload the same `X.Y.Z` as a store `release`. A GitHub prerelease stays alpha/beta on the stores. Cut a **new** version tag and run `release.py --channel release` for an official GitHub Latest plus store release.
 
 ## Changelog
 

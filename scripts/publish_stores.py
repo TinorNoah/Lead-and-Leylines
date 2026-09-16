@@ -8,9 +8,11 @@ the operator passed in — do not append server or hosting details.
 from __future__ import annotations
 
 import json
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Any
 
@@ -209,20 +211,21 @@ def upload_curseforge(
     changelog: str,
     minecraft: str,
     channel: str,
-) -> None:
-    version_ids = curseforge_minecraft_version_ids(token, minecraft)
-    metadata = json.dumps(
-        {
-            "changelog": changelog,
-            "changelogType": "markdown",
-            "displayName": name,
-            "gameVersions": version_ids,
-            "releaseType": channel,
-        }
-    ).encode("utf-8")
+    parent_file_id: int | None = None,
+) -> int:
+    metadata: dict[str, Any] = {
+        "changelog": changelog,
+        "changelogType": "markdown",
+        "displayName": name,
+        "releaseType": channel,
+    }
+    if parent_file_id is not None:
+        metadata["parentFileID"] = parent_file_id
+    else:
+        metadata["gameVersions"] = curseforge_minecraft_version_ids(token, minecraft)
     body, content_type = multipart.encode(
         [
-            ("metadata", metadata, None, "application/json"),
+            ("metadata", json.dumps(metadata).encode("utf-8"), None, "application/json"),
             ("file", zip_path.read_bytes(), zip_path.name, "application/zip"),
         ]
     )
@@ -239,7 +242,10 @@ def upload_curseforge(
         timeout=max(180, 60 + zip_path.stat().st_size // 50_000),
     )
     file_id = payload.get("id") if isinstance(payload, dict) else None
-    print(f"curseforge file {file_id or zip_path.name}")
+    if not file_id:
+        raise SystemExit(f"CurseForge did not return a file id for {zip_path.name}")
+    print(f"curseforge file {file_id} ({zip_path.name})")
+    return int(file_id)
 
 
 def upload_modrinth(
@@ -253,11 +259,28 @@ def upload_modrinth(
     minecraft: str,
     loader: str,
     channel: str,
+    server_zip: Path | None = None,
 ) -> None:
     resolved, reason = resolve(project, token)
     if not resolved:
         print(f"Modrinth upload skipped: {reason}")
         return
+    fields = [
+        (
+            "client",
+            mrpack.read_bytes(),
+            mrpack.name,
+            "application/x-modrinth-modpack+zip",
+        )
+    ]
+    file_parts = ["client"]
+    total_size = mrpack.stat().st_size
+    if server_zip is not None:
+        fields.append(
+            ("server", server_zip.read_bytes(), server_zip.name, "application/zip")
+        )
+        file_parts.append("server")
+        total_size += server_zip.stat().st_size
     data = json.dumps(
         {
             "name": name,
@@ -267,19 +290,16 @@ def upload_modrinth(
             "game_versions": [minecraft],
             "version_type": channel,
             "loaders": [loader],
-            "featured": True,
+            "featured": channel == "release",
             "status": "listed",
             "project_id": resolved,
-            "file_parts": ["file"],
-            "primary_file": "file",
+            "file_parts": file_parts,
+            "primary_file": "client",
             "environment": "client_and_server",
         }
     ).encode("utf-8")
     body, content_type = multipart.encode(
-        [
-            ("data", data, None, "application/json"),
-            ("file", mrpack.read_bytes(), mrpack.name, "application/x-modrinth-modpack+zip"),
-        ]
+        [("data", data, None, "application/json"), *fields]
     )
     payload = _request(
         f"{MODRINTH_API}/version",
@@ -291,7 +311,85 @@ def upload_modrinth(
             "Content-Type": content_type,
         },
         data=body,
-        timeout=max(180, 60 + mrpack.stat().st_size // 50_000),
+        timeout=max(180, 60 + total_size // 50_000),
     )
     version_id = payload.get("id") if isinstance(payload, dict) else None
-    print(f"modrinth version {version_id or mrpack.name} ({reason})")
+    extra = f" + {server_zip.name}" if server_zip is not None else ""
+    print(f"modrinth version {version_id or mrpack.name}{extra} ({reason})")
+
+
+def dispatch_store_publish(
+    *,
+    owner: str,
+    repo: str,
+    tag: str,
+    channel: str,
+    token: str,
+    skip_curseforge: bool = False,
+    skip_modrinth: bool = False,
+) -> None:
+    inputs = {"tag": tag, "channel": channel}
+    if skip_curseforge:
+        inputs["skip_curseforge"] = "true"
+    if skip_modrinth:
+        inputs["skip_modrinth"] = "true"
+    _request(
+        f"{GITHUB_API}/repos/{owner}/{repo}/actions/workflows/publish-stores.yml/dispatches",
+        method="POST",
+        headers={**github_headers(token), "Content-Type": "application/json"},
+        data=json.dumps({"ref": "main", "inputs": inputs}).encode("utf-8"),
+    )
+    print(f"store publish dispatched for {tag} as {channel}")
+
+
+def wait_for_store_publish(
+    *,
+    owner: str,
+    repo: str,
+    tag: str,
+    token: str,
+    timeout_s: int = 2700,
+) -> str:
+    started = datetime.now(timezone.utc) - timedelta(seconds=20)
+    deadline = time.time() + timeout_s
+    run_id: int | None = None
+    expected = f"Publish stores {tag}"
+    while time.time() < deadline:
+        payload = _request(
+            f"{GITHUB_API}/repos/{owner}/{repo}/actions/workflows/"
+            "publish-stores.yml/runs?event=workflow_dispatch&per_page=10",
+            headers=github_headers(token),
+        )
+        runs = payload.get("workflow_runs") if isinstance(payload, dict) else None
+        if not run_id:
+            for run in runs or []:
+                if not isinstance(run, dict):
+                    continue
+                name = str(run.get("display_title") or run.get("name") or "")
+                created_raw = str(run.get("created_at") or "")
+                if expected not in name:
+                    continue
+                created = datetime.fromisoformat(created_raw.replace("Z", "+00:00"))
+                if created < started:
+                    continue
+                run_id = int(run["id"])
+                url = str(run.get("html_url") or "")
+                print(f"store publish {url}")
+                break
+        if run_id:
+            run = _request(
+                f"{GITHUB_API}/repos/{owner}/{repo}/actions/runs/{run_id}",
+                headers=github_headers(token),
+            )
+            if not isinstance(run, dict):
+                raise SystemExit("GitHub Actions run payload was not an object")
+            status = str(run.get("status") or "")
+            conclusion = str(run.get("conclusion") or "")
+            url = str(run.get("html_url") or "")
+            if status == "completed":
+                if conclusion != "success":
+                    raise SystemExit(f"store publish {conclusion}: {url}")
+                print(f"store publish {conclusion} {url}")
+                return url
+        time.sleep(20)
+    raise SystemExit(f"timed out waiting for store publish of {tag}")
