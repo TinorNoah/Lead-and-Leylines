@@ -185,21 +185,52 @@ def replace_github_release_asset(
     return github_download_url(owner=owner, repo=repo, tag=tag, filename=path.name)
 
 
-def curseforge_minecraft_version_ids(token: str, minecraft: str) -> list[int]:
+def curseforge_game_version_ids(
+    token: str,
+    minecraft: str,
+    loader: str,
+) -> list[int]:
     payload = _request(
         f"{CURSEFORGE_UPLOAD}/game/versions",
         headers={"X-Api-Token": token, "User-Agent": USER_AGENT, "Accept": "application/json"},
     )
     if not isinstance(payload, list):
         raise SystemExit("CurseForge game versions response was not a list")
-    ids = [
-        int(item["id"])
-        for item in payload
-        if isinstance(item, dict) and str(item.get("name") or "") == minecraft
-    ]
-    if not ids:
-        raise SystemExit(f"CurseForge has no game version named {minecraft!r}")
-    return ids
+    slug = minecraft.replace(".", "-")
+    minecraft_ids: list[int] = []
+    loader_ids: list[int] = []
+    environment_ids: list[int] = []
+    for item in payload:
+        if not isinstance(item, dict) or "id" not in item:
+            continue
+        if int(item.get("gameVersionTypeID") or 0) in {0, 1}:
+            continue
+        version_id = int(item["id"])
+        name = str(item.get("name") or "")
+        item_slug = str(item.get("slug") or "")
+        if name == minecraft and (not item_slug or item_slug in {slug, minecraft}):
+            minecraft_ids.append(version_id)
+        elif name.lower() == loader.lower():
+            loader_ids.append(version_id)
+        elif name in {"Client", "Server"}:
+            environment_ids.append(version_id)
+    minecraft_ids = list(dict.fromkeys(minecraft_ids))
+    loader_ids = list(dict.fromkeys(loader_ids))
+    environment_ids = list(dict.fromkeys(environment_ids))
+    if len(minecraft_ids) != 1:
+        raise SystemExit(
+            f"CurseForge expected one {minecraft!r} game version, found {minecraft_ids}"
+        )
+    if len(loader_ids) != 1:
+        raise SystemExit(
+            f"CurseForge expected one {loader!r} loader version, found {loader_ids}"
+        )
+    if len(environment_ids) != 2:
+        raise SystemExit(
+            "CurseForge expected Client and Server environments, "
+            f"found {environment_ids}"
+        )
+    return minecraft_ids + loader_ids + environment_ids
 
 
 def upload_curseforge(
@@ -210,6 +241,7 @@ def upload_curseforge(
     name: str,
     changelog: str,
     minecraft: str,
+    loader: str,
     channel: str,
     parent_file_id: int | None = None,
 ) -> int:
@@ -222,7 +254,9 @@ def upload_curseforge(
     if parent_file_id is not None:
         metadata["parentFileID"] = parent_file_id
     else:
-        metadata["gameVersions"] = curseforge_minecraft_version_ids(token, minecraft)
+        metadata["gameVersions"] = curseforge_game_version_ids(
+            token, minecraft, loader
+        )
     body, content_type = multipart.encode(
         [
             ("metadata", json.dumps(metadata).encode("utf-8"), None, "application/json"),
