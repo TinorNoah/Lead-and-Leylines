@@ -16,9 +16,9 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
 
 Only `--channel release` uploads to CurseForge or Modrinth. `alpha` and `beta` create a GitHub prerelease and update the test server; they do not touch the stores.
 
-`--skip-curseforge` / `--skip-modrinth` still skip a store even on `release`. Missing `CURSEFORGE_*` / `MODRINTH_*` in `.env` also skip that store with a log line. Missing `GH_TOKEN` fails. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+`--skip-curseforge` / `--skip-modrinth` still skip a store even on `release`. Missing `CURSEFORGE_*` / `MODRINTH_*` in `.env` also skip that store with a log line. Missing `GH_TOKEN` skips GitHub tagging and store uploads, but still updates the test server. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
 
-There is no tag GitHub Actions publish job. The operator machine runs `scripts/release.py`.
+There is no tag GitHub Actions publish job. The operator machine runs `scripts/release.py`. Every `release.py` run updates the test server unless `--skip-server` is passed.
 
 ### No promoting a prerelease tag
 

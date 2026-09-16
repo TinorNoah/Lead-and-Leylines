@@ -270,6 +270,8 @@ def deploy_server() -> None:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
     load_secrets()
     args = parse_args()
     tag, version = normalize_tag(args.tag)
@@ -318,80 +320,84 @@ def main() -> None:
     print(f"tag {tag}")
     print(f"github {owner}/{repo}")
     if not gh_token:
-        print("GitHub: missing GH_TOKEN in .env")
+        print("GitHub: missing GH_TOKEN in .env (stores and GitHub Release skipped)")
     if args.skip_server:
-        print("dedicated server: skip")
+        print("WARNING: skipping dedicated server update (--skip-server)")
+    else:
+        print("dedicated server: will update after GitHub (or immediately if GitHub is skipped)")
     if args.dry_run:
         print("dry-run: not tagging, uploading, or deploying")
         return
-    if not gh_token:
-        raise SystemExit("set GH_TOKEN in .env (never commit it)")
-    paths = export_client_artifacts(pack)
-    zip_path = paths["client_zip"]
-    mrpack_path = paths["mrpack"]
-    if not zip_path.is_file() or not mrpack_path.is_file():
-        raise SystemExit("packwiz export did not produce zip and mrpack")
-    print(f"exporting server mods zip -> {paths['server_zip'].name}")
-    build_server_mods_zip(pack, paths["server_zip"])
-    if git_output(["status", "--porcelain"]):
-        raise SystemExit("packwiz export dirtied the tree; commit the refresh and rerun")
-    run(["git", "push", "origin", "HEAD"])
-    run(["git", "tag", "-a", tag, "-m", name])
-    run(["git", "push", "origin", tag])
-    sha = git_output(["rev-parse", "HEAD"])
-    print(f"commit {sha}")
-    url, release_id = create_github_release(
-        owner=owner,
-        repo=repo,
-        tag=tag,
-        name=name,
-        body=changelog,
-        token=gh_token,
-        target=sha,
-        prerelease=args.channel != "release",
-    )
-    upload_github_asset(
-        owner=owner, repo=repo, release_id=release_id, path=zip_path, token=gh_token
-    )
-    upload_github_asset(
-        owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
-    )
-    upload_github_asset(
-        owner=owner,
-        repo=repo,
-        release_id=release_id,
-        path=paths["server_zip"],
-        token=gh_token,
-    )
-    print(f"github release {url}")
-    if not skip_curseforge and cf_token and cf_project:
-        upload_curseforge(
-            project_id=cf_project,
-            token=cf_token,
-            zip_path=zip_path,
+    url = ""
+    if gh_token:
+        paths = export_client_artifacts(pack)
+        zip_path = paths["client_zip"]
+        mrpack_path = paths["mrpack"]
+        if not zip_path.is_file() or not mrpack_path.is_file():
+            raise SystemExit("packwiz export did not produce zip and mrpack")
+        print(f"exporting server mods zip -> {paths['server_zip'].name}")
+        build_server_mods_zip(pack, paths["server_zip"])
+        if git_output(["status", "--porcelain"]):
+            raise SystemExit("packwiz export dirtied the tree; commit the refresh and rerun")
+        run(["git", "push", "origin", "HEAD"])
+        run(["git", "tag", "-a", tag, "-m", name])
+        run(["git", "push", "origin", tag])
+        sha = git_output(["rev-parse", "HEAD"])
+        print(f"commit {sha}")
+        url, release_id = create_github_release(
+            owner=owner,
+            repo=repo,
+            tag=tag,
             name=name,
-            changelog=changelog,
-            minecraft=pack["minecraft"],
-            channel=args.channel,
+            body=changelog,
+            token=gh_token,
+            target=sha,
+            prerelease=args.channel != "release",
         )
-    elif not skip_curseforge:
-        print("CurseForge upload skipped: CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID not set")
-    if not skip_modrinth and mr_token and mr_project:
-        upload_modrinth(
-            project=mr_project,
-            token=mr_token,
-            mrpack=mrpack_path,
-            name=name,
-            version=version,
-            changelog=changelog,
-            minecraft=pack["minecraft"],
-            loader=pack["loader"],
-            channel=args.channel,
+        upload_github_asset(
+            owner=owner, repo=repo, release_id=release_id, path=zip_path, token=gh_token
         )
-    elif not skip_modrinth:
-        print("Modrinth upload skipped: MODRINTH_TOKEN or MODRINTH_PROJECT_ID not set")
+        upload_github_asset(
+            owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
+        )
+        upload_github_asset(
+            owner=owner,
+            repo=repo,
+            release_id=release_id,
+            path=paths["server_zip"],
+            token=gh_token,
+        )
+        print(f"github release {url}")
+        if not skip_curseforge and cf_token and cf_project:
+            upload_curseforge(
+                project_id=cf_project,
+                token=cf_token,
+                zip_path=zip_path,
+                name=name,
+                changelog=changelog,
+                minecraft=pack["minecraft"],
+                channel=args.channel,
+            )
+        elif not skip_curseforge:
+            print("CurseForge upload skipped: CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID not set")
+        if not skip_modrinth and mr_token and mr_project:
+            upload_modrinth(
+                project=mr_project,
+                token=mr_token,
+                mrpack=mrpack_path,
+                name=name,
+                version=version,
+                changelog=changelog,
+                minecraft=pack["minecraft"],
+                loader=pack["loader"],
+                channel=args.channel,
+            )
+        elif not skip_modrinth:
+            print("Modrinth upload skipped: MODRINTH_TOKEN or MODRINTH_PROJECT_ID not set")
     if not args.skip_server:
         deploy_server()
+    if not gh_token:
+        raise SystemExit("set GH_TOKEN in .env to create the GitHub Release (never commit it)")
     print("done")
     print(url)
 
