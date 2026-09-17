@@ -20,7 +20,7 @@ python scripts/deploy_server.py --dry-run
 python scripts/deploy_server.py --curseforge --reinstall --wait 600
 ```
 
-`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this test server, then CurseForge/Modrinth (client + server packs), then local Prism. Default is GitHub prerelease + store alpha. `--channel release` is official on GitHub and both stores. Every release updates the test server unless you pass `--skip-server`, stores unless `--skip-stores`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
+`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this test server, then CurseForge (client + server packs), then local Prism. Default is GitHub prerelease + store alpha. `--channel release` is official on GitHub and CurseForge. Every release updates the test server unless you pass `--skip-server`, stores unless `--skip-stores`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
 
 `--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release when `GH_TOKEN` is set, and has Wings pull it (or writes the local zip if GitHub is skipped). Reinstalling the NeoForge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/NeoForge versions are unchanged.
 
@@ -28,7 +28,7 @@ The script owns the server as `PANEL_OWNER_USERNAME` and uses a free allocation 
 
 ### ATLauncher (friends)
 
-Send them `dist/Lead-and-Leylines-<pack version>.mrpack` (or the `.zip`). In ATLauncher: **Instances → Import → Browse** → select the file → **Import** → name it → **Install**. Store search will not find this pack until CurseForge/Modrinth listings are public. GitHub download URLs often fail ATLauncher's URL import; send the file.
+Send them `dist/Lead-and-Leylines-<pack version>.mrpack` (or the `.zip`). In ATLauncher: **Instances → Import → Browse** → select the file → **Import** → name it → **Install**. Store search will not find this pack until the CurseForge listing is public. GitHub download URLs often fail ATLauncher's URL import; send the file.
 
 ### After CurseForge is public
 

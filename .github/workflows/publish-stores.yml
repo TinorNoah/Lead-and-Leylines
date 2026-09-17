@@ -1,9 +1,8 @@
 name: Publish stores
 
 # Operator machine (release.py): GitHub Release, then Wings, then this job.
-# Uploads client zip + server-mods zip to CurseForge and mrpack + server-mods
-# zip to Modrinth. Default channel is alpha (GitHub prerelease). Do not put
-# Minecraft or loader version literals in this file.
+# Uploads client zip + server-mods zip to CurseForge. Default channel is alpha
+# (GitHub prerelease). Do not put Minecraft or loader version literals in this file.
 
 on:
   workflow_dispatch:
@@ -22,10 +21,6 @@ on:
         default: alpha
       skip_curseforge:
         description: Skip CurseForge (retry after a successful CurseForge upload)
-        type: boolean
-        default: false
-      skip_modrinth:
-        description: Skip Modrinth (retry after a successful Modrinth upload)
         type: boolean
         default: false
 
@@ -99,10 +94,9 @@ jobs:
           shopt -s nullglob
           mkdir -p artifacts
           for i in $(seq 1 40); do
-            if gh release download "$TAG" --dir artifacts --pattern "*.mrpack" --pattern "*.zip"; then
+            if gh release download "$TAG" --dir artifacts --pattern "*.zip"; then
               clients=(artifacts/*.zip)
               servers=(artifacts/*-server-mods.zip)
-              mrpacks=(artifacts/*.mrpack)
               client_count=0
               for zip in "${clients[@]}"; do
                 case "$zip" in
@@ -110,7 +104,7 @@ jobs:
                   *) client_count=$((client_count + 1)) ;;
                 esac
               done
-              if [ "$client_count" -eq 1 ] && [ ${#servers[@]} -eq 1 ] && [ ${#mrpacks[@]} -eq 1 ]; then
+              if [ "$client_count" -eq 1 ] && [ ${#servers[@]} -eq 1 ]; then
                 echo "client and server artifacts ready"
                 exit 0
               fi
@@ -120,7 +114,7 @@ jobs:
             mkdir -p artifacts
             sleep 15
           done
-          echo "Timed out waiting for GitHub Release client zip, server-mods zip, and mrpack on $TAG"
+          echo "Timed out waiting for GitHub Release client zip and server-mods zip on $TAG"
           exit 1
 
       - name: Write store notes from CHANGELOG.md
@@ -130,16 +124,11 @@ jobs:
         env:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           CURSEFORGE_PROJECT_ID: ${{ secrets.CURSEFORGE_PROJECT_ID }}
-          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
-          MODRINTH_PROJECT_ID: ${{ secrets.MODRINTH_PROJECT_ID }}
         run: |
           set -euo pipefail
           extra=()
           if [ "${{ inputs.skip_curseforge }}" = "true" ]; then
             extra+=(--skip-curseforge)
-          fi
-          if [ "${{ inputs.skip_modrinth }}" = "true" ]; then
-            extra+=(--skip-modrinth)
           fi
           python scripts/publish_store_files.py \
             --artifacts artifacts \

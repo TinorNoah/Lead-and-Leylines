@@ -4,10 +4,10 @@
 Pass a tag. Notes default to the matching ## [X.Y.Z] section in CHANGELOG.md
 (the GitHub Release body). Default --channel alpha creates a GitHub prerelease;
 release is a stable GitHub Latest. After GitHub and the live instance update,
-GitHub Actions uploads client and server packs to CurseForge/Modrinth (alpha
-for a prerelease, release for Latest). Pass --upload-stores to also upload
-from this machine. This script never edits CHANGELOG.md. Do not put server or
-hosting details in the notes; they are not part of the public release.
+GitHub Actions uploads client and server packs to CurseForge (alpha for a
+prerelease, release for Latest). Pass --upload-stores to also upload from this
+machine. This script never edits CHANGELOG.md. Do not put server or hosting
+details in the notes; they are not part of the public release.
 
   python scripts/release.py v0.0.3 --channel alpha --dry-run
   python scripts/release.py v0.0.3 --channel release
@@ -34,7 +34,6 @@ from publish_stores import (
     dispatch_store_publish,
     upload_curseforge,
     upload_github_asset,
-    upload_modrinth,
     wait_for_store_publish,
 )
 from read_pack_versions import ROOT, read_pack
@@ -227,8 +226,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
             "Tag, create a GitHub Release, update the live instance, then "
-            "publish CurseForge/Modrinth from GitHub Actions. Local Prism "
-            "syncs last."
+            "publish CurseForge from GitHub Actions. Local Prism syncs last."
         )
     )
     parser.add_argument("tag", help="release tag (vX.Y.Z or X.Y.Z)")
@@ -236,7 +234,7 @@ def parse_args() -> argparse.Namespace:
         "--changelog",
         metavar="FILE",
         help=(
-            "markdown notes used as the GitHub/CurseForge/Modrinth body "
+            "markdown notes used as the GitHub/CurseForge body "
             "(default: ## [X.Y.Z] section in CHANGELOG.md)"
         ),
     )
@@ -253,7 +251,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--upload-stores",
         action="store_true",
-        help="also upload CurseForge/Modrinth from this machine (default: GitHub Actions)",
+        help="also upload CurseForge from this machine (default: GitHub Actions)",
     )
     parser.add_argument(
         "--dry-run",
@@ -264,11 +262,6 @@ def parse_args() -> argparse.Namespace:
         "--skip-curseforge",
         action="store_true",
         help="do not upload the CurseForge zip",
-    )
-    parser.add_argument(
-        "--skip-modrinth",
-        action="store_true",
-        help="do not upload the Modrinth mrpack",
     )
     parser.add_argument(
         "--skip-server",
@@ -283,7 +276,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-stores",
         action="store_true",
-        help="do not dispatch CurseForge/Modrinth GitHub Actions",
+        help="do not dispatch CurseForge GitHub Actions",
     )
     return parser.parse_args()
 
@@ -306,33 +299,20 @@ def main() -> None:
     tag, version = normalize_tag(args.tag)
     publish_to_stores = args.upload_stores
     skip_curseforge = args.skip_curseforge or not publish_to_stores
-    skip_modrinth = args.skip_modrinth or not publish_to_stores
     changelog = read_changelog(args, version)
     cf_token = env("CURSEFORGE_TOKEN")
     cf_project = env("CURSEFORGE_PROJECT_ID")
-    mr_token = env("MODRINTH_TOKEN")
-    mr_project = env("MODRINTH_PROJECT_ID")
     print(f"channel {args.channel}")
-    for reason in (
-        store_skip_reason(
-            "CurseForge",
-            channel=args.channel,
-            publish_to_stores=publish_to_stores,
-            skip_flag=args.skip_curseforge,
-            flag_name="--skip-curseforge",
-            has_creds=bool(cf_token and cf_project),
-        ),
-        store_skip_reason(
-            "Modrinth",
-            channel=args.channel,
-            publish_to_stores=publish_to_stores,
-            skip_flag=args.skip_modrinth,
-            flag_name="--skip-modrinth",
-            has_creds=bool(mr_token and mr_project),
-        ),
-    ):
-        if reason:
-            print(reason)
+    reason = store_skip_reason(
+        "CurseForge",
+        channel=args.channel,
+        publish_to_stores=publish_to_stores,
+        skip_flag=args.skip_curseforge,
+        flag_name="--skip-curseforge",
+        has_creds=bool(cf_token and cf_project),
+    )
+    if reason:
+        print(reason)
     print("--- changelog ---")
     print(changelog)
     print("---")
@@ -359,12 +339,12 @@ def main() -> None:
     else:
         print("Prism: will sync the local instance after stores")
     if args.skip_stores:
-        print("WARNING: skipping CurseForge/Modrinth GitHub Actions (--skip-stores)")
+        print("WARNING: skipping CurseForge GitHub Actions (--skip-stores)")
     elif args.upload_stores:
-        print("CurseForge/Modrinth: will upload from this machine after the live instance")
+        print("CurseForge: will upload from this machine after the live instance")
     else:
         print(
-            "CurseForge/Modrinth: GitHub Actions after the live instance "
+            "CurseForge: GitHub Actions after the live instance "
             f"(client + server packs as {args.channel})"
         )
     if args.dry_run:
@@ -415,7 +395,6 @@ def main() -> None:
         deploy_server()
     if gh_token and paths and args.upload_stores:
         zip_path = paths["client_zip"]
-        mrpack_path = paths["mrpack"]
         if not skip_curseforge and cf_token and cf_project:
             parent_id = upload_curseforge(
                 project_id=cf_project,
@@ -440,21 +419,6 @@ def main() -> None:
             )
         elif not skip_curseforge:
             print("CurseForge upload skipped: CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID not set")
-        if not skip_modrinth and mr_token and mr_project:
-            upload_modrinth(
-                project=mr_project,
-                token=mr_token,
-                mrpack=mrpack_path,
-                name=name,
-                version=version,
-                changelog=changelog,
-                minecraft=pack["minecraft"],
-                loader=pack["loader"],
-                channel=args.channel,
-                server_zip=paths["server_zip"],
-            )
-        elif not skip_modrinth:
-            print("Modrinth upload skipped: MODRINTH_TOKEN or MODRINTH_PROJECT_ID not set")
     elif gh_token and not args.skip_stores:
         dispatch_store_publish(
             owner=owner,
@@ -463,7 +427,6 @@ def main() -> None:
             channel=args.channel,
             token=gh_token,
             skip_curseforge=args.skip_curseforge,
-            skip_modrinth=args.skip_modrinth,
         )
         wait_for_store_publish(owner=owner, repo=repo, tag=tag, token=gh_token)
     if not args.skip_prism:

@@ -13,9 +13,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
-- The pack is rebuilt for Minecraft 1.21.1 NeoForge. This cut has no mods. New world required.
+- The pack is rebuilt for Minecraft 1.21.1 NeoForge. New world required.
+- Discontinued Modrinth as a publishing target; CurseForge is now the sole public store listing.
 
 ### Added
+
+- First performance and smoothness stack: Sodium and Iris (replacing Embeddium and Oculus), Lithium, FerriteCore, ModernFix, ImmediatelyFast, FastWorkbench / FastFurnace / FastSuite, and related leak, crash, and entity helpers.
 
 ### Fixed
 
