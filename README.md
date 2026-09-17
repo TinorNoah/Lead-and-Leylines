@@ -17,15 +17,15 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 | Mod loader | NeoForge 21.1.250 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
 | Packwiz format | packwiz:1.1.0 |
-| Mods | Empty rebuild (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
+| Mods | Performance / client stack (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
 A git tag `vX.Y.Z` must match pack version `X.Y.Z`. Tags `v0.0.1`–`v0.0.9` already shipped as 1.20.1 Forge; do not reuse them. The first 1.21.1 NeoForge GitHub/store ship is `v0.1.0`.
 
 ## Play
 
-The pack is in early development on Minecraft 1.21.1 NeoForge. This cut is an empty pack (no mods yet). New world required. CurseForge and Modrinth listings are not public yet.
+The pack is in early development on Minecraft 1.21.1 NeoForge. This cut has the first performance and client-smoothness mods. New world required. The CurseForge listing is not public yet.
 
-**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After store listings exist, install from [Modrinth](https://modrinth.com/modpack/lead-and-leylines) or CurseForge instead.
+**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After the store listing exists, install from CurseForge instead.
 
 Prism developers: [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -43,7 +43,7 @@ Pack files in this repo (TOML, configs, docs) are [MIT](LICENSE). The Minecraft 
 | `pack/` | Packwiz root. This tree is what gets exported. |
 | `server/` | Dedicated-server overlay. Never indexed or exported. |
 | `scripts/` | Pack export, `release.py`, `deploy_server.py`, and `update_prism.py`. |
-| `.agents/skills/` | Shared agent skills (`minecraft-modding`, `add-mod`, `test-server`, `publish-release`). |
+| `.agents/skills/` | Shared agent skills (`minecraft-modding`, `add-mod`, `local-smoke-test`, `test-server`, `publish-release`). |
 | `docs/mods/` | Manifest, decision logs, and config notes (not exported). |
 
 One pack, not two roots. Client vs server files use packwiz `side` (`client` / `server` / `both`).

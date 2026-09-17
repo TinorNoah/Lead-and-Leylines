@@ -1,0 +1,4 @@
+#!/bin/sh
+# Optional local hook. Enable with: git config core.hooksPath .githooks
+root="$(git rev-parse --show-toplevel)"
+exec python3 "$root/scripts/pre_commit_check.py"

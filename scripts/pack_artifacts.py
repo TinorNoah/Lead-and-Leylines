@@ -12,6 +12,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
+from check_exports import print_report, report_embedded_mods
 from read_pack_versions import PACK_TOML, ROOT, read_pack
 
 PACK_DIR = ROOT / "pack"
@@ -57,6 +58,8 @@ def export_client_artifacts(pack: dict[str, str]) -> dict[str, Path]:
         "-o",
         str(paths["mrpack"]),
     )
+    findings = report_embedded_mods(paths["client_zip"], paths["mrpack"])
+    print_report(findings)
     return paths
 
 
@@ -156,7 +159,7 @@ def atlauncher_instructions(paths: dict[str, Path]) -> str:
         "  3. Name the instance and click Install.\n"
         "  4. Set that instance's Java arguments to -XX:+UseZGC (pack/user_jvm_args.txt).\n"
         "  5. Play.\n"
-        "  CurseForge/Modrinth search will not find this pack until those listings are public."
+        "  CurseForge search will not find this pack until that listing is public."
     )
 
 

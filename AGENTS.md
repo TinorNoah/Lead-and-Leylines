@@ -20,7 +20,7 @@ Run packwiz from `pack/`:
 - `packwiz update --all`
 - `packwiz curseforge export` / `packwiz modrinth export`
 - `packwiz serve` → `http://localhost:8080/pack.toml`
-- From repo root: `python scripts/release.py vX.Y.Z --changelog notes.md` — GitHub Release; then dedicated test server; then GitHub Actions for CurseForge + Modrinth (client and server packs; default alpha); then local Prism (`scripts/update_prism.py`). Changelog is the public notes only.
+- From repo root: `python scripts/release.py vX.Y.Z --changelog notes.md` — GitHub Release; then dedicated test server; then GitHub Actions for CurseForge (client and server packs; default alpha); then local Prism (`scripts/update_prism.py`). Changelog is the public notes only.
 
 Never commit `.jar` files, launcher instance folders, `.env`, or tokens.
 
@@ -30,7 +30,7 @@ Never commit `.jar` files, launcher instance folders, `.env`, or tokens.
 - `server/` — dedicated-server overlay; never indexed
 - `.agents/skills/` — shared agent skills (not `.cursor/skills/`)
 - `scripts/release.py` — tag + GitHub Release + local server update + Prism sync
-- `.github/workflows/publish-stores.yml` — CurseForge + Modrinth after Wings (default alpha; client + server files)
+- `.github/workflows/publish-stores.yml` — CurseForge after Wings (default alpha; client + server files)
 
 Use packwiz `side` (`client` / `server` / `both`) on mods and configs. One pack, not two roots.
 
@@ -45,14 +45,14 @@ See CONTRIBUTING.md for the full loop. `python scripts/release.py` also runs `py
 
 ## Publishing
 
-`python scripts/release.py vX.Y.Z --changelog notes.md` on `main` after `pack.toml` `version` is `X.Y.Z`. The changelog is the GitHub Release body and the CurseForge/Modrinth notes. Do not mention the test server, panel, or join address there. Operator tokens live in gitignored `.env`, never in git:
+`python scripts/release.py vX.Y.Z --changelog notes.md` on `main` after `pack.toml` `version` is `X.Y.Z`. The changelog is the GitHub Release body and the CurseForge notes. Do not mention the test server, panel, or join address there. Operator tokens live in gitignored `.env`, never in git:
 
 - `GH_TOKEN` (GitHub Release + Wings pull)
-- Optional `CURSEFORGE_*` / `MODRINTH_*` only with `--upload-stores` (`MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug)
+- Optional `CURSEFORGE_*` only with `--upload-stores`
 
 Store publish tokens live as GitHub Actions secrets.
 
-Never hardcode those values. CurseForge and Modrinth publish from GitHub Actions secrets after the live instance update (default alpha). Official `--channel release` is GitHub Latest plus store release. Local `.env` store keys are optional (`--upload-stores`). Missing `GH_TOKEN` skips the GitHub Release but still updates the test server and local Prism.
+Never hardcode those values. CurseForge publishes from GitHub Actions secrets after the live instance update (default alpha). Official `--channel release` is GitHub Latest plus store release. Local `.env` store keys are optional (`--upload-stores`). Missing `GH_TOKEN` skips the GitHub Release but still updates the test server and local Prism.
 
 ## Dedicated server
 
@@ -63,6 +63,7 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 - `minecraft-modding` — research, compatibility, approval, manifest (read before any install)
 - `add-mod` — packwiz install after `minecraft-modding` approval; then refresh
 - `update-changelog` — player-facing `[Unreleased]` bullet when a change is noticeable
+- `local-smoke-test` — local dedicated-server boot via `scripts/smoke_test.py` before `test-server`
 - `test-server` — dedicated server via `scripts/deploy_server.py` (`--from-local` until CurseForge is public); console still from the panel until a client API key exists
 - `publish-release` — only on an explicit `/publish-release`; runs `python scripts/release.py`
 
@@ -74,21 +75,23 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 - Never hardcode API tokens, platform project IDs, panel URLs, or node FQDNs; store them in gitignored `.env` (not in `mcp.json`). Missing `GH_TOKEN` in `.env` skips the GitHub Release attach; the test server still updates.
 - Keep agent skills under `.agents/skills/` (not `.cursor/skills/`) so any agent tool reads the same files.
 - Run the `publish-release` skill only on an explicit `/publish-release` invocation (`disable-model-invocation: true`).
-- Research each candidate mod in detail (compatibility first), ask why it belongs, and compare alternatives before installing. Get explicit install approval after that research; do not install from a named list until then. Prefer client and server changes that make the pack smoother without reliability issues. When adding recipe-bearing mods, check in-jar EMI coverage; do not add JEI or extra EMI addon jars unless requested.
+- Research each candidate mod in detail (compatibility first), ask why it belongs, and compare alternatives before installing. Get explicit install approval after that research; do not install from a named list until then. Prefer client and server changes that make the pack smoother without reliability issues. Do not stack overlapping optimizers. When adding recipe-bearing mods, check in-jar EMI coverage; do not add JEI or extra EMI addon jars unless requested.
+- Install with `packwiz curseforge install` first and confirm the new `.pw.toml` has `[update.curseforge]` (retry `--addon-id` / `--file-id` on a slug miss). Use `packwiz modrinth install` only when the mod is not on CurseForge; that fallback is a mod source, not a store listing. After a mod or config change, run `python scripts/smoke_test.py` before `test-server`.
 - Record mod decisions in `docs/mods/` (considered, chosen, held, or dropped; rationale; packwiz `side`); document only configs that need pack notes.
-- Keep agent skills short and single-purpose (checklists that link out). Policy, rationale, and examples live in `docs/` (for example `docs/RELEASING.md`), not in SKILL.md files.
+- Keep agent skills short and single-purpose (checklists that link out). Policy, rationale, and examples live in `docs/` (for example `docs/RELEASING.md` and `docs/mods/distribution.md`), not in SKILL.md files. Helper scripts stay single-purpose; do not fold new checks into `release.py` or `pack_artifacts.py` beyond a one-line hook.
 - Ship and deploy only through `python scripts/release.py` then `python scripts/deploy_server.py --from-local` (GitHub Release attach, then Wings `files/pull`), then `python scripts/update_prism.py`. Do not improvise local zip uploads or skip that sequence.
 
 ## Learned Workspace Facts
 
-- Pack display name is **Lead and Leylines** (`pack/pack.toml` `name`). GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Modrinth slug is `lead-and-leylines` (`https://modrinth.com/modpack/lead-and-leylines`). Pack files are MIT (`LICENSE`); third-party mods keep their own licenses. Modrinth listing: description from README pitch, license MIT, version environment client and server.
-- This is a long-term Minecraft NeoForge modpack managed with packwiz; never commit jars. The 1.20.1 Forge pack is frozen on branch `forge-1.20.1` (tag `archive/forge-1.20.1`).
+- Pack display name is **Lead and Leylines** (`pack/pack.toml` `name`). GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Pack files are MIT (`LICENSE`); third-party mods keep their own licenses. CurseForge is the sole public store listing. The `.mrpack` is still built for ATLauncher testers.
+- This is a long-term Minecraft NeoForge modpack managed with packwiz; never commit jars. The 1.20.1 Forge pack is frozen on branch `forge-1.20.1` (tag `archive/forge-1.20.1`). On 1.21.1, official Sodium / Iris / Lithium replace the Embeddium / Oculus / Radium stack.
 - Packwiz root is `pack/`; docs (including `docs/mods/` decision logs) and `.agents/` stay at the repo root and are not exported. Java 21 pack flags are `pack/user_jvm_args.txt` (`-XX:+UseZGC`); `scripts/update_prism.py` copies them into Prism `instance.cfg`. Dedicated NeoForge starts with `server/run.sh` (`bash run.sh` on the NeoForge egg) so `@user_jvm_args.txt` actually applies. Do not add `-XX:+ZGenerational`. Mrpack cannot auto-apply launcher JVM args.
-- Branching is GitHub Flow (`main`, feature branches, PRs); pack version `X.Y.Z` matches git tag `vX.Y.Z`. `python scripts/release.py vX.Y.Z` creates the GitHub Release from `CHANGELOG.md`, updates the live instance, then dispatches `.github/workflows/publish-stores.yml`.
+- Branching is GitHub Flow for agent-authored work (`main`, feature branches, PRs). Direct trivial human edits may go to `main`. Pack version `X.Y.Z` matches git tag `vX.Y.Z`. `python scripts/release.py vX.Y.Z` creates the GitHub Release from `CHANGELOG.md`, updates the live instance, then dispatches `.github/workflows/publish-stores.yml`.
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file and keep the README Pack details table in sync in the same change. Do not hardcode versions in skills.
 - One pack uses packwiz `side` (`client` / `server` / `both`); server overlay lives in `server/` (`run.sh`) and is never exported. `scripts/deploy_server.py` copies `pack/user_jvm_args.txt` onto the NeoForge instance as `/user_jvm_args.txt`. Pin `NEOFORGE_VERSION` to the exact `pack.toml` loader version; do not let the egg resolve 1.21.1 from `MC_VERSION` alone (it can pick 1.21.10 / 1.21.11). Server-logic optimizers we ship use `both` so Prism singleplayer matches the dedicated server.
 - Local Prism testing uses `packwiz serve` plus packwiz-installer-bootstrap against `http://localhost:8080/pack.toml`. `python scripts/release.py` also runs `scripts/update_prism.py` (serve on a free port, installer `-g`) unless `--skip-prism`. Instance path is `PRISM_INSTANCE_DIR` in `.env`, or the PrismLauncher instance whose `name` matches `pack.toml`. After removing a both-side worldgen or fluid mod, sync Prism before joining (fully quit the game first so leftover locked jars can be deleted) or the client crashes on missing registry objects.
 - Panel URL and Wings node FQDN come from gitignored `.env` (`PANEL_URL`, `PANEL_NODE_FQDN`). Deploy with `python scripts/deploy_server.py` (NeoForge egg; Wings `files/pull` of the GitHub Release `*-server-mods.zip` when `GH_TOKEN` is set, otherwise the local zip — not a GitHub raw pack.toml URL; Wings `files/write` of that zip is unreliable). Generic egg tracks the last published CurseForge file after that. Switching Minecraft or loader versions reinstalls the egg and wipes the test world.
-- `python scripts/release.py` exports zip + mrpack from `CHANGELOG.md` `## [X.Y.Z]` (the script is read-only on that file; promote `[Unreleased]` in the `publish-release` skill first). Default `--channel alpha` is a GitHub prerelease; after Wings, GitHub Actions uploads CurseForge/Modrinth as alpha (client pack + server-mods zip). `--channel release` is GitHub Latest plus store release. Do not later re-upload the same `X.Y.Z` as a store release — cut a new version. Then updates the panel locally. Do not mention the dedicated server, the panel, or the join address in GitHub Release notes, CHANGELOG.md, commit messages, or other GitHub-facing copy. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug. Channel and changelog policy: `docs/RELEASING.md`. Every `release.py` run updates the test server unless `--skip-server`, and local Prism unless `--skip-prism`.
+- `python scripts/release.py` exports zip + mrpack from `CHANGELOG.md` `## [X.Y.Z]` (the script is read-only on that file; promote `[Unreleased]` in the `publish-release` skill first). Default `--channel alpha` is a GitHub prerelease; after Wings, GitHub Actions uploads CurseForge as alpha (client pack + server-mods zip). `--channel release` is GitHub Latest plus store release. Do not later re-upload the same `X.Y.Z` as a store release — cut a new version. Then updates the panel locally. Do not mention the dedicated server, the panel, or the join address in GitHub Release notes, CHANGELOG.md, commit messages, or other GitHub-facing copy. Channel and changelog policy: `docs/RELEASING.md`. Every `release.py` run updates the test server unless `--skip-server`, and local Prism unless `--skip-prism`.
 - Use `.gitattributes` `* -text` so Windows line endings do not break packwiz hashes.
+- CurseForge-first metadata keeps export zips from embedding jars: `scripts/check_exports.py` reports `overrides/mods/` jars after export; `scripts/detect_curseforge.py` is a manual `packwiz curseforge detect` pass, not a release step. Local helpers: `scripts/smoke_test.py`, `scripts/lookup_mod.py`, `scripts/check_outdated.py` (report-only), `scripts/draft_changelog.py`. Optional `.githooks/pre-commit` (`git config core.hooksPath .githooks`) blocks staged jars and warns if mod TOML is staged without CHANGELOG.md.
 - `CLAUDE.md` is a one-line `@AGENTS.md` pointer.

@@ -2,32 +2,34 @@
 
 How versions, channels, and `CHANGELOG.md` work. Skills (`publish-release`, `update-changelog`) are short checklists; this file is the policy.
 
-The Pelican test server address is shared with testers out of band (Discord/DM/etc.). Never put it in the repo, GitHub Release text, CurseForge notes, or Modrinth notes.
+The Pelican test server address is shared with testers out of band (Discord/DM/etc.). Never put it in the repo, GitHub Release text, or CurseForge notes.
+
+Modrinth publishing was discontinued. CurseForge is the sole public store target. The `.mrpack` file is still built for ATLauncher testers; it is not uploaded to a Modrinth listing.
 
 ## Channels
 
 `python scripts/release.py vX.Y.Z --channel <channel>` (default `alpha`).
 
-| Channel | GitHub | CurseForge | Modrinth | Live instance | Local Prism |
-|---|---|---|---|---|---|
-| `alpha` | Prerelease | Alpha (client zip + server zip) | Alpha (mrpack + server zip) | Updated first | Synced last |
-| `beta` | Prerelease | Beta (client zip + server zip) | Beta (mrpack + server zip) | Updated first | Synced last |
-| `release` | Official Latest | Release (client zip + server zip) | Release (mrpack + server zip) | Updated first | Synced last |
+| Channel | GitHub | CurseForge | Live instance | Local Prism |
+|---|---|---|---|---|
+| `alpha` | Prerelease | Alpha (client zip + server zip) | Updated first | Synced last |
+| `beta` | Prerelease | Beta (client zip + server zip) | Updated first | Synced last |
+| `release` | Official Latest | Release (client zip + server zip) | Updated first | Synced last |
 
-Default is `alpha`: GitHub prerelease, then Wings updates the live instance, then CurseForge/Modrinth **alpha**. `--channel release` is GitHub Latest, then Wings, then CurseForge/Modrinth **release**. Use `--channel release` only for a public stable.
+Default is `alpha`: GitHub prerelease, then Wings updates the live instance, then CurseForge **alpha**. `--channel release` is GitHub Latest, then Wings, then CurseForge **release**. Use `--channel release` only for a public stable.
 
 Order on the operator machine:
 
 1. Tag and GitHub Release (client zip, mrpack, server-mods zip)
 2. Wings pull / live instance update (unless `--skip-server`)
-3. GitHub Actions publishes CurseForge and Modrinth (unless `--skip-stores`)
+3. GitHub Actions publishes CurseForge (unless `--skip-stores`)
 4. Local Prism sync (unless `--skip-prism`)
 
 Missing `GH_TOKEN` skips GitHub tagging and store dispatch, but still updates the live instance and Prism.
 
-GitHub Actions (`.github/workflows/publish-stores.yml`) is **dispatched after** the live instance update. It does not run on tag push. It uploads the GitHub Release client zip as the CurseForge primary file and the server-mods zip as an additional file of that primary. Modrinth gets the mrpack as primary and the same server-mods zip as an extra file. `workflow_dispatch` can retry an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`, `MODRINTH_TOKEN`, `MODRINTH_PROJECT_ID`). Do not hardcode those values. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug.
+GitHub Actions (`.github/workflows/publish-stores.yml`) is **dispatched after** the live instance update. It does not run on tag push. It uploads the GitHub Release client zip as the CurseForge primary file and the server-mods zip as an additional file of that primary. `workflow_dispatch` can retry an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`). Do not hardcode those values.
 
-`--upload-stores` also uploads from the operator machine when `.env` has those values (same client + server files, after Wings). `--skip-curseforge` / `--skip-modrinth` still skip a store.
+`--upload-stores` also uploads from the operator machine when `.env` has those values (same client + server files, after Wings). `--skip-curseforge` still skips CurseForge.
 
 ### No promoting a prerelease tag
 
@@ -54,7 +56,7 @@ Editorial promotion happens in the `publish-release` skill **before** running th
 2. Rename `[Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` (today’s date).
 3. Re-scaffold an empty `[Unreleased]` with `### Added`, `### Changed`, `### Fixed`, `### Removed`.
 
-Then `python scripts/release.py vX.Y.Z --channel …` extracts the `## [X.Y.Z]` section (from that heading through the next `## [` heading) as the GitHub Release body and the CurseForge/Modrinth notes. `--changelog FILE` and `--notes TEXT` override that extract. If the section is missing or has no real bullets, the script hard-fails **before** tagging or calling any API.
+Then `python scripts/release.py vX.Y.Z --channel …` extracts the `## [X.Y.Z]` section (from that heading through the next `## [` heading) as the GitHub Release body and the CurseForge notes. `--changelog FILE` and `--notes TEXT` override that extract. If the section is missing or has no real bullets, the script hard-fails **before** tagging or calling any API.
 
 ### Merge conflicts
 
@@ -64,4 +66,4 @@ If that becomes painful, a fragment-file / towncrier-style `changelog.d/` compil
 
 ## Public text
 
-Never mention panel URL, join IP, or the dedicated server in `CHANGELOG.md`, GitHub Release bodies, CurseForge/Modrinth notes, or the README. Share the test-server address out of band.
+Never mention panel URL, join IP, or the dedicated server in `CHANGELOG.md`, GitHub Release bodies, CurseForge notes, or the README. Share the test-server address out of band.

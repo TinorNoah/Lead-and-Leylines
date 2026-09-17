@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Upload pack artifacts to GitHub Releases, CurseForge, and Modrinth.
+"""Upload pack artifacts to GitHub Releases and CurseForge.
 
 Never print tokens or project secrets. GitHub Release body is the changelog
 the operator passed in — do not append server or hosting details.
@@ -17,11 +17,10 @@ from pathlib import Path
 from typing import Any
 
 import multipart
-from resolve_modrinth_project import USER_AGENT, resolve
 
+USER_AGENT = "TinorNoah/Lead-and-Leylines (github.com/TinorNoah/Lead-and-Leylines)"
 GITHUB_API = "https://api.github.com"
 CURSEFORGE_UPLOAD = "https://minecraft.curseforge.com/api"
-MODRINTH_API = "https://api.modrinth.com/v2"
 
 
 def _read_error(exc: urllib.error.HTTPError) -> str:
@@ -307,76 +306,6 @@ def upload_curseforge(
     return int(file_id)
 
 
-def upload_modrinth(
-    *,
-    project: str,
-    token: str,
-    mrpack: Path,
-    name: str,
-    version: str,
-    changelog: str,
-    minecraft: str,
-    loader: str,
-    channel: str,
-    server_zip: Path | None = None,
-) -> None:
-    resolved, reason = resolve(project, token)
-    if not resolved:
-        print(f"Modrinth upload skipped: {reason}")
-        return
-    fields = [
-        (
-            "client",
-            mrpack.read_bytes(),
-            mrpack.name,
-            "application/x-modrinth-modpack+zip",
-        )
-    ]
-    file_parts = ["client"]
-    total_size = mrpack.stat().st_size
-    if server_zip is not None:
-        fields.append(
-            ("server", server_zip.read_bytes(), server_zip.name, "application/zip")
-        )
-        file_parts.append("server")
-        total_size += server_zip.stat().st_size
-    data = json.dumps(
-        {
-            "name": name,
-            "version_number": version,
-            "changelog": changelog,
-            "dependencies": [],
-            "game_versions": [minecraft],
-            "version_type": channel,
-            "loaders": [loader],
-            "featured": channel == "release",
-            "status": "listed",
-            "project_id": resolved,
-            "file_parts": file_parts,
-            "primary_file": "client",
-            "environment": "client_and_server",
-        }
-    ).encode("utf-8")
-    body, content_type = multipart.encode(
-        [("data", data, None, "application/json"), *fields]
-    )
-    payload = _request(
-        f"{MODRINTH_API}/version",
-        method="POST",
-        headers={
-            "Authorization": token,
-            "User-Agent": USER_AGENT,
-            "Accept": "application/json",
-            "Content-Type": content_type,
-        },
-        data=body,
-        timeout=max(180, 60 + total_size // 50_000),
-    )
-    version_id = payload.get("id") if isinstance(payload, dict) else None
-    extra = f" + {server_zip.name}" if server_zip is not None else ""
-    print(f"modrinth version {version_id or mrpack.name}{extra} ({reason})")
-
-
 def dispatch_store_publish(
     *,
     owner: str,
@@ -385,13 +314,10 @@ def dispatch_store_publish(
     channel: str,
     token: str,
     skip_curseforge: bool = False,
-    skip_modrinth: bool = False,
 ) -> None:
     inputs = {"tag": tag, "channel": channel}
     if skip_curseforge:
         inputs["skip_curseforge"] = "true"
-    if skip_modrinth:
-        inputs["skip_modrinth"] = "true"
     _request(
         f"{GITHUB_API}/repos/{owner}/{repo}/actions/workflows/publish-stores.yml/dispatches",
         method="POST",
