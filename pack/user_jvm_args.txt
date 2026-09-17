@@ -1,5 +1,6 @@
-# Lead and Leylines — Java 17 (see pack.toml). Use ZGC, not G1.
+# Lead and Leylines — Java 21 (see pack.toml). Use ZGC, not G1.
 # Prism: scripts/update_prism.py copies these flags into instance.cfg.
+# Dedicated NeoForge: server/run.sh is @this file plus @unix_args.txt.
 # Other launchers: paste the same flags into that instance's Java arguments.
-# Do not add -XX:+ZGenerational (Java 21+; this pack's Java 17 rejects it).
+# Do not add -XX:+ZGenerational.
 -XX:+UseZGC

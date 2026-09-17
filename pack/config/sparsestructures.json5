@@ -1,6 +1,0 @@
-// Pack: do not double structure spacing. Locate was finding starts that never placed.
-{
-  "spreadFactor": 1,
-  "idBasedSalt": true,
-  "customSpreadFactors": []
-}

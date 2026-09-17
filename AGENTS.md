@@ -1,12 +1,14 @@
 # Lead and Leylines
 
-Long-lived Minecraft Forge modpack. Source of truth is git + packwiz TOML under `pack/`.
+Long-lived Minecraft NeoForge modpack. Source of truth is git + packwiz TOML under `pack/`.
 
 ## Versions
 
 Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`version`, `[versions]`). Do not copy those numbers into docs, skills, or workflow inputs. Bump by editing `pack.toml` after checking current loader docs.
 
 Pack `version` must match git tag `vX.Y.Z` without the `v`.
+
+Tags `v0.0.1`–`v0.0.9` already shipped as Minecraft 1.20.1 Forge. Do not retag or re-upload those versions. The empty 1.21.1 NeoForge working tree may use pack version `0.0.1`; the first NeoForge GitHub/store ship is `v0.1.0`.
 
 ## Commands
 
@@ -34,12 +36,12 @@ Use packwiz `side` (`client` / `server` / `both`) on mods and configs. One pack,
 
 ## Local test (Prism)
 
-1. Set the Prism instance Minecraft and loader to the values in `pack/pack.toml`.
+1. Set the Prism instance Minecraft and loader to the values in `pack/pack.toml`. Use Java 21.
 2. From `pack/`, run `packwiz serve`.
 3. Put `packwiz-installer-bootstrap.jar` in the instance `.minecraft`.
 4. Pre-launch: `$INST_JAVA -jar packwiz-installer-bootstrap.jar http://localhost:8080/pack.toml` (do not quote `$INST_JAVA` in instance.cfg; see CONTRIBUTING.md)
 
-See CONTRIBUTING.md for the full loop. `python scripts/release.py` also runs `python scripts/update_prism.py` unless `--skip-prism`.
+See CONTRIBUTING.md for the full loop. `python scripts/release.py` also runs `python scripts/update_prism.py` unless `--skip-prism`. Do not mix leftover 1.20.1 Forge jars into a 1.21.1 NeoForge instance.
 
 ## Publishing
 
@@ -54,7 +56,7 @@ Never hardcode those values. CurseForge and Modrinth publish from GitHub Actions
 
 ## Dedicated server
 
-CurseForge Generic egg tracks the last published CurseForge file, not git. Until that listing is public, `python scripts/deploy_server.py` (default `--from-local`) installs the Forge Minecraft egg and has Wings pull the GitHub Release server-mods zip when `GH_TOKEN` is set, otherwise the local zip. `--share-only` writes ATLauncher zip/mrpack under `dist/`. See `server/README.md`. Application API `papp_` key, panel URL, and node FQDN live in gitignored `.env` — never commit those hostnames. `test-server` skill: local deploy until CF is public; then `--curseforge --reinstall`.
+CurseForge Generic egg tracks the last published CurseForge file, not git. Until that listing is public, `python scripts/deploy_server.py` (default `--from-local`) installs the NeoForge egg and has Wings pull the GitHub Release server-mods zip when `GH_TOKEN` is set, otherwise the local zip. `--share-only` writes ATLauncher zip/mrpack under `dist/`. See `server/README.md`. Application API `papp_` key, panel URL, and node FQDN live in gitignored `.env` — never commit those hostnames. `test-server` skill: local deploy until CF is public; then `--curseforge --reinstall`.
 
 ## Skills
 
@@ -62,7 +64,7 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 - `add-mod` — packwiz install after `minecraft-modding` approval; then refresh
 - `update-changelog` — player-facing `[Unreleased]` bullet when a change is noticeable
 - `test-server` — dedicated server via `scripts/deploy_server.py` (`--from-local` until CurseForge is public); console still from the panel until a client API key exists
-- `publish-release` — only on explicit `/publish-release`; runs `python scripts/release.py`
+- `publish-release` — only on an explicit `/publish-release`; runs `python scripts/release.py`
 
 ## Learned User Preferences
 
@@ -72,7 +74,7 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 - Never hardcode API tokens, platform project IDs, panel URLs, or node FQDNs; store them in gitignored `.env` (not in `mcp.json`). Missing `GH_TOKEN` in `.env` skips the GitHub Release attach; the test server still updates.
 - Keep agent skills under `.agents/skills/` (not `.cursor/skills/`) so any agent tool reads the same files.
 - Run the `publish-release` skill only on an explicit `/publish-release` invocation (`disable-model-invocation: true`).
-- Research each candidate mod in detail (compatibility first, including planned content mods), ask why it belongs, and compare alternatives before installing. Get explicit install approval after that research; do not install from a named list until then. Prefer client and server changes that make the pack smoother without reliability issues. Overworld height is vanilla (Tectonic 3 and Streams are out for `/rtp`). Do not treat Chunky as required for `/rtp`. Do not add Lithosphere as a stand-in. When adding recipe-bearing mods, check in-jar EMI coverage; do not add JEI or extra EMI addon jars unless requested. Melee is Epic Fight + ParCool (not Better Combat). AE2 and Refined Storage both ship; AE2 expansion kits may be stacked when requested. Skip Gateways until Apotheosis/Apothic Attributes is an intentional combat change.
+- Research each candidate mod in detail (compatibility first), ask why it belongs, and compare alternatives before installing. Get explicit install approval after that research; do not install from a named list until then. Prefer client and server changes that make the pack smoother without reliability issues. When adding recipe-bearing mods, check in-jar EMI coverage; do not add JEI or extra EMI addon jars unless requested.
 - Record mod decisions in `docs/mods/` (considered, chosen, held, or dropped; rationale; packwiz `side`); document only configs that need pack notes.
 - Keep agent skills short and single-purpose (checklists that link out). Policy, rationale, and examples live in `docs/` (for example `docs/RELEASING.md`), not in SKILL.md files.
 - Ship and deploy only through `python scripts/release.py` then `python scripts/deploy_server.py --from-local` (GitHub Release attach, then Wings `files/pull`), then `python scripts/update_prism.py`. Do not improvise local zip uploads or skip that sequence.
@@ -80,14 +82,13 @@ CurseForge Generic egg tracks the last published CurseForge file, not git. Until
 ## Learned Workspace Facts
 
 - Pack display name is **Lead and Leylines** (`pack/pack.toml` `name`). GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Modrinth slug is `lead-and-leylines` (`https://modrinth.com/modpack/lead-and-leylines`). Pack files are MIT (`LICENSE`); third-party mods keep their own licenses. Modrinth listing: description from README pitch, license MIT, version environment client and server.
-- This is a long-term Minecraft Forge modpack managed with packwiz; never commit jars.
-- Packwiz root is `pack/`; docs (including `docs/mods/` decision logs) and `.agents/` stay at the repo root and are not exported. Shaders are a pack feature (Oculus + Embeddium); Colorwheel is the Create + Oculus path. Embeddium is the renderer — do not add OptiFine, Nvidium, VulkanMod, Distant Horizons, or a separate dynamic-lights mod while Oculus is in. Java 17 pack flags are `pack/user_jvm_args.txt` (`-XX:+UseZGC`); `scripts/update_prism.py` copies them into Prism `instance.cfg`. Do not add `-XX:+ZGenerational` on this runtime. Mrpack cannot auto-apply launcher JVM args.
+- This is a long-term Minecraft NeoForge modpack managed with packwiz; never commit jars. The 1.20.1 Forge pack is frozen on branch `forge-1.20.1` (tag `archive/forge-1.20.1`).
+- Packwiz root is `pack/`; docs (including `docs/mods/` decision logs) and `.agents/` stay at the repo root and are not exported. Java 21 pack flags are `pack/user_jvm_args.txt` (`-XX:+UseZGC`); `scripts/update_prism.py` copies them into Prism `instance.cfg`. Dedicated NeoForge starts with `server/run.sh` (`bash run.sh` on the NeoForge egg) so `@user_jvm_args.txt` actually applies. Do not add `-XX:+ZGenerational`. Mrpack cannot auto-apply launcher JVM args.
 - Branching is GitHub Flow (`main`, feature branches, PRs); pack version `X.Y.Z` matches git tag `vX.Y.Z`. `python scripts/release.py vX.Y.Z` creates the GitHub Release from `CHANGELOG.md`, updates the live instance, then dispatches `.github/workflows/publish-stores.yml`.
 - Minecraft, loader, and loader version live only in `pack/pack.toml`; bump that file and keep the README Pack details table in sync in the same change. Do not hardcode versions in skills.
-- One pack uses packwiz `side` (`client` / `server` / `both`); server overlay/JVM overlay lives in `server/` and is never exported. Server-logic optimizers we ship use `both` so Prism singleplayer matches the dedicated server. Too Fast stays `server`.
+- One pack uses packwiz `side` (`client` / `server` / `both`); server overlay lives in `server/` (`run.sh`) and is never exported. `scripts/deploy_server.py` copies `pack/user_jvm_args.txt` onto the NeoForge instance as `/user_jvm_args.txt`. Pin `NEOFORGE_VERSION` to the exact `pack.toml` loader version; do not let the egg resolve 1.21.1 from `MC_VERSION` alone (it can pick 1.21.10 / 1.21.11). Server-logic optimizers we ship use `both` so Prism singleplayer matches the dedicated server.
 - Local Prism testing uses `packwiz serve` plus packwiz-installer-bootstrap against `http://localhost:8080/pack.toml`. `python scripts/release.py` also runs `scripts/update_prism.py` (serve on a free port, installer `-g`) unless `--skip-prism`. Instance path is `PRISM_INSTANCE_DIR` in `.env`, or the PrismLauncher instance whose `name` matches `pack.toml`. After removing a both-side worldgen or fluid mod, sync Prism before joining (fully quit the game first so leftover locked jars can be deleted) or the client crashes on missing registry objects.
-- Panel URL and Wings node FQDN come from gitignored `.env` (`PANEL_URL`, `PANEL_NODE_FQDN`). Deploy with `python scripts/deploy_server.py` (Forge egg; Wings `files/pull` of the GitHub Release `*-server-mods.zip` when `GH_TOKEN` is set, otherwise the local zip — not a GitHub raw pack.toml URL; Wings `files/write` of that zip is unreliable). Generic egg tracks the last published CurseForge file after that.
+- Panel URL and Wings node FQDN come from gitignored `.env` (`PANEL_URL`, `PANEL_NODE_FQDN`). Deploy with `python scripts/deploy_server.py` (NeoForge egg; Wings `files/pull` of the GitHub Release `*-server-mods.zip` when `GH_TOKEN` is set, otherwise the local zip — not a GitHub raw pack.toml URL; Wings `files/write` of that zip is unreliable). Generic egg tracks the last published CurseForge file after that. Switching Minecraft or loader versions reinstalls the egg and wipes the test world.
 - `python scripts/release.py` exports zip + mrpack from `CHANGELOG.md` `## [X.Y.Z]` (the script is read-only on that file; promote `[Unreleased]` in the `publish-release` skill first). Default `--channel alpha` is a GitHub prerelease; after Wings, GitHub Actions uploads CurseForge/Modrinth as alpha (client pack + server-mods zip). `--channel release` is GitHub Latest plus store release. Do not later re-upload the same `X.Y.Z` as a store release — cut a new version. Then updates the panel locally. Do not mention the dedicated server, the panel, or the join address in GitHub Release notes, CHANGELOG.md, commit messages, or other GitHub-facing copy. `MODRINTH_PROJECT_ID` is the 8-character dashboard id, not the slug. Channel and changelog policy: `docs/RELEASING.md`. Every `release.py` run updates the test server unless `--skip-server`, and local Prism unless `--skip-prism`.
 - Use `.gitattributes` `* -text` so Windows line endings do not break packwiz hashes.
 - `CLAUDE.md` is a one-line `@AGENTS.md` pointer.
-- Planned content to stay compatible with: TACZ, Superb Warfare, Apotheosis, Create, AE2, Refined Storage, Ars Nouveau, Modern Industrialization, Building Gadgets, Mining Gadgets, Mekanism (installed), Mob Grinding Utils, plus later magic / tech / utility mods. Item storage is Functional Storage (drawers) + Sophisticated Storage (chests) + Sophisticated Backpacks with Curios (not Storage Drawers, Iron Chests, or Tom’s Simple Storage). AE2 is the primary item network; RS is also in. Overworld biomes are Terralith + Regions Unexplored + Oh The Biomes We’ve Gone (Terralith gets rarer in that stack). Overworld height is vanilla 1.18+ noise (Tectonic 3 and Lithostitched are out for `/rtp`; do not add Lithosphere or Terratonic; Tectonic 2.4.1 only if mountains are wanted back). TerraBlender Overworld regions stay at max size so RU/BWG/Terralith slices are not postage stamps. Streams Reflowing is out. Do not stack William Wythers’ Expanded Ecosphere with RU/BWG. Nether is Amplified Nether (height) + BetterNether Forge (biomes), not Incendium. End is Nullscape (Stardust Forge jar), not Better End. Fortresses are YUNG’s Better Nether Fortresses. Infernal content is Infernal Expansion Redux (no 1.20.1 original). Nether cooking is Farmer’s Delight + My Nether’s Delight (not the 2023 Nether’s Delight jar). Mineshafts are Moog’s Mineshafts Reimagined, not YUNG’s Better Mineshafts. Twilight Forest is the official CurseForge jar only (not the Modrinth Unofficial port). Sparse Structures stays at vanilla density; do not add StructureOverlapless (it skips placement so `/locate` points at empty spots). `/rtp` and `/locate` stay short-range (or already-generated) or the dedicated-server watchdog can hang; do not `/locate` MMR biome-locked mineshafts over ungenerated land. Ice and Fire is Community Edition (not the official AlexThe666 jar; they cannot both load). Melee is Epic Fight + ParCool + Official Epic ParCool (not Better Combat). Official Epic ParCool mixins still need ParCool 3.4 (`com.alrex.parcool.common.action.Action`); do not pin ParCool 4.0 alpha until the bridge is rewritten. Do not add distant-tick freezers, a second Lithium port, a second claim mod, or a second map UI. FTB Chunks is the claim layer (minimap off; unbind Open Map); Xaero is the map UI. EMI is the recipe viewer (not JEI; extra EMI jars only when requested — Enchants, WorldGen, and QoL Tweaks are in). Too Many Recipe Viewers registers a fake `jei` id at 15.20, so keep Polymorph at 0.49.10 — 0.49.11+ version-gates JEI 15.57 and Forge aborts; do not add real JEI to satisfy it. Create + Oculus uses Colorwheel + Colorwheel Patcher (not Iris/Oculus Flywheel Compat). Complementary Euphoria Patches matches the r5.9.3 Complementary packs.
