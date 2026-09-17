@@ -1,8 +1,0 @@
-name = "EMI QoL Tweaks"
-filename = "emi-qol-tweaks-1.2.jar"
-side = "client"
-
-[download]
-url = "https://mediafilez.forgecdn.net/files/8713/840/emi-qol-tweaks-1.2.jar"
-hash-format = "sha512"
-hash = "661f53ad7485c214f4f7ec464889cf275f5920862be9577d48e4d1981b97a11fda8d00610ba1a2afe70e9c4428a414147decb47b19687ca0675663afb28ea778"

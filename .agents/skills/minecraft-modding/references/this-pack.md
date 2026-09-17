@@ -1,6 +1,6 @@
 # Lead and Leylines — pack mapping
 
-Read this after Step 0. This repository is one Forge pack managed with packwiz, not a loose `mods/` folder.
+Read this after Step 0. This repository is one NeoForge pack managed with packwiz, not a loose `mods/` folder.
 
 ## Instance context
 
@@ -11,12 +11,12 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Pack display name | `pack/pack.toml` `name` (Lead and Leylines) |
 | Pack version | `pack/pack.toml` `version` (must match git tag `vX.Y.Z` without the `v`) |
 | Source of truth | `pack/mods/*.pw.toml` + `pack/index.toml` |
-| Java 17 JVM flags | `pack/user_jvm_args.txt` (`-XX:+UseZGC`). `scripts/update_prism.py` writes them into Prism `instance.cfg`. |
+| Java 21 JVM flags | `pack/user_jvm_args.txt` (`-XX:+UseZGC`). `scripts/update_prism.py` writes them into Prism `instance.cfg`. Dedicated NeoForge: `server/run.sh` (`bash run.sh`). |
 | Live manifest | `docs/mods/manifest.md` |
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |
 | Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). `python scripts/update_prism.py` after a GitHub Release (also invoked from `release.py`). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
-| Dedicated server | `python scripts/deploy_server.py` (Forge egg + local mods until CurseForge is public). Overlay in `server/` is not exported; same pack, packwiz `side` |
+| Dedicated server | `python scripts/deploy_server.py` (NeoForge egg + local mods until CurseForge is public). Overlay `server/run.sh` plus `pack/user_jvm_args.txt`; not exported. Same pack, packwiz `side` |
 
 GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.
 
@@ -42,14 +42,12 @@ The git tree (TOML + `docs/mods/`) is the reproducible backup. The Prism `mods/`
 
 ## Step 6 on this pack
 
-1. Re-verify the store file still lists this pack’s Minecraft + Forge from `pack.toml`.
-2. Install with packwiz (required deps only). Do not bump Minecraft, Forge, or shared libraries in `pack.toml` to make a mod fit.
+1. Re-verify the store file still lists this pack’s Minecraft + NeoForge from `pack.toml`.
+2. Install with packwiz (required deps only). Do not bump Minecraft, NeoForge, or shared libraries in `pack.toml` to make a mod fit.
 3. `packwiz refresh`.
 4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` and watch the panel console.
 5. Update `docs/mods/manifest.md` and the relevant `docs/mods/` decision log. Confirm the manifest matches `pack/mods/*.pw.toml`.
 
-Shaders: Oculus is the loader. Colorwheel + Patcher is the Create + Oculus path; do not add Iris/Oculus Flywheel Compat. Do not add a separate dynamic-lights mod while Oculus is in. A test set of Iris packs lives in `pack/shaderpacks/` (client). Do not enable a default pack until one is chosen on purpose.
-
 ## Rollback on this pack
 
-`packwiz remove` (or delete the `*.pw.toml`), then `packwiz refresh`. Check the manifest before removing a shared library (Placebo, Almanac, and similar). Update `docs/mods/manifest.md`.
+`packwiz remove` (or delete the `*.pw.toml`), then `packwiz refresh`. Check the manifest before removing a shared library. Update `docs/mods/manifest.md`.

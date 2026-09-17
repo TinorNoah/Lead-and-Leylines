@@ -1,6 +1,6 @@
 # Lead and Leylines
 
-A Minecraft Forge modpack for a long campaign: late-game progression, exploration, and a world that still has somewhere to go.
+A Minecraft NeoForge modpack for a long campaign: late-game progression, exploration, and a world that still has somewhere to go.
 
 This repository is the source of truth. The pack is [packwiz](https://packwiz.infra.link/) TOML under `pack/`. Jars, launcher instances, and tokens are never committed.
 
@@ -12,24 +12,24 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.0.9 |
-| Minecraft | 1.20.1 |
-| Mod loader | Forge 47.4.23 |
-| Java | 17 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
+| Pack version | 0.0.1 |
+| Minecraft | 1.21.1 |
+| Mod loader | NeoForge 21.1.250 |
+| Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
 | Packwiz format | packwiz:1.1.0 |
-| Mods | Content, QoL, and worldgen density fixes (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
+| Mods | Empty rebuild (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
-A git tag `vX.Y.Z` must match pack version `X.Y.Z` (currently `v0.0.9`).
+A git tag `vX.Y.Z` must match pack version `X.Y.Z`. Tags `v0.0.1`–`v0.0.9` already shipped as 1.20.1 Forge; do not reuse them. The first 1.21.1 NeoForge GitHub/store ship is `v0.1.0`.
 
 ## Play
 
-The pack is in early development. The current cut includes performance mods, Oculus plus a test set of shader packs (none on by default), FTB/EMI/Jade/Xaero QoL, and Create. CurseForge and Modrinth listings are not public yet.
+The pack is in early development on Minecraft 1.21.1 NeoForge. This cut is an empty pack (no mods yet). New world required. CurseForge and Modrinth listings are not public yet.
 
-**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder). After store listings exist, install from [Modrinth](https://modrinth.com/modpack/lead-and-leylines) or CurseForge instead.
+**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After store listings exist, install from [Modrinth](https://modrinth.com/modpack/lead-and-leylines) or CurseForge instead.
 
 Prism developers: [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Prism and other launchers must use Minecraft **1.20.1** and Forge **47.4.23**.
+Prism and other launchers must use the Minecraft version and NeoForge version in [`pack/pack.toml`](pack/pack.toml), on Java 21. Do not reuse a 1.20.1 Forge instance.
 
 ## License
 
@@ -52,7 +52,7 @@ One pack, not two roots. Client vs server files use packwiz `side` (`client` / `
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for packwiz, adding mods, the Prism + `packwiz serve` loop, and publishing a release.
 
-Installed mods: [docs/mods/manifest.md](docs/mods/manifest.md). Performance decisions: [docs/mods/performance.md](docs/mods/performance.md). QoL / FTB / Create: [docs/mods/utility.md](docs/mods/utility.md). Config notes: [docs/mods/configs.md](docs/mods/configs.md).
+Installed mods: [docs/mods/manifest.md](docs/mods/manifest.md). Performance decisions: [docs/mods/performance.md](docs/mods/performance.md). QoL: [docs/mods/utility.md](docs/mods/utility.md). Config notes: [docs/mods/configs.md](docs/mods/configs.md).
 
 Agent conventions: [AGENTS.md](AGENTS.md).
 
@@ -60,5 +60,5 @@ Short version:
 
 1. Work in a feature branch. Run packwiz from `pack/`.
 2. After any manual file change, `packwiz refresh`. Commit TOML, never jars.
-3. Test locally: Prism instance matching `pack.toml`, `packwiz serve`, installer bootstrap as in CONTRIBUTING.md.
+3. Test locally: Prism instance matching `pack.toml` (Java 21), `packwiz serve`, installer bootstrap as in CONTRIBUTING.md.
 4. Merge to `main`. Set `pack.toml` `version` to `X.Y.Z`, then `python scripts/release.py vX.Y.Z --changelog notes.md`.

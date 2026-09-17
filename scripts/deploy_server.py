@@ -31,10 +31,10 @@ from read_pack_versions import PACK_TOML, read_pack
 
 CURSEFORGE_GENERIC_UUID = "019bbf16-a3f3-470a-9c0b-f3995b5e032a"
 CURSEFORGE_GENERIC_NAME = "CurseForge Generic"
-FORGE_EGG_UUID = "ed072427-f209-4603-875c-f540c6dd5a65"
-FORGE_EGG_NAME = "Forge Minecraft"
+NEOFORGE_EGG_UUID = "e23e092f-b803-4f34-82cf-2d6518c6351a"
+NEOFORGE_EGG_NAME = "NeoForge"
 SERVER_MODS_REMOTE = "lead-and-leylines-server-mods.zip"
-OVERLAY_FILES = ("user_jvm_args.txt", "ops.json")
+NEOFORGE_STARTUP = "bash run.sh"
 DEFAULT_NODE_NAME = "node"
 DEFAULT_EXTERNAL_ID = "lead-and-leylines"
 SECRET_MARKERS = ("KEY", "TOKEN", "SECRET", "PASSWORD", "AUTHORIZATION")
@@ -210,8 +210,8 @@ def find_egg(client: PanelClient) -> dict[str, Any] | None:
     return find_egg_by(client, CURSEFORGE_GENERIC_UUID, CURSEFORGE_GENERIC_NAME)
 
 
-def find_forge_egg(client: PanelClient) -> dict[str, Any] | None:
-    return find_egg_by(client, FORGE_EGG_UUID, FORGE_EGG_NAME)
+def find_neoforge_egg(client: PanelClient) -> dict[str, Any] | None:
+    return find_egg_by(client, NEOFORGE_EGG_UUID, NEOFORGE_EGG_NAME)
 
 
 def egg_with_variables(client: PanelClient, egg_id: int) -> dict[str, Any]:
@@ -230,15 +230,14 @@ def environment_from_egg(egg: dict[str, Any], overrides: dict[str, str]) -> dict
     return values
 
 
-def forge_environment(pack: dict[str, str]) -> dict[str, str]:
-    if pack["loader"].lower() != "forge":
+def neoforge_environment(pack: dict[str, str]) -> dict[str, str]:
+    if pack["loader"].lower() != "neoforge":
         raise SystemExit(
-            f"local panel deploy expects Forge; pack.toml loader is {pack['loader']!r}"
+            f"local panel deploy expects NeoForge; pack.toml loader is {pack['loader']!r}"
         )
     return {
         "MC_VERSION": pack["minecraft"],
-        "FORGE_VERSION": f"{pack['minecraft']}-{pack['loader_version']}",
-        "BUILD_TYPE": "recommended",
+        "NEOFORGE_VERSION": pack["loader_version"],
         "SERVER_JARFILE": "server.jar",
     }
 
@@ -393,6 +392,7 @@ def create_server(
     external_id: str,
     start: bool,
     skip_scripts: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     body = {
         "name": name,
@@ -400,7 +400,7 @@ def create_server(
         "user": owner_id,
         "egg": egg["id"],
         "docker_image": image,
-        "startup": egg.get("startup"),
+        "startup": startup or egg.get("startup"),
         "environment": environment,
         "skip_scripts": skip_scripts,
         "oom_killer": False,
@@ -432,11 +432,12 @@ def update_startup(
     image: str,
     environment: dict[str, str],
     skip_scripts: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     updated = client.patch(
         f"/api/application/servers/{server_id}/startup",
         {
-            "startup": egg.get("startup"),
+            "startup": startup or egg.get("startup"),
             "environment": environment,
             "egg": egg["id"],
             "image": image,
@@ -479,6 +480,7 @@ def upsert_server(
     disk: int,
     skip_scripts: bool,
     start: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     if server is None:
         if allocation is None:
@@ -497,6 +499,7 @@ def upsert_server(
             external_id=external_id,
             start=start,
             skip_scripts=skip_scripts,
+            startup=startup,
         )
         print("created the panel server")
         return created
@@ -516,6 +519,7 @@ def upsert_server(
         image=image,
         environment=environment,
         skip_scripts=skip_scripts,
+        startup=startup,
     )
     print("updated the panel server startup/environment")
     return updated
@@ -577,6 +581,14 @@ def connect_wings(client: PanelClient, node: dict[str, Any], server: dict[str, A
     return Wings(wings_base_url(fqdn, configuration), token, uuid)
 
 
+def zip_has_jars(zip_path: Path) -> bool:
+    with zipfile.ZipFile(zip_path) as archive:
+        return any(
+            not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
+            for info in archive.infolist()
+        )
+
+
 def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
     with zipfile.ZipFile(zip_path) as archive:
         members = [
@@ -584,14 +596,15 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
             for info in archive.infolist()
             if not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
         ]
-        if not members:
-            raise SystemExit(f"{zip_path.name} contains no jars")
-        print(f"uploading {len(members)} jars to /mods")
-        for info in members:
-            name = Path(info.filename.replace("\\", "/")).name
-            data = archive.read(info)
-            print(f"  {name} ({len(data)} bytes)")
-            wings.write_file(f"/mods/{name}", data, "application/java-archive")
+        if members:
+            print(f"uploading {len(members)} jars to /mods")
+            for info in members:
+                name = Path(info.filename.replace("\\", "/")).name
+                data = archive.read(info)
+                print(f"  {name} ({len(data)} bytes)")
+                wings.write_file(f"/mods/{name}", data, "application/java-archive")
+        else:
+            print(f"{zip_path.name} contains no jars (empty pack)")
         configs = [
             info
             for info in archive.infolist()
@@ -609,11 +622,16 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
 
 def write_overlay(wings: Wings) -> None:
     overlay = ROOT / "server"
-    for name in OVERLAY_FILES:
-        path = overlay / name
+    pack_jvm = ROOT / "pack" / "user_jvm_args.txt"
+    mapping = [
+        (overlay / "run.sh", "/run.sh"),
+        (pack_jvm, "/user_jvm_args.txt"),
+        (overlay / "ops.json", "/ops.json"),
+    ]
+    for path, remote in mapping:
         if path.is_file():
-            print(f"  uploading overlay {name}")
-            wings.write_file(f"/{name}", path.read_bytes(), "text/plain")
+            print(f"  uploading overlay {remote.lstrip('/')}")
+            wings.write_file(remote, path.read_bytes(), "application/octet-stream")
 
 
 def _follow_redirects(url: str) -> str:
@@ -649,6 +667,7 @@ def upload_server_mods(
             print("  continuing; Wings did not report offline")
 
     print(f"uploading {zip_path.name} ({zip_path.stat().st_size} bytes)")
+    expect_jars = zip_has_jars(zip_path)
     wings.delete(["mods", SERVER_MODS_REMOTE])
     pulled = False
     if github_url:
@@ -686,17 +705,20 @@ def upload_server_mods(
             upload_jars_from_zip(wings, zip_path)
             wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
             write_overlay(wings)
-            _wait_for_mods(wings)
+            _wait_for_mods(wings, expect_jars=expect_jars)
             return
     print("decompressing server mods zip")
     wings.decompress(SERVER_MODS_REMOTE)
     wings.delete([SERVER_MODS_REMOTE])
     wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
     write_overlay(wings)
-    _wait_for_mods(wings)
+    _wait_for_mods(wings, expect_jars=expect_jars)
 
 
-def _wait_for_mods(wings: Wings) -> None:
+def _wait_for_mods(wings: Wings, *, expect_jars: bool = True) -> None:
+    if not expect_jars:
+        print("  empty pack: no server mods to wait for")
+        return
     deadline = time.time() + 120
     while time.time() < deadline:
         try:
@@ -739,7 +761,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--reinstall",
         action="store_true",
-        help="reinstall the egg (wipes the world). Local deploys reinstall automatically when Forge is missing or versions changed",
+        help="reinstall the egg (wipes the world). Local deploys reinstall automatically when NeoForge is missing or versions changed",
     )
     parser.add_argument(
         "--skip-install",
@@ -801,18 +823,18 @@ def deploy_from_local(
     disk: int,
     port: str | None,
 ) -> None:
-    egg = find_forge_egg(client)
+    egg = find_neoforge_egg(client)
     if egg is None:
         raise SystemExit(
-            f"the panel is missing the {FORGE_EGG_NAME!r} egg "
-            f"(uuid {FORGE_EGG_UUID}). Import it on the panel, then rerun."
+            f"the panel is missing the {NEOFORGE_EGG_NAME!r} egg "
+            f"(uuid {NEOFORGE_EGG_UUID}). Import it on the panel, then rerun."
         )
     if egg.get("id"):
         egg = egg_with_variables(client, int(egg["id"]))
     image = docker_image(egg, pack["minecraft"]) if egg.get("docker_images") else "(unknown)"
     allocation = None if server else pick_allocation(client, int(node["id"]), port)
-    forge_env = forge_environment(pack)
-    environment = environment_from_egg(egg, forge_env)
+    loader_env = neoforge_environment(pack)
+    environment = environment_from_egg(egg, loader_env)
     previous_egg = int((server or {}).get("egg") or 0)
     previous_env = ((server or {}).get("container") or {}).get("environment") or {}
     print_plan(
@@ -825,7 +847,7 @@ def deploy_from_local(
         memory=memory,
         disk=disk,
         extra=(
-            f"local deploy FORGE_VERSION={forge_env['FORGE_VERSION']}; "
+            f"local deploy NEOFORGE_VERSION={loader_env['NEOFORGE_VERSION']}; "
             "Wings pulls the GitHub Release server-mods zip when GH_TOKEN is set, "
             "otherwise the local zip (CurseForge listing not required)"
         ),
@@ -840,7 +862,7 @@ def deploy_from_local(
     if args.dry_run:
         print(
             "dry-run: would export ATLauncher files, attach the server-mods zip to "
-            "the GitHub Release, switch this server to the Forge egg, install Forge, "
+            "the GitHub Release, switch this server to the NeoForge egg, install NeoForge, "
             "then have Wings pull that zip"
         )
         return
@@ -868,22 +890,24 @@ def deploy_from_local(
         disk=disk,
         skip_scripts=False,
         start=False,
+        startup=NEOFORGE_STARTUP,
     )
     if not server.get("uuid"):
         server = attrs(client.get(f"/api/application/servers/{server['id']}"))
     wings = connect_wings(client, node, server)
-    forge_files = wings.has("unix_args.txt") or wings.has("libraries")
+    loader_files = wings.has("unix_args.txt") or wings.has("libraries")
     needs_reinstall = bool(
         args.reinstall
         or previous_egg != int(egg["id"])
         or str(previous_env.get("MC_VERSION") or "") != pack["minecraft"]
-        or str(previous_env.get("FORGE_VERSION") or "") != forge_env["FORGE_VERSION"]
-        or not forge_files
+        or str(previous_env.get("NEOFORGE_VERSION") or "")
+        != loader_env["NEOFORGE_VERSION"]
+        or not loader_files
     )
     wait_seconds = args.wait or (600 if needs_reinstall else 0)
     if needs_reinstall:
         print(
-            "reinstalling Forge egg (this wipes the world and other files on the volume)"
+            "reinstalling NeoForge egg (this wipes the world and other files on the volume)"
         )
         try:
             client.post(f"/api/application/servers/{server['id']}/reinstall")
@@ -906,7 +930,7 @@ def deploy_from_local(
     detail = attrs(client.get(f"/api/application/servers/{server['id']}"))
     print_server(client, detail)
     print(
-        "Watch the panel console for Forge 'Done'. Application API keys cannot read live logs."
+        "Watch the panel console for NeoForge 'Done'. Application API keys cannot read live logs."
     )
     print(atlauncher_instructions(paths))
 

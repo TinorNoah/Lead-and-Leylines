@@ -1,4 +1,4 @@
-"""Pack Java 17 JVM flags. Source of truth: pack/user_jvm_args.txt."""
+"""Pack Java 21 JVM flags. Source of truth: pack/user_jvm_args.txt."""
 
 from __future__ import annotations
 

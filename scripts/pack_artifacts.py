@@ -128,7 +128,7 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
             print("  copied pack/config into server zip")
 
     if included == 0:
-        raise SystemExit("no server/both mods found to zip")
+        print("  no server/both mods; writing an empty server-mods zip")
 
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.exists():
