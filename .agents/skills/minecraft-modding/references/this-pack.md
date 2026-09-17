@@ -11,12 +11,12 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Pack display name | `pack/pack.toml` `name` (Lead and Leylines) |
 | Pack version | `pack/pack.toml` `version` (must match git tag `vX.Y.Z` without the `v`) |
 | Source of truth | `pack/mods/*.pw.toml` + `pack/index.toml` |
-| Java 17 JVM flags | `pack/user_jvm_args.txt` (`-XX:+UseZGC`). `scripts/update_prism.py` writes them into Prism `instance.cfg`. |
+| Java 17 JVM flags | `pack/user_jvm_args.txt` (`-XX:+UseZGC`). `scripts/update_prism.py` writes them into Prism `instance.cfg`. Dedicated Forge: `server/run.sh` (`bash run.sh`). |
 | Live manifest | `docs/mods/manifest.md` |
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |
 | Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). `python scripts/update_prism.py` after a GitHub Release (also invoked from `release.py`). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
-| Dedicated server | `python scripts/deploy_server.py` (Forge egg + local mods until CurseForge is public). Overlay in `server/` is not exported; same pack, packwiz `side` |
+| Dedicated server | `python scripts/deploy_server.py` (Forge egg + local mods until CurseForge is public). Overlay `server/run.sh` plus `pack/user_jvm_args.txt`; not exported. Same pack, packwiz `side` |
 
 GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.
 
@@ -48,7 +48,7 @@ The git tree (TOML + `docs/mods/`) is the reproducible backup. The Prism `mods/`
 4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` and watch the panel console.
 5. Update `docs/mods/manifest.md` and the relevant `docs/mods/` decision log. Confirm the manifest matches `pack/mods/*.pw.toml`.
 
-Shaders: Oculus is the loader. Colorwheel + Patcher is the Create + Oculus path; do not add Iris/Oculus Flywheel Compat. Do not add a separate dynamic-lights mod while Oculus is in. A test set of Iris packs lives in `pack/shaderpacks/` (client). Do not enable a default pack until one is chosen on purpose.
+Shaders: Oculus is the loader. Colorwheel + Patcher is the Create + Oculus path; do not add Iris/Oculus Flywheel Compat. Shader packs ship but none is enabled by default, so TACZ gun-muzzle/tracer lights are allowed. Do not stack a second general dynamic-lights mod (LambDynamicLights, Embeddium Extra lights). A test set of Iris packs lives in `pack/shaderpacks/` (client). Do not enable a default pack until one is chosen on purpose.
 
 ## Rollback on this pack
 

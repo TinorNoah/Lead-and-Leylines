@@ -1,13 +1,13 @@
 name = "JEI / REI / EMI WorldGen"
-filename = "jeiworldgen-forge-1.20.1-1.4.4.jar"
+filename = "jeiworldgen-forge-1.20.1-1.4.5.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/YYrsrQ6q/versions/pKNlzNVH/jeiworldgen-forge-1.20.1-1.4.4.jar"
+url = "https://cdn.modrinth.com/data/YYrsrQ6q/versions/GVElfR28/jeiworldgen-forge-1.20.1-1.4.5.jar"
 hash-format = "sha512"
-hash = "b1894fb2c361ff4e65a329b4192662b3e5052860a52682bb4d102fc57aaa485fed3f2a1974af67cc568277f360b6456d27922b320d9d16e44cf677774ae5fe20"
+hash = "423df04296e29f1d216bd73545b2c15a13075bedbbc17ab7c071dd159f8725710385e58a980c8406baba64594486561668d6f67fffecd817c081632a18bac508"
 
 [update]
 [update.modrinth]
 mod-id = "YYrsrQ6q"
-version = "pKNlzNVH"
+version = "GVElfR28"

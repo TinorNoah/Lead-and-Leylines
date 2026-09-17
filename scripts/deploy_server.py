@@ -34,7 +34,7 @@ CURSEFORGE_GENERIC_NAME = "CurseForge Generic"
 FORGE_EGG_UUID = "ed072427-f209-4603-875c-f540c6dd5a65"
 FORGE_EGG_NAME = "Forge Minecraft"
 SERVER_MODS_REMOTE = "lead-and-leylines-server-mods.zip"
-OVERLAY_FILES = ("user_jvm_args.txt", "ops.json")
+FORGE_STARTUP = "bash run.sh"
 DEFAULT_NODE_NAME = "node"
 DEFAULT_EXTERNAL_ID = "lead-and-leylines"
 SECRET_MARKERS = ("KEY", "TOKEN", "SECRET", "PASSWORD", "AUTHORIZATION")
@@ -393,6 +393,7 @@ def create_server(
     external_id: str,
     start: bool,
     skip_scripts: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     body = {
         "name": name,
@@ -400,7 +401,7 @@ def create_server(
         "user": owner_id,
         "egg": egg["id"],
         "docker_image": image,
-        "startup": egg.get("startup"),
+        "startup": startup or egg.get("startup"),
         "environment": environment,
         "skip_scripts": skip_scripts,
         "oom_killer": False,
@@ -432,11 +433,12 @@ def update_startup(
     image: str,
     environment: dict[str, str],
     skip_scripts: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     updated = client.patch(
         f"/api/application/servers/{server_id}/startup",
         {
-            "startup": egg.get("startup"),
+            "startup": startup or egg.get("startup"),
             "environment": environment,
             "egg": egg["id"],
             "image": image,
@@ -479,6 +481,7 @@ def upsert_server(
     disk: int,
     skip_scripts: bool,
     start: bool,
+    startup: str | None = None,
 ) -> dict[str, Any]:
     if server is None:
         if allocation is None:
@@ -497,6 +500,7 @@ def upsert_server(
             external_id=external_id,
             start=start,
             skip_scripts=skip_scripts,
+            startup=startup,
         )
         print("created the panel server")
         return created
@@ -516,6 +520,7 @@ def upsert_server(
         image=image,
         environment=environment,
         skip_scripts=skip_scripts,
+        startup=startup,
     )
     print("updated the panel server startup/environment")
     return updated
@@ -609,11 +614,16 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
 
 def write_overlay(wings: Wings) -> None:
     overlay = ROOT / "server"
-    for name in OVERLAY_FILES:
-        path = overlay / name
+    pack_jvm = ROOT / "pack" / "user_jvm_args.txt"
+    mapping = [
+        (overlay / "run.sh", "/run.sh"),
+        (pack_jvm, "/user_jvm_args.txt"),
+        (overlay / "ops.json", "/ops.json"),
+    ]
+    for path, remote in mapping:
         if path.is_file():
-            print(f"  uploading overlay {name}")
-            wings.write_file(f"/{name}", path.read_bytes(), "text/plain")
+            print(f"  uploading overlay {remote.lstrip('/')}")
+            wings.write_file(remote, path.read_bytes(), "application/octet-stream")
 
 
 def _follow_redirects(url: str) -> str:
@@ -868,6 +878,7 @@ def deploy_from_local(
         disk=disk,
         skip_scripts=False,
         start=False,
+        startup=FORGE_STARTUP,
     )
     if not server.get("uuid"):
         server = attrs(client.get(f"/api/application/servers/{server['id']}"))

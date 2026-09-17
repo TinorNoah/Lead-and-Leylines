@@ -1,0 +1,19 @@
+# Pack: a little extra space between structures, not Sparse Structures' 2x rarity.
+# Alex's Caves and Create sky villages bypass BSS so caves do not fragment
+# and sky villages keep author spacing 80/40.
+# Forge Type.SERVER: copied to world/serverconfig/ on first world create.
+# Existing worlds already have that file — copy these keys there, or delete
+# it so this default is copied on next start.
+
+globalSpacingRadiusChunks = 4
+whitelistedStructures = ["alexscaves:*", "create_sky_village:*"]
+countWhitelistedStructuresForSpacing = true
+spacingRadiusOverrides = []
+enableSizeScaledSpacing = true
+minimumSize = 16.0
+maximumSize = 128.0
+distanceModifier = 10.0
+use3dBlockSpacing = true
+allowStructureOverlap = false
+sendDebugStructureMarkers = false
+logStructureAttempts = false

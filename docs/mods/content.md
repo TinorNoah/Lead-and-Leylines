@@ -13,11 +13,11 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 
 ## Decision rules
 
-1. Do not add Distant Horizons. Launcher Java 17 uses `-XX:+UseZGC` from `pack/user_jvm_args.txt`. Prism sync writes it into `instance.cfg`; other launchers still need that flag in Java settings.
+1. Do not add Distant Horizons. Launcher Java 17 uses `-XX:+UseZGC` from `pack/user_jvm_args.txt`. Prism sync writes it into `instance.cfg`; dedicated Forge uses `server/run.sh`; other launchers still need that flag in Java settings.
 2. One recipe browser (EMI). Do not add JEI for AE2. Do not add EMI Loot unless loot-table pages are requested.
 3. Official Twilight Forest CurseForge file only. Do not add the Modrinth “Unofficial” port.
 4. FancyMenu + Drippy is the menu/loading stack. No custom title art unless chosen on purpose. FancyMenu must not customize Create / AE2 / Xaero / Supplementaries / Twilight Forest screens (upstream blocks those packages). When we start custom layouts, use [FancyMenu docs (en-US home)](https://docs.fancymenu.net/docs/en-US/home).
-5. Default Options is how the pack unbinds FTB Chunks **Open Map** and Oculus **Reload Shaders**, and sets Epic Fight battle/mining to **V**. Ship `keybindings.txt` only. Do not ship a full `options.txt`.
+5. Default Options is how the pack unbinds FTB Chunks **Open Map** and Oculus **Reload Shaders**, sets Epic Fight battle/mining to **V**, and turns **Biome Blend** off. Ship `keybindings.txt` plus a two-line `options.txt` (`version` + `biomeBlendRadius:0`) only. Do not ship a full video preset.
 6. Ice and Fire is [Community Edition](https://www.curseforge.com/minecraft/mc-mods/iceandfire-ce). Do not also install the original [Ice and Fire](https://modrinth.com/mod/ice-and-fire-dragons) jar — they share a mod id and CE warns that swapping on an existing save corrupts it. New worlds can start on CE.
 
 ## Chosen
@@ -52,7 +52,7 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | Drippy Loading Screen | [modrinth.com/mod/drippy-loading-screen](https://modrinth.com/mod/drippy-loading-screen) `3.1.5` (`Nof419YS`) | client | Loading overlay. Needs FancyMenu. |
 | Konkrete | [modrinth.com/mod/konkrete](https://modrinth.com/mod/konkrete) `1.8.0` (`skYziQQL`) | client | FancyMenu / Drippy library |
 | Melody | [modrinth.com/mod/melody](https://modrinth.com/mod/melody) `1.0.3` (`lJlW5r8R`) | client | FancyMenu 3.9 library |
-| Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default keybinds: FTB Open Map unbound, Oculus Reload Shaders unbound, Epic Fight battle/mining **V** |
+| Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default keybinds: FTB Open Map unbound, Oculus Reload Shaders unbound, Epic Fight battle/mining **V**. Biome Blend off (`biomeBlendRadius:0`). |
 | Euphoria Patches | [modrinth.com/mod/euphoria-patches](https://modrinth.com/mod/euphoria-patches) `1.10.5-r5.9.3` (`fhNVBg6d`) | client | Complementary r5.9.3 extras. Off until a Complementary pack is enabled. |
 | Amendments | [modrinth.com/mod/amendments](https://modrinth.com/mod/amendments) `1.20-2.2.6` (`nJORWvdh`) | both | Supplementaries 3.x moved wall lanterns, skull candles, ceiling pots/banners, skull piles here. Moonlight already in. |
 | Trash Cans | [modrinth.com/mod/trash-cans](https://modrinth.com/mod/trash-cans) `1.1.0a` (`iiNJsz5q`) | both | Placeable item/fluid/energy voids. Not TrashSlot. Needs Core Lib + Config Lib. |
@@ -66,6 +66,13 @@ Research snapshot: 2026-09-16. Target is whatever Minecraft + Forge are in [`pac
 | LesRaisins Append Pack | [modrinth.com/mod/lesraisins-weapon](https://modrinth.com/mod/lesraisins-weapon) `0.3.0` (`KbReepVU`) | both | Extra LesRaisins guns |
 | Gucci & Vuitton Attachments | [modrinth.com/mod/tacz-gucci-vuitton-attachments](https://modrinth.com/mod/tacz-gucci-vuitton-attachments) `0.2.2` (`NnUWhMdw`) | both | Extra TACZ attachments |
 | Daffa's Arsenal | [modrinth.com/mod/daffasarsenal](https://modrinth.com/mod/daffasarsenal) `3.7.1.1` (`1Q9ypxVQ`) | both | Large extra TACZ gun pack |
+| TaCZ addon | [modrinth.com/mod/taczaddon](https://modrinth.com/mod/taczaddon) `1.1.8.1` hotfix6 (`KRI9qZLg`) | both | Attachment/GunSmith table QoL. Matches TACZ 1.1.8 and Sophisticated Core 1.5.x. |
+| TaCZ Tweaks | [modrinth.com/mod/tacz-tweaks](https://modrinth.com/mod/tacz-tweaks) `2.14.2` (`PVCsSn4e`) | both | Configurable gunplay tweaks. Kotlin + YACL already in. Not the 3.0 alpha. |
+| TaCZ Additions | [modrinth.com/mod/tacz-additions](https://modrinth.com/mod/tacz-additions) `1.3.0` (`Kg1T5z1f`) | both | Immersion: sway, lasers, recoil. Early-dev. ARR; author allows packs. |
+| TaCZ-Labs | [modrinth.com/mod/tacz-labs](https://modrinth.com/mod/tacz-labs) `1.1.8` (`Y0A1RcS9`) | client | Dynamic PUBG-style crosshair. Official Txt-Text file. Cloth Config already in. |
+| Curios For Ammo Box | [modrinth.com/mod/curios-for-ammo-box](https://modrinth.com/mod/curios-for-ammo-box) `1.2.0` (`8rZTDRzl`) | both | Ammo box in a Curios slot. Curios already in. |
+| Immersive Ballistic | [modrinth.com/mod/immersive-ballistic](https://modrinth.com/mod/immersive-ballistic) `1.3` (`Jzy1Orma`) | both | Bullet impact particles. Tweaks optional for extra audio. |
+| TaCZ x Guns Lights | [modrinth.com/mod/tacz-x-guns-lights-addon](https://modrinth.com/mod/tacz-x-guns-lights-addon) `2.9.0` (`wChlado4`) | client | Muzzle/tracer glow. Shader packs are off by default. Do not stack LambDynamicLights. |
 | AppleSkin | [modrinth.com/mod/appleskin](https://modrinth.com/mod/appleskin) `2.5.1+mc1.20.1` (`XdXDExVF`) | both | Hunger/saturation HUD. Official squeek502. `both` so saturation syncs. |
 | NeoAuth | [modrinth.com/mod/neoauth](https://modrinth.com/mod/neoauth) `1.0.3` (`9xLXbEMY`) | client | Microsoft session re-login in the multiplayer screen. Auth Me’s Forge port. Not a cracked-server login mod. |
 | Legendary Tooltips | [modrinth.com/mod/legendary-tooltips](https://modrinth.com/mod/legendary-tooltips) `1.4.5` (`JhxD2e6J`) | client | Rarity frames. Needs Iceberg + Prism lib. |
@@ -115,6 +122,9 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 | FancyMenu custom title art | **Held.** Framework only until a layout is chosen. Docs: https://docs.fancymenu.net/docs/en-US/home |
 | Ice and Fire (original `2.1.13-1.20.1-beta-5`) | **Dropped.** Community Edition replaces it. Do not install both. |
 | Maxstuff / Elite X Quality Guns / more random TACZ packs | **Held.** LesRaisins + Gucci + Daffa is the extra-pack set. More packs overlap IDs and quality. |
+| TACZ Durability | **Held.** Jamming + gun NBT wear. Revisit if that gameplay is wanted. |
+| TaCZ Ammo Query | **Skipped.** JEI plugin; EMI + TMRV is the viewer. Do not add real JEI. TaCZ addon already highlights matching ammo in containers. |
+| No Mindless Shooting | **Skipped.** Attracts/spawns mobs on unsilenced shots. Would yank IAF/Caves mobs toward gunfire. |
 | Better Combat / playerAnimator / IAF×BC / Alex's Caves BC | **Removed 2026-09-16.** Epic Fight is the melee layer. |
 | Better Combat Particle / Better Mob Combat | **Skipped.** Epic Fight is the melee layer. |
 | ParCool `4.0.0.4` | **Held.** Alpha rewrite dropped `com.alrex.parcool.common.action.Action`. Official Epic × ParCool still mixins that class. Stay on 3.4.3.3 until the bridge is rewritten. |
@@ -126,9 +136,11 @@ Geckolib and Curios were already in (Ars). Citadel stays for Alex's Caves.
 
 | Mod | Why a pack note |
 |---|---|
-| Default Options | `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload`, and sets `key.epicfight.switch_mode` to **V** so **R** stays TACZ reload. Existing instances that already saved those binds keep them. |
+| Default Options | `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload`, and sets `key.epicfight.switch_mode` to **V** so **R** stays TACZ reload. `options.txt` is only `version` + `biomeBlendRadius:0` (Biome Blend off). Existing instances that already saved those binds or blend keep them. |
 | AE2 / Ars / Twilight Forest / Supplementaries / Waystones | Worldgen and blocks. New chunks for meteors, Archwood, TF overworld portals, village waystones. TF dimension still works on the current world. |
 | Lootr | Converts loot-table chests. Player-placed Sophisticated Storage is unchanged. |
-| IceAndFire CE / TACZ / Simply Swords / Ars Elemental / Amendments / Trash Cans | World data. New chunks for dragon roosts and IAF structures. Guns, weapons, elemental blocks, and trash cans stay in the save if removed. Existing Supplementaries worlds keep wall lanterns only with Amendments. |
+| IceAndFire CE / TACZ / Simply Swords / Ars Elemental / Amendments / Trash Cans | World data. New chunks for dragon roosts and IAF structures. Guns, weapons, elemental blocks, and trash cans stay in the save if removed. Existing Supplementaries worlds keep wall lanterns only with Amendments. Leave TaCZ addon melee-gun list empty. |
+| Immersive Ballistic | After first launch, set `disableBreakBlocks = true` unless bullet grief is wanted. Client and server datapacks must match. |
+| TaCZ x Guns Lights | Client. If a shader pack is enabled later and muzzle glow fights it, turn gun lights down or off. Do not add LambDynamicLights. |
 | Legendary Tooltips / Equipment Compare / AppleSkin | If hover frames or the hunger overlay glitch, disable ImmediatelyFast `hud_batching`. |
 | ATO / Mekanism More Machine / Ars Énergistique | World data. New chunks for ATO ores. Tune `alltheores-common.toml` after first launch. |

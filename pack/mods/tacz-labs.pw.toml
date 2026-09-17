@@ -1,0 +1,13 @@
+name = "TaCZ-Labs"
+filename = "taczlabs-1.20.1-1.1.8.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/2zMQbEYF/versions/Y0A1RcS9/taczlabs-1.20.1-1.1.8.jar"
+hash-format = "sha512"
+hash = "31a2211a73991a72c995930f9e0e95b45d3b333422dfe96be16e58578d002a5aff04f3b6cf2e8428363c21711248b4e156dd408d32c42ed9ec8906a05a778792"
+
+[update]
+[update.modrinth]
+mod-id = "2zMQbEYF"
+version = "Y0A1RcS9"

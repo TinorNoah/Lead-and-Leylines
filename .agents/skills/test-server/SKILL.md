@@ -20,5 +20,6 @@ Until a CurseForge file exists, deploy the current `pack/` tree with `python scr
 5. Flag:
    - `Exception`, `Error`, crash reports
    - egg message that the file is not a server pack (CurseForge Generic only; expected until a distinct server pack exists; still report it)
-   - missing overlay after reinstall (`ops.json`, `user_jvm_args.txt` not re-copied)
+   - missing overlay after reinstall (`run.sh`, `user_jvm_args.txt`, `ops.json` not re-copied)
+   - Forge egg still on default `java … @unix_args.txt` startup (ZGC never loads; should be `bash run.sh`)
    - HTTP 401 from the script: wrong `PANEL_URL` or key in `.env` (not the Dokploy host)

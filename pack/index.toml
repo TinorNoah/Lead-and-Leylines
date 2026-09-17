@@ -6,23 +6,31 @@ hash = "c251fe9443c206f34cc590cf5c857ab939a7f0b9c63059c23ca784e0a8654945"
 
 [[files]]
 file = "config/create_sky_village-common.toml"
-hash = "c92a6c43e4c31d6b8f635205398691c7433d650020f973680a01aa9b02a641a0"
+hash = "0d1f1d3b9fb29253b59e4516efcd62d0a8e42da19301f7aab8f29afc186d8fd1"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "23fa0247039b6f7d7326e132ce254b7d4fbfadd6f0a07dd518681861da015839"
 
 [[files]]
-file = "config/sparsestructures.json5"
-hash = "7d8d2d747303b743049ade352f13939fa06fe3701d71910f345a2e08cc9fc782"
+file = "config/defaultoptions/options.txt"
+hash = "48fc658728936407fb1817319f87232b4ef53c5ddfd1531926b7275e8a737c6f"
 
 [[files]]
 file = "config/structurify.json"
-hash = "40e77545f6f15513b33cb9ccc2566a0138d4c1aa64a46ff10d1ed9f8d660d48f"
+hash = "84c526f8b94e28988e50923fa05831c04870774e6c9804c25dd223c8242ebd56"
+
+[[files]]
+file = "config/tectonic.json"
+hash = "ce605901afa77e3fcbd56bc32bdce21c86f10b0659287c32ab9ca7901229861e"
 
 [[files]]
 file = "config/terrablender.toml"
-hash = "7ec262c92362e39d7dbe2d541b2b52bf196a076f51fab92634adf9336fa96e46"
+hash = "b28f7da0d4cd0b3bb69a2abeeb9612f9c2c3f92caf789ecf01b86856904bbaba"
+
+[[files]]
+file = "defaultconfigs/bettersparsestructures-server.toml"
+hash = "0b9d7535c12ce993b1bd964fbd8d93ff757b6201b3f22e9dd058dbf02373e386"
 
 [[files]]
 file = "defaultconfigs/ftbchunks/client-config.snbt"
@@ -212,6 +220,11 @@ hash = "5978fd56002b6ec1427935d6f218ee68112d66662f4bc00626e0f27105c431da"
 metafile = true
 
 [[files]]
+file = "mods/better-sparse-structures.pw.toml"
+hash = "9c84f864882fc86db985bdd19ff7b4fa4bbfd61cd6008742c1c70b53d358e474"
+metafile = true
+
+[[files]]
 file = "mods/betternether-forge.pw.toml"
 hash = "1539db2db4ee7def0c23de87de438b3e86fa80ee3820c02ce14725690c719aee"
 metafile = true
@@ -388,7 +401,12 @@ metafile = true
 
 [[files]]
 file = "mods/cupboard.pw.toml"
-hash = "2ff90a53074619faf78a7e34e718fff3f2558076e116ac43180134b91c2d61a9"
+hash = "77f479f765b307ff09a3d0b90719bb3b929d59af193d1ed746dab513fe14f2c5"
+metafile = true
+
+[[files]]
+file = "mods/curios-for-ammo-box.pw.toml"
+hash = "e55f947418497f5bc71b5a71d1141f4643592aef91ef57ab84d8e9ab790be5ad"
 metafile = true
 
 [[files]]
@@ -662,6 +680,11 @@ hash = "1a9564ded8e9cd1f843f9de7fc87ffbf73033aab51494205458b0e58cc0ab194"
 metafile = true
 
 [[files]]
+file = "mods/immersive-ballistic.pw.toml"
+hash = "cc1e135ff7e79ef1662728e1445d877d7757b888b4a59334a40bd376de6d07c9"
+metafile = true
+
+[[files]]
 file = "mods/infernal-expansion-redux.pw.toml"
 hash = "023e146c6ad927adadd96592fc6a470f5f392dd7f486e1abfae07683bbf2cbaf"
 metafile = true
@@ -693,7 +716,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei-worldgen.pw.toml"
-hash = "0784adfd4806d4bebaae2b12969aaad5aa3cde465a3fbf31123f3d85c6c31038"
+hash = "00a64b068e09313ef15a78f81232f575839fcc0f46cbe2508350afb57320503a"
 metafile = true
 
 [[files]]
@@ -724,6 +747,11 @@ metafile = true
 [[files]]
 file = "mods/library-ferret.pw.toml"
 hash = "9e8dd3e6c43542e5edc72259a9be1d3815b87cc3baca9ea071b39c3f06dbb1fc"
+metafile = true
+
+[[files]]
+file = "mods/lithostitched.pw.toml"
+hash = "45c55bdbbf2240dfa30cedb5cd437f5716ccf09a707dcdffbe7f39af3e19ff7f"
 metafile = true
 
 [[files]]
@@ -1022,11 +1050,6 @@ hash = "a59d27eba58d24698ea2a3d0a41d5486f834ce8c9fa4c124633e829ee401ae71"
 metafile = true
 
 [[files]]
-file = "mods/sparsestructures.pw.toml"
-hash = "b07c6c5e54b6f8a0bc563fa19548110e7544f343c77540addf9c484692d43b51"
-metafile = true
-
-[[files]]
 file = "mods/stalwart-dungeons.pw.toml"
 hash = "d7849f105a95077b8def2721e50871e55ea74f75d7444c1908c9603ae272b022"
 metafile = true
@@ -1038,7 +1061,7 @@ metafile = true
 
 [[files]]
 file = "mods/structurify.pw.toml"
-hash = "9aad7a7db6ed7c09f1a166da320f376e4de23c29e144cd3b07bf29231d9fc677"
+hash = "527cb5b03dcd3faae01fbaf2ee9a088d731cdfbc970cb288a2e5466a12e09833"
 metafile = true
 
 [[files]]
@@ -1057,8 +1080,38 @@ hash = "168b3ee3fa2fe18f712c593d9d90e8b3a8a6a10564376af98bcc6f9719506641"
 metafile = true
 
 [[files]]
+file = "mods/tacz-additions.pw.toml"
+hash = "2f09f56e18454a538296c32d868643e6473009e518983f25fafaac5557c41616"
+metafile = true
+
+[[files]]
 file = "mods/tacz-gucci-vuitton-attachments.pw.toml"
 hash = "dd600f6fe8ced6d3c1ccbe597d708fe26f1f385db474e0489a93ed69b7f14047"
+metafile = true
+
+[[files]]
+file = "mods/tacz-labs.pw.toml"
+hash = "ab7c99918e898a0fc2615b5a397ecb80f52af51d30f532a3c27e0965d316d8e9"
+metafile = true
+
+[[files]]
+file = "mods/tacz-tweaks.pw.toml"
+hash = "d6bab7d56578ffb57ea793f916e76a13f423043f9e334020b33a67833df5cdd8"
+metafile = true
+
+[[files]]
+file = "mods/tacz-x-guns-lights-addon.pw.toml"
+hash = "1a15b5622c3e9c681138668f11c81db794b7ca03415c9acbf1510b1169529449"
+metafile = true
+
+[[files]]
+file = "mods/taczaddon.pw.toml"
+hash = "0c123cd7bd494ab1e7c6d6cccbda19fecb9120999351e011824a9d9d75779493"
+metafile = true
+
+[[files]]
+file = "mods/tectonic.pw.toml"
+hash = "4dfde3652243cfdfe5ee680d783204b4894420484bfaf38e6163302aa13bf6fd"
 metafile = true
 
 [[files]]
@@ -1238,4 +1291,4 @@ metafile = true
 
 [[files]]
 file = "user_jvm_args.txt"
-hash = "01df36a2513fde68b9fe007530d67399c98ec731abdf4721abf8b0bedd1b4466"
+hash = "c3c54d2c9f1ef18793f1484fa4512f9fb3eeb742483ca856cbbbddb1b90187a0"

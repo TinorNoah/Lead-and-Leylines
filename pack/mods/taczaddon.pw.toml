@@ -1,0 +1,13 @@
+name = "TaCZ addon"
+filename = "taczaddon-1.1.8.1-hotfix6-forge-1.20.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/3Ihyt5WL/versions/KRI9qZLg/taczaddon-1.1.8.1-hotfix6-forge-1.20.1.jar"
+hash-format = "sha512"
+hash = "f5697827933bc9efb74d9129e4e3931e4a69f95b8d61a104ba2166c5bf25b1fc2b42745554f531903678bd6cb4035115a7893d22b79ebacbda5a16a756e0a4f3"
+
+[update]
+[update.modrinth]
+mod-id = "3Ihyt5WL"
+version = "KRI9qZLg"

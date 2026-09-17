@@ -56,10 +56,12 @@ The CurseForge Generic egg installs from the last published CurseForge file. It 
 
 If the Generic egg warns that the file is not a server pack, it will use the client zip. That is expected until a distinct CurseForge server pack is uploaded.
 
-## Overlay files (not created in Phase 1)
+## Overlay files
 
-After they exist, re-copy these onto the server **after every egg reinstall** (the install script writes `/mnt/server`):
+`python scripts/deploy_server.py --from-local` copies these after every mods zip (re-copy after an egg reinstall; the install script writes `/mnt/server`):
 
-- `user_jvm_args.txt`
-- `ops.json`
-- host-specific scripts
+- `run.sh` — Forge start. Panel startup is `bash run.sh`. Uses Java 17 ZGC from `user_jvm_args.txt`. Do not add `-XX:+ZGenerational`.
+- `user_jvm_args.txt` — copied from `pack/user_jvm_args.txt` (`-XX:+UseZGC`)
+- `ops.json` — only if present under `server/`
+
+The Forge Minecraft egg’s default startup is `java … @unix_args.txt` and ignores `user_jvm_args.txt`. Local Forge deploys set startup to `bash run.sh` so ZGC actually applies. The CurseForge Generic egg keeps its own startup.

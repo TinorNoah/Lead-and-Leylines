@@ -2,7 +2,7 @@
 
 Research snapshot: 2026-09-13. Target is whatever Minecraft + Forge are in [`pack/pack.toml`](../../pack/pack.toml) (at snapshot: Minecraft 1.20.1, Forge 47.4.23). Re-check store pages before install; do not add a file that does not list that pair.
 
-**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Second client cut: Entity Culling `1.10.5` + Dynamic FPS `3.11.4`. Smoothness cut: FastSuite, Noisium, Clumps, Smooth Chunk Save + Cupboard, Neruina. Dynamic lights stay out. Create + Colorwheel (not iris-flw-compat) landed in the QoL cut; see [utility.md](utility.md). packwiz `side` is set as in the tables.
+**Status:** first cut **installed** (2026-09-13), including **shaders as a pack feature** (Oculus `1.8.0` + Embeddium `0.3.31`). Second client cut: Entity Culling `1.10.5` + Dynamic FPS `3.11.4`. Smoothness cut: FastSuite, Noisium, Clumps, Smooth Chunk Save + Cupboard, Neruina. Shader packs ship but none is enabled by default; TACZ gun lights are the allowed DL path. Create + Colorwheel (not iris-flw-compat) landed in the QoL cut; see [utility.md](utility.md). packwiz `side` is set as in the tables.
 
 ## Side (packwiz)
 
@@ -19,7 +19,7 @@ Nothing in the chosen set is dedicated-server-only. Let Me Despawn, Radium, Fast
 1. Compatibility first. Mixin overlap or two mods solving the same subsystem → keep one.
 2. Prefer the maintained Forge 1.20.1 project, not an abandoned fork with a familiar name.
 3. Do not add a compat mod until the content mod it compatibilizes exists. Create + Oculus uses Colorwheel, not iris-flw-compat.
-4. Do not add a second leaf-culler, second dynamic-lights mod, or a second Lithium port.
+4. Do not add a second leaf-culler, a second general dynamic-lights mod, or a second Lithium port. TACZ gun-muzzle/tracer lights are the one allowed DL path while no shader pack is enabled by default.
 5. Gameplay-changing “optimizers” (mob freeze range, redstone rewrite) are hold/skip unless explicitly wanted.
 
 ---
@@ -38,7 +38,7 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | FastFurnace | [modrinth.com/mod/fastfurnace](https://modrinth.com/mod/fastfurnace) | both | Furnace tick shortcut. Same author and same both-sides rule as FastWorkbench. |
 | BadOptimizations | [modrinth.com/mod/badoptimizations](https://modrinth.com/mod/badoptimizations) | client | CPU work that is not chunk meshing (toasts, sky, etc.). Complements Embeddium. |
 | Embeddium Extra | [modrinth.com/mod/rubidium-extra](https://modrinth.com/mod/rubidium-extra) (listed as Embeddium/Rubidium Extra) | client | Sodium Extra port: fog, particles, animation, leaf *settings*. One extras mod only. |
-| Oculus | [modrinth.com/mod/oculus](https://modrinth.com/mod/oculus) | client | Iris for Forge. Shaders are a pack feature. Pair with Embeddium `0.3.31` + Oculus `1.8.0` (latest 1.20.1 files at research). No separate dynamic-lights mod. |
+| Oculus | [modrinth.com/mod/oculus](https://modrinth.com/mod/oculus) | client | Iris for Forge. Shaders are a pack feature. Pair with Embeddium `0.3.31` + Oculus `1.8.0` (latest 1.20.1 files at research). No default shader pack. TACZ gun lights are allowed; do not stack LambDynamicLights or Extra lights. |
 | Crash Assistant | [modrinth.com/mod/crash-assistant](https://modrinth.com/mod/crash-assistant) | client | Crash GUI and log analysis. Request Help opens the pack Discord. Does not raise FPS. |
 | Radium | [modrinth.com/mod/radium](https://modrinth.com/mod/radium) (Reforged-Hub Lithium port) | both | Lithium for Forge: AI, block updates, ticking. Chosen instead of Canary and instead of CurseForge “Radium Reforged” as a second jar. |
 | Let Me Despawn | [modrinth.com/mod/lmd](https://modrinth.com/mod/lmd) | both | Despawn for mobs that picked up gear and would otherwise live forever. Real server stutter fix. |
@@ -51,7 +51,7 @@ Install these together. They occupy different layers (renderer, RAM, HUD GL, rec
 | Noisium | [modrinth.com/mod/noisium](https://modrinth.com/mod/noisium) | both | Faster vanilla-parity worldgen. Official Forge `2.3.0+mc1.20-1.20.1`. `both` so Prism singleplayer gets it. For planned biome mods. |
 | Clumps | [modrinth.com/mod/clumps](https://modrinth.com/mod/clumps) | both | Merges XP orbs. For Mob Grinding Utils and other farm XP spam. |
 | Smooth Chunk Save | [curseforge.com/.../smooth-chunk-save](https://www.curseforge.com/minecraft/mc-mods/smooth-chunk-save) | both | Spreads autosave disk writes. Forge `4.1` file id `6296598`. |
-| Cupboard | Smooth Chunk Save dependency | both | someaddon library. Forge `4.1` file id `8746423`. Reuse later if Connectivity is added. |
+| Cupboard | Smooth Chunk Save dependency | both | someaddon library. Forge `4.2` file id `8889041`. Reuse later if Connectivity is added. |
 | Neruina | [modrinth.com/mod/neruina](https://modrinth.com/mod/neruina) | both | Isolates ticking entity/block crashes so a bad farm or magic tick does not brick the world. |
 
 ---
@@ -101,7 +101,7 @@ Do not add Sinytra Connector just to run the Fabric jars.
 |---|---|---|---|
 | Rubidium (not asked, but the trap) | Abandoned Embeddium predecessor | client | Same renderer as Embeddium. Never add. |
 | Better Beds (Motschen) | [modrinth.com/mod/better-beds](https://modrinth.com/mod/better-beds) is Fabric/NeoForge only on 1.20.1 | client | **No Forge 1.20.1 file.** Use Better Beds Reforged if we ever want beds, do not install this slug. |
-| Sodium/Embeddium Dynamic Lights, RyoamicLights, Extra lights | Three products, one job | client | **Dropped:** shaders (Oculus) are a pack feature. Extra DL mods flicker or fight shader lighting. Do not add a second DL mod later either. |
+| Sodium/Embeddium Dynamic Lights, RyoamicLights, Extra lights | Three products, one general DL job | client | **Dropped** as a second general DL. Shader packs ship but none is on by default; TaCZ x Guns Lights is the gun-muzzle/tracer path. Do not add LambDynamicLights or Extra lights next to it. |
 | CullLessLeaves Reforged (Unofficial) | [modrinth.com/mod/cull-less-leaves-reforged](https://modrinth.com/mod/cull-less-leaves-reforged) | client | Last 1.20.1 file 2023. Same job as Embeddium Extra leaf settings. Looks wrong with Oculus shaders. |
 | Alternate Current | [modrinth.com/mod/alternate-current](https://modrinth.com/mod/alternate-current) | both | Rewrites redstone dust. Radium/Lithium already touches that subsystem. Mixin overlap; pick Radium (broader). |
 | Canary | [modrinth.com/mod/canary](https://modrinth.com/mod/canary) | both | Second Lithium port. Older 1.20.1 build than Radium; reports of disabled Lithium opts and Apotheosis issues. |
@@ -147,9 +147,9 @@ Do not combine:
 | Embeddium + Rubidium | Duplicate renderer |
 | Radium + Canary | Duplicate Lithium |
 | Radium + Alternate Current | Duplicate redstone implementation |
-| Two dynamic-light mods | Flicker / crash |
+| Two general dynamic-light mods | Flicker / crash |
 | CullLessLeaves + Embeddium Extra leaf culling | Duplicate leaf pass |
-| Oculus + dynamic lights | Shader lighting vs extra DL |
+| Shader pack ON + generic DL (LambDynamicLights / Extra lights) | Shader lighting vs extra DL |
 | Oculus + CullLessLeaves | Holey trees under shaders |
 | Colorwheel + Iris/Oculus Flywheel Compat | Incompatible; Colorwheel is the chosen Create + Oculus path |
 | Embeddium + Oculus with unmatched versions | Common 1.20.1 crash source. Pair store files; do not mix random builds. |
@@ -170,7 +170,7 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 | Mod | Why a pack note |
 |---|---|
 | Let Me Despawn | Gameplay: which equipped mobs may despawn. Document equipment / whitelist so named or raid mobs are not surprising. |
-| Embeddium Extra | If any other leaf or dynamic-light mod is added later, turn those Extra toggles off. |
+| Embeddium Extra | Leave Extra dynamic lights off so they do not stack with TaCZ x Guns Lights. If any other leaf mod is added later, turn Extra leaf culling off too. |
 | ImmediatelyFast | If a later HUD/tooltip mod glitches, disable `hud_batching`. Otherwise leave default. |
 | Oculus | Version pair with Embeddium is the real “config”. Test packs are in `pack/shaderpacks/`. No default pack until one is chosen on purpose. |
 | ServerCore (if held → chosen) | Activation range and mobcaps must be written down; they change what players see in the distance. |
@@ -192,7 +192,7 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 | Alternate Current | Dropped (Radium covers redstone; mixin clash) |
 | Better Beds (Client Only) | Held as Better Beds **Reforged**; upstream Forge file missing |
 | AllTheLeaks | Chosen, both (CurseForge) |
-| Sodium/Embeddium Dynamic Lights | **Dropped** — Oculus is in |
+| Sodium/Embeddium Dynamic Lights | **Dropped** — general DL; TACZ gun lights is the allowed path |
 | BadOptimizations | Chosen, client |
 | Let Me Despawn | Chosen, both |
 | Sodium/Embeddium Extras | Chosen as Embeddium Extra, client |
@@ -206,7 +206,7 @@ When the chosen mods are installed, ship notes (and config overrides only if def
 
 ## Locked: shaders
 
-Shaders are a pack feature. Oculus is the Forge shader loader. Dynamic lights mods stay out. Create + Oculus uses Colorwheel (beta), not iris-flw-compat.
+Shaders are a pack feature. Oculus is the Forge shader loader. Shader packs ship but none is enabled by default. TACZ gun-muzzle/tracer lights are allowed; do not stack a second general dynamic-lights mod. Create + Oculus uses Colorwheel (beta), not iris-flw-compat.
 
 A **test set** of Iris packs ships in `pack/shaderpacks/` (client). None is enabled by default. Players pick one in Video Settings → Shader Packs. After testing, remove packs we do not want; do not turn one on by default until that choice is made.
 

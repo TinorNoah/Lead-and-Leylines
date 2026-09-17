@@ -1,0 +1,13 @@
+name = "TaCZ x Guns Lights Addon"
+filename = "tacz_x_guns_lights_addon-2.9.0.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/XZBT7YTE/versions/wChlado4/tacz_x_guns_lights_addon-2.9.0.jar"
+hash-format = "sha512"
+hash = "c284f443fcf9f5901adf73a59c0a273bca7ea3682f70ca0957b04d8df871d0724487cac752e3240c15966c45f778db40afee1b04d9f5c799335a72d08c948004"
+
+[update]
+[update.modrinth]
+mod-id = "XZBT7YTE"
+version = "wChlado4"

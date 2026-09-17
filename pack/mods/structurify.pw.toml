@@ -1,13 +1,13 @@
 name = "Structurify - Structure Control"
-filename = "structurify-forge-2.0.37+mc1.20.1.jar"
+filename = "structurify-forge-2.0.38+mc1.20.1.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/yz7AM2zx/versions/FMlB4OQ1/structurify-forge-2.0.37%2Bmc1.20.1.jar"
+url = "https://cdn.modrinth.com/data/yz7AM2zx/versions/J0nvhron/structurify-forge-2.0.38%2Bmc1.20.1.jar"
 hash-format = "sha512"
-hash = "50232a40d95263069bffd073a518149c57dfb2bba0d98198763c293e87544814470fffadab74a868a55b17fc66b3fe6bd55f0f1f836d6379f15647d14d89c457"
+hash = "15404d1b4b9796c0b26672ecf15679887035ea0e73816f874b9d28cb61b129e0075e20697b28e148418c8c8ca5ed275636e6bc797af45a9cd79ef6efad15d928"
 
 [update]
 [update.modrinth]
 mod-id = "yz7AM2zx"
-version = "FMlB4OQ1"
+version = "J0nvhron"

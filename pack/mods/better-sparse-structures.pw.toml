@@ -1,0 +1,13 @@
+name = "Better Sparse Structures"
+filename = "bettersparsestructures-1.2.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "51f24240521747b60b339be23ae7363a6a5ddc24"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7889912
+project-id = 1499833

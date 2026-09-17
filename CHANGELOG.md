@@ -11,11 +11,25 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 ### Added
 
+- TACZ gunplay extras: attachment table QoL, Tweaks, Additions, Labs crosshair, Curios ammo-box slot, Immersive Ballistic impacts, and muzzle/tracer lights.
+- Tectonic terrain is back (Lithostitched required). Mountains are toned down from Tectonic defaults. New Overworld chunks only.
+
 ### Changed
+
+- Cupboard (Smooth Chunk Save's library) is on 4.2.
+- Create sky villages use the author's spacing (80 / 40). Already generated chunks stay as they are.
+- Nether TerraBlender biome regions match the Overworld maximum (size 6). Overworld was already at 6.
+- Biome Blend is off so grass and foliage colors do not fade across biome borders. New installs get that default. Existing instances that already saved a blend keep it — set Video Settings → Biome Blend to **OFF**.
+- Structures keep a little extra space between them (Better Sparse Structures). Alex's Caves and Create sky villages stay at author density. New chunks only.
 
 ### Fixed
 
+- Structure config no longer crashes the rest of the way on YACL (Structurify 2.0.38).
+- EMI worldgen pages show ore vein size correctly (1.4.5).
+
 ### Removed
+
+- Sparse Structures (replaced by Better Sparse Structures).
 
 ## [0.0.9] - 2026-09-17
 

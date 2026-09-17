@@ -1,6 +1,6 @@
 # Lead and Leylines — mod manifest
 
-Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md).
+Synced with `pack/mods/*.pw.toml` on 2026-09-17. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md).
 
 ## Installed
 
@@ -25,7 +25,7 @@ Synced with `pack/mods/*.pw.toml` on 2026-09-16. Minecraft, loader, and pack ver
 - Download source: https://modrinth.com/mod/oculus/version/iQ1SwGc3
 - packwiz `side`: client
 - Category: shaders (loader)
-- Why chosen: Iris for Forge. Shaders are a pack feature. No separate dynamic-lights mod.
+- Why chosen: Iris for Forge. Shaders are a pack feature. No default shader pack. TACZ gun lights are the allowed DL path.
 - Required dependencies: Embeddium (paired `0.3.31`)
 - Optional dependencies: none
 - Recommended companions: shader packs in `pack/shaderpacks/` (test set; none enabled by default)
@@ -172,7 +172,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Embeddium
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: leave Extra lights off while Oculus is in. If another leaf mod is added later, turn Extra leaf culling off.
+- Config changes: leave Extra lights off so they do not stack with TaCZ x Guns Lights. If another leaf mod is added later, turn Extra leaf culling off.
 - World-data / removability: client; clean to remove
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-13
@@ -344,7 +344,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 
 ### Cupboard
 
-- Pinned file / version: `cupboard-1.20.1-4.1.jar` (CurseForge file id `8746423`, project `326652`)
+- Pinned file / version: `cupboard-1.20.1-4.2.jar` (CurseForge file id `8889041`, project `326652`)
 - Download source: https://www.curseforge.com/minecraft/mc-mods/cupboard
 - packwiz `side`: both
 - Category: library
@@ -1025,7 +1025,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Category: content (Nether)
 - Why chosen: Official 1.20.1 pointer from Infernal Expansion. In-development rebuild, not a 1:1 port.
 - Required dependencies: GeckoLib
-- Optional dependencies: Cloth Config (shipped), LambDynamicLights (skipped; Oculus is the light path), Afterimages (skipped)
+- Optional dependencies: Cloth Config (shipped), LambDynamicLights (skipped; second general DL), Afterimages (skipped)
 - Recommended companions: none
 - Config changes: none — defaults. New world.
 - World-data / removability: biomes, blocks, and mobs stay in the save if removed
@@ -1222,7 +1222,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/terrablender.toml` — `overworld_region_size` 6, `nether_region_size` 4 ([configs.md](configs.md))
+- Config changes: `pack/config/terrablender.toml` — `overworld_region_size` 6, `nether_region_size` 6 ([configs.md](configs.md))
 - World-data / removability: do not remove while RU or BWG is installed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1342,7 +1342,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Citadel
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: none — defaults. New world.
+- Config changes: Better Sparse Structures whitelists `alexscaves:*` so cave-shape structures are not blocked ([configs.md](configs.md))
 - World-data / removability: biomes, blocks, and mobs stay in the save if removed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1376,6 +1376,36 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - World-data / removability: End biome shape stays in generated chunks
 - License / attribution: Stardust Labs License; store pack distribution
 - Date added: 2026-09-16
+
+### Tectonic
+
+- Pinned file / version: `tectonic-3.0.17-forge-1.20.1.jar` (Modrinth version `KLmvRxwh`)
+- Download source: https://modrinth.com/mod/tectonic/version/KLmvRxwh
+- packwiz `side`: both
+- Category: worldgen (terrain)
+- Why chosen: Big continents and mountains, toned down from Tectonic defaults. Not Lithosphere. Forge jar already blends with Terralith (not Terratonic).
+- Required dependencies: Lithostitched 1.4.11+ (Modrinth version metadata lists none; the jar still fails without it)
+- Optional dependencies: none
+- Recommended companions: Terralith (shipped)
+- Config changes: `pack/config/tectonic.json` — Continents Scale `0.11`, Ocean Offset `-0.92`, temperature/vegetation scale `0.16`, Vertical Scale `0.80`, Elevation Boost `0.0`. Extra gen off: cheese/noodle/spaghetti caves, jungle pillars, underground rivers, river lanterns, rolling hills, lava tunnels, ocean islands. New chunks; 1.20 restart. ([configs.md](configs.md))
+- World-data / removability: changes Overworld shape; old chunks stay old
+- License / attribution: MIT; see Modrinth project page
+- Date added: 2026-09-17
+
+### Lithostitched
+
+- Pinned file / version: `lithostitched-forge-1.20.1-1.4.11.jar` (Modrinth version `srPoHKt8`)
+- Download source: https://modrinth.com/mod/lithostitched/version/srPoHKt8
+- packwiz `side`: both
+- Category: library (worldgen)
+- Why chosen: Hard requirement of Tectonic 3.0.17 (`lithostitched` 1.4.11 or above). Missing it is a boot error, not optional.
+- Required dependencies: none
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none
+- World-data / removability: library; remove only with Tectonic
+- License / attribution: MIT; https://modrinth.com/mod/lithostitched
+- Date added: 2026-09-17
 
 ### YUNG's Bridges
 
@@ -1424,33 +1454,33 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 
 ### Structurify - Structure Control
 
-- Pinned file / version: `structurify-forge-2.0.37+mc1.20.1.jar` (Modrinth version `FMlB4OQ1`)
-- Download source: https://modrinth.com/mod/structurify/version/FMlB4OQ1
+- Pinned file / version: `structurify-forge-2.0.38+mc1.20.1.jar` (Modrinth version `J0nvhron`)
+- Download source: https://modrinth.com/mod/structurify/version/J0nvhron
 - packwiz `side`: both
 - Category: worldgen (structure spacing)
 - Why chosen: Structure Control for ruined portals, villages, strongholds, custom ids.
 - Required dependencies: YACL
 - Optional dependencies: none
-- Recommended companions: Sparse Structures (shipped at spread 1)
-- Config changes: `pack/config/structurify.json` — global spacing modifier **off** so it does not stack with Sparse
+- Recommended companions: Better Sparse Structures (4-chunk global gap)
+- Config changes: `pack/config/structurify.json` — global spacing modifier **off** so it does not stack with Better Sparse Structures
 - World-data / removability: clean to remove; already-generated structures stay
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
 
-### Sparse Structures
+### Better Sparse Structures
 
-- Pinned file / version: `sparsestructures-forge-1.20.1-3.0.jar` (Modrinth version `oqEnX6AN`)
-- Download source: https://modrinth.com/mod/sparsestructures/version/oqEnX6AN
+- Pinned file / version: `bettersparsestructures-1.2.0.1.jar` (CurseForge file `7889912`)
+- Download source: https://www.curseforge.com/minecraft/mc-mods/better-sparse-structures/files/7889912
 - packwiz `side`: both
 - Category: worldgen (structure spacing)
-- Why chosen: Unique salts per structure set (`idBasedSalt`). Spread factor is **1** (vanilla density) so locates match placed structures.
+- Why chosen: Minimum gap between any two structures plus overlap reject. Not Sparse Structures' global `spreadFactor` (author default 2 was too rare).
 - Required dependencies: none
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/sparsestructures.json5` `spreadFactor` 1 ([configs.md](configs.md))
-- World-data / removability: clean to remove
-- License / attribution: see Modrinth project page
-- Date added: 2026-09-16
+- Config changes: `pack/defaultconfigs/bettersparsestructures-server.toml` `globalSpacingRadiusChunks` 4; whitelist `alexscaves:*` and `create_sky_village:*` ([configs.md](configs.md))
+- World-data / removability: clean to remove; already-generated structures stay. Forge Type.SERVER file is copied into `world/serverconfig/` on first world create.
+- License / attribution: z2six custom license (https://z2six.dev/legal/licenses/view.html?id=z2six-mod-license-v1)
+- Date added: 2026-09-17
 
 ### Epic Structures: Villages
 
@@ -1537,7 +1567,7 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Required dependencies: Create (present)
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/create_sky_village-common.toml` — spacing 32 / separation 16, height offset 64 ([configs.md](configs.md))
+- Config changes: `pack/config/create_sky_village-common.toml` — spacing 80 / separation 40 (author default), height offset 64. BSS whitelist `create_sky_village:*` ([configs.md](configs.md))
 - World-data / removability: generated structures stay in chunks
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -1983,11 +2013,11 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - Download source: https://modrinth.com/mod/default-options/version/AVz3mvZZ
 - packwiz `side`: client
 - Category: utility (pack defaults)
-- Why chosen: Unbind FTB Chunks Open Map and Oculus Reload Shaders without shipping a full `options.txt`.
+- Why chosen: Unbind FTB Chunks Open Map and Oculus Reload Shaders, and turn Biome Blend off, without shipping a full video preset.
 - Required dependencies: Balm
 - Optional dependencies: none
 - Recommended companions: none
-- Config changes: `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload` ([configs.md](configs.md))
+- Config changes: `pack/config/defaultoptions/keybindings.txt` unbinds `key.ftbchunks.map` and `iris.keybind.reload`; `options.txt` is `version` + `biomeBlendRadius:0` ([configs.md](configs.md))
 - World-data / removability: client; removing it does not restore **M** on instances that already saved the unbound key
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
@@ -2186,6 +2216,111 @@ Skipped this cut: Bliss (Chocapic ARR, no modpack grant), Potato/Nostalgia/Paste
 - World-data / removability: guns stay in the save if removed
 - License / attribution: see Modrinth project page
 - Date added: 2026-09-16
+
+### TaCZ addon
+
+- Pinned file / version: `taczaddon-1.1.8.1-hotfix6-forge-1.20.1.jar` (Modrinth version `KRI9qZLg`)
+- Download source: https://modrinth.com/mod/taczaddon/version/KRI9qZLg
+- packwiz `side`: both
+- Category: content (TACZ QoL)
+- Why chosen: Attachment and GunSmith table filtering. File is the new-Sophisticated hotfix; pack has Sophisticated Core 1.5.x.
+- Required dependencies: TACZ
+- Optional dependencies: Sophisticated Backpacks (already in)
+- Recommended companions: none
+- Config changes: none — defaults. Leave the “treat these guns as melee” list empty so Epic Fight stays melee.
+- World-data / removability: no new blocks; attachment NBT on guns stays if removed
+- License / attribution: GPL-3.0-only; see Modrinth project page
+- Date added: 2026-09-17
+
+### TaCZ Tweaks
+
+- Pinned file / version: `tacz-tweaks-2.14.2-all.jar` (Modrinth version `PVCsSn4e`)
+- Download source: https://modrinth.com/mod/tacz-tweaks/version/PVCsSn4e
+- packwiz `side`: both
+- Category: content (TACZ tweaks)
+- Why chosen: Configurable gunplay (unload, sprint/reload, particles). Pin 2.14.2 for TACZ 1.1.8; not the 3.0 alpha.
+- Required dependencies: TACZ, Kotlin for Forge, YACL (already in)
+- Optional dependencies: Immersive Ballistic (also in)
+- Recommended companions: Immersive Ballistic
+- Config changes: none — defaults. Tune in the in-game YACL screen if recoil/movement stacks with Additions.
+- World-data / removability: config-only; clean to remove
+- License / attribution: GPL-3.0-only; see Modrinth project page
+- Date added: 2026-09-17
+
+### TaCZ Additions
+
+- Pinned file / version: `taczadditions-1.20.1-1.3.0.jar` (Modrinth version `Kg1T5z1f`)
+- Download source: https://modrinth.com/mod/tacz-additions/version/Kg1T5z1f
+- packwiz `side`: both
+- Category: content (TACZ immersion)
+- Why chosen: Gun sway, lasers, recoil, optional PiP scopes. Early-dev; common config for SP and dedicated.
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: no new blocks; clean to remove
+- License / attribution: All Rights Reserved; code is public; store pack distribution
+- Date added: 2026-09-17
+
+### TaCZ-Labs
+
+- Pinned file / version: `taczlabs-1.20.1-1.1.8.jar` (Modrinth version `Y0A1RcS9`)
+- Download source: https://modrinth.com/mod/tacz-labs/version/Y0A1RcS9
+- packwiz `side`: client
+- Category: content (TACZ HUD)
+- Why chosen: Official Txt-Text dynamic crosshair. Cloth Config already in.
+- Required dependencies: TACZ
+- Optional dependencies: Cloth Config (already in)
+- Recommended companions: none
+- Config changes: none — defaults
+- World-data / removability: client; clean to remove
+- License / attribution: GPL-3.0-only; see Modrinth project page
+- Date added: 2026-09-17
+
+### [TaCZ] Curios For Ammo Box
+
+- Pinned file / version: `curios_for_ammo_box-1.20.1-1.2.0.jar` (Modrinth version `8rZTDRzl`)
+- Download source: https://modrinth.com/mod/curios-for-ammo-box/version/8rZTDRzl
+- packwiz `side`: both
+- Category: content (TACZ Curios)
+- Why chosen: Equip the TACZ ammo box in a Curios slot. Curios already in. 0.3.0+ no longer fights TaCZ addon.
+- Required dependencies: TACZ, Curios
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — defaults. Slot count is config-tunable without a datapack.
+- World-data / removability: Curios slot items; remove only after emptying the slot
+- License / attribution: see Modrinth project page
+- Date added: 2026-09-17
+
+### TaCZ: Immersive Ballistic
+
+- Pinned file / version: `immersive_ballistic-1.3.jar` (Modrinth version `Jzy1Orma`)
+- Download source: https://modrinth.com/mod/immersive-ballistic/version/Jzy1Orma
+- packwiz `side`: both
+- Category: content (TACZ VFX)
+- Why chosen: Block-type impact particles. Tweaks optional for extra flyby/ricochet audio. Author allows modpacks.
+- Required dependencies: none declared on 1.3 (TACZ in practice)
+- Optional dependencies: TaCZ Tweaks, Tacz: Presence (Presence not added)
+- Recommended companions: TaCZ Tweaks
+- Config changes: after first launch, set `disableBreakBlocks = true` in `immersive_ballistic-common.toml` unless bullet grief is wanted. Client and server datapacks under `/tacz/immersive_ballistic` must match.
+- World-data / removability: particles/config; block damage from bullets is world data if break is left on
+- License / attribution: All Rights Reserved; author allows modpacks; see Modrinth project page
+- Date added: 2026-09-17
+
+### TaCZ x Guns Lights Addon
+
+- Pinned file / version: `tacz_x_guns_lights_addon-2.9.0.jar` (Modrinth version `wChlado4`)
+- Download source: https://modrinth.com/mod/tacz-x-guns-lights-addon/version/wChlado4
+- packwiz `side`: client
+- Category: content (TACZ lights)
+- Why chosen: Muzzle flash and tracer glow. Shader packs ship but none is enabled by default. Not LambDynamicLights; do not stack Extra lights.
+- Required dependencies: TACZ
+- Optional dependencies: none
+- Recommended companions: none
+- Config changes: none — in-game presets. If a shader pack is enabled later and glow fights it, turn this down or off.
+- World-data / removability: client lights; clean to remove (2.5.0 fixed lights baking into chunks)
+- License / attribution: LGPL-3.0-or-later; see Modrinth project page
+- Date added: 2026-09-17
 
 ### Iceberg
 
@@ -2409,7 +2544,7 @@ Pins match `pack/mods/*.pw.toml`. Decision logs: [content.md](content.md), [stor
 | Dyenamics + Friends | CF `3.2.0` + `1.9.3` (`6755420`) | both | Extra dyes. 1.6.0 crashed on Connected Glass 1.1.14 (`CGPaneBakedModel`). |
 | Connected Glass | `1.1.14` (`5rewtxLD`) | both | Needs Fusion (client) |
 | EMI Enchants | `1.0.0` (`Lzvq7JEE`) | client | Enchant pages |
-| JEI / REI / EMI WorldGen | `1.4.4` (`pKNlzNVH`) | client | Worldgen pages; no real JEI |
+| JEI / REI / EMI WorldGen | `1.4.5` (`GVElfR28`) | client | Worldgen pages; no real JEI |
 | Inventory Essentials | `8.2.19` (`BhuVHyaA`) | both | Extra inventory keys |
 | Item Borders | `1.2.2` (`JUW31p4D`) | client | Rarity borders |
 | Elytra Slot | `6.4.4` (`k6lA080t`) | both | Curios elytra; Caelus |
@@ -2536,11 +2671,13 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Citadel | https://modrinth.com/mod/citadel |
 | Alex's Caves | https://modrinth.com/mod/alexs-caves |
 | Terralith | https://modrinth.com/mod/terralith |
+| Tectonic | https://modrinth.com/mod/tectonic |
+| Lithostitched | https://modrinth.com/mod/lithostitched |
 | YUNG's Bridges | https://modrinth.com/mod/yungs-bridges |
 | YUNG's Better Caves | https://modrinth.com/mod/yungs-better-caves |
 | YetAnotherConfigLib | https://modrinth.com/mod/yacl |
 | Structurify | https://modrinth.com/mod/structurify |
-| Sparse Structures | https://modrinth.com/mod/sparsestructures |
+| Better Sparse Structures | https://www.curseforge.com/minecraft/mc-mods/better-sparse-structures |
 | Epic Structures: Villages | https://modrinth.com/mod/epic-structures-villages |
 | Epic Structures: Witch Huts | https://modrinth.com/mod/epic-structures-witch-huts |
 | Epic Structures: Jungle Temples | https://modrinth.com/mod/epic-structures-jungle-temples |
@@ -2599,6 +2736,13 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | LesRaisins Append Pack | https://modrinth.com/mod/lesraisins-weapon |
 | Gucci & Vuitton Attachments | https://modrinth.com/mod/tacz-gucci-vuitton-attachments |
 | Daffa's Arsenal | https://modrinth.com/mod/daffasarsenal |
+| TaCZ addon | https://modrinth.com/mod/taczaddon |
+| TaCZ Tweaks | https://modrinth.com/mod/tacz-tweaks |
+| TaCZ Additions | https://modrinth.com/mod/tacz-additions |
+| TaCZ-Labs | https://modrinth.com/mod/tacz-labs |
+| Curios For Ammo Box | https://modrinth.com/mod/curios-for-ammo-box |
+| Immersive Ballistic | https://modrinth.com/mod/immersive-ballistic |
+| TaCZ x Guns Lights Addon | https://modrinth.com/mod/tacz-x-guns-lights-addon |
 | Iceberg | https://modrinth.com/mod/iceberg |
 | Prism | https://modrinth.com/mod/prism-lib |
 | Legendary Tooltips | https://modrinth.com/mod/legendary-tooltips |
@@ -2683,7 +2827,6 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Mod | Why not now | What would change that |
 |---|---|---|
 | Distant Horizons | Dropped — optional LOD; was client-only and off by default | Explicit request to re-add |
-| Tectonic 3 + Lithostitched | Dropped — Forge 3.x chunkgen too slow for live `/rtp`. Vanilla Overworld height | Pin 2.4.1 (`ubqOXeYf`) if mountains are wanted back |
 | Epic Structures: Dungeons | Dropped — 1.0 uppercase loot IDs abort chunk gen; 1.1+ 1.20 files still use 1.21 item-frame `components` | A 1.20.1 file with lowercase `epic:chests/*` IDs and 1.20 item NBT |
 | Streams Reflowing | Held — `/rtp` test. Rivers stay in already-generated chunks | If rivers are wanted back on vanilla terrain |
 | Geophilic / Terraphilic | Needs Terraphilic with Terralith; vanilla slices are already rare next to RU/BWG | Explicit request |
@@ -2705,8 +2848,8 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Create: Nowheel | Create + Entity Culling companion | Contraptions go invisible |
 | Fast Item Frames | Needs Forge Config API Port; no Forge 1.20.1 file | Fabric-only FCAP or a native Forge FIF build |
 | Expanded Ecosphere | Feature Order Cycle with RU + BWG | Drop RU/BWG first |
-| Terratonic | Datapack-only Terralith+Tectonic blend | Stay off while Tectonic is out |
-| Lithosphere | Same expensive noise class as Tectonic 3 | Do not add as a faster stand-in |
+| Terratonic | Datapack-only Terralith+Tectonic blend | Stay off; Forge Tectonic + Terralith jars already blend |
+| Lithosphere | Same noise job as Tectonic | Do not add as a second height line |
 | Sodium / Enhanced Block Entities | Embeddium + Oculus is the renderer | Do not add |
 | Larion / Voxy / Atmospherics / Wet Sand / Luki's Ancient Cities | No usable Forge 1.20.1 file | A real 1.20.1 Forge build |
 | C2ME / C2MEF / VMP / Krypton / Indium / More Culling / Debugify (asked slugs) | Fabric or unofficial/overlapping | See [performance.md](performance.md) Fabric video list |
@@ -2718,7 +2861,10 @@ Credit each author via the project URL above when distributing the pack. Recheck
 | Nether’s Delight (`nethers-delight`) | Unmaintained 2023; My Nether’s Delight is the 1.20.1 addon | Do not add both |
 | YUNG’s Better Mineshafts | MMR is the mineshaft line | Do not add both |
 | Awesome Dungeon End / Ocean | Held this cut (overworld + Nether only) | If dungeon density still feels sparse |
-| LambDynamicLights | Infernal Redux optional; Oculus is the light path | Do not add |
+| LambDynamicLights | Infernal Redux optional; second general DL next to TaCZ x Guns Lights | Do not add |
+| TACZ Durability | Jamming + gun NBT wear | Explicit request for that gameplay |
+| TaCZ Ammo Query | JEI plugin; EMI + TMRV is the viewer | Do not add real JEI |
+| No Mindless Shooting | Attracts/spawns mobs on unsilenced shots; yanks IAF/Caves mobs | Explicit request |
 | Auth Me | Fabric-only on 1.20.1 | NeoAuth is the Forge port |
 | AuthAgain | Same Microsoft re-login job as NeoAuth | Do not ship two session UIs |
 
@@ -2733,7 +2879,8 @@ None. Do not bump Minecraft or Forge to accommodate a single mod without a separ
 | EMI QoL Tweaks | 2026-09-13 | CurseForge third-party API still excludes file `8713840`. Re-added 2026-09-17 with a pinned ForgeCDN URL so packwiz-installer can fetch it. | Installed (URL pin) |
 | Better Combat / playerAnimator / IAF×BC / Alex’s Caves BC | 2026-09-16 | Melee is Epic Fight + ParCool | Do not re-add next to Epic Fight |
 | StructureOverlapless | 2026-09-16 | Skips placement when a section is “occupied,” including by the same structure start. Dedicated logs skipped Sky Villages and WDA bandit towers at the `/locate` coords | Do not re-add unless a relocate-not-skip tool exists |
-| Dungeons Arise Sparse Structures compat | 2026-09-16 | Extra thinning on top of Sparse Structures made WDA unfindable | Do not re-add while Sparse spread is 1 |
-| Dungeons Arise Seven Seas Sparse Structures compat | 2026-09-16 | Same extra thinning for ocean WDA | Do not re-add while Sparse spread is 1 |
+| Sparse Structures | 2026-09-17 | Replaced by Better Sparse Structures | Do not re-add next to BSS |
+| Dungeons Arise Sparse Structures compat | 2026-09-16 | Extra thinning on top of Sparse Structures made WDA unfindable | Do not re-add on top of Better Sparse Structures |
+| Dungeons Arise Seven Seas Sparse Structures compat | 2026-09-16 | Same extra thinning for ocean WDA | Do not re-add on top of Better Sparse Structures |
 
 

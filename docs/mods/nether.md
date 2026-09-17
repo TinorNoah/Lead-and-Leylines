@@ -56,7 +56,7 @@ Structure mods that Modrinth tags as server-only still use `both` here so Prism 
 | Nether’s Delight (`nethers-delight` 4.0, 2023) | **Skipped.** Unmaintained. My Nether’s Delight is the 1.20.1 addon. Do not ship both. |
 | YUNG’s Better Mineshafts | **Skipped.** MMR is the mineshaft line. |
 | Awesome Dungeon End / Ocean | **Held.** Overworld + Nether only this cut. |
-| LambDynamicLights (optional on Infernal Redux) | **Skipped.** Oculus is the light path. No extra dynamic-lights mod. |
+| LambDynamicLights (optional on Infernal Redux) | **Skipped.** Second general DL. Gun lights stay on TaCZ x Guns Lights. |
 
 ## Held
 
@@ -78,5 +78,5 @@ Stalwart + Awesome Dungeon is two extra dungeon families (different designs, mor
 | Mod | Why a pack note |
 |---|---|
 | Amplified Nether / BetterNether / Bygone / Infernal Redux / YUNG fortresses / MMR / dungeons | Worldgen. Existing Nether/overworld chunks stay old. New world. |
-| Infernal Expansion Redux | 0.x rebuild. Optional LambDynamicLights stays out. Cloth Config is shipped for its GUI. |
+| Infernal Expansion Redux | 0.x rebuild. Optional LambDynamicLights stays out (second general DL). Cloth Config is shipped for its GUI. |
 | Farmer’s Delight / My Nether’s Delight | Blocks and crops stay in the save if removed. Pin MND `1.10.4-backport.1` on Farmer’s Delight 1.3.x (older MND `1.8` crashed on 1.3). |

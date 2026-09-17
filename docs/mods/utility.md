@@ -62,7 +62,7 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | Default Options | [modrinth.com/mod/default-options](https://modrinth.com/mod/default-options) `18.0.5` (`AVz3mvZZ`) | client | Pack default: FTB Open Map unbound. See [content.md](content.md) |
 | Too Fast | [modrinth.com/mod/too-fast](https://modrinth.com/mod/too-fast) `0.4.3.5` (`2pix3xrW`) | server | Dedicated-server “moved too quickly” rubber-band fix. Create trains. |
 | EMI Enchants | [modrinth.com/mod/emienchants](https://modrinth.com/mod/emienchants) `1.0.0` (`Lzvq7JEE`) | client | Enchantment pages in EMI. |
-| JEI / REI / EMI WorldGen | [modrinth.com/mod/jei-worldgen](https://modrinth.com/mod/jei-worldgen) `1.4.4` (`pKNlzNVH`) | client | Worldgen pages. No real JEI. TMRV stays. |
+| JEI / REI / EMI WorldGen | [modrinth.com/mod/jei-worldgen](https://modrinth.com/mod/jei-worldgen) `1.4.5` (`GVElfR28`) | client | Worldgen pages. No real JEI. TMRV stays. |
 | Inventory Essentials | [modrinth.com/mod/inventory-essentials](https://modrinth.com/mod/inventory-essentials) `8.2.19` (`BhuVHyaA`) | both | Extra inventory keys. Mouse Tweaks stays. |
 | Item Borders | [modrinth.com/mod/item-borders](https://modrinth.com/mod/item-borders) `1.2.2` (`JUW31p4D`) | client | Rarity borders. Iceberg + Prism already in. Overlaps Legendary Tooltips a bit. |
 | Elytra Slot | [modrinth.com/mod/elytra-slot](https://modrinth.com/mod/elytra-slot) `6.4.4+1.20.1` (`k6lA080t`) | both | Curios elytra. Needs Caelus. |
@@ -84,7 +84,7 @@ Both FTB “Open Map” and Xaero World Map default to **M**. That is the accide
 | EMI QoL Tweaks | CurseForge file `8713840` (`1.2`) | client | Extra EMI buttons. CurseForge third-party API still excludes this file, so packwiz pins the ForgeCDN URL instead of `metadata:curseforge`. |
 | Inventory Tweaks: ReFoxed | [modrinth.com/mod/inventory-tweaks-refoxed](https://modrinth.com/mod/inventory-tweaks-refoxed) `1.20.1-1.2.0` (`eyPkQyNd`) | both | Sort/auto-refill. Store tag is client; packwiz `both` for dedicated auto-refill. Mouse Tweaks + Inventory Essentials stay — watch first boot. |
 | Structure Compass | [modrinth.com/mod/structure-compass](https://modrinth.com/mod/structure-compass) `2.3.0` (`B63GJIMm`) | both | Locate a chosen structure. Explorer’s Compass stays. |
-| Clickable Advancements | CurseForge file `7886729` (`1.20.1-3.9`) | both | Click chat advancements. Cupboard `4.1` already in. Better Advancements stays. |
+| Clickable Advancements | CurseForge file `7886729` (`1.20.1-3.9`) | both | Click chat advancements. Cupboard `4.2` already in. Better Advancements stays. |
 | Better Compatibility Checker | [modrinth.com/mod/better-compatibility-checker](https://modrinth.com/mod/better-compatibility-checker) `3.0.3-build.65` (`90T01ZgN`) | both | Rejects mismatched clients. Last 1.20.1 file Sep 2023. |
 
 ## Dropped / skipped this cut
