@@ -69,5 +69,5 @@ Terralith 2.6.2 + Oh The Biomes We've Gone 2.6.0 hit `IllegalStateException: Fea
 | YUNG's Better Dungeons | Held | Not in the 1.20.1 pack. |
 | WWOO | Held | Chart companion for Tectonic + ByePregen; not in the 1.20.1 pack. |
 | Noisium | Dropped | Incompatible with ByePregen. |
-| FastNoise | Held | Compatible with ByePregen unless RTF is also in. Not required. |
+| FastNoise | Dropped | Compatible with ByePregen unless RTF is also in. Exclusive Tectonic smoke: no CPS gain vs Tectonic-only baseline. |
 | Chunky | Dropped for now | Pack uses Chunk Pregenerator. Chunky was in the freeze report only as the pregen driver, not the root cause. |

@@ -87,6 +87,6 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Rubidium Extra | Dropped | Embeddium-era. |
 | Noisium | Dropped | Bye?Pregen! lists Noisium as incompatible. |
 | Achievements Optimizer | Dropped | Overlaps Cerulean. |
-| FastNoise | Held | Optional with ByePregen. Do not stack with RTF. Not required. |
+| FastNoise | Dropped | Exclusive radius-8 smoke with Tectonic: 7.62 CPS vs 7.73 baseline (`121328Z` vs `120913Z`). No CPS gain. Do not stack with RTF. |
 | C2ME OpenCL | Dropped | 1.21.1 file exists but is compiled for Java 25 (`UnsupportedClassVersionError` 69.0 on Java 21). Author: Java 25 even on pre-26.1. Also lists TerraBlender as biome-placement fail; Apple OpenCL unsupported. Do not bump the pack JVM. |
-| ScalableLux | Dropped | Only pulled as C2ME OpenCL lighting companion. |
+| ScalableLux | Dropped | Exclusive Tectonic smoke 4.89 CPS vs 7.73 baseline (`121800Z`); combo with Fast Noise 6.33 (`122255Z`). Logged BlockState lighting analysis errors. Not a CPS pick. |

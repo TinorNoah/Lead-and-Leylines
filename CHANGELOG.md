@@ -11,6 +11,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ## [Unreleased]
 
+### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
+## [0.1.0] - 2026-09-18
+
 ### Changed
 
 - The pack is rebuilt for Minecraft 1.21.1 NeoForge. New world required.

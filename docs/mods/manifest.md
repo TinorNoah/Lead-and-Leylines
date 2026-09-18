@@ -62,7 +62,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | The Twilight Forest | `twilightforest-1.21.1-4.8.3345-universal.jar` | CurseForge 227639 / 7797302 | both | dimension | Twilight Forest dimension. World data. | none | defaults | 2026-09-18 |
 | The Lost Cities | `lostcities-1.21-8.4.4.jar` | CurseForge 269024 / 8862503 | both | worldgen | City world type / generation. World data. The One Probe optional. | none | defaults | 2026-09-18 |
 | Lithostitched | `lithostitched-1.8.0+beta6-neoforge-21.1.jar` | CurseForge 936015 / 8819894 | both | worldgen | Required by Tectonic and Regions Unexplored. RU's `in_structure` features are overridden by the pack datapack. | none | defaults | 2026-09-18 |
-| Tectonic | `tectonic-3.0.28-neoforge-21.1.jar` | CurseForge 686836 / 8855043 | both | worldgen | Terrain overhaul. World data. Tectonic 3.0.28 has no `in_structure` predicates. | Lithostitched | defaults | 2026-09-18 |
+| Tectonic | `tectonic-3.0.28-neoforge-21.1.jar` | CurseForge 686836 / 8855043 | both | worldgen | Terrain overhaul. World data. Kept after CPS A/B: Tectonic-only 7.73 CPS beat Fast Noise / ScalableLux; off-run was 16.16 CPS. | Lithostitched | defaults | 2026-09-18 |
 | TerraBlender (NeoForge) | `TerraBlender-neoforge-1.21.1-4.1.0.8.jar` | CurseForge 940057 / 6054947 | both | worldgen | Biome injection library. Not the Forge project 563928. | none | defaults | 2026-09-18 |
 | GeckoLib | `geckolib-neoforge-1.21.1-4.9.3.jar` | CurseForge 388172 / 8893490 | both | library | Required by Oh The Biomes We've Gone, Aquamirae, and Infernal Expansion Redux. | none | defaults | 2026-09-18 |
 | CorgiLib | `Corgilib-NeoForge-1.21.1-5.0.0.9.jar` | CurseForge 693313 / 7773534 | both | library | Required by Oh The Biomes We've Gone. | none | defaults | 2026-09-18 |
@@ -315,4 +315,5 @@ Long lists: [deferred.md](deferred.md).
 | Noisium | 2026-09-18 | Bye?Pregen! marks Noisium incompatible. | No while ByePregen is in. |
 | Achievements Optimizer | 2026-09-18 | Overlaps Cerulean (Icterine fork with the same every-few-ticks option). | No while Cerulean is in. |
 | C2ME OpenCL | 2026-09-18 | Java 25 class files on a Java 21 pack; TerraBlender listed as biome-placement fail. | No while Java 21. |
-| ScalableLux | 2026-09-18 | Lighting companion for C2ME OpenCL only. | Only with OpenCL. |
+| Fast Noise | 2026-09-18 | Tectonic CPS A/B: 7.62 vs 7.73 baseline. | No for CPS. |
+| ScalableLux | 2026-09-18 | Tectonic CPS A/B: 4.89 vs 7.73 baseline; lighting analysis errors. | No for CPS. |

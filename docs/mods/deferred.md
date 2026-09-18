@@ -15,6 +15,8 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Gnetum | HUD-over-frames. Overlaps ImmediatelyFast. |
 | LightSpeedRe | Launch shortcut. Overlaps ModernFix. |
 | Put A Plug In it! (PAPI) | Same leak-patch niche as AllTheLeaks. |
+| Fast Noise | 1.21.1 NF file exists. Exclusive Tectonic smoke 7.62 CPS vs 7.73 Tectonic-only baseline. No CPS gain. |
+| ScalableLux | 1.21.1 NF file exists. Exclusive Tectonic smoke 4.89 CPS vs 7.73; BlockState lighting errors. Combo with Fast Noise 6.33. |
 
 ## Overlaps something already in the pack
 
@@ -49,7 +51,6 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Polymorphic Energistics | July 2024 `0.4.1` vs current AE2 19.2.17 / RS 2.0.9. |
 | RS Addons | Replaced by Quartz Arsenal on 1.21.1; no 1.21.1 file. |
 | C2ME OpenCL | 1.21.1 NeoForge file exists (`1563823` / `8896938`) but is Java 25 (class file 69). Pack stays on Java 21. Author also lists TerraBlender biome-placement failure; Apple OpenCL unsupported. |
-| ScalableLux | Lighting companion for C2ME OpenCL only. Not a standalone pick. |
 
 ## Gameplay-changing, crashy, or too much library for the gain
 
