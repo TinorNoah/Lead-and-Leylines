@@ -1,0 +1,13 @@
+name = "Login Protection"
+filename = "logprot-1.21.1-3.6.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8898ea5203038aea97d1da86ef5146801c6d000d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8824987
+project-id = 358304

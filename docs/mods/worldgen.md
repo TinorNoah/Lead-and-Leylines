@@ -38,9 +38,15 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.15.jar` | both | Nether biomes/content. World data. Requires Lithostitched and GeckoLib. |
 | Countered's Terrain Slabs | `terrain_slabs-neoforge-3.1.2.jar` | both | Smooth terrain slabs. World data. Architectury already in. |
 | The Lost Cities | `lostcities-1.21-8.4.4.jar` | both | City worlds. World data. |
+| LC²H [Lost Cities: Multithreaded] | `lc2h-omni-4.2.3-LTS.jar` | both | Async city gen on top of Lost Cities 8.4.4. Quantified API required. C2ME is now also in. |
+| Quantified API | `quantified api-omni-2.2.3.jar` | both | LC²H scheduler / optional GPU path. Dedicated Mac smoke fell back to CPU (`liblwjgl.dylib` missing in the isolated probe). |
+| BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | Faster `/locate`. TerraBlender-aware. Does not change generated biomes. |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.4.jar` | both | Generation MSPT. See [performance.md](performance.md). |
 | Chunk Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.3.jar` | both | Operator pregen, not the same job as ByePregen. |
 | Feature Recycler | `Feature-Recycler-neoforge-2.0.0.jar` | both | Breaks Minecraft feature-order cycles so Terralith + Oh The Biomes We've Gone can generate. ARR. Not a second structure-spacing mod. |
+| ATO - All the Ores | `alltheores-3.2.0_neoforge_1.21.1.jar` | both | Extra ores. World data. Almost Unified is in for unification. |
+| Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | both | Create village structure. World data. Optional Create dep lookup failed for this MC/loader; the village jar itself listed 1.21.1 NeoForge. |
+| C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. ByePregen auto-disables C2ME FluidPostProcessingFilter. OpenCL module not shipped (Java 25). |
 
 Twilight Forest: [content.md](content.md).
 
@@ -63,6 +69,5 @@ Terralith 2.6.2 + Oh The Biomes We've Gone 2.6.0 hit `IllegalStateException: Fea
 | YUNG's Better Dungeons | Held | Not in the 1.20.1 pack. |
 | WWOO | Held | Chart companion for Tectonic + ByePregen; not in the 1.20.1 pack. |
 | Noisium | Dropped | Incompatible with ByePregen. |
-| LC²H | Held | 1.20.1 Forge only; 1.21.1 NeoForge port is later. |
 | FastNoise | Held | Compatible with ByePregen unless RTF is also in. Not required. |
 | Chunky | Dropped for now | Pack uses Chunk Pregenerator. Chunky was in the freeze report only as the pregen driver, not the root cause. |

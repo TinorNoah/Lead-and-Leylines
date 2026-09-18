@@ -99,8 +99,115 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Countered's Terrain Slabs | `terrain_slabs-neoforge-3.1.2.jar` | CurseForge 1125437 / 8216091 | both | worldgen | Terrain slabs. World data. | Architectury | defaults | 2026-09-18 |
 | Fragmentum (NeoForge) | `fragmentum-neoforge-1.21.1-2.4.4.jar` | CurseForge 1123977 / 8707553 | both | library | Required by Aquamirae. | none | defaults | 2026-09-18 |
 | Aquamirae | `aquamirae-neoforge-1.21.1-7.2.7.jar` | Modrinth k23mNPhZ / muWVnCSg | both | content | Ocean structures and boss. World data. | GeckoLib, Fragmentum | defaults | 2026-09-18 |
+| FastBoot | `fastboot-1.21.x-v1.3neo.jar` | CurseForge 1030285 / 6998687 | client | optimizer | Early-load mixins; skips per-version data conversion on boot. ARR. | none | defaults | 2026-09-18 |
+| Fluidium | `fluidium-1.21.1-1.4.0.jar` | CurseForge 1306029 / 7481400 | both | optimizer | Distant fluid ticks delayed (default 32 blocks, 50% skip). Claimed/force-loaded chunks stay full-speed. | Duplicationless | defaults | 2026-09-18 |
+| Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | CurseForge 1380105 / 8646414 | both | library | Required by Fluidium (`mandatory=true` `[1.1.5,)`). Not DoesPotatoTick. | none | defaults | 2026-09-18 |
+| LC²H [Lost Cities: Multithreaded] | `lc2h-omni-4.2.3-LTS.jar` | CurseForge 1325431 / 8889302 | both | worldgen | Async Lost Cities gen. Omni jar tags 1.21.1 NeoForge. BRSSLA V2.0.0. | Lost Cities, Quantified API | defaults | 2026-09-18 |
+| Quantified API | `quantified api-omni-2.2.3.jar` | CurseForge 1397967 / 8830709 | both | library | Required by LC²H (`quantified` `[2.2.2,)`). Omni jar tags 1.21.1 NeoForge. | none | defaults | 2026-09-18 |
+| BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | CurseForge 1376024 / 7488072 | both | worldgen | Faster `/locate` biome/structure search. No worldgen change. | none | defaults | 2026-09-18 |
+| DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | CurseForge 1106281 / 5741536 | both | QoL | Sets `playersSleepingPercentage` to 50 on load. ARR. | none | defaults | 2026-09-18 |
+| MemGuard | `memguard-1.0.4.jar` | CurseForge 1468440 / 8192435 | both | stability | Lightweight heap-usage log after Create 6 mixin strip. Complements AllTheLeaks. | none | defaults | 2026-09-18 |
+| Balm | `balm-neoforge-1.21.1-21.0.65.jar` | CurseForge 531761 / 8645517 | both | library | Waystones, Crafting Tweaks, TrashSlot, Default Options. | none | defaults | 2026-09-18 |
+| Iceberg | `Iceberg-1.21.1-neoforge-1.3.2.jar` | CurseForge 520110 / 6423863 | both | library | Equipment Compare, Legendary Tooltips, Item Borders. | none | defaults | 2026-09-18 |
+| Prism | `Prism-1.21.1-neoforge-1.0.11.jar` | CurseForge 638111 / 6372979 | both | library | Legendary Tooltips, Item Borders. | none | defaults | 2026-09-18 |
+| Curios API | `curios-neoforge-9.5.1+1.21.1.jar` | CurseForge 309927 / 6529130 | both | library | Elytra Slot (and later Ars). | none | defaults | 2026-09-18 |
+| Caelus API | `caelus-neoforge-7.0.1+1.21.1.jar` | CurseForge 308989 / 5694215 | both | library | Elytra Slot. | none | defaults | 2026-09-18 |
+| Bookshelf | `bookshelf-neoforge-1.21.1-21.1.81.jar` | CurseForge 228525 / 7606240 | both | library | Botany Pots/Trees. | none | defaults | 2026-09-18 |
+| Prickle | `prickle-neoforge-1.21.1-21.1.11.jar` | CurseForge 1023259 / 6961457 | both | library | Botany Pots/Trees. | none | defaults | 2026-09-18 |
+| Moonlight Lib | `moonlight-1.21.1-3.6.5-neoforge.jar` | CurseForge 499980 / 8905916 | both | library | Supplementaries, Amendments. | none | defaults | 2026-09-18 |
+| SuperMartijn642's Core Lib | `supermartijn642corelib-1.1.24-neoforge-mc1.21.jar` | CurseForge 454372 / 8623666 | both | library | Trash Cans. | none | defaults | 2026-09-18 |
+| SuperMartijn642's Config Lib | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | CurseForge 438332 / 5546996 | both | library | Trash Cans, Durability Tooltip. | none | defaults | 2026-09-18 |
+| Titanium | `titanium-1.21-4.0.50.jar` | CurseForge 287342 / 8760562 | both | library | Functional Storage. | none | defaults | 2026-09-18 |
+| Cobweb | `cobweb-neoforge-1.21-1.4.0.jar` | CurseForge 968456 / 7186943 | both | library | Harvest with ease. | none | defaults | 2026-09-18 |
+| Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | CurseForge 1005914 / 8883390 | both | library | Simply Tooltips. | none | defaults | 2026-09-18 |
+| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | CurseForge 351264 / 8335665 | both | library | Simply Tooltips. | none | defaults | 2026-09-18 |
+| Searchables | `Searchables-neoforge-1.21.1-1.0.2.jar` | CurseForge 858542 / 5831692 | client | library | Controlling. | none | defaults | 2026-09-18 |
+| Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | CurseForge 263420 / 8849842 | client | map | Minimap. | none | defaults | 2026-09-18 |
+| Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | CurseForge 317780 / 8849973 | client | map | World map. | none | defaults | 2026-09-18 |
+| Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 252848 / 7892954 | both | utility | Locate biomes. | none | defaults | 2026-09-18 |
+| Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 491794 / 7892943 | both | utility | Locate structures. | none | defaults | 2026-09-18 |
+| Structure Compass | `StructureCompass-1.21.1-4.2.1.jar` | CurseForge 319598 / 8439673 | both | utility | Locate structures. | none | defaults | 2026-09-18 |
+| Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | CurseForge 245755 / 8873000 | both | utility | Teleport stones. World data. | Balm | defaults | 2026-09-18 |
+| AppleSkin | `appleskin-neoforge-mc1.21-3.0.9.jar` | CurseForge 248787 / 7854442 | both | QoL | Hunger/saturation HUD. | none | defaults | 2026-09-18 |
+| Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | CurseForge 60089 / 5637846 | client | QoL | Inventory drag-transfer. | none | defaults | 2026-09-18 |
+| ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | CurseForge 568563 / 8908931 | client | renderer | Entity texture variants. | none | defaults | 2026-09-18 |
+| EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | CurseForge 844662 / 8909425 | client | renderer | Entity model variants. | ETF | defaults | 2026-09-18 |
+| Athena | `athena-neoforge-1.21.1-4.0.6.jar` | CurseForge 841890 / 8061947 | both | library | Connected textures. | none | defaults | 2026-09-18 |
+| Crafting Tweaks | `craftingtweaks-neoforge-1.21.1-21.1.11.jar` | CurseForge 233071 / 8697050 | both | QoL | Crafting grid buttons. | Balm | defaults | 2026-09-18 |
+| Controlling | `Controlling-neoforge-1.21.1-19.0.5.jar` | CurseForge 250398 / 6368976 | client | QoL | Keybind search. | Searchables | defaults | 2026-09-18 |
+| Harvest with ease | `harvest-with-ease-neoforge-1.21-9.4.0.jar` | CurseForge 602171 / 5968872 | both | QoL | Right-click harvest. | Cobweb | defaults | 2026-09-18 |
+| Clean Swing Through Grass | `cleanswing-1.10-1.21.jar` | CurseForge 915308 / 8746293 | both | QoL | Swing through plants. | none | defaults | 2026-09-18 |
+| Cosmetic Armor Reworked | `cosmeticarmorreworked-1.21.1-v1-neoforge.jar` | CurseForge 237307 / 5610814 | both | QoL | Cosmetic armor slots. | none | defaults | 2026-09-18 |
+| Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | CurseForge 317716 / 5778461 | both | QoL | Elytra in Curios. | Curios, Caelus | defaults | 2026-09-18 |
+| Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | CurseForge 511040 / 8830219 | client | QoL | Durability numbers. | SuperMartijn642 Config | defaults | 2026-09-18 |
+| Equipment Compare | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | CurseForge 502561 / 6375501 | client | QoL | Shift-compare gear. | Iceberg | defaults | 2026-09-18 |
+| Legendary Tooltips | `LegendaryTooltips-1.21.1-neoforge-1.5.5.jar` | CurseForge 532127 / 6400660 | client | QoL | Rarity tooltip frames. | Iceberg, Prism | defaults | 2026-09-18 |
+| Item Borders | `ItemBorders-1.21-neoforge-1.2.5.jar` | CurseForge 513769 / 5591010 | client | QoL | Rarity item borders. | Iceberg, Prism | defaults | 2026-09-18 |
+| Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | CurseForge 854213 / 6830399 | client | QoL | Colored heart rows. | none | defaults | 2026-09-18 |
+| Simply Tooltips | `SimplyTooltips-neoforge-0.1.5.jar` | CurseForge 1475755 / 8715141 | client | QoL | Extra item tooltip lines. | Fzzy Config, Kotlin for Forge | defaults | 2026-09-18 |
+| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | CurseForge 1637623 / 8576077 | both | QoL | F3+H tag/component tooltips. Same jar as the Modrinth pin. | none | defaults | 2026-09-18 |
+| Better Advancements | `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | CurseForge 272515 / 5850587 | client | QoL | Advancement GUI. | none | defaults | 2026-09-18 |
+| Clickable advancements | `clickadv-1.21-3.8.jar` | CurseForge 511733 / 5551404 | both | QoL | Click toast to open advancement. | none | defaults | 2026-09-18 |
+| Toast Control | `ToastControl-1.21.1-9.0.1.jar` | CurseForge 271740 / 6751464 | client | QoL | Toast spam filter. | Placebo | defaults | 2026-09-18 |
+| Default Options | `defaultoptions-neoforge-1.21.1-21.1.8.jar` | CurseForge 232131 / 8498229 | client | QoL | Pack default options. | Balm | defaults | 2026-09-18 |
+| Login Protection | `logprot-1.21.1-3.6.jar` | CurseForge 358304 / 8824987 | both | QoL | Invuln after join. | none | defaults | 2026-09-18 |
+| Packet Fixer | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` | CurseForge 689467 / 7221528 | both | stability | Oversized packets. Not Disconnect Packet Fix. | none | defaults | 2026-09-18 |
+| Too Fast | `toofast-1.21.0-0.4.3.6.jar` | CurseForge 550678 / 6819714 | both | QoL | Movement packet speed. | none | defaults | 2026-09-18 |
+| Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | CurseForge 699872 / 5433036 | both | QoL | Faster leaf decay. | none | defaults | 2026-09-18 |
+| WITS | `wits-neoforge-1.3.1.jar` | CurseForge 909375 / 8412915 | both | utility | Structure name overlay. | none | defaults | 2026-09-18 |
+| Lootr | `lootr-neoforge-1.21.1-1.11.38.125.jar` | CurseForge 361276 / 8811105 | both | utility | Per-player loot chests. World data. | none | defaults | 2026-09-18 |
+| Polymorph | `polymorph-neoforge-1.2.0+1.21.1.jar` | CurseForge 388800 / 8849478 | both | recipes | Duplicate recipe picker. | none | defaults | 2026-09-18 |
+| Almost Unified | `almostunified-neoforge-1.21.1-1.4.2.jar` | CurseForge 633823 / 8127603 | both | recipes | Ore unification. | none | defaults | 2026-09-18 |
+| ATO - All the Ores | `alltheores-3.2.0_neoforge_1.21.1.jar` | CurseForge 405593 / 7825464 | both | worldgen | Extra ores. World data. | none | defaults | 2026-09-18 |
+| Supplementaries | `supplementaries-1.21.1-3.9.9-neoforge.jar` | CurseForge 412082 / 8852720 | both | content | Decor and utility blocks. World data. | Moonlight | defaults | 2026-09-18 |
+| Amendments | `amendments-1.21-2.1.10-neoforge.jar` | CurseForge 896746 / 8825641 | both | content | Vanilla block tweaks. World data. | Moonlight | defaults | 2026-09-18 |
+| NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | CurseForge 1140741 / 7069504 | client | auth | Microsoft auth helper. | none | defaults | 2026-09-18 |
+| Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | CurseForge 551894 / 7404415 | both | utility | Join-time modlist check. | none | defaults | 2026-09-18 |
+| Crash Utilities | `crashutilities-9.0.4.jar` | CurseForge 371813 / 5993450 | both | stability | Extra crash helpers. | none | defaults | 2026-09-18 |
+| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.1.2341.jar` | CurseForge 618298 / 8838842 | both | library | Sophisticated storage/backpacks. | none | defaults | 2026-09-18 |
+| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.3.2158.jar` | CurseForge 422301 / 8845926 | both | storage | Backpacks. World data. | Sophisticated Core | defaults | 2026-09-18 |
+| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.5.91.2127.jar` | CurseForge 619320 / 8687896 | both | storage | Barrels/chests. World data. | Sophisticated Core | defaults | 2026-09-18 |
+| Functional Storage | `functionalstorage-1.21.1-1.5.8.jar` | CurseForge 556861 / 8459097 | both | storage | Drawers. World data. | Titanium | defaults | 2026-09-18 |
+| Botany Pots | `botanypots-neoforge-1.21.1-21.1.44.jar` | CurseForge 353928 / 8243851 | both | farming | Crop pots. World data. | Bookshelf, Prickle | defaults | 2026-09-18 |
+| Botany Trees | `botanytrees-neoforge-1.21.1-21.1.7.jar` | CurseForge 411357 / 8188485 | both | farming | Tree pots. World data. | Bookshelf, Prickle | defaults | 2026-09-18 |
+| Trash Cans | `trashcans-1.1.0-neoforge-mc1.21.jar` | CurseForge 394535 / 8646611 | both | storage | Trash blocks. World data. | SuperMartijn642 Core + Config | defaults | 2026-09-18 |
+| TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | CurseForge 235577 / 8163135 | both | QoL | Inventory trash slot. | Balm | defaults | 2026-09-18 |
+| Packing Tape | `PackingTape-1.21.1-0.15.6.jar` | CurseForge 238659 / 6667874 | both | storage | Pickup tile entities. | none | defaults | 2026-09-18 |
+| FTB Chunks | `ftb-chunks-neoforge-2101.1.22.jar` | CurseForge 314906 / 8791113 | both | utility | Chunk claims. World data. ARR. | FTB Library, Architectury | defaults | 2026-09-18 |
+| FTB Essentials | `ftb-essentials-neoforge-2101.1.10.jar` | CurseForge 410811 / 8442866 | both | utility | `/home` and related commands. ARR. | FTB Library | defaults | 2026-09-18 |
+| FTB Ultimine | `ftb-ultimine-neoforge-2101.1.15.jar` | CurseForge 386134 / 8231400 | both | utility | Vein mine. ARR. | FTB Library | defaults | 2026-09-18 |
+| FTB Filter System | `ftb-filter-system-neoforge-21.1.4.jar` | CurseForge 943925 / 7429011 | both | library | Item filters. ARR. | FTB Library | defaults | 2026-09-18 |
+| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.11.jar` | CurseForge 889915 / 8653466 | both | utility | FTB cross-mod hooks. ARR. | FTB Library | defaults | 2026-09-18 |
+| Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | CurseForge 1231381 / 8086425 | both | optimizer | Create-aware vein mine. | Create | defaults | 2026-09-18 |
+| Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | CurseForge 1104939 / 8004708 | both | worldgen | Create village structure. World data. | Create | defaults | 2026-09-18 |
+| Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar` | CurseForge 1238567 / 8833933 | both | storage | Create + backpacks. | Create, Backpacks, Core | defaults | 2026-09-18 |
+| Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar` | CurseForge 1226755 / 8503147 | both | storage | Create + storage. | Create, Storage, Core | defaults | 2026-09-18 |
+| C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | CurseForge 533097 / 8896937 | both | optimizer | Threaded chunk gen/IO. Alpha. ByePregen disables C2ME FluidPostProcessingFilter. OpenCL module not shipped (Java 25). | none | defaults | 2026-09-18 |
+| Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | CurseForge 223794 / 7027323 | both | storage | ME network. World data. | GuideME | defaults | 2026-09-18 |
+| GuideME | `guideme-21.1.19.jar` | CurseForge 1173950 / 8897145 | both | library | AE2 guidebook. | none | defaults | 2026-09-18 |
+| AE2 Things | `AE2-Things-1.4.2-beta.jar` | CurseForge 609977 / 5637783 | both | storage | AE2 disks. Beta 1.4.2. World data. | AE2, GuideME | defaults | 2026-09-18 |
+| Ars Énergistique | `arseng-2.1.1-beta.jar` | CurseForge 905641 / 6203425 | both | magic | Ars + AE2 bridge. Beta. | Ars Nouveau, AE2 | defaults | 2026-09-18 |
+| Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | CurseForge 243076 / 8211701 | both | storage | RS 2. World data. | none | defaults | 2026-09-18 |
+| Quartz Arsenal | `refinedstorage-quartz-arsenal-neoforge-1.0.8.jar` | CurseForge 1230483 / 8103101 | both | storage | RS wireless crafting grid (replaces RS Addons). | RS | defaults | 2026-09-18 |
+| Cable Tiers | `cabletiers-neoforge-1.21.1-0.6.14.jar` | CurseForge 454382 / 8705433 | both | storage | Faster RS cables. | RS | defaults | 2026-09-18 |
+| Extra Disks | `ExtraDisks-1.21.1-4.0.15.jar` | CurseForge 351491 / 8031115 | both | storage | Larger RS disks. Beta. | RS | defaults | 2026-09-18 |
+| ExtraStorage | `ExtraStorage-1.21.1-5.0.10.jar` | CurseForge 410168 / 8330353 | both | storage | Extra RS storage. | RS, EdivadLib | defaults | 2026-09-18 |
+| Farmer's Delight | `FarmersDelight-1.21.1-1.3.4.jar` | CurseForge 398521 / 8765184 | both | farming | Kitchen. World data. | none | defaults | 2026-09-18 |
+| Spice of Life: Carrot Edition | `solcarrot-1.21.1-1.16.6.jar` | CurseForge 277616 / 7374098 | both | food | Food diversity. | none | defaults | 2026-09-18 |
+| Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | CurseForge 268560 / 7904058 | both | tech | Machines. World data. | none | defaults | 2026-09-18 |
+| Ars Nouveau | `ars_nouveau-1.21.1-5.13.1.jar` | CurseForge 401955 / 8721482 | both | magic | Spellcrafting. World data. | none | defaults | 2026-09-18 |
+| Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | CurseForge 556967 / 8866762 | both | magic | Progression magic. World data. | Revelationary, Modonomicon, Curios | defaults | 2026-09-18 |
+| TMRV | `toomanyrecipeviewers-0.9.0+mc.21.1.jar` | CurseForge 1194921 / 8336857 | client | recipes | JEI plugins on EMI without JEI. | EMI | defaults | 2026-09-18 |
+| EMI Ores | `emi_ores-1.3+1.21.1+neoforge.jar` | CurseForge 974009 / 8254306 | client | recipes | Ore pages in EMI. | EMI | defaults | 2026-09-18 |
+| EMI Enchanting | `emi_enchanting-0.1.2+1.21+neoforge.jar` | CurseForge 936713 / 5733125 | client | recipes | Enchantment pages in EMI. 2024 file. | EMI | defaults | 2026-09-18 |
+| Complementary Reimagined | `ComplementaryReimagined_r5.9.3.zip` | CurseForge 627557 / 8884654 | client | shader | Matches Euphoria r5.9.3. | Iris | defaults | 2026-09-18 |
+| Complementary Unbound | `ComplementaryUnbound_r5.9.3.zip` | CurseForge 385587 / 8884656 | client | shader | Matches Euphoria r5.9.3. | Iris | defaults | 2026-09-18 |
+| BSL Shaders | `BSL_v10.1.1.zip` | CurseForge 322506 / 7588844 | client | shader | Latest CF 1.21.1-tagged BSL. | Iris | defaults | 2026-09-18 |
+| Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar` | CurseForge 915902 / 8884680 | client | shader | Complementary extras. | Colorwheel | defaults | 2026-09-18 |
+| Colorwheel | `colorwheel-neoforge-1.3.0-beta3+mc1.21.1.jar` | CurseForge 1254143 / 8845482 | client | renderer | Iris shader extras. Beta. | none | defaults | 2026-09-18 |
+| Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | CurseForge 1285475 / 7924942 | client | renderer | Colorwheel companion. | Colorwheel | defaults | 2026-09-18 |
 
-World-data: Create, Pipez, FTB Quests, Twilight Forest, Lost Cities, Tectonic, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, Terrain Slabs, and Aquamirae write blocks/items/dimensions/terrain/biomes. Those are not a clean uninstall. New world required for the 1.21.1 cutover.
+World-data: Create, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Tectonic, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, Terrain Slabs, Aquamirae, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism, Ars Nouveau, Farmer's Delight cluster, Alchemistry, and Spectrum write blocks/items/dimensions/terrain/biomes. Those are not a clean uninstall. New world required for the 1.21.1 cutover.
 
 ## Credits / Attribution
 
@@ -175,6 +282,15 @@ World-data: Create, Pipez, FTB Quests, Twilight Forest, Lost Cities, Tectonic, R
 | Infernal Expansion Redux | See CurseForge page | See CurseForge page | CurseForge reference. |
 | Countered's Terrain Slabs | Countered | See CurseForge page | CurseForge reference. |
 | Fragmentum, Aquamirae | Obscuria | Obscuria licenses | CurseForge / Modrinth metadata; do not embed the jars. |
+| FastBoot | dnlayu | ARR | CurseForge metadata only; do not embed the jar. |
+| Fluidium, Duplicationless | Kall | MIT | CurseForge reference. |
+| LC²H | Admany | BRSSLA V2.0.0 | CurseForge metadata only; do not embed the jar. |
+| Quantified API | Admany | See CurseForge page | CurseForge metadata only; do not embed the jar. |
+| BiomeSpy | MoePus | LGPL-3.0-only | CurseForge reference. |
+| DarkSleep | GamerPotion | ARR | CurseForge metadata only; do not embed the jar. |
+| MemGuard | See CurseForge project 1468440 | MIT (in-jar) | CurseForge reference. |
+| Wave 1 QoL/storage/FTB (Xaero, Waystones, Sophisticated, etc.) | See each CurseForge page | Mix of MIT/ARR/LGPL | CurseForge metadata; do not embed ARR jars. |
+| Better Advanced Tooltips | Lat / latvian-dev | MIT | CurseForge reference. |
 
 ## Future / Deferred Mods
 
@@ -182,10 +298,8 @@ Long lists: [deferred.md](deferred.md).
 
 | Mod | Why not now | What would change that |
 |---|---|---|
-| Shader packs | Renderer extras are in; shader packs still a separate wave | After Extra + Iris boot cleanly. |
-| Colorwheel | Shader companion; Iris Flywheel Compat covers Create+Iris for now | Shader-pack wave. |
-| EMI Enchants | No 1.21.1 NeoForge file (last 1.20.4). | 1.21.1 NeoForge file. |
-| LC²H / TF thread-safety addons | Still 1.20.1 Forge only | 1.21.1 NeoForge files. |
+| TwilightForest Thread Safety Addon | Still 1.20.1 Forge only | 1.21.1 NeoForge file. |
+| C2ME OpenCL | Java 25 even on 1.21.1; TerraBlender biome fail; Apple OpenCL unsupported | Pack JVM 25 (separate upgrade) plus TerraBlender-safe OpenCL, or skip. |
 
 ## Deferred Ecosystem Upgrades
 
@@ -200,3 +314,5 @@ Long lists: [deferred.md](deferred.md).
 | Embeddium, Oculus, Radium | 2026-09-17 | No 1.21.1 NeoForge ports we will ship. | No; Sodium / Iris / Lithium are the replacements. |
 | Noisium | 2026-09-18 | Bye?Pregen! marks Noisium incompatible. | No while ByePregen is in. |
 | Achievements Optimizer | 2026-09-18 | Overlaps Cerulean (Icterine fork with the same every-few-ticks option). | No while Cerulean is in. |
+| C2ME OpenCL | 2026-09-18 | Java 25 class files on a Java 21 pack; TerraBlender listed as biome-placement fail. | No while Java 21. |
+| ScalableLux | 2026-09-18 | Lighting companion for C2ME OpenCL only. | Only with OpenCL. |

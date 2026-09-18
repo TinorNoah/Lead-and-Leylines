@@ -2,7 +2,7 @@
 
 Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** first 1.21.1 NeoForge wave installed (2026-09-17). Second wave (2026-09-18): Extra, Flerovium, AsyncParticles, More Culling, SLO, Ksyxis, and related smoothness mods. Shader packs and Colorwheel are not in this pack yet.
+**Status:** first 1.21.1 NeoForge wave installed (2026-09-17). Extra/culling, ByePregen, C2ME (alpha, no OpenCL), Complementary/BSL + Euphoria.
 
 ## Side (packwiz)
 
@@ -62,6 +62,11 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | Cerulean dependency. |
 | Pipez Lag Fix | `pipezlagfix-1.21.1-1.1.0.jar` | both | Item-pipe eco mode when the destination is full. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | Faster GeckoLib entity rendering. Alpha 1.0.2. Sodium and ImmediatelyFast already in. |
+| FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | Early-load mixins. ARR. First to remove if launch breaks next to ModernFix / quick pack. |
+| Fluidium | `fluidium-1.21.1-1.4.0.jar` | both | Distant fluid tick delay. Not a distant-entity freezer. Duplicationless required. |
+| Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
+| MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
+| C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
 
 No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
@@ -77,9 +82,11 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Particle Core | Dropped | Incompatible with AsyncParticles (installed). Pulls Kotlin + Fzzy Config. |
 | Better Block Entities | Dropped | Same draw-cost space as Flerovium. |
 | Vanillin (`flw-vanillin`) | Dropped | Shader-incompatible; Iris is in. |
-| Shader packs (BSL, Complementary, …) | Deferred | Separate wave after Extra + Iris boot cleanly. |
-| Colorwheel / Colorwheel Patcher | Deferred | Shader companion; Iris Flywheel Compat covers Create+Iris for now. |
+| Shader packs (BSL, Complementary, …) | Chosen | Complementary r5.9.3 + BSL v10.1.1 + Euphoria + Colorwheel. |
+| Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. |
 | Rubidium Extra | Dropped | Embeddium-era. |
 | Noisium | Dropped | Bye?Pregen! lists Noisium as incompatible. |
 | Achievements Optimizer | Dropped | Overlaps Cerulean. |
 | FastNoise | Held | Optional with ByePregen. Do not stack with RTF. Not required. |
+| C2ME OpenCL | Dropped | 1.21.1 file exists but is compiled for Java 25 (`UnsupportedClassVersionError` 69.0 on Java 21). Author: Java 25 even on pre-26.1. Also lists TerraBlender as biome-placement fail; Apple OpenCL unsupported. Do not bump the pack JVM. |
+| ScalableLux | Dropped | Only pulled as C2ME OpenCL lighting companion. |

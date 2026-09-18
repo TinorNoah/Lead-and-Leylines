@@ -25,6 +25,9 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 - Regions Unexplored and Oh The Biomes We've Gone, with TerraBlender, GeckoLib, CorgiLib, and Oh The Trees You'll Grow. A pack datapack drops Regions Unexplored's Lithostitched structure checks so world generation does not freeze.
 - Jade, EMI (with QoL Tweaks and WorldGen pages), Terralith, GeckolibBetterFPS, Nullscape, Structurify, When Dungeons Arise, YUNG's caves/fortresses/bridges, Moog's mineshafts, Epic Structures, Amplified Nether, Infernal Expansion Redux, Terrain Slabs, Awesome Dungeon, and Aquamirae.
 - Feature Recycler, so Terralith and Oh The Biomes We've Gone can generate in the same world.
+- FastBoot (faster client load), Fluidium (distant fluids tick less), LC²H (multithreaded Lost Cities), BiomeSpy (faster `/locate`), DarkSleep (half the players can skip the night), and MemGuard (heap monitor next to AllTheLeaks).
+- Maps, storage, and QoL: Xaero's maps, compasses, Waystones, Sophisticated Backpacks/Storage, Functional Storage, Botany Pots/Trees, FTB Chunks/Essentials/Ultimine, Lootr, Supplementaries, and Better Advanced Tooltips (F3+H item tags).
+- Applied Energistics 2 (including AE2 Things), Refined Storage (with Quartz Arsenal and Cable Tiers), Mekanism, Ars Nouveau (including Ars Énergistique), Farmer's Delight, Spectrum, Complementary/BSL shaders with Euphoria Patches, and C2ME. The C2ME OpenCL module is not included: it requires Java 25.
 
 ### Fixed
 
