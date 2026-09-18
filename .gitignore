@@ -6,6 +6,10 @@ dist/
 # Never commit jars
 *.jar
 
+# Dev-only smoke-test profiler (never a pack mod)
+.cache/
+*.sparkprofile
+
 # Local Minecraft / launcher instances
 .minecraft/
 minecraft/

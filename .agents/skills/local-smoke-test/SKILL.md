@@ -5,8 +5,10 @@ description: Use when a mod, config, or pack change needs a local dedicated-serv
 
 # Local smoke test
 
-Run `python scripts/smoke_test.py` from the repo root after any mod install or config change. Default timeout is 300 seconds. This is the first sanity check: did the dedicated server reach "Done" / "For help, type" without a crash-report?
+Run `python scripts/smoke_test.py` from the repo root after a mod or config change. Default is a full benchmark: boot, Chunk Pregenerator radius 8, `/tick query` samples, then a report under `docs/smoke-runs/` (see `index.md`). Timeout is 900 seconds.
 
-It replaces the first, slowest iteration of the old "deploy to Pelican and watch" loop. `test-server` is for the friends-can-actually-join check, not this first boot.
+`--skip-bench` is the original boot-only check (300s, no pregen, no report). Use it for a quick "did world load break?" pass.
 
-This script never uses panel credentials. Watch its own stdout. Non-zero exit means crash or timeout — read the printed log tail before deploying remotely.
+`--radius` is an occasional heavier stress pass, not routine. `--profile` copies a gitignored Spark jar into the throwaway server only — use it after a report already looks worse than a recent `docs/smoke-runs/` baseline, not as a normal step. Spark is never a pack mod.
+
+This script never uses panel credentials. Non-zero exit means crash or timeout; a benchmark still writes a (possibly partial) report.
