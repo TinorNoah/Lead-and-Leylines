@@ -1,0 +1,13 @@
+name = "ResourcePackCached"
+filename = "rpc-1.2.5+1.20.5-1.21.4-neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "d46d4c5faa7a2a82d88dc9f1da2240aa9e45e783"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7602181
+project-id = 1125284

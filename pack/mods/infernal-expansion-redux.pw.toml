@@ -1,0 +1,13 @@
+name = "Infernal Expansion Redux"
+filename = "infernalexp-neoforge-1.21.1-0.3.15.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "70606fad28347a2746442262bcb89380ca51df29"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8750501
+project-id = 1407992

@@ -40,21 +40,44 @@ MAVEN_INSTALLER = (
 )
 
 
+def java_major(java: str) -> int | None:
+    result = subprocess.run(
+        [java, "-version"],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    text = f"{result.stderr}\n{result.stdout}"
+    match = re.search(r'version "(\d+)', text)
+    return int(match.group(1)) if match else None
+
+
 def find_java() -> str:
     home = os.environ.get("JAVA_HOME", "").strip()
+    candidates: list[str] = []
     if home:
         for name in ("java", "java.exe"):
             candidate = Path(home) / "bin" / name
             if candidate.is_file():
-                return str(candidate)
+                candidates.append(str(candidate))
     which = shutil.which("java")
     if which:
-        return which
+        candidates.append(which)
     brew = Path("/opt/homebrew/opt/openjdk@21/bin/java")
     if brew.is_file():
-        return str(brew)
+        candidates.append(str(brew))
+    seen: set[str] = set()
+    for java in candidates:
+        if java in seen:
+            continue
+        seen.add(java)
+        major = java_major(java)
+        if major is not None and major >= 21:
+            return java
+        if major is not None:
+            print(f"skipping Java {major} at {java}; need 21+")
     raise SystemExit(
-        "no Java on PATH or JAVA_HOME; install Java 21 or set JAVA_HOME"
+        "no Java 21 on PATH or JAVA_HOME; install Java 21 or set JAVA_HOME"
     )
 
 
@@ -135,7 +158,7 @@ def sync_overlay_and_mods(pack: dict[str, str], work: Path) -> None:
             name = info.filename.replace("\\", "/")
             if name.startswith("mods/") and name.lower().endswith(".jar"):
                 archive.extract(info, work)
-            if name.startswith("config/"):
+            if name.startswith("config/") or name.startswith("global_packs/"):
                 archive.extract(info, work)
 
 
@@ -150,6 +173,24 @@ def log_tail(lines: list[str], count: int = 80) -> str:
     return "".join(lines[-count:])
 
 
+def server_command(work: Path, java: str, memory_mb: int) -> list[str]:
+    """Dedicated boot: run.sh on Unix; Java + win_args.txt on Windows (no WSL)."""
+    if os.name != "nt":
+        return ["bash", "run.sh"]
+    matches = list(work.glob("libraries/net/neoforged/neoforge/*/win_args.txt"))
+    if not matches:
+        raise SystemExit("missing win_args.txt; NeoForge is not installed yet")
+    win_args = matches[0].relative_to(work).as_posix()
+    return [
+        java,
+        "-Xms128M",
+        f"-Xmx{memory_mb}M",
+        "@user_jvm_args.txt",
+        f"@{win_args}",
+        "nogui",
+    ]
+
+
 def run_server(
     work: Path,
     java: str,
@@ -160,9 +201,10 @@ def run_server(
     env["SERVER_MEMORY"] = str(memory_mb)
     # Overlay run.sh execs `java`; put the resolved binary first on PATH.
     env["PATH"] = str(Path(java).parent) + os.pathsep + env.get("PATH", "")
+    command = server_command(work, java, memory_mb)
     print(f"starting server in {work} (timeout {timeout_s}s, {memory_mb}M)")
     process = subprocess.Popen(
-        ["bash", "run.sh"],
+        command,
         cwd=work,
         env=env,
         stdin=subprocess.PIPE,

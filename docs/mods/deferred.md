@@ -4,112 +4,93 @@ Not an install list. Each row still needs a fresh 1.21.1 NeoForge research pass 
 
 Installed today: [manifest.md](manifest.md). Performance decisions: [performance.md](performance.md).
 
-## Named list (2026-09-18) — not added
+## Named list — remaining only (2026-09-18)
 
-None of these were installed. “Recommended” means researched as a possible next wave; do not treat it as approved.
+Installed this wave: Sodium Extra, Flerovium, AsyncParticles, More Culling, Cloth Config, SLO, Resourceful Config, Ksyxis, Disconnect Packet Fix, quick pack, CrashExploitFixer, Async Logger, ResourcePackCached, Chunk Pregenerator, Carbon Config, Create, Iris Flywheel Compat, Create Better FPS, Create Threaded Trains, Architectury, FTB Library / Teams / Quests / Quests Optimizer, Pipez, Pipez Lag Fix, TxniLib, Cerulean, Bye?Pregen!, Twilight Forest, Lost Cities, TerraBlender, GeckoLib, CorgiLib, Oh The Trees You'll Grow, Oh The Biomes We've Gone, Regions Unexplored, Global Packs, Jade, EMI, Terralith, GeckolibBetterFPS, Feature Recycler, and the 1.21.1 NeoForge worldgen set. Removed to make room: Noisium, Achievements Optimizer. See [manifest.md](manifest.md).
 
-### Researched as a possible next wave (waiting on approval)
+This file lists **what was not added**.
 
-| Named as | Project | Why not in the pack yet |
-|---|---|---|
-| sodium extras | Sodium Extra 0.9.4 | Extra now has a 1.21.1 NeoForge file for Sodium 0.8.13. Held until you pick Extra vs Chloride (not both). |
-| sodium lights | Sodium Dynamic Lights + Sodium Options API | Client lights addon. Waiting on approval. |
-| Sodium/Embeddium Options Mod Compat | Sodium Options Mod Compat | Needs Sodium Options API. Waiting on approval. |
-| server core | ServerCore 1.5.19 | Vanilla-safe defaults; leave Entity Activation Range off unless tuned. Waiting on approval. |
-| Particle Core | Particle Core + Fzzy Config + Kotlin for Forge | Pulls Kotlin into the pack. Waiting on approval. |
-| Redirected | Redirected + TxniLib | Enum intern. Waiting on approval. |
-| Chunk-Pregenerator | Chunk Pregenerator 4.5.3 (CurseForge) | Operator pregen; not on Modrinth for this loader. Waiting on approval. |
-| Structure Layout Optimizer | SLO + Resourceful Config | Structure gen. Waiting on approval. |
-| More culling | More Culling + Cloth Config | Complements Entity Culling; watch Iris. Waiting on approval. |
-| Crash exploit filter | CrashExploitFixer 2.0.0 | File tags 1.21.1–1.21.4. Waiting on approval. |
-| Flevorium | Flerovium 1.1.3 | Entity / block-entity draw cost. Do not stack with Better Block Entities. Waiting on approval. |
-| AsyncParticles | AsyncParticles 21.1.4.4 | Particle thread. Waiting on approval. |
-| Gnetum | Gnetum 3.3.6 | Spreads HUD updates. Waiting on approval. |
-| Ksyxis | Ksyxis 1.4.4 | Faster spawn-region load. Waiting on approval. |
-| Achievements Optimizer | Achievements Optimizer 2.1.0 | Advancement tick. Waiting on approval. |
-| LightSpeedRe | LightSpeedRe 1.2.3 | Launch. Waiting on approval. |
-| quick pack | quick pack 1.5.0 | Faster pack reload. Waiting on approval. |
-| Disconnect Packet Fix | Disconnect Packet Fix 2.0.1 | Bad disconnect packets. Waiting on approval. |
-| Async Logger | Async Logger 2.2.2 | Log I/O. Waiting on approval. |
-| Put A Plug In it! (PAPI) | PAPI 1.2.1 | Extra leak plugs beside AllTheLeaks. Waiting on approval. |
-| ResourcePackCached | ResourcePackCached 1.2.5 | Client pack cache. Waiting on approval. |
-
-### Overlaps something already in the pack or in the recommended set
+### Held — file exists but not a fit yet
 
 | Named as | Why not |
 |---|---|
-| (Sodium) Chloride | Same job as Sodium Extra (leaves, fog, FPS overlay, entity distance). ARR. Extra is the better license. Do not run both. |
-| Sodium Extras (Txni, not Extra) | Older third Extra. Official Extra covers this. |
-| Sodium Leaf Culling | Extra / Chloride already do leaves. |
-| OptiLeaves | Same leaf-culling niche. |
-| Despawn Tweaks | Let Me Despawn is already installed. |
-| NoisiumForked | Noisium 2.3.0 is already installed. Do not stack. Later we can *replace* 2.3.0 with Forked 2.7.0. |
-| Idle Boost | Dynamic FPS already lowers FPS when unfocused. |
-| Better Block Entities | Same draw-cost space as Flerovium. |
-| Cerulean | Same advancement-tick space as Achievements Optimizer. |
-| Bye?Pregen! | Second pregen/gen-spike tool next to Chunk Pregenerator. |
-| Performance Tweaks | Search lands on Adaptive Performance Tweaks again. |
+| sodium lights + Sodium Options API + Options Mod Compat | Matching jars are from 2025-01 / 2025-04, before Sodium 0.8. Extra 0.9.4 does not need Options API. Wait for 0.8-era files. |
+| Particle Core + Fzzy Config + Kotlin for Forge | Incompatible with AsyncParticles (already in). Kotlin + Fzzy Config is extra library. |
+| Redirected + TxniLib | 1.21.1 files exist (2025-02). Stale vs current NeoForge; enum intern is a tiny gain. |
+| EMI Enchants | Last file is 1.20.4. No 1.21.1 NeoForge build. |
+| ServerCore 1.5.19 | Entity Activation Range is a distant-entity freezer. Pack policy: do not add those. |
+| Gnetum | HUD-over-frames. Overlaps ImmediatelyFast. |
+| LightSpeedRe | Launch shortcut. Overlaps ModernFix. |
+| Put A Plug In it! (PAPI) | Same leak-patch niche as AllTheLeaks. |
+
+### Overlaps something already in the pack
+
+| Named as | Why not |
+|---|---|
+| (Sodium) Chloride | Same Extra job (leaves, fog, FPS overlay, entity distance). ARR. Extra is the license we want. |
+| Sodium Extras (Txni) | Third Extra. Last 1.21.1 file 2025-04; needs old Options API. Official Extra 0.9.4 covers this. |
+| Sodium Leaf Culling | Extra / Chloride already do leaves. 2025-04 Sodium-era file. |
+| OptiLeaves | Same leaf-culling niche. ARR. |
+| Despawn Tweaks | Let Me Despawn is already installed. Also TxniLib. |
+| NoisiumForked 2.7.0 | Do not stack on ByePregen. Noisium itself was removed as incompatible. |
+| Idle Boost | Dynamic FPS already lowers unfocused FPS. 2024-09 file. |
+| Better Block Entities | Same draw-cost space as Flerovium. Pick one. |
+| Performance Tweaks | Same project as Adaptive Performance Tweaks (listed twice in the original doc). |
 
 ### Needs a parent mod we have not ported
 
-| Named as | Missing parent |
+| Named as | Missing parent / file |
 |---|---|
-| Iris and oculus flywheel compat | Flywheel / Create |
-| Create Better FPS | Create |
-| Create: Threaded Trains | Create |
-| Vanillin | Flywheel |
-| FTB Quests Optimizer | FTB Quests |
-| GeckolibBetterFPS | GeckoLib |
-| LC²H [Lost Cities: Multithreaded] | Lost Cities (no 1.21.1 NeoForge file anyway) |
-| TwilightForest Thread Safety Addon | Twilight Forest (no 1.21.1 file) |
-| Pipez Lag Fix | Pipez (no matching project found) |
+| Vanillin (`flw-vanillin`) | Flywheel is in Create, but Vanillin is **shader-incompatible**. Iris is in, so this stays out. |
+| LC²H [Lost Cities: Multithreaded] | Lost Cities is in. LC²H is still 1.20.1 Forge only. |
+| TwilightForest Thread Safety Addon | Twilight Forest is in. Addon still has no 1.21.1 NeoForge file. |
 
 ### Wrong renderer, missing file, or not a single pack mod
 
 | Named as | Why not |
 |---|---|
-| Bocchium | Bedrock-face cull for Embeddium / Rubidium. This pack uses Sodium. |
-| FastBoot | The Modrinth hit is a whole modpack `.mrpack`, not one mod. |
-| Fluidium | No 1.21.1 NeoForge project found. |
-| DarkTimer - RPG Clear Entity Lag | No 1.21.1 NeoForge file. |
+| Bocchium | No 1.21.1 NeoForge project found. Old Embeddium/Rubidium bedrock-face cull. |
+| FastBoot | No matching 1.21.1 NeoForge mod. Still not a pack mod. |
+| Fluidium | No project found. |
+| DarkTimer - RPG Clear Entity Lag | No 1.21.1 NeoForge file. Entity-delete lag clear. ARR. |
 
 ### Gameplay-changing, crashy, or too much library for the gain
 
-| Named as | Why not |
+| Named as | Correction |
 |---|---|
-| DoesPotatoTick? | Freezes distant entities. Overlaps ServerCore’s optional EAR. Easy farm/machine breakage. |
-| Immersive Optimization | Same entity-scheduler idea. |
-| Adaptive Performance Tweaks | Auto-cuts view distance, spawns, items. Changes how the world plays. |
-| TCT ClearLag | Deletes entities. ARR. |
-| Dimensional Threading Reforked | One world per thread. High crash rate in mixed packs. |
-| Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez / AE2 patches we do not have. |
-| ScalableLux | Alpha lighting engine. |
-| Ixeris | Moves input off-thread. Breaks some launchers / overlays. |
-| Krypton Reno | Network mixins. Fragile next to NeoForge / Lithium. |
-| Fast Item Frames | New block-entity type (world data) + Puzzles Lib. |
-| BetterGrassify | Pulls Forgified Fabric API for better grass. |
-| Loading Backgrounds | Cosmetic + Architectury. |
-| Too Many Entities | Client entity limiter + Architectury + Cloth. |
-| GPUTape | GPU booster + ToadLib; modest vs the renderer stack we already have. |
-| MemGuard | ARR; forces GC. Can hitch more than it helps. |
-| DarkSleep - RPG Sleep Percentage | Sleep-percentage RPG rule, not an optimizer. ARR. |
-| BiomeSpy | Biome lookup utility, not FPS/TPS. |
+| DoesPotatoTick? | Skip. Distant-entity freeze. CurseForge 1.21.1 file exists (`doespotatotick-1.21.1-5.6.4`) and **requires Duplicationless** (original missed). Do not add. |
+| Immersive Optimization | Same entity-scheduler idea. Skip. |
+| Adaptive Performance Tweaks | Auto-cuts view distance / spawns / items. Skip. |
+| TCT ClearLag | Deletes entities. ARR + TCT Core. Skip. |
+| Dimensional Threading Reforked | One world per thread. Skip. |
+| Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
+| ScalableLux | Alpha lighting engine. Skip. |
+| Ixeris | Moves input off-thread. Skip. |
+| Krypton Reno | Original looked up Fabric `krypton`. Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
+| Fast Item Frames | New block-entity type (world data) + Puzzles Lib. Skip. |
+| BetterGrassify | Required Forgified Fabric API. Skip. |
+| Loading Backgrounds | Cosmetic + Architectury + ARR. Skip. |
+| Too Many Entities | Client limiter + Architectury + Cloth. Skip. |
+| GPUTape | ToadLib. Modest vs Sodium/Iris/ImmediatelyFast. Skip. |
+| MemGuard | ARR; forces GC. Skip. |
+| DarkSleep - RPG Sleep Percentage | Sleep rule, not an optimizer. ARR. Skip. |
+| BiomeSpy | `/locate` rewrite, not FPS. Revisit in a worldgen / locate wave. |
 
-Shader packs and Colorwheel stay deferred until the renderer wave is approved. See [performance.md](performance.md).
+Shader packs and Colorwheel stay deferred. Extra is in; wait for a clean boot before shader packs. See [performance.md](performance.md).
 
 ## 1.20.1 Forge pack — not on 1.21.1 NeoForge yet
 
-Source: `pack/mods/*.pw.toml` on branch `forge-1.20.1` (239 mods). Already represented on NeoForge: AllTheLeaks, Almanac Lib, BadOptimizations, Clumps, Crash Assistant, Cupboard, Dynamic FPS, Entity Culling, FastFurnace, FastSuite, FastWorkbench, FerriteCore, ImmediatelyFast, Let Me Despawn, ModernFix, Neruina, Noisium, Placebo, Smooth Chunk Save.
+Source: `pack/mods/*.pw.toml` on branch `forge-1.20.1` (239 mods). Already represented on NeoForge: AllTheLeaks, Almanac Lib, Architectury API, Awesome Dungeon, BadOptimizations, Chunk Pregenerator (new), Cloth Config, Clumps, CorgiLib, Crash Assistant, Create, Cupboard, Dynamic FPS, EMI, Entity Culling, FastFurnace, FastSuite, FastWorkbench, FerriteCore, FTB Library / Teams / Quests, GeckoLib, ImmediatelyFast, Infernal Expansion Redux, Jade, Let Me Despawn, Lithostitched, ModernFix, Neruina, Nullscape, Oh The Biomes We've Gone, Oh The Trees You'll Grow, Pipez, Placebo, Regions Unexplored, Resourceful Config, Smooth Chunk Save, Sodium Extra, Structurify, Tectonic, TerraBlender, Terralith, The Lost Cities, The Twilight Forest, When Dungeons Arise, YUNG's API / Better Caves / Better Nether Fortresses / Bridges.
 
-Replaced, do not port as-is: Embeddium → Sodium, Oculus → Iris, Radium → Lithium, Rubidium Extra → Sodium Extra (held).
+Replaced, do not port as-is: Embeddium → Sodium, Oculus → Iris, Radium → Lithium, Rubidium Extra → Sodium Extra.
 
-Configurable is new on NeoForge (Neruina dependency) and was not on the Forge list.
+Configurable is new on NeoForge (Neruina dependency) and was not on the Forge list. Carbon Config, Iris Flywheel Compat, Create Better FPS, Create Threaded Trains, FTB Quests Optimizer, Pipez Lag Fix, TxniLib, Cerulean, Bye?Pregen!, Lithostitched, Tectonic 3, Global Packs, GeckolibBetterFPS, and Feature Recycler are new with this pack.
 
-Count still to research: **216**. Do not dump-install.
+Do not dump-install the rest.
 
 ### Create
 
-Create; Create Ultimine; Slice & Dice; Central Kitchen; Applied Kinetics; Alex's Caves Compat; Sky Village; Sophisticated Backpacks / Storage Create integrations.
+Create Ultimine; Slice & Dice; Central Kitchen; Applied Kinetics; Alex's Caves Compat; Sky Village; Sophisticated Backpacks / Storage Create integrations.
 
 ### Applied Energistics 2
 
@@ -133,7 +114,7 @@ Timeless and Classics Zero and TaCZ addons (Additions, Tweaks, Labs, Immersive B
 
 ### Worldgen / structures / dimensions
 
-Tectonic; Terralith; TerraBlender; Oh The Biomes We've Gone; Oh The Trees You'll Grow; Regions Unexplored; Nullscape; Lithostitched; Structurify; Better Sparse Structures; Alex's Caves; Citadel; The Lost Cities; The Twilight Forest; When Dungeons Arise; Seven Seas; Awesome Dungeon; Awesome Dungeon Nether; YUNG's API / Better Caves / Better Nether Fortresses / Bridges; Stalwart Dungeons; Moog's Structure Lib; MMR Mineshafts; Epic Structures (Villages, Jungle Temples, Witch Huts); Amplified Nether; Bygone Nether; BetterNether Forge; Infernal Expansion Redux; Aquamirae; Countered's Terrain Slabs.
+Alex's Caves; Citadel; Stalwart Dungeons; Bygone Nether; BetterNether Forge; Awesome Dungeon Nether.
 
 ### Farmer's Delight cluster
 
@@ -145,15 +126,15 @@ Sophisticated Core / Backpacks / Storage; Functional Storage; Botany Pots; Botan
 
 ### FTB
 
-FTB Library; Teams; Chunks; Quests; Essentials; Ultimine; Filter System; XMod Compat.
+FTB Chunks; Essentials; Ultimine; Filter System; XMod Compat.
 
 ### Maps / compasses / QoL
 
-Xaero's Minimap; Xaero's World Map; Jade; Jade Addons; Nature's Compass; Explorer's Compass; Structure Compass; Waystones; AppleSkin; Mouse Tweaks; Inventory Essentials; Inventory Tweaks ReFoxed; Crafting Tweaks; Controlling; Searchables; Harvest with ease; Clean Swing Through Grass; No trampling on farmland; Cosmetic Armor Reworked; Elytra Slot; Durability Tooltip; Equipment Compare; Legendary Tooltips; Item Borders; Colorful Hearts; Simply Tooltips; Better Advancements; Clickable advancements; Toast Control; Default Options; Login Protection; NetherPortalFix; Packet Fixer; Too Fast; Accelerated Decay; MmmMmmMmmMmm; Observable; Bad Wither No Cookie; Construction Sticks; Connected Glass; Fusion; Model Gap Fix; Tempad; Perfect Graves; Lootr; Polymorph; Almost Unified; ATO - All the Ores; Supplementaries; Amendments; Dyenamics; Dyenamics and Friends.
+Xaero's Minimap; Xaero's World Map; Nature's Compass; Explorer's Compass; Structure Compass; Waystones; AppleSkin; Mouse Tweaks; Inventory Essentials; Inventory Tweaks ReFoxed; Crafting Tweaks; Controlling; Searchables; Harvest with ease; Clean Swing Through Grass; No trampling on farmland; Cosmetic Armor Reworked; Elytra Slot; Durability Tooltip; Equipment Compare; Legendary Tooltips; Item Borders; Colorful Hearts; Simply Tooltips; Better Advancements; Clickable advancements; Toast Control; Default Options; Login Protection; NetherPortalFix; Packet Fixer; Too Fast; Accelerated Decay; MmmMmmMmmMmm; Observable; Bad Wither No Cookie; Construction Sticks; Connected Glass; Fusion; Model Gap Fix; Tempad; Perfect Graves; Lootr; Polymorph; Almost Unified; ATO - All the Ores; Supplementaries; Amendments; Dyenamics; Dyenamics and Friends.
 
 ### UI / loading / recipes
 
-EMI; TooManyRecipeViewers; EMI Enchants; EMI QoL Tweaks; JEI WorldGen; FancyMenu; Drippy Loading Screen; Konkrete; Melody; Colorwheel; Colorwheel Patcher; Euphoria Patches.
+EMI Enchants; TooManyRecipeViewers; FancyMenu; Drippy Loading Screen; Konkrete; Melody; Colorwheel; Colorwheel Patcher; Euphoria Patches.
 
 ### Auth / compat
 
@@ -161,7 +142,7 @@ NeoAuth; Better Compatibility Checker.
 
 ### Libraries (only with a consumer)
 
-Architectury API; Balm; Bookshelf; Caelus; Cloth Config; Cobweb; CorgiLib; Curios API; Fzzy Config; Geckolib; Iceberg; Jupiter; Kotlin for Forge; Library Ferret; Moonlight Lib; Mysterious Mountain Lib; Patchouli; Prism; Resourceful Config; Resourceful Lib; SuperMartijn642 Config / Core; YACL; BCLib Forge; WunderLib Forge; Fragmentum; EdivadLib; Uranus.
+Balm; Bookshelf; Caelus; Cobweb; Curios API; Fzzy Config; Iceberg; Jupiter; Kotlin for Forge; Moonlight Lib; Mysterious Mountain Lib; Patchouli; Prism; Resourceful Lib; SuperMartijn642 Config / Core; BCLib Forge; WunderLib Forge; EdivadLib; Uranus.
 
 ### Other Forge leftovers
 

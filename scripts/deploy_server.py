@@ -605,15 +605,18 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
                 wings.write_file(f"/mods/{name}", data, "application/java-archive")
         else:
             print(f"{zip_path.name} contains no jars (empty pack)")
-        configs = [
+        extras = [
             info
             for info in archive.infolist()
             if not info.is_dir()
-            and info.filename.replace("\\", "/").startswith("config/")
+            and (
+                info.filename.replace("\\", "/").startswith("config/")
+                or info.filename.replace("\\", "/").startswith("global_packs/")
+            )
         ]
-        if configs:
-            print(f"uploading {len(configs)} pack configs")
-            for info in configs:
+        if extras:
+            print(f"uploading {len(extras)} pack configs and datapacks")
+            for info in extras:
                 name = info.filename.replace("\\", "/")
                 data = archive.read(info)
                 print(f"  {name} ({len(data)} bytes)")

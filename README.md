@@ -17,13 +17,13 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 | Mod loader | NeoForge 21.1.250 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
 | Packwiz format | packwiz:1.1.0 |
-| Mods | Performance / client stack (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
+| Mods | Performance stack plus Create, FTB Quests, Pipez, biomes, Jade, EMI, and worldgen (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
 A git tag `vX.Y.Z` must match pack version `X.Y.Z`. Tags `v0.0.1`–`v0.0.9` already shipped as 1.20.1 Forge; do not reuse them. The first 1.21.1 NeoForge GitHub/store ship is `v0.1.0`.
 
 ## Play
 
-The pack is in early development on Minecraft 1.21.1 NeoForge. This cut has the first performance and client-smoothness mods. New world required. The CurseForge listing is not public yet.
+The pack is in early development on Minecraft 1.21.1 NeoForge. This cut has the performance stack plus Create, FTB Quests, Pipez, biomes, Jade, EMI, and the ported worldgen set. New world required. The CurseForge listing is not public yet.
 
 **Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After the store listing exists, install from CurseForge instead.
 

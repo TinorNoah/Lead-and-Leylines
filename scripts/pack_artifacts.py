@@ -18,6 +18,7 @@ from read_pack_versions import PACK_TOML, ROOT, read_pack
 PACK_DIR = ROOT / "pack"
 MODS_DIR = PACK_DIR / "mods"
 CONFIG_DIR = PACK_DIR / "config"
+GLOBAL_PACKS_DIR = PACK_DIR / "global_packs"
 DIST_DIR = ROOT / "dist"
 USER_AGENT = "LeadAndLeylines-deploy/1.0 (packwiz local share)"
 
@@ -129,6 +130,10 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
             copied = True
         if copied:
             print("  copied pack/config into server zip")
+
+    if GLOBAL_PACKS_DIR.is_dir():
+        shutil.copytree(GLOBAL_PACKS_DIR, work / "global_packs", dirs_exist_ok=True)
+        print("  copied pack/global_packs into server zip")
 
     if included == 0:
         print("  no server/both mods; writing an empty server-mods zip")

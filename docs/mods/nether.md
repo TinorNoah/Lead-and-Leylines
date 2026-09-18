@@ -2,12 +2,20 @@
 
 Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** empty pack. No Nether mods installed.
+**Status:** Amplified Nether + Infernal Expansion Redux + YUNG's Better Nether Fortresses. See [worldgen.md](worldgen.md).
 
 ## Chosen
 
-None.
+| Mod | Pinned file | `side` | Why |
+|---|---|---|---|
+| Amplified Nether | `Amplified_Nether_26.2_v1.2.16.jar` | both | Taller Nether. World data. |
+| Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.15.jar` | both | Nether biomes/mobs. World data. |
+| YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | both | Fortress overhaul. World data. |
 
 ## Considered / held / dropped
 
-None yet. Do not port 1.20.1 Forge choices without a fresh 1.21.1 NeoForge research pass.
+| Mod | Status | Why |
+|---|---|---|
+| Bygone Nether | Held | No 1.21.1 NeoForge file. |
+| BetterNether | Held | No 1.21.1 NeoForge file. |
+| Awesome Dungeon Nether | Held | No 1.21.1 NeoForge file. |
