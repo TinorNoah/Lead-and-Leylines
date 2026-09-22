@@ -1,6 +1,6 @@
 name = "JEI QuickCraft"
 filename = "jei-quickcraft-1.21.1-neoforge-1.0.jar"
-side = "client"
+side = "both"
 
 [download]
 hash-format = "sha1"

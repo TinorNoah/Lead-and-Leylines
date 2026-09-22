@@ -45,6 +45,350 @@ file = "global_packs/required_data/lead-leylines-nether-pixies/pack.mcmeta"
 hash = "a6f9dc4cf50f90211be18b8081ca96997d1afeb32e8f018b8343ab6c1526d275"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/extendedae/loot_table/blocks/ex_emc_interface.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekanism_extras/loot_table/blocks/absolute_chemical_infusing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekanism_extras/loot_table/blocks/cosmic_chemical_infusing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekanism_extras/loot_table/blocks/infinite_chemical_infusing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekanism_extras/loot_table/blocks/supreme_chemical_infusing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_centrifuging_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_crystallizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_dissolving_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_lathing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_liquifying_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_oxidizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_painting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_pigment_extracting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_planting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_pressing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_pressurised_reacting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_recycling_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_replicating_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_rolling_mill_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_stamping_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/creative_washing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_centrifuging_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_crystallizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_dissolving_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_lathing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_liquifying_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_oxidizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_painting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_pigment_extracting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_planting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_pressing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_pressurised_reacting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_recycling_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_replicating_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_rolling_mill_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_stamping_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/dense_washing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_centrifuging_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_crystallizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_dissolving_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_lathing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_liquifying_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_oxidizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_painting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_pigment_extracting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_planting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_pressing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_pressurised_reacting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_recycling_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_replicating_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_rolling_mill_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_stamping_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/multiversal_washing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_centrifuging_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_crystallizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_dissolving_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_lathing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_liquifying_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_oxidizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_painting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_pigment_extracting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_planting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_pressing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_pressurised_reacting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_recycling_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_replicating_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_rolling_mill_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_stamping_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/overclocked_washing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_centrifuging_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_crystallizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_dissolving_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_lathing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_liquifying_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_oxidizing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_painting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_pigment_extracting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_planting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_pressing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_pressurised_reacting_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_recycling_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_replicating_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_rolling_mill_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_stamping_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_table/blocks/quantum_washing_factory.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/pack.mcmeta"
+hash = "0b7cb004d6935d96f0480f559f40ead189f3e269dc2d4dc7c83ea012cf819a5b"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-ru-in-structure/data/regions_unexplored/worldgen/placed_feature/patch/ash_vents_inferno.json"
 hash = "f1d65d963dbaa83458b7a80b2b753c4521acc57fa224c9ac070eb4e15d8c3c86"
 
@@ -732,7 +1076,7 @@ metafile = true
 
 [[files]]
 file = "mods/epicfightcurioscompat.pw.toml"
-hash = "09696b63faed3f980b5c49bdc5942d1181d615b5c2af4e2d2d7080c10f5572b9"
+hash = "39ae49c63bbd3451554a26e66268f4ed38b51c949641442d7f6a193d15fa8d50"
 metafile = true
 
 [[files]]
@@ -997,12 +1341,12 @@ metafile = true
 
 [[files]]
 file = "mods/jei-quickcraft.pw.toml"
-hash = "04526706b1bf6a715e23df60ca4bb8e317770258527579d6846a16cf8ef6efe4"
+hash = "36e58b628803daa7187a2f3e85e6bcf43500fad87e38c3e07c7e1a1f4f87a735"
 metafile = true
 
 [[files]]
 file = "mods/jei-stuff.pw.toml"
-hash = "b82bd7d24a00b50b023285b479ee238b584bc97836b1e34ede9bbbd97048f9b2"
+hash = "c4b51dd6c0911513cb6bbbfeb28fdd9fc3423065923335a1c77edb7ca8fca57b"
 metafile = true
 
 [[files]]

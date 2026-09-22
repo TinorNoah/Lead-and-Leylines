@@ -90,8 +90,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | CurseForge 1482785 / 8848988 | client | recipes | Backpack recipe transfer. | JEI, Sophisticated | defaults | 2026-09-22 |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | CurseForge 1133580 / 7452053 | client | recipes | Armor trim preview. 1.1.0 is 26.1.2-only. | JEI | defaults | 2026-09-22 |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | CurseForge 1422344 / 8534122 | client | recipes | Paginated sequenced assembly (7+ steps). | JEI, Create | defaults | 2026-09-22 |
-| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | CurseForge 978621 / 8938121 | client | recipes | Extra JEI helpers. | JEI | defaults | 2026-09-22 |
-| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | CurseForge 1520978 / 8429819 | client | recipes | Craft from JEI using inventory. ARR. | JEI | defaults | 2026-09-22 |
+| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | CurseForge 978621 / 8938121 | both | recipes | Extra JEI helpers. Required network channels need the jar on dedicated servers. | JEI | defaults | 2026-09-23 |
+| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | CurseForge 1520978 / 8429819 | both | recipes | Craft from JEI using inventory. ARR. Required network channels need the jar on dedicated servers. | JEI | defaults | 2026-09-23 |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | CurseForge 1258607 / 8752438 | client | recipes | Spectrum pages in JEI. | JEI, Spectrum | defaults | 2026-09-22 |
 | FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | CurseForge 1103259 / 6695679 | client | recipes | FTB quest/filter pages in JEI. | JEI, FTB | defaults | 2026-09-22 |
 | MekaGenJei | `mekagenjei-1.2.jar` | CurseForge 1347827 / 7224975 | client | recipes | Mekanism Generators JEI pages. | JEI, Mekanism Generators | defaults | 2026-09-22 |
@@ -310,7 +310,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | P1nero's Epic Bow | `p1nero_bow-neoforge1.21.1-21.16.1.0-neoforge.jar` | CurseForge 1338443 / 7922741 | both | combat | Required by EF × Twilight Forest. | Epic Fight | defaults | 2026-09-22 |
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.6-Fix-1.21.1-Neoforge.jar` | CurseForge 1555371 / 8784163 | both | combat | TF animations in Epic Fight. | Weapons of Miracles, Epic Bow | defaults | 2026-09-22 |
 | Bosses' Rise | `block_factorys_bosses-2.1.2-neo-1.21.1.jar` | CurseForge 1314084 / 8123167 | both | combat | Extra bosses. World data. | GeckoLib | defaults | 2026-09-22 |
-| Epic Fight: Curios Compat | `Epic Fight x Curios Compat 2.2.jar` | CurseForge 1389133 / 7865987 | both | combat | Curios slots in Epic Fight. | Epic Fight, Curios | defaults | 2026-09-22 |
+| Epic Fight: Curios Compat | `Epic Fight x Curios Compat 2.2.jar` | CurseForge 1389133 / 7865987 | client | combat | Curios slots in Epic Fight. Client-only (loads `ClientCuriosCompat`; crashes dedicated server if `both`). | Epic Fight, Curios | defaults | 2026-09-23 |
 | Epic Fight × TacZ First-Person Compat | `epictaczcompat_1.21.1_0.6.0.jar` | CurseForge 1544620 / 8759254 | client | combat | First-person guns with Epic Fight. | Epic Fight, playerAnimator | defaults | 2026-09-22 |
 | ParCool! | `ParCool-1.21.1-4.0.0.5.jar` | CurseForge 482378 / 8921237 | both | movement | Parkour. | none | defaults | 2026-09-22 |
 | Epic Fight X Parcool | `epicfightxparcool-1.0.0.jar` | CurseForge 1063523 / 8620103 | both | combat | Parkour during Epic Fight. | Epic Fight, ParCool | defaults | 2026-09-22 |

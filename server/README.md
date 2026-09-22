@@ -60,7 +60,7 @@ If the Generic egg warns that the file is not a server pack, it will use the cli
 
 Re-copy these onto the server **after every egg reinstall** (the install script writes `/mnt/server`):
 
-- `run.sh` — NeoForge start. Panel startup is `bash run.sh`. Uses Java 21 ZGC from `user_jvm_args.txt`. Do not add `-XX:+ZGenerational`.
+- `run.sh` — NeoForge start. Panel startup is `bash run.sh`. Uses Java 21 ZGC from `user_jvm_args.txt`. Sets `-Xmx` below the panel `SERVER_MEMORY` limit (about 1.5 GiB headroom) so ZGC and native memory do not trigger Linux OOM kill (exit 137). Do not add `-XX:+ZGenerational`.
 - `user_jvm_args.txt` — copied from `pack/user_jvm_args.txt`
 - `ops.json`
 

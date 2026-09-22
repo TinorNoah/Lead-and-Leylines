@@ -17,6 +17,10 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+- Epic Fight × Curios Compat is client-only again, so dedicated servers no longer crash loading `ClientCuriosCompat`.
+- Empty-override datapack clears orphan Mekanism More Machine / Extras / ExtendedAE loot tables that pointed at unregistered items (boot parse spam).
+- JEI QuickCraft and JEI Stuff ship on both sides so their required network channels exist on dedicated servers.
+
 ### Removed
 
 ## [0.1.1] - 2026-09-23

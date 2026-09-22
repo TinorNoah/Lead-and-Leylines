@@ -1,6 +1,6 @@
 name = "Epic Fight: Curios Compat 2.0"
 filename = "Epic Fight x Curios Compat 2.2.jar"
-side = "both"
+side = "client"
 
 [download]
 hash-format = "sha1"
