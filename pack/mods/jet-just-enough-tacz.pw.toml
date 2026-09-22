@@ -1,0 +1,13 @@
+name = "[JET] Just Enough TaCZ"
+filename = "just_enough_tacz-1.2.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "fcca1e7211c76e3ce0003866eda9c6329eaaa8b9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8180476
+project-id = 1536413

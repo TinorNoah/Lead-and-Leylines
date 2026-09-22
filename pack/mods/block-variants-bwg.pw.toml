@@ -1,0 +1,13 @@
+name = "Block Variants - Oh The Biomes We've Gone"
+filename = "block_variants_bwg-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3b8d9af220d9e00ba391eecfc8e64459559ba228"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8705273
+project-id = 1503165

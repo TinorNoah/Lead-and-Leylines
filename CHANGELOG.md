@@ -19,6 +19,44 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.1] - 2026-09-23
+
+### Added
+
+- Just Enough Items (JEI) 19.57, with MezzConfig, as the recipe viewer.
+- JEI companions: JEI++, AE2 JEI Integration, Refined Storage JEI Integration, JEIOptimizer, Sophisticated JEI Index, Smithing Template Viewer, Create JEI Compat, JEI Stuff, JEI QuickCraft, and SpectrumJEI. JEI WorldGen was already in.
+- Create Aeronautics 1.3.2 (planes, airships, vehicles) with Sable 2.0.5. Shaders may look wrong on those contraptions.
+- Mekanism extras: generator/multiblock JEI pages, Jade upgrades, covers (beta), Extras, Elements, Refined Storage chemicals, Aeronautics compat, Create ponders, and chemical tanks in Sophisticated backpacks.
+- Sophisticated backpacks/storage companions: Ars Nouveau, Create recipes, tactical backpacks (beta), item actions, inventory helpers, Yukami tab, chest renderer (NeoForge pin), Jade, Refined Storage quick-deposit, and Demagnetizer (beta, NeoForge pin).
+- Patchouli (guidebooks; required by Mekanism Elements).
+- Timeless and Classics Zero (unofficial 1.21.1 port) with Pack Upgrader, gun packs, ammo, turrets, armed mobs, Aeronautics/Create/AE2 bridges, and JEI/Jade helpers. Guns Lights is 2.8.2 (2.9.0 is 1.20.x).
+- Create crushing/compat for Regions Unexplored and Oh The Biomes We've Gone, plus Block Variants for OTBWG.
+- Just Enough Resources (ore/mob pages in JEI), YUNG's Cave Biomes, and Variants & Ventures.
+- Nether extras: Jaden's Nether Expansion (and Delight), BetterNether: New Dawn, Eternal Nether, Nether Remastered, Just-In Nether, Nether Villager Trader, and Netherite Tweaks. Farmer's Cutting for BetterNether is in; Cutting for RU and OTBWG was already in.
+- Epic Fight with ParCool, Nightfall (AAA Particles), Twilight Forest / TaCZ / Curios / Ice and Fire compat, Bosses' Rise, and related helpers. Ice and Fire: Community Edition is in so that armor compat works.
+- Alex's Caves Continued (Codxlib, not Citadel), Compat Structure, and Bad Wither No Cookie Reloaded (quiets boss-fight music).
+- Ecliptic Seasons (solar-term weather, snow, and crops) with SeasonHUD, crop bundles, multimod patches, and a Serene Seasons API bridge. Do not add Serene Seasons itself.
+- Distant terrain LOD streaming (Voxy Server Side) and Voxy compatibility patches. The Voxy renderer jar is All Rights Reserved and is not redistributed; build the unofficial NeoForge port locally.
+
+### Changed
+
+- Updated sixteen other 1.21.1 NeoForge mods, including Chunk Pregenerator, Entity Culling, Create Better FPS, ExtendedAE, Aquamirae, and Lithostitched.
+- Overworld, Nether, and End biome regions are as large as TerraBlender allows, so Terralith, Oh The Biomes We've Gone, Regions Unexplored, and vanilla sit in big continents instead of mixed patches. Individual biomes inside those continents use Large Biomes climate scale, with a bit less speckle at the edges. Alex's Caves biomes are larger and farther apart. New world required. Do not pick the Large Biomes world type.
+- Ice and Fire pixie villages generate in the Nether instead of overworld forests. New Nether chunks required.
+- BetterNether / WorldWeaver no longer opens the BetterX welcome setup screen on launch.
+
+### Fixed
+
+- Create, Sophisticated, and Polymorph recipe pages load under real JEI instead of TooManyRecipeViewers' fake 19.27 stub.
+
+### Removed
+
+- TaCZ: Immersive Ballistic and TaCZ Tweaks (alpha; Iris vertex-format conflict on load).
+- TaCZ / Sophisticated Backpacks ammo addon (it requires a different TaCZ mod id than the unofficial 1.21.1 port).
+- EMI, EMI Ores, EMI Enchanting, EMI QoL Tweaks, and TooManyRecipeViewers.
+- Iris Flywheel Compat (mixin conflict with Colorwheel; Colorwheel stays for Create + shaders).
+- Tectonic. New chunks use vanilla-height terrain plus the remaining biome and structure mods; already-generated Tectonic land stays until those chunks are regenerated.
+
 ## [0.1.0] - 2026-09-18
 
 ### Changed

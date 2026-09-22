@@ -1,0 +1,13 @@
+name = "P1nero's Epic Bow"
+filename = "p1nero_bow-neoforge1.21.1-21.16.1.0-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "29bd6951690afce7457f91abf683f7988769dc21"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7922741
+project-id = 1338443

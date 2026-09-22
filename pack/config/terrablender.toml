@@ -1,0 +1,23 @@
+[general]
+	#The size of overworld biome regions from each mod that uses TerraBlender.
+	#Range: 2-6. Default 3. 6 is max: Terralith / OTBWG / RU / vanilla each get large continents instead of small mixed patches.
+	overworld_region_size = 6
+	#The weighting of vanilla biome regions in the nether.
+	vanilla_nether_region_weight = 10
+	#The size of nether biome regions from each mod that uses TerraBlender.
+	#Range: 2-6. Default 2.
+	nether_region_size = 6
+	#The weighting of vanilla biome regions in the overworld.
+	#Leave at 10 so vanilla still appears as its own large regions (villages, etc.), not speckled into modded land.
+	vanilla_overworld_region_weight = 10
+
+[end]
+	#Range: 2-6 for all End size keys.
+	edge_biome_size = 6
+	highlands_biome_size = 6
+	vanilla_end_barrens_weight = 10
+	island_biome_size = 6
+	vanilla_end_highlands_weight = 10
+	vanilla_end_midlands_weight = 10
+	midlands_biome_size = 6
+	vanilla_small_end_islands_weight = 10

@@ -1,0 +1,13 @@
+name = "[NEOFORGE] Epic Fight Client Tweaks"
+filename = "efct-1.0.7.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "4cf876918fbe858443d39dd325cfcc14c4c1fb18"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8620068
+project-id = 968141

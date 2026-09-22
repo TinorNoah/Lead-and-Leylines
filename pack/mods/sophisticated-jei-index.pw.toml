@@ -1,0 +1,13 @@
+name = "Sophisticated JEI Index"
+filename = "sophisticated_jei_index-1.2.3+1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "0b32bc2fef551923b37356e747d6eca835e521d5"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8848988
+project-id = 1482785

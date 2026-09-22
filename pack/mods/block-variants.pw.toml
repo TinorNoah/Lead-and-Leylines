@@ -1,0 +1,13 @@
+name = "Block Variants"
+filename = "block_variants-1.21.1-6.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "33017869a5cd313cfd220f31463e389a8c6c2ccb"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8581915
+project-id = 481119

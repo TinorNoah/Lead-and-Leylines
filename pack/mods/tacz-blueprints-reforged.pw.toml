@@ -1,0 +1,13 @@
+name = "TaCZ: Blueprints Reforged"
+filename = "tacz-blueprints-reforged-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3a51728e300c79a37a2a09931e2b4c8a66d7bb2c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8331907
+project-id = 1589398

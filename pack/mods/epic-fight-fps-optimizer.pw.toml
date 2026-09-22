@@ -1,0 +1,13 @@
+name = "Epic Fight FPS Optimizer"
+filename = "EpicFight-FPS-Optimizer-1.21.1-NeoForge-v1.0.3.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "5b71aeae17cec879a828cd7962ec098cc3cbf27f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8876879
+project-id = 1619890

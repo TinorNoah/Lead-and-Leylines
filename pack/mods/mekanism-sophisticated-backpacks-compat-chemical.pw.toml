@@ -1,0 +1,13 @@
+name = "Mekanism + Sophisticated Backpacks Compat | Chemical Tank"
+filename = "mekanismsophisticatedbackpacks-neoforge-1.21.1-1.0.1+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "20ee30f6f0617a1e26ae3ffbc803bc63475ae82d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8810041
+project-id = 1682131

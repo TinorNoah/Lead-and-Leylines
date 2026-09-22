@@ -16,6 +16,8 @@ This file lists **only mods that are not in `pack/mods/`**.
 | LightSpeedRe | Launch shortcut. Overlaps ModernFix. |
 | Put A Plug In it! (PAPI) | Same leak-patch niche as AllTheLeaks. |
 | Fast Noise | 1.21.1 NF file exists. Exclusive Tectonic smoke 7.62 CPS vs 7.73 Tectonic-only baseline. No CPS gain. |
+| TaCZ / Sophisticated Backpacks ammo | 1.21.1 NeoForge file requires modid `tacz-1-21-1`. Unofficial port 1353462 registers as `tacz`. |
+| TaCZ: Immersive Ballistic (+ TaCZ Tweaks) | Alpha. Duplicate VertexFormatElement registration with Iris on boot. |
 | ScalableLux | 1.21.1 NF file exists. Exclusive Tectonic smoke 4.89 CPS vs 7.73; BlockState lighting errors. Combo with Fast Noise 6.33. |
 
 ## Overlaps something already in the pack
@@ -66,6 +68,10 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
 | Fast Item Frames | New block-entity type (world data) + Puzzles Lib. Skip. |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
+| Roxy | Translation layer for Fabric Voxy `0.2.16-beta` (1.21.11 jar). Conflicts with native `voxy-forged`. Skip. |
+| Ecliptic Seasons : Fabricated | Fabric rewrite. Bundles listed it as a required dep; packwiz skipped it on NeoForge. Skip. |
+| Serene Seasons | Replaced by Ecliptic Seasons + Serene Seasons API Stub. Do not stack. |
+| voxy-forged | ARR; no GitHub release jars; cannot go in packwiz. Build from source for the local Prism instance only. |
 | Loading Backgrounds | Cosmetic + Architectury + ARR. Skip. |
 | Too Many Entities | Client limiter + Architectury + Cloth. Skip. |
 | GPUTape | ToadLib. Modest vs Sodium/Iris/ImmediatelyFast. Skip. |
@@ -88,11 +94,11 @@ Refined Polymorphism.
 
 ### Combat / guns / movement
 
-Timeless and Classics Zero and TaCZ addons (Additions, Tweaks, Labs, Immersive Ballistic, Daffa's Arsenal, Gucci & Vuitton, LesRaisins packs, Curios Ammo Box, Guns Lights); Epic Fight; Official Epic x ParCool; ParCool; Simply Swords; Simply More; Ice and Fire CE.
+Simply Swords; Simply More. Remaining TaCZ content not in the pack: Labs, Daffa's Arsenal, Gucci & Vuitton. Epic Fight, ParCool, Ice and Fire CE, and the unofficial 1.21.1 TaCZ port are in [content.md](content.md).
 
 ### Worldgen / structures / dimensions
 
-Alex's Caves; Citadel; Stalwart Dungeons; Bygone Nether; BetterNether Forge; Awesome Dungeon Nether.
+Stalwart Dungeons; Bygone Nether; Awesome Dungeon Nether.
 
 ### Farmer's Delight cluster
 
@@ -100,7 +106,7 @@ Delightful.
 
 ### Maps / compasses / QoL
 
-Inventory Essentials; Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Observable; Bad Wither No Cookie; Construction Sticks; Connected Glass; Fusion; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends.
+Inventory Essentials; Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Observable; Construction Sticks; Connected Glass; Fusion; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends.
 
 ### UI / loading / shaders
 
@@ -108,7 +114,7 @@ FancyMenu; Drippy Loading Screen; Konkrete; Melody.
 
 ### Libraries (only with a consumer)
 
-Jupiter; Patchouli; Resourceful Lib; BCLib Forge; WunderLib Forge; Uranus.
+Resourceful Lib (already in for Variants&Ventures); BCLib Forge (old); WunderLib Forge (old). New Dawn BCLib/WunderLib, Ice and Fire Jupiter/Uranus, and Patchouli are in [manifest.md](manifest.md).
 
 ### Other Forge leftovers
 

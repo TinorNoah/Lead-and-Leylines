@@ -1,0 +1,13 @@
+name = "BetterNether: New Dawn"
+filename = "BetterNether-21.0.27.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "b1c9824301896c1c7472011e7ee816830522eb20"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8896389
+project-id = 1422293

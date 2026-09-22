@@ -1,0 +1,13 @@
+name = "Compat Structure"
+filename = "compatstructures-1.0.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "cf114a7f0aa08115af0317750f44434808ed5a0e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7768220
+project-id = 1248133

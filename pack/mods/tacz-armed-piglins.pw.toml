@@ -1,0 +1,13 @@
+name = "TACZ Armed Piglins"
+filename = "armedpiglins-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f7e3d0c675ee6cf5417a5aeab10bdb74f6d773ab"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8564204
+project-id = 1636775

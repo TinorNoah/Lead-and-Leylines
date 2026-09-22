@@ -1,0 +1,13 @@
+name = "[NEOFORGE] Epic Fight X Parcool"
+filename = "epicfightxparcool-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "be73b678541ff3a23b451c15ebd5c9e0601a832d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8620103
+project-id = 1063523

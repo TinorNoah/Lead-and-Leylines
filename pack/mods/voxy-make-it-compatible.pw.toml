@@ -1,0 +1,13 @@
+name = "Voxy - Make it compatible"
+filename = "make-it-compatible-voxy-1.1.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "1a6958a8a642f22cbe4c1b72dd6c37c1d90fd9d0"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8938421
+project-id = 1606807

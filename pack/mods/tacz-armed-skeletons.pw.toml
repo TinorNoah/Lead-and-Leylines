@@ -1,0 +1,13 @@
+name = "TACZ Armed Skeletons"
+filename = "armedskeletons-neoforge-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "cde6119ba53c05dd123e79d2d2c8cab07530ce12"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8655521
+project-id = 1653884

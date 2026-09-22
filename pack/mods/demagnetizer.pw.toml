@@ -1,0 +1,13 @@
+name = "Demagnetizer"
+filename = "demagnetizer-neoforge-0.1.0-beta.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "feaea6487450b9a96075e0e4eab94c523cf5123a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8896229
+project-id = 1698500

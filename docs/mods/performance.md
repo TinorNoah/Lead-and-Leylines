@@ -31,16 +31,16 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Neruina | `neruina-3.3.3+1.21.1-neoforge.jar` | both | Isolates ticking entity crashes. Requires Configurable. |
 | Configurable | `configurable-3.5.2+1.21.1-neoforge.jar` | both | Required by Neruina. |
 | Clumps | `Clumps-neoforge-1.21.1-19.0.0.1.jar` | both | XP orb merge. |
-| AllTheLeaks | `alltheleaks-1.1.12+1.21.1-neoforge.jar` | both | Known leak patches. |
+| AllTheLeaks | `alltheleaks-1.1.13+1.21.1-neoforge.jar` | both | Known leak patches. |
 | Smooth Chunk Save | `smoothchunk-1.21-4.1.jar` | both | Spreads chunk saves. Requires Cupboard. |
 | Cupboard | `cupboard-1.21.1-4.2.jar` | both | Required by Smooth Chunk Save. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | Client-side rendering skip work. |
 | Dynamic FPS | `dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar` | client | Lowers FPS when unfocused. File lists 1.21.1. |
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | Crash dump helper. Dedicated boot log: client-only, no-op on server. |
-| Entity Culling | `entityculling-neoforge-1.10.5-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
+| Entity Culling | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | Official Extra for Sodium 0.8.13 (fog, particles, FPS overlay). Not Chloride. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
-| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. |
+| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer / Nightfall). |
 | More Culling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | Extra block/entity culling next to Entity Culling. Cloth Config required. See [configs.md](configs.md) for Extra leaf overlap. |
 | Cloth Config | `cloth-config-15.0.140-neoforge.jar` | both | More Culling (and optional AsyncParticles) GUI. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | Jigsaw/NBT structure gen. Resourceful Config required. |
@@ -51,13 +51,12 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | Crash-exploit filter; file tags 1.21.1–1.21.4. |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | Async log writes. |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | Keeps server resource packs across rejoins. |
-| Chunk Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.3.jar` | both | Operator pregen. Carbon Config required. |
+| Chunk Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.4.jar` | both | Operator pregen. Carbon Config required. |
 | Carbon Config | `CarbonConfig-Neoforge-1.21.1-2.0.2.1.jar` | both | Chunk Pregenerator dependency. |
-| Iris Flywheel Compat | `iris-flywheel-compat-NeoForge-2.4.0.jar` | client | Create/Flywheel instancing with Iris. |
-| Create Better FPS | `createbetterfps-1.21.1-1.1.4.jar` | client | Create FPS with shader packs. |
+| Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | client | Create FPS with shader packs. Compatible with Colorwheel. |
 | Create: Threaded Trains | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` | both | Train network off the server thread. See [configs.md](configs.md). |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | Quest tick cost. Older than Quests 2101.1.36; see [configs.md](configs.md). |
-| Bye?Pregen! | `byepregen-1.21.1-1.1.2.4.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Complements Chunk Pregenerator, does not replace it. |
+| Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Complements Chunk Pregenerator, does not replace it. |
 | Cerulean | `cerulean-neoforge-1.0.0-1.21.1.jar` | both | Advancement InventoryChangeTrigger. Replaces Achievements Optimizer. TxniLib required. |
 | TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | Cerulean dependency. |
 | Pipez Lag Fix | `pipezlagfix-1.21.1-1.1.0.jar` | both | Item-pipe eco mode when the destination is full. |
@@ -67,6 +66,9 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
 | MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
+| Forgified Fabric API | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | both | Fabric API on NeoForge. Required by the unofficial Voxy NeoForge port. Do not add Sinytra Connector. |
+| Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | both | Server-streamed distant LODs (also fills Xaero's World Map). Needs a Voxy renderer on the client. |
+| Voxy - Make it compatible | `make-it-compatible-voxy-1.1.0.jar` | client | LOD fog/seam patches. Activates Sable vehicle visibility when Aeronautics is in. |
 
 No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
@@ -83,7 +85,10 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Better Block Entities | Dropped | Same draw-cost space as Flerovium. |
 | Vanillin (`flw-vanillin`) | Dropped | Shader-incompatible; Iris is in. |
 | Shader packs (BSL, Complementary, …) | Chosen | Complementary r5.9.3 + BSL v10.1.1 + Euphoria + Colorwheel. |
-| Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. |
+| Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. Replaces Iris Flywheel Compat for Create + Iris. |
+| Iris Flywheel Compat | Dropped | Mixin conflict with Colorwheel (`irisflw` any); Colorwheel author will not fix it. |
+| Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Conflicts with the native `voxy-forged` port. Do not stack. |
+| voxy-forged (GitHub) | Local Prism only | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Build from https://github.com/falling-colud/voxy-forged for the local instance. |
 | Rubidium Extra | Dropped | Embeddium-era. |
 | Noisium | Dropped | Bye?Pregen! lists Noisium as incompatible. |
 | Achievements Optimizer | Dropped | Overlaps Cerulean. |

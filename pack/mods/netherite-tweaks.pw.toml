@@ -1,0 +1,13 @@
+name = "Netherite Tweaks & Fixes"
+filename = "netherite_tweaks_luna-1.2.2-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "12d8d04e98581045332f0caa426c08d8255d916a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7282661
+project-id = 1239001

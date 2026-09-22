@@ -1,0 +1,13 @@
+name = "TACZ Armed Pillagers"
+filename = "pillagerguns-neoforge-1.21.1-1.1.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "315d4b7709710de8f3847229a7930b04d3c6d55f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8454106
+project-id = 1560133

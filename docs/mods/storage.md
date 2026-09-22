@@ -2,12 +2,13 @@
 
 Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** Pipez, Sophisticated/Functional storage, AE2, Refined Storage (Quartz Arsenal, Cable Tiers).
+**Status:** Pipez, Sophisticated/Functional storage, AE2, Refined Storage (Quartz Arsenal, Cable Tiers), Mekanism chemical RS, Demagnetizer.
 
 ## Side (packwiz)
 
 | `side` | Meaning |
 |---|---|
+| `client` | Prism / player instance only. |
 | `both` | Must run in singleplayer’s integrated server **and** on the dedicated server. |
 
 ## Chosen
@@ -21,6 +22,19 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Sophisticated Storage | `sophisticatedstorage-1.21.1-1.5.91.2127.jar` | both | Barrels/chests. World data. |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar` | both | Create recipes for backpacks. |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar` | both | Create recipes for storage. |
+| Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | both | Extra Create recipes for backpacks. Complements the contraption integration. |
+| Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | both | Ars items in backpacks. |
+| Sophisticated Storage: Ars Compat | `arssophisticatedstoragecompat-0.3.0.jar` | both | Ars items in Sophisticated storage. |
+| Sophisticated Tactical Backpacks | `militarybackpack-2.0.0-beta.jar` | both | Tactical backpacks and ammo reload. Beta. World data. |
+| Mekanism + Sophisticated Backpacks Compat | `mekanismsophisticatedbackpacks-neoforge-1.21.1-1.0.1+mc1.21.1-neoforge.jar` | both | Chemical tanks in backpacks. |
+| Sophisticated Item Actions | `sophisticateditemactions-1.21.1-0.5.16.423.jar` | both | Pinned 1.21.1; later files are 1.21.11. |
+| Yukami's Sophisticated Backpack Tab | `yukamibackpacktab-1.21.1-2.2.0-neoforge.jar` | client | Inventory backpack tab. |
+| Sophisticated Inventory Interactions | `sophisticatedinventoryinteractions-1.21.1-0.1.13.218.jar` | both | Inventory transfer helpers. |
+| Sophisticated Chest Optimized | `sophisticated_chest_optimized-1.0.1.jar` | client | Pinned NeoForge 1.0.1; later files are Fabric. |
+| Sophisticated Backpacks / Jade | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | client | Backpack contents on Jade. |
+| Sophisticated Backpacks RS Bridge | `backpackrs-1.0.0+mc1.21.1-neoforge.jar` | both | Quick deposit into RS. |
+| Demagnetizer | `demagnetizer-neoforge-0.1.0-beta.1.jar` | both | Stops item magnet in a radius. Beta. Pinned NeoForge. |
+| Refined Storage - Mekanism Integration | `refinedstorage-mekanism-integration-1.1.1.jar` | both | RS chemicals. |
 | Functional Storage | `functionalstorage-1.21.1-1.5.8.jar` | both | Drawers. World data. Titanium. |
 | Botany Pots | `botanypots-neoforge-1.21.1-21.1.44.jar` | both | Crop pots. World data. Bookshelf + Prickle. |
 | Botany Trees | `botanytrees-neoforge-1.21.1-21.1.7.jar` | both | Tree pots. World data. |
@@ -33,4 +47,4 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 
 ## Considered / held / dropped
 
-RS Addons has no 1.21.1 file (Quartz Arsenal instead). Refined Polymorphism and Polymorphic Energistics: [deferred.md](deferred.md).
+TaCZ / Sophisticated Backpacks ammo (`tacz-1-21-1` modid) does not load with the unofficial TaCZ port (`tacz`). RS Addons has no 1.21.1 file (Quartz Arsenal instead). Refined Polymorphism and Polymorphic Energistics: [deferred.md](deferred.md).

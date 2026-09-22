@@ -1,0 +1,13 @@
+name = "TACZ / Jade Compatibility |Timeless and classics Zero addon"
+filename = "tacz-jade-1.21.1-neoforge-1.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "591e76ea199ef69bdc92effeab218a24c5220b9a"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8703158
+project-id = 1662986

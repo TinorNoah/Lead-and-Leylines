@@ -1,0 +1,13 @@
+name = "Ice and Fire X Epic Fight"
+filename = "iceandfire-ce-epicfight-armor-compat-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "76cee0398da4ad6b23b90d14b4be7380ffa1a32f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8552314
+project-id = 1634414

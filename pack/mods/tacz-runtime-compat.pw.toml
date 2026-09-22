@@ -1,0 +1,13 @@
+name = "[TaCZ] Runtime Compat"
+filename = "taczruntimecompat-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "a66eeba6fd2650a2c2189c7db21679a9c45bb3d6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8152341
+project-id = 1547520

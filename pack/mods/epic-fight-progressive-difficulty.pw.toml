@@ -1,0 +1,13 @@
+name = "Epic Fight Progressive Difficulty"
+filename = "efprogressivediff-1.2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9127b63660ad064c820ae9dd51b5049ce3cdfc4b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8733763
+project-id = 1465641

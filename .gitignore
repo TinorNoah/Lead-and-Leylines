@@ -10,9 +10,9 @@ dist/
 .cache/
 *.sparkprofile
 
-# Local Minecraft / launcher instances
+# Local Minecraft / launcher instances (repo-root only; not datapack data/minecraft/)
 .minecraft/
-minecraft/
+/minecraft/
 instances/
 prismlauncher/
 *.prism

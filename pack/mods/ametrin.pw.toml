@@ -1,0 +1,13 @@
+name = "Ametrin API"
+filename = "ametrin-1.21.1-0.2.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "be316bd98342bfb4681995e771c1a0da14ffef37"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5608814
+project-id = 670599

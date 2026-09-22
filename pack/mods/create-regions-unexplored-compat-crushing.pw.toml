@@ -1,0 +1,13 @@
+name = "Create Regions Unexplored Compat: Crushing"
+filename = "create_ru_compat-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "89afacb558831b62ac968d9034c5c53eb8c9f2c3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7469182
+project-id = 1431845

@@ -2,7 +2,7 @@
 
 Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** Jade + EMI, maps/compasses, FTB extras, advancement/tooltip QoL. Remaining 1.20.1 leftovers: [deferred.md](deferred.md).
+**Status:** Jade + JEI, maps/compasses, FTB extras, advancement/tooltip QoL. Remaining 1.20.1 leftovers: [deferred.md](deferred.md).
 
 ## Side (packwiz)
 
@@ -17,13 +17,29 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 |---|---|---|---|
 | Jade | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | Block/entity tooltip. WTHIT not added. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | Extra Jade integrations (Create, etc.). ARR. |
-| EMI | `emi-1.1.24+1.21.1+neoforge.jar` | client | Recipe viewer. JEI not added. TMRV runs JEI plugins on EMI. |
-| EMI Ores | `emi_ores-1.3+1.21.1+neoforge.jar` | client | Ore generation pages. |
-| EMI Enchanting | `emi_enchanting-0.1.2+1.21+neoforge.jar` | client | Enchantment pages. 2024 file on current EMI. |
-| TooManyRecipeViewers (TMRV) | `toomanyrecipeviewers-0.9.0+mc.21.1.jar` | client | JEI plugins without installing JEI. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | client | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. |
+| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | client | Required by current JEI. |
+| JEI++ (JEI Plus) | `jei_plus_plus-1.0.5-1.21.1.jar` | client | Extra JEI UI. |
+| AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
+| Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
+| JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Faster JEI ingredient filter on world join. ARR. |
+| Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | client | Backpack recipe transfer. |
+| Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | client | Armor trim preview in JEI. 1.1.0 is 26.1.2-only. |
+| Create JEI Compat | `createjeicompat-1.0.3.jar` | client | Paginated sequenced-assembly recipes with 7+ steps. |
+| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | client | Extra JEI helpers. |
+| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | client | Craft from JEI using inventory. ARR. |
+| SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | client | Spectrum recipe pages in JEI. |
+| FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | client | FTB quest/filter pages in JEI. |
+| MekaGenJei | `mekagenjei-1.2.jar` | client | Mekanism Generators JEI pages. |
+| Just Enough Mekanism Multiblocks | `JustEnoughMekanismMultiblocks-1.21.1-7.21.jar` | client | Multiblock overlays in JEI. |
+| Mekanism: Ponders | `mekanism_ponders-1.0.3-1.21.1.jar` | client | Create ponder scenes for Mekanism. |
+| Just Enough TaCZ | `just_enough_tacz-1.2.0.jar` | client | TaCZ recipes in JEI. Berezka's library required. |
+| Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | client | Ore gen and mob drops in JEI. Pinned 1.21.1 NeoForge; later files are Fabric 26.x. |
+| Patchouli | `Patchouli-1.21.1-93-NEOFORGE.jar` | both | Guidebooks. Required by Mekanism Elements. |
+| MekaJadeUpgrades | `mekajadeupgrade-1.3.jar` | both | Mekanism upgrade info on Jade. |
+| TACZ / Jade Compatibility | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | client | Gun info on Jade. |
 | Spice of Life: Carrot Edition | `solcarrot-1.21.1-1.16.6.jar` | both | Food diversity. |
-| EMI QoL Tweaks | `emi-qol-tweaks-neoforge-1.2.jar` | client | EMI convenience. |
-| JEI / REI / EMI WorldGen | `jeiworldgen-neoforge-1.21.1-1.4.5.jar` | client | Worldgen recipe pages. Optional JEI/REI; EMI is enough. |
+| JEI / REI / EMI WorldGen | `jeiworldgen-neoforge-1.21.1-1.4.5.jar` | client | Worldgen recipe pages in JEI. Already in. |
 | DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | both | Sets `playersSleepingPercentage` to 50 on world load. ARR. |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | client | Minimap. |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | client | Full world map. |
@@ -55,7 +71,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | Movement packet speed (singleplayer too). |
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | Faster leaf decay. |
 | WITS | `wits-neoforge-1.3.1.jar` | both | Structure name overlay. |
-| Lootr | `lootr-neoforge-1.21.1-1.11.38.125.jar` | both | Per-player loot chests. World data. |
+| Lootr | `lootr-neoforge-1.21.1-1.11.38.126.jar` | both | Per-player loot chests. World data. |
 | Polymorph | `polymorph-neoforge-1.2.0+1.21.1.jar` | both | Duplicate recipe picker. |
 | Almost Unified | `almostunified-neoforge-1.21.1-1.4.2.jar` | both | Ore unification. |
 | TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | both | Inventory trash slot. Balm. |
@@ -63,21 +79,23 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | FTB Essentials | `ftb-essentials-neoforge-2101.1.10.jar` | both | `/home` and related commands. ARR. |
 | FTB Ultimine | `ftb-ultimine-neoforge-2101.1.15.jar` | both | Vein mine. ARR. |
 | FTB Filter System | `ftb-filter-system-neoforge-21.1.4.jar` | both | Item filters. ARR. |
-| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.11.jar` | both | FTB cross-mod hooks. ARR. |
+| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.12.jar` | both | FTB cross-mod hooks. ARR. |
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | Microsoft auth helper. |
 | Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | both | Join-time modlist check. |
 | Crash Utilities | `crashutilities-9.0.4.jar` | both | Extra crash helpers. |
 | ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | client | Entity texture variants. |
 | EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | client | Entity model variants. |
 | Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | Connected textures. |
+| Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
+| SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | client | Season text on the HUD / Xaero map. Works with Ecliptic Seasons. |
 
 ## Considered / held / dropped
 
 | Mod | Status | Why |
 |---|---|---|
-| EMI Enchants | Chosen | Installed as EMI Enchanting (`936713` / `5733125`). |
-| TooManyRecipeViewers | Dropped | Not in the 1.20.1 pack tree. Incompatible with JEI; EMI already covers recipes. |
-| JEI | Dropped | Pack uses EMI. JEI WorldGen works as an EMI addon without JEI. |
+| EMI / EMI Ores / EMI Enchanting / EMI QoL Tweaks | Dropped | Replaced by JEI so Create and Sophisticated plugins get a real JEI version. |
+| TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
+| JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.447.jar`). |
 | WTHIT | Dropped | Overlaps Jade. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |

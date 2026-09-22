@@ -1,0 +1,13 @@
+name = "Sophisticated Chest Optimized"
+filename = "sophisticated_chest_optimized-1.0.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "ac700b26a553083790a0f6f842acef83b80f1638"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8470473
+project-id = 1609784

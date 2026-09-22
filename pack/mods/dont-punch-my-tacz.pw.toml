@@ -1,0 +1,13 @@
+name = "Don't Punch My TACZ"
+filename = "dont-punch-my-tacz-v0.5.2-1.21.1-neo.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "f36a0b9a087a0ec3df7142fd2a364420789f2680"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8932034
+project-id = 1691793

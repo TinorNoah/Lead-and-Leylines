@@ -1,0 +1,13 @@
+name = "Epic Fight: Curios Compat 2.0"
+filename = "Epic Fight x Curios Compat 2.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3b13ee4590d3765249419c6f320f461cbf1c8f6d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7865987
+project-id = 1389133

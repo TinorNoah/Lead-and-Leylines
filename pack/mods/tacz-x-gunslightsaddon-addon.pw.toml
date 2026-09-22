@@ -1,0 +1,13 @@
+name = "TaCZ x Guns Lights Addon [NEW] 2.9.0"
+filename = "tacz_x_guns_lights_addon-neoforge-1.21.1-2.8.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1afde176d9c9c3df9f681322583dcec7b9516ad8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8784270
+project-id = 1325673

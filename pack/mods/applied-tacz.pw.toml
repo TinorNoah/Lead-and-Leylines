@@ -1,0 +1,13 @@
+name = "Applied TaCZ"
+filename = "AppliedTaCZ-1.21.1-19.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "bbf06ceb28e506ca72fffb1b74c281db9dbf59ce"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8654367
+project-id = 1511859

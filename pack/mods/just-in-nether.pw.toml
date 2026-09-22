@@ -1,0 +1,13 @@
+name = "Just-In NETHER"
+filename = "just_in_nether-1.2.1-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f1d1227f806ae8bb29392e3a204cdeb03d063e37"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8919842
+project-id = 1074911

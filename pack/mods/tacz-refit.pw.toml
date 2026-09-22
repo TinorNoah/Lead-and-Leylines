@@ -1,0 +1,13 @@
+name = "[TaCZ] Refit | Recipe and Stats Editor"
+filename = "tacz_refit-1.21.1-v005.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "3d4364381ccdbe0d63c0500e6a65bc73e9faae1b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8863197
+project-id = 1545968

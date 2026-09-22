@@ -1,0 +1,13 @@
+name = "SpectrumJEI"
+filename = "SpectrumJEI-21.1.11.1+neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "3bc032eb221b0c569d78f4ea647d415bc2559fd3"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8752438
+project-id = 1258607

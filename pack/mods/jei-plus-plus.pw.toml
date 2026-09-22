@@ -1,0 +1,13 @@
+name = "JEI++(JEI Plus)"
+filename = "jei_plus_plus-1.0.5-1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "a6156727f332ff06114a234aa454f8de0b0a41ff"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8870206
+project-id = 1645653

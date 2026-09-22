@@ -1,0 +1,13 @@
+name = "Nether Remastered"
+filename = "nether_remastered-2.6-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d76e40873008b7d269da5ddc08dc7aff494da803"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8145295
+project-id = 872516

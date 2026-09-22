@@ -1,0 +1,13 @@
+name = "EMF Compat: TACZ"
+filename = "emf_compat_tacz_1.21.1_1.0.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "7b0b26f71615745aa3c107d4f8286af66d578da7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8546543
+project-id = 1629329
