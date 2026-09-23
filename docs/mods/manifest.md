@@ -83,7 +83,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | CurseForge 238222 / 8946440 | client | recipes | Recipe viewer. Replaces EMI + TMRV so Polymorph (≥19.52) and Sophisticated (≥19.32) get a real JEI version. | MezzConfig | defaults | 2026-09-22 |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | CurseForge 1689768 / 8932688 | client | library | Required by current JEI. | none | defaults | 2026-09-22 |
 | JEI / REI / EMI WorldGen | `jeiworldgen-neoforge-1.21.1-1.4.5.jar` | CurseForge 1509527 / 8897773 | client | recipes | Worldgen pages in JEI. | JEI | defaults | 2026-09-18 |
-| JEI++ (JEI Plus) | `jei_plus_plus-1.0.5-1.21.1.jar` | CurseForge 1645653 / 8870206 | client | recipes | Extra JEI UI. | JEI | defaults | 2026-09-22 |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | CurseForge 1074338 / 7727898 | client | recipes | Extra AE2 JEI pages. | JEI, AE2 | defaults | 2026-09-22 |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | CurseForge 1230497 / 6359014 | client | recipes | RS recipe transfer. 2.0.x is Minecraft 26.1.2. | JEI, RS | defaults | 2026-09-22 |
 | JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | CurseForge 1570444 / 8872445 | client | recipes | Faster JEI filter on join. ARR. Built against JEI 19.56; pack has 19.57. | JEI | defaults | 2026-09-22 |
@@ -123,9 +122,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Ecliptic Seasons: MultiMod Patch | `Ecliptic-Seasons-MultiMod-Patch-1.21.1-neoforge-0.32.1.jar` | CurseForge 1316748 / 8813347 | both | seasons | Extra mod seasonal hooks. | Ecliptic Seasons | defaults | 2026-09-22 |
 | Serene Seasons API Stub | `ecliptic-seasons-serene-api-bridge-1.21.1-neoforge-10.1.0.3-patch11-1.jar` | CurseForge 1476693 / 8828410 | both | seasons | Lets Serene-Seasons-API mods talk to Ecliptic. Do not add Serene Seasons. | Ecliptic Seasons | defaults | 2026-09-22 |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | CurseForge 690971 / 8778897 | client | HUD | Season on HUD / Xaero. | none (ES optional) | defaults | 2026-09-22 |
-| Ecliptic Seasons : Voxy Compact | `EclipticSeasons-VoxyCompact-1.21.1-neoforge-0.2.14-alpha-v3-1-1.jar` | CurseForge 1519898 / 8937925 | client | seasons | Seasonal colors on Voxy LODs. | Ecliptic Seasons | defaults | 2026-09-22 |
-| Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | CurseForge 1591852 / 8923639 | both | renderer | Server-streamed distant LODs. | none (Voxy client extra) | defaults | 2026-09-22 |
-| Voxy - Make it compatible | `make-it-compatible-voxy-1.1.0.jar` | CurseForge 1606807 / 8938421 | client | renderer | LOD fog/seam; Sable patch if Aeronautics is in. | none | defaults | 2026-09-22 |
+| Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | CurseForge 1591852 / 8923639 | both | renderer | Server-streamed distant LODs. Needs a local Voxy client to matter. | none (Voxy client extra) | defaults | 2026-09-22 |
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | CurseForge 1015118 / 6606621 | both | worldgen | Fortress overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | CurseForge 1015149 / 5812553 | both | worldgen | River bridges. World data. | YUNG's API | defaults | 2026-09-18 |
 | Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | CurseForge 1337167 / 8885814 | both | library | Required by Moog's Mineshafts. | none | defaults | 2026-09-18 |
@@ -247,7 +244,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | CurseForge 268560 / 7904058 | both | tech | Machines. World data. | none | defaults | 2026-09-18 |
 | Refined Storage - Mekanism Integration | `refinedstorage-mekanism-integration-1.1.1.jar` | CurseForge 1230504 / 7163500 | both | storage | RS chemicals. | RS, Mekanism | defaults | 2026-09-22 |
 | Create Aeronautics: Mekanism Compatibility | `create_mekanism_compat-0.1.21.jar` | CurseForge 1536749 / 8299825 | both | tech | Aeronautics + Mekanism. | Aeronautics, Mekanism | defaults | 2026-09-22 |
-| Mekanism Covers | `mekanismcovers-1.3-BETA+1.21.jar` | CurseForge 1119874 / 6071684 | both | tech | Cover Mekanism cables. Beta. World data. | Mekanism | defaults | 2026-09-22 |
 | Mekanism Extras | `mekanism_extras-1.21.1-1.4.1.jar` | CurseForge 1026040 / 8677677 | both | tech | Extra Mekanism machines. World data. | Mekanism | defaults | 2026-09-22 |
 | Patchouli | `Patchouli-1.21.1-93-NEOFORGE.jar` | CurseForge 306770 / 7730942 | both | library | Guidebooks. Required by Mekanism Elements. | none | defaults | 2026-09-23 |
 | Mekanism Elements | `MekanismElements-1.21.1-3.0.16-NeoForge.jar` | CurseForge 1103224 / 8839186 | both | tech | Extra element processing. World data. | Mekanism, Patchouli | defaults | 2026-09-22 |
@@ -303,9 +299,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Farmer's Cutting: BetterNether | `farmers-cutting-betternether-1.21.1-1.0-neoforge.jar` | CurseForge 1114065 / 7649818 | both | farming | Cutting recipes for BetterNether. | FD, BetterNether | defaults | 2026-09-22 |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | CurseForge 658587 / 7389814 | both | library | Required by Epic Fight. Filename says forge; file tags NeoForge 1.21.1. | none | defaults | 2026-09-22 |
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | CurseForge 405076 / 8175609 | both | combat | Souls-like combat. World data. | playerAnimator | defaults | 2026-09-22 |
-| Epic Fight - Invincible Lib | `invincible-21.15.8.2-mc1.21.1-neoforge.jar` | CurseForge 1184379 / 8390375 | both | library | Required by Nightfall. | Epic Fight | defaults | 2026-09-22 |
-| EpicFight-Nightfall | `NightFall-1.21.1-Neoforge-3.4.0.jar` | CurseForge 1307848 / 8573921 | both | combat | Extra Epic Fight skills. | Invincible Lib, AAA Particles | defaults | 2026-09-22 |
-| AAA Particles | `aaa_particles-neoforge-1.21.1-2.2.3.jar` | CurseForge 979809 / 8402817 | both | combat | Effekseer particle effects for Nightfall skills. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
+| AAA Particles | `aaa_particles-neoforge-1.21.1-2.2.3.jar` | CurseForge 979809 / 8402817 | both | combat | Effekseer particle effects. Kept without Nightfall. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
 | Weapons of Miracles | `WeaponsOfMiracles-2.0.178.jar` | CurseForge 918614 / 8829395 | both | combat | Required by EF × Twilight Forest. World data. | Epic Fight | defaults | 2026-09-22 |
 | P1nero's Epic Bow | `p1nero_bow-neoforge1.21.1-21.16.1.0-neoforge.jar` | CurseForge 1338443 / 7922741 | both | combat | Required by EF × Twilight Forest. | Epic Fight | defaults | 2026-09-22 |
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.6-Fix-1.21.1-Neoforge.jar` | CurseForge 1555371 / 8784163 | both | combat | TF animations in Epic Fight. | Weapons of Miracles, Epic Bow | defaults | 2026-09-22 |
@@ -385,21 +379,20 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | Just Enough Items (JEI) | mezz | MIT | CurseForge reference. |
 | MezzConfig | mezz | MIT | CurseForge reference. |
 | JEI / REI / EMI WorldGen | See CurseForge page | See CurseForge page | CurseForge reference. |
-| JEI++, AE2 JEI Integration, Create JEI Compat, Smithing Template Viewer, Sophisticated JEI Index, SpectrumJEI, JEI Stuff | See CurseForge pages | MIT / LGPL-3.0-only / see pages | CurseForge reference. |
+| AE2 JEI Integration, Create JEI Compat, Smithing Template Viewer, Sophisticated JEI Index, SpectrumJEI, JEI Stuff | See CurseForge pages | MIT / LGPL-3.0-only / see pages | CurseForge reference. |
 | JEIOptimizer, JEI QuickCraft | See CurseForge pages | ARR | CurseForge metadata only; do not embed the jars. |
 | Refined Storage - JEI Integration | raoulvdberge | MIT | CurseForge reference. |
 | FTB JEI Extras, MekaGenJei, Just Enough Mekanism Multiblocks, Mekanism Ponders, Just Enough TaCZ, Just Enough Resources | See CurseForge pages | See each page | CurseForge metadata; do not embed ARR jars. |
-| Mekanism addons (Covers, Extras, Elements, RS/Aeronautics/Soph compat, MekaJade) | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
+| Mekanism addons (Extras, Elements, RS/Aeronautics/Soph compat, MekaJade) | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
 | Patchouli | Vazkii | Custom | CurseForge reference. |
 | Sophisticated addons (Ars, tactical, item actions, Yukami, inventory, chest optimized, RS bridge) | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
 | TaCZ unofficial port and addons | See CurseForge pages | Mix of MIT/ARR; unofficial 1.21.1 port | CurseForge metadata; do not embed ARR jars. |
 | Epic Fight, ParCool, Ice and Fire CE, BetterNether New Dawn, Jaden's Nether, Alex's Caves Continued, and related addons | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
-| AAA Particles | chloe_koopa | See CurseForge page | CurseForge reference. Effekseer for Nightfall. |
-| Ecliptic Seasons, Bundles, MultiMod Patch, Serene Seasons API Stub, Voxy Compact | joe_vettek et al. | ARR | CurseForge metadata; do not embed the jars. |
+| AAA Particles | chloe_koopa | See CurseForge page | CurseForge reference. Effekseer; kept without Nightfall. |
+| Ecliptic Seasons, Bundles, MultiMod Patch, Serene Seasons API Stub | joe_vettek et al. | ARR | CurseForge metadata; do not embed the jars. |
 | SeasonHud | IanAnderson | MIT | CurseForge reference. |
 | Forgified Fabric API | Su5eD / Fabric API authors | Apache-2.0 | CurseForge reference. |
 | Voxy Server Side | wish131400 | MIT | CurseForge reference. |
-| Voxy - Make it compatible | falling-colud | MIT | CurseForge reference. |
 | voxy-forged | MCRcortex / falling-colud | ARR (Voxy); personal-use port | Cannot ship. Local Prism build only. |
 | Demagnetizer | See CurseForge page | See CurseForge page | CurseForge metadata. |
 | GeckolibBetterFPS | MoePus | LGPL-3.0-or-later | CurseForge reference. |
@@ -445,6 +438,10 @@ Long lists: [deferred.md](deferred.md).
 
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
+| JEI++ | 2026-09-23 | Client join crash: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, moved in JEI 19.57. Latest file 1.0.5 still targets JEI 19.56. | Only with a JEI 19.57 build. |
+| Epic Fight Nightfall, Invincible Lib | 2026-09-23 | Nightfall reads client VFX config on dedicated servers and crashes when mobs gain effects. AAA Particles stays. | Only with a dedicated-server fix. |
+| Ecliptic Seasons : Voxy Compact, Voxy - Make it compatible | 2026-09-23 | Mixin crash when the unofficial Voxy client jar is not installed. Voxy cannot ship in the pack. | Manual Prism add next to a local `voxy-forged` jar only. |
+| Mekanism Covers | 2026-09-23 | Client join crash: `SodiumBlockRendererMixin.putTranslucentVertexColor` fails on Sodium 0.8.13 (0 targets). Latest file still 1.3-BETA (2025-01-10). Author's `disableAdvancedCoverRendering` config does not skip the mixin. World data. | Only with a Sodium 0.8-compatible build. |
 | Entire 1.20.1 Forge pack | 2026-09-17 | Loader and Minecraft cutover. History is on `forge-1.20.1`. | Research each mod again for 1.21.1 NeoForge. |
 | EMI, EMI Ores, EMI Enchanting, EMI QoL Tweaks, TMRV | 2026-09-22 | TMRV's fake JEI 19.27 failed Polymorph (≥19.52) and Sophisticated (≥19.32). Replaced with real JEI. | No while JEI is the viewer. |
 | Iris Flywheel Compat | 2026-09-22 | Mixin conflict with Colorwheel (`irisflw` any). Colorwheel is the Create + Iris path for Euphoria. | No while Colorwheel is in. |

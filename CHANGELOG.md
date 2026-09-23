@@ -17,11 +17,22 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+### Removed
+
+## [0.1.2] - 2026-09-23
+
+### Fixed
+
 - Epic Fight × Curios Compat is client-only again, so dedicated servers no longer crash loading `ClientCuriosCompat`.
 - Empty-override datapack clears orphan Mekanism More Machine / Extras / ExtendedAE loot tables that pointed at unregistered items (boot parse spam).
 - JEI QuickCraft and JEI Stuff ship on both sides so their required network channels exist on dedicated servers.
 
 ### Removed
+
+- JEI++ (client crash on join: its bookmark mixin still calls JEI's old `mezz.jei.gui.input.IUserInputHandler`, which JEI 19.57 moved).
+- Ecliptic Seasons : Voxy Compact and Voxy - Make it compatible (client crash applying mixins when unofficial Voxy is not installed; Voxy cannot ship in the pack).
+- Epic Fight Nightfall and Invincible Lib (Nightfall reads client VFX config on dedicated servers and crashes when mobs gain effects). AAA Particles stays.
+- Mekanism Covers (beta Sodium mixin fails on join with Sodium 0.8.13; no newer 1.21.1 build).
 
 ## [0.1.1] - 2026-09-23
 

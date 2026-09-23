@@ -19,7 +19,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | Extra Jade integrations (Create, etc.). ARR. |
 | Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | client | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | client | Required by current JEI. |
-| JEI++ (JEI Plus) | `jei_plus_plus-1.0.5-1.21.1.jar` | client | Extra JEI UI. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
 | JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Faster JEI ingredient filter on world join. ARR. |
@@ -96,6 +95,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | EMI / EMI Ores / EMI Enchanting / EMI QoL Tweaks | Dropped | Replaced by JEI so Create and Sophisticated plugins get a real JEI version. |
 | TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
 | JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.447.jar`). |
+| JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |
 | WTHIT | Dropped | Overlaps Jade. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |

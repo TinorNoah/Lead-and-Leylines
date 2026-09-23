@@ -28,12 +28,12 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Farmer's Delight | `FarmersDelight-1.21.1-1.3.4.jar` | both | Kitchen. World data. Corn Delight, My Nether's Delight, Twilight's Flavors, Farmer's Cutting (RU, OTBWG, TF, BetterNether), Spice of Life Carrot. Delightful still has no 1.21.1 NF file. |
 | Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | ME network. World data. GuideME, ExtendedAE, AdvancedAE, AE Additions, AE2 Things (beta), WTLib, Applied Mekanistics, Ars Énergistique (beta). |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. Quartz Arsenal, Cable Tiers, Extra Disks (beta), ExtraStorage. |
-| Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | both | Machines. World data. Generators, Tools, More Machine, Extras, Elements (Patchouli), Covers, RS/Aeronautics/Soph backpacks compat. |
+| Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | both | Machines. World data. Generators, Tools, More Machine, Extras, Elements (Patchouli), RS/Aeronautics/Soph backpacks compat. Covers dropped (Sodium 0.8.13 mixin crash). |
 | Ars Nouveau | `ars_nouveau-1.21.1-5.13.1.jar` | both | Spellcrafting. World data. Additions, Creo, Elemental, Énergistique. |
 | Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | both | Progression magic. World data. Revelationary + Modonomicon. |
 | Alchemistry | `alchemistry-1.21.1-2.4.5.jar` | both | Chemistry. World data. AlchemyLib + ChemLib. |
 | [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar` | both | Guns. World data. Unofficial 1.21.1 port + Pack Upgrader. Not compatible with 1.20.1 TaCZ worlds. Addons: addon, Tactical Breaching, Guns Lights 2.8.2, Curios/Applied ammo boxes, Elite X, Turrets, Aeronautics/Create compat, Bandits, armed pillagers/skeletons/piglins, Applied TaCZ, Refit, Runtime Compat, Blueprints, LesRaisins. Client: JET, EMF Compat, Punchy, Don't Punch My TACZ (NeoForge pin). Immersive Ballistic + Tweaks dropped (Iris vertex-format conflict). |
-| Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | both | Souls-like combat. World data. ParCool bridge, Nightfall (AAA Particles), Twilight Forest / TaCZ first-person / Curios / Ice and Fire armor compat, Bosses' Rise, Progressive Difficulty, CompatLink, client tweaks, FPS optimizer. playerAnimator required. |
+| Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | both | Souls-like combat. World data. ParCool bridge, Twilight Forest / TaCZ first-person / Curios / Ice and Fire armor compat, Bosses' Rise, Progressive Difficulty, CompatLink, client tweaks, FPS optimizer. playerAnimator required. AAA Particles stays (Effekseer). Do not re-add Nightfall (dedicated-server VFX config crash). |
 | ParCool! | `ParCool-1.21.1-4.0.0.5.jar` | both | Parkour movement. Compatibility++ addon in. |
 | IceAndFire Community Edition | `iceandfire-2.1.3.jar` | both | Dragons. World data. Jupiter + Uranus. Not original Ice and Fire `264231` (1.20.1-only). Pixie villages generate in the Nether (`lead-leylines-nether-pixies`). |
 | Alex's Caves Continued | `alexscaves-1.1.1-neoforge+1.21.1.jar` | both | Cave biomes and mobs. World data. Codxlib. |
@@ -49,3 +49,4 @@ Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) a
 | Alex's Caves / Create compat | Held | Parent is now Alex's Caves Continued; Create compat still needs its own 1.21.1 NF file. |
 | Vanillin | Dropped | Shader-incompatible with Iris. |
 | Serene Seasons | Dropped | Ecliptic Seasons plus the Serene Seasons API stub covers this. Do not stack. |
+| Mekanism Covers | Dropped | Beta Sodium mixin fails on join with Sodium 0.8.13; no newer 1.21.1 build. |

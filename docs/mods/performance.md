@@ -40,7 +40,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Entity Culling | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | Official Extra for Sodium 0.8.13 (fog, particles, FPS overlay). Not Chloride. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
-| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer / Nightfall). |
+| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer). |
 | More Culling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | Extra block/entity culling next to Entity Culling. Cloth Config required. See [configs.md](configs.md) for Extra leaf overlap. |
 | Cloth Config | `cloth-config-15.0.140-neoforge.jar` | both | More Culling (and optional AsyncParticles) GUI. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | Jigsaw/NBT structure gen. Resourceful Config required. |
@@ -68,7 +68,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
 | Forgified Fabric API | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | both | Fabric API on NeoForge. Required by the unofficial Voxy NeoForge port. Do not add Sinytra Connector. |
 | Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | both | Server-streamed distant LODs (also fills Xaero's World Map). Needs a Voxy renderer on the client. |
-| Voxy - Make it compatible | `make-it-compatible-voxy-1.1.0.jar` | client | LOD fog/seam patches. Activates Sable vehicle visibility when Aeronautics is in. |
 
 No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
@@ -89,6 +88,8 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Iris Flywheel Compat | Dropped | Mixin conflict with Colorwheel (`irisflw` any); Colorwheel author will not fix it. |
 | Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Conflicts with the native `voxy-forged` port. Do not stack. |
 | voxy-forged (GitHub) | Local Prism only | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Build from https://github.com/falling-colud/voxy-forged for the local instance. |
+| Ecliptic Seasons : Voxy Compact | Dropped from pack | Mixins fail hard without Voxy (`eclipticseasons_voxycompact.mixins.json`). Only add manually next to a local `voxy-forged` jar. |
+| Voxy - Make it compatible | Dropped from pack | Same: Voxy client companion. Only with local `voxy-forged`. |
 | Rubidium Extra | Dropped | Embeddium-era. |
 | Noisium | Dropped | Bye?Pregen! lists Noisium as incompatible. |
 | Achievements Optimizer | Dropped | Overlaps Cerulean. |

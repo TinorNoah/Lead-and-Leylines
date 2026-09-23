@@ -960,11 +960,6 @@ hash = "f051a7b6e878826d9abb5c6c6c5dbc6bbd61ee904364d47556b6c72aadb6e4f5"
 metafile = true
 
 [[files]]
-file = "mods/ecliptic-seasons-voxy-compact.pw.toml"
-hash = "847e4e26873cb3bbf8246e3d7947fdec586e923be0019483ae5cb686ff931178"
-metafile = true
-
-[[files]]
 file = "mods/ecliptic-seasons.pw.toml"
 hash = "904667ad22b35275c79ac643820fdabe7ff68e5c7d9d9c013c1b78b3ddca9243"
 metafile = true
@@ -1025,11 +1020,6 @@ hash = "9efb24c17557c3832142dc40649705b95f5d121521312591a61b96e48c0d6f31"
 metafile = true
 
 [[files]]
-file = "mods/epic-fight-invincible.pw.toml"
-hash = "0e25b685962255329e9a2fbc95483d5e6570b055f3f5e2b75d09a5c5e5e3df1f"
-metafile = true
-
-[[files]]
 file = "mods/epic-fight-mod.pw.toml"
 hash = "1aa2e2f15057fd26009d094fe21aba13ca2523b1a75c8583e544883f90b44e3e"
 metafile = true
@@ -1067,11 +1057,6 @@ metafile = true
 [[files]]
 file = "mods/epic-villages.pw.toml"
 hash = "914e26c7494472574cc5db50a088d066fe37ad3fd45aa979f6f6b91190d1a857"
-metafile = true
-
-[[files]]
-file = "mods/epicfight-nightfall.pw.toml"
-hash = "2abe9c56bc40a99a4e87d1865eab72a731a748959637adf26418824d984d9b2f"
 metafile = true
 
 [[files]]
@@ -1335,11 +1320,6 @@ hash = "767cac8c5fcf8b072571492c3f820e19cbd596e5706f1d28a189b9f494cac388"
 metafile = true
 
 [[files]]
-file = "mods/jei-plus-plus.pw.toml"
-hash = "a666b7036042619ac08cff954e3144818f410e76cee57a906604bf0082dd0166"
-metafile = true
-
-[[files]]
 file = "mods/jei-quickcraft.pw.toml"
 hash = "36e58b628803daa7187a2f3e85e6bcf43500fad87e38c3e07c7e1a1f4f87a735"
 metafile = true
@@ -1462,11 +1442,6 @@ metafile = true
 [[files]]
 file = "mods/mekajadeupgrades.pw.toml"
 hash = "20ba1021bb3047a3c56ffa39b40c97638211934b3fb129b9ee9b66e99387822d"
-metafile = true
-
-[[files]]
-file = "mods/mekanism-covers.pw.toml"
-hash = "1cb48d65c752fa47bf5c4773c93b53b5bdda79ada16740cd73b453ba2c185b36"
 metafile = true
 
 [[files]]
@@ -2042,11 +2017,6 @@ metafile = true
 [[files]]
 file = "mods/variants-and-ventures.pw.toml"
 hash = "4e45d6b3ee689b7bf8a0b30eaf8570c6f9140222e6677d82aaf0b7de6dddf4e7"
-metafile = true
-
-[[files]]
-file = "mods/voxy-make-it-compatible.pw.toml"
-hash = "5e4854816409bf081fa355382c0f1cab03194e2884387a76e00bc37674f3982a"
 metafile = true
 
 [[files]]

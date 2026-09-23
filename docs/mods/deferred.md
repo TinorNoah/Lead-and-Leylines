@@ -72,6 +72,11 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Ecliptic Seasons : Fabricated | Fabric rewrite. Bundles listed it as a required dep; packwiz skipped it on NeoForge. Skip. |
 | Serene Seasons | Replaced by Ecliptic Seasons + Serene Seasons API Stub. Do not stack. |
 | voxy-forged | ARR; no GitHub release jars; cannot go in packwiz. Build from source for the local Prism instance only. |
+| Ecliptic Seasons : Voxy Compact | Crashes without Voxy (`eclipticseasons_voxycompact.mixins.json`). Manual Prism add only next to `voxy-forged`. |
+| Voxy - Make it compatible | Same: Voxy client companion. Manual Prism add only next to `voxy-forged`. |
+| EpicFight-Nightfall (+ Invincible Lib) | Dedicated server crash: `EffekUnits.VFXENABLE` reads client config before load (e.g. Sophisticated Backpacks spawn potions). Do not re-add without a proven dedicated-server fix. AAA Particles stays in the pack. |
+| Mekanism Covers | Client join crash vs Sodium 0.8.13 (`SodiumBlockRendererMixin.putTranslucentVertexColor`, 0 targets). Latest 1.21.1 file is still 1.3-BETA (2025-01-10). Do not re-add until a Sodium 0.8-compatible build ships. |
+| JEI++ (JEI Plus) | Client join crash on JEI 19.57: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, which that JEI build moved to `mezz.jei.common.input`. Latest file is still 1.0.5 for JEI 19.56 (2026-09-13). Do not re-add until a 19.57 build ships. |
 | Loading Backgrounds | Cosmetic + Architectury + ARR. Skip. |
 | Too Many Entities | Client limiter + Architectury + Cloth. Skip. |
 | GPUTape | ToadLib. Modest vs Sodium/Iris/ImmediatelyFast. Skip. |
