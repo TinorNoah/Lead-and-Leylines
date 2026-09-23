@@ -1,6 +1,6 @@
 name = "MezzConfig"
 filename = "mezz_config-1.21.1-neoforge-0.6.3.jar"
-side = "client"
+side = "both"
 
 [download]
 hash-format = "sha1"
