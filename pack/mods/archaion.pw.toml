@@ -1,0 +1,13 @@
+name = "Archaion: Echoes of the Fallen"
+filename = "archaion-1.21.1-1.4.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5e42a64f308d920d389743ac7411f067c3d83fbc"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8784992
+project-id = 1620396

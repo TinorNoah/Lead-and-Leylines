@@ -1,0 +1,1355 @@
+{
+  "frames": [
+    {
+      "id": "ll_sword",
+      "texture": "tooltipoverhaul:textures/overlay/battle_frame.png",
+      "tags": [
+        "minecraft:swords"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA4141",
+        "#8C1919",
+        "#470909"
+      ],
+      "specialEffect": "firebreath",
+      "priority": 100
+    },
+    {
+      "id": "ll_axe",
+      "texture": "tooltipoverhaul:textures/overlay/cavemen_frame.png",
+      "tags": [
+        "minecraft:axes"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#4172EA",
+        "#193A8C",
+        "#091B47"
+      ],
+      "specialEffect": "cinder",
+      "priority": 100
+    },
+    {
+      "id": "ll_pickaxe",
+      "texture": "tooltipoverhaul:textures/overlay/construction_punk_frame.png",
+      "tags": [
+        "minecraft:pickaxes"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#A4EA41",
+        "#5C8C19",
+        "#2D4709"
+      ],
+      "specialEffect": "steel_shining",
+      "priority": 100
+    },
+    {
+      "id": "ll_shovel",
+      "texture": "tooltipoverhaul:textures/overlay/gear_frame.png",
+      "tags": [
+        "minecraft:shovels"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA41D5",
+        "#8C197D",
+        "#47093F"
+      ],
+      "specialEffect": "white_dust",
+      "priority": 100
+    },
+    {
+      "id": "ll_hoe",
+      "texture": "tooltipoverhaul:textures/overlay/garden_frame.png",
+      "tags": [
+        "minecraft:hoes"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EACE",
+        "#198C79",
+        "#09473D"
+      ],
+      "specialEffect": "ripples",
+      "priority": 100
+    },
+    {
+      "id": "ll_bow",
+      "texture": "tooltipoverhaul:textures/overlay/medieval_crossroads_frame.png",
+      "tags": [
+        "c:tools/bow"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA9D41",
+        "#8C5719",
+        "#472A09"
+      ],
+      "specialEffect": "missiles",
+      "priority": 100
+    },
+    {
+      "id": "ll_crossbow",
+      "texture": "tooltipoverhaul:textures/overlay/guns_and_wires_frame.png",
+      "tags": [
+        "c:tools/crossbow"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#6B41EA",
+        "#35198C",
+        "#180947"
+      ],
+      "specialEffect": "lasers",
+      "priority": 100
+    },
+    {
+      "id": "ll_trident",
+      "texture": "tooltipoverhaul:textures/overlay/frost_frame.png",
+      "items": [
+        "minecraft:trident"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#48EA41",
+        "#1E8C19",
+        "#0B4709"
+      ],
+      "specialEffect": "sonar",
+      "priority": 100
+    },
+    {
+      "id": "ll_mace",
+      "texture": "tooltipoverhaul:textures/overlay/king_frame.png",
+      "tags": [
+        "c:tools/mace"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA417A",
+        "#8C193F",
+        "#47091E"
+      ],
+      "specialEffect": "blasts",
+      "priority": 100
+    },
+    {
+      "id": "ll_spear",
+      "texture": "tooltipoverhaul:textures/overlay/skyland_frame.png",
+      "tags": [
+        "c:tools/spear"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41ABEA",
+        "#19618C",
+        "#093047"
+      ],
+      "specialEffect": "speed_lines",
+      "priority": 100
+    },
+    {
+      "id": "ll_shield",
+      "texture": "tooltipoverhaul:textures/overlay/angelical_frame.png",
+      "tags": [
+        "c:tools/shield"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#DCEA41",
+        "#828C19",
+        "#424709"
+      ],
+      "specialEffect": "shield",
+      "priority": 100
+    },
+    {
+      "id": "ll_fishing_rod",
+      "texture": "tooltipoverhaul:textures/overlay/plasma_lamp_frame.png",
+      "tags": [
+        "c:tools/fishing_rod"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#C741EA",
+        "#74198C",
+        "#3A0947"
+      ],
+      "specialEffect": "bubbles",
+      "priority": 100
+    },
+    {
+      "id": "ll_shears",
+      "texture": "tooltipoverhaul:textures/overlay/silver_frame.png",
+      "tags": [
+        "c:tools/shear"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EA95",
+        "#198C52",
+        "#094728"
+      ],
+      "specialEffect": "metal_shining",
+      "priority": 100
+    },
+    {
+      "id": "ll_wrench",
+      "texture": "tooltipoverhaul:textures/overlay/steampunk_frame.png",
+      "tags": [
+        "c:tools/wrench"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA6441",
+        "#8C3119",
+        "#471609"
+      ],
+      "specialEffect": "comets",
+      "priority": 100
+    },
+    {
+      "id": "ll_arrow",
+      "texture": "tooltipoverhaul:textures/overlay/neon_fire_frame.png",
+      "tags": [
+        "minecraft:arrows"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#4150EA",
+        "#19238C",
+        "#090E47"
+      ],
+      "specialEffect": "snowfall",
+      "priority": 100
+    },
+    {
+      "id": "ll_armor",
+      "texture": "tooltipoverhaul:textures/overlay/diamond_frame.png",
+      "tags": [
+        "c:armors"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#81EA41",
+        "#448C19",
+        "#204709"
+      ],
+      "specialEffect": "crystals",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_fruit",
+      "texture": "tooltipoverhaul:textures/overlay/flower_frame.png",
+      "tags": [
+        "c:foods/fruit"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA41B2",
+        "#8C1966",
+        "#470932"
+      ],
+      "specialEffect": "fireflies",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_vegetable",
+      "texture": "tooltipoverhaul:textures/overlay/emerald_frame.png",
+      "tags": [
+        "c:foods/vegetable"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41E3EA",
+        "#19878C",
+        "#094447"
+      ],
+      "specialEffect": "wisps",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_berry",
+      "texture": "tooltipoverhaul:textures/overlay/gummy_bear_frame.png",
+      "tags": [
+        "c:foods/berry"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EABF41",
+        "#8C6F19",
+        "#473709"
+      ],
+      "specialEffect": "storm",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_bread",
+      "texture": "tooltipoverhaul:textures/overlay/amber_frame.png",
+      "tags": [
+        "c:foods/bread"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#8E41EA",
+        "#4D198C",
+        "#250947"
+      ],
+      "specialEffect": "fireworks",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_cookie",
+      "texture": "tooltipoverhaul:textures/overlay/greek_temple_frame.png",
+      "tags": [
+        "c:foods/cookie"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EA5D",
+        "#198C2C",
+        "#094713"
+      ],
+      "specialEffect": "echo",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_raw_meat",
+      "texture": "tooltipoverhaul:textures/overlay/fire_frame.png",
+      "tags": [
+        "c:foods/raw_meat"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA4157",
+        "#8C1927",
+        "#470911"
+      ],
+      "specialEffect": "eruption",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_cooked_meat",
+      "texture": "tooltipoverhaul:textures/overlay/draconic_fire_frame.png",
+      "tags": [
+        "c:foods/cooked_meat"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#4188EA",
+        "#19498C",
+        "#092347"
+      ],
+      "specialEffect": "sunbeams",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_raw_fish",
+      "texture": "tooltipoverhaul:textures/overlay/futuristic_frame.png",
+      "tags": [
+        "c:foods/raw_fish"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#B9EA41",
+        "#6B8C19",
+        "#354709"
+      ],
+      "specialEffect": "galaxy",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_cooked_fish",
+      "texture": "tooltipoverhaul:textures/overlay/amethyst_frame.png",
+      "tags": [
+        "c:foods/cooked_fish"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA41EA",
+        "#8B198C",
+        "#470947"
+      ],
+      "specialEffect": "magic_orbs",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_soup",
+      "texture": "tooltipoverhaul:textures/overlay/pure_alchemy_frame.png",
+      "tags": [
+        "c:foods/soup"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41EAB8",
+        "#198C6A",
+        "#094735"
+      ],
+      "specialEffect": "nebula",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_candy",
+      "texture": "tooltipoverhaul:textures/overlay/guns_and_wires.png",
+      "tags": [
+        "c:foods/candy"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA8741",
+        "#8C4819",
+        "#472209"
+      ],
+      "specialEffect": "prism",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_pie",
+      "texture": "tooltipoverhaul:textures/overlay/nuclear_alarm_frame.png",
+      "tags": [
+        "c:foods/pie"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#5641EA",
+        "#27198C",
+        "#100947"
+      ],
+      "specialEffect": "opal",
+      "priority": 100
+    },
+    {
+      "id": "ll_food_golden",
+      "texture": "tooltipoverhaul:textures/overlay/cataclysm_frame.png",
+      "tags": [
+        "c:foods/golden"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#5EEA41",
+        "#2C8C19",
+        "#134709"
+      ],
+      "specialEffect": "aurora",
+      "priority": 100
+    },
+    {
+      "id": "ll_food",
+      "texture": "tooltipoverhaul:textures/overlay/demonic_frame.png",
+      "tags": [
+        "c:foods"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA418F",
+        "#8C194E",
+        "#470925"
+      ],
+      "specialEffect": "fluorite",
+      "priority": 100
+    },
+    {
+      "id": "ll_potion_bottle",
+      "texture": "tooltipoverhaul:textures/overlay/zombie_brain_frame.png",
+      "tags": [
+        "c:potions/bottle"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41C1EA",
+        "#196F8C",
+        "#093847"
+      ],
+      "specialEffect": "astral",
+      "priority": 100
+    },
+    {
+      "id": "ll_potion",
+      "texture": "tooltipoverhaul:textures/overlay/battle_frame.png",
+      "tags": [
+        "c:potions"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EAE241",
+        "#8C8619",
+        "#474409"
+      ],
+      "specialEffect": "sonar",
+      "priority": 100
+    },
+    {
+      "id": "ll_enchanted_book",
+      "texture": "tooltipoverhaul:textures/overlay/cavemen_frame.png",
+      "items": [
+        "minecraft:enchanted_book"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#B141EA",
+        "#65198C",
+        "#320947"
+      ],
+      "specialEffect": "blasts",
+      "priority": 100
+    },
+    {
+      "id": "ll_coal",
+      "texture": "tooltipoverhaul:textures/overlay/construction_punk_frame.png",
+      "tags": [
+        "c:ores/coal",
+        "c:storage_blocks/coal"
+      ],
+      "items": [
+        "minecraft:coal",
+        "minecraft:charcoal"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41EA80",
+        "#198C43",
+        "#094720"
+      ],
+      "specialEffect": "speed_lines",
+      "priority": 100
+    },
+    {
+      "id": "ll_copper",
+      "texture": "tooltipoverhaul:textures/overlay/gear_frame.png",
+      "tags": [
+        "c:ores/copper",
+        "c:ingots/copper",
+        "c:raw_materials/copper",
+        "c:storage_blocks/copper",
+        "c:storage_blocks/raw_copper"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA4F41",
+        "#8C2219",
+        "#470E09"
+      ],
+      "specialEffect": "shield",
+      "priority": 100
+    },
+    {
+      "id": "ll_iron",
+      "texture": "tooltipoverhaul:textures/overlay/garden_frame.png",
+      "tags": [
+        "c:ores/iron",
+        "c:ingots/iron",
+        "c:nuggets/iron",
+        "c:raw_materials/iron",
+        "c:storage_blocks/iron",
+        "c:storage_blocks/raw_iron"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#4165EA",
+        "#19318C",
+        "#091647"
+      ],
+      "specialEffect": "bubbles",
+      "priority": 100
+    },
+    {
+      "id": "ll_gold",
+      "texture": "tooltipoverhaul:textures/overlay/medieval_crossroads_frame.png",
+      "tags": [
+        "c:ores/gold",
+        "c:ingots/gold",
+        "c:nuggets/gold",
+        "c:raw_materials/gold",
+        "c:storage_blocks/gold",
+        "c:storage_blocks/raw_gold"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#96EA41",
+        "#538C19",
+        "#284709"
+      ],
+      "specialEffect": "metal_shining",
+      "priority": 100
+    },
+    {
+      "id": "ll_diamond",
+      "texture": "tooltipoverhaul:textures/overlay/guns_and_wires_frame.png",
+      "tags": [
+        "c:ores/diamond",
+        "c:gems/diamond",
+        "c:storage_blocks/diamond"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA41C8",
+        "#8C1974",
+        "#47093A"
+      ],
+      "specialEffect": "comets",
+      "priority": 100
+    },
+    {
+      "id": "ll_emerald",
+      "texture": "tooltipoverhaul:textures/overlay/frost_frame.png",
+      "tags": [
+        "c:ores/emerald",
+        "c:gems/emerald",
+        "c:storage_blocks/emerald"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EADB",
+        "#198C82",
+        "#094741"
+      ],
+      "specialEffect": "snowfall",
+      "priority": 100
+    },
+    {
+      "id": "ll_lapis",
+      "texture": "tooltipoverhaul:textures/overlay/king_frame.png",
+      "tags": [
+        "c:ores/lapis",
+        "c:gems/lapis",
+        "c:storage_blocks/lapis"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EAAA41",
+        "#8C6019",
+        "#472F09"
+      ],
+      "specialEffect": "crystals",
+      "priority": 100
+    },
+    {
+      "id": "ll_redstone",
+      "texture": "tooltipoverhaul:textures/overlay/skyland_frame.png",
+      "tags": [
+        "c:ores/redstone",
+        "c:dusts/redstone",
+        "c:storage_blocks/redstone"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#7941EA",
+        "#3E198C",
+        "#1D0947"
+      ],
+      "specialEffect": "fireflies",
+      "priority": 100
+    },
+    {
+      "id": "ll_quartz",
+      "texture": "tooltipoverhaul:textures/overlay/angelical_frame.png",
+      "tags": [
+        "c:ores/quartz",
+        "c:gems/quartz"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41EA47",
+        "#198C1D",
+        "#09470B"
+      ],
+      "specialEffect": "wisps",
+      "priority": 100
+    },
+    {
+      "id": "ll_amethyst",
+      "texture": "tooltipoverhaul:textures/overlay/plasma_lamp_frame.png",
+      "tags": [
+        "c:gems/amethyst"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA416C",
+        "#8C1936",
+        "#470919"
+      ],
+      "specialEffect": "storm",
+      "priority": 100
+    },
+    {
+      "id": "ll_netherite",
+      "texture": "tooltipoverhaul:textures/overlay/silver_frame.png",
+      "tags": [
+        "c:ingots/netherite",
+        "c:storage_blocks/netherite",
+        "c:ores/netherite_scrap"
+      ],
+      "items": [
+        "minecraft:netherite_scrap"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#419EEA",
+        "#19588C",
+        "#092B47"
+      ],
+      "specialEffect": "fireworks",
+      "priority": 100
+    },
+    {
+      "id": "ll_glowstone",
+      "texture": "tooltipoverhaul:textures/overlay/steampunk_frame.png",
+      "tags": [
+        "c:dusts/glowstone"
+      ],
+      "items": [
+        "minecraft:glowstone"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#CFEA41",
+        "#798C19",
+        "#3D4709"
+      ],
+      "specialEffect": "echo",
+      "priority": 100
+    },
+    {
+      "id": "ll_prismarine",
+      "texture": "tooltipoverhaul:textures/overlay/neon_fire_frame.png",
+      "tags": [
+        "c:gems/prismarine"
+      ],
+      "items": [
+        "minecraft:prismarine_crystals",
+        "minecraft:prismarine_shard"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#D441EA",
+        "#7D198C",
+        "#3F0947"
+      ],
+      "specialEffect": "eruption",
+      "priority": 100
+    },
+    {
+      "id": "ll_logs",
+      "texture": "tooltipoverhaul:textures/overlay/diamond_frame.png",
+      "tags": [
+        "minecraft:logs"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EAA3",
+        "#198C5B",
+        "#09472D"
+      ],
+      "specialEffect": "sunbeams",
+      "priority": 100
+    },
+    {
+      "id": "ll_planks",
+      "texture": "tooltipoverhaul:textures/overlay/flower_frame.png",
+      "tags": [
+        "minecraft:planks"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA7141",
+        "#8C3A19",
+        "#471B09"
+      ],
+      "specialEffect": "galaxy",
+      "priority": 100
+    },
+    {
+      "id": "ll_saplings",
+      "texture": "tooltipoverhaul:textures/overlay/emerald_frame.png",
+      "tags": [
+        "minecraft:saplings"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#4142EA",
+        "#19198C",
+        "#090947"
+      ],
+      "specialEffect": "magic_orbs",
+      "priority": 100
+    },
+    {
+      "id": "ll_leaves",
+      "texture": "tooltipoverhaul:textures/overlay/gummy_bear_frame.png",
+      "tags": [
+        "minecraft:leaves"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#74EA41",
+        "#3B8C19",
+        "#1B4709"
+      ],
+      "specialEffect": "nebula",
+      "priority": 100
+    },
+    {
+      "id": "ll_flowers",
+      "texture": "tooltipoverhaul:textures/overlay/amber_frame.png",
+      "tags": [
+        "minecraft:flowers"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA41A5",
+        "#8C195D",
+        "#47092D"
+      ],
+      "specialEffect": "prism",
+      "priority": 100
+    },
+    {
+      "id": "ll_seeds",
+      "texture": "tooltipoverhaul:textures/overlay/greek_temple_frame.png",
+      "tags": [
+        "c:seeds"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#41D6EA",
+        "#197E8C",
+        "#094047"
+      ],
+      "specialEffect": "opal",
+      "priority": 100
+    },
+    {
+      "id": "ll_crops",
+      "texture": "tooltipoverhaul:textures/overlay/fire_frame.png",
+      "tags": [
+        "c:crops"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EACD41",
+        "#8C7819",
+        "#473C09"
+      ],
+      "specialEffect": "aurora",
+      "priority": 100
+    },
+    {
+      "id": "ll_music_discs",
+      "texture": "tooltipoverhaul:textures/overlay/draconic_fire_frame.png",
+      "tags": [
+        "c:music_discs"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#9C41EA",
+        "#56198C",
+        "#2A0947"
+      ],
+      "specialEffect": "fluorite",
+      "priority": 100
+    },
+    {
+      "id": "ll_buckets",
+      "texture": "tooltipoverhaul:textures/overlay/futuristic_frame.png",
+      "tags": [
+        "c:buckets"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#41EA6A",
+        "#198C35",
+        "#094718"
+      ],
+      "specialEffect": "astral",
+      "priority": 100
+    },
+    {
+      "id": "ll_dyes",
+      "texture": "tooltipoverhaul:textures/overlay/amethyst_frame.png",
+      "tags": [
+        "c:dyes"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#EA4149",
+        "#8C191E",
+        "#47090C"
+      ],
+      "specialEffect": "floating_stars",
+      "priority": 100
+    },
+    {
+      "id": "ll_eggs",
+      "texture": "tooltipoverhaul:textures/overlay/pure_alchemy_frame.png",
+      "tags": [
+        "c:eggs"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#417BEA",
+        "#19408C",
+        "#091E47"
+      ],
+      "specialEffect": "stars",
+      "priority": 100
+    },
+    {
+      "id": "ll_boats",
+      "texture": "tooltipoverhaul:textures/overlay/guns_and_wires.png",
+      "tags": [
+        "minecraft:boats",
+        "minecraft:chest_boats"
+      ],
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#ACEA41",
+        "#618C19",
+        "#304709"
+      ],
+      "specialEffect": "rim_light",
+      "priority": 100
+    },
+    {
+      "id": "ll_storage_blocks",
+      "texture": "tooltipoverhaul:textures/overlay/nuclear_alarm_frame.png",
+      "tags": [
+        "c:storage_blocks"
+      ],
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#EA41DD",
+        "#8C1983",
+        "#470942"
+      ],
+      "specialEffect": "trim",
+      "priority": 100
+    },
+    {
+      "id": "ll_ns_create",
+      "texture": "tooltipoverhaul:textures/overlay/cataclysm_frame.png",
+      "namespace": "create",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#C361D8",
+        "#7B318C",
+        "#3E1547"
+      ],
+      "specialEffect": "stars_2",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_mekanism",
+      "texture": "tooltipoverhaul:textures/overlay/demonic_frame.png",
+      "namespace": "mekanism",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#61D8A0",
+        "#318C61",
+        "#15472F"
+      ],
+      "specialEffect": "metal_shining_2",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_ae2",
+      "texture": "tooltipoverhaul:textures/overlay/zombie_brain_frame.png",
+      "namespace": "ae2",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#D87D61",
+        "#8C4631",
+        "#472115"
+      ],
+      "specialEffect": "moondust",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_refinedstorage",
+      "texture": "tooltipoverhaul:textures/overlay/battle_frame.png",
+      "namespace": "refinedstorage",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#6168D8",
+        "#31368C",
+        "#151847"
+      ],
+      "specialEffect": "fireflies_2",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_ars_nouveau",
+      "texture": "tooltipoverhaul:textures/overlay/cavemen_frame.png",
+      "namespace": "ars_nouveau",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#8AD861",
+        "#508C31",
+        "#264715"
+      ],
+      "specialEffect": "searchlights",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_spectrum",
+      "texture": "tooltipoverhaul:textures/overlay/construction_punk_frame.png",
+      "namespace": "spectrum",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#D861AD",
+        "#8C316B",
+        "#471535"
+      ],
+      "specialEffect": "spiral",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_alchemistry",
+      "texture": "tooltipoverhaul:textures/overlay/gear_frame.png",
+      "namespace": "alchemistry",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#61D0D8",
+        "#31858C",
+        "#154347"
+      ],
+      "specialEffect": "firebreath",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_tacz",
+      "texture": "tooltipoverhaul:textures/overlay/garden_frame.png",
+      "namespace": "tacz",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#D8BE61",
+        "#8C7731",
+        "#473C15"
+      ],
+      "specialEffect": "cinder",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_farmersdelight",
+      "texture": "tooltipoverhaul:textures/overlay/medieval_crossroads_frame.png",
+      "namespace": "farmersdelight",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#9B61D8",
+        "#5D318C",
+        "#2D1547"
+      ],
+      "specialEffect": "steel_shining",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_corn_delight",
+      "texture": "tooltipoverhaul:textures/overlay/guns_and_wires_frame.png",
+      "namespace": "corn_delight",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#61D878",
+        "#318C42",
+        "#15471F"
+      ],
+      "specialEffect": "white_dust",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_mynethersdelight",
+      "texture": "tooltipoverhaul:textures/overlay/frost_frame.png",
+      "namespace": "mynethersdelight",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#D8616D",
+        "#8C3139",
+        "#47151A"
+      ],
+      "specialEffect": "ripples",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_twilightdelight",
+      "texture": "tooltipoverhaul:textures/overlay/king_frame.png",
+      "namespace": "twilightdelight",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#618FD8",
+        "#31548C",
+        "#152847"
+      ],
+      "specialEffect": "missiles",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_jadensnetherexpansiondelight",
+      "texture": "tooltipoverhaul:textures/overlay/skyland_frame.png",
+      "namespace": "jadensnetherexpansiondelight",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#B2D861",
+        "#6F8C31",
+        "#374715"
+      ],
+      "specialEffect": "lasers",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_iceandfire",
+      "texture": "tooltipoverhaul:textures/overlay/angelical_frame.png",
+      "namespace": "iceandfire",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#D861D5",
+        "#8C3189",
+        "#471546"
+      ],
+      "specialEffect": "sonar",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_twilightforest",
+      "texture": "tooltipoverhaul:textures/overlay/plasma_lamp_frame.png",
+      "namespace": "twilightforest",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#61D8B9",
+        "#318C74",
+        "#15473A"
+      ],
+      "specialEffect": "blasts",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_alexscaves",
+      "texture": "tooltipoverhaul:textures/overlay/silver_frame.png",
+      "namespace": "alexscaves",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#D89661",
+        "#8C5931",
+        "#472B15"
+      ],
+      "specialEffect": "speed_lines",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_aquamirae",
+      "texture": "tooltipoverhaul:textures/overlay/steampunk_frame.png",
+      "namespace": "aquamirae",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#7361D8",
+        "#3E318C",
+        "#1C1547"
+      ],
+      "specialEffect": "shield",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_olympusmythology",
+      "texture": "tooltipoverhaul:textures/overlay/neon_fire_frame.png",
+      "namespace": "olympusmythology",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#72D861",
+        "#3D8C31",
+        "#1C4715"
+      ],
+      "specialEffect": "bubbles",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_supplementaries",
+      "texture": "tooltipoverhaul:textures/overlay/diamond_frame.png",
+      "namespace": "supplementaries",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#D86195",
+        "#8C3158",
+        "#47152B"
+      ],
+      "specialEffect": "metal_shining",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_sophisticatedbackpacks",
+      "texture": "tooltipoverhaul:textures/overlay/flower_frame.png",
+      "namespace": "sophisticatedbackpacks",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#61B7D8",
+        "#31738C",
+        "#153947"
+      ],
+      "specialEffect": "comets",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_sophisticatedstorage",
+      "texture": "tooltipoverhaul:textures/overlay/emerald_frame.png",
+      "namespace": "sophisticatedstorage",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#D8D661",
+        "#8C8A31",
+        "#474615"
+      ],
+      "specialEffect": "snowfall",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_epicfight",
+      "texture": "tooltipoverhaul:textures/overlay/gummy_bear_frame.png",
+      "namespace": "epicfight",
+      "gradientType": "custom",
+      "borderType": "gradient",
+      "gradientColors": [
+        "#B461D8",
+        "#70318C",
+        "#381547"
+      ],
+      "specialEffect": "crystals",
+      "priority": 50
+    },
+    {
+      "id": "ll_ns_wom",
+      "texture": "tooltipoverhaul:textures/overlay/amber_frame.png",
+      "namespace": "wom",
+      "gradientType": "custom",
+      "borderType": "static",
+      "gradientColors": [
+        "#61D891",
+        "#318C55",
+        "#154729"
+      ],
+      "specialEffect": "fireflies",
+      "priority": 50
+    },
+    {
+      "id": "ll_rarity_common",
+      "texture": "tooltipoverhaul:textures/overlay/silver_frame.png",
+      "rarities": [
+        "common"
+      ],
+      "gradientType": "common",
+      "borderType": "gradient",
+      "specialEffect": "white_dust",
+      "priority": 10
+    },
+    {
+      "id": "ll_rarity_uncommon",
+      "texture": "tooltipoverhaul:textures/overlay/emerald_frame.png",
+      "rarities": [
+        "uncommon"
+      ],
+      "gradientType": "uncommon",
+      "borderType": "gradient",
+      "specialEffect": "fireflies",
+      "priority": 10
+    },
+    {
+      "id": "ll_rarity_rare",
+      "texture": "tooltipoverhaul:textures/overlay/diamond_frame.png",
+      "rarities": [
+        "rare"
+      ],
+      "gradientType": "rare",
+      "borderType": "gradient",
+      "specialEffect": "crystals",
+      "priority": 10
+    },
+    {
+      "id": "ll_rarity_epic",
+      "texture": "tooltipoverhaul:textures/overlay/amethyst_frame.png",
+      "rarities": [
+        "epic"
+      ],
+      "gradientType": "epic",
+      "borderType": "gradient",
+      "specialEffect": "galaxy",
+      "priority": 10
+    }
+  ]
+}

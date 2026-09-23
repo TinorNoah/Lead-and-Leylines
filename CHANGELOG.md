@@ -19,6 +19,30 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.3] - 2026-09-23
+
+### Added
+
+- Archaion (the Ancient Keep) and Olympus! (Greek artifacts, mobs, and structures).
+- Fresh Animations with its extensions, Darkest Ages mob looks, restyled boss bars, and Xaero's map icons.
+- Hold the tag key (semicolon, rebindable) to list an item's tags inside its tooltip.
+- Vic's Point Blank, with Extended Edition, Gun Gale, Half-Life, and Cyberpunk 2077 guns. You can use blocks while holding one, and the shots hit Aeronautics vehicles.
+- MCS2 guns for Timeless and Classics Zero.
+- Daffa's Arsenal, CS+, and Call of Duty Warzone guns for Timeless and Classics Zero.
+
+### Changed
+
+- Item tooltips are framed by item type, and untagged items from each major mod get that mod's frame.
+- Parkour, Epic Fight, and both gun mods no longer share keys. M opens Xaero's world map only. Reload stays R. Epic Fight mode is the tilde key, dodge is C, and lock-on is T. ParCool dodges are left Alt, TaCZ zoom is middle mouse, and prone is Z. Shader reload and the shader toggle are unbound. Ultimine is Tab.
+
+### Fixed
+
+- Epic Fight combat no longer leaves the normal first-person hand floating. Punchy hides its arms while Epic Fight mode is on.
+
+### Removed
+
+- Legendary Tooltips, Simply Tooltips, and Better Advanced Tooltips. Fzzy Config left with Simply Tooltips.
+
 ## [0.1.2] - 2026-09-23
 
 ### Fixed

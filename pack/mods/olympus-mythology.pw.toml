@@ -1,0 +1,13 @@
+name = "Olympus!"
+filename = "olympusmythology-neoforge-1.21.1-1.0.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1a0909d2671c69bf8a30757c4dfe0aa152dfc0f4"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8935108
+project-id = 1667111

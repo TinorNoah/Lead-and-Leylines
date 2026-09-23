@@ -42,6 +42,12 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | both | Sets `playersSleepingPercentage` to 50 on world load. ARR. |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | client | Minimap. |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | client | Full world map. |
+| Icon Xaero's | `Icon Xaero's 1.22.zip` | client | Map icons for Xaero's. CurseForge metadata. Force-enabled by Global Packs. |
+| Enhanced Boss Bars | `[1.6] Enhanced Boss Bars.zip` | client | Boss bar textures. Resource pack format 34. Force-enabled by Global Packs. |
+| Fresh Animations | `FreshAnimations_v1.10.4.zip` | client | Animated mobs. EMF + ETF. Beta 1.10.4. Force-enabled by Global Packs. |
+| Fresh Animations: Extensions | `FA+All_Extensions-v1.8.1.zip` | client | Official Fresh Animations extension bundle. Force-enabled above the base pack. |
+| Darkest Ages Mobs | `Darkest_Ages_Mobs-1.21.1_1.2.1.zip` | client | Medieval mob look. EMF + ETF. Force-enabled by Global Packs. |
+| Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | client | Lets both mob packs apply together. Force-enabled last among the mob packs. |
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate biomes. |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate structures. |
 | Structure Compass | `StructureCompass-1.21.1-4.2.1.jar` | both | Locate structures. |
@@ -55,12 +61,11 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Cosmetic Armor Reworked | `cosmeticarmorreworked-1.21.1-v1-neoforge.jar` | both | Cosmetic armor slots. |
 | Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | both | Elytra in Curios. Caelus. |
 | Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | client | Durability numbers. |
-| Equipment Compare | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | client | Shift-compare gear. Iceberg. |
-| Legendary Tooltips | `LegendaryTooltips-1.21.1-neoforge-1.5.5.jar` | client | Rarity tooltip frames. Iceberg + Prism. |
+| Equipment Compare | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | client | Shift-compare gear. Iceberg. Tooltip Overhaul's own compare key is unbound so the two do not stack. |
 | Item Borders | `ItemBorders-1.21-neoforge-1.2.5.jar` | client | Rarity item borders. Iceberg + Prism. |
+| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.2.jar` | client | Only item-tooltip skin. Frames by type, then mod namespace, then rarity. GPL-3.0-only; CurseForge metadata. |
+| Tag Tooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | client | Hold semicolon to list tags inside the Tooltip Overhaul frame. CC-BY-SA-4.0; modpack use allowed. |
 | Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | client | Colored heart rows. |
-| Simply Tooltips | `SimplyTooltips-neoforge-0.1.5.jar` | client | Extra tooltip lines. Fzzy Config + Kotlin for Forge. |
-| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | both | F3+H registry/tag tooltips. CurseForge 1637623 / 8576077. |
 | Better Advancements | `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | client | Advancement GUI. |
 | Clickable advancements | `clickadv-1.21-3.8.jar` | both | Click toast to open advancement. |
 | Toast Control | `ToastControl-1.21.1-9.0.1.jar` | client | Toast spam filter. Placebo. |
@@ -99,3 +104,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | WTHIT | Dropped | Overlaps Jade. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |
+| Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |
+| The Rename Compat Project | Dropped | Latest zip is resource pack format 42 (1.21.2). 1.21.1 only accepts format 34 unless the pack declares a range that includes 34. |
+| Legendary Tooltips, Simply Tooltips, Better Advanced Tooltips | Dropped | Tooltip Overhaul is the only item-tooltip skin. Fzzy Config left with Simply Tooltips. Kotlin for Forge stays; AE Additions, Better P2P, and Create Ultimine still need it. Tag Tooltips shows tags while its key is held. |

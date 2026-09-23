@@ -1,0 +1,13 @@
+name = "Darkest Ages Mobs"
+filename = "Darkest_Ages_Mobs-1.21.1_1.2.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "cbf507d17480e287668f39f60b8fba04d66cea6f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8865293
+project-id = 1674178

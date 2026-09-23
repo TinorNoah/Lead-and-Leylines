@@ -596,9 +596,14 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
             for info in archive.infolist()
             if not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
         ]
-        if members:
-            print(f"uploading {len(members)} jars to /mods")
-            for info in members:
+        mod_jars = [
+            info
+            for info in members
+            if info.filename.replace("\\", "/").startswith("mods/")
+        ]
+        if mod_jars:
+            print(f"uploading {len(mod_jars)} jars to /mods")
+            for info in mod_jars:
                 name = Path(info.filename.replace("\\", "/")).name
                 data = archive.read(info)
                 print(f"  {name} ({len(data)} bytes)")
@@ -609,13 +614,12 @@ def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
             info
             for info in archive.infolist()
             if not info.is_dir()
-            and (
-                info.filename.replace("\\", "/").startswith("config/")
-                or info.filename.replace("\\", "/").startswith("global_packs/")
+            and info.filename.replace("\\", "/").startswith(
+                ("config/", "global_packs/", "pointblank/", "tacz/")
             )
         ]
         if extras:
-            print(f"uploading {len(extras)} pack configs and datapacks")
+            print(f"uploading {len(extras)} pack configs, datapacks, and gun packs")
             for info in extras:
                 name = info.filename.replace("\\", "/")
                 data = archive.read(info)

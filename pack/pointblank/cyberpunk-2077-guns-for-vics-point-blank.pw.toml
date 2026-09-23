@@ -1,0 +1,13 @@
+name = "Cyberpunk 2077 Guns for Vic's Point Blank"
+filename = "Cyberpunk_2077_Guns_Pack_1.19.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eb06bfb84e2e5424fda835b7a2d2e41815b57372"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8076165
+project-id = 1013546

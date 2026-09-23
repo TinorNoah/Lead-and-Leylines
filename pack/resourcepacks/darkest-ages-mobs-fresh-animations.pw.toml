@@ -1,0 +1,13 @@
+name = "Darkest Ages Mobs + Fresh Animations"
+filename = "Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "f7b119f8803fdc2d46f51a61db1b97df165d6e9d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8865151
+project-id = 1691922

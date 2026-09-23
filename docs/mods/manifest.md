@@ -144,8 +144,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | CurseForge 1106281 / 5741536 | both | QoL | Sets `playersSleepingPercentage` to 50 on load. ARR. | none | defaults | 2026-09-18 |
 | MemGuard | `memguard-1.0.4.jar` | CurseForge 1468440 / 8192435 | both | stability | Lightweight heap-usage log after Create 6 mixin strip. Complements AllTheLeaks. | none | defaults | 2026-09-18 |
 | Balm | `balm-neoforge-1.21.1-21.0.65.jar` | CurseForge 531761 / 8645517 | both | library | Waystones, Crafting Tweaks, TrashSlot, Default Options. | none | defaults | 2026-09-18 |
-| Iceberg | `Iceberg-1.21.1-neoforge-1.3.2.jar` | CurseForge 520110 / 6423863 | both | library | Equipment Compare, Legendary Tooltips, Item Borders. | none | defaults | 2026-09-18 |
-| Prism | `Prism-1.21.1-neoforge-1.0.11.jar` | CurseForge 638111 / 6372979 | both | library | Legendary Tooltips, Item Borders. | none | defaults | 2026-09-18 |
+| Iceberg | `Iceberg-1.21.1-neoforge-1.3.2.jar` | CurseForge 520110 / 6423863 | both | library | Equipment Compare, Item Borders. | none | defaults | 2026-09-18 |
+| Prism | `Prism-1.21.1-neoforge-1.0.11.jar` | CurseForge 638111 / 6372979 | both | library | Item Borders. | none | defaults | 2026-09-18 |
 | Curios API | `curios-neoforge-9.5.1+1.21.1.jar` | CurseForge 309927 / 6529130 | both | library | Elytra Slot (and later Ars). | none | defaults | 2026-09-18 |
 | Caelus API | `caelus-neoforge-7.0.1+1.21.1.jar` | CurseForge 308989 / 5694215 | both | library | Elytra Slot. | none | defaults | 2026-09-18 |
 | Bookshelf | `bookshelf-neoforge-1.21.1-21.1.81.jar` | CurseForge 228525 / 7606240 | both | library | Botany Pots/Trees. | none | defaults | 2026-09-18 |
@@ -155,10 +155,15 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | SuperMartijn642's Config Lib | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | CurseForge 438332 / 5546996 | both | library | Trash Cans, Durability Tooltip. | none | defaults | 2026-09-18 |
 | Titanium | `titanium-1.21-4.0.50.jar` | CurseForge 287342 / 8760562 | both | library | Functional Storage. | none | defaults | 2026-09-18 |
 | Cobweb | `cobweb-neoforge-1.21-1.4.0.jar` | CurseForge 968456 / 7186943 | both | library | Harvest with ease. | none | defaults | 2026-09-18 |
-| Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | CurseForge 1005914 / 8883390 | both | library | Simply Tooltips. | none | defaults | 2026-09-18 |
-| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | CurseForge 351264 / 8335665 | both | library | Simply Tooltips. | none | defaults | 2026-09-18 |
+| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | CurseForge 351264 / 8335665 | both | library | Language provider for AE Additions, Better P2P, and Create Ultimine. | none | defaults | 2026-09-18 |
 | Searchables | `Searchables-neoforge-1.21.1-1.0.2.jar` | CurseForge 858542 / 5831692 | client | library | Controlling. | none | defaults | 2026-09-18 |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | CurseForge 263420 / 8849842 | client | map | Minimap. | none | defaults | 2026-09-18 |
+| Icon Xaero's | `Icon Xaero's 1.22.zip` | CurseForge 888795 / 7748284 | client | map | Xaero's map icons. | Xaero's Minimap | Global Packs required | 2026-09-23 |
+| Enhanced Boss Bars | `[1.6] Enhanced Boss Bars.zip` | CurseForge 580036 / 8240430 | client | HUD | Boss bar textures. ARR; CurseForge metadata. | none | Global Packs required | 2026-09-23 |
+| Fresh Animations | `FreshAnimations_v1.10.4.zip` | CurseForge 453763 / 7670377 | client | renderer | Animated mobs. Beta. ARR; CurseForge metadata. | EMF, ETF | Global Packs required | 2026-09-23 |
+| Fresh Animations: Extensions | `FA+All_Extensions-v1.8.1.zip` | CurseForge 813608 / 7953813 | client | renderer | Official Fresh Animations extensions. ARR; CurseForge metadata. | Fresh Animations | Global Packs required | 2026-09-23 |
+| Darkest Ages Mobs | `Darkest_Ages_Mobs-1.21.1_1.2.1.zip` | CurseForge 1674178 / 8865293 | client | renderer | Medieval mob look. | EMF, ETF | Global Packs required | 2026-09-23 |
+| Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | CurseForge 1691922 / 8865151 | client | renderer | Compat so both mob packs apply. | Fresh Animations, Darkest Ages | Global Packs required | 2026-09-23 |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | CurseForge 317780 / 8849973 | client | map | World map. | none | defaults | 2026-09-18 |
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 252848 / 7892954 | both | utility | Locate biomes. | none | defaults | 2026-09-18 |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 491794 / 7892943 | both | utility | Locate structures. | none | defaults | 2026-09-18 |
@@ -177,11 +182,10 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | CurseForge 317716 / 5778461 | both | QoL | Elytra in Curios. | Curios, Caelus | defaults | 2026-09-18 |
 | Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | CurseForge 511040 / 8830219 | client | QoL | Durability numbers. | SuperMartijn642 Config | defaults | 2026-09-18 |
 | Equipment Compare | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | CurseForge 502561 / 6375501 | client | QoL | Shift-compare gear. | Iceberg | defaults | 2026-09-18 |
-| Legendary Tooltips | `LegendaryTooltips-1.21.1-neoforge-1.5.5.jar` | CurseForge 532127 / 6400660 | client | QoL | Rarity tooltip frames. | Iceberg, Prism | defaults | 2026-09-18 |
 | Item Borders | `ItemBorders-1.21-neoforge-1.2.5.jar` | CurseForge 513769 / 5591010 | client | QoL | Rarity item borders. | Iceberg, Prism | defaults | 2026-09-18 |
+| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.2.jar` | CurseForge 1327508 / 8942013 | client | QoL | Item tooltip frames by type, mod, and rarity. | none | `custom_frames.json` | 2026-09-23 |
+| Tag Tooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | CurseForge 899941 / 6418051 | client | QoL | Hold semicolon to list item tags inside the tooltip. | none | defaults | 2026-09-23 |
 | Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | CurseForge 854213 / 6830399 | client | QoL | Colored heart rows. | none | defaults | 2026-09-18 |
-| Simply Tooltips | `SimplyTooltips-neoforge-0.1.5.jar` | CurseForge 1475755 / 8715141 | client | QoL | Extra item tooltip lines. | Fzzy Config, Kotlin for Forge | defaults | 2026-09-18 |
-| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | CurseForge 1637623 / 8576077 | both | QoL | F3+H tag/component tooltips. Same jar as the Modrinth pin. | none | defaults | 2026-09-18 |
 | Better Advancements | `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | CurseForge 272515 / 5850587 | client | QoL | Advancement GUI. | none | defaults | 2026-09-18 |
 | Clickable advancements | `clickadv-1.21-3.8.jar` | CurseForge 511733 / 5551404 | both | QoL | Click toast to open advancement. | none | defaults | 2026-09-18 |
 | Toast Control | `ToastControl-1.21.1-9.0.1.jar` | CurseForge 271740 / 6751464 | client | QoL | Toast spam filter. | Placebo | defaults | 2026-09-18 |
@@ -276,9 +280,21 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | EMF Compat: TACZ | `emf_compat_tacz_1.21.1_1.0.0.jar` | CurseForge 1629329 / 8546543 | client | renderer | TaCZ entity models with EMF. | EMF Compat Core, TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | CurseForge 1547520 / 8152341 | both | combat | Runtime gun-pack hooks. | TaCZ | defaults | 2026-09-22 |
 | TaCZ: Blueprints Reforged | `tacz-blueprints-reforged-1.0.1.jar` | CurseForge 1589398 / 8331907 | both | combat | Blueprint crafting. World data. | TaCZ | defaults | 2026-09-22 |
-| Punchy! | `punchy-2.8a-neoforge-1.21.1.jar` | CurseForge 1374153 / 8891106 | client | renderer | First-person punch anims. Required by Don't Punch My TACZ. | none | defaults | 2026-09-22 |
+| Punchy! | `punchy-2.8a-neoforge-1.21.1.jar` | CurseForge 1374153 / 8891106 | client | renderer | First-person punch anims. Required by Don't Punch My TACZ. Hidden while Epic Fight mode is on. | none | defaults | 2026-09-22 |
 | Don't Punch My TACZ | `dont-punch-my-tacz-v0.5.2-1.21.1-neo.jar` | CurseForge 1691793 / 8932034 | client | combat | Pinned NeoForge jar, not Fabric. | TaCZ, Punchy | defaults | 2026-09-22 |
+| Epic Fight X Punchy! Neo | `punchy_epicfight_neoforge.jar` | CurseForge 1491729 / 7789794 | client | combat | Hides Punchy first-person arms while Epic Fight mode is active. Client-only. | Punchy, Epic Fight | defaults | 2026-09-23 |
 | [UNOFFICIAL] LesRaisins Tactical Equipements | `LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar` | CurseForge 1432620 / 8745260 | both | combat | Tactical gear pack. | TaCZ | defaults | 2026-09-22 |
+| MCS2 gun pack | `MCS2_Gunpack_v1.0.4_AWP_tacz1.1.4_hotfix3.zip` | CurseForge 1113043 / 6083203 | both | combat | CS2-style guns. Zip in `pack/tacz/` for Pack Upgrader. Addon jar 1285238 is 1.20.1-only and does not load. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
+| Daffa's Arsenal | `daffas_arsenal-3.7.1.1.jar` | CurseForge 1254350 / 8862167 | both | combat | 1.20.1 gun pack in `pack/tacz/`. Forge creative-tab classes stay out of `mods/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
+| CS+ | `csplus-1.3.1-hotfix2.zip` | CurseForge 1623678 / 8867307 | both | combat | Counter-Strike gun pack. CurseForge file is a 1.20.1 jar; local name is `.zip` so Pack Upgrader reads root `gunpack.meta.json`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
+| Call of Duty Warzone gun pack | `[TaCZArcana]Warzone Ver1.1.8B.zip` | CurseForge 1196617 / 8811574 | both | combat | Warzone guns. 1.20.1 zip in `pack/tacz/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
+| Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | CurseForge 961053 / 8855569 | both | combat | Guns beside TaCZ. World data. GeckoLib `[4.9.2,)`. | GeckoLib | defaults | 2026-09-23 |
+| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | client | combat | Use blocks and entities while holding a Point Blank gun. Client-only: config load references `InteractionManager`, which dedicated servers strip. | Point Blank | defaults | 2026-09-23 |
+| Point Blank Aeronautics compat | `pointblank_aero_compat-1.0.0.jar` | CurseForge 1540250 / 8073109 | both | combat | Bullets hit Aeronautics physics objects. | Point Blank, Aeronautics | defaults | 2026-09-23 |
+| Point Blank Extended Edition | `pbext-ext 1.0.zip` | CurseForge 1403532 / 7327102 | both | combat | Official gun pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
+| Point Blank Gun Gale Pack | `ggo-ext 1.0.zip` | CurseForge 1379446 / 7191282 | both | combat | Official Gun Gale pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
+| Point Blank Half Life Pack | `halflife-ext v0.8.zip` | CurseForge 1163691 / 8805527 | both | combat | Official Half-Life pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
+| Cyberpunk 2077 Guns for Vic's Point Blank | `Cyberpunk_2077_Guns_Pack_1.19.zip` | CurseForge 1013546 / 8076165 | both | combat | Community gun pack in `pack/pointblank/`. No third-party distribution. | Point Blank | defaults | 2026-09-23 |
 | Berezka's library | `berezka_api-1.2.9.5-fix-neoforge-1.21.1.jar` | CurseForge 1160598 / 8624655 | both | library | Required by Just Enough TaCZ. | none | defaults | 2026-09-22 |
 | Resourceful Lib | `resourcefullib-neoforge-1.21-3.0.12.jar` | CurseForge 570073 / 5973188 | both | library | Required by Variants&Ventures. Pinned 1.21.1; later files are 1.21.11. | none | defaults | 2026-09-22 |
 | Variants&Ventures | `variantsandventures-neoforge-1.0.26+mc1.21.1.jar` | CurseForge 981139 / 8190696 | both | content | Mob variants. World data. | Resourceful Lib, YACL | defaults | 2026-09-22 |
@@ -300,12 +316,15 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | CurseForge 658587 / 7389814 | both | library | Required by Epic Fight. Filename says forge; file tags NeoForge 1.21.1. | none | defaults | 2026-09-22 |
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | CurseForge 405076 / 8175609 | both | combat | Souls-like combat. World data. | playerAnimator | defaults | 2026-09-22 |
 | AAA Particles | `aaa_particles-neoforge-1.21.1-2.2.3.jar` | CurseForge 979809 / 8402817 | both | combat | Effekseer particle effects. Kept without Nightfall. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
+| Knight Lib | `knightlib-neoforge-1.21.1-2.0.2.jar` | CurseForge 1105855 / 8933799 | both | library | Required by Olympus!. | none | defaults | 2026-09-23 |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.8.jar` | CurseForge 1667111 / 8935108 | both | content | Greek artifacts, mobs, and structures. World data. | Curios, Knight Lib | defaults | 2026-09-23 |
+| Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.3.jar` | CurseForge 1620396 / 8784992 | both | content | Ancient Keep, trial spawners, and a boss. World data. ARR. | AAA Particles | defaults | 2026-09-23 |
 | Weapons of Miracles | `WeaponsOfMiracles-2.0.178.jar` | CurseForge 918614 / 8829395 | both | combat | Required by EF × Twilight Forest. World data. | Epic Fight | defaults | 2026-09-22 |
 | P1nero's Epic Bow | `p1nero_bow-neoforge1.21.1-21.16.1.0-neoforge.jar` | CurseForge 1338443 / 7922741 | both | combat | Required by EF × Twilight Forest. | Epic Fight | defaults | 2026-09-22 |
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.6-Fix-1.21.1-Neoforge.jar` | CurseForge 1555371 / 8784163 | both | combat | TF animations in Epic Fight. | Weapons of Miracles, Epic Bow | defaults | 2026-09-22 |
 | Bosses' Rise | `block_factorys_bosses-2.1.2-neo-1.21.1.jar` | CurseForge 1314084 / 8123167 | both | combat | Extra bosses. World data. | GeckoLib | defaults | 2026-09-22 |
 | Epic Fight: Curios Compat | `Epic Fight x Curios Compat 2.2.jar` | CurseForge 1389133 / 7865987 | client | combat | Curios slots in Epic Fight. Client-only (loads `ClientCuriosCompat`; crashes dedicated server if `both`). | Epic Fight, Curios | defaults | 2026-09-23 |
-| Epic Fight × TacZ First-Person Compat | `epictaczcompat_1.21.1_0.6.0.jar` | CurseForge 1544620 / 8759254 | client | combat | First-person guns with Epic Fight. | Epic Fight, playerAnimator | defaults | 2026-09-22 |
+| Epic Fight × TacZ First-Person Compat | `epictaczcompat_1.21.1_0.6.0.jar` | CurseForge 1544620 / 8759254 | client | combat | First-person guns with Epic Fight. Forces vanilla mode while a TaCZ gun is held. | Epic Fight, playerAnimator | defaults | 2026-09-22 |
 | ParCool! | `ParCool-1.21.1-4.0.0.5.jar` | CurseForge 482378 / 8921237 | both | movement | Parkour. | none | defaults | 2026-09-22 |
 | Epic Fight X Parcool | `epicfightxparcool-1.0.0.jar` | CurseForge 1063523 / 8620103 | both | combat | Parkour during Epic Fight. | Epic Fight, ParCool | defaults | 2026-09-22 |
 | Epic Fight Client Tweaks | `efct-1.0.7.jar` | CurseForge 968141 / 8620068 | client | combat | Client Epic Fight extras. | Epic Fight | defaults | 2026-09-22 |
@@ -318,7 +337,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | CurseForge 1634414 / 8552314 | both | combat | IAF armor animations. | Ice and Fire CE, Epic Fight | defaults | 2026-09-22 |
 | ParCool+ Compatibility++ | `ParCool-CompatibilityAddon-1.21.1-3.4.3.3-1.2.1.jar` | CurseForge 1501234 / 8824743 | both | movement | Extra ParCool compat. | ParCool | defaults | 2026-09-22 |
 
-World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, and Ecliptic Seasons write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
+World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, and Ecliptic Seasons write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
 
 ## Credits / Attribution
 
@@ -387,8 +406,20 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | Patchouli | Vazkii | Custom | CurseForge reference. |
 | Sophisticated addons (Ars, tactical, item actions, Yukami, inventory, chest optimized, RS bridge) | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
 | TaCZ unofficial port and addons | See CurseForge pages | Mix of MIT/ARR; unofficial 1.21.1 port | CurseForge metadata; do not embed ARR jars. |
+| MCS2 gun pack | See CurseForge page | ARR | CurseForge metadata. Zip stays in `pack/tacz/`. Do not ship MCS2Gun-addon 1285238 (encrypted 1.20.1 Forge jar). |
+| Daffa's Arsenal | DaffaTheOne | CC-BY-NC-4.0; inner pack header says all rights reserved | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
+| CS+ | lolokeia | CC BY-NC-4.0 | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
+| Call of Duty Warzone gun pack | See CurseForge page | Not stated in the zip | CurseForge metadata in `pack/tacz/`. Do not embed the zip. |
+| Vic's Point Blank and official packs | vic4games | ARR | CurseForge metadata; do not embed the jars or zips. |
+| Vic's Point Blank - Interaction | Tidloas | MIT | CurseForge reference. |
+| Point Blank Aeronautics compat | Glaiden_ | MIT | CurseForge reference. |
+| Cyberpunk 2077 Guns for Vic's Point Blank | TheScepticBlock | ARR; no third-party distribution | CurseForge metadata only; do not embed the zip. |
 | Epic Fight, ParCool, Ice and Fire CE, BetterNether New Dawn, Jaden's Nether, Alex's Caves Continued, and related addons | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |
 | AAA Particles | chloe_koopa | See CurseForge page | CurseForge reference. Effekseer; kept without Nightfall. |
+| Knight Lib, Olympus! | See CurseForge pages | See CurseForge pages | CurseForge reference. |
+| Archaion: Echoes of the Fallen | RatRod / aquextheseal | ARR | CurseForge metadata only; do not embed the jar. |
+| Fresh Animations, Extensions, Enhanced Boss Bars | See CurseForge pages | ARR; no third-party distribution | CurseForge metadata only; do not embed the zips. |
+| Darkest Ages Mobs and Fresh Animations compat, Icon Xaero's | See CurseForge pages | See CurseForge pages | CurseForge reference. |
 | Ecliptic Seasons, Bundles, MultiMod Patch, Serene Seasons API Stub | joe_vettek et al. | ARR | CurseForge metadata; do not embed the jars. |
 | SeasonHud | IanAnderson | MIT | CurseForge reference. |
 | Forgified Fabric API | Su5eD / Fabric API authors | Apache-2.0 | CurseForge reference. |
@@ -416,7 +447,8 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | DarkSleep | GamerPotion | ARR | CurseForge metadata only; do not embed the jar. |
 | MemGuard | See CurseForge project 1468440 | MIT (in-jar) | CurseForge reference. |
 | Wave 1 QoL/storage/FTB (Xaero, Waystones, Sophisticated, etc.) | See each CurseForge page | Mix of MIT/ARR/LGPL | CurseForge metadata; do not embed ARR jars. |
-| Better Advanced Tooltips | Lat / latvian-dev | MIT | CurseForge reference. |
+| Tooltip Overhaul | Xylonity | GPL-3.0-only | CurseForge metadata only; do not embed the jar. |
+| Tag Tooltips | Jagm | CC-BY-SA-4.0 | Modpack use allowed. CurseForge metadata only; do not embed the jar. |
 
 ## Future / Deferred Mods
 

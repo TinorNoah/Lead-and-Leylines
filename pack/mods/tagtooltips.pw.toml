@@ -1,0 +1,13 @@
+name = "TagTooltips"
+filename = "tagtooltips-neoforge-1.21.1-1.2.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "314fb76a189825fbdc032e18c0ecb714a3992bfd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6418051
+project-id = 899941

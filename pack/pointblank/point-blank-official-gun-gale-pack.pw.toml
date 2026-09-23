@@ -1,0 +1,13 @@
+name = "Point Blank Official || Gun Gale Pack"
+filename = "ggo-ext 1.0.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "02a1799262ad29b34c67d2e4bfd87af8004522aa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7191282
+project-id = 1379446

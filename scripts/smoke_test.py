@@ -183,13 +183,17 @@ def sync_overlay_and_mods(pack: dict[str, str], work: Path) -> None:
     if mods_dir.exists():
         shutil.rmtree(mods_dir)
     mods_dir.mkdir(parents=True)
+    for folder in ("pointblank", "tacz"):
+        extra = work / folder
+        if extra.exists():
+            shutil.rmtree(extra)
 
     with zipfile.ZipFile(paths["server_zip"]) as archive:
         for info in archive.infolist():
             name = info.filename.replace("\\", "/")
             if name.startswith("mods/") and name.lower().endswith(".jar"):
                 archive.extract(info, work)
-            if name.startswith("config/") or name.startswith("global_packs/"):
+            if name.startswith(("pointblank/", "tacz/", "config/", "global_packs/")):
                 archive.extract(info, work)
 
 

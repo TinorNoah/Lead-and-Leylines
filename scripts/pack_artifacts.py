@@ -19,6 +19,8 @@ PACK_DIR = ROOT / "pack"
 MODS_DIR = PACK_DIR / "mods"
 CONFIG_DIR = PACK_DIR / "config"
 GLOBAL_PACKS_DIR = PACK_DIR / "global_packs"
+# Instance folders that are not mods/: Point Blank zips, TaCZ gun-pack jars.
+SIDED_FOLDERS = ("pointblank", "tacz")
 DIST_DIR = ROOT / "dist"
 USER_AGENT = "LeadAndLeylines-deploy/1.0 (packwiz local share)"
 
@@ -105,6 +107,7 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
 
     included = 0
     skipped_client = 0
+    extra = 0
     for toml_path in sorted(MODS_DIR.glob("*.pw.toml")):
         meta = _mod_meta(toml_path)
         if meta["side"] == "client":
@@ -115,6 +118,23 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
         print(f"  server mod {meta['filename']}")
         _download(meta["url"], mods_out / meta["filename"])
         included += 1
+
+    for folder in SIDED_FOLDERS:
+        source = PACK_DIR / folder
+        if not source.is_dir():
+            continue
+        out = work / folder
+        out.mkdir(parents=True, exist_ok=True)
+        for toml_path in sorted(source.glob("*.pw.toml")):
+            meta = _mod_meta(toml_path)
+            if meta["side"] == "client":
+                skipped_client += 1
+                continue
+            if not meta["url"] or not meta["filename"]:
+                raise SystemExit(f"{toml_path.name} is missing download url or filename")
+            print(f"  server {folder}/{meta['filename']}")
+            _download(meta["url"], out / meta["filename"])
+            extra += 1
 
     if CONFIG_DIR.is_dir():
         copied = False
@@ -147,7 +167,8 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
                 archive.write(file_path, file_path.relative_to(work).as_posix())
     shutil.rmtree(work)
     print(
-        f"server mods zip {dest.name} ({included} jars, skipped {skipped_client} client-only)"
+        f"server mods zip {dest.name} ({included} jars, {extra} pack files, "
+        f"skipped {skipped_client} client-only)"
     )
     return dest
 

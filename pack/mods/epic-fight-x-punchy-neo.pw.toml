@@ -1,0 +1,13 @@
+name = "Epic Fight X Punchy! Neo"
+filename = "punchy_epicfight_neoforge.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "9e760f2a8cae172b64fc1343daff29b374187a28"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7789794
+project-id = 1491729

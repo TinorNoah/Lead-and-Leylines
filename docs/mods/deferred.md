@@ -99,7 +99,7 @@ Refined Polymorphism.
 
 ### Combat / guns / movement
 
-Simply Swords; Simply More. Remaining TaCZ content not in the pack: Labs, Daffa's Arsenal, Gucci & Vuitton. Epic Fight, ParCool, Ice and Fire CE, and the unofficial 1.21.1 TaCZ port are in [content.md](content.md).
+Simply Swords; Simply More. Remaining TaCZ content not in the pack: Labs, Gucci & Vuitton. Daffa's Arsenal, CS+, and the Warzone gun pack are in `pack/tacz/`. MCS2Gun-addon `1285238` stays out (1.20.1 encrypted Forge jar; Pack Upgrader does not register it). The MCS2 gun pack zip is in [content.md](content.md). Epic Fight, ParCool, Ice and Fire CE, the unofficial 1.21.1 TaCZ port, and Vic's Point Blank are in [content.md](content.md). Point Blank: Recipe stays out (no 1.21.1 NeoForge CurseForge file; declined). Do not add Pointblank: Jelly beside official Point Blank. Official Doom, Destiny, and Blue Archive packs are not in.
 
 ### Worldgen / structures / dimensions
 

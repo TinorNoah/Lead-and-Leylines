@@ -9,8 +9,12 @@ file = "config/bclib/client.json"
 hash = "da72cfb6d973948564bd4ce3c4ece839fb2f980b8895ee6253fbec9cac6749ec"
 
 [[files]]
+file = "config/defaultoptions/keybindings.txt"
+hash = "a7662986ea1daad46653fc89f65e635f29b444695fd573f674ad771c076d8461"
+
+[[files]]
 file = "config/global_packs.toml"
-hash = "5d75f984b8fbf888392192ca87023c14b92eee1d658d03e6724097f3fb8b9ef7"
+hash = "f8ccc38c922f49433e5308c4ddd1f1fa1e70275e2626b0d703a98edb22041527"
 
 [[files]]
 file = "config/terrablender.toml"
@@ -19,6 +23,14 @@ hash = "f1586faaf5fb90f1f1666e7032e68c1adff348de9aa8c9eda0c41b3b1449cd59"
 [[files]]
 file = "config/terralith.json"
 hash = "76695c5d1f91e4fcb91af7be698599cfae4cdcc821686e853b397ebc08d9e6ec"
+
+[[files]]
+file = "config/tooltipoverhaul/custom_frames.json"
+hash = "23e43682b0a69ffd36da30ce96f1dfbdab1c1ab4afcf385ae5aeda53651344ed"
+
+[[files]]
+file = "config/tooltipoverhaul/tooltipoverhaul.toml"
+hash = "0b04f683f10ef0077492a7cac08beac6b4eb01d2d1e5a34db9f9fd05827dae27"
 
 [[files]]
 file = "config/wover/client.json"
@@ -545,6 +557,11 @@ hash = "e6a467189e205ef2a715773dbafd48a6dadf67fa93d1493c32b694e44108d0a6"
 metafile = true
 
 [[files]]
+file = "mods/archaion.pw.toml"
+hash = "87701d511547ca7c84139a3745b7889787782405c7b390f2f6e52206aa9cf499"
+metafile = true
+
+[[files]]
 file = "mods/architectury-api.pw.toml"
 hash = "657a01a86bbf8617e4726c77df08f708e43a3db12db74b837eebd8eb1d93faae"
 metafile = true
@@ -622,11 +639,6 @@ metafile = true
 [[files]]
 file = "mods/berezka-library.pw.toml"
 hash = "4069a7190732124e301c2ac104a15ee9fceecd646d4ec2d70d65f341567ee578"
-metafile = true
-
-[[files]]
-file = "mods/better-advanced-tooltips.pw.toml"
-hash = "9009bd5cdcdbc6bc47a7fbb203844d9a551accdd796877bdba5233ac14bbd513"
 metafile = true
 
 [[files]]
@@ -1045,6 +1057,11 @@ hash = "f95fd7f21388b4ddd3bd50753a0e2e57c1d701bc038235b9fdcd2d54b231b5ff"
 metafile = true
 
 [[files]]
+file = "mods/epic-fight-x-punchy-neo.pw.toml"
+hash = "1c481344c78bc6a206e4d820024a8b9dc6c4a6a928ce8444792e9b90791ed95b"
+metafile = true
+
+[[files]]
 file = "mods/epic-structures-jungle-temples.pw.toml"
 hash = "42e2e13828c5a32ea84f1f0a757f1fd7972041e661c929591add837036ecfa40"
 metafile = true
@@ -1230,11 +1247,6 @@ hash = "55c21e0159f5509b84d1e1fa42c2e478a3600c43007ede829cad5839aaa1b8da"
 metafile = true
 
 [[files]]
-file = "mods/fzzy-config.pw.toml"
-hash = "c6aba607b0c335394c38e9e20fdff3d27c494d944099e6770629e907eaf7e47e"
-metafile = true
-
-[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "4cf7eb494f48576e28895ee5f362878f95c6bad65372666106140fdae82d0c4c"
 metafile = true
@@ -1370,6 +1382,11 @@ hash = "8157030f52f5706b5f1a67de952fb34f84638a38e7e5ebe8b0d8a801ddd761e4"
 metafile = true
 
 [[files]]
+file = "mods/knight-lib.pw.toml"
+hash = "8b6f1a17cf8886a8fa2e358142993d18f4a55077ccfc1f73502f244e08e3207f"
+metafile = true
+
+[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "1506a3d749a45bc760b3ad57ef1fbb959f0c166b6d1d4955114fd66db7a4855d"
 metafile = true
@@ -1382,11 +1399,6 @@ metafile = true
 [[files]]
 file = "mods/lc2h.pw.toml"
 hash = "83789c3d4d3b3bec2bc014c2244c8b9988ffb675ab8c8e0d76b9f83bd18f48be"
-metafile = true
-
-[[files]]
-file = "mods/legendary-tooltips.pw.toml"
-hash = "0004f14a9f41e930775229f57d22b2df5e09f43b138f8dcedd4429161e00c377"
 metafile = true
 
 [[files]]
@@ -1580,6 +1592,11 @@ hash = "966dde29551f96d0cdec76c659bdec9b5a16c4a102ed053cb5a6e1e36860c75a"
 metafile = true
 
 [[files]]
+file = "mods/olympus-mythology.pw.toml"
+hash = "6819240c55dba5c5c96f542d7f28ad3b5670d9f87473c1ea795a64d94e68e079"
+metafile = true
+
+[[files]]
 file = "mods/p1neros-epic-bow.pw.toml"
 hash = "5b14d1cec3d20fb8a4550d05bcdbfeee7ce0a089060d03f1cd792ea9976f3e90"
 metafile = true
@@ -1627,6 +1644,11 @@ metafile = true
 [[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "5b30dafc9e96471978376ee010cec0ddf592377ac94192c9370cb37973e1e95f"
+metafile = true
+
+[[files]]
+file = "mods/point-blank-aeronautics-compat.pw.toml"
+hash = "b6a6f8449da5972c8734b5655afc808e9560921dc1d59982c1398455bf19dc53"
 metafile = true
 
 [[files]]
@@ -1732,11 +1754,6 @@ metafile = true
 [[files]]
 file = "mods/serene-seasons-api-stub-ecliptic-seasons-bridge.pw.toml"
 hash = "7ffe3d5a3b12fdc781031770dd9e137539f8b1b3a4676d556e9501befb6d89fc"
-metafile = true
-
-[[files]]
-file = "mods/simply-tooltips.pw.toml"
-hash = "8dbe6909ec5d3317d9e2bd70a881853266b2fb96932627a23ee9441114e71338"
 metafile = true
 
 [[files]]
@@ -1955,6 +1972,11 @@ hash = "e61f96962432687b234d35e6005cd94f6feaf7f78623fc8a696bb7daa6b553fc"
 metafile = true
 
 [[files]]
+file = "mods/tagtooltips.pw.toml"
+hash = "d376e2e7977d46464aed9b999541177c7c6b4ae68a815359968977db4c283b9a"
+metafile = true
+
+[[files]]
 file = "mods/terrablender-neoforge.pw.toml"
 hash = "d77e4dc337b6090358c1ef01b0f99a8357e5279443e0e23e511de1be865c01c9"
 metafile = true
@@ -1990,6 +2012,11 @@ hash = "652bc2a41a85b48d4b4e8103b4be578326b42afad1cdcfb8257a114dd713f1bb"
 metafile = true
 
 [[files]]
+file = "mods/tooltip-overhaul.pw.toml"
+hash = "2640874a644185d8042408b71e1b40d8b09b6e9e902fe59c3ff566c7a7f37d64"
+metafile = true
+
+[[files]]
 file = "mods/trash-cans.pw.toml"
 hash = "3cd7280f90ef9e2754cf2b6f45b749d1054c6348873a61044ce808dfe977c15a"
 metafile = true
@@ -2017,6 +2044,16 @@ metafile = true
 [[files]]
 file = "mods/variants-and-ventures.pw.toml"
 hash = "4e45d6b3ee689b7bf8a0b30eaf8570c6f9140222e6677d82aaf0b7de6dddf4e7"
+metafile = true
+
+[[files]]
+file = "mods/vics-point-blank-interaction.pw.toml"
+hash = "f97b5002ebecc55e972ba1393657a75d8d6361bc7fdef3e70c081ae801cc9e7d"
+metafile = true
+
+[[files]]
+file = "mods/vics-point-blank.pw.toml"
+hash = "a7541495700ef058dcd41c2a82d904afeb97678777e6bef6a08dc55851abd5da"
 metafile = true
 
 [[files]]
@@ -2105,6 +2142,56 @@ hash = "895288a3b51192f27cbf3e7e7ebfefd0d31e5660157864a4da40828d5c1dac05"
 metafile = true
 
 [[files]]
+file = "pointblank/cyberpunk-2077-guns-for-vics-point-blank.pw.toml"
+hash = "c7aa3b5de5fcd13fdf3b3bab1f9821addf714bdc3b6ac1a4ec750ecafbc03ae4"
+metafile = true
+
+[[files]]
+file = "pointblank/point-blank-official-extension-half-life-pack.pw.toml"
+hash = "9885e93d182afd058976bdabc6832269659896acffd21063206d9197006cd37a"
+metafile = true
+
+[[files]]
+file = "pointblank/point-blank-official-gun-gale-pack.pw.toml"
+hash = "9be77e8b31fabdd0cce6775649f4daa6eb08a7efc0caaa6cee4e322ad549b7c5"
+metafile = true
+
+[[files]]
+file = "pointblank/point-blank-official-point-blank-extended-edition.pw.toml"
+hash = "d60c5ac95ca6a59bade329a6f5efc8e28f8f0c40d9a286fc35f1728202a7cb6e"
+metafile = true
+
+[[files]]
+file = "resourcepacks/darkest-ages-mobs-fresh-animations.pw.toml"
+hash = "e921c9a155f6d44747138369b399f4a85fc794ec1fc4dd164cd9f82b538dede8"
+metafile = true
+
+[[files]]
+file = "resourcepacks/darkest-ages-mobs.pw.toml"
+hash = "0c4da88118c3dd888a46e638e99686a826fc5088b2133b21dd248f802b7ea79e"
+metafile = true
+
+[[files]]
+file = "resourcepacks/enhanced-boss-bars.pw.toml"
+hash = "fa1fe6c89a4014c8ced29c7c3af18b2ab9974505ef5c6bb4e32c2b5e806ecccb"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations-extensions.pw.toml"
+hash = "293a3b5ee351cacdbda2586b8dce4c4410ad9ef40ccbb89a2a936d46775b20c3"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fresh-animations.pw.toml"
+hash = "9ec67e88b2aff3720a27dde232274a00e65b7ddc5e302a495d18bc41a42028a4"
+metafile = true
+
+[[files]]
+file = "resourcepacks/icon-xaeros.pw.toml"
+hash = "b80477c61cbed92340997fe6270926776c97c53480124b7a8a0bde10e189ad28"
+metafile = true
+
+[[files]]
 file = "shaderpacks/bsl-shaders.pw.toml"
 hash = "b34a8fe09536b089aaab8f625bda116047271e3cb44a7c9f5c2eea7aaadc4f30"
 metafile = true
@@ -2117,6 +2204,26 @@ metafile = true
 [[files]]
 file = "shaderpacks/complementary-unbound.pw.toml"
 hash = "8f8677c6304647ab640f6bf06b7748d1fc5d496b56ea661e31b4d6be899178ac"
+metafile = true
+
+[[files]]
+file = "tacz/tacz-addons-daffas-arsenal.pw.toml"
+hash = "458449c826aec1d372ae84126855627fc1b12cce81cbaeaffc08eadd379669ba"
+metafile = true
+
+[[files]]
+file = "tacz/tacz-call-of-duty-warzone-gunpack.pw.toml"
+hash = "f71065603c5cd1bdf11381f8d22b966aff19c627f790acc9b3970dd868ded668"
+metafile = true
+
+[[files]]
+file = "tacz/tacz-cs.pw.toml"
+hash = "5b4bd1a55b2c872873785c24e29651f72876dd4d9361b7c202571e547acfc226"
+metafile = true
+
+[[files]]
+file = "tacz/tacz-mcs2-gunpack.pw.toml"
+hash = "413c2ebe2d68c6e5a9807069f6bdb5db629046778e3dcbd48713c79b77fdc550"
 metafile = true
 
 [[files]]

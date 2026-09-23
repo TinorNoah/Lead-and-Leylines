@@ -1,0 +1,13 @@
+name = "Point Blank Official || Point Blank Extended Edition Pack"
+filename = "pbext-ext 1.0.zip"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "8c66be5394da97e75cbba4eb615ab91ab5d8fadf"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7327102
+project-id = 1403532
