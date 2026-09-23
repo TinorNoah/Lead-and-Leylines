@@ -13,6 +13,10 @@ file = "config/defaultoptions/keybindings.txt"
 hash = "a7662986ea1daad46653fc89f65e635f29b444695fd573f674ad771c076d8461"
 
 [[files]]
+file = "config/entity_model_features.json"
+hash = "e8a9765227148e6008255c5be7df4068dcd53f3c0aeeeaa49fcf381f2ef9e6df"
+
+[[files]]
 file = "config/global_packs.toml"
 hash = "f8ccc38c922f49433e5308c4ddd1f1fa1e70275e2626b0d703a98edb22041527"
 
@@ -1376,7 +1380,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei.pw.toml"
-hash = "f7b101b53f320c1bda196993b951947b6f6b091f6a755d0acc909988d8dc1525"
+hash = "1852c162a57adb3e790ce993c024626ed62026ff5bd9591fac1be61637deae5c"
 metafile = true
 
 [[files]]
@@ -1531,7 +1535,7 @@ metafile = true
 
 [[files]]
 file = "mods/mezzconfig.pw.toml"
-hash = "a05738f1d54b2300a087062676c7a3fb405d40fcd8ec43419242fdff44373f2e"
+hash = "dd3830820c683676dd7e37cbbe906f3b1449f9d3825d8fbcfd148766c073eae5"
 metafile = true
 
 [[files]]

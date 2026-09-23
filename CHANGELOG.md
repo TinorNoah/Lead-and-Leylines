@@ -15,6 +15,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+### Fixed
+
+### Removed
+
+## [0.1.4] - 2026-09-23
+
+### Changed
+
 - Structures that use normal structure spacing are about twice as far apart.
 - Fire dragons live in the Nether. Dragon skeletons no longer generate on their own; a dragon you kill still leaves a corpse.
 
@@ -22,8 +30,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 - Boot no longer warns about Terralith's disabled andesite, diorite, and granite blobs. Those stones still generate from Terralith.
 - You can join with Vic's Point Blank Interaction installed. The server now has the `pointblank_passthrough:interaction` channel.
-
-### Removed
+- JEI's Move Items button can fill a crafting grid in multiplayer. JEI and MezzConfig ship on both sides.
+- Skeletons and the other Epic Fight mobs render as Epic Fight models again. Fresh Animations and Darkest Ages no longer replace those mobs.
 
 ## [0.1.3] - 2026-09-23
 

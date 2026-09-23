@@ -17,16 +17,16 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 |---|---|---|---|
 | Jade | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | Block/entity tooltip. WTHIT not added. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | Extra Jade integrations (Create, etc.). ARR. |
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | client | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. |
-| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | client | Required by current JEI. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | both | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. Server side is what lets Move Items fill a crafting grid. |
+| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | both | Required by current JEI on both sides. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
 | JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Faster JEI ingredient filter on world join. ARR. |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | client | Backpack recipe transfer. |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | client | Armor trim preview in JEI. 1.1.0 is 26.1.2-only. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | Paginated sequenced-assembly recipes with 7+ steps. |
-| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | client | Extra JEI helpers. |
-| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | client | Craft from JEI using inventory. ARR. |
+| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | both | Extra JEI helpers. Required network channel. |
+| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | both | Craft from JEI using inventory. ARR. Required network channel. |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | client | Spectrum recipe pages in JEI. |
 | FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | client | FTB quest/filter pages in JEI. |
 | MekaGenJei | `mekagenjei-1.2.jar` | client | Mekanism Generators JEI pages. |
