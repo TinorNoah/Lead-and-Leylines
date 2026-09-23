@@ -1331,7 +1331,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei-worldgen.pw.toml"
-hash = "67910d9b385f78567b4d3b3a67fcbdf12a2c61b56b802cb0b0e23d83770b068a"
+hash = "fef5aacc59e4d71092a090ce08be1a13ccd568fdb7acd0bb94bcf76701b1d8b7"
 metafile = true
 
 [[files]]

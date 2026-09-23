@@ -1,6 +1,6 @@
 name = "JEI / REI / EMI WorldGen"
 filename = "jeiworldgen-neoforge-1.21.1-1.4.5.jar"
-side = "client"
+side = "both"
 
 [download]
 hash-format = "sha1"

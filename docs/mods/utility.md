@@ -38,7 +38,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | MekaJadeUpgrades | `mekajadeupgrade-1.3.jar` | both | Mekanism upgrade info on Jade. |
 | TACZ / Jade Compatibility | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | client | Gun info on Jade. |
 | Spice of Life: Carrot Edition | `solcarrot-1.21.1-1.16.6.jar` | both | Food diversity. |
-| JEI / REI / EMI WorldGen | `jeiworldgen-neoforge-1.21.1-1.4.5.jar` | client | Worldgen recipe pages in JEI. Already in. |
+| JEI / REI / EMI WorldGen | `jeiworldgen-neoforge-1.21.1-1.4.5.jar` | both | Worldgen recipe pages in JEI. Server jar supplies the data when you join. |
 | DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | both | Sets `playersSleepingPercentage` to 50 on world load. ARR. |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | client | Minimap. |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | client | Full world map. |
