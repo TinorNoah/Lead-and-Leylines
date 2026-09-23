@@ -1,0 +1,12 @@
+{
+  "type": "neoforge:remove_features",
+  "biomes": "#leadleylines:disabled_stone_hosts",
+  "features": [
+    "minecraft:ore_andesite_lower",
+    "minecraft:ore_andesite_upper",
+    "minecraft:ore_diorite_lower",
+    "minecraft:ore_diorite_upper",
+    "minecraft:ore_granite_lower",
+    "minecraft:ore_granite_upper"
+  ]
+}

@@ -67,11 +67,11 @@ The Pelican test server address is shared with testers out of band (Discord/DM/e
    python scripts/release.py vX.Y.Z --channel alpha
    ```
 
-   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. Default `--channel alpha` is a GitHub prerelease; after Wings, GitHub Actions uploads CurseForge as alpha (client pack + server-mods zip). `--channel release` is GitHub Latest plus CurseForge release. `--dry-run` prints the plan. The script exports zip + mrpack, tags `vX.Y.Z`, creates the GitHub Release, updates the live instance, publishes CurseForge, then syncs local Prism.
+   Default notes are the `## [X.Y.Z]` section in `CHANGELOG.md`. `--changelog FILE` or `--notes "..."` override. Default `--channel alpha` is a GitHub prerelease, then the Pelican server update, then local Prism. CurseForge stays off unless you pass `--curseforge` (GitHub Actions) or `--upload-stores` (this machine). `--channel release` is GitHub Latest. `--dry-run` prints the plan.
 
 Secrets (gitignored `.env` at the repo root; never commit):
 
 - `GH_TOKEN` — GitHub token that can create releases and upload assets
 - Optional local `CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID` (only with `--upload-stores`)
 
-CurseForge tokens and project ids for the default path live as GitHub Actions secrets. A missing `GH_TOKEN` fails the GitHub Release. Copy `.env.example` to `.env`.
+CurseForge tokens and project ids are used only with `--curseforge` (GitHub Actions secrets) or `--upload-stores` (local `.env`). A missing `GH_TOKEN` fails the GitHub Release. The Pelican update still runs. Copy `.env.example` to `.env`.

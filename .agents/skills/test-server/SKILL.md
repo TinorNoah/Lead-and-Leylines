@@ -5,7 +5,7 @@ description: Restart the panel-hosted test server, wait for boot, pull recent co
 
 # Test dedicated server
 
-Until a CurseForge file exists, deploy the current `pack/` tree with `python scripts/deploy_server.py --from-local`. That uses the NeoForge egg and has Wings pull the GitHub Release server-mods zip when `GH_TOKEN` is set, otherwise the local zip. Do not invent a GitHub raw pack.toml fallback. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
+Until a CurseForge file exists, deploy the current `pack/` tree with `python scripts/deploy_server.py --from-local`. That attaches the server-mods zip to the GitHub Release, then has Pelican pull it onto the NeoForge egg. `GH_TOKEN` is required. Do not invent a GitHub raw pack.toml fallback or a direct zip upload. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
 
 ## Steps
 

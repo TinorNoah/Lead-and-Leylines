@@ -17,6 +17,14 @@ file = "config/global_packs.toml"
 hash = "f8ccc38c922f49433e5308c4ddd1f1fa1e70275e2626b0d703a98edb22041527"
 
 [[files]]
+file = "config/iceandfire/iaf-common.json"
+hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
+
+[[files]]
+file = "config/structurify.json"
+hash = "d50100fc3cd4d7a0c58d6bc1441b635c57ee949edfac8371af8c3479fe282dfc"
+
+[[files]]
 file = "config/terrablender.toml"
 hash = "f1586faaf5fb90f1f1666e7032e68c1adff348de9aa8c9eda0c41b3b1449cd59"
 
@@ -49,12 +57,32 @@ file = "global_packs/required_data/lead-leylines-large-climate/pack.mcmeta"
 hash = "28d29b4228da7fdf226b830e5a3c2c25c1fb3efa03c54685c99ac7df04831c04"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-nether-fire-dragons/data/iceandfire/tags/worldgen/biome/structure_gen/fire.json"
+hash = "f67cf7f712c4ab82f69c93b0c534a0997708021ba2bf2d35b64cb21f0d19c223"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-nether-fire-dragons/pack.mcmeta"
+hash = "b1ab0428aa3790666299c0c31d282676fc65afb90384b7e5e433a4a746a60d17"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-nether-pixies/data/iceandfire/tags/worldgen/biome/structure_gen/pixie_village.json"
 hash = "f67cf7f712c4ab82f69c93b0c534a0997708021ba2bf2d35b64cb21f0d19c223"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-nether-pixies/pack.mcmeta"
 hash = "a6f9dc4cf50f90211be18b8081ca96997d1afeb32e8f018b8343ab6c1526d275"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-no-vanilla-stone/data/leadleylines/neoforge/biome_modifier/remove_disabled_stone_blobs.json"
+hash = "23ed2256f95695d3465ee7d6e72654d4d910910efc81ceb400ec26eaac6df5ec"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-no-vanilla-stone/data/leadleylines/tags/worldgen/biome/disabled_stone_hosts.json"
+hash = "fa1c61f0ccd00e34c9219e0052043d3fa1b590f79803259cc01aa4b8c04f8919"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-no-vanilla-stone/pack.mcmeta"
+hash = "1aab859a5bbfe82731ca6fac04fb19c058a7611ecaf16f60ae2809428a47f2b5"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-orphan-loot/data/extendedae/loot_table/blocks/ex_emc_interface.json"
@@ -2048,7 +2076,7 @@ metafile = true
 
 [[files]]
 file = "mods/vics-point-blank-interaction.pw.toml"
-hash = "f97b5002ebecc55e972ba1393657a75d8d6361bc7fdef3e70c081ae801cc9e7d"
+hash = "1ededfe40daf3818040c9d55e8781b8b97e20c51c178b590331a7aa678eb8e02"
 metafile = true
 
 [[files]]

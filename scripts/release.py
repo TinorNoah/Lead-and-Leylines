@@ -3,14 +3,15 @@
 
 Pass a tag. Notes default to the matching ## [X.Y.Z] section in CHANGELOG.md
 (the GitHub Release body). Default --channel alpha creates a GitHub prerelease;
-release is a stable GitHub Latest. After GitHub and the live instance update,
-GitHub Actions uploads client and server packs to CurseForge (alpha for a
-prerelease, release for Latest). Pass --upload-stores to also upload from this
-machine. This script never edits CHANGELOG.md. Do not put server or hosting
-details in the notes; they are not part of the public release.
+release is a stable GitHub Latest. After GitHub, this updates the Pelican
+server, then local Prism. CurseForge is off unless --curseforge (GitHub Actions)
+or --upload-stores (this machine) is set. This script never edits CHANGELOG.md.
+Do not put server or hosting details in the notes; they are not part of the
+public release.
 
   python scripts/release.py v0.0.3 --channel alpha --dry-run
   python scripts/release.py v0.0.3 --channel release
+  python scripts/release.py v0.0.3 --curseforge
   python scripts/release.py v0.0.3 --changelog notes.md
   python scripts/release.py 0.0.3 --notes "- EMI and Create"
   python scripts/release.py v0.0.3 --skip-server
@@ -149,25 +150,15 @@ def read_changelog(args: argparse.Namespace, version: str) -> str:
     return section
 
 
-def store_skip_reason(
-    store: str,
-    *,
-    channel: str,
-    publish_to_stores: bool,
-    skip_flag: bool,
-    flag_name: str,
-    has_creds: bool,
-) -> str | None:
-    if skip_flag:
-        return f"{store}: skip ({flag_name})"
-    if not publish_to_stores:
-        return (
-            f"{store}: skip (GitHub Actions publishes from the tag as {channel}; "
-            "pass --upload-stores to also upload from this machine)"
-        )
-    if not has_creds:
-        return f"{store}: skip (missing token/id)"
-    return None
+def curseforge_plan(args: argparse.Namespace) -> str:
+    """Return 'skip', 'local', or 'actions'."""
+    if args.skip_stores or args.skip_curseforge:
+        return "skip"
+    if args.upload_stores:
+        return "local"
+    if args.curseforge:
+        return "actions"
+    return "skip"
 
 
 def readme_pack_version() -> str | None:
@@ -225,8 +216,9 @@ def assert_ready(pack: dict[str, str], tag: str, version: str, *, dry_run: bool)
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Tag, create a GitHub Release, update the live instance, then "
-            "publish CurseForge from GitHub Actions. Local Prism syncs last."
+            "Tag, create a GitHub Release, update the Pelican server, then "
+            "sync local Prism. CurseForge stays off unless --curseforge or "
+            "--upload-stores is set."
         )
     )
     parser.add_argument("tag", help="release tag (vX.Y.Z or X.Y.Z)")
@@ -246,12 +238,17 @@ def parse_args() -> argparse.Namespace:
         "--channel",
         choices=CHANNELS,
         default="alpha",
-        help="GitHub prerelease vs Latest, and store channel (default alpha)",
+        help="GitHub prerelease vs Latest, and the CurseForge channel when publishing (default alpha)",
+    )
+    parser.add_argument(
+        "--curseforge",
+        action="store_true",
+        help="publish CurseForge from GitHub Actions after the Pelican update",
     )
     parser.add_argument(
         "--upload-stores",
         action="store_true",
-        help="also upload CurseForge from this machine (default: GitHub Actions)",
+        help="upload CurseForge from this machine after the Pelican update",
     )
     parser.add_argument(
         "--dry-run",
@@ -276,7 +273,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--skip-stores",
         action="store_true",
-        help="do not dispatch CurseForge GitHub Actions",
+        help="do not publish CurseForge even if --curseforge or --upload-stores is set",
     )
     return parser.parse_args()
 
@@ -297,22 +294,18 @@ def main() -> None:
     load_secrets()
     args = parse_args()
     tag, version = normalize_tag(args.tag)
-    publish_to_stores = args.upload_stores
-    skip_curseforge = args.skip_curseforge or not publish_to_stores
+    curseforge = curseforge_plan(args)
     changelog = read_changelog(args, version)
     cf_token = env("CURSEFORGE_TOKEN")
     cf_project = env("CURSEFORGE_PROJECT_ID")
     print(f"channel {args.channel}")
-    reason = store_skip_reason(
-        "CurseForge",
-        channel=args.channel,
-        publish_to_stores=publish_to_stores,
-        skip_flag=args.skip_curseforge,
-        flag_name="--skip-curseforge",
-        has_creds=bool(cf_token and cf_project),
-    )
-    if reason:
-        print(reason)
+    if curseforge == "skip":
+        if args.skip_stores:
+            print("CurseForge: skip (--skip-stores)")
+        elif args.skip_curseforge:
+            print("CurseForge: skip (--skip-curseforge)")
+        else:
+            print("CurseForge: skip (pass --curseforge or --upload-stores)")
     print("--- changelog ---")
     print(changelog)
     print("---")
@@ -329,22 +322,23 @@ def main() -> None:
     print(f"tag {tag}")
     print(f"github {owner}/{repo}")
     if not gh_token:
-        print("GitHub: missing GH_TOKEN in .env (stores and GitHub Release skipped)")
+        print(
+            "GitHub: missing GH_TOKEN in .env "
+            "(GitHub Release and the Pelican pull both need it)"
+        )
     if args.skip_server:
-        print("WARNING: skipping dedicated server update (--skip-server)")
+        print("WARNING: skipping Pelican server update (--skip-server)")
     else:
-        print("dedicated server: will update after GitHub (or immediately if GitHub is skipped)")
+        print("Pelican: will pull the GitHub Release server-mods zip after it is attached")
     if args.skip_prism:
         print("WARNING: skipping local Prism sync (--skip-prism)")
     else:
-        print("Prism: will sync the local instance after stores")
-    if args.skip_stores:
-        print("WARNING: skipping CurseForge GitHub Actions (--skip-stores)")
-    elif args.upload_stores:
-        print("CurseForge: will upload from this machine after the live instance")
-    else:
+        print("Prism: will sync the local instance after the Pelican update")
+    if curseforge == "local":
+        print("CurseForge: will upload from this machine after the Pelican update")
+    elif curseforge == "actions":
         print(
-            "CurseForge: GitHub Actions after the live instance "
+            "CurseForge: GitHub Actions after the Pelican update "
             f"(client + server packs as {args.channel})"
         )
     if args.dry_run:
@@ -393,9 +387,9 @@ def main() -> None:
         print(f"github release {url}")
     if not args.skip_server:
         deploy_server()
-    if gh_token and paths and args.upload_stores:
+    if gh_token and paths and curseforge == "local":
         zip_path = paths["client_zip"]
-        if not skip_curseforge and cf_token and cf_project:
+        if cf_token and cf_project:
             parent_id = upload_curseforge(
                 project_id=cf_project,
                 token=cf_token,
@@ -417,9 +411,9 @@ def main() -> None:
                 channel=args.channel,
                 parent_file_id=parent_id,
             )
-        elif not skip_curseforge:
+        else:
             print("CurseForge upload skipped: CURSEFORGE_TOKEN or CURSEFORGE_PROJECT_ID not set")
-    elif gh_token and not args.skip_stores:
+    elif gh_token and curseforge == "actions":
         dispatch_store_publish(
             owner=owner,
             repo=repo,

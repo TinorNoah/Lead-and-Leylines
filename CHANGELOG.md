@@ -15,7 +15,13 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- Structures that use normal structure spacing are about twice as far apart.
+- Fire dragons live in the Nether. Dragon skeletons no longer generate on their own; a dragon you kill still leaves a corpse.
+
 ### Fixed
+
+- Boot no longer warns about Terralith's disabled andesite, diorite, and granite blobs. Those stones still generate from Terralith.
+- You can join with Vic's Point Blank Interaction installed. The server now has the `pointblank_passthrough:interaction` channel.
 
 ### Removed
 

@@ -1,8 +1,9 @@
 name: Publish stores
 
-# Operator machine (release.py): GitHub Release, then Wings, then this job.
-# Uploads client zip + server-mods zip to CurseForge. Default channel is alpha
-# (GitHub prerelease). Do not put Minecraft or loader version literals in this file.
+# Opt-in only. release.py dispatches this when --curseforge is set, after the
+# Pelican update. A normal release does not run this workflow.
+# Uploads client zip + server-mods zip to CurseForge. Do not put Minecraft or
+# loader version literals in this file.
 
 on:
   workflow_dispatch:

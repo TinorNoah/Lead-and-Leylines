@@ -103,7 +103,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Feature Recycler | `Feature-Recycler-neoforge-2.0.0.jar` | CurseForge 1077985 / 5829420 | both | worldgen | Reorders biome features so Terralith + OTBWG do not crash. ARR. | none | defaults | 2026-09-18 |
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | CurseForge 570354 / 7078265 | both | worldgen | End overhaul. World data. | none | defaults | 2026-09-18 |
 | YACL | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | CurseForge 667299 / 7437845 | both | library | Required by Structurify. | none | defaults | 2026-09-18 |
-| Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | CurseForge 1087551 / 8888619 | both | worldgen | Structure spacing. | YACL | defaults | 2026-09-18 |
+| Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | CurseForge 1087551 / 8888619 | both | worldgen | Structure spacing. | YACL | global multiplier 2.0 | 2026-09-18 |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | CurseForge 442508 / 7150870 | both | worldgen | Extra dungeons. World data. ARR. | none | defaults | 2026-09-18 |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | CurseForge 953637 / 7142896 | both | worldgen | Ocean structures. World data. ARR. | none | defaults | 2026-09-18 |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | Modrinth DOB2l4oJ / AKcIMUil | both | library | Required by Awesome Dungeon. No CF NeoForge 1.21.1 file. ARR. | none | defaults | 2026-09-18 |
@@ -289,7 +289,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | CS+ | `csplus-1.3.1-hotfix2.zip` | CurseForge 1623678 / 8867307 | both | combat | Counter-Strike gun pack. CurseForge file is a 1.20.1 jar; local name is `.zip` so Pack Upgrader reads root `gunpack.meta.json`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | Call of Duty Warzone gun pack | `[TaCZArcana]Warzone Ver1.1.8B.zip` | CurseForge 1196617 / 8811574 | both | combat | Warzone guns. 1.20.1 zip in `pack/tacz/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | CurseForge 961053 / 8855569 | both | combat | Guns beside TaCZ. World data. GeckoLib `[4.9.2,)`. | GeckoLib | defaults | 2026-09-23 |
-| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | client | combat | Use blocks and entities while holding a Point Blank gun. Client-only: config load references `InteractionManager`, which dedicated servers strip. | Point Blank | defaults | 2026-09-23 |
+| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | both | combat | Use blocks and entities while holding a Point Blank gun. The client requires network channel `pointblank_passthrough:interaction` on the server. | Point Blank | defaults | 2026-09-23 |
 | Point Blank Aeronautics compat | `pointblank_aero_compat-1.0.0.jar` | CurseForge 1540250 / 8073109 | both | combat | Bullets hit Aeronautics physics objects. | Point Blank, Aeronautics | defaults | 2026-09-23 |
 | Point Blank Extended Edition | `pbext-ext 1.0.zip` | CurseForge 1403532 / 7327102 | both | combat | Official gun pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
 | Point Blank Gun Gale Pack | `ggo-ext 1.0.zip` | CurseForge 1379446 / 7191282 | both | combat | Official Gun Gale pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
@@ -333,7 +333,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | CompatLink | `compatlink-neoforge-1.3.0.jar` | CurseForge 1607536 / 8872766 | both | combat | Epic Fight weapon bridges. | none | defaults | 2026-09-22 |
 | Jupiter | `jupiter-2.3.7-1.21.1-neoforge.jar` | CurseForge 1072905 / 7738312 | both | library | Required by Ice and Fire CE. | none | defaults | 2026-09-22 |
 | Uranus | `uranus-3.0-beta.1.jar` | CurseForge 1010827 / 8682870 | both | library | Required by Ice and Fire CE. Beta. | none | defaults | 2026-09-22 |
-| IceAndFire Community Edition | `iceandfire-2.1.3.jar` | CurseForge 1040076 / 8929517 | both | content | Dragons. World data. Required so Ice and Fire × Epic Fight does anything. | Jupiter, Uranus | defaults | 2026-09-22 |
+| IceAndFire Community Edition | `iceandfire-2.1.3.jar` | CurseForge 1040076 / 8929517 | both | content | Dragons. World data. Required so Ice and Fire × Epic Fight does anything. | Jupiter, Uranus | no worldgen skeletons; fire dragons in the Nether | 2026-09-22 |
 | Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | CurseForge 1634414 / 8552314 | both | combat | IAF armor animations. | Ice and Fire CE, Epic Fight | defaults | 2026-09-22 |
 | ParCool+ Compatibility++ | `ParCool-CompatibilityAddon-1.21.1-3.4.3.3-1.2.1.jar` | CurseForge 1501234 / 8824743 | both | movement | Extra ParCool compat. | ParCool | defaults | 2026-09-22 |
 

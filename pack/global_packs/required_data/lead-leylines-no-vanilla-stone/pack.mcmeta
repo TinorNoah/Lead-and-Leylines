@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Lead and Leylines: remove Terralith's disabled vanilla andesite, diorite, and granite blobs from biome feature lists."
+  }
+}

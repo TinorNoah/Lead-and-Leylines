@@ -10,30 +10,30 @@ Modrinth publishing was discontinued. CurseForge is the sole public store target
 
 `python scripts/release.py vX.Y.Z --channel <channel>` (default `alpha`).
 
-| Channel | GitHub | CurseForge | Live instance | Local Prism |
+| Channel | GitHub | CurseForge | Pelican | Local Prism |
 |---|---|---|---|---|
-| `alpha` | Prerelease | Alpha (client zip + server zip) | Updated first | Synced last |
-| `beta` | Prerelease | Beta (client zip + server zip) | Updated first | Synced last |
-| `release` | Official Latest | Release (client zip + server zip) | Updated first | Synced last |
+| `alpha` | Prerelease | Off unless requested | Updated | Synced last |
+| `beta` | Prerelease | Off unless requested | Updated | Synced last |
+| `release` | Official Latest | Off unless requested | Updated | Synced last |
 
-Default is `alpha`: GitHub prerelease, then Wings updates the live instance, then CurseForge **alpha**. `--channel release` is GitHub Latest, then Wings, then CurseForge **release**. Use `--channel release` only for a public stable.
+Default is `alpha`: GitHub prerelease, then the Pelican server update, then local Prism. CurseForge is not part of that path. Pass `--curseforge` to publish the store from GitHub Actions after Pelican, or `--upload-stores` to upload from this machine. `--channel release` is GitHub Latest. Use it for a public stable, and add `--curseforge` only when a store release was asked for.
 
 Order on the operator machine:
 
 1. Tag and GitHub Release (client zip, mrpack, server-mods zip)
-2. Wings pull / live instance update (unless `--skip-server`)
-3. GitHub Actions publishes CurseForge (unless `--skip-stores`)
+2. Pelican pulls that server-mods zip from the GitHub Release (`deploy_server.py --from-local`, unless `--skip-server`)
+3. CurseForge only with `--curseforge` or `--upload-stores`
 4. Local Prism sync (unless `--skip-prism`)
 
-Missing `GH_TOKEN` skips GitHub tagging and store dispatch, but still updates the live instance and Prism.
+Missing `GH_TOKEN` skips the GitHub Release. Pelican cannot update without that zip, so the server step fails until the token is set. Prism still runs only after a successful server step.
 
-GitHub Actions (`.github/workflows/publish-stores.yml`) is **dispatched after** the live instance update. It does not run on tag push. It uploads the GitHub Release client zip as the CurseForge primary file and the server-mods zip as an additional file of that primary. `workflow_dispatch` can retry an existing tag. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`). Do not hardcode those values.
+GitHub Actions (`.github/workflows/publish-stores.yml`) runs only when `release.py` is given `--curseforge`, or from a manual `workflow_dispatch`. It does not run on tag push. It uploads the GitHub Release client zip as the CurseForge primary file and the server-mods zip as an additional file of that primary. Store tokens and project ids live as GitHub Actions secrets (`CURSEFORGE_TOKEN`, `CURSEFORGE_PROJECT_ID`). Do not hardcode those values.
 
-`--upload-stores` also uploads from the operator machine when `.env` has those values (same client + server files, after Wings). `--skip-curseforge` still skips CurseForge.
+`--upload-stores` uploads from the operator machine when `.env` has those values (same client + server files, after Pelican). `--skip-curseforge` and `--skip-stores` still skip CurseForge even if a publish flag is set.
 
 ### No promoting a prerelease tag
 
-Do not later re-upload the same `X.Y.Z` as a store `release`. A GitHub prerelease stays alpha/beta on the stores. Cut a **new** version tag and run `release.py --channel release` for an official GitHub Latest plus store release.
+Do not later re-upload the same `X.Y.Z` as a store `release`. A GitHub prerelease stays alpha/beta on the stores. Cut a **new** version tag and run `release.py --channel release --curseforge` for an official GitHub Latest plus store release.
 
 ## Changelog
 

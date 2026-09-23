@@ -8,7 +8,7 @@ The panel URL and Wings node FQDN live in gitignored `.env` (`PANEL_URL`, `PANEL
 
 Copy [`.env.example`](../.env.example) to `.env` at the repo root. Set `PANEL_API_KEY` to an Application API key (`papp_`). Do not commit `.env`.
 
-Until a CurseForge file exists, the default path is **GitHub + NeoForge**: export the current `pack/` tree, attach `Lead-and-Leylines-<version>-server-mods.zip` to the matching GitHub Release (`vX.Y.Z`) when `GH_TOKEN` is set, switch the test server to the **NeoForge** egg, install NeoForge from `pack.toml`, and have Wings **pull** that public Release asset (or take the local zip if GitHub is skipped). Do not fall back to a GitHub raw `pack.toml` URL. Pin `NEOFORGE_VERSION` to the exact loader version in `pack.toml`; do not install from `MC_VERSION` alone.
+Until a CurseForge file exists, the default path is **GitHub, then Pelican**: export the current `pack/` tree, attach `Lead-and-Leylines-<version>-server-mods.zip` to the matching GitHub Release (`vX.Y.Z`), switch the test server to the **NeoForge** egg, install NeoForge from `pack.toml`, and have Pelican **pull** that Release asset. `GH_TOKEN` is required. Do not write the zip straight to the server, and do not fall back to a GitHub raw `pack.toml` URL. Pin `NEOFORGE_VERSION` to the exact loader version in `pack.toml`; do not install from `MC_VERSION` alone.
 
 ```text
 python scripts/release.py vX.Y.Z --changelog notes.md
@@ -20,9 +20,9 @@ python scripts/deploy_server.py --dry-run
 python scripts/deploy_server.py --curseforge --reinstall --wait 600
 ```
 
-`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this test server, then CurseForge (client + server packs), then local Prism. Default is GitHub prerelease + store alpha. `--channel release` is official on GitHub and CurseForge. Every release updates the test server unless you pass `--skip-server`, stores unless `--skip-stores`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the test server.
+`python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this Pelican server, then local Prism. CurseForge stays off unless you pass `--curseforge` or `--upload-stores`. Default `--channel alpha` is a GitHub prerelease. `--channel release` is GitHub Latest. Every release updates this server unless you pass `--skip-server`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the server.
 
-`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release when `GH_TOKEN` is set, and has Wings pull it (or writes the local zip if GitHub is skipped). Reinstalling the NeoForge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/NeoForge versions are unchanged.
+`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release, and has Pelican pull it. Reinstalling the NeoForge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/NeoForge versions are unchanged.
 
 The script owns the server as `PANEL_OWNER_USERNAME` and uses a free allocation on that node. Java image is chosen from the egg from `pack/pack.toml` Minecraft version.
 

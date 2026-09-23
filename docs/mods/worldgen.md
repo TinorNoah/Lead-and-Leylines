@@ -15,11 +15,11 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Oh The Trees You'll Grow | `Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.2.jar` | both | Required by Oh The Biomes We've Gone. |
 | Oh The Biomes We've Gone | `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar` | both | Overworld biomes. World data. WTHIT optional; not added. |
 | Regions Unexplored | `regions-unexplored-0.6.2-neoforge-21.1.jar` | both | Overworld biomes. World data. Eight placed features that used `lithostitched:in_structure` are overridden. |
-| Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | Loads `pack/global_packs/required_data/` (RU Lithostitched override, large-climate noise, Nether pixie villages). Unpacked folders (`.packwizignore` blocks `*.zip`). ARR. |
+| Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | Loads `pack/global_packs/required_data/` (RU Lithostitched override, large-climate noise, Nether pixie villages, disabled vanilla stone blobs). Unpacked folders (`.packwizignore` blocks `*.zip`). ARR. |
 | Terralith | `Terralith_1.21.x_v2.6.2.jar` | both | Overworld biome datapack-as-mod. World data. Requires Lithostitched. Stacks with OTBWG and RU. Built-in terrain slabs off (Countered's Terrain Slabs is the pack's slab layer). |
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | both | End overhaul. World data. Stardust companion to Terralith. |
 | YACL | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | Required by Structurify. |
-| Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | both | Structure spacing/control. Better Sparse Structures skipped (same job). |
+| Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | both | Structure spacing/control. Global multiplier 2.0. Better Sparse Structures skipped (same job). |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | both | Extra overworld dungeons. World data. ARR. |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | both | Ocean structures. World data. ARR. |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | both | Required by Awesome Dungeon. No CurseForge NeoForge 1.21.1 file; Modrinth pin. ARR. |
@@ -55,6 +55,10 @@ Twilight Forest: [content.md](content.md).
 `lead-leylines-large-climate/` overrides Terralith's Overworld temperature and vegetation noise to vanilla Large Biomes scale (and slightly damps high-frequency octaves). That stretches individual biomes inside a TerraBlender region without switching to the Large Biomes world type. New world required. See [configs.md](configs.md).
 
 `lead-leylines-nether-pixies/` moves Ice and Fire pixie villages from overworld forests into `#minecraft:is_nether`. Pixies only spawn from those villages. New Nether chunks required.
+
+`lead-leylines-nether-fire-dragons/` moves fire dragon roosts and caves onto the same Nether biome tags. Ice and lightning dragons stay on their own biome tags. Structurify's global multiplier is 2.0, so those structure sets are also twice as far apart in new chunks.
+
+`lead-leylines-no-vanilla-stone/` removes Terralith's disabled `ore_andesite_*`, `ore_diorite_*`, and `ore_granite_*` placed features from overworld biome lists (plus Alex's Caves and Ars Elemental biomes that still reference them). Those features already had `count: 0`. JEI WorldGen logged `Missing data` because the stub is a count plus a rarity filter and has no height range. Stone still comes from Terralith. Keep `vanilla_stone_gen` off.
 
 The RU override datapack drops `minecraft:block_predicate_filter` steps whose predicate is `lithostitched:in_structure` from: `patch/ash_vents_inferno`, `patch/cave_bioshrooms`, `patch/dropleaf`, `patch/prismarite_cluster`, `patch/redstone_bud`, `patch/redstone_bulb`, `special/lava_fall`, `special/overworld_lava_delta`. That predicate joins a chunk future on a worldgen worker; dedicated servers freeze in `ChunkMap.processUnloads` / “Saving worlds”. Reproduced **without** ByePregen or C2ME (ATM10 Aeronautics dump, Lithostitched beta4; same predicate in beta6). Those eight features can now place inside structures.
 

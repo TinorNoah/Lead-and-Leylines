@@ -548,16 +548,15 @@ def origin_owner_repo() -> tuple[str, str]:
     return parts[0], parts[1]
 
 
-def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str | None:
+def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str:
     token = env("GH_TOKEN") or env("GITHUB_TOKEN")
     if not zip_path.is_file():
         raise SystemExit(f"server mods zip missing: {zip_path}")
     if not token:
-        print(
-            "GH_TOKEN unset: Wings will take the local server-mods zip "
-            "(set GH_TOKEN in .env to attach it to the GitHub Release)"
+        raise SystemExit(
+            "GH_TOKEN is required. Attach the server-mods zip to the GitHub Release "
+            "before Pelican can pull it. Set GH_TOKEN in .env and never commit it."
         )
-        return None
     owner, repo = origin_owner_repo()
     tag = f"v{pack['pack_version']}"
     print(f"attaching {zip_path.name} to GitHub Release {tag}")
@@ -587,44 +586,6 @@ def zip_has_jars(zip_path: Path) -> bool:
             not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
             for info in archive.infolist()
         )
-
-
-def upload_jars_from_zip(wings: Wings, zip_path: Path) -> None:
-    with zipfile.ZipFile(zip_path) as archive:
-        members = [
-            info
-            for info in archive.infolist()
-            if not info.is_dir() and info.filename.replace("\\", "/").endswith(".jar")
-        ]
-        mod_jars = [
-            info
-            for info in members
-            if info.filename.replace("\\", "/").startswith("mods/")
-        ]
-        if mod_jars:
-            print(f"uploading {len(mod_jars)} jars to /mods")
-            for info in mod_jars:
-                name = Path(info.filename.replace("\\", "/")).name
-                data = archive.read(info)
-                print(f"  {name} ({len(data)} bytes)")
-                wings.write_file(f"/mods/{name}", data, "application/java-archive")
-        else:
-            print(f"{zip_path.name} contains no jars (empty pack)")
-        extras = [
-            info
-            for info in archive.infolist()
-            if not info.is_dir()
-            and info.filename.replace("\\", "/").startswith(
-                ("config/", "global_packs/", "pointblank/", "tacz/")
-            )
-        ]
-        if extras:
-            print(f"uploading {len(extras)} pack configs, datapacks, and gun packs")
-            for info in extras:
-                name = info.filename.replace("\\", "/")
-                data = archive.read(info)
-                print(f"  {name} ({len(data)} bytes)")
-                wings.write_file(f"/{name}", data, "application/octet-stream")
 
 
 def write_overlay(wings: Wings) -> None:
@@ -657,9 +618,7 @@ def _follow_redirects(url: str) -> str:
         return final
 
 
-def upload_server_mods(
-    wings: Wings, zip_path: Path, *, github_url: str | None = None
-) -> None:
+def upload_server_mods(wings: Wings, zip_path: Path, *, github_url: str) -> None:
     print("stopping server so mods can be replaced")
     wings.power("stop", ignore_http=(409,))
     try:
@@ -673,47 +632,27 @@ def upload_server_mods(
         except SystemExit:
             print("  continuing; Wings did not report offline")
 
-    print(f"uploading {zip_path.name} ({zip_path.stat().st_size} bytes)")
+    print(f"server mods zip on GitHub ({zip_path.stat().st_size} bytes)")
     expect_jars = zip_has_jars(zip_path)
     wings.delete(["mods", SERVER_MODS_REMOTE])
-    pulled = False
-    if github_url:
-        print("Wings pulling server mods zip from the GitHub Release")
-        try:
-            wings.pull_file(
-                github_url,
-                root="/",
-                file_name=SERVER_MODS_REMOTE,
-                foreground=True,
-                timeout=1800,
-            )
-            pulled = True
-        except SystemExit as exc:
-            print(f"  GitHub pull failed ({exc}); retrying via redirect target")
-            try:
-                wings.pull_file(
-                    _follow_redirects(github_url),
-                    root="/",
-                    file_name=SERVER_MODS_REMOTE,
-                    foreground=True,
-                    timeout=1800,
-                )
-                pulled = True
-            except SystemExit as exc2:
-                print(f"  GitHub pull failed ({exc2}); trying a local zip write")
-    if not pulled:
-        try:
-            wings.write_file(
-                f"/{SERVER_MODS_REMOTE}", zip_path.read_bytes(), "application/zip"
-            )
-        except SystemExit as exc:
-            print(f"  zip upload failed ({exc}); uploading jars individually")
-            wings.delete([SERVER_MODS_REMOTE])
-            upload_jars_from_zip(wings, zip_path)
-            wings.write_file("/eula.txt", b"eula=true\n", "text/plain")
-            write_overlay(wings)
-            _wait_for_mods(wings, expect_jars=expect_jars)
-            return
+    print("Pelican pulling the server-mods zip from the GitHub Release")
+    try:
+        wings.pull_file(
+            github_url,
+            root="/",
+            file_name=SERVER_MODS_REMOTE,
+            foreground=True,
+            timeout=1800,
+        )
+    except SystemExit as exc:
+        print(f"  GitHub pull failed ({exc}); retrying via redirect target")
+        wings.pull_file(
+            _follow_redirects(github_url),
+            root="/",
+            file_name=SERVER_MODS_REMOTE,
+            foreground=True,
+            timeout=1800,
+        )
     print("decompressing server mods zip")
     wings.decompress(SERVER_MODS_REMOTE)
     wings.delete([SERVER_MODS_REMOTE])
@@ -748,7 +687,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--from-local",
         action="store_true",
-        help="export the current pack tree, attach the server-mods zip to the GitHub Release, and have Wings pull it",
+        help="attach the server-mods zip to the GitHub Release, then have Pelican pull that zip",
     )
     parser.add_argument(
         "--share-only",
@@ -855,8 +794,7 @@ def deploy_from_local(
         disk=disk,
         extra=(
             f"local deploy NEOFORGE_VERSION={loader_env['NEOFORGE_VERSION']}; "
-            "Wings pulls the GitHub Release server-mods zip when GH_TOKEN is set, "
-            "otherwise the local zip (CurseForge listing not required)"
+            "GitHub Release first, then Pelican pulls that server-mods zip"
         ),
     )
     if server:
@@ -870,17 +808,22 @@ def deploy_from_local(
         print(
             "dry-run: would export ATLauncher files, attach the server-mods zip to "
             "the GitHub Release, switch this server to the NeoForge egg, install NeoForge, "
-            "then have Wings pull that zip"
+            "then have Pelican pull that zip"
         )
         return
+
+    if not (env("GH_TOKEN") or env("GITHUB_TOKEN")):
+        raise SystemExit(
+            "GH_TOKEN is required. Attach the server-mods zip to the GitHub Release "
+            "before Pelican can pull it. Set GH_TOKEN in .env and never commit it."
+        )
 
     print("building local pack artifacts")
     _pack, paths = build_all()
     print(atlauncher_instructions(paths))
 
     description = (
-        f"{server_name} test server. Wings pulls the GitHub Release server-mods zip "
-        "until a CurseForge file exists."
+        f"{server_name} test server. Pelican pulls the GitHub Release server-mods zip."
     )
     server = upsert_server(
         client,
