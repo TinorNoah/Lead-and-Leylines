@@ -50,7 +50,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | client | Lets both mob packs apply together. Force-enabled last among the mob packs. |
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate biomes. |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate structures. |
-| Structure Compass | `StructureCompass-1.21.1-4.2.1.jar` | both | Locate structures. |
 | Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | both | Teleport stones. World data. Balm. |
 | AppleSkin | `appleskin-neoforge-mc1.21-3.0.9.jar` | both | Hunger/saturation HUD. |
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | client | Inventory drag-transfer. |
@@ -90,6 +89,14 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | client | Entity texture variants. |
 | EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | client | Entity model variants. |
 | Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | Connected textures. |
+| Better Modlist | `better_modlist-21.1.1.jar` | client | Mods screen. |
+| Bridging Mod | `BridgingMod-2.6.2+1.21.1.neoforge-release.jar` | client | Bridge assist. YACL. |
+| Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | both | Client annoyance toggles. Required on the server. ARR. Balm. |
+| AttributeFix | `attributefix-neoforge-1.21.1-21.1.3.jar` | both | Attribute id fixes. Bookshelf + Prickle. |
+| Akashic Tome | `AkashicTome-1.8-30.jar` | both | Holds other guide books. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.48_mc1.21.1.jar` | both | Required by AmbientSounds. |
+| AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | Ambient audio. |
+| Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | client | Aeronautics contraptions on Xaero's maps. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | client | Season text on the HUD / Xaero map. Works with Ecliptic Seasons. |
 
@@ -98,6 +105,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Mod | Status | Why |
 |---|---|---|
 | EMI / EMI Ores / EMI Enchanting / EMI QoL Tweaks | Dropped | Replaced by JEI so Create and Sophisticated plugins get a real JEI version. |
+| Continuity | Held | Needs Connector and Forgified Fabric API, and it targets Sodium 0.6. |
 | TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
 | JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.447.jar`). |
 | JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |

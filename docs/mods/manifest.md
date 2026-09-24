@@ -165,7 +165,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | CurseForge 317780 / 8849973 | client | map | World map. | none | defaults | 2026-09-18 |
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 252848 / 7892954 | both | utility | Locate biomes. | none | defaults | 2026-09-18 |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | CurseForge 491794 / 7892943 | both | utility | Locate structures. | none | defaults | 2026-09-18 |
-| Structure Compass | `StructureCompass-1.21.1-4.2.1.jar` | CurseForge 319598 / 8439673 | both | utility | Locate structures. | none | defaults | 2026-09-18 |
 | Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | CurseForge 245755 / 8873000 | both | utility | Teleport stones. World data. | Balm | defaults | 2026-09-18 |
 | AppleSkin | `appleskin-neoforge-mc1.21-3.0.9.jar` | CurseForge 248787 / 7854442 | both | QoL | Hunger/saturation HUD. | none | defaults | 2026-09-18 |
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | CurseForge 60089 / 5637846 | client | QoL | Inventory drag-transfer. | none | defaults | 2026-09-18 |
@@ -286,7 +285,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Daffa's Arsenal | `daffas_arsenal-3.7.1.1.jar` | CurseForge 1254350 / 8862167 | both | combat | 1.20.1 gun pack in `pack/tacz/`. Forge creative-tab classes stay out of `mods/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | CS+ | `csplus-1.3.1-hotfix2.zip` | CurseForge 1623678 / 8867307 | both | combat | Counter-Strike gun pack. CurseForge file is a 1.20.1 jar; local name is `.zip` so Pack Upgrader reads root `gunpack.meta.json`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | CurseForge 961053 / 8855569 | both | combat | Guns beside TaCZ. World data. GeckoLib `[4.9.2,)`. | GeckoLib | defaults | 2026-09-23 |
-| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | both | combat | Use blocks and entities while holding a Point Blank gun. The client requires network channel `pointblank_passthrough:interaction` on the server. Server zip strips the class-level client-only marker on `InteractionManager` and stubs its client-only methods. | Point Blank | server jar patched; debug logging off | 2026-09-23 |
 | Point Blank Aeronautics compat | `pointblank_aero_compat-1.0.0.jar` | CurseForge 1540250 / 8073109 | both | combat | Bullets hit Aeronautics physics objects. | Point Blank, Aeronautics | defaults | 2026-09-23 |
 | Point Blank Extended Edition | `pbext-ext 1.0.zip` | CurseForge 1403532 / 7327102 | both | combat | Official gun pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
 | Point Blank Gun Gale Pack | `ggo-ext 1.0.zip` | CurseForge 1379446 / 7191282 | both | combat | Official Gun Gale pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
@@ -333,8 +331,43 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | IceAndFire Community Edition | `iceandfire-2.1.3.jar` | CurseForge 1040076 / 8929517 | both | content | Dragons. World data. Required so Ice and Fire × Epic Fight does anything. | Jupiter, Uranus | no worldgen skeletons; fire dragons in the Nether | 2026-09-22 |
 | Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | CurseForge 1634414 / 8552314 | both | combat | IAF armor animations. | Ice and Fire CE, Epic Fight | defaults | 2026-09-22 |
 | ParCool+ Compatibility++ | `ParCool-CompatibilityAddon-1.21.1-3.4.3.3-1.2.1.jar` | CurseForge 1501234 / 8824743 | both | movement | Extra ParCool compat. | ParCool | defaults | 2026-09-22 |
+| Epitaphs | `epitaphs-2.2.0_neoforge_1.21.1.jar` | CurseForge 1325482 / 8741091 | both | utility | Player-locked graves. World data. | none | defaults | 2026-09-24 |
+| AE2: Crafting Tree | `ae2ct-1.21.1-1.1.1.jar` | CurseForge 1086241 / 7182163 | both | storage | AE2 craft tree. | AE2 | defaults | 2026-09-24 |
+| Schematic Energistics | `schematicenergistics-1.21.1-1.5.4a.jar` | CurseForge 1283481 / 8465295 | both | storage | Schematicannon pulls from AE2. World data. | AE2, Create | defaults | 2026-09-24 |
+| AE2 MEGA Things | `AE2MEGAThings-1.21.1-2.0.4.jar` | CurseForge 1150075 / 6203833 | both | storage | Untyped mega disks, including chemicals. World data. | AE2 Things, MEGA Cells, Applied Mekanistics optional | defaults | 2026-09-24 |
+| Not Enough Patterns | `nep-1.21.1-0.5.1.jar` | CurseForge 1624304 / 8724404 | both | storage | AE2 pattern providers on other machines. | AE2 | defaults | 2026-09-24 |
+| Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | CurseForge 1386843 / 7238406 | both | storage | Infinite water, lava, and cobblestone. World data. | none | defaults | 2026-09-24 |
+| AE2 Utility | `ae2utility-1.7.9.jar` | CurseForge 1521605 / 8805305 | both | storage | Pull from the ME network into machines; one-click patterns. | AE2, JEI (client) | defaults | 2026-09-24 |
+| Pattern Converter | `patternconverter-1.0.0.jar` | CurseForge 1311295 / 6795530 | both | storage | Convert AE2 and Refined Storage patterns. World data. | none | defaults | 2026-09-24 |
+| AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | CurseForge 1222746 / 8306511 | both | storage | One press for every processor. World data. | AE2 | defaults | 2026-09-24 |
+| Climbable Ropes for Create Aeronautics | `climbable_ropes-2.1.3.jar` | CurseForge 1528764 / 8769644 | both | tech | Climb Aeronautics ropes. | Aeronautics, Sable, Create | defaults | 2026-09-24 |
+| Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | CurseForge 1622142 / 8736099 | client | map | Aeronautics contraptions on Xaero maps. | Sable, Xaero's World Map | defaults | 2026-09-24 |
+| Create Aeronautics x Curios API Compat | `createaeronauticscurios-neoforge-1.21.1-2.2.jar` | CurseForge 1532334 / 8547039 | both | tech | Aviator goggles in a Curios slot. | Aeronautics, Curios | defaults | 2026-09-24 |
+| Akashic Tome | `AkashicTome-1.8-30.jar` | CurseForge 250577 / 7773841 | both | utility | One book that holds other books. | none | defaults | 2026-09-24 |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.48_mc1.21.1.jar` | CurseForge 257814 / 8947159 | both | library | Required by AmbientSounds. | none | defaults | 2026-09-24 |
+| AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | CurseForge 254284 / 8043019 | both | utility | Ambient audio. | CreativeCore | defaults | 2026-09-24 |
+| Ars Controle | `ars_controle-1.21.1-1.6.16.jar` | CurseForge 1061812 / 8847869 | both | magic | Extra Ars spell control. World data. | Ars Nouveau, Curios | defaults | 2026-09-24 |
+| Ars Elemancy | `ars_elemancy-1.21.1-1.18.3.jar` | CurseForge 1153666 / 8349780 | both | magic | Dual-element Ars Elemental gear. World data. | Ars Nouveau, Ars Elemental | defaults | 2026-09-24 |
+| Ars Nouveau's Flavors & Delight | `arsdelight-2.2.2.jar` | CurseForge 1131668 / 8297420 | both | farming | Ars foods. World data. | Ars Nouveau, Farmer's Delight | defaults | 2026-09-24 |
+| Ars Technica | `ars_technica-1.21.1-2.7.6.jar` | CurseForge 1096161 / 7642730 | both | magic | Create glyphs and tools beside Ars Creo. World data. | Ars Nouveau, Create | defaults | 2026-09-24 |
+| Artifacts | `artifacts-neoforge-13.2.5.jar` | CurseForge 312353 / 8791899 | both | content | Exploration curios. World data. | Curios (optional integration) | defaults | 2026-09-24 |
+| AttributeFix | `attributefix-neoforge-1.21.1-21.1.3.jar` | CurseForge 280510 / 7115922 | both | utility | Attribute id fixes. | Bookshelf, Prickle | defaults | 2026-09-24 |
+| Autochef's Delight | `AutochefsDelight-1.21.1-NeoForge-2.0.3.jar` | CurseForge 964282 / 8013519 | both | farming | Automated Farmer's Delight cooking. World data. ARR. | Farmer's Delight | defaults | 2026-09-24 |
+| Barbeque's Delight | `barbequesdelight-1.3.0.jar` | CurseForge 1007788 / 8004721 | both | farming | Grill foods. World data. | Farmer's Delight | defaults | 2026-09-24 |
+| Better Modlist | `better_modlist-21.1.1.jar` | CurseForge 1089803 / 8605756 | client | utility | Mods screen. Client. | none | defaults | 2026-09-24 |
+| Bridging Mod | `BridgingMod-2.6.2+1.21.1.neoforge-release.jar` | CurseForge 533942 / 6269728 | client | utility | Bridge assist. | YACL | defaults | 2026-09-24 |
+| Building Gadgets | `buildinggadgets2-1.3.9.jar` | CurseForge 298187 / 6850515 | both | utility | Copy, paste, and build gadgets. World data. | none | defaults | 2026-09-24 |
+| Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | CurseForge 251407 / 8696976 | both | utility | Client annoyance toggles. Required on the server. ARR. | Balm | defaults | 2026-09-24 |
+| Comforts | `comforts-neoforge-9.0.5+1.21.1.jar` | CurseForge 276951 / 7515858 | both | utility | Sleeping bags and hammocks. World data. | none | defaults | 2026-09-24 |
+| Create Crafts & Additions | `createaddition-1.7.1.jar` | CurseForge 439890 / 8887653 | both | tech | Forge energy and Create kinetics. World data. | Create | defaults | 2026-09-24 |
+| Create Deco | `createdeco-2.1.3.jar` | CurseForge 509285 / 7943181 | both | tech | Create decoration blocks. World data. | Create | defaults | 2026-09-24 |
+| Create Encased | `Create Encased-1.21.1-1.9.0-ht3.jar` | CurseForge 829380 / 8549840 | both | tech | Encased Create blocks. World data. | Create | defaults | 2026-09-24 |
+| Crystalix | `crystalix-3.0.1.jar` | CurseForge 1187033 / 8767589 | both | content | Colored glass. World data. | none | defaults | 2026-09-24 |
+| Ars Nouveau Refresh | `Ars Nouveau Refresh 1.2.0.zip` | CurseForge 1080571 / 6068071 | client | resource pack | Ars item textures. | Ars Nouveau | Global Packs required | 2026-09-24 |
+| Better Sophisticated Backpack Upgrades | `Better SB Upgrades.zip` | CurseForge 1138140 / 7964810 | client | resource pack | Backpack upgrade icons. | Sophisticated Backpacks | Global Packs required | 2026-09-24 |
+| Boss Refreshed | `boss-refreshed-v2-1.19-1.21.zip` | CurseForge 882133 / 6597394 | client | resource pack | Dragon, wither, warden, and elder guardian models. EMF. | EMF | Global Packs required | 2026-09-24 |
 
-World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, and Ecliptic Seasons write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
+World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, Ecliptic Seasons, Crystalix, Create Deco, Create Encased, Create Crafts & Additions, Epitaphs, Comforts, Artifacts, Ars Controle, Ars Elemancy, Ars Technica, Ars Flavors, Autochef's Delight, Barbeque's Delight, Building Gadgets, Infinity Drives, Pattern Converter, Schematic Energistics, and AE2 MEGA Things write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
 
 ## Credits / Attribution
 
@@ -407,7 +440,6 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | Daffa's Arsenal | DaffaTheOne | CC-BY-NC-4.0; inner pack header says all rights reserved | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
 | CS+ | lolokeia | CC BY-NC-4.0 | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
 | Vic's Point Blank and official packs | vic4games | ARR | CurseForge metadata; do not embed the jars or zips. |
-| Vic's Point Blank - Interaction | Tidloas | MIT | CurseForge reference. |
 | Point Blank Aeronautics compat | Glaiden_ | MIT | CurseForge reference. |
 | Cyberpunk 2077 Guns for Vic's Point Blank | TheScepticBlock | ARR; no third-party distribution | CurseForge metadata only; do not embed the zip. |
 | Epic Fight, ParCool, Ice and Fire CE, BetterNether New Dawn, Jaden's Nether, Alex's Caves Continued, and related addons | See CurseForge pages | Mix of MIT/ARR | CurseForge metadata; do not embed ARR jars. |

@@ -1,0 +1,13 @@
+name = "AE2 Universal Press"
+filename = "ae_universal_press-2.1.1-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "686e89164d8f6d136b04aaa38b4528f8dc0b46f4"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8306511
+project-id = 1222746

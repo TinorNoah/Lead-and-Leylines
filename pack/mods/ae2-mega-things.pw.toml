@@ -1,0 +1,13 @@
+name = "AE2 MEGA Things"
+filename = "AE2MEGAThings-1.21.1-2.0.4.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5df271ee7c41abe2fa753842b778a4c7ac1290b9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6203833
+project-id = 1150075

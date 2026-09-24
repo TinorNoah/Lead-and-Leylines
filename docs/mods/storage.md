@@ -41,6 +41,14 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Trash Cans | `trashcans-1.1.0-neoforge-mc1.21.jar` | both | Trash blocks. World data. SuperMartijn642 Core + Config. |
 | Packing Tape | `PackingTape-1.21.1-0.15.6.jar` | both | Pickup tile entities. |
 | Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | ME network. World data. |
+| AE2: Crafting Tree | `ae2ct-1.21.1-1.1.1.jar` | both | Craft tree in the terminal. |
+| Schematic Energistics | `schematicenergistics-1.21.1-1.5.4a.jar` | both | Schematicannon uses the ME network. World data. |
+| AE2 MEGA Things | `AE2MEGAThings-1.21.1-2.0.4.jar` | both | Untyped disks for items, fluids, and chemicals. World data. |
+| Not Enough Patterns | `nep-1.21.1-0.5.1.jar` | both | Pattern providers for other mods' machines. |
+| Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | both | Infinite water, lava, and cobblestone. World data. |
+| AE2 Utility | `ae2utility-1.7.9.jar` | both | Pull from the ME network; one-click patterns. |
+| Pattern Converter | `patternconverter-1.0.0.jar` | both | AE2 and Refined Storage pattern conversion. World data. |
+| AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | both | One press for every processor. World data. |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. |
 | Quartz Arsenal | `refinedstorage-quartz-arsenal-neoforge-1.0.8.jar` | both | Wireless crafting grid. Replaces RS Addons. |
 | Cable Tiers | `cabletiers-neoforge-1.21.1-0.6.14.jar` | both | Faster RS importer/exporter tiers. |

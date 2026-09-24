@@ -19,6 +19,22 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.6] - 2026-09-24
+
+### Added
+
+- AE2 extras: crafting tree, schematic cannon link, mega disks, pattern-provider compat, infinite water/lava/cobblestone drives, machine pulling, an AE2/Refined Storage pattern converter, and one universal processor press.
+- Create extras: electric motor and alternator, decoration blocks, encased parts, climbable Aeronautics ropes, aviator goggles in a Curios slot, and Aeronautics vehicles drawn on Xaero's maps.
+- Ars extras: spell control, dual-element gear, Create glyphs and tools, Ars foods, and refreshed item textures.
+- Crystalix colored glass, Artifacts curios, player graves, sleeping bags and hammocks, Building Gadgets, Autochef's Delight, and Barbeque's Delight.
+- Ambient sounds, a book that holds other books, attribute fixes, bridge assist, a clearer mods screen, and client annoyance toggles.
+- Backpack upgrade icons, and new models for the ender dragon, wither, warden, and elder guardian.
+
+### Removed
+
+- Vic's Point Blank Interaction. Holding a Point Blank gun no longer opens or uses the block or mob you are looking at.
+- Structure Compass. Explorer's Compass still finds structures.
+
 ## [0.1.5] - 2026-09-24
 
 ### Fixed

@@ -34,6 +34,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Better Block Entities | Same draw-cost space as Flerovium. Pick one. |
 | Performance Tweaks | Same project as Adaptive Performance Tweaks (listed twice in the original doc). |
 | Better Sparse Structures | Same structure-spacing job as Structurify. Do not stack. |
+| Structure Compass | Same structure-finding job as Explorer's Compass. Dropped 2026-09-24. Do not re-add. |
 
 ## Needs a parent mod we have not ported
 
@@ -53,6 +54,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Polymorphic Energistics | July 2024 `0.4.1` vs current AE2 19.2.17 / RS 2.0.9. |
 | RS Addons | Replaced by Quartz Arsenal on 1.21.1; no 1.21.1 file. |
 | C2ME OpenCL | 1.21.1 NeoForge file exists (`1563823` / `8896938`) but is Java 25 (class file 69). Pack stays on Java 21. Author also lists TerraBlender biome-placement failure; Apple OpenCL unsupported. |
+| Continuity | `3.0.0+1.21.neoforge` (531351 / 5981335) requires Connector and Forgified Fabric API, and it was built for Sodium 0.6. Pack is Sodium 0.8.13. Do not re-add. |
 
 ## Gameplay-changing, crashy, or too much library for the gain
 
@@ -76,6 +78,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Ecliptic Seasons : Voxy Compact | Dropped. Crashes without Voxy. Do not re-add. |
 | Voxy - Make it compatible | Dropped. Voxy client companion. Do not re-add. |
 | EpicFight-Nightfall (+ Invincible Lib) | Dedicated server crash: `EffekUnits.VFXENABLE` reads client config before load (e.g. Sophisticated Backpacks spawn potions). Do not re-add without a proven dedicated-server fix. AAA Particles stays in the pack. |
+| Vic's Point Blank - Interaction | Dropped 2026-09-24. `InteractionManager` is marked client-only and crashes a dedicated server during config load. Do not re-add. |
 | Mekanism Covers | Client join crash vs Sodium 0.8.13 (`SodiumBlockRendererMixin.putTranslucentVertexColor`, 0 targets). Latest 1.21.1 file is still 1.3-BETA (2025-01-10). Do not re-add until a Sodium 0.8-compatible build ships. |
 | JEI++ (JEI Plus) | Client join crash on JEI 19.57: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, which that JEI build moved to `mezz.jei.common.input`. Latest file is still 1.0.5 for JEI 19.56 (2026-09-13). Do not re-add until a 19.57 build ships. |
 | Loading Backgrounds | Cosmetic + Architectury + ARR. Skip. |

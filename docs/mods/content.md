@@ -10,7 +10,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 |---|---|---|---|
 | Create | `create-1.21.1-6.0.10.jar` | both | Contraptions and kinetics. Flywheel is embedded. World data. |
 | Sable | `sable-neoforge-1.21.1-2.0.5.jar` | both | Physics sub-levels for Aeronautics. Mixin-heavy; author warns about other mods. |
-| Create Aeronautics | `create-aeronautics-bundled-1.21.1-1.3.2.jar` | both | Planes, airships, cars. World data. Known visual issues with Iris. |
+| Create Aeronautics | `create-aeronautics-bundled-1.21.1-1.3.2.jar` | both | Planes, airships, cars. World data. Known visual issues with Iris. Climbable Ropes, Curios goggles, and a client Xaero map overlay are in. |
 | Architectury API | `architectury-13.0.11-neoforge.jar` | both | Required by FTB. |
 | FTB Library | `ftb-library-neoforge-2101.1.36.jar` | both | Required by FTB Quests / Teams. ARR. |
 | FTB Teams | `ftb-teams-neoforge-2101.1.11.jar` | both | Shared quest progress. ARR. |
@@ -24,19 +24,27 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.3.jar` | both | Ancient Keep, trial spawners, and a boss. World data. AAA Particles. |
 | Amendments | `amendments-1.21-2.1.10-neoforge.jar` | both | Vanilla block tweaks. World data. Moonlight. |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | both | Create-aware vein mine with FTB Ultimine. |
+| Create Crafts & Additions | `createaddition-1.7.1.jar` | both | Electric motor and alternator. World data. Create `[6.0.7,6.1.0)`. |
+| Create Deco | `createdeco-2.1.3.jar` | both | Decoration blocks. World data. Create `[6.0.7,6.1.0)`. |
+| Create Encased | `Create Encased-1.21.1-1.9.0-ht3.jar` | both | Encased shafts and cogwheels. World data. Create `[6.0.10,)`. |
+| Crystalix | `crystalix-3.0.1.jar` | both | Colored glass. World data. Framed Blocks optional, not installed. |
+| Artifacts | `artifacts-neoforge-13.2.5.jar` | both | Exploration curios. World data. Curios integration is in the jar. |
+| Epitaphs | `epitaphs-2.2.0_neoforge_1.21.1.jar` | both | Player-locked graves. World data. |
+| Comforts | `comforts-neoforge-9.0.5+1.21.1.jar` | both | Sleeping bags and hammocks. World data. |
+| Building Gadgets | `buildinggadgets2-1.3.9.jar` | both | Copy, paste, and build gadgets. World data. Project 298187's 1.21.1 file. |
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | both | Create village structure. World data. |
 | FTB Chunks | `ftb-chunks-neoforge-2101.1.22.jar` | both | Chunk claims. World data. ARR. |
 | FTB Essentials | `ftb-essentials-neoforge-2101.1.10.jar` | both | `/home` and related commands. ARR. |
 | FTB Ultimine | `ftb-ultimine-neoforge-2101.1.15.jar` | both | Vein mine. ARR. |
-| Farmer's Delight | `FarmersDelight-1.21.1-1.3.4.jar` | both | Kitchen. World data. Corn Delight, My Nether's Delight, Twilight's Flavors, Farmer's Cutting (RU, OTBWG, TF, BetterNether), Spice of Life Carrot. Delightful still has no 1.21.1 NF file. |
-| Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | ME network. World data. GuideME, ExtendedAE, AdvancedAE, AE Additions, AE2 Things (beta), WTLib, Applied Mekanistics, Ars Énergistique (beta). |
+| Farmer's Delight | `FarmersDelight-1.21.1-1.3.4.jar` | both | Kitchen. World data. Corn Delight, My Nether's Delight, Twilight's Flavors, Farmer's Cutting (RU, OTBWG, TF, BetterNether), Spice of Life Carrot, Autochef's Delight, Barbeque's Delight. Delightful still has no 1.21.1 NF file. |
+| Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | ME network. World data. GuideME, ExtendedAE, AdvancedAE, AE Additions, AE2 Things (beta), MEGA Things, WTLib, Applied Mekanistics, AEInfinityBooster, Crafting Tree, Schematic Energistics, Not Enough Patterns, AE2 Utility, Universal Press, Pattern Converter, Infinity Drives, Ars Énergistique (beta). |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. Quartz Arsenal, Cable Tiers, Extra Disks (beta), ExtraStorage. |
 | Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | both | Machines. World data. Generators, Tools, More Machine, Extras, Elements (Patchouli), RS/Aeronautics/Soph backpacks compat. Covers dropped (Sodium 0.8.13 mixin crash). |
-| Ars Nouveau | `ars_nouveau-1.21.1-5.13.1.jar` | both | Spellcrafting. World data. Additions, Creo, Elemental, Énergistique. |
+| Ars Nouveau | `ars_nouveau-1.21.1-5.13.1.jar` | both | Spellcrafting. World data. Additions, Creo, Elemental, Elemancy, Controle, Technica, Flavors & Delight, Énergistique. Refresh is a forced client texture pack. |
 | Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | both | Progression magic. World data. Revelationary + Modonomicon. |
 | Alchemistry | `alchemistry-1.21.1-2.4.5.jar` | both | Chemistry. World data. AlchemyLib + ChemLib. |
 | [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar` | both | Guns. World data. Unofficial 1.21.1 port + Pack Upgrader. Not compatible with 1.20.1 TaCZ worlds. Addons: addon, Tactical Breaching, Guns Lights 2.8.2, Curios/Applied ammo boxes, Elite X, Turrets, Aeronautics/Create compat, Bandits, armed pillagers/skeletons/piglins, Applied TaCZ, Refit, Runtime Compat, Blueprints, LesRaisins. Gun packs in `pack/tacz/` (instance `tacz/`, both sides, upgraded on boot): MCS2 (1113043), Daffa's Arsenal 3.7.1.1 (1254350), and CS+ 1.3.1 (1623678). Those three are 1.20.1 packs, so they stay out of `mods/`. Warzone 1.1.8B is dropped: models and textures are only in `recursion/taczpack.dat`, which this port does not unpack. The MCS2Gun-addon jar (1285238) is not shipped: it is a 1.20.1 Forge mod with an encrypted inner zip, and Pack Upgrader quarantines it without registering the guns. Client: JET, EMF Compat, Punchy, Don't Punch My TACZ (NeoForge pin). Immersive Ballistic + Tweaks dropped (Iris vertex-format conflict). |
-| Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | both | Second gun system beside TaCZ. World data. GeckoLib 4.9.2+ (pack has 4.9.3). NeoForge range `[21.0,21.3)`. Content packs in `pack/pointblank/` (instance `pointblank/`, both sides): Extended Edition, Gun Gale, Half-Life v0.8, Cyberpunk 2077 1.19. Interaction ships both (passthrough while holding a gun; the client requires channel `pointblank_passthrough:interaction` on the server). The server-mods zip strips `InteractionManager`'s class-level `@OnlyIn(CLIENT)` and stubs its client-only methods so dedicated servers can load that class. Aeronautics bullet collision is both. No Point Blank: Recipe. No Jelly (that fork replaces this mod). No Epic Fight bridge. TaCZ's first-person compat forces vanilla mode only while a TaCZ gun is held, so it does not cover these guns. Punchy still hides its arms whenever Epic Fight mode is on, including while a Point Blank gun is out. Aim Point Blank guns with Epic Fight mode off. |
+| Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | both | Second gun system beside TaCZ. World data. GeckoLib 4.9.2+ (pack has 4.9.3). NeoForge range `[21.0,21.3)`. Content packs in `pack/pointblank/` (instance `pointblank/`, both sides): Extended Edition, Gun Gale, Half-Life v0.8, Cyberpunk 2077 1.19. No Vic's Point Blank Interaction (passthrough while holding a gun). Aeronautics bullet collision is both. No Point Blank: Recipe. No Jelly (that fork replaces this mod). No Epic Fight bridge. TaCZ's first-person compat forces vanilla mode only while a TaCZ gun is held, so it does not cover these guns. Punchy still hides its arms whenever Epic Fight mode is on, including while a Point Blank gun is out. Aim Point Blank guns with Epic Fight mode off. |
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | both | Souls-like combat. World data. ParCool bridge, Twilight Forest / TaCZ first-person / Curios / Ice and Fire armor compat, Bosses' Rise, Progressive Difficulty, CompatLink, client tweaks, FPS optimizer, Punchy battle-mode hide. playerAnimator required. AAA Particles stays (Effekseer). Do not re-add Nightfall (dedicated-server VFX config crash). |
 | ParCool! | `ParCool-1.21.1-4.0.0.5.jar` | both | Parkour movement. Compatibility++ addon in. |
 | IceAndFire Community Edition | `iceandfire-2.1.3.jar` | both | Dragons. World data. Jupiter + Uranus. Not original Ice and Fire `264231` (1.20.1-only). Pixie villages and fire dragon roosts/caves generate in the Nether. Worldgen dragon skeletons are off; a killed dragon still leaves a corpse. |
@@ -52,7 +60,8 @@ Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) a
 | Call of Duty Warzone gun pack | Dropped | CurseForge 1196617 file 8811574 (1.1.8B) stores models and textures in encrypted `recursion/taczpack.dat`. The 1.21.1 TaCZ port does not read that archive, so guns and the buy station render as missing textures. Do not re-add until an unencrypted 1.21 pack exists. |
 | Point Blank: Recipe | Held | User declined. CurseForge 1016608 has no 1.21.1 NeoForge file. The weapon printer plus JEI stays the crafting path. |
 | Pointblank: Jelly | Dropped | Fork that replaces Vic's Point Blank. Official 2.2.0 is newer. Do not install both. |
-| Slice & Dice, Central Kitchen, Applied Kinetics, remaining Create addons | Deferred | Farmer's Delight is in; kitchen Create addons still a later wave. |
+| Continuity | Held | `continuity-3.0.0+1.21.neoforge.jar` needs Sinytra Connector and Forgified Fabric API, and it targets Sodium 0.6. Do not re-add those libraries for connected textures. |
+| Slice & Dice, Central Kitchen, Applied Kinetics, remaining Create kitchen addons | Deferred | Farmer's Delight, Autochef, Barbeque, Create Deco, Encased, and Crafts & Additions are in. Kitchen Create addons are still a later wave. |
 | Alex's Caves / Create compat | Held | Parent is now Alex's Caves Continued; Create compat still needs its own 1.21.1 NF file. |
 | Vanillin | Dropped | Shader-incompatible with Iris. |
 | Serene Seasons | Dropped | Ecliptic Seasons plus the Serene Seasons API stub covers this. Do not stack. |
