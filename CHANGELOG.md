@@ -17,9 +17,24 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+### Removed
+
+## [0.1.5] - 2026-09-24
+
+### Fixed
+
 - Vic's Point Blank Interaction no longer stops multiplayer from starting. Using blocks and mobs while holding a Point Blank gun still works.
+- Point Blank no longer writes a log line for every normal block and mob interaction.
+- Distant TaCZ gunshot echoes stay on. The per-shot debug trace is off.
+- Bastion hoglin-stable and treasure chests include My Nether's Delight loot again.
+- Terralith caves, gravel deserts, and savannas use Ecliptic Seasons' current rain tags.
+- Ocelots in Regions Unexplored forests count as creatures, and sand snappers in Lost Caves count as monsters.
+- Nether Expansion recipes for items that are not in this version no longer fail to load.
 
 ### Removed
+
+- Call of Duty Warzone guns. Their models and textures do not load on this version, so those items were missing-texture blocks.
+- Distant terrain LOD. Voxy, Voxy Server Side, and Forgified Fabric API are gone.
 
 ## [0.1.4] - 2026-09-23
 
