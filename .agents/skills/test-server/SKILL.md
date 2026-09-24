@@ -5,13 +5,13 @@ description: Restart the panel-hosted test server, wait for boot, pull recent co
 
 # Test dedicated server
 
-Until a CurseForge file exists, deploy the current `pack/` tree with `python scripts/deploy_server.py --from-local`. That attaches the server-mods zip to the GitHub Release, then has Pelican pull it onto the NeoForge egg. `GH_TOKEN` is required. Do not invent a GitHub raw pack.toml fallback or a direct zip upload. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
+Until a CurseForge file exists, deploy with `python scripts/deploy_server.py --from-local`. If GitHub Release `v{pack.toml version}` already has the server-mods zip, Pelican pulls that asset and the script does not rebuild the pack. It builds and attaches a zip only when that asset is missing. That build uses cached jars and downloads only missing files. `GH_TOKEN` is required. Do not invent a GitHub raw pack.toml fallback or a direct zip upload. After CurseForge is public, `--curseforge --reinstall` tracks the last published store file. See `server/README.md`.
 
 ## Steps
 
 1. Confirm `.env` exists at the repo root (never commit it). Required: `PANEL_URL`, `PANEL_API_KEY`, `PANEL_NODE_FQDN`. For the CurseForge Generic egg also `CURSEFORGE_PROJECT_ID`. The CurseForge console `API_KEY` can be copied from another CurseForge Generic server on the panel.
 2. From the repo root, run `python scripts/deploy_server.py --status` to find the server.
-3. Push the current pack (default while CurseForge is unpublished):
+3. Deploy (default while CurseForge is unpublished). This pulls the server-mods zip already on the GitHub Release for the `pack.toml` version, and builds a pack only when that asset is missing. A build uses cached jars and downloads only missing files:
 
    `python scripts/deploy_server.py --from-local`
 

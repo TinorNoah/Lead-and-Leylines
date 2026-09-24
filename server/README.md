@@ -22,7 +22,7 @@ python scripts/deploy_server.py --curseforge --reinstall --wait 600
 
 `python scripts/release.py vX.Y.Z --changelog notes.md` is the usual ship path: GitHub Release from the changelog, then `--from-local` on this Pelican server, then local Prism. CurseForge stays off unless you pass `--curseforge` or `--upload-stores`. Default `--channel alpha` is a GitHub prerelease. `--channel release` is GitHub Latest. Every release updates this server unless you pass `--skip-server`, and Prism unless `--skip-prism`. Do not put panel/join details in that changelog. Use `deploy_server.py` alone when you only need the server.
 
-`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` does that export, attaches the server-mods zip to the GitHub Release, and has Pelican pull it. Reinstalling the NeoForge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/NeoForge versions are unchanged.
+`--share-only` writes ATLauncher files under `dist/` (gitignored) and does not touch the panel. `--from-local` looks at GitHub Release `v{pack.toml version}` for the server-mods zip. When that asset is already there, Pelican pulls it and no new pack is built. When it is missing, the script exports, attaches the zip, then Pelican pulls it. That export reuses jars already in the packwiz cache or `.cache/mod-files` and downloads only files that are missing. Reinstalling the NeoForge egg **wipes the world**; later `--from-local` runs only replace `mods/` if Minecraft/NeoForge versions are unchanged.
 
 The script owns the server as `PANEL_OWNER_USERNAME` and uses a free allocation on that node. Java image is chosen from the egg from `pack/pack.toml` Minecraft version.
 
