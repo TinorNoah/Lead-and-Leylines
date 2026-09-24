@@ -17,6 +17,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+- Vic's Point Blank Interaction no longer stops multiplayer from starting. Using blocks and mobs while holding a Point Blank gun still works.
+
 ### Removed
 
 ## [0.1.4] - 2026-09-23

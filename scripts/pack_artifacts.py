@@ -13,6 +13,7 @@ import zipfile
 from pathlib import Path
 
 from check_exports import print_report, report_embedded_mods
+from patch_pointblank_interaction import patch_jar as patch_pointblank_interaction
 from read_pack_versions import PACK_TOML, ROOT, read_pack
 
 PACK_DIR = ROOT / "pack"
@@ -116,7 +117,11 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
         if not meta["url"] or not meta["filename"]:
             raise SystemExit(f"{toml_path.name} is missing download url or filename")
         print(f"  server mod {meta['filename']}")
-        _download(meta["url"], mods_out / meta["filename"])
+        dest_jar = mods_out / meta["filename"]
+        _download(meta["url"], dest_jar)
+        if meta["filename"].startswith("pointblank_passthrough_interaction"):
+            if patch_pointblank_interaction(dest_jar):
+                print("  patched Point Blank Interaction so the dedicated server can load it")
         included += 1
 
     for folder in SIDED_FOLDERS:
