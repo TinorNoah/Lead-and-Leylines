@@ -1,0 +1,13 @@
+name = "Infinity Drives"
+filename = "infinitystorage-1.21.1-1.0.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5ca9d7faed222d31d0546eba68a6a6f622f86f06"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7238406
+project-id = 1386843

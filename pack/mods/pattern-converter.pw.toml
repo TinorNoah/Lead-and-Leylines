@@ -1,0 +1,13 @@
+name = "Pattern Converter"
+filename = "patternconverter-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d1d77f3aac6a942a4f1168f48e697672981270c6"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 6795530
+project-id = 1311295
