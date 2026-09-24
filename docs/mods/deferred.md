@@ -68,12 +68,13 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
 | Fast Item Frames | New block-entity type (world data) + Puzzles Lib. Skip. |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
-| Roxy | Translation layer for Fabric Voxy `0.2.16-beta` (1.21.11 jar). Conflicts with native `voxy-forged`. Skip. |
+| Roxy | Translation layer for Fabric Voxy `0.2.16-beta` (1.21.11 jar). Voxy is out. Skip. |
 | Ecliptic Seasons : Fabricated | Fabric rewrite. Bundles listed it as a required dep; packwiz skipped it on NeoForge. Skip. |
 | Serene Seasons | Replaced by Ecliptic Seasons + Serene Seasons API Stub. Do not stack. |
-| voxy-forged | ARR; no GitHub release jars; cannot go in packwiz. Build from source for the local Prism instance only. |
-| Ecliptic Seasons : Voxy Compact | Crashes without Voxy (`eclipticseasons_voxycompact.mixins.json`). Manual Prism add only next to `voxy-forged`. |
-| Voxy - Make it compatible | Same: Voxy client companion. Manual Prism add only next to `voxy-forged`. |
+| voxy-forged | Dropped. ARR; no GitHub release jars. Do not build it into Prism. |
+| Voxy Server Side, Forgified Fabric API | Dropped with Voxy on 2026-09-24. Forgified Fabric API had no other user in the pack. |
+| Ecliptic Seasons : Voxy Compact | Dropped. Crashes without Voxy. Do not re-add. |
+| Voxy - Make it compatible | Dropped. Voxy client companion. Do not re-add. |
 | EpicFight-Nightfall (+ Invincible Lib) | Dedicated server crash: `EffekUnits.VFXENABLE` reads client config before load (e.g. Sophisticated Backpacks spawn potions). Do not re-add without a proven dedicated-server fix. AAA Particles stays in the pack. |
 | Mekanism Covers | Client join crash vs Sodium 0.8.13 (`SodiumBlockRendererMixin.putTranslucentVertexColor`, 0 targets). Latest 1.21.1 file is still 1.3-BETA (2025-01-10). Do not re-add until a Sodium 0.8-compatible build ships. |
 | JEI++ (JEI Plus) | Client join crash on JEI 19.57: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, which that JEI build moved to `mezz.jei.common.input`. Latest file is still 1.0.5 for JEI 19.56 (2026-09-13). Do not re-add until a 19.57 build ships. |
@@ -99,7 +100,7 @@ Refined Polymorphism.
 
 ### Combat / guns / movement
 
-Simply Swords; Simply More. Remaining TaCZ content not in the pack: Labs, Gucci & Vuitton. Daffa's Arsenal, CS+, and the Warzone gun pack are in `pack/tacz/`. MCS2Gun-addon `1285238` stays out (1.20.1 encrypted Forge jar; Pack Upgrader does not register it). The MCS2 gun pack zip is in [content.md](content.md). Epic Fight, ParCool, Ice and Fire CE, the unofficial 1.21.1 TaCZ port, and Vic's Point Blank are in [content.md](content.md). Point Blank: Recipe stays out (no 1.21.1 NeoForge CurseForge file; declined). Do not add Pointblank: Jelly beside official Point Blank. Official Doom, Destiny, and Blue Archive packs are not in.
+Simply Swords; Simply More. Remaining TaCZ content not in the pack: Labs, Gucci & Vuitton. Daffa's Arsenal and CS+ are in `pack/tacz/`. Warzone 1.1.8B is dropped (encrypted `taczpack.dat`; this port never unpacks the textures). MCS2Gun-addon `1285238` stays out (1.20.1 encrypted Forge jar; Pack Upgrader does not register it). The MCS2 gun pack zip is in [content.md](content.md). Epic Fight, ParCool, Ice and Fire CE, the unofficial 1.21.1 TaCZ port, and Vic's Point Blank are in [content.md](content.md). Point Blank: Recipe stays out (no 1.21.1 NeoForge CurseForge file; declined). Do not add Pointblank: Jelly beside official Point Blank. Official Doom, Destiny, and Blue Archive packs are not in.
 
 ### Worldgen / structures / dimensions
 

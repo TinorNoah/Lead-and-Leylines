@@ -66,9 +66,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
 | MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
-| Forgified Fabric API | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | both | Fabric API on NeoForge. Required by the unofficial Voxy NeoForge port. Do not add Sinytra Connector. |
-| Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | both | Server-streamed distant LODs (also fills Xaero's World Map). Needs a Voxy renderer on the client. |
-
 No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
 ## Considered / held / dropped
@@ -86,10 +83,11 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Shader packs (BSL, Complementary, …) | Chosen | Complementary r5.9.3 + BSL v10.1.1 + Euphoria + Colorwheel. |
 | Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. Replaces Iris Flywheel Compat for Create + Iris. |
 | Iris Flywheel Compat | Dropped | Mixin conflict with Colorwheel (`irisflw` any); Colorwheel author will not fix it. |
-| Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Conflicts with the native `voxy-forged` port. Do not stack. |
-| voxy-forged (GitHub) | Local Prism only | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Build from https://github.com/falling-colud/voxy-forged for the local instance. |
-| Ecliptic Seasons : Voxy Compact | Dropped from pack | Mixins fail hard without Voxy (`eclipticseasons_voxycompact.mixins.json`). Only add manually next to a local `voxy-forged` jar. |
-| Voxy - Make it compatible | Dropped from pack | Same: Voxy client companion. Only with local `voxy-forged`. |
+| Voxy, Voxy Server Side, Forgified Fabric API | Dropped | Distant LOD removed on request. Forgified Fabric API was only required by the local Voxy renderer. Do not re-add. |
+| Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Voxy is out. Do not add. |
+| voxy-forged (GitHub) | Dropped | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Do not build it into Prism. |
+| Ecliptic Seasons : Voxy Compact | Dropped | Mixins fail hard without Voxy. Voxy is out. |
+| Voxy - Make it compatible | Dropped | Voxy client companion. Voxy is out. |
 | Rubidium Extra | Dropped | Embeddium-era. |
 | Noisium | Dropped | Bye?Pregen! lists Noisium as incompatible. |
 | Achievements Optimizer | Dropped | Overlaps Cerulean. |

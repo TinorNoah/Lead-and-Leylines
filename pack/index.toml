@@ -25,8 +25,16 @@ file = "config/iceandfire/iaf-common.json"
 hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
 
 [[files]]
+file = "config/pointblank_passthrough_interaction-common.toml"
+hash = "fbce027b7b46053ff3c06444573d383d67b817509be485dea8e2d05771008ec9"
+
+[[files]]
 file = "config/structurify.json"
 hash = "d50100fc3cd4d7a0c58d6bc1441b635c57ee949edfac8371af8c3479fe282dfc"
+
+[[files]]
+file = "config/tacz_tactical_breaching-common.toml"
+hash = "8d0fa4163ee5a82cfba22d7c58938aca8b7f06fcd567fe5c8883973b82f7024d"
 
 [[files]]
 file = "config/terrablender.toml"
@@ -59,6 +67,86 @@ hash = "dcefe8a1d0409f4ddfea07e2e848eb98bfa83861a76ee132ba4a875c52f16805"
 [[files]]
 file = "global_packs/required_data/lead-leylines-large-climate/pack.mcmeta"
 hash = "28d29b4228da7fdf226b830e5a3c2c25c1fb3efa03c54685c99ac7df04831c04"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/arid.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/monsoonal.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rain/arid.json"
+hash = "13aa4e5aea33271ea5f2e08d03ec44fe045ee2e8127f42bf5404fb33c82478a7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rain/monsoonal.json"
+hash = "fd739a6c5496e82fa19f347447bef8f9c26ae65fd464248bb6a08b4b986c982c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rain/rainless.json"
+hash = "f4dc21e8164f6cf248f2e134770e956a61fd0d4299093c7ae6ccc2ffc59ab158"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rainless.json"
+hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_hoglin_stable.json"
+hash = "2ca6a8c428d5bc964f68a1fd0a9ec125168fb7a04710c230fbe05b25a502690a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_treasure.json"
+hash = "d42d8060adf1daf267990ce9f752a7f26275cd6433283372a06c49763c2d5705"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/advancement/recipes/misc/warphopper_fur_paper.json"
+hash = "20f8fc1ccc211b74dd30ea8357ae0eba669c60e8efc2dd4d23033dd4161625e9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/cooking/iron_nugget_from_iron_scrap.json"
+hash = "7fb0c44bc0ac68f79292565ee23656b0b661bf1a113ae914a021a938ae019107"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/cooking/iron_nugget_from_iron_scrap_blasting.json"
+hash = "89ed7f13831f36e3270abac3251c4fa1745bfccd5236ef19c7665a05971e1480"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/igneous_reeds_orange_dye.json"
+hash = "e795e58ff55dc889b56828f1a249a7f831583236ffdb1eb3c9663569ba8661eb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/stonecutting/from_pale_soul_slate/indented.json"
+hash = "731325666d9118aee13bdd7a9beec73f6ff659a5184f777a1efd3309fd259024"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/warphopper_fur_paper.json"
+hash = "97fd9db5cd2a4cbe50cff732055a0dbc0704a8ff395acca638a3880821eb8b26"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplored/worldgen/biome/eucalyptus_forest.json"
+hash = "4962d4ff228de652dc3e0313ca98a92c6bc36a0e756fe3f919288010788c935e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplored/worldgen/biome/rainforest.json"
+hash = "fd3edf66a27ef955cb50586fecd07bc47fd1232d674c63d3a5723a7a9fe06634"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplored/worldgen/biome/sparse_rainforest.json"
+hash = "40132e5d7fa1d38bba34cf79a912d3c8cfd072038c8889e79e099d9160d800be"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplored/worldgen/biome/tropics.json"
+hash = "98ef6f98d26d4947cb3293682029e6cba88b4c706e5ec13102f3e179148d8ca9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/yungscavebiomes/worldgen/biome/lost_caves.json"
+hash = "de947cc471e598e0da5f3d77e9533024a10b9ee97e1feff74078cecf0b5c9697"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/pack.mcmeta"
+hash = "b8533c4bc208333b6d80b5e5f45963c2e6b4b6f588ecf8988b301d4e6f5a141e"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-nether-fire-dragons/data/iceandfire/tags/worldgen/biome/structure_gen/fire.json"
@@ -1214,11 +1302,6 @@ hash = "31aca1d1f511bc95837e2bc6718cc3da836f43ce1487d0f4a8f66c2a39932d62"
 metafile = true
 
 [[files]]
-file = "mods/forgified-fabric-api.pw.toml"
-hash = "15219e64b45e53db93de94091172e6a4c5ae9a749710ce91a615c973a552c215"
-metafile = true
-
-[[files]]
 file = "mods/fragmentum-neoforge.pw.toml"
 hash = "025716240395f395e80de30c4298827ed5fd4867e138a15e7c3698f6195cdf63"
 metafile = true
@@ -2089,11 +2172,6 @@ hash = "a7541495700ef058dcd41c2a82d904afeb97678777e6bef6a08dc55851abd5da"
 metafile = true
 
 [[files]]
-file = "mods/voxy-server-side-forge-neoforge.pw.toml"
-hash = "010bd882d847282cac1bd5875e0e34a4844c128b297b07ddf99d7dc803961b90"
-metafile = true
-
-[[files]]
 file = "mods/waystones.pw.toml"
 hash = "42b53ca74c99b3d0edb2ef4e07896b269fd058e049e44e8503d8fd921342eee8"
 metafile = true
@@ -2241,11 +2319,6 @@ metafile = true
 [[files]]
 file = "tacz/tacz-addons-daffas-arsenal.pw.toml"
 hash = "458449c826aec1d372ae84126855627fc1b12cce81cbaeaffc08eadd379669ba"
-metafile = true
-
-[[files]]
-file = "tacz/tacz-call-of-duty-warzone-gunpack.pw.toml"
-hash = "f71065603c5cd1bdf11381f8d22b966aff19c627f790acc9b3970dd868ded668"
 metafile = true
 
 [[files]]

@@ -116,13 +116,11 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Compat API | `compatapi-1.0.3.jar` | CurseForge 1393220 / 7767181 | both | library | Required by Compat Structure. | none | defaults | 2026-09-22 |
 | Compat Structure | `compatstructures-1.0.3.jar` | CurseForge 1248133 / 7768220 | both | worldgen | Extra structures. World data. | Compat API | defaults | 2026-09-22 |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | CurseForge 261251 / 8135209 | client | QoL | Mutes wither/dragon/raid music. | none | defaults | 2026-09-22 |
-| Forgified Fabric API | `forgified-fabric-api-0.116.15+2.3.5+1.21.1.jar` | CurseForge 889079 / 8726480 | both | library | Fabric API on NeoForge. Needed by unofficial Voxy. | none | defaults | 2026-09-22 |
 | Ecliptic Seasons | `EclipticSeasons-1.21.1-neoforge-0.15.0-rc-3-1.jar` | CurseForge 1118306 / 8849038 | both | seasons | Solar-term seasons. World data. ARR. | none | defaults | 2026-09-22 |
 | Ecliptic Seasons : Bundles | `EclipticSeasons-Bundles-0.18.0.3.jar` | CurseForge 1449802 / 8946676 | both | seasons | Crop/datapack seasonal packs. | Ecliptic Seasons | defaults | 2026-09-22 |
 | Ecliptic Seasons: MultiMod Patch | `Ecliptic-Seasons-MultiMod-Patch-1.21.1-neoforge-0.32.1.jar` | CurseForge 1316748 / 8813347 | both | seasons | Extra mod seasonal hooks. | Ecliptic Seasons | defaults | 2026-09-22 |
 | Serene Seasons API Stub | `ecliptic-seasons-serene-api-bridge-1.21.1-neoforge-10.1.0.3-patch11-1.jar` | CurseForge 1476693 / 8828410 | both | seasons | Lets Serene-Seasons-API mods talk to Ecliptic. Do not add Serene Seasons. | Ecliptic Seasons | defaults | 2026-09-22 |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | CurseForge 690971 / 8778897 | client | HUD | Season on HUD / Xaero. | none (ES optional) | defaults | 2026-09-22 |
-| Voxy Server Side | `vss-0.3.1-neoforge-1.21.1.jar` | CurseForge 1591852 / 8923639 | both | renderer | Server-streamed distant LODs. Needs a local Voxy client to matter. | none (Voxy client extra) | defaults | 2026-09-22 |
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | CurseForge 1015118 / 6606621 | both | worldgen | Fortress overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | CurseForge 1015149 / 5812553 | both | worldgen | River bridges. World data. | YUNG's API | defaults | 2026-09-18 |
 | Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | CurseForge 1337167 / 8885814 | both | library | Required by Moog's Mineshafts. | none | defaults | 2026-09-18 |
@@ -262,7 +260,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar` | CurseForge 1353462 / 8547439 | both | combat | Unofficial 1.21.1 TaCZ. World data. Not compatible with 1.20.1 TaCZ worlds. | none | defaults | 2026-09-22 |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | CurseForge 1353465 / 8387504 | both | combat | Converts 1.20.1 gun packs for this port. | TaCZ | defaults | 2026-09-22 |
 | TaCZ addon | `taczaddon-1.1.8.2-neoforge-1.21.1.jar` | CurseForge 1238419 / 8836214 | both | combat | Extra TaCZ features. | TaCZ | defaults | 2026-09-22 |
-| [TaCZ] Tactical Breaching | `tacz_tactical_breaching-neoforge-1.21.1-1.0.5.jar` | CurseForge 1552880 / 8752892 | both | combat | Breaching, glass damage, shells, smoke. | TaCZ | defaults | 2026-09-22 |
+| [TaCZ] Tactical Breaching | `tacz_tactical_breaching-neoforge-1.21.1-1.0.5.jar` | CurseForge 1552880 / 8752892 | both | combat | Breaching, glass damage, shells, smoke. | TaCZ | distant-gunshot debug off | 2026-09-22 |
 | TaCZ x Guns Lights Addon | `tacz_x_guns_lights_addon-neoforge-1.21.1-2.8.2.jar` | CurseForge 1325673 / 8784270 | both | combat | Pinned 2.8.2 NeoForge; 2.9.0 is 1.20.x. | TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | CurseForge 1339813 / 8191224 | both | combat | Ammo box curios slot. | TaCZ, Curios | defaults | 2026-09-22 |
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | CurseForge 1338332 / 8618447 | both | combat | AE2 ammo box. | TaCZ, AE2 | defaults | 2026-09-22 |
@@ -287,9 +285,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | MCS2 gun pack | `MCS2_Gunpack_v1.0.4_AWP_tacz1.1.4_hotfix3.zip` | CurseForge 1113043 / 6083203 | both | combat | CS2-style guns. Zip in `pack/tacz/` for Pack Upgrader. Addon jar 1285238 is 1.20.1-only and does not load. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | Daffa's Arsenal | `daffas_arsenal-3.7.1.1.jar` | CurseForge 1254350 / 8862167 | both | combat | 1.20.1 gun pack in `pack/tacz/`. Forge creative-tab classes stay out of `mods/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | CS+ | `csplus-1.3.1-hotfix2.zip` | CurseForge 1623678 / 8867307 | both | combat | Counter-Strike gun pack. CurseForge file is a 1.20.1 jar; local name is `.zip` so Pack Upgrader reads root `gunpack.meta.json`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
-| Call of Duty Warzone gun pack | `[TaCZArcana]Warzone Ver1.1.8B.zip` | CurseForge 1196617 / 8811574 | both | combat | Warzone guns. 1.20.1 zip in `pack/tacz/`. World data. | TaCZ, Pack Upgrader | defaults | 2026-09-23 |
 | Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | CurseForge 961053 / 8855569 | both | combat | Guns beside TaCZ. World data. GeckoLib `[4.9.2,)`. | GeckoLib | defaults | 2026-09-23 |
-| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | both | combat | Use blocks and entities while holding a Point Blank gun. The client requires network channel `pointblank_passthrough:interaction` on the server. Server zip strips the class-level client-only marker on `InteractionManager` and stubs its client-only methods. | Point Blank | server jar patched | 2026-09-23 |
+| Vic's Point Blank - Interaction | `pointblank_passthrough_interaction-1.0.0.jar` | CurseForge 1310557 / 6791284 | both | combat | Use blocks and entities while holding a Point Blank gun. The client requires network channel `pointblank_passthrough:interaction` on the server. Server zip strips the class-level client-only marker on `InteractionManager` and stubs its client-only methods. | Point Blank | server jar patched; debug logging off | 2026-09-23 |
 | Point Blank Aeronautics compat | `pointblank_aero_compat-1.0.0.jar` | CurseForge 1540250 / 8073109 | both | combat | Bullets hit Aeronautics physics objects. | Point Blank, Aeronautics | defaults | 2026-09-23 |
 | Point Blank Extended Edition | `pbext-ext 1.0.zip` | CurseForge 1403532 / 7327102 | both | combat | Official gun pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
 | Point Blank Gun Gale Pack | `ggo-ext 1.0.zip` | CurseForge 1379446 / 7191282 | both | combat | Official Gun Gale pack in `pack/pointblank/`. | Point Blank | defaults | 2026-09-23 |
@@ -409,7 +406,6 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | MCS2 gun pack | See CurseForge page | ARR | CurseForge metadata. Zip stays in `pack/tacz/`. Do not ship MCS2Gun-addon 1285238 (encrypted 1.20.1 Forge jar). |
 | Daffa's Arsenal | DaffaTheOne | CC-BY-NC-4.0; inner pack header says all rights reserved | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
 | CS+ | lolokeia | CC BY-NC-4.0 | CurseForge metadata in `pack/tacz/`. Do not embed the jar. |
-| Call of Duty Warzone gun pack | See CurseForge page | Not stated in the zip | CurseForge metadata in `pack/tacz/`. Do not embed the zip. |
 | Vic's Point Blank and official packs | vic4games | ARR | CurseForge metadata; do not embed the jars or zips. |
 | Vic's Point Blank - Interaction | Tidloas | MIT | CurseForge reference. |
 | Point Blank Aeronautics compat | Glaiden_ | MIT | CurseForge reference. |
@@ -422,9 +418,6 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | Darkest Ages Mobs and Fresh Animations compat, Icon Xaero's | See CurseForge pages | See CurseForge pages | CurseForge reference. |
 | Ecliptic Seasons, Bundles, MultiMod Patch, Serene Seasons API Stub | joe_vettek et al. | ARR | CurseForge metadata; do not embed the jars. |
 | SeasonHud | IanAnderson | MIT | CurseForge reference. |
-| Forgified Fabric API | Su5eD / Fabric API authors | Apache-2.0 | CurseForge reference. |
-| Voxy Server Side | wish131400 | MIT | CurseForge reference. |
-| voxy-forged | MCRcortex / falling-colud | ARR (Voxy); personal-use port | Cannot ship. Local Prism build only. |
 | Demagnetizer | See CurseForge page | See CurseForge page | CurseForge metadata. |
 | GeckolibBetterFPS | MoePus | LGPL-3.0-or-later | CurseForge reference. |
 | Terralith, Nullscape, Amplified Nether | Stardust Labs | See CurseForge pages | CurseForge reference. |
@@ -458,8 +451,7 @@ Long lists: [deferred.md](deferred.md).
 |---|---|---|
 | TwilightForest Thread Safety Addon | Still 1.20.1 Forge only | 1.21.1 NeoForge file. |
 | C2ME OpenCL | Java 25 even on 1.21.1; TerraBlender biome fail; Apple OpenCL unsupported | Pack JVM 25 (separate upgrade) plus TerraBlender-safe OpenCL, or skip. |
-| Roxy | Needs Fabric Voxy 0.2.16-beta (1.21.11) and conflicts with native voxy-forged | Do not stack with voxy-forged. |
-| voxy-forged | ARR; no release jars; cannot packwiz | Local `gradlew build` into Prism `mods/`. |
+| Roxy, voxy-forged | Voxy is out. Roxy needs Fabric Voxy on 1.21.11 and conflicts with voxy-forged. voxy-forged is ARR and cannot ship. | Do not re-add. |
 
 ## Deferred Ecosystem Upgrades
 
@@ -472,7 +464,8 @@ Long lists: [deferred.md](deferred.md).
 |---|---|---|---|
 | JEI++ | 2026-09-23 | Client join crash: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, moved in JEI 19.57. Latest file 1.0.5 still targets JEI 19.56. | Only with a JEI 19.57 build. |
 | Epic Fight Nightfall, Invincible Lib | 2026-09-23 | Nightfall reads client VFX config on dedicated servers and crashes when mobs gain effects. AAA Particles stays. | Only with a dedicated-server fix. |
-| Ecliptic Seasons : Voxy Compact, Voxy - Make it compatible | 2026-09-23 | Mixin crash when the unofficial Voxy client jar is not installed. Voxy cannot ship in the pack. | Manual Prism add next to a local `voxy-forged` jar only. |
+| Ecliptic Seasons : Voxy Compact, Voxy - Make it compatible | 2026-09-23 | Mixin crash when the unofficial Voxy client jar is not installed. Voxy cannot ship in the pack. | No. Voxy itself was removed on 2026-09-24. |
+| Voxy, Voxy Server Side, Forgified Fabric API | 2026-09-24 | Distant LOD removed on request. Forgified Fabric API existed only for the local Voxy renderer. No other installed mod depends on it. | No. |
 | Mekanism Covers | 2026-09-23 | Client join crash: `SodiumBlockRendererMixin.putTranslucentVertexColor` fails on Sodium 0.8.13 (0 targets). Latest file still 1.3-BETA (2025-01-10). Author's `disableAdvancedCoverRendering` config does not skip the mixin. World data. | Only with a Sodium 0.8-compatible build. |
 | Entire 1.20.1 Forge pack | 2026-09-17 | Loader and Minecraft cutover. History is on `forge-1.20.1`. | Research each mod again for 1.21.1 NeoForge. |
 | EMI, EMI Ores, EMI Enchanting, EMI QoL Tweaks, TMRV | 2026-09-22 | TMRV's fake JEI 19.27 failed Polymorph (≥19.52) and Sophisticated (≥19.32). Replaced with real JEI. | No while JEI is the viewer. |

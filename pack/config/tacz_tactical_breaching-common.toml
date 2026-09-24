@@ -1,0 +1,3 @@
+[distant_gunshots]
+	#Log distant gunshot dispatch details for troubleshooting. Can also be toggled with /taczbreach distantgunshots debug.
+	debugDistantGunshots = false
