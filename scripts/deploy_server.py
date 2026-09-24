@@ -24,8 +24,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from envfile import load_env_file
-from pack_artifacts import atlauncher_instructions, build_all
-from publish_stores import replace_github_release_asset
+from pack_artifacts import atlauncher_instructions, build_all, dist_paths
+from publish_stores import github_download_url, github_release_by_tag, replace_github_release_asset
 from wings import Wings, node_configuration, wings_base_url
 from read_pack_versions import PACK_TOML, read_pack
 
@@ -548,6 +548,38 @@ def origin_owner_repo() -> tuple[str, str]:
     return parts[0], parts[1]
 
 
+def existing_github_server_zip(pack: dict[str, str]) -> tuple[str, int] | None:
+    """Return the download URL and size when this pack version already has a server zip."""
+    token = env("GH_TOKEN") or env("GITHUB_TOKEN")
+    if not token:
+        return None
+    owner, repo = origin_owner_repo()
+    tag = f"v{pack['pack_version']}"
+    filename = dist_paths(pack)["server_zip"].name
+    try:
+        release = github_release_by_tag(owner=owner, repo=repo, tag=tag, token=token)
+    except SystemExit as exc:
+        if "HTTP 404" not in str(exc):
+            raise
+        print(f"GitHub Release {tag} is not published")
+        return None
+    for asset in release.get("assets") or []:
+        if not isinstance(asset, dict):
+            continue
+        if str(asset.get("name") or "") != filename:
+            continue
+        size = int(asset.get("size") or 0)
+        if size <= 0:
+            break
+        print(
+            f"GitHub Release {tag} already has {filename} ({size} bytes); "
+            "skipping pack build"
+        )
+        return github_download_url(owner=owner, repo=repo, tag=tag, filename=filename), size
+    print(f"GitHub Release {tag} has no {filename}")
+    return None
+
+
 def publish_server_zip_to_github(pack: dict[str, str], zip_path: Path) -> str:
     token = env("GH_TOKEN") or env("GITHUB_TOKEN")
     if not zip_path.is_file():
@@ -618,7 +650,13 @@ def _follow_redirects(url: str) -> str:
         return final
 
 
-def upload_server_mods(wings: Wings, zip_path: Path, *, github_url: str) -> None:
+def upload_server_mods(
+    wings: Wings,
+    *,
+    github_url: str,
+    zip_size: int,
+    expect_jars: bool,
+) -> None:
     print("stopping server so mods can be replaced")
     wings.power("stop", ignore_http=(409,))
     try:
@@ -632,8 +670,7 @@ def upload_server_mods(wings: Wings, zip_path: Path, *, github_url: str) -> None
         except SystemExit:
             print("  continuing; Wings did not report offline")
 
-    print(f"server mods zip on GitHub ({zip_path.stat().st_size} bytes)")
-    expect_jars = zip_has_jars(zip_path)
+    print(f"server mods zip on GitHub ({zip_size} bytes)")
     wings.delete(["mods", SERVER_MODS_REMOTE])
     print("Pelican pulling the server-mods zip from the GitHub Release")
     try:
@@ -687,7 +724,10 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--from-local",
         action="store_true",
-        help="attach the server-mods zip to the GitHub Release, then have Pelican pull that zip",
+        help=(
+            "have Pelican pull the server-mods zip already on the GitHub Release "
+            "for this pack version; build and attach one only when that asset is missing"
+        ),
     )
     parser.add_argument(
         "--share-only",
@@ -804,23 +844,43 @@ def deploy_from_local(
         ip = allocation.get("ip_alias") or allocation.get("ip")
         print(f"new allocation id={allocation.get('id')} {ip}:{allocation.get('port')}")
 
-    if args.dry_run:
-        print(
-            "dry-run: would export ATLauncher files, attach the server-mods zip to "
-            "the GitHub Release, switch this server to the NeoForge egg, install NeoForge, "
-            "then have Pelican pull that zip"
-        )
-        return
-
     if not (env("GH_TOKEN") or env("GITHUB_TOKEN")):
+        if args.dry_run:
+            print(
+                "dry-run: GH_TOKEN is missing, so GitHub was not checked. "
+                "Would build a pack only when Release "
+                f"v{pack['pack_version']} has no server-mods zip, then have Pelican pull it"
+            )
+            return
         raise SystemExit(
             "GH_TOKEN is required. Attach the server-mods zip to the GitHub Release "
             "before Pelican can pull it. Set GH_TOKEN in .env and never commit it."
         )
 
-    print("building local pack artifacts")
-    _pack, paths = build_all()
-    print(atlauncher_instructions(paths))
+    existing = existing_github_server_zip(pack)
+    if args.dry_run:
+        if existing:
+            print(
+                "dry-run: would have Pelican pull the existing GitHub server-mods zip "
+                "without building a pack"
+            )
+        else:
+            print(
+                "dry-run: would build the pack, attach the server-mods zip to the "
+                "GitHub Release, then have Pelican pull it"
+            )
+        return
+
+    if existing:
+        github_url, zip_size = existing
+        expect_jars = zip_size > 1024
+    else:
+        print("building local pack artifacts")
+        _pack, paths = build_all()
+        print(atlauncher_instructions(paths))
+        github_url = publish_server_zip_to_github(pack, paths["server_zip"])
+        zip_size = paths["server_zip"].stat().st_size
+        expect_jars = zip_has_jars(paths["server_zip"])
 
     description = (
         f"{server_name} test server. Pelican pulls the GitHub Release server-mods zip."
@@ -872,8 +932,9 @@ def deploy_from_local(
 
     upload_server_mods(
         wings,
-        paths["server_zip"],
-        github_url=publish_server_zip_to_github(pack, paths["server_zip"]),
+        github_url=github_url,
+        zip_size=zip_size,
+        expect_jars=expect_jars,
     )
     print("starting server")
     wings.power("start")
@@ -882,7 +943,8 @@ def deploy_from_local(
     print(
         "Watch the panel console for NeoForge 'Done'. Application API keys cannot read live logs."
     )
-    print(atlauncher_instructions(paths))
+    if not existing:
+        print(atlauncher_instructions(paths))
 
 
 def deploy_from_curseforge(

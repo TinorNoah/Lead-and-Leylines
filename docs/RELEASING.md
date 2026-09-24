@@ -21,7 +21,9 @@ Default is `alpha`: GitHub prerelease, then the Pelican server update, then loca
 Order on the operator machine:
 
 1. Tag and GitHub Release (client zip, mrpack, server-mods zip)
-2. Pelican pulls that server-mods zip from the GitHub Release (`deploy_server.py --from-local`, unless `--skip-server`)
+2. Pelican pulls that server-mods zip from the GitHub Release (`deploy_server.py --from-local`, unless `--skip-server`). That deploy reuses the zip just attached and does not build the pack again.
+
+Pack builds (the release export, the smoke-test server zip, and a deploy that has to attach a missing zip) reuse a jar when the packwiz cache or `.cache/mod-files` already has that file's hash. Only missing files are downloaded. `packwiz modrinth export` uses the packwiz cache the same way. Do not delete those caches or fetch every jar before a release, smoke test, or deploy.
 3. CurseForge only with `--curseforge` or `--upload-stores`
 4. Local Prism sync (unless `--skip-prism`)
 

@@ -16,7 +16,7 @@ Read Minecraft version, loader name, and loader version from `pack/pack.toml` (`
 | Decision logs | `docs/mods/` (e.g. `performance.md`) |
 | Config notes | `docs/mods/configs.md` — only settings that need pack notes |
 | Local test | Prism + `packwiz serve` (see CONTRIBUTING.md). `python scripts/update_prism.py` after a GitHub Release (also invoked from `release.py`). Friends: ATLauncher Import of `dist/*.mrpack` from `python scripts/deploy_server.py --share-only` |
-| Dedicated server | `python scripts/deploy_server.py` (NeoForge egg + local mods until CurseForge is public). Overlay `server/run.sh` plus `pack/user_jvm_args.txt`; not exported. Same pack, packwiz `side` |
+| Dedicated server | `python scripts/deploy_server.py --from-local` (pulls the GitHub Release server zip when that pack version already has one; a missing zip is built from cached jars). Overlay `server/run.sh` plus `pack/user_jvm_args.txt`; not exported. Same pack, packwiz `side` |
 
 GitHub remote is `https://github.com/TinorNoah/Lead-and-Leylines.git`. Do not change remotes or store project slugs as a side effect of adding a mod.
 
@@ -45,7 +45,7 @@ The git tree (TOML + `docs/mods/`) is the reproducible backup. The Prism `mods/`
 1. Re-verify the store file still lists this pack’s Minecraft + NeoForge from `pack.toml`.
 2. Install with packwiz (required deps only). Do not bump Minecraft, NeoForge, or shared libraries in `pack.toml` to make a mod fit.
 3. `packwiz refresh`.
-4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` and watch the panel console.
+4. Sync Prism with `packwiz serve` + installer bootstrap, then confirm a clean boot (log + intended feature), not just that a TOML file appeared. For a dedicated-server check, `python scripts/deploy_server.py --from-local` (reuses the GitHub Release server zip when that pack version already has one; a missing zip is built from cached jars) and watch the panel console.
 5. Update `docs/mods/manifest.md` and the relevant `docs/mods/` decision log. Confirm the manifest matches `pack/mods/*.pw.toml`.
 
 ## Rollback on this pack
