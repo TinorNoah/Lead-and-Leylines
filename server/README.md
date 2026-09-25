@@ -63,5 +63,6 @@ Re-copy these onto the server **after every egg reinstall** (the install script 
 - `run.sh` — NeoForge start. Panel startup is `bash run.sh`. Uses Java 21 ZGC from `user_jvm_args.txt`. Sets `-Xmx` below the panel `SERVER_MEMORY` limit (about 1.5 GiB headroom) so ZGC and native memory do not trigger Linux OOM kill (exit 137). Do not add `-XX:+ZGenerational`.
 - `user_jvm_args.txt` — copied from `pack/user_jvm_args.txt`
 - `ops.json`
+- `server-icon.png` — 64×64 leyline emblem shown beside the server name in the multiplayer list
 
 The NeoForge egg’s default startup is `java … @unix_args.txt` and ignores `user_jvm_args.txt`. Local NeoForge deploys set startup to `bash run.sh` so ZGC actually applies. The CurseForge Generic egg keeps its own startup.

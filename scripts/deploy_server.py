@@ -627,6 +627,7 @@ def write_overlay(wings: Wings) -> None:
         (overlay / "run.sh", "/run.sh"),
         (pack_jvm, "/user_jvm_args.txt"),
         (overlay / "ops.json", "/ops.json"),
+        (overlay / "server-icon.png", "/server-icon.png"),
     ]
     for path, remote in mapping:
         if path.is_file():
