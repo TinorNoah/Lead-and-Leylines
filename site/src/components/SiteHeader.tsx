@@ -51,7 +51,6 @@ export function SiteHeader({ pack, modCount, commit, source }: Props) {
           )}
         </div>
       </div>
-      <div className="ley-rule w-full" />
     </header>
   );
 }
