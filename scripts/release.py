@@ -310,6 +310,8 @@ def main() -> None:
     print(changelog)
     print("---")
     sys.stdout.flush()
+    print("installed catalog: checking…")
+    run([sys.executable, str(ROOT / "scripts" / "installed_catalog.py"), "--check"])
     pack = read_pack(ROOT / "pack" / "pack.toml")
     assert_ready(pack, tag, version, dry_run=args.dry_run)
     owner, repo = origin_owner_repo()
