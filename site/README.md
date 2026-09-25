@@ -67,7 +67,7 @@ The route verifies `X-Hub-Signature-256` over the raw body, accepts only pushes 
 
 ## How updates work
 
-1. Edit [`docs/installed/catalog.toml`](../docs/installed/catalog.toml) when adding/removing mods.
+1. Hand-edit [`docs/installed/catalog.toml`](../docs/installed/catalog.toml) when adding/removing mods (packwiz does not update it). Policy: [`docs/installed/MAINTENANCE.md`](../docs/installed/MAINTENANCE.md).
 2. Run `python3 scripts/installed_catalog.py` to regenerate markdown + `catalog.json`.
 3. Merge to `main`.
 4. The site polls the latest commit (default every 10 minutes) or refreshes immediately via the webhook.

@@ -220,7 +220,7 @@ def render_readme(categories: list[dict[str, Any]], mod_count: int) -> str:
         "",
         "Why a mod was kept or held is in [`docs/mods/`](../mods/manifest.md). This folder is only the current install.",
         "",
-        "Edit [`catalog.toml`](catalog.toml), then run `python3 scripts/installed_catalog.py` to regenerate these pages and [`catalog.json`](catalog.json).",
+        "Edit [`catalog.toml`](catalog.toml), then run `python3 scripts/installed_catalog.py` to regenerate these pages and [`catalog.json`](catalog.json). Who updates what: [`MAINTENANCE.md`](MAINTENANCE.md).",
         "",
         "The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dokploy).",
         "",

@@ -37,6 +37,14 @@ GitHub Actions (`.github/workflows/publish-stores.yml`) runs only when `release.
 
 Do not later re-upload the same `X.Y.Z` as a store `release`. A GitHub prerelease stays alpha/beta on the stores. Cut a **new** version tag and run `release.py --channel release --curseforge` for an official GitHub Latest plus store release.
 
+## Installed catalog
+
+The browsable mod list (`docs/installed/`) is part of the commit and publish path, not a post-release cleanup.
+
+- Hand-edit `docs/installed/catalog.toml` when packwiz entries change; run `python3 scripts/installed_catalog.py` to regenerate markdown and `catalog.json`.
+- `python3 scripts/installed_catalog.py --check` must pass before tagging. `release.py` runs that check as a preflight.
+- Full policy: [docs/installed/MAINTENANCE.md](installed/MAINTENANCE.md). The site under `site/` reads `catalog.json` from GitHub after merge to `main`.
+
 ## Changelog
 
 `CHANGELOG.md` at the repo root follows [Keep a Changelog 1.1.0](https://keepachangelog.com/en/1.1.0/).

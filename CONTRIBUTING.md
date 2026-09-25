@@ -20,7 +20,7 @@ Once per clone:
 git config core.hooksPath .githooks
 ```
 
-That runs `scripts/pre_commit_check.py` on commit: it **blocks** staged `.jar` files, and **warns** (does not block) if `pack/mods/*.pw.toml` is staged without `CHANGELOG.md`. Do not copy hooks into `.git/hooks/` by hand.
+That runs `scripts/pre_commit_check.py` on commit: it **blocks** staged `.jar` files, and **warns** (does not block) if packwiz `*.pw.toml` under `pack/mods/`, `pack/resourcepacks/`, `pack/tacz/`, or `pack/pointblank/` is staged without `CHANGELOG.md` or without `docs/installed/catalog.toml`. Do not copy hooks into `.git/hooks/` by hand.
 
 ## Add a mod
 
@@ -30,7 +30,9 @@ Prefer the `minecraft-modding` skill (research and approval), then `add-mod` (pa
 2. Confirm the mod supports that Minecraft version and loader on CurseForge or Modrinth.
 3. `packwiz curseforge install <slug-or-url>` first. Use `packwiz modrinth install` only if the mod is not on CurseForge. See `docs/mods/distribution.md`.
 4. `packwiz refresh`.
-5. Commit the new `*.pw.toml`, `index.toml` / `pack.toml`, and `docs/mods/` updates. Never commit jars.
+5. Update `docs/mods/` (manifest + decision log).
+6. Edit `docs/installed/catalog.toml` (hand-edited; packwiz does not touch it), then run `python3 scripts/installed_catalog.py` and `--check`. See [docs/installed/MAINTENANCE.md](docs/installed/MAINTENANCE.md).
+7. Commit the new `*.pw.toml`, `index.toml` / `pack.toml`, catalog outputs, and docs. Never commit jars.
 
 ## Test on Prism
 
@@ -60,7 +62,7 @@ Policy: [docs/RELEASING.md](docs/RELEASING.md). Keep `CHANGELOG.md` `[Unreleased
 The Pelican test server address is shared with testers out of band (Discord/DM/etc.), never in the repo or GitHub Release text.
 
 1. Set `pack.toml` `version` to `X.Y.Z` (no `v`) and keep the README Pack details table in sync.
-2. Promote `[Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and re-scaffold an empty `[Unreleased]` (see docs/RELEASING.md). Merge to `main` with a clean working tree.
+2. Promote `[Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and re-scaffold an empty `[Unreleased]` (see docs/RELEASING.md). Confirm `python3 scripts/installed_catalog.py --check` passes (see [docs/installed/MAINTENANCE.md](docs/installed/MAINTENANCE.md)). Merge to `main` with a clean working tree.
 3. From the repo root:
 
    ```text

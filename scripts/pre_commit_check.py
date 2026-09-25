@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Local pre-commit checks against the staged index.
 
-Hard-blocks staged .jar files. Warns (exit 0) if pack/mods *.pw.toml is staged
-without CHANGELOG.md or docs/installed/catalog.toml in the same commit.
+Hard-blocks staged .jar files. Warns (exit 0) if packwiz *.pw.toml is staged
+without CHANGELOG.md or docs/installed/catalog.toml, or if catalog.toml is
+staged without regenerated catalog.json.
 """
 
 from __future__ import annotations
@@ -12,6 +13,13 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+
+PW_PREFIXES = (
+    "pack/mods/",
+    "pack/resourcepacks/",
+    "pack/tacz/",
+    "pack/pointblank/",
+)
 
 
 def staged_files() -> list[str]:
@@ -41,21 +49,29 @@ def main() -> None:
     pw_tomls = [
         name
         for name in files
-        if name.startswith("pack/mods/") and name.endswith(".pw.toml")
+        if name.endswith(".pw.toml") and name.startswith(PW_PREFIXES)
     ]
     changelog_staged = "CHANGELOG.md" in files
     if pw_tomls and not changelog_staged:
         print(
-            "pre-commit: pack/mods *.pw.toml is staged but CHANGELOG.md is not. "
+            "pre-commit: packwiz *.pw.toml is staged but CHANGELOG.md is not. "
             "If players will notice this, run the update-changelog skill. "
             "Not blocking: splitting the changelog into a later commit is fine."
         )
     catalog_staged = "docs/installed/catalog.toml" in files
+    catalog_json_staged = "docs/installed/catalog.json" in files
     if pw_tomls and not catalog_staged:
         print(
-            "pre-commit: pack/mods *.pw.toml is staged but docs/installed/catalog.toml "
-            "is not. Add or remove the catalog row, then run "
-            "python3 scripts/installed_catalog.py. Not blocking."
+            "pre-commit: packwiz *.pw.toml is staged but docs/installed/catalog.toml "
+            "is not. Hand-edit the catalog row, then run "
+            "python3 scripts/installed_catalog.py. See docs/installed/MAINTENANCE.md. "
+            "Not blocking."
+        )
+    if catalog_staged and not catalog_json_staged:
+        print(
+            "pre-commit: docs/installed/catalog.toml is staged but catalog.json is not. "
+            "Run python3 scripts/installed_catalog.py and stage the outputs. "
+            "See docs/installed/MAINTENANCE.md. Not blocking."
         )
     raise SystemExit(0)
 

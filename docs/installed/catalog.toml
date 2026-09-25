@@ -1,4 +1,6 @@
-# Installed-mod catalog. Edit this file; run: python3 scripts/installed_catalog.py
+# Installed-mod catalog. Hand-edit this file when packwiz entries change.
+# Then run: python3 scripts/installed_catalog.py
+# Policy: docs/installed/MAINTENANCE.md
 # Source of truth for docs/installed/*.md and docs/installed/catalog.json.
 
 [tags]
