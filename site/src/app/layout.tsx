@@ -24,6 +24,10 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Lead and Leylines · Installed mods",
   description: "Browse, search, and filter every mod in the Lead and Leylines pack.",
+  icons: {
+    icon: [{ url: "/emblem.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/emblem.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
