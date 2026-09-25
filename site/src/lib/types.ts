@@ -60,11 +60,19 @@ export type CommitInfo = {
   url: string;
 };
 
+export type ReleaseChannel = "release" | "prerelease";
+
 export type ReleaseInfo = {
   tag: string;
   version: string;
   name: string;
   url: string;
+  channel: ReleaseChannel;
+};
+
+export type ReleaseChannels = {
+  official: ReleaseInfo | null;
+  prerelease: ReleaseInfo | null;
 };
 
 export type ModMetadata = {

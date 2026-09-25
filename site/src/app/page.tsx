@@ -4,14 +4,14 @@ import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { LeylineParticles } from "@/components/LeylineParticles";
 import { SiteHeader } from "@/components/SiteHeader";
 import { loadBrowserData } from "@/lib/catalog";
-import { fetchLatestRelease } from "@/lib/release";
+import { fetchReleaseChannels } from "@/lib/release";
 
 export const dynamic = "force-dynamic";
 
 export default async function HomePage() {
   const data = await loadBrowserData();
   const { catalog, source } = data.snapshot;
-  const release = await fetchLatestRelease(catalog.pack.version);
+  const { official, prerelease } = await fetchReleaseChannels(catalog.pack.version);
 
   return (
     <>
@@ -20,7 +20,8 @@ export default async function HomePage() {
         <SiteHeader
           pack={catalog.pack}
           modCount={data.mods.length}
-          release={release}
+          official={official}
+          prerelease={prerelease}
           source={source}
         />
         <Suspense fallback={<div className="p-8 text-muted">Loading catalog…</div>}>
