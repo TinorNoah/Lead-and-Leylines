@@ -1,0 +1,15 @@
+{
+  "pools": [
+    {
+    "rolls": 1,
+     "entries": [
+	    { "type": "item","name": "minecraft:shulker_shell","weight": 1,"functions": [{"function": "set_count", "add": false, "count": {"type": "minecraft:uniform","min":2,"max":4}}, {"function": "minecraft:enchanted_count_increase","enchantment": "minecraft:looting","count": {"type": "minecraft:uniform","min": 0,"max": 4}}]}]},
+	{
+	"rolls": 1,
+      "entries": [	  
+		{ "type": "item","name": "minecraft:chest","weight": 2,"functions": [{"function": "set_count", "count": 1 }]},
+		{ "type": "item","name": "minecraft:shulker_box","weight": 1,"functions": [{"function": "set_count", "count": 1 }]},
+        { "type": "item","name": "minecraft:pink_wool","weight": 8,"functions": [{"function": "set_count", "count": 5 }]}
+	]}
+]
+}

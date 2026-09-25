@@ -38,10 +38,15 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TagTooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | client | `addon`, `info` | Hold a key to list item tags inside that frame. |
 | Item Borders [Neo/Forge] | `ItemBorders-1.21-neoforge-1.2.5.jar` | client | `addon`, `info` | Rarity borders on item slots. |
 | Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | client | `addon`, `info` | Durability numbers. |
+| Enchantment Descriptions | `enchdesc-neoforge-1.21.1-21.1.11.jar` | client | `addon`, `info` | What each enchantment does, on the item tooltip. |
+| Beautiful Enchanted Books [MOD EDITION] \| 6.0 UPDATE! | `BEB-NeoForge-1.21-6.0.0.jar` | client | `addon`, `info` | Enchanted books use theme textures. |
+| Enchant Icons | `enchant icons 1.21 v1.3.zip` | client | `resource-pack`, `info` | Resource pack. Icons next to enchantment names. |
+| Loot Journal: Pickup Notifier [NeoForge Edition] | `loot_journal-neoforge-1.21.1-6.2.2.jar` | client | `addon`, `info` | Animated pickup notifier for looted items. |
 | Equipment Compare [Neo/Forge] | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | client | `addon`, `info` | Shift-compare armor and tools. |
 | Iceberg [Neo/Forge] | `Iceberg-1.21.1-neoforge-1.3.2.jar` | both | `library`, `info` | Library Equipment Compare and Item Borders use. |
 | Prism [Neo/Forge] | `Prism-1.21.1-neoforge-1.0.11.jar` | both | `library`, `info` | Library Item Borders uses. |
 | Toast Control | `ToastControl-1.21.1-9.0.1.jar` | client | `addon`, `info` | Hides toast spam. |
 | Better Advancements | `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | client | `addon`, `info` | Clearer advancement screen. |
 | Clickable advancements | `clickadv-1.21-3.8.jar` | both | `addon`, `info` | Click advancements to focus them. |
+| BetterF3 | `BetterF3-11.0.3-NeoForge-1.21.1.jar` | client | `addon`, `info` | Clearer, configurable debug HUD. |
 | Enhanced Boss Bars | `[1.6] Enhanced Boss Bars.zip` | client | `resource-pack`, `info` | Resource pack. Boss bar style. |

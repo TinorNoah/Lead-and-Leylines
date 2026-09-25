@@ -1,0 +1,13 @@
+{
+  "pools": [
+    {
+    "rolls": 1,
+     "entries": [
+	    { "type": "item","name": "minecraft:leather","weight": 1,"functions": [{"function": "set_count", "add": false, "count": {"type": "minecraft:uniform","min":2,"max":4}}, {"function": "minecraft:enchanted_count_increase","enchantment": "minecraft:looting","count": {"type": "minecraft:uniform","min": 0,"max": 6}}]}]},
+	{
+	"rolls": 1,
+      "entries": [	  
+		{ "type": "item","name": "minecraft:saddle","weight": 2,"functions": [{"function": "set_count", "count": 1 }]},
+		{ "type": "item","name": "minecraft:carrot","weight": 4,"functions": [{"function": "set_count", "count": 1 }]}
+]
+}]}

@@ -13,9 +13,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TaCZ addon | `taczaddon-1.1.8.2-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | both | `compat`, `guns`, `tacz` | Keeps TaCZ loading with the rest of the pack. |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | both | `addon`, `guns`, `tacz` | Updates older gun-pack data. |
-| TaCZ: Blueprints Reforged | `tacz-blueprints-reforged-1.0.1.jar` | both | `library`, `guns`, `tacz` | Gun blueprints. |
 | [TaCZ] Refit \| Recipe and Stats Editor | `tacz_refit-1.21.1-v005.jar` | both | `addon`, `guns`, `tacz` | Recipe and stat editor. |
-| TaCZ x Guns Lights Addon [NEW] 2.9.0 | `tacz_x_guns_lights_addon-neoforge-1.21.1-2.8.2.jar` | both | `addon`, `guns`, `tacz` | Gun lights. |
 | [TaCZ]  Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | both | `addon`, `guns`, `tacz` | Ammo box on a Curios slot. |
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | both | `addon`, `guns`, `tacz` | Applied Energistics ammo box. |
 | Applied TaCZ | `AppliedTaCZ-1.21.1-19.0.1.jar` | both | `addon`, `guns`, `tacz` | Crafts and stores TaCZ guns in Applied Energistics. |

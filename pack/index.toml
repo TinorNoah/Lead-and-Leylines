@@ -5,6 +5,10 @@ file = "config/alexscaves-general.toml"
 hash = "3fb0cd38d33614b3fa4a8b99f677071e726610d37adb08eac19c0cab7417fcce"
 
 [[files]]
+file = "config/apotheosis/apothic_enchanting.cfg"
+hash = "5c5ecc830a1aa834fce992f5001c390afd194d65796b94789d48970542f77192"
+
+[[files]]
 file = "config/bclib/client.json"
 hash = "da72cfb6d973948564bd4ce3c4ece839fb2f980b8895ee6253fbec9cac6749ec"
 
@@ -18,7 +22,7 @@ hash = "e8a9765227148e6008255c5be7df4068dcd53f3c0aeeeaa49fcf381f2ef9e6df"
 
 [[files]]
 file = "config/global_packs.toml"
-hash = "73feda50da17f53289f31adaae3d49efaf37dfe02623564eefbc280b1fc193b1"
+hash = "70232b5fd0b6c62a42494f594563914763be0da31c810ae495be561cf97ade0b"
 
 [[files]]
 file = "config/iceandfire/iaf-common.json"
@@ -51,6 +55,102 @@ hash = "0b04f683f10ef0077492a7cac08beac6b4eb01d2d1e5a34db9f9fd05827dae27"
 [[files]]
 file = "config/wover/client.json"
 hash = "a75e7abea77e50cf00112f5548d823e680033c1808db3e1b46117a925a18cc79"
+
+[[files]]
+file = "global_packs/required_data/darkloot/README.md"
+hash = "e181bbf05ab37d62cd3b551681929ed58a8c019e28ed0adddc430ddfb27b2456"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/blaze.json"
+hash = "c0ddd175bd09c6104c349e1a72f1154b0882567e7d63204fa4d7dfbc4845a6b5"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/cave_spider.json"
+hash = "3fbed9c9e0911b8344a1668d5347f928598470774a599572024f2cafc2bbe838"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/chicken.json"
+hash = "f6b40ba7677dd0a96c1a1addf2fb3e091491deb6a73f1fd55aea775b2be7f891"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/cow.json"
+hash = "589194007828bac7c6122d0ce57acdc1006b09058bb9b015b3db2284dd02e344"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/creeper.json"
+hash = "dafe5b70d42c052a4558c8f6063f50edfb36df269aaabc8c7773ce7e2e259c31"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/ender_dragon.json"
+hash = "4261a425a9cb5390d143f18f85ca5c82e27fc44b1a32f58a8d16364e8406bbfc"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/enderman.json"
+hash = "cbc75e6a17bd3d0127b9b2d887684bd88d6f769446dd3b1696e492954e766b47"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/ghast.json"
+hash = "c6b5efcc8bb4049fb73524d07a024c3c54ca2a7c821bb274b78cdb7d6b88ebf0"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/hoglin.json"
+hash = "7dc3d36a78329773bdf452adedb53c881618670eab033d626f2fc929281b8d63"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/horse.json"
+hash = "672e1692cce97307ea520c17dc17cdb6d27369fc888c68c4a161fde27e69fe4a"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/magma_cube.json"
+hash = "6f6aff2196d5c11c6f7e91f1c5f05293131a2544e8394c8a56f11f5fb6bfe32a"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/phantom.json"
+hash = "b72f27528cf9da22eef76c568be1cdd4fd0d7c47340b795ba37f229c1b9a3e69"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/pig.json"
+hash = "1a6d9a8005cc7ab5b96afb1a58aeba720c1a511e57a643f03ece12607f021116"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/piglin.json"
+hash = "d768534f6482e527bf4139ed48e81ac71cd559349ad3ee37299667ba06e16727"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/shulker.json"
+hash = "97447184ac4984d7a9caa7c9ecb46d0834e19e4ff16ef89b5633aa2879894669"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/skeleton.json"
+hash = "c1bdbe40a9b8d9077a8974d7d7da6bf499229157cfabab229101ce73585c3643"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/skeleton_horse.json"
+hash = "403a2f3a83b846628ac488b655a6881632b8d7405e705cf831970ae6cf2819d0"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/slime.json"
+hash = "0517b319502039daa1df686e677459178e13f02d3a383271eafc615346572052"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/spider.json"
+hash = "de2b5f5445f870918c4fcaa2509f30b114ab141a5254d6c8284b23eabaac47be"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/strider.json"
+hash = "801042792c9e8755009db3181df9392634248b0881e69d526584fcac0a5444be"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/wither.json"
+hash = "8ea757398207e4ee2d2201897b44e305ab258ed098f90ae0fb2f1ea050f004d5"
+
+[[files]]
+file = "global_packs/required_data/darkloot/data/minecraft/loot_table/entities/zombie.json"
+hash = "53350b21e267d8f1d0959aa6c281443131f9294c7f705b1983044a2bbe34a955"
+
+[[files]]
+file = "global_packs/required_data/darkloot/pack.mcmeta"
+hash = "0a076d50e7cb01d83157daa898dce17c22e3a4ba065a86fc16a4ecf2cffcef21"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-large-climate/data/minecraft/worldgen/noise/temperature.json"
@@ -962,6 +1062,11 @@ hash = "ca23221fc94d8fb6ceaf4aa08d25fb8e336782ad7c8ab9f29aca92a0255a0ba4"
 metafile = true
 
 [[files]]
+file = "mods/beautiful-enchanted-books.pw.toml"
+hash = "81607a0dc062ee3eea18f32d996604ee1647c052ee5730188fd05f8e3b06f8ed"
+metafile = true
+
+[[files]]
 file = "mods/berezka-library.pw.toml"
 hash = "4069a7190732124e301c2ac104a15ee9fceecd646d4ec2d70d65f341567ee578"
 metafile = true
@@ -979,6 +1084,16 @@ metafile = true
 [[files]]
 file = "mods/better-modlist-neoforge.pw.toml"
 hash = "9b2ac8b205641bd5502d5510653051bd93e2ffda00c2eecce82c53c6a32ae864"
+metafile = true
+
+[[files]]
+file = "mods/betterend-neoforge.pw.toml"
+hash = "0f4a2622d790a16a8b702680dfca9b571227055ba324b2fe62f25c8d9dc70bca"
+metafile = true
+
+[[files]]
+file = "mods/betterf3.pw.toml"
+hash = "3330f934f8dd4d6fa0c188d96cae55449dc8e9b27458ba73cceb801f1a81e082"
 metafile = true
 
 [[files]]
@@ -1107,6 +1222,11 @@ hash = "51558d30edf03bd03a74e072f78327308c9dd6de670172b15e872e60d2942ac7"
 metafile = true
 
 [[files]]
+file = "mods/chipped.pw.toml"
+hash = "3024466ae43de66612dc5ec4cfe5b3a273f71cee29fc6940308798a817d561b6"
+metafile = true
+
+[[files]]
 file = "mods/chunkpregenerator.pw.toml"
 hash = "2e2a6097ddbcdb169f02fdd3a1bd36ca39f3cc72e0601624aa1666709e1132ef"
 metafile = true
@@ -1159,6 +1279,11 @@ metafile = true
 [[files]]
 file = "mods/colorwheel.pw.toml"
 hash = "b67c28ecf8abcfbbe4b9f5929df3f7ddbe5c3f8c9cb19d0a73a7bda2dabea062"
+metafile = true
+
+[[files]]
+file = "mods/colourful-everywhere.pw.toml"
+hash = "3e8cda83a9e124632b0fe22412e9efc81e413169e8c500c56e49cce4d802ad35"
 metafile = true
 
 [[files]]
@@ -1452,6 +1577,11 @@ hash = "d0578f526d43c39a2ed8e39e1f688a5abc984f594309033a4f0362546a35d830"
 metafile = true
 
 [[files]]
+file = "mods/enchantment-descriptions.pw.toml"
+hash = "2e137ea0702d21a9be7943d997bedf98f2c47751a621341081020a2bb53db4ae"
+metafile = true
+
+[[files]]
 file = "mods/entity-model-features.pw.toml"
 hash = "0d426101b4609d8997b016eb5bc258e8c48a5f695b243184cdcfe514ac551822"
 metafile = true
@@ -1572,6 +1702,11 @@ hash = "098d6df59e763cab80879ddfb051bac33f0a2bcc931886577d0d358edce919fc"
 metafile = true
 
 [[files]]
+file = "mods/farmers-cutting-betterend.pw.toml"
+hash = "9048a47a5ca8249edb6dc7a5b0a358fd4fa1cb9cff5e292ced739a881bbe7856"
+metafile = true
+
+[[files]]
 file = "mods/farmers-cutting-betternether.pw.toml"
 hash = "ae25df30bd36426a5a0a0d45532b35ba9a33dff434e9206c5d5dbf3f07724bbd"
 metafile = true
@@ -1599,6 +1734,11 @@ metafile = true
 [[files]]
 file = "mods/farmers-spell.pw.toml"
 hash = "886d23d17afc9ca7b797778a7b1b31c850a3420fd0e9fa22cfc1282f98a02fec"
+metafile = true
+
+[[files]]
+file = "mods/fast-item-frames.pw.toml"
+hash = "963fcd6045fa12baa20194e6097e7ede8114da021966f2b29addf72776966b52"
 metafile = true
 
 [[files]]
@@ -1712,6 +1852,16 @@ hash = "55c21e0159f5509b84d1e1fa42c2e478a3600c43007ede829cad5839aaa1b8da"
 metafile = true
 
 [[files]]
+file = "mods/fusion-connected-textures.pw.toml"
+hash = "e193b1a62177e87d84d48b7cd25a2ccca9523f0a18d3a67dcf554f3d827e7447"
+metafile = true
+
+[[files]]
+file = "mods/fzzy-config.pw.toml"
+hash = "c6aba607b0c335394c38e9e20fdff3d27c494d944099e6770629e907eaf7e47e"
+metafile = true
+
+[[files]]
 file = "mods/geckolib.pw.toml"
 hash = "4cf7eb494f48576e28895ee5f362878f95c6bad65372666106140fdae82d0c4c"
 metafile = true
@@ -1739,6 +1889,11 @@ metafile = true
 [[files]]
 file = "mods/gunsmith-lib.pw.toml"
 hash = "c9d281b7a64c864bd01c09b03dac48cd41c40c237314dfe0b1002c29e62e141b"
+metafile = true
+
+[[files]]
+file = "mods/handcrafted.pw.toml"
+hash = "d573695d37296209dc06495d359c4b283ffa6640bcfe8aa9c9b59eb420891788"
 metafile = true
 
 [[files]]
@@ -1804,6 +1959,11 @@ metafile = true
 [[files]]
 file = "mods/integrated-patches.pw.toml"
 hash = "b7e1327efe5aaeece7df949afef8d536c44e05216189515347cd91cfc95c347b"
+metafile = true
+
+[[files]]
+file = "mods/interdimensional-wireless-transmitter.pw.toml"
+hash = "d094c5c4cf873481273c416d53eaa5210f7711f935ef3a02c48577958cbce39d"
 metafile = true
 
 [[files]]
@@ -1962,6 +2122,11 @@ hash = "543b8a8ff5796648146f3102dea686e806f793052d329d0fa3efee8194d4df52"
 metafile = true
 
 [[files]]
+file = "mods/loot-journal-neoforge.pw.toml"
+hash = "d8003b64207cb7a17f9f006322bce537d6514c2baf34a782134ad5439e71e23d"
+metafile = true
+
+[[files]]
 file = "mods/lootr.pw.toml"
 hash = "50ba38ecb113e5ca8bc7c39ee2533f29c13501fc952e119af73be05e3e6debd7"
 metafile = true
@@ -1969,6 +2134,36 @@ metafile = true
 [[files]]
 file = "mods/lr-tactical-1-21-1.pw.toml"
 hash = "de5c0e45a5b220efaa1ef29b366b4891468071b9fa203e44c2164e7d97dddbbb"
+metafile = true
+
+[[files]]
+file = "mods/lukis-ancient-cities.pw.toml"
+hash = "1aade71cc5101ff9c6fc8fc74d614bcd033999843df9323dcf4da5a6f15bd373"
+metafile = true
+
+[[files]]
+file = "mods/lukis-woodland-mansions.pw.toml"
+hash = "30195663aa46907f6f3254fdd7db1ab5359e39d608abd61343902462c4ad819f"
+metafile = true
+
+[[files]]
+file = "mods/macaws-doors.pw.toml"
+hash = "5b6e513d543f82ffd9f01ef217e3abb7b55da78184bf52f07d2cc305f1ce16f7"
+metafile = true
+
+[[files]]
+file = "mods/macaws-fences-and-walls.pw.toml"
+hash = "da326d59e505ce18857f1b72be406a03c7b7f96e09c0953cf1fff194c7ff58cd"
+metafile = true
+
+[[files]]
+file = "mods/macaws-furniture.pw.toml"
+hash = "e31aebea2649cad495197a6736570f59b286d75c7a08c06a8a33fd84abd94817"
+metafile = true
+
+[[files]]
+file = "mods/macaws-windows.pw.toml"
+hash = "85b0bb55b80d196b879fe6755cd7cc509f6ecd5706bb25acd43826da5335dd57"
 metafile = true
 
 [[files]]
@@ -2194,6 +2389,11 @@ metafile = true
 [[files]]
 file = "mods/parcool.pw.toml"
 hash = "6aa4aa31e9f727a6658f61be43806c588466f31c5c0df61706969c6e5f02a84d"
+metafile = true
+
+[[files]]
+file = "mods/particle-rain.pw.toml"
+hash = "429d52e4b54bfafb6bfca39bbc6f26da0463ebeaa59bdb615b0041892fc3e09c"
 metafile = true
 
 [[files]]
@@ -2477,6 +2677,11 @@ hash = "4d8016c12dd1195f94771b2a3eeb7ca1e085ea9171b1fabe698464bc0ebaa202"
 metafile = true
 
 [[files]]
+file = "mods/subtle-effects.pw.toml"
+hash = "e6de3026337b23a991476d1102249db1abbcb5c2d8ec46bab7ab3001b3d3ed39"
+metafile = true
+
+[[files]]
 file = "mods/supermartijn642s-config-lib.pw.toml"
 hash = "2e42245826ce70d4ad673addb0e5244da388841f1484f03ee5a9426ee33b2229"
 metafile = true
@@ -2532,11 +2737,6 @@ hash = "f5355c54341cecab87454021d20d2e39eeafcd4e875933b7abfbe73c7137bd60"
 metafile = true
 
 [[files]]
-file = "mods/tacz-blueprints-reforged.pw.toml"
-hash = "2926e2e1365d41a66304b594a527516e0c530090f2725f0ca3bd1272ab3b1ce1"
-metafile = true
-
-[[files]]
 file = "mods/tacz-jade-compatibility-timeless-and-classics-zero.pw.toml"
 hash = "ac74edc66a13931dbcd665b3bfbfe5a3ad0a6af897256132accea3b1135f3a20"
 metafile = true
@@ -2564,11 +2764,6 @@ metafile = true
 [[files]]
 file = "mods/tacz-turrets.pw.toml"
 hash = "627ebc486a9509ce1b817aa3b51fed1ec974198516c1de7e92cb2ace96da4e0d"
-metafile = true
-
-[[files]]
-file = "mods/tacz-x-gunslightsaddon-addon.pw.toml"
-hash = "e61f96962432687b234d35e6005cd94f6feaf7f78623fc8a696bb7daa6b553fc"
 metafile = true
 
 [[files]]
@@ -2632,6 +2827,16 @@ hash = "b1908d3251d722ec5c18f2483b8c56743d7cae91f644caa6d82e1b3b5b64f604"
 metafile = true
 
 [[files]]
+file = "mods/tw-resurrection.pw.toml"
+hash = "ef9e0f93cd87d638dd7691cd7a6e360e5bff7c7a57e3494927cf7f12cc45537b"
+metafile = true
+
+[[files]]
+file = "mods/twilight-forest-dungeons-villages.pw.toml"
+hash = "8507d729abed02ba62ee6d9e59d9334e6cc28e833b75ae659d0f7355ca8df9f6"
+metafile = true
+
+[[files]]
 file = "mods/twilights-flavors-delight.pw.toml"
 hash = "24f7c7e71dfc654dfa73999e236955f03cfef2ef7a3851b9fff7981995ba7331"
 metafile = true
@@ -2664,6 +2869,11 @@ metafile = true
 [[files]]
 file = "mods/vics-point-blank.pw.toml"
 hash = "a7541495700ef058dcd41c2a82d904afeb97678777e6bef6a08dc55851abd5da"
+metafile = true
+
+[[files]]
+file = "mods/visual-workbench.pw.toml"
+hash = "204bfb2f2c871461138e2526e0ee521985ddfbb01eab388f998cc806a124559b"
 metafile = true
 
 [[files]]
@@ -2732,8 +2942,33 @@ hash = "39872d5e20e4d66727d817eb1d472f02ac6414227ca50bbf6b8c20fe4bfdf64b"
 metafile = true
 
 [[files]]
+file = "mods/yungs-better-desert-temples-neoforge.pw.toml"
+hash = "a383e14bfb10544f993b68c1b5054be9364043878ba965091612fe100f55220c"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-dungeons-neoforge.pw.toml"
+hash = "c79a58526fab23bdac3e652a1696cb603fc94197c1173ebe48743659ee5656a5"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-end-island-neoforge.pw.toml"
+hash = "37417dc78726d2d6c01da523ef791c73ce752bb163965270ecec29ee1af54a0d"
+metafile = true
+
+[[files]]
 file = "mods/yungs-better-nether-fortresses-neoforge.pw.toml"
 hash = "e467ffe83dd4e8d2d64f41d46067ddf52d0ca6f3271c56e5858829c15def3e3e"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-ocean-monuments-neoforge.pw.toml"
+hash = "499a8fffeca4ff272bfcc0ad266add8fb729a6419fec921d4b8a63f7b9bc2877"
+metafile = true
+
+[[files]]
+file = "mods/yungs-better-strongholds-neoforge.pw.toml"
+hash = "1dbfc17c73001270c3c1f60c02cd72b3f5652ff02557a5f0586fd638a083cd36"
 metafile = true
 
 [[files]]
@@ -2797,6 +3032,11 @@ hash = "0c4da88118c3dd888a46e638e99686a826fc5088b2133b21dd248f802b7ea79e"
 metafile = true
 
 [[files]]
+file = "resourcepacks/enchant-icons-countxd.pw.toml"
+hash = "e24336d3314487eb6a96e6039e6ef1ff6aa8e87d1456154658d64f0dcead8dcb"
+metafile = true
+
+[[files]]
 file = "resourcepacks/enhanced-boss-bars.pw.toml"
 hash = "fa1fe6c89a4014c8ced29c7c3af18b2ab9974505ef5c6bb4e32c2b5e806ecccb"
 metafile = true
@@ -2809,6 +3049,16 @@ metafile = true
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
 hash = "9ec67e88b2aff3720a27dde232274a00e65b7ddc5e302a495d18bc41a42028a4"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fusion-3d-items.pw.toml"
+hash = "d86229049d870034cea564802dbada9246fac5f6773332e594c9e477a05bbfb7"
+metafile = true
+
+[[files]]
+file = "resourcepacks/fusion-connected-glass.pw.toml"
+hash = "b5adc604f7875ced2804536228739046b56ec384d46bd31077025ed4ab21c528"
 metafile = true
 
 [[files]]

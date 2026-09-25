@@ -51,6 +51,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | both | One press for every processor. World data. |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. |
 | Quartz Arsenal | `refinedstorage-quartz-arsenal-neoforge-1.0.8.jar` | both | Wireless crafting grid. Replaces RS Addons. |
+| Interdimensional Wireless Transmitter | `interdimensionalwirelesstransmitter-neoforge-1.21.1-0.1.5.jar` | both | RS wireless across dimensions. World data. |
 | Cable Tiers | `cabletiers-neoforge-1.21.1-0.6.14.jar` | both | Faster RS importer/exporter tiers. |
 
 ## Considered / held / dropped

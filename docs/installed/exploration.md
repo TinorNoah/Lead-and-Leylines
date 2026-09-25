@@ -17,3 +17,5 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | The Twilight Forest | `twilightforest-1.21.1-4.8.3345-universal.jar` | both | `core`, `exploration` | Twilight Forest dimension. |
+| Twilight Forest Bosses Resurrection | `tfbr-1.21.1-4.2.2.jar` | both | `addon`, `exploration`, `world-data` | Respawn Twilight Forest bosses. |
+| Twilight Forest - Dungeons & Villages | `tf_dnv-2.0.3.jar` | both | `addon`, `exploration`, `world-data` | Twilight Forest villages and dungeons. |

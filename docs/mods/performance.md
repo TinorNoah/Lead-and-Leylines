@@ -22,7 +22,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | FerriteCore | `ferritecore-7.0.3-neoforge.jar` | both | Memory. |
 | ModernFix | `modernfix-neoforge-5.27.24+mc1.21.1.jar` | both | Launch and general mixins. Defaults. |
 | ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar` | client | Immediate-mode / HUD rendering. |
-| FastWorkbench | `FastWorkbench-1.21.1-9.1.3.jar` | both | Crafting screen / recipe lookup. Requires Placebo. |
+| FastWorkbench | `FastWorkbench-1.21.1-9.1.3.jar` | both | Crafting screen / recipe lookup. Requires Placebo. Visual Workbench 21.1.2 is also in; its 21.0.2 release fixed the FastWorkbench crafting-menu crash. |
 | FastFurnace | `FastFurnace-1.21.1-9.0.1.jar` | both | Furnace tick. Requires Placebo. |
 | FastSuite | `FastSuite-1.21.1-6.0.7.jar` | both | Recipe manager. Requires Placebo. |
 | Placebo | `Placebo-1.21.1-9.9.2.jar` | both | Library for the Fast* mods. |
@@ -41,8 +41,11 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | Official Extra for Sodium 0.8.13 (fog, particles, FPS overlay). Not Chloride. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
 | AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer). |
+| Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | Weather particles. |
+| Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | Ambient particles and sounds. Fzzy Config. |
 | More Culling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | Extra block/entity culling next to Entity Culling. Cloth Config required. See [configs.md](configs.md) for Extra leaf overlap. |
 | Cloth Config | `cloth-config-15.0.140-neoforge.jar` | both | More Culling (and optional AsyncParticles) GUI. |
+| Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | both | Required by Subtle Effects. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | Jigsaw/NBT structure gen. Resourceful Config required. |
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | both | SLO dependency. |
 | Ksyxis | `Ksyxis-1.4.4.jar` | both | Unloads unused spawn chunks. |

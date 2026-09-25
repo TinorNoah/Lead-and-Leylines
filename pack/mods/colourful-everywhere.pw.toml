@@ -1,0 +1,13 @@
+name = "Colourful Everywhere"
+filename = "colourfuleverywhere-1.21-1.3.6.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "619b61b11fd6f49d255cf0f970a90f02345855dd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8824518
+project-id = 1684964

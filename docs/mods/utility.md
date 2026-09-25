@@ -88,7 +88,15 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Crash Utilities | `crashutilities-9.0.4.jar` | both | Extra crash helpers. |
 | ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | client | Entity texture variants. |
 | EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | client | Entity model variants. |
-| Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | Connected textures. |
+| Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | Connected textures. Chipped. |
+| Enchantment Descriptions | `enchdesc-neoforge-1.21.1-21.1.11.jar` | client | Enchantment tooltip lines. Bookshelf + Prickle. Apothic inlined descriptions are on. |
+| Beautiful Enchanted Books | `BEB-NeoForge-1.21-6.0.0.jar` | client | Enchanted book textures. |
+| Enchant Icons | `enchant icons 1.21 v1.3.zip` | client | Resource pack. Enchantment name icons. Global Packs required. |
+| Loot Journal (NeoForge) | `loot_journal-neoforge-1.21.1-6.2.2.jar` | client | Pickup notifier. Fragmentum. |
+| BetterF3 | `BetterF3-11.0.3-NeoForge-1.21.1.jar` | client | Debug HUD. Cloth Config. |
+| Colourful Everywhere | `colourfuleverywhere-1.21-1.3.6.jar` | client | Shader GUI recolor. NeoForge stand-in for Colourful Containers + OptiGUI. |
+| Fast Item Frames | `FastItemFrames-v21.1.6-1.21.1-NeoForge.jar` | both | Faster item frames. World data. Puzzles Lib. |
+| Visual Workbench | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | both | Items stay in crafting tables. World data. Puzzles Lib. FastWorkbench 9.1.3 stays; the crafting-menu crash was fixed in Visual Workbench 21.0.2. |
 | Better Modlist | `better_modlist-21.1.1.jar` | client | Mods screen. |
 | Bridging Mod | `BridgingMod-2.6.2+1.21.1.neoforge-release.jar` | client | Bridge assist. YACL. |
 | Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | both | Client annoyance toggles. Required on the server. ARR. Balm. |
@@ -105,7 +113,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Mod | Status | Why |
 |---|---|---|
 | EMI / EMI Ores / EMI Enchanting / EMI QoL Tweaks | Dropped | Replaced by JEI so Create and Sophisticated plugins get a real JEI version. |
-| Continuity | Held | Needs Connector and Forgified Fabric API, and it targets Sodium 0.6. |
+| Continuity | Held | Needs Connector and Forgified Fabric API, and it targets Sodium 0.6. Fusion is the connected-texture mod. |
 | TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
 | JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.447.jar`). |
 | JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |

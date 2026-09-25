@@ -170,7 +170,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | CurseForge 60089 / 5637846 | client | QoL | Inventory drag-transfer. | none | defaults | 2026-09-18 |
 | ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | CurseForge 568563 / 8908931 | client | renderer | Entity texture variants. | none | defaults | 2026-09-18 |
 | EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | CurseForge 844662 / 8909425 | client | renderer | Entity model variants. | ETF | defaults | 2026-09-18 |
-| Athena | `athena-neoforge-1.21.1-4.0.6.jar` | CurseForge 841890 / 8061947 | both | library | Connected textures. | none | defaults | 2026-09-18 |
+| Athena | `athena-neoforge-1.21.1-4.0.6.jar` | CurseForge 841890 / 8061947 | both | library | Connected textures. Chipped. | none | defaults | 2026-09-18 |
 | Crafting Tweaks | `craftingtweaks-neoforge-1.21.1-21.1.11.jar` | CurseForge 233071 / 8697050 | both | QoL | Crafting grid buttons. | Balm | defaults | 2026-09-18 |
 | Controlling | `Controlling-neoforge-1.21.1-19.0.5.jar` | CurseForge 250398 / 6368976 | client | QoL | Keybind search. | Searchables | defaults | 2026-09-18 |
 | Harvest with ease | `harvest-with-ease-neoforge-1.21-9.4.0.jar` | CurseForge 602171 / 5968872 | both | QoL | Right-click harvest. | Cobweb | defaults | 2026-09-18 |
@@ -260,7 +260,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | CurseForge 1353465 / 8387504 | both | combat | Converts 1.20.1 gun packs for this port. | TaCZ | defaults | 2026-09-22 |
 | TaCZ addon | `taczaddon-1.1.8.2-neoforge-1.21.1.jar` | CurseForge 1238419 / 8836214 | both | combat | Extra TaCZ features. | TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Tactical Breaching | `tacz_tactical_breaching-neoforge-1.21.1-1.0.5.jar` | CurseForge 1552880 / 8752892 | both | combat | Breaching, glass damage, shells, smoke. | TaCZ | distant-gunshot debug off | 2026-09-22 |
-| TaCZ x Guns Lights Addon | `tacz_x_guns_lights_addon-neoforge-1.21.1-2.8.2.jar` | CurseForge 1325673 / 8784270 | both | combat | Pinned 2.8.2 NeoForge; 2.9.0 is 1.20.x. | TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | CurseForge 1339813 / 8191224 | both | combat | Ammo box curios slot. | TaCZ, Curios | defaults | 2026-09-22 |
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | CurseForge 1338332 / 8618447 | both | combat | AE2 ammo box. | TaCZ, AE2 | defaults | 2026-09-22 |
 | Elite X Quality Guns (TACZ) | `Elite x Quality Guns Neoforge v5.1 - 1.21.1.jar` | CurseForge 1084662 / 7952386 | both | combat | Gun pack. | TaCZ | defaults | 2026-09-22 |
@@ -276,7 +275,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | EMF Compat: Core | `emf_compat_core_1.21.1_2.0.0.jar` | CurseForge 1605113 / 8793794 | client | library | Required by EMF Compat: TACZ. | EMF | defaults | 2026-09-22 |
 | EMF Compat: TACZ | `emf_compat_tacz_1.21.1_1.0.0.jar` | CurseForge 1629329 / 8546543 | client | renderer | TaCZ entity models with EMF. | EMF Compat Core, TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | CurseForge 1547520 / 8152341 | both | combat | Runtime gun-pack hooks. | TaCZ | defaults | 2026-09-22 |
-| TaCZ: Blueprints Reforged | `tacz-blueprints-reforged-1.0.1.jar` | CurseForge 1589398 / 8331907 | both | combat | Blueprint crafting. World data. | TaCZ | defaults | 2026-09-22 |
 | Punchy! | `punchy-2.8a-neoforge-1.21.1.jar` | CurseForge 1374153 / 8891106 | client | renderer | First-person punch anims. Required by Don't Punch My TACZ. Hidden while Epic Fight mode is on. | none | defaults | 2026-09-22 |
 | Don't Punch My TACZ | `dont-punch-my-tacz-v0.5.2-1.21.1-neo.jar` | CurseForge 1691793 / 8932034 | client | combat | Pinned NeoForge jar, not Fabric. | TaCZ, Punchy | defaults | 2026-09-22 |
 | Epic Fight X Punchy! Neo | `punchy_epicfight_neoforge.jar` | CurseForge 1491729 / 7789794 | client | combat | Hides Punchy first-person arms while Epic Fight mode is active. Client-only. | Punchy, Epic Fight | defaults | 2026-09-23 |
@@ -433,8 +431,41 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Ars Nouveau Refresh | `Ars Nouveau Refresh 1.2.0.zip` | CurseForge 1080571 / 6068071 | client | resource pack | Ars item textures. | Ars Nouveau | Global Packs required | 2026-09-24 |
 | Better Sophisticated Backpack Upgrades | `Better SB Upgrades.zip` | CurseForge 1138140 / 7964810 | client | resource pack | Backpack upgrade icons. | Sophisticated Backpacks | Global Packs required | 2026-09-24 |
 | Boss Refreshed | `boss-refreshed-v2-1.19-1.21.zip` | CurseForge 882133 / 6597394 | client | resource pack | Dragon, wither, warden, and elder guardian models. EMF. | EMF | Global Packs required | 2026-09-24 |
+| Enchantment Descriptions | `enchdesc-neoforge-1.21.1-21.1.11.jar` | CurseForge 250419 / 8693034 | client | QoL | Enchantment lines on item tooltips. LGPL-2.1. | Bookshelf, Prickle | Apothic inline descriptions on | 2026-09-25 |
+| Fusion (Connected Textures) | `fusion-1.3.15b-neoforge-mc1.21.1.jar` | CurseForge 854949 / 8942891 | client | renderer | Connected textures for resource packs. ARR. Continuity stays out. | none | defaults | 2026-09-25 |
+| Fusion 3D Items | `Fusion 3D Items v1.0.1 for Minecraft 1.20-1.21.8.zip` | CurseForge 1315462 / 7051086 | client | resource pack | 3D item models. ARR. | Fusion | Global Packs required | 2026-09-25 |
+| Fusion Connected Glass | `Fusion Connected Glass v1.0.1 for Minecraft 1.20-1.21.8.zip` | CurseForge 1315459 / 7051090 | client | resource pack | Connecting glass. ARR. Crystalix stays colored glass. | Fusion | Global Packs required | 2026-09-25 |
+| Handcrafted | `handcrafted-neoforge-1.21.1-4.0.3.jar` | CurseForge 538214 / 6330030 | both | content | Furniture. World data. Terrarium Licence. | Resourceful Lib | defaults | 2026-09-25 |
+| Chipped | `chipped-neoforge-1.21.1-4.0.2.jar` | CurseForge 456956 / 5813117 | both | content | Block variants. World data. ARR. | Resourceful Lib, Athena | defaults | 2026-09-25 |
+| Macaw's Doors | `mcw-doors-1.1.5-mc1.21.1neoforge.jar` | CurseForge 378646 / 7618651 | both | content | Extra doors. World data. MIT. | none | defaults | 2026-09-25 |
+| Macaw's Windows | `mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar` | CurseForge 363569 / 7317672 | both | content | Windows and curtains. World data. ARR. | none | defaults | 2026-09-25 |
+| Macaw's Fences and Walls | `mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar` | CurseForge 453925 / 7308338 | both | content | Fences, walls, and gates. World data. MIT. | none | defaults | 2026-09-25 |
+| Macaw's Furniture | `mcw-furniture-3.4.1-mc1.21.1neoforge.jar` | CurseForge 359540 / 7255584 | both | content | Furniture. World data. ARR. Supplementaries and Handcrafted stay. | none | defaults | 2026-09-25 |
+| Visual Workbench | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | CurseForge 500273 / 8793655 | both | content | Items stay in crafting tables. World data. MPL-2.0. | Puzzles Lib | defaults | 2026-09-25 |
+| Twilight Forest Bosses Resurrection | `tfbr-1.21.1-4.2.2.jar` | CurseForge 916943 / 7382236 | both | content | Respawn TF bosses. World data. | Twilight Forest | defaults | 2026-09-26 |
+| Twilight Forest - Dungeons & Villages | `tf_dnv-2.0.3.jar` | CurseForge 1271268 / 6614073 | both | worldgen | TF villages and dungeons. World data. | Twilight Forest (undeclared) | defaults | 2026-09-26 |
+| Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | CurseForge 421897 / 8720770 | client | renderer | Weather particles. | none | defaults | 2026-09-26 |
+| Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | CurseForge 1005914 / 8883390 | both | library | Required by Subtle Effects. Kotlin for Forge already in. | Kotlin for Forge | defaults | 2026-09-26 |
+| Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | CurseForge 1023913 / 8008312 | client | renderer | Ambient particles and sounds. | Fzzy Config | defaults | 2026-09-26 |
+| Loot Journal (NeoForge) | `loot_journal-neoforge-1.21.1-6.2.2.jar` | CurseForge 1120395 / 8922056 | client | QoL | Pickup notifier. | Fragmentum | defaults | 2026-09-26 |
+| Beautiful Enchanted Books | `BEB-NeoForge-1.21-6.0.0.jar` | CurseForge 1083202 / 7268159 | client | QoL | Enchanted book textures. | none | defaults | 2026-09-26 |
+| Enchant Icons | `enchant icons 1.21 v1.3.zip` | CurseForge 861241 / 5424546 | client | resource pack | Enchantment name icons. | none | Global Packs required | 2026-09-26 |
+| BetterF3 | `BetterF3-11.0.3-NeoForge-1.21.1.jar` | CurseForge 401648 / 5873258 | client | QoL | Debug HUD. | Cloth Config | defaults | 2026-09-26 |
+| Interdimensional Wireless Transmitter | `interdimensionalwirelesstransmitter-neoforge-1.21.1-0.1.5.jar` | CurseForge 452645 / 6845967 | both | storage | RS wireless across dimensions. World data. | Refined Storage | defaults | 2026-09-26 |
+| Fast Item Frames | `FastItemFrames-v21.1.6-1.21.1-NeoForge.jar` | CurseForge 1210171 / 6963018 | both | content | Faster item frames. World data. | Puzzles Lib | defaults | 2026-09-26 |
+| Colourful Everywhere | `colourfuleverywhere-1.21-1.3.6.jar` | CurseForge 1684964 / 8824518 | client | QoL | Shader GUI recolor. OptiGUI / Colourful Containers stand-in. MIT. | Cloth Config embedded | defaults | 2026-09-26 |
+| BetterEnd: New Dawn | `BetterEnd-21.0.35.jar` | CurseForge 1422294 / 8896285 | both | worldgen | End biomes/mobs. World data. Pinned 21.0.x. | New Dawn libs | defaults | 2026-09-26 |
+| Farmer's Cutting: BetterEnd | `farmers-cutting-betterend-1.21.1-2.0-neoforge.jar` | CurseForge 1146834 / 7648264 | both | farming | Cutting recipes for BetterEnd. | BetterEnd New Dawn, Farmer's Delight | defaults | 2026-09-26 |
+| YUNG's Better Dungeons (NeoForge) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` | CurseForge 1015112 / 5954804 | both | worldgen | Dungeon overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
+| YUNG's Better Strongholds (NeoForge) | `YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar` | CurseForge 1015105 / 6272264 | both | worldgen | Stronghold overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
+| YUNG's Better End Island (NeoForge) | `YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar` | CurseForge 1015127 / 6300968 | both | worldgen | Central End island. World data. | YUNG's API | defaults | 2026-09-26 |
+| YUNG's Better Ocean Monuments (NeoForge) | `YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar` | CurseForge 1015115 / 5924487 | both | worldgen | Ocean monument overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
+| YUNG's Better Desert Temples (NeoForge) | `YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar` | CurseForge 1015114 / 6276955 | both | worldgen | Desert temple overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
+| Luki's Ancient Cities | `lukis-ancient-cities-v1.2.jar` | CurseForge 1190728 / 7179736 | both | worldgen | Ancient city variants. World data. | none | defaults | 2026-09-26 |
+| Luki's Woodland Mansions | `lukis-woodland-mansions-v1.0-1.21-1.21.4.jar` | CurseForge 1385782 / 7227735 | both | worldgen | Woodland mansion variants. World data. | none | defaults | 2026-09-26 |
+| DarkLoot datapack | `pack/global_packs/required_data/darkloot/` | CurseForge 1446380 (vendored) | both | datapack | Buffed mob loot and heads. Edit entity JSON in-repo. pack_format 48. | none | force via Global Packs | 2026-09-26 |
 
-World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, dungeon/structure mods, Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage, Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, Ecliptic Seasons, Crystalix, Create Deco, Create Encased, Create Crafts & Additions, Epitaphs, Comforts, Artifacts, Ars Controle, Ars Elemancy, Ars Technica, Ars Flavors, Autochef's Delight, Barbeque's Delight, Building Gadgets, Infinity Drives, Pattern Converter, Schematic Energistics, AE2 MEGA Things, Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Integrated Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Iron's Spells and its spell addons, Quark, Alex's Mobs Continued, Apotheosis (enchanting, spawners, and Fallen Gems), Mutant Monsters, Illager Invasion, Mowzie's Mobs, Integrated Mowzie's Mobs, Myths & Legends, Unusual End, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading, and Legendary Monsters write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
+World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, BetterEnd New Dawn, dungeon/structure mods (including YUNG Better Dungeons/Strongholds/End Island/Ocean Monuments/Desert Temples and Luki ancient cities/mansions), Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Alex's Caves Continued, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage (plus Interdimensional Wireless Transmitter), Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, Ecliptic Seasons, Crystalix, Create Deco, Create Encased, Create Crafts & Additions, Epitaphs, Comforts, Artifacts, Ars Controle, Ars Elemancy, Ars Technica, Ars Flavors, Autochef's Delight, Barbeque's Delight, Building Gadgets, Infinity Drives, Pattern Converter, Schematic Energistics, AE2 MEGA Things, Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Integrated Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Iron's Spells and its spell addons, Quark, Alex's Mobs Continued, Apotheosis (enchanting, spawners, and Fallen Gems), Mutant Monsters, Illager Invasion, Mowzie's Mobs, Integrated Mowzie's Mobs, Myths & Legends, Unusual End, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading, Legendary Monsters, Chipped, Handcrafted, Macaw's Doors, Macaw's Windows, Macaw's Fences and Walls, Macaw's Furniture, Visual Workbench, Fast Item Frames, and Twilight Forest Bosses Resurrection / Dungeons & Villages write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
 
 ## Credits / Attribution
 
@@ -542,6 +573,13 @@ World-data: Create, Create Aeronautics, Pipez, FTB Quests/Chunks, Twilight Fores
 | Tooltip Overhaul | Xylonity | GPL-3.0-only | CurseForge metadata only; do not embed the jar. |
 | Tag Tooltips | Jagm | CC-BY-SA-4.0 | Modpack use allowed. CurseForge metadata only; do not embed the jar. |
 | Mowzie's Mobs | Bob Mowzie, pau101 | Custom | Credit "Mowzie's Mobs" and link https://www.curseforge.com/minecraft/mc-mods/mowzies-mobs. CurseForge metadata only. |
+| Enchantment Descriptions | DarkhaxDev | LGPL-2.1-only | CurseForge reference. |
+| Fusion, Fusion 3D Items, Fusion Connected Glass | SuperMartijn642 | ARR | CurseForge metadata only; do not embed the jar or zips. |
+| Handcrafted | terrariumearth, AlexNijjar, kekie6 | Terrarium Licence | CurseForge metadata only; do not embed the jar. |
+| Chipped | terrariumearth, AlexNijjar | ARR | CurseForge metadata only; do not embed the jar. |
+| Macaw's Doors, Macaw's Fences and Walls | sketch_macaw | MIT | CurseForge reference. |
+| Macaw's Windows, Macaw's Furniture | sketch_macaw | ARR | CurseForge metadata only; do not embed the jars. |
+| Visual Workbench | Fuzs | MPL-2.0 | CurseForge reference. |
 
 ## Future / Deferred Mods
 
@@ -562,6 +600,8 @@ Long lists: [deferred.md](deferred.md).
 
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
+| TaCZ x Guns Lights Addon | 2026-09-25 | Removed on request. No other mod required it. | No. |
+| TaCZ: Blueprints Reforged | 2026-09-25 | Removed on request. World data: placed blueprint items will be missing. No other mod required it. | No. |
 | JEI++ | 2026-09-23 | Client join crash: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, moved in JEI 19.57. Latest file 1.0.5 still targets JEI 19.56. | Only with a JEI 19.57 build. |
 | Epic Fight Nightfall, Invincible Lib | 2026-09-23 | Nightfall reads client VFX config on dedicated servers and crashes when mobs gain effects. AAA Particles stays. | Only with a dedicated-server fix. |
 | Ecliptic Seasons : Voxy Compact, Voxy - Make it compatible | 2026-09-23 | Mixin crash when the unofficial Voxy client jar is not installed. Voxy cannot ship in the pack. | No. Voxy itself was removed on 2026-09-24. |

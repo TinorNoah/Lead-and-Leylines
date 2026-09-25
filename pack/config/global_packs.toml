@@ -25,7 +25,10 @@ required = [
     "resourcepacks/[1.6] Enhanced Boss Bars.zip",
     "resourcepacks/Ars Nouveau Refresh 1.2.0.zip",
     "resourcepacks/Better SB Upgrades.zip",
-    "resourcepacks/boss-refreshed-v2-1.19-1.21.zip"
+    "resourcepacks/boss-refreshed-v2-1.19-1.21.zip",
+    "resourcepacks/Fusion 3D Items v1.0.1 for Minecraft 1.20-1.21.8.zip",
+    "resourcepacks/Fusion Connected Glass v1.0.1 for Minecraft 1.20-1.21.8.zip",
+    "resourcepacks/enchant icons 1.21 v1.3.zip",
 ]
 # Check game log if log_pack_ids is set to true, you need to add the full IDs listed in there.
 # Search for "# Listing Resource Packs #" inside the log

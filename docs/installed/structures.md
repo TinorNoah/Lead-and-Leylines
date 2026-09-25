@@ -17,6 +17,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | YUNG's API (NeoForge) [1.20.4-1.21.1 ONLY] | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | both | `library`, `structure`, `worldgen`, `yungs` | Library the YUNG structure mods need. |
 | YUNG's Better Caves (Forge/NeoForge) | `YungsBetterCaves-1.21.1-NeoForge-3.1.6.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `world-data` | Rebuilt caves. |
+| YUNG's Better Dungeons (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `world-data` | Rebuilt vanilla dungeons. |
+| YUNG's Better Strongholds (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `world-data` | Rebuilt strongholds. |
+| YUNG's Better Ocean Monuments (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `world-data` | Rebuilt ocean monuments. |
+| YUNG's Better Desert Temples (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `world-data` | Rebuilt desert temples. |
+| YUNG's Better End Island (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar` | both | `core`, `structure`, `worldgen`, `yungs`, `end`, `world-data` | Rebuilt the central End island dragon fight. |
 | YUNG's Bridges (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | both | `compat`, `structure`, `worldgen`, `yungs`, `world-data` | Bridges between villages and terrain. |
 
 ## Dungeons
@@ -42,6 +47,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | both | `addon`, `structure`, `worldgen`, `create`, `world-data` | Villages built from Create blocks. |
 | MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Rebuilt mineshafts. |
 | Moog's Structure Lib (moogs_structures) | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | both | `library`, `structure`, `worldgen` | Library Moog's structures need. |
+| Luki's Ancient Cities | `lukis-ancient-cities-v1.2.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New ancient city layouts. |
+| Luki's Woodland Mansions | `lukis-woodland-mansions-v1.0-1.21-1.21.4.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New woodland mansion layouts. |
 | Compat Structure | `compatstructures-1.0.3.jar` | both | `compat`, `structure`, `worldgen`, `world-data` | Structures that bridge other structure mods. |
 | Compat API | `compatapi-1.0.3.jar` | both | `library`, `compat`, `structure`, `worldgen` | Library Compat Structure needs. |
 
