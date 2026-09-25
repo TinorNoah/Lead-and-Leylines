@@ -16,17 +16,91 @@ Nothing auto-writes `catalog.toml`. Packwiz, the browser site, and CI only consu
 
 1. Install or remove with packwiz; `packwiz refresh`.
 2. Update `docs/mods/manifest.md` (and the relevant decision log).
-3. Edit `docs/installed/catalog.toml`:
+3. Edit `docs/installed/catalog.toml` using the **Category and tag rules** below:
    - Pick the right `[[category]]` / `[[category.group]]`.
    - Add or remove `{ file = "<name>.pw.toml", blurb = "...", tags = [...] }`.
-   - `file` must match the packwiz TOML basename.
-   - Tags must exist under `[tags]` (or add a new tag there first).
+   - `file` must match the packwiz TOML basename exactly.
+   - Every tag must exist under `[tags]` (add a new vocabulary entry first if needed).
 4. Run `python3 scripts/installed_catalog.py` (writes markdown + `catalog.json`).
 5. Run `python3 scripts/installed_catalog.py --check` (must exit 0).
 6. Update `CHANGELOG.md` `[Unreleased]` when players will notice.
 7. Stage TOML, docs, and generated catalog outputs. Never stage jars.
 
-Pre-commit **warns** (does not block) if packwiz TOML is staged without `catalog.toml`. CI (`.github/workflows/installed-catalog.yml`) **fails** the PR if `--check` fails.
+Pre-commit **warns** (does not block) if packwiz TOML is staged without `catalog.toml`. CI (`.github/workflows/installed-catalog.yml`) **fails** the PR if `--check` fails. `--check` proves every packwiz entry is listed once with known tags; it does **not** judge whether the category or tags are the right fit — agents must follow the rules below.
+
+## Category and tag rules
+
+Agents must assign these deliberately. Copy the pattern of nearby rows in the same group when unsure.
+
+### 1. One primary home
+
+List each packwiz file **once**. Put a mod in the category that matches what players use it for:
+
+| If the mod is mainly… | Category slug |
+|---|---|
+| Guns / gun packs / gun affixes | `weapons` |
+| Melee movesets / parkour / punch animation | `combat` |
+| Boss fights / boss arenas | `bosses` |
+| Creatures that are not a boss mod | `mobs` |
+| Dungeons / villages / structure spacing | `structures` |
+| Overworld / cave biomes | `biomes` |
+| Nether biomes / nether structures | `nether` |
+| End biomes / End expansion | `end` |
+| Spells / enchanting / gems / magic mods | `magic` |
+| Cooking / meals | `food` |
+| Pots / harvest helpers | `farming` |
+| Season clock | `seasons` |
+| Backpacks / drawers / trash | `storage` |
+| AE2 and AE-only addons | `applied-energistics` |
+| Refined Storage and RS-only addons | `refined-storage` |
+| Mekanism machines / tools | `mekanism` |
+| Create kinetics (not ships) | `create` |
+| Vehicles / waystones / pipes | `transport` |
+| Ores / chemistry / unification | `resources` |
+| Building gadgets / decoration | `building` |
+| Maps / Twilight Forest dimension | `exploration` |
+| FTB claims / quests / teams | `ftb` |
+| Quark-style vanilla tweaks / Curios / graves | `gameplay` |
+| JEI / Jade / tooltip frames | `info` |
+| Sodium / Iris / entity models | `rendering` |
+| Client comfort only | `client` |
+| Tick / memory / chunk optimizers | `performance` |
+| Crash / leak / packet fixes | `stability` |
+| Shared libs used by **multiple** families | `libraries` |
+
+### 2. Compat and libraries stay with the parent
+
+- A TaCZ addon, gun pack, or TaCZ×X bridge goes in the **TaCZ group** under `weapons`, not under Create/AE2/magic alone.
+- A library used by only one mod (Gunsmith Lib, FDLib, Blueprint, …) goes in **that mod’s group**, tagged `library`.
+- A library shared by many unrelated mods (GeckoLib, Placebo, Architectury, …) goes under `libraries`.
+- Cross-links belong in the category `intro` text (“see also”), not as duplicate rows.
+
+### 3. Role tag (pick one primary)
+
+Exactly one of these should lead the `tags` list:
+
+| Tag | Use when |
+|---|---|
+| `core` | The main mod of the group (TaCZ, Create, Apotheosis, …) |
+| `addon` | Extra content for that parent (not a bridge) |
+| `compat` | Bridge between two mods |
+| `library` | Dependency jar |
+| `content-pack` | Gun/content pack under `pack/tacz/` or `pack/pointblank/` |
+| `resource-pack` | Client resource pack under `pack/resourcepacks/` |
+
+### 4. Theme and ecosystem tags
+
+Add the category’s theme tag when it fits (`guns`, `magic`, `tech`, `optimizer`, …) and ecosystem tags when the mod clearly belongs to one (`tacz`, `point-blank`, `create`, `ae2`, `mekanism`, `epic-fight`, `apotheosis`, `ars-nouveau`, `irons-spells`, `jei`, `jade`, `alexs`, `yungs`, `farmers-delight`, `harvestcraft`, `sophisticated`, `ftb`).
+
+Do **not** put `side`, `curseforge`/`modrinth`, or `mod`/`tacz-pack` in `tags` — `installed_catalog.py` derives those into `catalog.json` automatically.
+
+### 5. Blurb
+
+One short sentence: what it adds for a player browsing the list. Mirror the tone of sibling rows. Do not paste license/changelog text.
+
+### 6. New category or tag
+
+Prefer an existing category. Only add a new `[[category]]` or `[tags]` entry when nothing fits; keep the slug kebab-case and update this table in the same change.
 
 ## Publish / release flow
 
