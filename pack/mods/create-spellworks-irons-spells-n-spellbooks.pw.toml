@@ -1,0 +1,13 @@
+name = "Iron's Spells 'N Spellbooks: Create Additions"
+filename = "iss_create_additions-1.21.1-2..jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "44b33fd9fe6d17c2f4dc340cd4668622ab75ec1b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8923489
+project-id = 1698578

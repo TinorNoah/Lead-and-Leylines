@@ -19,6 +19,13 @@ This file lists **only mods that are not in `pack/mods/`**.
 | TaCZ / Sophisticated Backpacks ammo | 1.21.1 NeoForge file requires modid `tacz-1-21-1`. Unofficial port 1353462 registers as `tacz`. |
 | TaCZ: Immersive Ballistic (+ TaCZ Tweaks) | Alpha. Duplicate VertexFormatElement registration with Iris on boot. |
 | ScalableLux | 1.21.1 NF file exists. Exclusive Tectonic smoke 4.89 CPS vs 7.73; BlockState lighting errors. Combo with Fast Noise 6.33. |
+| AdventureZ | Project 390991's 1.21.1 file is Fabric only. |
+| ANARCHY Minibosses | Requires Spell Engine, Spell Power, AzureLib, and Accessories beside Curios. |
+| Myths of the Sea | Requires GeckoLib 4.7.4. The pack is on 4.9.3. |
+| Somake Spells | Apothic Attributes is in. Still requires Cataclysm. |
+| Weapons of Legendary Monsters | Forge 1.20.1 only. Project 1169738. |
+| Eternal Hunts | Requires Cataclysm, Mowzie's Mobs, and Born in Chaos. Cataclysm is not in the pack. |
+| Apothic Nerf | Overlaps Apotheosis Balance Configurator. The configurator is the balance control. |
 
 ## Overlaps something already in the pack
 

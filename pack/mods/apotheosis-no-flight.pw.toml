@@ -1,0 +1,13 @@
+name = "Apotheosis No Flight"
+filename = "apotheosisnoflight-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "83da80f669cf048a3e8125648e3c210346f5d16c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8529729
+project-id = 1612036

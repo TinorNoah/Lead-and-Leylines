@@ -1,0 +1,27 @@
+name: Installed catalog
+
+on:
+  pull_request:
+    paths:
+      - "pack/**"
+      - "docs/installed/**"
+      - "scripts/installed_catalog.py"
+      - ".github/workflows/installed-catalog.yml"
+  push:
+    branches: [main]
+    paths:
+      - "pack/**"
+      - "docs/installed/**"
+      - "scripts/installed_catalog.py"
+      - ".github/workflows/installed-catalog.yml"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate installed catalog
+        run: python3 scripts/installed_catalog.py --check

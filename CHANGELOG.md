@@ -13,6 +13,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+- New mobs and bosses: a desert illager arena, Qliphoth Awakening, Bosses of Mass Destruction (including integrated structures), Spawn, Critters and Companions, Companions, Armageddon, and Born in Chaos.
+- Alex's Mobs Continued, with tweaks and cooking recipes. Alex's Caves animals can be cooked too.
+- Iron's Spells, with Twilight Forest spells, Create spell tools, Farmer's Delight spells, Alex's Caves spells, and teleport spells that still work on Aeronautics ships.
+- Quark's small vanilla tweaks. Armageddon tools show their tier, and Jade names Born in Chaos infected diamond ore as diamond ore.
+- Apotheosis affixes and gems, including enchanting, movable spawners, Iron's Spells gear, Point Blank and TaCZ guns, and Create machines. Flight potions and charms are off. Affix numbers can be changed in the balance config. Affix tooltips are shorter.
+- More bosses and places: Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Legendary Monsters, an expanded End, Forbidden and Arcanus, and extra dungeons.
+- Pam's HarvestCraft foods, crops, and fruit trees, beside Farmer's Delight.
+
 ### Changed
 
 ### Fixed

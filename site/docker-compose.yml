@@ -1,0 +1,23 @@
+services:
+  mod-browser:
+    build:
+      context: ..
+      dockerfile: site/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      GITHUB_REPO: TinorNoah/Lead-and-Leylines
+      GITHUB_BRANCH: main
+      CACHE_TTL_SECONDS: "600"
+      DATA_DIR: /data
+      SEED_CATALOG_PATH: /app/seed/catalog.json
+      REVALIDATE_SECRET: ${REVALIDATE_SECRET:-dev-revalidate-secret}
+      # Optional:
+      # GITHUB_TOKEN: ${GITHUB_TOKEN}
+      # CURSEFORGE_API_KEY: ${CURSEFORGE_API_KEY}
+    volumes:
+      - mod-browser-data:/data
+    restart: unless-stopped
+
+volumes:
+  mod-browser-data:

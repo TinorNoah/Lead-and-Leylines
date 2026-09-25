@@ -1,0 +1,13 @@
+*
+!site/
+!docs/
+docs/*
+!docs/installed/
+docs/installed/*
+!docs/installed/catalog.json
+site/node_modules/
+site/.next/
+site/.env
+site/.env.*
+!site/.env.example
+site/seed/

@@ -1,0 +1,13 @@
+name = "Dungeon Now Loading Tricky Trials Port"
+filename = "dungeonnowloading-neoforge-1.21.1-2.11.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d0a094616b5b16f298467f22453e3dab02319a94"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8948129
+project-id = 1585912

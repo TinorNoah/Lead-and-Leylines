@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.data/
+.env
+.env.local
+.env.*.local
+seed/catalog.json
+npm-debug.log*
