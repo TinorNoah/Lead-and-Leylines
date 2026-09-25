@@ -12,16 +12,18 @@ cp .env.example .env
 # DATA_DIR=./.data
 mkdir -p seed .data
 cp ../docs/installed/catalog.json seed/catalog.json
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
-npm test          # chunking + webhook HMAC unit tests
-npm run build
+bun run test      # chunking + webhook HMAC unit tests
+bun run build
 ```
+
+Uses **Bun** for install/build/test. UI follows the Stitch **Leyline Cartographer** theme (Playfair / Plus Jakarta / JetBrains Mono; amber + moss on forest ink).
 
 ## Docker (local)
 

@@ -1,37 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0b1020;
-  --foreground: #e8eefc;
-  --muted: #9aa8c7;
-  --card: #121a2f;
-  --card-border: #243152;
-  --accent: #6ee7c5;
-  --accent-dim: #2dd4bf;
-  --accent-soft: rgba(110, 231, 197, 0.12);
-  --danger: #fb7185;
-  --chip: #1a2744;
+  --background: #0c1513;
+  --foreground: #dbe5e1;
+  --muted: #9aa8a2;
+  --muted-foreground: #d2c4b4;
+  --card: #18211f;
+  --card-elevated: #1c2b28;
+  --card-border: #2c403c;
+  --card-border-active: #3a544f;
+  --primary: #dfb16c;
+  --primary-bright: #fdcc85;
+  --primary-foreground: #0c1513;
+  --secondary: #84d8a7;
+  --secondary-dim: #489b6f;
+  --secondary-foreground: #003921;
+  --accent: #dfb16c;
+  --accent-soft: rgba(223, 177, 108, 0.12);
+  --moss-soft: rgba(72, 155, 111, 0.16);
+  --danger: #d04f4f;
+  --chip: #162220;
+  --ring: #dfb16c;
+  --ley-glow: 0 0 16px -2px rgba(223, 177, 108, 0.22);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
   --color-card: var(--card);
+  --color-card-elevated: var(--card-elevated);
   --color-card-border: var(--card-border);
+  --color-card-border-active: var(--card-border-active);
+  --color-primary: var(--primary);
+  --color-primary-bright: var(--primary-bright);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-dim: var(--secondary-dim);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
-  --color-accent-dim: var(--accent-dim);
   --color-accent-soft: var(--accent-soft);
+  --color-moss-soft: var(--moss-soft);
   --color-danger: var(--danger);
   --color-chip: var(--chip);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-jakarta);
+  --font-display: var(--font-playfair);
+  --font-mono: var(--font-jetbrains);
 }
 
 body {
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(110, 231, 197, 0.16), transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, rgba(96, 165, 250, 0.12), transparent 50%),
+    radial-gradient(1000px 520px at 8% -8%, rgba(223, 177, 108, 0.1), transparent 55%),
+    radial-gradient(900px 480px at 100% 0%, rgba(72, 155, 111, 0.1), transparent 50%),
     var(--background);
   color: var(--foreground);
   min-height: 100vh;
@@ -47,5 +69,19 @@ a {
 }
 
 ::selection {
-  background: rgba(110, 231, 197, 0.35);
+  background: rgba(223, 177, 108, 0.35);
+}
+
+.font-display {
+  font-family: var(--font-playfair), ui-serif, Georgia, serif;
+}
+
+.ley-rule {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(223, 177, 108, 0.35),
+    transparent
+  );
+  height: 1px;
 }

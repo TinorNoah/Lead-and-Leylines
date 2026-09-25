@@ -1,4 +1,7 @@
+import Image from "next/image";
+
 import type { CommitInfo, PackInfo } from "@/lib/types";
+import { Badge } from "@/components/ui/badge";
 
 type Props = {
   pack: PackInfo;
@@ -9,31 +12,46 @@ type Props = {
 
 export function SiteHeader({ pack, modCount, commit, source }: Props) {
   return (
-    <header className="border-b border-card-border/80 bg-background/70 backdrop-blur">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-end sm:justify-between">
-        <div>
-          <div className="text-xs uppercase tracking-[0.35em] text-accent">Lead and Leylines</div>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-foreground">
-            Installed mods
-          </h1>
-          <p className="mt-2 max-w-2xl text-sm text-muted">
-            {pack.name} {pack.version} · Minecraft {pack.minecraft} · {pack.loader}{" "}
-            {pack.loader_version} · {modCount} entries
-          </p>
-        </div>
-        <div className="rounded-2xl border border-card-border bg-card/70 px-4 py-3 text-sm text-muted">
+    <header className="border-b border-card-border/80 bg-background/80 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-[1560px] flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+        <div className="flex items-start gap-3 sm:items-center">
+          <Image
+            src="/emblem.svg"
+            alt=""
+            width={48}
+            height={48}
+            className="mt-0.5 shrink-0"
+            priority
+          />
           <div>
-            Source: <span className="text-foreground">{source}</span>
+            <div className="font-display text-2xl font-bold tracking-tight text-primary sm:text-3xl">
+              Lead &amp; Leylines
+            </div>
+            <div className="mt-0.5 text-sm text-muted">Installed mods</div>
+            <p className="mt-2 font-mono text-xs text-muted-foreground">
+              {pack.name} {pack.version} · Minecraft {pack.minecraft} · {pack.loader}{" "}
+              {pack.loader_version} · {modCount} mods
+            </p>
           </div>
+        </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <Badge variant="moss">{source}</Badge>
           {commit ? (
-            <a href={commit.url} target="_blank" rel="noreferrer" className="mt-1 block text-accent">
-              {commit.sha.slice(0, 7)} · {commit.message}
+            <a
+              href={commit.url}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded border border-card-border bg-card px-3 py-1.5 font-mono text-xs text-primary hover:border-card-border-active"
+            >
+              {commit.sha.slice(0, 7)} · {commit.message.slice(0, 48)}
+              {commit.message.length > 48 ? "…" : ""}
             </a>
           ) : (
-            <div className="mt-1">Waiting for GitHub sync</div>
+            <Badge variant="muted">Waiting for GitHub sync</Badge>
           )}
         </div>
       </div>
+      <div className="ley-rule w-full" />
     </header>
   );
 }
