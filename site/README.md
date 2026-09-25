@@ -40,30 +40,47 @@ The root [`.dockerignore`](../.dockerignore) is an allowlist: only `site/` and `
 
 ## Dokploy
 
-1. Create an **Application**.
-2. Build type: **Dockerfile**.
-3. Build context: `.` (repository root).
-4. Dockerfile path: `site/Dockerfile`.
-5. Port: `3000`.
-6. Mount a volume at `/data`.
-7. Set env vars from [`.env.example`](.env.example). At minimum:
-   - `GITHUB_REPO=TinorNoah/Lead-and-Leylines`
-   - `GITHUB_BRANCH=main`
-   - `REVALIDATE_SECRET=<long random string>`
-   - Optional `CURSEFORGE_API_KEY` for icons
-   - Optional `GITHUB_TOKEN` for higher API limits
-8. Deploy.
+Use a **Dockerfile** application pointed at this repo (branch `main`).
 
-### Optional GitHub webhook
+1. **Create Application** → source = this GitHub repo, branch `main`.
+2. **Build**
+   - Build type: **Dockerfile**
+   - Build context / context path: `.` (repository root — required so the image can bake `docs/installed/catalog.json`)
+   - Dockerfile path: `site/Dockerfile`
+3. **Network**
+   - Publish port **3000** (container) → your domain or Dokploy port mapping.
+4. **Volume**
+   - Mount a persistent volume at `/data` (last-good catalog + CurseForge/Modrinth metadata cache).
+5. **Environment** (copy from [`site/.env.example`](.env.example)):
 
-After deploy, add a repository webhook:
+   | Variable | Required | Example / notes |
+   |---|---|---|
+   | `GITHUB_REPO` | yes | `TinorNoah/Lead-and-Leylines` |
+   | `GITHUB_BRANCH` | yes | `main` |
+   | `REVALIDATE_SECRET` | yes | Long random string; same value as the GitHub webhook secret |
+   | `CACHE_TTL_SECONDS` | no | `600` (poll interval) |
+   | `DATA_DIR` | no | `/data` |
+   | `SEED_CATALOG_PATH` | no | `/app/seed/catalog.json` (baked in image) |
+   | `CURSEFORGE_API_KEY` | no | Icons/summaries; without it, monograms + CF links still work |
+   | `GITHUB_TOKEN` | no | Raises GitHub API rate limits for the commit poll |
 
-- Payload URL: `https://<your-host>/api/revalidate`
-- Content type: `application/json`
-- Secret: the same value as `REVALIDATE_SECRET`
-- Events: **Just the push event**
+6. **Deploy**. Open `https://<your-host>/api/health` — expect `"ok": true` and `"mod_count": 451` (or current count). Then open `/`.
 
-The route verifies `X-Hub-Signature-256` over the raw body, accepts only pushes to `GITHUB_BRANCH`, and refreshes `catalog.json` pinned to the push `after` SHA.
+### Optional GitHub webhook (near-instant updates)
+
+1. GitHub repo → Settings → Webhooks → Add webhook.
+2. Payload URL: `https://<your-host>/api/revalidate`
+3. Content type: `application/json`
+4. Secret: same as `REVALIDATE_SECRET`
+5. Events: **Just the push event**
+6. Active → Add webhook. GitHub’s ping should return 200.
+
+Without the webhook, the site still refreshes on its poll interval when `main` moves.
+
+### After deploy
+
+- Mod list changes: merge catalog updates to `main` (no site rebuild needed).
+- Site code / Dockerfile changes: redeploy the Dokploy application.
 
 ## How updates work
 
