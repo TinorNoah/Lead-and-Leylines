@@ -1,7 +1,6 @@
 "use client";
 
 import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { TagChip } from "@/components/TagChip";
 import { cn } from "@/lib/utils";
@@ -55,7 +54,7 @@ export function FilterSidebar({
         <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           Categories
         </div>
-        <div className="flex max-h-[min(50vh,28rem)] flex-col gap-1 overflow-y-auto overscroll-contain pr-1 [scrollbar-width:thin]">
+        <div className="flex max-h-[min(40vh,22rem)] flex-col gap-1 overflow-y-auto overscroll-contain pr-1 [scrollbar-width:thin]">
           <button
             type="button"
             onClick={() => onCategory("")}
@@ -132,20 +131,18 @@ export function FilterSidebar({
           placeholder="Filter tag names…"
           className="mb-2 h-9"
         />
-        <ScrollArea className="max-h-56">
-          <div className="flex flex-wrap gap-2 pr-2">
-            {filteredTags.slice(0, 40).map(([tag, count]) => (
-              <TagChip
-                key={tag}
-                tag={tag}
-                count={count}
-                active={selectedTags.includes(tag)}
-                title={tagVocabulary[tag]}
-                onClick={() => onToggleTag(tag)}
-              />
-            ))}
-          </div>
-        </ScrollArea>
+        <div className="flex max-h-[min(40vh,22rem)] flex-wrap content-start gap-2 overflow-y-auto overscroll-contain pr-1 [scrollbar-width:thin]">
+          {filteredTags.map(([tag, count]) => (
+            <TagChip
+              key={tag}
+              tag={tag}
+              count={count}
+              active={selectedTags.includes(tag)}
+              title={tagVocabulary[tag]}
+              onClick={() => onToggleTag(tag)}
+            />
+          ))}
+        </div>
       </div>
     </aside>
   );
