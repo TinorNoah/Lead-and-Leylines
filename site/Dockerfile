@@ -1,23 +1,22 @@
 # syntax=docker/dockerfile:1
 
-ARG NODE_VERSION=22-alpine
+ARG BUN_VERSION=1.3.14
 
-FROM node:${NODE_VERSION} AS deps
+FROM oven/bun:${BUN_VERSION} AS deps
 WORKDIR /app
-COPY site/package.json site/package-lock.json ./
-RUN npm ci
+COPY site/package.json site/bun.lock ./
+RUN bun install --frozen-lockfile
 
-FROM node:${NODE_VERSION} AS builder
+FROM oven/bun:${BUN_VERSION} AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY site/ ./
-# Seed catalog baked into the image for offline startup.
 COPY docs/installed/catalog.json ./seed/catalog.json
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV SEED_CATALOG_PATH=/app/seed/catalog.json
-RUN npm run build
+RUN bun run build
 
-FROM node:${NODE_VERSION} AS runner
+FROM oven/bun:${BUN_VERSION} AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
@@ -26,7 +25,8 @@ ENV HOSTNAME=0.0.0.0
 ENV DATA_DIR=/data
 ENV SEED_CATALOG_PATH=/app/seed/catalog.json
 
-RUN addgroup -S nodejs && adduser -S nextjs -G nodejs \
+RUN addgroup --system --gid 1001 nodejs \
+  && adduser --system --uid 1001 nextjs \
   && mkdir -p /data \
   && chown -R nextjs:nodejs /data
 
@@ -39,5 +39,5 @@ USER nextjs
 EXPOSE 3000
 VOLUME ["/data"]
 HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
-  CMD wget -qO- http://127.0.0.1:3000/api/health || exit 1
-CMD ["node", "server.js"]
+  CMD bun -e "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
+CMD ["bun", "server.js"]

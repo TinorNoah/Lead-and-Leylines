@@ -1,13 +1,20 @@
 "use client";
 
 import Fuse from "fuse.js";
-import { useMemo, useState } from "react";
+import { LayoutGrid, List, Rows3, Search, SlidersHorizontal } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import type { CatalogCategory, EnrichedMod } from "@/lib/types";
+import { FilterSidebar } from "@/components/FilterSidebar";
+import { MobileFilterSheet } from "@/components/MobileFilterSheet";
 import { ModCard } from "@/components/ModCard";
+import { ModDetailDrawer } from "@/components/ModDetailDrawer";
+import { ModList } from "@/components/ModList";
 import { ModTable } from "@/components/ModTable";
-import { TagChip } from "@/components/TagChip";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 type Props = {
   mods: EnrichedMod[];
@@ -15,7 +22,7 @@ type Props = {
   tagVocabulary: Record<string, string>;
 };
 
-type ViewMode = "cards" | "grouped";
+type ViewMode = "cards" | "list" | "grouped";
 
 function parseList(value: string | null): string[] {
   if (!value) return [];
@@ -35,8 +42,27 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const selectedCategory = searchParams.get("category") ?? "";
   const selectedSide = searchParams.get("side") ?? "";
   const view = (searchParams.get("view") as ViewMode) || "cards";
+  const selectedModFile = searchParams.get("mod") ?? "";
 
   const [draftQuery, setDraftQuery] = useState(query);
+  const [tagQuery, setTagQuery] = useState("");
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    setDraftQuery(query);
+  }, [query]);
+
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        searchRef.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   const fuse = useMemo(
     () =>
@@ -80,23 +106,18 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
     return [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   }, [mods]);
 
-  function updateParams(mutate: (params: URLSearchParams) => void) {
-    const params = new URLSearchParams(searchParams.toString());
-    mutate(params);
-    const next = params.toString();
-    router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
-  }
+  const categoryCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const mod of mods) {
+      counts.set(mod.category, (counts.get(mod.category) || 0) + 1);
+    }
+    return counts;
+  }, [mods]);
 
-  function toggleTag(tag: string) {
-    updateParams((params) => {
-      const current = parseList(params.get("tags"));
-      const next = current.includes(tag)
-        ? current.filter((item) => item !== tag)
-        : [...current, tag];
-      if (next.length === 0) params.delete("tags");
-      else params.set("tags", next.join(","));
-    });
-  }
+  const selectedMod = useMemo(
+    () => mods.find((mod) => mod.file === selectedModFile) ?? null,
+    [mods, selectedModFile],
+  );
 
   const grouped = useMemo(() => {
     const byCategory = new Map<string, Map<string, EnrichedMod[]>>();
@@ -117,182 +138,239 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
       }));
   }, [filtered, categories]);
 
+  function updateParams(mutate: (params: URLSearchParams) => void) {
+    const params = new URLSearchParams(searchParams.toString());
+    mutate(params);
+    const next = params.toString();
+    router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
+  }
+
+  function setSearch(value: string) {
+    updateParams((params) => {
+      if (value.trim()) params.set("q", value.trim());
+      else params.delete("q");
+    });
+  }
+
+  function toggleTag(tag: string) {
+    updateParams((params) => {
+      const current = parseList(params.get("tags"));
+      const next = current.includes(tag)
+        ? current.filter((item) => item !== tag)
+        : [...current, tag];
+      if (next.length === 0) params.delete("tags");
+      else params.set("tags", next.join(","));
+    });
+  }
+
+  function openMod(mod: EnrichedMod) {
+    updateParams((params) => {
+      params.set("mod", mod.file);
+    });
+  }
+
+  function resetFilters() {
+    updateParams((params) => {
+      params.delete("category");
+      params.delete("side");
+      params.delete("tags");
+      params.delete("q");
+    });
+    setDraftQuery("");
+    setTagQuery("");
+  }
+
+  const filterProps = {
+    categories,
+    categoryCounts,
+    selectedCategory,
+    selectedSide,
+    selectedTags,
+    tagCounts,
+    tagVocabulary,
+    tagQuery,
+    onTagQueryChange: setTagQuery,
+    onCategory: (slug: string) =>
+      updateParams((params) => {
+        if (!slug) params.delete("category");
+        else params.set("category", slug);
+      }),
+    onSide: (side: string) =>
+      updateParams((params) => {
+        if (!side) params.delete("side");
+        else params.set("side", side);
+      }),
+    onToggleTag: toggleTag,
+    onClearTags: () =>
+      updateParams((params) => {
+        params.delete("tags");
+      }),
+  };
+
+  const hasFilters = Boolean(selectedCategory || selectedSide || selectedTags.length || query);
+
   return (
-    <div className="mx-auto grid w-full max-w-7xl gap-6 px-4 pb-16 pt-6 lg:grid-cols-[260px_minmax(0,1fr)]">
-      <aside className="space-y-5 rounded-2xl border border-card-border bg-card/80 p-4 backdrop-blur">
-        <div>
-          <label className="mb-2 block text-xs uppercase tracking-[0.2em] text-muted">
-            Search
-          </label>
-          <form
-            onSubmit={(event) => {
-              event.preventDefault();
-              updateParams((params) => {
-                if (draftQuery.trim()) params.set("q", draftQuery.trim());
-                else params.delete("q");
-              });
-            }}
-          >
-            <input
-              value={draftQuery}
-              onChange={(event) => setDraftQuery(event.target.value)}
-              placeholder="tacz, boss, create…"
-              className="w-full rounded-xl border border-card-border bg-background px-3 py-2 text-sm outline-none ring-accent focus:ring-2"
-            />
-          </form>
+    <div className="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-4 sm:px-6 lg:px-8">
+      <form
+        className="sticky top-0 z-20 mb-5 bg-background/90 py-3 backdrop-blur"
+        onSubmit={(event) => {
+          event.preventDefault();
+          setSearch(draftQuery);
+        }}
+      >
+        <div className="relative">
+          <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
+          <Input
+            ref={searchRef}
+            value={draftQuery}
+            onChange={(event) => setDraftQuery(event.target.value)}
+            placeholder="Search mods, tags, bosses…"
+            className="h-12 pl-10 pr-24 text-base"
+          />
+          <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-card-border bg-chip px-2 py-0.5 font-mono text-[10px] text-muted sm:inline">
+            ⌘K
+          </kbd>
+        </div>
+      </form>
+
+      <div className="grid gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
+        <div className="hidden lg:block">
+          <FilterSidebar {...filterProps} />
         </div>
 
-        <div>
-          <div className="mb-2 text-xs uppercase tracking-[0.2em] text-muted">Category</div>
-          <div className="flex max-h-56 flex-col gap-1 overflow-auto pr-1">
-            <button
-              type="button"
-              onClick={() =>
-                updateParams((params) => {
-                  params.delete("category");
-                })
-              }
-              className={`rounded-lg px-2 py-1.5 text-left text-sm ${
-                !selectedCategory ? "bg-accent-soft text-accent" : "hover:bg-chip"
-              }`}
-            >
-              All categories
-            </button>
-            {categories.map((category) => (
-              <button
-                key={category.slug}
+        <section className="space-y-4">
+          <div className="flex flex-wrap items-center justify-between gap-3">
+            <div className="text-sm text-muted">
+              Showing <span className="font-mono text-foreground">{filtered.length}</span> of{" "}
+              <span className="font-mono text-foreground">{mods.length}</span> mods
+              {hasFilters ? (
+                <button
+                  type="button"
+                  className="ml-3 text-secondary hover:underline"
+                  onClick={resetFilters}
+                >
+                  Clear filters
+                </button>
+              ) : null}
+            </div>
+            <div className="flex items-center gap-2">
+              <Button
                 type="button"
-                onClick={() =>
-                  updateParams((params) => {
-                    params.set("category", category.slug);
-                  })
-                }
-                className={`rounded-lg px-2 py-1.5 text-left text-sm ${
-                  selectedCategory === category.slug
-                    ? "bg-accent-soft text-accent"
-                    : "hover:bg-chip"
-                }`}
+                variant="outline"
+                size="sm"
+                className="lg:hidden"
+                onClick={() => setMobileFiltersOpen(true)}
               >
-                {category.title}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <div className="mb-2 text-xs uppercase tracking-[0.2em] text-muted">Side</div>
-          <div className="flex flex-wrap gap-2">
-            {["", "both", "client", "server"].map((side) => (
-              <button
-                key={side || "any"}
-                type="button"
-                onClick={() =>
-                  updateParams((params) => {
-                    if (!side) params.delete("side");
-                    else params.set("side", side);
-                  })
-                }
-                className={`rounded-full px-3 py-1 text-xs ${
-                  selectedSide === side
-                    ? "bg-accent text-background"
-                    : "bg-chip text-muted hover:text-foreground"
-                }`}
-              >
-                {side || "any"}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <div className="mb-2 flex items-center justify-between text-xs uppercase tracking-[0.2em] text-muted">
-            <span>Tags</span>
-            {selectedTags.length > 0 && (
-              <button
-                type="button"
-                className="normal-case tracking-normal text-accent"
-                onClick={() =>
-                  updateParams((params) => {
-                    params.delete("tags");
-                  })
-                }
-              >
-                clear
-              </button>
-            )}
-          </div>
-          <div className="flex max-h-72 flex-wrap gap-2 overflow-auto">
-            {tagCounts.slice(0, 60).map(([tag, count]) => (
-              <TagChip
-                key={tag}
-                tag={tag}
-                count={count}
-                active={selectedTags.includes(tag)}
-                title={tagVocabulary[tag]}
-                onClick={() => toggleTag(tag)}
-              />
-            ))}
-          </div>
-        </div>
-      </aside>
-
-      <section className="space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="text-sm text-muted">
-            Showing <span className="text-foreground">{filtered.length}</span> of {mods.length}{" "}
-            mods
-            {selectedTags.length > 0 && (
-              <span> · tags: {selectedTags.join(", ")}</span>
-            )}
-          </div>
-          <div className="flex gap-2">
-            {(["cards", "grouped"] as ViewMode[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                onClick={() =>
-                  updateParams((params) => {
-                    params.set("view", mode);
-                  })
-                }
-                className={`rounded-full px-3 py-1 text-xs capitalize ${
-                  view === mode ? "bg-accent text-background" : "bg-chip text-muted"
-                }`}
-              >
-                {mode}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {view === "cards" ? (
-          <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {filtered.map((mod) => (
-              <ModCard key={mod.file} mod={mod} />
-            ))}
-          </div>
-        ) : (
-          <div className="space-y-8">
-            {grouped.map(({ category, groups }) => (
-              <div key={category.slug} className="space-y-4">
-                <div>
-                  <h2 className="text-xl font-semibold text-foreground">{category.title}</h2>
-                  <p className="mt-1 text-sm text-muted">{category.intro}</p>
-                </div>
-                {groups.map((group) => (
-                  <ModTable key={`${category.slug}-${group.name}`} title={group.name} mods={group.mods} />
+                <SlidersHorizontal className="h-4 w-4" />
+                Filters
+              </Button>
+              <div className="flex rounded border border-card-border bg-[#111a18] p-0.5">
+                {(
+                  [
+                    ["cards", LayoutGrid, "Cards"],
+                    ["list", List, "List"],
+                    ["grouped", Rows3, "Grouped"],
+                  ] as const
+                ).map(([mode, Icon, label]) => (
+                  <button
+                    key={mode}
+                    type="button"
+                    title={label}
+                    onClick={() =>
+                      updateParams((params) => {
+                        params.set("view", mode);
+                      })
+                    }
+                    className={cn(
+                      "inline-flex items-center gap-1.5 rounded px-2.5 py-1.5 text-xs font-semibold",
+                      view === mode
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted hover:text-foreground",
+                    )}
+                  >
+                    <Icon className="h-3.5 w-3.5" />
+                    <span className="hidden sm:inline">{label}</span>
+                  </button>
                 ))}
               </div>
-            ))}
+            </div>
           </div>
-        )}
 
-        {filtered.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-card-border p-10 text-center text-muted">
-            No mods match these filters.
-          </div>
-        )}
-      </section>
+          {view === "cards" ? (
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+              {filtered.map((mod) => (
+                <ModCard
+                  key={mod.file}
+                  mod={mod}
+                  selected={selectedModFile === mod.file}
+                  onOpen={openMod}
+                />
+              ))}
+            </div>
+          ) : null}
+
+          {view === "list" ? (
+            <ModList mods={filtered} selectedFile={selectedModFile} onOpen={openMod} />
+          ) : null}
+
+          {view === "grouped" ? (
+            <div className="space-y-10">
+              {grouped.map(({ category, groups }) => (
+                <div key={category.slug} className="space-y-6">
+                  <div>
+                    <h2 className="font-display text-2xl font-semibold text-primary">
+                      {category.title}
+                    </h2>
+                    <p className="mt-1 text-sm text-muted">{category.intro}</p>
+                  </div>
+                  {groups.map((group) => (
+                    <ModTable
+                      key={`${category.slug}-${group.name}`}
+                      title={group.name}
+                      mods={group.mods}
+                      selectedFile={selectedModFile}
+                      onOpen={openMod}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          {filtered.length === 0 ? (
+            <div className="rounded border border-dashed border-card-border p-10 text-center text-muted">
+              No mods match these filters.
+            </div>
+          ) : null}
+        </section>
+      </div>
+
+      <ModDetailDrawer
+        mod={selectedMod}
+        open={Boolean(selectedMod)}
+        onOpenChange={(open) => {
+          if (!open) {
+            updateParams((params) => {
+              params.delete("mod");
+            });
+          }
+        }}
+        tagVocabulary={tagVocabulary}
+        onTagClick={(tag) => {
+          toggleTag(tag);
+          updateParams((params) => {
+            params.delete("mod");
+          });
+        }}
+      />
+
+      <MobileFilterSheet
+        open={mobileFiltersOpen}
+        onOpenChange={setMobileFiltersOpen}
+        resultCount={filtered.length}
+        onReset={resetFilters}
+        {...filterProps}
+      />
     </div>
   );
 }

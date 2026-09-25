@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <circle cx="50" cy="50" r="46" stroke="#c6924b" stroke-width="2" stroke-dasharray="3 3" opacity="0.6"/>
+  <circle cx="50" cy="50" r="40" stroke="#dfb16c" stroke-width="2.5"/>
+  <path d="M50 14 L50 86 M14 50 L86 50" stroke="#489b6f" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <polygon points="50,22 62,50 50,78 38,50" fill="#1c2b28" stroke="#dfb16c" stroke-width="2"/>
+  <polygon points="50,30 58,50 50,70 42,50" fill="#c6924b" fill-opacity="0.3" stroke="#489b6f" stroke-width="1.5"/>
+  <circle cx="50" cy="50" r="5" fill="#dfb16c"/>
+  <circle cx="50" cy="22" r="2.5" fill="#489b6f"/>
+  <circle cx="50" cy="78" r="2.5" fill="#489b6f"/>
+  <circle cx="38" cy="50" r="2" fill="#c6924b"/>
+  <circle cx="62" cy="50" r="2" fill="#c6924b"/>
+  <path d="M30 30 L36 36 M64 64 L70 70 M70 30 L64 36 M30 70 L36 64" stroke="#dfb16c" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
