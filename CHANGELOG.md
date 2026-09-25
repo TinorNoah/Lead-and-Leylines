@@ -13,6 +13,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+### Changed
+
+### Fixed
+
+### Removed
+
+## [0.1.7] - 2026-09-25
+
+### Added
+
 - New mobs and bosses: a desert illager arena, Qliphoth Awakening, Bosses of Mass Destruction (including integrated structures), Spawn, Critters and Companions, Companions, Armageddon, and Born in Chaos.
 - Alex's Mobs Continued, with tweaks and cooking recipes. Alex's Caves animals can be cooked too.
 - Iron's Spells, with Twilight Forest spells, Create spell tools, Farmer's Delight spells, Alex's Caves spells, and teleport spells that still work on Aeronautics ships.
@@ -22,6 +32,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 - Pam's HarvestCraft foods, crops, and fruit trees, beside Farmer's Delight.
 
 ### Changed
+
+- The installed-mod browser uses a leyline restyle with clearer filters, card and list views, and a mod detail drawer.
 
 ### Fixed
 
