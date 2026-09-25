@@ -47,7 +47,7 @@ export function FilterSidebar({
   return (
     <aside
       className={cn(
-        "flex h-fit flex-col gap-5 rounded border border-card-border bg-card/90 p-4",
+        "flex h-fit flex-col gap-5 rounded border border-card-border bg-card/90 p-4 lg:sticky lg:top-20 lg:max-h-[calc(100vh-5.5rem)] lg:overflow-y-auto lg:overscroll-contain lg:[scrollbar-width:thin]",
         className,
       )}
     >
@@ -55,43 +55,41 @@ export function FilterSidebar({
         <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
           Categories
         </div>
-        <ScrollArea className="max-h-64 pr-2">
-          <div className="flex flex-col gap-1">
+        <div className="flex max-h-[min(50vh,28rem)] flex-col gap-1 overflow-y-auto overscroll-contain pr-1 [scrollbar-width:thin]">
+          <button
+            type="button"
+            onClick={() => onCategory("")}
+            className={cn(
+              "flex items-center justify-between rounded px-2 py-1.5 text-left text-sm",
+              !selectedCategory
+                ? "bg-accent-soft text-primary"
+                : "text-foreground hover:bg-chip",
+            )}
+          >
+            <span>All mods</span>
+            <span className="font-mono text-[11px] text-muted">
+              {[...categoryCounts.values()].reduce((sum, n) => sum + n, 0)}
+            </span>
+          </button>
+          {categories.map((category) => (
             <button
+              key={category.slug}
               type="button"
-              onClick={() => onCategory("")}
+              onClick={() => onCategory(category.slug)}
               className={cn(
                 "flex items-center justify-between rounded px-2 py-1.5 text-left text-sm",
-                !selectedCategory
+                selectedCategory === category.slug
                   ? "bg-accent-soft text-primary"
                   : "text-foreground hover:bg-chip",
               )}
             >
-              <span>All mods</span>
+              <span className="truncate pr-2">{category.title}</span>
               <span className="font-mono text-[11px] text-muted">
-                {[...categoryCounts.values()].reduce((sum, n) => sum + n, 0)}
+                {categoryCounts.get(category.slug) ?? 0}
               </span>
             </button>
-            {categories.map((category) => (
-              <button
-                key={category.slug}
-                type="button"
-                onClick={() => onCategory(category.slug)}
-                className={cn(
-                  "flex items-center justify-between rounded px-2 py-1.5 text-left text-sm",
-                  selectedCategory === category.slug
-                    ? "bg-accent-soft text-primary"
-                    : "text-foreground hover:bg-chip",
-                )}
-              >
-                <span className="truncate pr-2">{category.title}</span>
-                <span className="font-mono text-[11px] text-muted">
-                  {categoryCounts.get(category.slug) ?? 0}
-                </span>
-              </button>
-            ))}
-          </div>
-        </ScrollArea>
+          ))}
+        </div>
       </div>
 
       <div>

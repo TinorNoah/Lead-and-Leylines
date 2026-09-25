@@ -212,7 +212,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   return (
     <div className="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-4 sm:px-6 lg:px-8">
       <form
-        className="sticky top-0 z-20 mb-5 bg-background/90 py-3 backdrop-blur"
+        className="sticky top-0 z-20 -mx-4 mb-5 border-b border-card-border/60 bg-background px-4 py-3 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
         onSubmit={(event) => {
           event.preventDefault();
           setSearch(draftQuery);
