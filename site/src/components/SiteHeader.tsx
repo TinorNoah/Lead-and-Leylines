@@ -1,18 +1,19 @@
 import Image from "next/image";
+import { Tag } from "lucide-react";
 
-import type { CommitInfo, PackInfo } from "@/lib/types";
+import type { PackInfo, ReleaseInfo } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
 
 type Props = {
   pack: PackInfo;
   modCount: number;
-  commit: CommitInfo | null;
+  release: ReleaseInfo | null;
   source: string;
 };
 
-export function SiteHeader({ pack, modCount, commit, source }: Props) {
+export function SiteHeader({ pack, modCount, release, source }: Props) {
   return (
-    <header className="border-b border-card-border/80 bg-background/80 backdrop-blur">
+    <header className="relative z-10 border-b border-card-border/80 bg-background/80 backdrop-blur">
       <div className="mx-auto flex w-full max-w-[1560px] flex-col gap-4 px-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
         <div className="flex items-start gap-3 sm:items-center">
           <Image
@@ -36,18 +37,22 @@ export function SiteHeader({ pack, modCount, commit, source }: Props) {
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <Badge variant="moss">{source}</Badge>
-          {commit ? (
+          {release ? (
             <a
-              href={commit.url}
+              href={release.url}
               target="_blank"
               rel="noreferrer"
-              className="rounded border border-card-border bg-card px-3 py-1.5 font-mono text-xs text-primary hover:border-card-border-active"
+              className="inline-flex items-center gap-2 rounded border border-card-border bg-card px-3 py-1.5 font-mono text-xs text-primary hover:border-primary/50 hover:shadow-[var(--ley-glow)]"
             >
-              {commit.sha.slice(0, 7)} · {commit.message.slice(0, 48)}
-              {commit.message.length > 48 ? "…" : ""}
+              <Tag className="h-3.5 w-3.5 shrink-0" />
+              <span>v{release.version}</span>
+              <span className="text-muted">·</span>
+              <span className="max-w-[14rem] truncate text-muted-foreground hover:text-primary">
+                Latest release
+              </span>
             </a>
           ) : (
-            <Badge variant="muted">Waiting for GitHub sync</Badge>
+            <Badge variant="muted">Release unavailable</Badge>
           )}
         </div>
       </div>

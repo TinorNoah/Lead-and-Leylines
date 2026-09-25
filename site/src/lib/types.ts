@@ -60,6 +60,13 @@ export type CommitInfo = {
   url: string;
 };
 
+export type ReleaseInfo = {
+  tag: string;
+  version: string;
+  name: string;
+  url: string;
+};
+
 export type ModMetadata = {
   iconUrl: string | null;
   summary: string | null;
