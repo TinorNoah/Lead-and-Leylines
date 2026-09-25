@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import configparser
 import os
+import re
 import shutil
 import socket
 import subprocess
@@ -26,6 +27,8 @@ from pack_jvm import apply_to_prism_instance
 from read_pack_versions import PACK_TOML, read_pack
 
 PACK_DIR = ROOT / "pack"
+PACK_ICON = PACK_DIR / "icon.png"
+PRISM_ICON_KEY = "lead-and-leylines"
 BOOTSTRAP_JAR = "packwiz-installer-bootstrap.jar"
 BOOTSTRAP_URL = (
     "https://github.com/packwiz/packwiz-installer-bootstrap/releases/"
@@ -227,6 +230,27 @@ def run_installer(java: str, bootstrap: Path, pack_url: str, minecraft: Path) ->
         )
 
 
+def apply_pack_icon(instance_dir: Path) -> None:
+    if not PACK_ICON.is_file():
+        return
+    icons = instance_dir.parent.parent / "icons"
+    icons.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(PACK_ICON, icons / f"{PRISM_ICON_KEY}.png")
+    cfg_path = instance_dir / "instance.cfg"
+    text = cfg_path.read_text(encoding="utf-8")
+    newline = "\r\n" if "\r\n" in text else "\n"
+    line = f"iconKey={PRISM_ICON_KEY}"
+    pattern = re.compile(r"^iconKey=.*$", re.MULTILINE)
+    if pattern.search(text):
+        text = pattern.sub(line, text, count=1)
+    else:
+        if text and not text.endswith(("\n", "\r\n")):
+            text += newline
+        text += line + newline
+    cfg_path.write_text(text, encoding="utf-8")
+    print(f"Prism icon {PRISM_ICON_KEY}")
+
+
 def update_prism() -> Path | None:
     load_secrets()
     pack = read_pack(PACK_TOML)
@@ -251,6 +275,7 @@ def update_prism() -> Path | None:
     finally:
         stop_serve(proc)
     jvm_args = apply_to_prism_instance(instance)
+    apply_pack_icon(instance)
     print(f"Prism JVM args {jvm_args}")
     print(f"Prism synced to pack {pack['pack_version']}")
     return instance

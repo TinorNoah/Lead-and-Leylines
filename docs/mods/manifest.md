@@ -378,7 +378,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Spawn | `spawn-4.0.8-1.21.1.jar` | CurseForge 935694 / 8881073 | both | content | Extra mobs. World data. ARR. | Teal Lib. Sable optional. | defaults | 2026-09-24 |
 | Critters and Companions | `crittersandcompanions-neoforge-1.21.1-2.7.0.jar` | CurseForge 574913 / 8646976 | both | content | Pets. World data. ARR. | Architectury, GeckoLib. YACL on the client. | defaults | 2026-09-24 |
 | Companions! | `companions-neoforge-1.21.1-1.3.5.jar` | CurseForge 1300341 / 8962932 | both | content | Pets. World data. GPL-3.0. | Knight Lib | defaults | 2026-09-24 |
-| Armageddon | `Armageddon for NeoForge 1.21.1 (v3.2.0) - Polished.jar` | CurseForge 1110642 / 8854138 | both | content | Horror mobs. World data. | GeckoLib. Curios optional. | defaults | 2026-09-24 |
+| Armageddon | `Armageddon for NeoForge 1.21.1 (v3.2.0) - Polished.jar` | CurseForge 1110642 / 8854138 | both | content | Horror mobs. World data. | GeckoLib. Curios optional. | model-name aliases in `global_packs/required_resources/lead-leylines-armageddon-models/` | 2026-09-24 |
 | Armageddon Tooltips | `armageddontooltips-1.0.0.jar` | CurseForge 1627435 / 8519061 | both | utility | Armageddon tool-tier labels. | none | defaults | 2026-09-24 |
 | Born in Chaos | `born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar` | CurseForge 686437 / 8268280 | both | content | Apocalypse mobs. World data. ARR. | none. GeckoLib optional. | defaults | 2026-09-24 |
 | Born In Configuration | `borninconfiguration-3.2.2.jar` | CurseForge 1019091 / 8122961 | both | utility | Born in Chaos config. MIT. | Born in Chaos | defaults | 2026-09-24 |

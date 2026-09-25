@@ -19,6 +19,20 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.8] - 2026-09-25
+
+### Added
+
+- The leyline emblem is the pack icon.
+
+### Changed
+
+### Fixed
+
+- The loading screen no longer crashes while Armageddon models load.
+
+### Removed
+
 ## [0.1.7] - 2026-09-25
 
 ### Added

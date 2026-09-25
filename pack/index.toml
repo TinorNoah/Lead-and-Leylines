@@ -553,6 +553,30 @@ file = "global_packs/required_data/lead-leylines-ru-in-structure/pack.mcmeta"
 hash = "041668fea9137222873c93b6364baaa55948a5fbe75d231ebe69b678938bf119"
 
 [[files]]
+file = "global_packs/required_resources/lead-leylines-armageddon-models/assets/armageddon_mod/animations/arion__tyrant_of_the_emerald_wrath.animation.json"
+hash = "628b0b5480c21d427e5d3daed05379bcf54ad3b96e116683cd540d4cab60d30b"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-armageddon-models/assets/armageddon_mod/animations/zoranth__the_forgotten_one.animation.json"
+hash = "15f18bb569b0889e67f2ec5966f477a00289a174d71978b4bbad70b32bad25c2"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-armageddon-models/assets/armageddon_mod/geo/arion__tyrant_of_the_emerald_wrath.geo.json"
+hash = "47ad1dfc934d380732bb31bb63904923c5f9625204c5f0323cc57c4399561fc0"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-armageddon-models/assets/armageddon_mod/geo/zoranth__the_forgotten_one.geo.json"
+hash = "4533e4a137fcd77c3b1f9f4ca0c454aaa594e3b1c282c285b58d2b0b48378d23"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-armageddon-models/pack.mcmeta"
+hash = "ec5710535f284ea0861e8ac8b91ad2d3370fd2af64227323a99546ffb43b77d1"
+
+[[files]]
+file = "icon.png"
+hash = "af694b4955ec87c469a0d858c797f0485f3dde4cf9a5508d1abff484a17dd054"
+
+[[files]]
 file = "mods/aaa-particles.pw.toml"
 hash = "c560fdb763127951e022fddd58c744a0cc04425d6f9b72c8ea44b061eaaeabda"
 metafile = true
