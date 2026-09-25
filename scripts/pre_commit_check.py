@@ -2,7 +2,7 @@
 """Local pre-commit checks against the staged index.
 
 Hard-blocks staged .jar files. Warns (exit 0) if pack/mods *.pw.toml is staged
-without CHANGELOG.md in the same commit.
+without CHANGELOG.md or docs/installed/catalog.toml in the same commit.
 """
 
 from __future__ import annotations
@@ -49,6 +49,13 @@ def main() -> None:
             "pre-commit: pack/mods *.pw.toml is staged but CHANGELOG.md is not. "
             "If players will notice this, run the update-changelog skill. "
             "Not blocking: splitting the changelog into a later commit is fine."
+        )
+    catalog_staged = "docs/installed/catalog.toml" in files
+    if pw_tomls and not catalog_staged:
+        print(
+            "pre-commit: pack/mods *.pw.toml is staged but docs/installed/catalog.toml "
+            "is not. Add or remove the catalog row, then run "
+            "python3 scripts/installed_catalog.py. Not blocking."
         )
     raise SystemExit(0)
 

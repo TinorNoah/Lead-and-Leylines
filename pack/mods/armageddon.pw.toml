@@ -1,0 +1,13 @@
+name = "Armageddon"
+filename = "Armageddon for NeoForge 1.21.1 (v3.2.0) - Polished.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "962e34b83ca29b8eed9a15de54e45e86aba47c4d"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8854138
+project-id = 1110642

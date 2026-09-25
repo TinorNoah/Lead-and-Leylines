@@ -1,0 +1,13 @@
+name = "Box of Structures: Legendary Monsters"
+filename = "boslm-1.21.1-1.1.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "65566c7f915207d0c3e744d419465438e1b59c9e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8960344
+project-id = 1609370

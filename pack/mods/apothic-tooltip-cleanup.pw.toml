@@ -1,0 +1,13 @@
+name = "Apothic Tooltip Cleanup"
+filename = "apothic_tooltip_cleanup-1.3.0.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "e0ad23e54a3b2b2d294d3bf6af01c7eb3c5050dd"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8270836
+project-id = 1536956

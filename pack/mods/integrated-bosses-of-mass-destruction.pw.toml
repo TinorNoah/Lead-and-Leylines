@@ -1,0 +1,13 @@
+name = "Integrated Bosses of Mass Destruction"
+filename = "IBOMD v1.0.0-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eb279322e3e7937b190974aa096f28de4e1b7fa8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8895453
+project-id = 1612974

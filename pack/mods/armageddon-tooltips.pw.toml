@@ -1,0 +1,13 @@
+name = "Armageddon Tooltips"
+filename = "armageddontooltips-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "26db144c78525d6c441e02249920607ef0467380"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8519061
+project-id = 1627435

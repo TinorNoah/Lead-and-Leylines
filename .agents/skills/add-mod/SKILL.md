@@ -20,8 +20,9 @@ Do not hardcode Minecraft or loader versions. Read them from `pack/pack.toml` (`
 4. Set packwiz `side` to `client`, `server`, or `both` as approved. Server-logic mods needed in singleplayer are `both`.
 5. `packwiz refresh`.
 6. Update `docs/mods/manifest.md` (and the relevant `docs/mods/` decision log). Confirm it matches `pack/mods/*.pw.toml`.
-7. Call `update-changelog` to log the mod addition/removal in `[Unreleased]`.
-8. Stage TOML and docs only. Never stage `.jar` files.
+7. Add or remove the row in `docs/installed/catalog.toml` (category, group, blurb, tags), then run `python3 scripts/installed_catalog.py` so the markdown pages and `catalog.json` stay in sync.
+8. Call `update-changelog` to log the mod addition/removal in `[Unreleased]`.
+9. Stage TOML and docs only. Never stage `.jar` files.
 
 ## Side
 

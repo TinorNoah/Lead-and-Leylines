@@ -1,0 +1,13 @@
+name = "Apotheosis x Point Blank Compat"
+filename = "apothic-pointblank-1.2.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "6e70e0bf38c2ef18a9b2595f07d83b25f8494451"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8534962
+project-id = 1600496

@@ -1,0 +1,955 @@
+# Installed-mod catalog. Edit this file; run: python3 scripts/installed_catalog.py
+# Source of truth for docs/installed/*.md and docs/installed/catalog.json.
+
+[tags]
+core = "Primary mod of a group."
+addon = "Extra content for a parent mod."
+compat = "Bridge between two mods."
+library = "Shared dependency."
+content-pack = "Gun or content pack (zip / jar pack)."
+resource-pack = "Client resource pack."
+boss = "Boss fights and arenas."
+mob = "Creatures and wildlife."
+worldgen = "Biomes, structures, or terrain."
+structure = "Dungeons, villages, landmarks."
+world-data = "Adds or changes world generation data."
+guns = "Firearms."
+melee = "Melee weapons or combat movesets."
+magic = "Spells, enchanting, gems."
+tech = "Machines and automation."
+storage = "Item or digital storage."
+food = "Cooking and meals."
+farming = "Crops and plant growth."
+seasons = "Season clock and weather."
+transport = "Vehicles, travel, pipes."
+resources = "Ores, chemistry, unification."
+building = "Building tools and decoration."
+exploration = "Maps and dimensions."
+ftb = "FTB claims, teams, quests."
+gameplay = "Vanilla-adjacent tweaks."
+info = "JEI, Jade, tooltips, guides."
+rendering = "Shaders and entity models."
+optimizer = "Performance and tick cost."
+client-qol = "Client comfort."
+stability = "Crash and leak fixes."
+nether = "Nether content."
+end = "End content."
+jei = "Just Enough Items related."
+jade = "Jade overlay related."
+create = "Create and its addons."
+ae2 = "Applied Energistics 2."
+refined-storage = "Refined Storage."
+mekanism = "Mekanism."
+epic-fight = "Epic Fight combat."
+apotheosis = "Apotheosis affixes and gems."
+tacz = "Timeless and Classics Zero."
+point-blank = "Vic's Point Blank."
+ars-nouveau = "Ars Nouveau."
+irons-spells = "Iron's Spells 'n Spellbooks."
+sophisticated = "Sophisticated Backpacks / Storage."
+yungs = "YUNG's structure mods."
+farmers-delight = "Farmer's Delight cluster."
+harvestcraft = "Pam's HarvestCraft."
+alexs = "Alex's Mobs / Caves Continued."
+
+[[category]]
+slug = "weapons"
+title = "Weapons"
+intro = """Guns and the addons that change those guns. Player melee animation is in [Combat](combat.md). Apotheosis itself is in [Magic](magic.md). Refined Storage is in [Refined Storage](refined-storage.md)."""
+
+[[category.group]]
+name = "Timeless and Classics Zero"
+mods = [
+  { file = "tacz-1-21-1.pw.toml", blurb = "Guns. Unofficial 1.21.1 port.", tags = ["core", "guns", "tacz"] },
+  { file = "gunsmith-lib.pw.toml", blurb = "Library Ragnarok and other TaCZ addons use.", tags = ["library", "guns", "tacz"] },
+  { file = "tacz-addon.pw.toml", blurb = "Extra TaCZ parts and behavior.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-runtime-compat.pw.toml", blurb = "Keeps TaCZ loading with the rest of the pack.", tags = ["compat", "guns", "tacz"] },
+  { file = "tacz-pack-upgrader.pw.toml", blurb = "Updates older gun-pack data.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-blueprints-reforged.pw.toml", blurb = "Gun blueprints.", tags = ["library", "guns", "tacz"] },
+  { file = "tacz-refit.pw.toml", blurb = "Recipe and stat editor.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-x-gunslightsaddon-addon.pw.toml", blurb = "Gun lights.", tags = ["addon", "guns", "tacz"] },
+  { file = "curios-for-ammo-box.pw.toml", blurb = "Ammo box on a Curios slot.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-applied-ammo-box.pw.toml", blurb = "Applied Energistics ammo box.", tags = ["addon", "guns", "tacz"] },
+  { file = "applied-tacz.pw.toml", blurb = "Crafts and stores TaCZ guns in Applied Energistics.", tags = ["addon", "guns", "tacz"] },
+  { file = "create-timeless-and-classics-zero-tacz-port.pw.toml", blurb = "Create recipes for TaCZ.", tags = ["addon", "guns", "tacz", "create"] },
+  { file = "tacz-aeronautics-compat.pw.toml", blurb = "Bullets hit Aeronautics vehicles.", tags = ["compat", "guns", "tacz"] },
+  { file = "tacz-jade-compatibility-timeless-and-classics-zero.pw.toml", blurb = "Jade labels for guns.", tags = ["compat", "guns", "tacz", "jade"] },
+  { file = "jet-just-enough-tacz.pw.toml", blurb = "Gun recipes in JEI.", tags = ["addon", "guns", "tacz", "jei"] },
+  { file = "berezka-library.pw.toml", blurb = "Library Just Enough TaCZ needs.", tags = ["library", "guns", "tacz"] },
+  { file = "emf-compat-tacz.pw.toml", blurb = "Entity Model Features support for guns.", tags = ["compat", "guns", "tacz"] },
+  { file = "dont-punch-my-tacz.pw.toml", blurb = "Hides Punchy fists while a gun is held.", tags = ["addon", "guns", "tacz"] },
+  { file = "epic-fight-tacz-first-person-compat.pw.toml", blurb = "First-person TaCZ aim while Epic Fight is installed.", tags = ["compat", "guns", "tacz", "epic-fight"] },
+  { file = "apotheosis-modern-ragnarok.pw.toml", blurb = "Apotheosis affixes on TaCZ guns.", tags = ["addon", "guns", "tacz", "apotheosis"] },
+  { file = "tacz-armed-pillagers.pw.toml", blurb = "Pillagers spawn with guns.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-armed-piglins.pw.toml", blurb = "Piglins spawn with guns.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-armed-skeletons.pw.toml", blurb = "Skeletons spawn with guns.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-bandits.pw.toml", blurb = "Gun-using bandits.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-turrets.pw.toml", blurb = "Placeable gun turrets.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-tactical-breaching.pw.toml", blurb = "Door-breaching charges.", tags = ["addon", "guns", "tacz"] },
+  { file = "elite-x-quality-guns.pw.toml", blurb = "Extra gun set.", tags = ["addon", "guns", "tacz"] },
+  { file = "lr-tactical-1-21-1.pw.toml", blurb = "LesRaisins tactical gear.", tags = ["addon", "guns", "tacz"] },
+  { file = "tacz-cs.pw.toml", blurb = "CS+ gun pack.", tags = ["content-pack", "guns", "tacz"] },
+  { file = "tacz-mcs2-gunpack.pw.toml", blurb = "MCS2 gun pack.", tags = ["content-pack", "guns", "tacz"] },
+  { file = "tacz-addons-daffas-arsenal.pw.toml", blurb = "Daffa's Arsenal gun pack.", tags = ["content-pack", "guns", "tacz"] },
+]
+
+[[category.group]]
+name = "Vic's Point Blank"
+mods = [
+  { file = "vics-point-blank.pw.toml", blurb = "Second gun system, beside TaCZ.", tags = ["core", "guns", "point-blank"] },
+  { file = "point-blank-aeronautics-compat.pw.toml", blurb = "Bullets hit Aeronautics vehicles.", tags = ["compat", "guns", "point-blank"] },
+  { file = "apotheosis-x-point-blank-compat.pw.toml", blurb = "Apotheosis affixes and gems on these guns.", tags = ["compat", "guns", "point-blank", "apotheosis"] },
+  { file = "point-blank-official-point-blank-extended-edition.pw.toml", blurb = "Official extended gun pack.", tags = ["content-pack", "guns", "point-blank"] },
+  { file = "point-blank-official-gun-gale-pack.pw.toml", blurb = "Official Gun Gale pack.", tags = ["content-pack", "guns", "point-blank"] },
+  { file = "point-blank-official-extension-half-life-pack.pw.toml", blurb = "Official Half-Life pack.", tags = ["content-pack", "guns", "point-blank"] },
+  { file = "cyberpunk-2077-guns-for-vics-point-blank.pw.toml", blurb = "Cyberpunk 2077 gun pack.", tags = ["content-pack", "guns", "point-blank"] },
+]
+
+[[category.group]]
+name = "Other weapons"
+mods = [
+  { file = "weapons-of-miracles-epicfight.pw.toml", blurb = "Weapon movesets for Epic Fight.", tags = ["core", "epic-fight", "melee"] },
+  { file = "p1neros-epic-bow.pw.toml", blurb = "Bow moveset for Epic Fight.", tags = ["addon", "epic-fight", "melee"] },
+  { file = "compatlink-epic-fight-weapons-compat.pw.toml", blurb = "Lets more weapons use Epic Fight moves.", tags = ["compat", "epic-fight", "melee"] },
+  { file = "armageddon.pw.toml", blurb = "Tiered weapons and armor.", tags = ["core", "melee"] },
+  { file = "armageddon-tooltips.pw.toml", blurb = "Labels which Armageddon tier a tool is.", tags = ["addon", "melee"] },
+  { file = "refined-storage-quartz-arsenal.pw.toml", blurb = "Weapons crafted through Refined Storage.", tags = ["addon", "melee"] },
+]
+
+[[category]]
+slug = "combat"
+title = "Combat"
+intro = """How the player fights in melee and moves. Guns are in [Weapons](weapons.md). Boss creatures are in [Bosses](bosses.md)."""
+
+[[category.group]]
+name = "Epic Fight"
+mods = [
+  { file = "epic-fight-mod.pw.toml", blurb = "Souls-like combat.", tags = ["core", "melee", "epic-fight"] },
+  { file = "aaa-particles.pw.toml", blurb = "Effekseer particles. Archaion and Gunsmith Lib use them too.", tags = ["addon", "melee"] },
+  { file = "epic-fight-client-tweaks.pw.toml", blurb = "Client combat options.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-fps-optimizer.pw.toml", blurb = "Lowers Epic Fight render cost.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-progressive-difficulty.pw.toml", blurb = "Fights get harder over time.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epicfightcurioscompat.pw.toml", blurb = "Curios slots while Epic Fight mode is on. Client only.", tags = ["compat", "melee", "epic-fight"] },
+  { file = "epic-fight-x-parcool.pw.toml", blurb = "ParCool movement during Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-x-punchy-neo.pw.toml", blurb = "Hides Punchy fists while Epic Fight mode is on.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-twilight-forest-compat.pw.toml", blurb = "Twilight Forest weapons in Epic Fight.", tags = ["compat", "melee", "epic-fight"] },
+  { file = "ice-and-fire-x-epic-fight.pw.toml", blurb = "Ice and Fire armor in Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "neo-forge-epic-fight-x-irons-spells-enhanced.pw.toml", blurb = "Iron's Spells cast animations.", tags = ["addon", "melee", "epic-fight", "irons-spells"] },
+  { file = "bossesrise.pw.toml", blurb = "Extra boss fights built for Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+]
+
+[[category.group]]
+name = "Movement"
+mods = [
+  { file = "parcool.pw.toml", blurb = "Parkour: dodge, wall run, crawl.", tags = ["core", "melee"] },
+  { file = "parcool-compatibility-addon-neoforge-edition.pw.toml", blurb = "ParCool bridges to other mods.", tags = ["compat", "melee"] },
+  { file = "punchy.pw.toml", blurb = "First-person punch animation. Hidden while Epic Fight mode is on.", tags = ["core", "melee"] },
+]
+
+[[category]]
+slug = "bosses"
+title = "Bosses"
+intro = """Boss mods and the structure addons that rebuild their arenas. The structure framework they share is in [Structures](structures.md)."""
+
+[[category.group]]
+name = "Bosses of Mass Destruction"
+mods = [
+  { file = "bosses-of-mass-destruction-forge.pw.toml", blurb = "Lich, obsidilith, and the other BOMD bosses.", tags = ["core", "boss"] },
+  { file = "cerbons-api.pw.toml", blurb = "Library BOMD needs.", tags = ["library", "boss"] },
+  { file = "integrated-bosses-of-mass-destruction.pw.toml", blurb = "Places those bosses in integrated structures.", tags = ["addon", "boss"] },
+]
+
+[[category.group]]
+name = "Qliphoth Awakening"
+mods = [
+  { file = "qliphoth-awakening.pw.toml", blurb = "Boss rush and its arenas.", tags = ["core", "boss"] },
+  { file = "fdlib.pw.toml", blurb = "Library Qliphoth needs.", tags = ["library", "boss"] },
+]
+
+[[category.group]]
+name = "Legendary Monsters"
+mods = [
+  { file = "legendary-monsters.pw.toml", blurb = "Mid-game and late-game bosses.", tags = ["core", "boss"] },
+  { file = "box-of-structures-legendary-monsters.pw.toml", blurb = "Rebuilt arenas for those bosses.", tags = ["addon", "boss"] },
+]
+
+[[category.group]]
+name = "Mowzie's Mobs"
+mods = [
+  { file = "mowzies-mobs.pw.toml", blurb = "Overworld bosses.", tags = ["core", "boss"] },
+  { file = "integrated-mowzies-mobs.pw.toml", blurb = "Rebuilt Mowzie structures.", tags = ["addon", "boss"] },
+]
+
+[[category.group]]
+name = "Other bosses"
+mods = [
+  { file = "mutant-monsters.pw.toml", blurb = "Giant mutant mobs.", tags = ["core", "boss"] },
+  { file = "aquamirae.pw.toml", blurb = "Ocean bosses and the maze.", tags = ["core", "boss"] },
+  { file = "fragmentum-neoforge.pw.toml", blurb = "Library Aquamirae needs.", tags = ["library", "boss"] },
+  { file = "illager-arena.pw.toml", blurb = "Desert arena of illager bosses.", tags = ["core", "boss"] },
+]
+
+[[category]]
+slug = "mobs"
+title = "Mobs"
+intro = """Creatures, wildlife, and the libraries those mods need. Alex's Caves and Codxlib are under [Biomes](biomes.md). Guns on mobs are under [Weapons](weapons.md)."""
+
+[[category.group]]
+name = "Alex's Mobs Continued"
+mods = [
+  { file = "alexs-mobs-continued.pw.toml", blurb = "Overworld animals and monsters.", tags = ["core", "mob", "alexs"] },
+  { file = "amt.pw.toml", blurb = "Tweaks for this mob set.", tags = ["addon", "mob", "alexs"] },
+  { file = "alexs-mobs-continued-farmers-delight-refabricated.pw.toml", blurb = "Cooking recipes for these animals.", tags = ["addon", "mob", "farmers-delight", "food", "alexs"] },
+]
+
+[[category.group]]
+name = "Ice and Fire"
+mods = [
+  { file = "iceandfire-ce.pw.toml", blurb = "Dragons. Community Edition.", tags = ["core", "mob"] },
+  { file = "jupiter.pw.toml", blurb = "Library Ice and Fire needs.", tags = ["library", "mob"] },
+  { file = "uranus.pw.toml", blurb = "Library Ice and Fire needs.", tags = ["library", "mob"] },
+]
+
+[[category.group]]
+name = "Illagers and chaos"
+mods = [
+  { file = "illager-invasion.pw.toml", blurb = "More illager types. Extensible Enums is inside this jar.", tags = ["core", "mob"] },
+  { file = "born-in-chaos.pw.toml", blurb = "Chaos mobs and infected ore.", tags = ["core", "mob"] },
+  { file = "born-in-configuration.pw.toml", blurb = "Config screen for Born in Chaos.", tags = ["addon", "mob"] },
+  { file = "born-in-chaos-jade-compat.pw.toml", blurb = "Jade shows infected diamond ore as diamond ore.", tags = ["compat", "mob", "jade"] },
+]
+
+[[category.group]]
+name = "Companions and wildlife"
+mods = [
+  { file = "critters-and-companions.pw.toml", blurb = "Small wildlife and pets.", tags = ["core", "mob"] },
+  { file = "companions-mod.pw.toml", blurb = "Companion creatures.", tags = ["core", "mob"] },
+  { file = "knight-lib.pw.toml", blurb = "Library Companions and Olympus share.", tags = ["library", "mob"] },
+  { file = "spawn-mod.pw.toml", blurb = "Extra spawn structures and mobs, including the dodo island.", tags = ["core", "mob"] },
+  { file = "teallib.pw.toml", blurb = "Library Spawn needs.", tags = ["library", "mob"] },
+  { file = "variants-and-ventures.pw.toml", blurb = "Variants of vanilla mobs.", tags = ["addon", "mob"] },
+  { file = "resourceful-lib.pw.toml", blurb = "Library Variants & Ventures needs.", tags = ["library", "mob"] },
+]
+
+[[category.group]]
+name = "Folklore"
+mods = [
+  { file = "myths-n-legends.pw.toml", blurb = "Folklore creatures, relics, and structures.", tags = ["core", "mob"] },
+  { file = "olympus-mythology.pw.toml", blurb = "Greek artifacts, mobs, and structures.", tags = ["core", "mob"] },
+  { file = "archaion.pw.toml", blurb = "Fallen-age mobs and structures.", tags = ["core", "mob"] },
+]
+
+[[category]]
+slug = "structures"
+title = "Structures"
+intro = """Dungeons, villages, and the tools that space or label them. Boss arenas that belong to one boss mod are in [Bosses](bosses.md). Nether-only structures are in [The Nether](nether.md)."""
+
+[[category.group]]
+name = "Integrated structures"
+mods = [
+  { file = "integrated-api.pw.toml", blurb = "Shared structure framework for the Integrated addons.", tags = ["library", "structure", "worldgen"] },
+  { file = "integrated-patches.pw.toml", blurb = "Worldgen fixes for that framework.", tags = ["addon", "structure", "worldgen", "world-data"] },
+]
+
+[[category.group]]
+name = "YUNG's"
+mods = [
+  { file = "yungs-api-neoforge.pw.toml", blurb = "Library the YUNG structure mods need.", tags = ["library", "structure", "worldgen", "yungs"] },
+  { file = "yungs-better-caves.pw.toml", blurb = "Rebuilt caves.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-bridges-neoforge.pw.toml", blurb = "Bridges between villages and terrain.", tags = ["compat", "structure", "worldgen", "yungs", "world-data"] },
+]
+
+[[category.group]]
+name = "Dungeons"
+mods = [
+  { file = "when-dungeons-arise.pw.toml", blurb = "Large overworld dungeons.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "when-dungeons-arise-seven-seas.pw.toml", blurb = "Ocean dungeons for When Dungeons Arise.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "dungeon-now-loading-1-21-1-port.pw.toml", blurb = "Unofficial port of Dungeon Now Loading.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "awesome-dungeon.pw.toml", blurb = "Extra dungeon set.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "library-ferret.pw.toml", blurb = "Library Awesome Dungeon needs.", tags = ["library", "structure", "worldgen"] },
+  { file = "the-lost-cities.pw.toml", blurb = "Ruined city worldgen.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "lc2h.pw.toml", blurb = "Multithreaded Lost Cities generation.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "quantified-api.pw.toml", blurb = "Library Lost Cities: Multithreaded needs.", tags = ["library", "structure", "worldgen"] },
+]
+
+[[category.group]]
+name = "Villages and landmarks"
+mods = [
+  { file = "epic-villages.pw.toml", blurb = "Rebuilt villages.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "epic-structures-witch-huts.pw.toml", blurb = "Rebuilt witch huts.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "epic-structures-jungle-temples.pw.toml", blurb = "Rebuilt jungle temples.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "create-sky-village.pw.toml", blurb = "Villages built from Create blocks.", tags = ["addon", "structure", "worldgen", "create", "world-data"] },
+  { file = "mmr-moogs-mineshafts-reimagined.pw.toml", blurb = "Rebuilt mineshafts.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "moogs-structure-lib.pw.toml", blurb = "Library Moog's structures need.", tags = ["library", "structure", "worldgen"] },
+  { file = "compat-structure.pw.toml", blurb = "Structures that bridge other structure mods.", tags = ["compat", "structure", "worldgen", "world-data"] },
+  { file = "compat-api.pw.toml", blurb = "Library Compat Structure needs.", tags = ["library", "compat", "structure", "worldgen"] },
+]
+
+[[category.group]]
+name = "Spacing and labels"
+mods = [
+  { file = "structurify.pw.toml", blurb = "Pushes normal-spaced structures farther apart. New chunks only.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "structure-layout-optimizer.pw.toml", blurb = "Faster structure placement.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "resourceful-config.pw.toml", blurb = "Library Structure Layout Optimizer needs.", tags = ["library", "structure", "worldgen"] },
+  { file = "wits.pw.toml", blurb = "Names the structure you are standing in.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "loot-integrations.pw.toml", blurb = "Mixes mod loot into structure chests.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "lootr.pw.toml", blurb = "Per-player structure loot.", tags = ["core", "structure", "worldgen", "world-data"] },
+]
+
+[[category]]
+slug = "biomes"
+title = "Biomes"
+intro = """Overworld and cave biome sets. The End's biome pack is in [The End](end.md). Nether biomes are in [The Nether](nether.md)."""
+
+[[category.group]]
+name = "Overworld biomes"
+mods = [
+  { file = "terralith.pw.toml", blurb = "Overworld biome pack.", tags = ["core", "worldgen", "world-data"] },
+  { file = "oh-the-biomes-weve-gone.pw.toml", blurb = "Second overworld biome pack.", tags = ["core", "worldgen", "world-data"] },
+  { file = "corgilib.pw.toml", blurb = "Library Oh The Biomes We've Gone needs.", tags = ["library", "worldgen"] },
+  { file = "oh-the-trees-youll-grow.pw.toml", blurb = "Sapling data Oh The Biomes We've Gone needs.", tags = ["addon", "worldgen", "world-data"] },
+  { file = "regions-unexplored.pw.toml", blurb = "Third overworld biome pack.", tags = ["core", "worldgen", "world-data"] },
+  { file = "lithostitched.pw.toml", blurb = "Worldgen library Terralith and Regions Unexplored use.", tags = ["library", "worldgen"] },
+  { file = "terrablender-neoforge.pw.toml", blurb = "Mixes those biome sets. Region size is set in pack config.", tags = ["addon", "worldgen", "world-data"] },
+  { file = "block-variants.pw.toml", blurb = "Extra block variants used by biome mods.", tags = ["addon", "worldgen", "world-data"] },
+  { file = "block-variants-bwg.pw.toml", blurb = "Block variants for Oh The Biomes We've Gone.", tags = ["addon", "worldgen", "world-data"] },
+  { file = "ametrin.pw.toml", blurb = "Library both Block Variants mods use.", tags = ["library", "worldgen"] },
+  { file = "countereds-terrain-slabs.pw.toml", blurb = "Slabs that match terrain blocks.", tags = ["addon", "worldgen", "world-data"] },
+  { file = "feature-recycler.pw.toml", blurb = "Reuses worldgen features so biome mods cost less.", tags = ["addon", "worldgen", "world-data"] },
+]
+
+[[category.group]]
+name = "Caves"
+mods = [
+  { file = "alexs-caves-continued.pw.toml", blurb = "Cave biomes and their animals.", tags = ["core", "worldgen", "alexs", "world-data"] },
+  { file = "codxlib.pw.toml", blurb = "Library Alex's Caves Continued and Alex's Mobs Continued share.", tags = ["library", "worldgen", "alexs"] },
+  { file = "alexs-caves-continued-delight.pw.toml", blurb = "Cooking recipes for cave animals.", tags = ["addon", "worldgen", "farmers-delight", "food", "alexs", "world-data"] },
+  { file = "alexs-caves-spellbooks.pw.toml", blurb = "Iron's Spells aimed at these caves.", tags = ["addon", "worldgen", "irons-spells", "alexs", "world-data"] },
+  { file = "yungs-cave-biomes.pw.toml", blurb = "Cave biome set from YUNG.", tags = ["addon", "worldgen", "yungs", "world-data"] },
+]
+
+[[category.group]]
+name = "Finding biomes"
+mods = [
+  { file = "natures-compass.pw.toml", blurb = "Locates biomes.", tags = ["core", "worldgen", "world-data"] },
+  { file = "explorers-compass.pw.toml", blurb = "Locates structures. This is the structure finder.", tags = ["core", "worldgen", "world-data"] },
+  { file = "biomespy.pw.toml", blurb = "Names the biome you are in.", tags = ["core", "worldgen", "world-data"] },
+]
+
+[[category]]
+slug = "nether"
+title = "The Nether"
+intro = """Nether biomes, structures, and mobs. Nether foods are listed with [Food](food.md). Lithostitched, which Infernal Expansion also uses, is listed with the overworld biome packs in [Biomes](biomes.md)."""
+
+[[category.group]]
+name = "Nether world"
+mods = [
+  { file = "betternether-neoforge.pw.toml", blurb = "Nether biomes and blocks.", tags = ["core", "worldgen", "nether", "world-data"] },
+  { file = "bclib-neoforge.pw.toml", blurb = "Library BetterNether uses.", tags = ["library", "worldgen", "nether"] },
+  { file = "worldweaver-neoforge.pw.toml", blurb = "Library BetterNether worldgen uses.", tags = ["library", "worldgen", "nether"] },
+  { file = "wunderlib-neoforge.pw.toml", blurb = "Library BetterNether uses.", tags = ["library", "worldgen", "nether"] },
+  { file = "amplified-nether.pw.toml", blurb = "Taller Nether terrain.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "eternal-nether.pw.toml", blurb = "Extra Nether biomes.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "infernal-expansion-redux.pw.toml", blurb = "Nether biomes and mobs.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "jadens-nether-expansion.pw.toml", blurb = "Nether biomes, mobs, and blocks.", tags = ["addon", "worldgen", "nether", "jade", "world-data"] },
+  { file = "elysium-api.pw.toml", blurb = "Library Jaden's Nether Expansion needs.", tags = ["library", "worldgen", "nether"] },
+  { file = "nether-remastered.pw.toml", blurb = "Nether structures and mobs.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "just-in-nether.pw.toml", blurb = "Small Nether additions.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "nether-villager-trader.pw.toml", blurb = "Nether trading.", tags = ["addon", "worldgen", "nether", "world-data"] },
+  { file = "yungs-better-nether-fortresses-neoforge.pw.toml", blurb = "Rebuilt nether fortresses.", tags = ["addon", "worldgen", "nether", "yungs", "world-data"] },
+]
+
+[[category]]
+slug = "end"
+title = "The End"
+intro = """End biomes and the End expansion."""
+
+[[category.group]]
+name = "The End"
+mods = [
+  { file = "unusual-end.pw.toml", blurb = "End biomes, mobs, and structures.", tags = ["core", "worldgen", "end", "world-data"] },
+  { file = "blueprint.pw.toml", blurb = "Library Unusual End needs.", tags = ["library", "worldgen", "end"] },
+  { file = "nullscape.pw.toml", blurb = "End islands and biome look.", tags = ["core", "worldgen", "end", "world-data"] },
+]
+
+[[category]]
+slug = "magic"
+title = "Magic"
+intro = """Spell mods and their addons. Gun affixes for TaCZ and Point Blank are in [Weapons](weapons.md). Cooking spells are listed here because they extend Iron's Spells."""
+
+[[category.group]]
+name = "Ars Nouveau"
+mods = [
+  { file = "ars-nouveau.pw.toml", blurb = "Spellcrafting.", tags = ["core", "magic", "ars-nouveau"] },
+  { file = "ars-additions.pw.toml", blurb = "Extra Ars blocks and items.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-elemental.pw.toml", blurb = "Elemental spells.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-elemancy.pw.toml", blurb = "Dual-element gear.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-controle.pw.toml", blurb = "Spell control and filters.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-creo.pw.toml", blurb = "Ars machines on Create.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-technica.pw.toml", blurb = "Ars tools on Create.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-energistique.pw.toml", blurb = "Ars sources in Applied Energistics.", tags = ["addon", "magic", "ars-nouveau"] },
+  { file = "ars-nouveaus-flavors-delight.pw.toml", blurb = "Ars foods.", tags = ["addon", "magic", "ars-nouveau", "farmers-delight", "food"] },
+  { file = "sophisticated-backpacks-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Backpacks.", tags = ["compat", "magic", "sophisticated"] },
+  { file = "sophisticated-storage-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Storage.", tags = ["compat", "magic", "sophisticated"] },
+  { file = "ars-nouveau-refresh.pw.toml", blurb = "Resource pack. Refreshed Ars item textures.", tags = ["resource-pack", "magic", "ars-nouveau"] },
+]
+
+[[category.group]]
+name = "Iron's Spells"
+mods = [
+  { file = "irons-spells-n-spellbooks.pw.toml", blurb = "Spellbooks. Pinned to 3.16.3 so the Create addon keeps working.", tags = ["core", "magic", "irons-spells"] },
+  { file = "irons-lib.pw.toml", blurb = "Library Iron's Spells needs.", tags = ["library", "magic"] },
+  { file = "aces-spell-utils.pw.toml", blurb = "Library the Twilight spellbooks need.", tags = ["library", "magic", "irons-spells"] },
+  { file = "azurelib.pw.toml", blurb = "Library the Twilight spellbooks load at runtime.", tags = ["library", "magic", "irons-spells"] },
+  { file = "spellbooks-of-twilight-irons-spells-x-the-twilight.pw.toml", blurb = "Twilight Forest spells.", tags = ["addon", "magic", "irons-spells"] },
+  { file = "create-spellworks-irons-spells-n-spellbooks.pw.toml", blurb = "Create spell tools.", tags = ["addon", "magic", "create", "irons-spells"] },
+  { file = "irons-spells-n-spellbooks-aeronautics.pw.toml", blurb = "Teleport spells on Aeronautics ships.", tags = ["addon", "magic", "irons-spells"] },
+  { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
+  { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
+]
+
+[[category.group]]
+name = "Apotheosis"
+mods = [
+  { file = "apotheosis.pw.toml", blurb = "Affixes and gems on gear.", tags = ["core", "magic", "apotheosis"] },
+  { file = "apothic-attributes.pw.toml", blurb = "Attribute library Apotheosis needs.", tags = ["library", "magic", "apotheosis"] },
+  { file = "apothic-enchanting.pw.toml", blurb = "Enchanting overhaul.", tags = ["core", "magic", "apotheosis"] },
+  { file = "apothic-spawners.pw.toml", blurb = "Movable and editable spawners.", tags = ["core", "magic", "apotheosis"] },
+  { file = "additional-attributes.pw.toml", blurb = "Attributes Fallen Gems needs.", tags = ["library", "magic"] },
+  { file = "attributefix.pw.toml", blurb = "Fixes attribute stacking. Fallen Gems needs it.", tags = ["library", "magic"] },
+  { file = "fallen-gems-affixes.pw.toml", blurb = "Extra gems and affixes.", tags = ["addon", "magic", "apotheosis"] },
+  { file = "apothic-compats.pw.toml", blurb = "Apotheosis loot data for other mods.", tags = ["compat", "magic", "apotheosis"] },
+  { file = "apothic-category-compat.pw.toml", blurb = "Loot categories for mods already in the pack.", tags = ["compat", "magic", "apotheosis"] },
+  { file = "apotheosis-no-flight.pw.toml", blurb = "Turns off flight potions and charms.", tags = ["addon", "magic", "apotheosis"] },
+  { file = "apotheosis-balance-configurator.pw.toml", blurb = "Affix numbers in a config.", tags = ["addon", "magic", "apotheosis"] },
+  { file = "apothic-tooltip-cleanup.pw.toml", blurb = "Shorter affix lines. Client only. Tooltip Overhaul still draws the frame.", tags = ["addon", "magic", "apotheosis"] },
+  { file = "apokinetics.pw.toml", blurb = "Apotheosis on Create machines.", tags = ["addon", "magic", "apotheosis"] },
+]
+
+[[category.group]]
+name = "Spectrum"
+mods = [
+  { file = "spectrum.pw.toml", blurb = "Progression magic.", tags = ["core", "magic"] },
+  { file = "revelationary.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
+  { file = "modonomicon.pw.toml", blurb = "In-game book Spectrum uses.", tags = ["library", "magic"] },
+  { file = "lodestone.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
+  { file = "spectrumjei.pw.toml", blurb = "Spectrum recipes in JEI.", tags = ["addon", "magic", "jei"] },
+]
+
+[[category.group]]
+name = "Forbidden and Arcanus"
+mods = [
+  { file = "forbidden-arcanus.pw.toml", blurb = "Magic blocks, tools, and mobs.", tags = ["core", "magic"] },
+  { file = "valhelsia-core.pw.toml", blurb = "Library Forbidden and Arcanus needs.", tags = ["library", "magic"] },
+]
+
+[[category]]
+slug = "food"
+title = "Food"
+intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs and Alex's Caves under [Mobs](mobs.md) and [Biomes](biomes.md), Ars foods under [Magic](magic.md)."""
+
+[[category.group]]
+name = "Farmer's Delight"
+mods = [
+  { file = "farmers-delight.pw.toml", blurb = "Cooking, crops, and meals.", tags = ["core", "food", "farmers-delight"] },
+  { file = "corn-delight.pw.toml", blurb = "Corn crops and foods.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "mysterious-mountain-lib.pw.toml", blurb = "Library Corn Delight needs.", tags = ["library", "food"] },
+  { file = "my-nethers-delight.pw.toml", blurb = "Nether foods.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "jadens-nether-expansion-delight.pw.toml", blurb = "Foods from Jaden's Nether Expansion.", tags = ["addon", "food", "jade", "farmers-delight"] },
+  { file = "twilights-flavors-delight.pw.toml", blurb = "Twilight Forest foods.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "autochefs-delight.pw.toml", blurb = "Automated cooking.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "barbeques-delight.pw.toml", blurb = "Grill foods.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "farmers-cutting-betternether.pw.toml", blurb = "Cutting recipes for BetterNether.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "farmers-cutting-oh-the-biomes-weve-gone.pw.toml", blurb = "Cutting recipes for Oh The Biomes We've Gone.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "farmers-cutting-regions-unexplored.pw.toml", blurb = "Cutting recipes for Regions Unexplored.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "farmers-cutting-twilight-forest.pw.toml", blurb = "Cutting recipes for Twilight Forest.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "spice-of-life-carrot-edition.pw.toml", blurb = "Food variety raises max health.", tags = ["core", "food"] },
+  { file = "appleskin.pw.toml", blurb = "Hunger and saturation on the food tooltip.", tags = ["core", "food"] },
+]
+
+[[category.group]]
+name = "Pam's HarvestCraft 2"
+mods = [
+  { file = "pams-harvestcraft-2-food-core.pw.toml", blurb = "Foods from vanilla ingredients.", tags = ["core", "food", "harvestcraft"] },
+  { file = "pams-harvestcraft-2-crops.pw.toml", blurb = "Garden bushes and crops.", tags = ["core", "food", "harvestcraft"] },
+  { file = "pams-harvestcraft-2-trees.pw.toml", blurb = "Fruit trees.", tags = ["core", "food", "harvestcraft"] },
+  { file = "pams-harvestcraft-2-food-extended.pw.toml", blurb = "Foods that use those crops and trees.", tags = ["core", "food", "harvestcraft"] },
+]
+
+[[category]]
+slug = "farming"
+title = "Farming"
+intro = """Pots and area harvest. Seasons are in [Seasons](seasons.md). HarvestCraft crops are in [Food](food.md). Oh The Trees You'll Grow is listed with Oh The Biomes We've Gone in [Biomes](biomes.md)."""
+
+[[category.group]]
+name = "Farming"
+mods = [
+  { file = "botany-pots.pw.toml", blurb = "Grows crops in pots.", tags = ["core", "farming"] },
+  { file = "botany-trees.pw.toml", blurb = "Grows trees in pots.", tags = ["core", "farming"] },
+  { file = "harvest-with-ease.pw.toml", blurb = "Harvest crops in an area.", tags = ["core", "farming"] },
+  { file = "cobweb.pw.toml", blurb = "Library Harvest with ease needs.", tags = ["library", "farming"] },
+]
+
+[[category]]
+slug = "seasons"
+title = "Seasons"
+intro = """The season clock. Serene Seasons is not installed. This stub only satisfies mods that ask for its API."""
+
+[[category.group]]
+name = "Ecliptic Seasons"
+mods = [
+  { file = "ecliptic-seasons.pw.toml", blurb = "24 solar-term seasons, weather, and snow.", tags = ["core", "seasons"] },
+  { file = "ecliptic-seasons-bundles.pw.toml", blurb = "Season data bundles.", tags = ["addon", "seasons"] },
+  { file = "ecliptic-seasons-multimod-patch.pw.toml", blurb = "Season behavior with other mods.", tags = ["addon", "seasons"] },
+  { file = "serene-seasons-api-stub-ecliptic-seasons-bridge.pw.toml", blurb = "Answers Serene Seasons API calls with Ecliptic data.", tags = ["addon", "seasons"] },
+  { file = "seasonhud.pw.toml", blurb = "Season clock on the HUD.", tags = ["addon", "seasons"] },
+]
+
+[[category]]
+slug = "storage"
+title = "Storage"
+intro = """Backpacks, chests, and trash. Digital storage is in [Applied Energistics](applied-energistics.md) and [Refined Storage](refined-storage.md)."""
+
+[[category.group]]
+name = "Sophisticated Backpacks"
+mods = [
+  { file = "sophisticated-core.pw.toml", blurb = "Shared library for Backpacks and Storage.", tags = ["library", "storage", "sophisticated"] },
+  { file = "sophisticated-backpacks.pw.toml", blurb = "Upgradable backpacks.", tags = ["core", "storage", "sophisticated"] },
+  { file = "sophisticated-tactical-backpacks.pw.toml", blurb = "Tactical backpacks and an ammo reload upgrade.", tags = ["addon", "storage", "sophisticated"] },
+  { file = "sophisticated-backpacks-create-integration.pw.toml", blurb = "Create inventory on backpacks.", tags = ["addon", "storage", "create", "sophisticated"] },
+  { file = "create-sophisticated-backpacks-compat.pw.toml", blurb = "Create contraptions can use backpacks.", tags = ["compat", "storage", "create", "sophisticated"] },
+  { file = "sophisticated-backpacks-jade-compatibility.pw.toml", blurb = "Jade labels on backpacks.", tags = ["compat", "storage", "jade", "sophisticated"] },
+  { file = "sophisticated-backpacks-rs-bridge-quick-deposit.pw.toml", blurb = "Deposit a backpack into Refined Storage.", tags = ["addon", "storage", "sophisticated"] },
+  { file = "mekanism-sophisticated-backpacks-compat-chemical.pw.toml", blurb = "Mekanism chemical tanks in backpacks.", tags = ["compat", "storage", "mekanism", "sophisticated"] },
+  { file = "sophisticated-inventory-interactions.pw.toml", blurb = "Extra inventory clicks.", tags = ["addon", "storage", "sophisticated"] },
+  { file = "sophisticated-item-actions.pw.toml", blurb = "Item actions on backpack slots.", tags = ["addon", "storage", "sophisticated"] },
+  { file = "sophisticated-jei-index.pw.toml", blurb = "JEI index of backpack contents.", tags = ["addon", "storage", "jei", "sophisticated"] },
+  { file = "yukamis-sophisticated-backpack-tab.pw.toml", blurb = "Creative tab for backpack upgrades.", tags = ["addon", "storage", "sophisticated"] },
+  { file = "better-sophisticated-backpack-upgrades-bsbu.pw.toml", blurb = "Resource pack. Upgrade icons.", tags = ["resource-pack", "storage", "sophisticated"] },
+]
+
+[[category.group]]
+name = "Sophisticated Storage"
+mods = [
+  { file = "sophisticated-storage.pw.toml", blurb = "Upgradable chests and barrels.", tags = ["core", "storage", "sophisticated"] },
+  { file = "sophisticated-storage-create-integration.pw.toml", blurb = "Create inventory on those chests.", tags = ["addon", "storage", "create", "sophisticated"] },
+  { file = "sophisticated-chest-optimized.pw.toml", blurb = "Cheaper chest rendering.", tags = ["addon", "storage", "sophisticated"] },
+]
+
+[[category.group]]
+name = "Chests and trash"
+mods = [
+  { file = "functional-storage.pw.toml", blurb = "Drawers.", tags = ["core", "storage"] },
+  { file = "titanium.pw.toml", blurb = "Library Functional Storage needs.", tags = ["library", "storage"] },
+  { file = "packing-tape.pw.toml", blurb = "Picks up chests and machines.", tags = ["core", "storage"] },
+  { file = "quick-pack.pw.toml", blurb = "Packs items into bundles.", tags = ["addon", "storage"] },
+  { file = "trash-cans.pw.toml", blurb = "Void trash cans.", tags = ["core", "storage"] },
+  { file = "supermartijn642s-core-lib.pw.toml", blurb = "Library Trash Cans needs.", tags = ["library", "storage"] },
+  { file = "supermartijn642s-config-lib.pw.toml", blurb = "Config library Trash Cans needs.", tags = ["library", "storage"] },
+  { file = "trashslot.pw.toml", blurb = "Trash slot in the inventory.", tags = ["addon", "storage"] },
+]
+
+[[category]]
+slug = "applied-energistics"
+title = "Applied Energistics"
+intro = """ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.md). The Ars bridge is in [Magic](magic.md). The Mekanism bridge is listed here and again noted under [Mekanism](mekanism.md)."""
+
+[[category.group]]
+name = "Applied Energistics 2"
+mods = [
+  { file = "applied-energistics-2.pw.toml", blurb = "ME networks and autocrafting.", tags = ["core", "tech", "storage", "ae2"] },
+  { file = "kotlin-for-forge.pw.toml", blurb = "Kotlin runtime. AE2 MEGA Things and Better P2P need it.", tags = ["library", "tech", "storage", "ae2"] },
+  { file = "glodium.pw.toml", blurb = "Library Applied Flux and ExtendedAE need.", tags = ["library", "tech", "storage", "ae2"] },
+  { file = "applied-energistics-2-wireless-terminals.pw.toml", blurb = "Wireless terminals.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "guideme.pw.toml", blurb = "In-game guide AE2 uses.", tags = ["library", "tech", "storage", "ae2"] },
+  { file = "ae2-crafting-tree.pw.toml", blurb = "Crafting tree view.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae2-jei-integration.pw.toml", blurb = "AE2 recipes in JEI.", tags = ["addon", "tech", "storage", "ae2", "jei"] },
+  { file = "ae2-things-forge.pw.toml", blurb = "DISK drives and extra cells.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae2-mega-things.pw.toml", blurb = "Larger disks.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "mega-cells.pw.toml", blurb = "MEGA cells.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "extra-disks.pw.toml", blurb = "More disk items.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae-additions-extra-cells-2-fork.pw.toml", blurb = "Extra cell types.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "advancedae.pw.toml", blurb = "Advanced AE machines.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ex-pattern-provider.pw.toml", blurb = "Extended pattern providers.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "not-enough-patterns.pw.toml", blurb = "More pattern slots.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "betterp2p.pw.toml", blurb = "Easier P2P setup.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae2-import-export-card.pw.toml", blurb = "Import and export cards.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae2-utility.pw.toml", blurb = "Extra AE utilities.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "ae2-universal-press.pw.toml", blurb = "One press that prints every processor.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "aeinfinitybooster.pw.toml", blurb = "Infinite wireless range.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "infinity-drives.pw.toml", blurb = "Infinite water, lava, and cobblestone drives.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "cable-tiers.pw.toml", blurb = "Faster cables.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "schematic-energistics.pw.toml", blurb = "Schematic cannon linked to the network.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "pattern-converter.pw.toml", blurb = "Converts patterns between AE2 and Refined Storage.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
+  { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
+]
+
+[[category]]
+slug = "refined-storage"
+title = "Refined Storage"
+intro = """Disks, grids, and the addons that extend them. Quartz Arsenal weapons are in [Weapons](weapons.md). The backpack deposit bridge is in [Storage](storage.md). Applied Energistics is in [Applied Energistics](applied-energistics.md)."""
+
+[[category.group]]
+name = "Refined Storage"
+mods = [
+  { file = "refined-storage.pw.toml", blurb = "Disks, grids, and autocrafting.", tags = ["core", "tech", "storage", "refined-storage"] },
+  { file = "extrastorage.pw.toml", blurb = "Larger disks and crafters.", tags = ["addon", "tech", "storage", "refined-storage"] },
+  { file = "edivadlib.pw.toml", blurb = "Library ExtraStorage needs.", tags = ["library", "tech", "storage", "refined-storage"] },
+  { file = "refined-storage-jei-integration.pw.toml", blurb = "Recipes in JEI.", tags = ["addon", "tech", "storage", "refined-storage", "jei"] },
+  { file = "refined-storage-mekanism-integration.pw.toml", blurb = "Mekanism chemicals in the grid.", tags = ["addon", "tech", "storage", "refined-storage", "mekanism"] },
+]
+
+[[category]]
+slug = "mekanism"
+title = "Mekanism"
+intro = """Machines, factories, gases, and tools. The AE2 and Refined Storage bridges are on those pages. The Create vehicle bridge is in [Transport](transport.md)."""
+
+[[category.group]]
+name = "Mekanism"
+mods = [
+  { file = "mekanism.pw.toml", blurb = "Machines, ore processing, and gases.", tags = ["core", "tech", "mekanism"] },
+  { file = "mekanism-generators.pw.toml", blurb = "Power generators.", tags = ["core", "tech", "mekanism"] },
+  { file = "mekanism-tools.pw.toml", blurb = "Mekanism armor and tools.", tags = ["core", "tech", "mekanism"] },
+  { file = "mekanism-extras.pw.toml", blurb = "Extra factories and machines.", tags = ["addon", "tech", "mekanism"] },
+  { file = "mekanism-elements.pw.toml", blurb = "More materials.", tags = ["addon", "tech", "mekanism"] },
+  { file = "mekanism-more-machine.pw.toml", blurb = "More machine tiers.", tags = ["addon", "tech", "mekanism"] },
+  { file = "mekanism-ponders.pw.toml", blurb = "Create-style ponders for Mekanism.", tags = ["addon", "tech", "mekanism"] },
+  { file = "mekagenjei-mekanism-generator-addon.pw.toml", blurb = "Generator recipes in JEI.", tags = ["addon", "tech", "mekanism", "jei"] },
+  { file = "mekajadeupgrades.pw.toml", blurb = "Jade labels for Mekanism upgrades.", tags = ["addon", "tech", "mekanism", "jade"] },
+  { file = "just-enough-mekanism-multiblocks.pw.toml", blurb = "Multiblock preview in JEI.", tags = ["addon", "tech", "mekanism", "jei"] },
+]
+
+[[category]]
+slug = "create"
+title = "Create"
+intro = """Contraptions and kinetics. Ships, trains, and ropes are in [Transport](transport.md). Spell and storage bridges that extend another mod stay on that mod's page."""
+
+[[category.group]]
+name = "Create"
+mods = [
+  { file = "create.pw.toml", blurb = "Contraptions, kinetics, and trains' base mod.", tags = ["core", "tech", "create"] },
+  { file = "createaddition.pw.toml", blurb = "Electric motor, alternator, and power.", tags = ["core", "addon", "tech", "create"] },
+  { file = "create-deco.pw.toml", blurb = "Decoration blocks.", tags = ["addon", "tech", "create"] },
+  { file = "create-encased.pw.toml", blurb = "Encased blocks.", tags = ["addon", "tech", "create"] },
+  { file = "create-ultimine.pw.toml", blurb = "Vein mine with Create.", tags = ["addon", "tech", "create"] },
+  { file = "create-better-fps.pw.toml", blurb = "Cheaper Create rendering.", tags = ["addon", "tech", "create"] },
+  { file = "createjeicompat.pw.toml", blurb = "Create recipes in JEI.", tags = ["compat", "tech", "create", "jei"] },
+  { file = "create-oh-the-biomes-weve-gone-compat.pw.toml", blurb = "Create recipes for Oh The Biomes We've Gone.", tags = ["compat", "tech", "create"] },
+  { file = "create-regions-unexplored-compat-crushing.pw.toml", blurb = "Crushing recipes for Regions Unexplored.", tags = ["compat", "tech", "create"] },
+  { file = "demagnetizer.pw.toml", blurb = "Stops Create item magnets in a box.", tags = ["addon", "tech", "create"] },
+]
+
+[[category]]
+slug = "transport"
+title = "Transport"
+intro = """Vehicles, fast travel, and item pipes. Gun and spell compat that only teaches a projectile to hit a ship stays on the [Weapons](weapons.md) or [Magic](magic.md) page."""
+
+[[category.group]]
+name = "Create Aeronautics"
+mods = [
+  { file = "create-aeronautics.pw.toml", blurb = "Airships and physics vehicles.", tags = ["core", "transport", "create"] },
+  { file = "sable.pw.toml", blurb = "Physics library the vehicles use.", tags = ["library", "transport"] },
+  { file = "create-aeronautics-climbable-ropes.pw.toml", blurb = "Climbable ropes.", tags = ["addon", "transport", "create"] },
+  { file = "create-aeronautics-x-curios-api-compat.pw.toml", blurb = "Aviator goggles in a Curios slot.", tags = ["compat", "transport", "create"] },
+  { file = "create-xaeros-map.pw.toml", blurb = "Vehicles on Xaero's maps.", tags = ["addon", "transport", "create"] },
+  { file = "create-aeronautics-mekanism-compatibility.pw.toml", blurb = "Mekanism blocks on vehicles.", tags = ["compat", "transport", "create", "mekanism"] },
+  { file = "create-threaded-trains.pw.toml", blurb = "Train scheduling off the main thread.", tags = ["addon", "transport", "create"] },
+]
+
+[[category.group]]
+name = "Travel"
+mods = [
+  { file = "waystones.pw.toml", blurb = "Teleport stones.", tags = ["core", "transport"] },
+  { file = "elytra-slot.pw.toml", blurb = "Elytra in a Curios slot.", tags = ["core", "transport"] },
+  { file = "caelus.pw.toml", blurb = "Elytra flight library Elytra Slot needs.", tags = ["library", "transport"] },
+]
+
+[[category.group]]
+name = "Pipes"
+mods = [
+  { file = "pipez.pw.toml", blurb = "Item, fluid, and energy pipes.", tags = ["core", "transport"] },
+  { file = "pipez-lag-fix.pw.toml", blurb = "Lowers Pipez tick cost.", tags = ["addon", "transport"] },
+]
+
+[[category]]
+slug = "resources"
+title = "Resources"
+intro = """Ores, unification, and chemistry. Mekanism processing is in [Mekanism](mekanism.md)."""
+
+[[category.group]]
+name = "Ores and chemistry"
+mods = [
+  { file = "ato.pw.toml", blurb = "Extra ore set.", tags = ["core", "resources"] },
+  { file = "almostunified.pw.toml", blurb = "Points duplicate ores and ingots at one recipe.", tags = ["core", "resources"] },
+  { file = "alchemistry.pw.toml", blurb = "Chemical elements and compounds.", tags = ["core", "resources"] },
+  { file = "chemlib.pw.toml", blurb = "Chemistry items Alchemistry uses.", tags = ["library", "resources"] },
+  { file = "alchemylib.pw.toml", blurb = "Library Alchemistry needs.", tags = ["library", "resources"] },
+  { file = "netherite-tweaks.pw.toml", blurb = "Netherite crafting tweaks.", tags = ["addon", "resources"] },
+]
+
+[[category]]
+slug = "building"
+title = "Building"
+intro = """Building tools and decoration. Create decoration is in [Create](create.md)."""
+
+[[category.group]]
+name = "Building"
+mods = [
+  { file = "building-gadgets.pw.toml", blurb = "Copy, paste, and build gadgets.", tags = ["core", "building"] },
+  { file = "bridging-mod.pw.toml", blurb = "Auto-bridge while sneaking.", tags = ["compat", "building"] },
+  { file = "crystalix.pw.toml", blurb = "Colored glass.", tags = ["addon", "building"] },
+  { file = "amendments.pw.toml", blurb = "Lanterns, hanging signs, and small block tweaks.", tags = ["core", "building"] },
+  { file = "supplementaries.pw.toml", blurb = "Jars, ropes, signs, and furniture.", tags = ["core", "building"] },
+  { file = "selene.pw.toml", blurb = "Moonlight library Supplementaries and Amendments use.", tags = ["library", "building"] },
+]
+
+[[category]]
+slug = "exploration"
+title = "Exploration"
+intro = """Maps and dimensions. Biome and structure finders are in [Biomes](biomes.md). Lost Cities is in [Structures](structures.md)."""
+
+[[category.group]]
+name = "Maps"
+mods = [
+  { file = "xaeros-minimap.pw.toml", blurb = "Minimap.", tags = ["core", "exploration"] },
+  { file = "xaeros-world-map.pw.toml", blurb = "World map.", tags = ["core", "exploration"] },
+  { file = "icon-xaeros.pw.toml", blurb = "Resource pack. Map icons.", tags = ["resource-pack", "exploration"] },
+]
+
+[[category.group]]
+name = "Dimensions"
+mods = [
+  { file = "the-twilight-forest.pw.toml", blurb = "Twilight Forest dimension.", tags = ["core", "exploration"] },
+]
+
+[[category]]
+slug = "ftb"
+title = "FTB"
+intro = """Claims, teams, quests, and the shared FTB library."""
+
+[[category.group]]
+name = "FTB"
+mods = [
+  { file = "ftb-library-forge.pw.toml", blurb = "Library the other FTB mods need.", tags = ["library", "ftb"] },
+  { file = "ftb-teams-forge.pw.toml", blurb = "Teams.", tags = ["core", "ftb"] },
+  { file = "ftb-chunks-forge.pw.toml", blurb = "Claims and the chunk map.", tags = ["core", "ftb"] },
+  { file = "ftb-essentials.pw.toml", blurb = "Homes, warps, and kit commands.", tags = ["addon", "ftb"] },
+  { file = "ftb-quests-forge.pw.toml", blurb = "Quest book.", tags = ["core", "ftb"] },
+  { file = "ftb-quests-optimizer.pw.toml", blurb = "Lowers quest-book cost.", tags = ["addon", "ftb"] },
+  { file = "ftb-filter-system.pw.toml", blurb = "Shared item filters.", tags = ["addon", "ftb"] },
+  { file = "ftb-xmod-compat.pw.toml", blurb = "FTB bridges to other mods.", tags = ["compat", "ftb"] },
+  { file = "ftb-jei-extras.pw.toml", blurb = "Quest recipes in JEI.", tags = ["addon", "ftb", "jei"] },
+  { file = "ftb-ultimine-forge.pw.toml", blurb = "Vein mine.", tags = ["addon", "ftb"] },
+]
+
+[[category]]
+slug = "gameplay"
+title = "Gameplay"
+intro = """Small world and inventory changes."""
+
+[[category.group]]
+name = "Quark"
+mods = [
+  { file = "quark.pw.toml", blurb = "Small vanilla tweaks: blocks, mobs, and tools.", tags = ["core", "gameplay"] },
+  { file = "zeta.pw.toml", blurb = "Library Quark needs. Biolith ships inside the Quark jar.", tags = ["library", "gameplay"] },
+]
+
+[[category.group]]
+name = "Inventory and sleep"
+mods = [
+  { file = "curios.pw.toml", blurb = "Extra equipment slots. Trinket API for the pack.", tags = ["core", "gameplay"] },
+  { file = "artifacts.pw.toml", blurb = "Trinkets that use Curios.", tags = ["core", "gameplay"] },
+  { file = "cosmetic-armor-reworked.pw.toml", blurb = "Cosmetic armor over real armor.", tags = ["addon", "gameplay"] },
+  { file = "comforts.pw.toml", blurb = "Sleeping bags and hammocks.", tags = ["core", "gameplay"] },
+  { file = "epitaphs.pw.toml", blurb = "Graves.", tags = ["core", "gameplay"] },
+  { file = "darksleep.pw.toml", blurb = "Sleep percentage instead of one player skipping night.", tags = ["addon", "gameplay"] },
+  { file = "akashic-tome.pw.toml", blurb = "One book that holds other books.", tags = ["addon", "gameplay"] },
+  { file = "polymorph.pw.toml", blurb = "Picks which recipe crafts when several conflict.", tags = ["core", "gameplay"] },
+  { file = "crafting-tweaks.pw.toml", blurb = "Inventory crafting buttons.", tags = ["addon", "gameplay"] },
+  { file = "clean-swing-through-grass.pw.toml", blurb = "Attacks pass through grass.", tags = ["addon", "gameplay"] },
+  { file = "accelerated-decay.pw.toml", blurb = "Items and corpses despawn faster.", tags = ["addon", "gameplay"] },
+  { file = "too-fast.pw.toml", blurb = "Speeds up a few vanilla waits.", tags = ["addon", "gameplay"] },
+]
+
+[[category]]
+slug = "info"
+title = "Recipes and overlays"
+intro = """JEI, Jade, and tooltip frames. Apotheosis only shortens its own affix lines; that addon is in [Magic](magic.md)."""
+
+[[category.group]]
+name = "Just Enough Items"
+mods = [
+  { file = "jei.pw.toml", blurb = "Recipe viewer.", tags = ["core", "info", "jei"] },
+  { file = "mezzconfig.pw.toml", blurb = "Config library JEI uses.", tags = ["library", "info", "jei"] },
+  { file = "jei-quickcraft.pw.toml", blurb = "Craft from JEI with fewer clicks.", tags = ["addon", "info", "jei"] },
+  { file = "jei-stuff.pw.toml", blurb = "Extra JEI pages.", tags = ["addon", "info", "jei"] },
+  { file = "jei-worldgen.pw.toml", blurb = "Shows where blocks generate.", tags = ["addon", "info", "jei"] },
+  { file = "jeioptimizer.pw.toml", blurb = "Cheaper JEI lookups.", tags = ["addon", "info", "jei"] },
+  { file = "just-enough-resources-jer.pw.toml", blurb = "Mob drops and dungeon loot in JEI.", tags = ["addon", "info", "jei"] },
+  { file = "smithing-template-viewer.pw.toml", blurb = "Smithing templates in JEI.", tags = ["addon", "info", "jei"] },
+]
+
+[[category.group]]
+name = "Looking at the world"
+mods = [
+  { file = "jade.pw.toml", blurb = "Block and entity overlay.", tags = ["core", "info", "jade"] },
+  { file = "jade-addons.pw.toml", blurb = "Extra Jade providers.", tags = ["addon", "info", "jade"] },
+]
+
+[[category.group]]
+name = "Books"
+mods = [
+  { file = "patchouli.pw.toml", blurb = "In-game guide books.", tags = ["core", "info"] },
+]
+
+[[category.group]]
+name = "Tooltips and toasts"
+mods = [
+  { file = "tooltip-overhaul.pw.toml", blurb = "The only item-tooltip frame.", tags = ["core", "info"] },
+  { file = "tagtooltips.pw.toml", blurb = "Hold a key to list item tags inside that frame.", tags = ["addon", "info"] },
+  { file = "item-borders.pw.toml", blurb = "Rarity borders on item slots.", tags = ["addon", "info"] },
+  { file = "durability-tooltip.pw.toml", blurb = "Durability numbers.", tags = ["addon", "info"] },
+  { file = "equipment-compare.pw.toml", blurb = "Shift-compare armor and tools.", tags = ["addon", "info"] },
+  { file = "iceberg.pw.toml", blurb = "Library Equipment Compare and Item Borders use.", tags = ["library", "info"] },
+  { file = "prism-lib.pw.toml", blurb = "Library Item Borders uses.", tags = ["library", "info"] },
+  { file = "toast-control.pw.toml", blurb = "Hides toast spam.", tags = ["addon", "info"] },
+  { file = "better-advancements.pw.toml", blurb = "Clearer advancement screen.", tags = ["addon", "info"] },
+  { file = "clickable-advancements.pw.toml", blurb = "Click advancements to focus them.", tags = ["addon", "info"] },
+  { file = "enhanced-boss-bars.pw.toml", blurb = "Resource pack. Boss bar style.", tags = ["resource-pack", "info"] },
+]
+
+[[category]]
+slug = "rendering"
+title = "Rendering"
+intro = """Shaders, entity models, and client render optimizers. Server tick optimizers are in [Performance](performance.md)."""
+
+[[category.group]]
+name = "Sodium and Iris"
+mods = [
+  { file = "sodium.pw.toml", blurb = "Renderer.", tags = ["core", "rendering", "optimizer"] },
+  { file = "irisshaders.pw.toml", blurb = "Shader loader for Sodium.", tags = ["core", "rendering", "optimizer"] },
+  { file = "euphoria-patches.pw.toml", blurb = "Shader patch set for Iris.", tags = ["core", "rendering"] },
+  { file = "sodium-extra.pw.toml", blurb = "Extra Sodium options.", tags = ["core", "rendering", "optimizer"] },
+  { file = "colorwheel.pw.toml", blurb = "Create rendering path for Iris.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "colorwheel-patcher.pw.toml", blurb = "Patcher Colorwheel needs.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "immediatelyfast.pw.toml", blurb = "Faster immediate-mode rendering.", tags = ["core", "rendering", "optimizer"] },
+  { file = "entityculling.pw.toml", blurb = "Skips entities you cannot see.", tags = ["core", "rendering", "optimizer"] },
+  { file = "moreculling.pw.toml", blurb = "Extra block-face culling.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "flerovium.pw.toml", blurb = "Cheaper block-entity rendering.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "badoptimizations.pw.toml", blurb = "Skips client work that does not change.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "asyncparticles.pw.toml", blurb = "Particle rendering off the main thread.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "geckolibbetterfps.pw.toml", blurb = "Cheaper GeckoLib animations.", tags = ["library", "rendering", "optimizer"] },
+]
+
+[[category.group]]
+name = "Entity models"
+mods = [
+  { file = "entity-model-features.pw.toml", blurb = "Custom entity models. Some mobs stay on vanilla models while Epic Fight is in.", tags = ["core", "rendering"] },
+  { file = "entity-texture-features-fabric.pw.toml", blurb = "Custom entity textures. EMF needs this.", tags = ["core", "rendering"] },
+  { file = "emf-compat-core.pw.toml", blurb = "EMF compat library.", tags = ["library", "compat", "rendering"] },
+  { file = "fresh-animations.pw.toml", blurb = "Resource pack. Fresh Animations.", tags = ["core", "resource-pack", "rendering"] },
+  { file = "fresh-animations-extensions.pw.toml", blurb = "Resource pack. Fresh Animations extensions.", tags = ["resource-pack", "rendering"] },
+  { file = "darkest-ages-mobs.pw.toml", blurb = "Resource pack. Darkest Ages mobs.", tags = ["resource-pack", "rendering"] },
+  { file = "darkest-ages-mobs-fresh-animations.pw.toml", blurb = "Resource pack. Darkest Ages plus Fresh Animations.", tags = ["resource-pack", "rendering"] },
+  { file = "boss-refreshed.pw.toml", blurb = "Resource pack. Dragon, wither, warden, and elder guardian models.", tags = ["resource-pack", "rendering"] },
+]
+
+[[category]]
+slug = "client"
+title = "Client"
+intro = """Client-only comfort. Tooltip frames and JEI are in [Recipes and overlays](info.md). Shaders are in [Rendering](rendering.md)."""
+
+[[category.group]]
+name = "Client"
+mods = [
+  { file = "dynamic-fps.pw.toml", blurb = "Lowers FPS when the window is unfocused.", tags = ["core", "client-qol"] },
+  { file = "colorful-hearts.pw.toml", blurb = "Heart colors.", tags = ["core", "client-qol"] },
+  { file = "client-tweaks.pw.toml", blurb = "Small client annoyance toggles.", tags = ["addon", "client-qol"] },
+  { file = "bad-wither-no-cookie-reloaded.pw.toml", blurb = "Mutes wither, dragon, and raid music.", tags = ["addon", "client-qol"] },
+  { file = "default-options.pw.toml", blurb = "Applies pack keybinds and options.", tags = ["addon", "client-qol"] },
+  { file = "controlling.pw.toml", blurb = "Search keybinds.", tags = ["core", "client-qol"] },
+  { file = "mouse-tweaks.pw.toml", blurb = "Drag and scroll item moving.", tags = ["core", "client-qol"] },
+  { file = "searchables.pw.toml", blurb = "Search in more screens.", tags = ["addon", "client-qol"] },
+  { file = "better-modlist-neoforge.pw.toml", blurb = "Clearer mods screen.", tags = ["addon", "client-qol"] },
+  { file = "better-compatibility-checker.pw.toml", blurb = "Clearer incompatibility screen.", tags = ["compat", "client-qol"] },
+  { file = "crash-assistant.pw.toml", blurb = "Crash screen with next steps.", tags = ["addon", "client-qol"] },
+  { file = "fastboot.pw.toml", blurb = "Faster client startup.", tags = ["addon", "client-qol"] },
+  { file = "resourcepackcached.pw.toml", blurb = "Caches resource-pack loading.", tags = ["addon", "client-qol"] },
+  { file = "asynclogger.pw.toml", blurb = "Logging off the client thread.", tags = ["addon", "client-qol"] },
+  { file = "ambientsounds.pw.toml", blurb = "Ambient soundscapes.", tags = ["addon", "client-qol"] },
+  { file = "creativecore.pw.toml", blurb = "Library AmbientSounds uses.", tags = ["library", "client-qol"] },
+  { file = "neoauth.pw.toml", blurb = "Microsoft auth helper.", tags = ["addon", "client-qol"] },
+  { file = "globalpacks.pw.toml", blurb = "Forces the pack's resource packs on.", tags = ["core", "resource-pack", "client-qol"] },
+]
+
+[[category]]
+slug = "performance"
+title = "Performance"
+intro = """Tick, memory, and chunk-saving work that runs on the server and in singleplayer. Render-only mods are in [Rendering](rendering.md). Placebo and Cupboard are in [Libraries](libraries.md)."""
+
+[[category.group]]
+name = "Tick and memory"
+mods = [
+  { file = "lithium.pw.toml", blurb = "Gameplay and tick optimizer.", tags = ["core", "optimizer"] },
+  { file = "ferritecore.pw.toml", blurb = "Lower memory use.", tags = ["core", "optimizer"] },
+  { file = "modernfix.pw.toml", blurb = "Launch and mixin fixes.", tags = ["core", "optimizer"] },
+  { file = "c2me.pw.toml", blurb = "Threaded chunk generation.", tags = ["core", "optimizer"] },
+  { file = "bye-pregen.pw.toml", blurb = "Pregeneration helper. Do not add Noisium beside it.", tags = ["core", "optimizer"] },
+  { file = "chunkpregenerator.pw.toml", blurb = "Chunk pregenerator command.", tags = ["core", "optimizer"] },
+  { file = "carbon-config.pw.toml", blurb = "Library Chunk Pregenerator needs.", tags = ["library", "optimizer"] },
+  { file = "smooth-chunk-save.pw.toml", blurb = "Spreads chunk saves out.", tags = ["core", "optimizer"] },
+  { file = "ksyxis.pw.toml", blurb = "Faster world join.", tags = ["addon", "optimizer"] },
+  { file = "let-me-despawn.pw.toml", blurb = "Lets persistent mobs despawn.", tags = ["core", "optimizer"] },
+  { file = "almanac-lib.pw.toml", blurb = "Library Let Me Despawn needs.", tags = ["library", "optimizer"] },
+  { file = "clumps.pw.toml", blurb = "Merges XP orbs.", tags = ["core", "optimizer"] },
+  { file = "fastworkbench.pw.toml", blurb = "Faster crafting lookup.", tags = ["core", "optimizer"] },
+  { file = "fastfurnace.pw.toml", blurb = "Faster furnaces.", tags = ["addon", "optimizer"] },
+  { file = "fastsuite.pw.toml", blurb = "Faster recipe manager.", tags = ["addon", "optimizer"] },
+  { file = "cerulean.pw.toml", blurb = "Cheaper advancement checks.", tags = ["addon", "optimizer"] },
+  { file = "txnilib.pw.toml", blurb = "Library Cerulean needs.", tags = ["library", "optimizer"] },
+  { file = "fluidium.pw.toml", blurb = "Delays fluid ticks far from players. Claimed chunks stay full speed.", tags = ["addon", "optimizer"] },
+  { file = "duplicationless.pw.toml", blurb = "Library Fluidium needs. Also blocks a few dupe paths.", tags = ["library", "optimizer"] },
+]
+
+[[category]]
+slug = "stability"
+title = "Stability"
+intro = """Crash isolation, leak patches, and network fixes."""
+
+[[category.group]]
+name = "Stability"
+mods = [
+  { file = "alltheleaks.pw.toml", blurb = "Patches known memory leaks.", tags = ["core", "stability"] },
+  { file = "memorymod.pw.toml", blurb = "Logs heap use. Complements AllTheLeaks.", tags = ["core", "stability"] },
+  { file = "neruina.pw.toml", blurb = "Isolates a ticking entity instead of crashing.", tags = ["core", "stability"] },
+  { file = "configurable.pw.toml", blurb = "Library Neruina needs.", tags = ["library", "stability"] },
+  { file = "crash-utilities.pw.toml", blurb = "Crash report tools.", tags = ["core", "stability"] },
+  { file = "crashexploitfixer.pw.toml", blurb = "Blocks known crash exploits.", tags = ["core", "stability"] },
+  { file = "packet-fixer.pw.toml", blurb = "Repairs bad packets.", tags = ["core", "stability"] },
+  { file = "disconnect-packet-fix.pw.toml", blurb = "Fixes a disconnect packet crash.", tags = ["addon", "stability"] },
+  { file = "login-protection.pw.toml", blurb = "Login flood protection.", tags = ["core", "stability"] },
+]
+
+[[category]]
+slug = "libraries"
+title = "Libraries"
+intro = """Shared libraries used by more than one mod family. A library that exists for a single mod is listed with that mod."""
+
+[[category.group]]
+name = "Shared libraries"
+mods = [
+  { file = "architectury-api.pw.toml", blurb = "API the FTB mods and several others share.", tags = ["library"] },
+  { file = "cloth-config.pw.toml", blurb = "Config screens.", tags = ["library"] },
+  { file = "yacl.pw.toml", blurb = "Config screens. Critters and Companions, Structurify, and Variants & Ventures use it.", tags = ["library"] },
+  { file = "geckolib.pw.toml", blurb = "Animation library. Many mob, magic, and gun mods use it.", tags = ["library"] },
+  { file = "playeranimator.pw.toml", blurb = "Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it.", tags = ["library"] },
+  { file = "bookshelf.pw.toml", blurb = "Library Botany Pots, Botany Trees, and AttributeFix use.", tags = ["library"] },
+  { file = "balm.pw.toml", blurb = "Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use.", tags = ["library"] },
+  { file = "athena.pw.toml", blurb = "Connected textures.", tags = ["library"] },
+  { file = "puzzles-lib.pw.toml", blurb = "Library Mutant Monsters, Illager Invasion, and Eternal Nether use.", tags = ["library"] },
+  { file = "prickle.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, and Fallen Gems use.", tags = ["library"] },
+  { file = "placebo.pw.toml", blurb = "Library the Fast mods and Apotheosis use.", tags = ["library"] },
+  { file = "cupboard.pw.toml", blurb = "Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use.", tags = ["library"] },
+]
+

@@ -1,0 +1,13 @@
+name = "Integrated Mowzie's Mobs"
+filename = "IMM v1.3.2-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9057a29a89eb1ed2ec81309e6266dc63a7ce9b8c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8960804
+project-id = 1587709

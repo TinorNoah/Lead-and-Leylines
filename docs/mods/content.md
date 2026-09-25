@@ -48,7 +48,13 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | both | Souls-like combat. World data. ParCool bridge, Twilight Forest / TaCZ first-person / Curios / Ice and Fire armor compat, Bosses' Rise, Progressive Difficulty, CompatLink, client tweaks, FPS optimizer, Punchy battle-mode hide. playerAnimator required. AAA Particles stays (Effekseer). Do not re-add Nightfall (dedicated-server VFX config crash). |
 | ParCool! | `ParCool-1.21.1-4.0.0.5.jar` | both | Parkour movement. Compatibility++ addon in. |
 | IceAndFire Community Edition | `iceandfire-2.1.3.jar` | both | Dragons. World data. Jupiter + Uranus. Not original Ice and Fire `264231` (1.20.1-only). Pixie villages and fire dragon roosts/caves generate in the Nether. Worldgen dragon skeletons are off; a killed dragon still leaves a corpse. |
-| Alex's Caves Continued | `alexscaves-1.1.1-neoforge+1.21.1.jar` | both | Cave biomes and mobs. World data. Codxlib. |
+| Alex's Caves Continued | `alexscaves-1.1.1-neoforge+1.21.1.jar` | both | Cave biomes and mobs. World data. Codxlib. Cooking recipes via Alex's Caves Continued Delight. Spellbooks addon uses this port; do not add the unofficial Alex's Caves jar or Citadel. |
+| Alex's Mobs Continued | `alexsmobs-2.2.2-neoforge+1.21.1.jar` | both | Mobs. World data. Codxlib. Tweaks and Farmer's Delight recipes are in. Project 1635121. |
+| Quark | `Quark-4.1-485.jar` | both | Small vanilla tweaks. World data. Zeta. Biolith is embedded. |
+| Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.3.jar` | both | Spellbooks beside Ars Nouveau. World data. Iron's Lib. Addons: Twilight Forest, Create, Aeronautics teleports, Farmer's Delight, Alex's Caves, Epic Fight animations, Apotheosis gear. Ace's Spell Utils and AzureLib (Twilight spellbooks loads AzureLib even though its metadata does not list it). |
+| Apotheosis | `Apotheosis-1.21.1-8.8.0.jar` | both | Affixes and gems. World data. Apothic Attributes, Enchanting, and Spawners. Compat for Iron's Spells, Point Blank, TaCZ, and Create. Fallen Gems. Flight potions and charms are off. Balance numbers are in the configurator. Tooltip Cleanup is client-only and does not replace Tooltip Overhaul. |
+| Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Legendary Monsters | see manifest | both | Extra mobs and bosses. World data. Integrated BOMD and Integrated Mowzie's Mobs need Quark. Integrated Patches fixes Integrated API worldgen. Born in Chaos has a config mod and a Jade ore label. Armageddon tooltips label tool tiers. |
+| Unusual End, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading | see manifest | both | End expansion, magic content, a second kitchen beside Farmer's Delight, and an unofficial dungeon port. World data. |
 | Ecliptic Seasons | `EclipticSeasons-1.21.1-neoforge-0.15.0-rc-3-1.jar` | both | 24 solar-term seasons, weather, snow, and crops. World data. Bundles + MultiMod Patch + Serene Seasons API stub. Do not add Serene Seasons. |
 
 Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) and FTB Quests Optimizer: [performance.md](performance.md). Pipez and Sophisticated/Functional storage: [storage.md](storage.md).
@@ -63,6 +69,14 @@ Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) a
 | Continuity | Held | `continuity-3.0.0+1.21.neoforge.jar` needs Sinytra Connector and Forgified Fabric API, and it targets Sodium 0.6. Do not re-add those libraries for connected textures. |
 | Slice & Dice, Central Kitchen, Applied Kinetics, remaining Create kitchen addons | Deferred | Farmer's Delight, Autochef, Barbeque, Create Deco, Encased, and Crafts & Additions are in. Kitchen Create addons are still a later wave. |
 | Alex's Caves / Create compat | Held | Parent is now Alex's Caves Continued; Create compat still needs its own 1.21.1 NF file. |
+| AdventureZ | Held | Project 390991's 1.21.1 file is Fabric only. |
+| ANARCHY Minibosses | Held | Requires Spell Engine, Spell Power, AzureLib, and Accessories beside Curios. |
+| Myths of the Sea | Held | Requires GeckoLib 4.7.4. The pack is on 4.9.3. |
+| Somake Spells | Held | Apothic Attributes is in. Still requires Cataclysm. |
+| Weapons of Legendary Monsters | Held | Forge 1.20.1 only. |
+| Eternal Hunts | Held | Requires Cataclysm, which is not in the pack. |
+| Apothic Nerf | Held | Rewrites the same affixes as Apotheosis Balance Configurator. |
+| Alex's Caves unofficial port, Citadel unofficial port | Dropped | Spellbooks listed them as CurseForge relations. Continued is the caves mod. Do not re-add Citadel. |
 | Vanillin | Dropped | Shader-incompatible with Iris. |
 | Serene Seasons | Dropped | Ecliptic Seasons plus the Serene Seasons API stub covers this. Do not stack. |
 | Mekanism Covers | Dropped | Beta Sodium mixin fails on join with Sodium 0.8.13; no newer 1.21.1 build. |
