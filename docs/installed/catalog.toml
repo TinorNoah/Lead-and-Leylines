@@ -67,9 +67,7 @@ mods = [
   { file = "tacz-addon.pw.toml", blurb = "Extra TaCZ parts and behavior.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-runtime-compat.pw.toml", blurb = "Keeps TaCZ loading with the rest of the pack.", tags = ["compat", "guns", "tacz"] },
   { file = "tacz-pack-upgrader.pw.toml", blurb = "Updates older gun-pack data.", tags = ["addon", "guns", "tacz"] },
-  { file = "tacz-blueprints-reforged.pw.toml", blurb = "Gun blueprints.", tags = ["library", "guns", "tacz"] },
   { file = "tacz-refit.pw.toml", blurb = "Recipe and stat editor.", tags = ["addon", "guns", "tacz"] },
-  { file = "tacz-x-gunslightsaddon-addon.pw.toml", blurb = "Gun lights.", tags = ["addon", "guns", "tacz"] },
   { file = "curios-for-ammo-box.pw.toml", blurb = "Ammo box on a Curios slot.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-applied-ammo-box.pw.toml", blurb = "Applied Energistics ammo box.", tags = ["addon", "guns", "tacz"] },
   { file = "applied-tacz.pw.toml", blurb = "Crafts and stores TaCZ guns in Applied Energistics.", tags = ["addon", "guns", "tacz"] },
@@ -230,7 +228,6 @@ mods = [
   { file = "spawn-mod.pw.toml", blurb = "Extra spawn structures and mobs, including the dodo island.", tags = ["core", "mob"] },
   { file = "teallib.pw.toml", blurb = "Library Spawn needs.", tags = ["library", "mob"] },
   { file = "variants-and-ventures.pw.toml", blurb = "Variants of vanilla mobs.", tags = ["addon", "mob"] },
-  { file = "resourceful-lib.pw.toml", blurb = "Library Variants & Ventures needs.", tags = ["library", "mob"] },
 ]
 
 [[category.group]]
@@ -258,6 +255,11 @@ name = "YUNG's"
 mods = [
   { file = "yungs-api-neoforge.pw.toml", blurb = "Library the YUNG structure mods need.", tags = ["library", "structure", "worldgen", "yungs"] },
   { file = "yungs-better-caves.pw.toml", blurb = "Rebuilt caves.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-better-dungeons-neoforge.pw.toml", blurb = "Rebuilt vanilla dungeons.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-better-strongholds-neoforge.pw.toml", blurb = "Rebuilt strongholds.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-better-ocean-monuments-neoforge.pw.toml", blurb = "Rebuilt ocean monuments.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-better-desert-temples-neoforge.pw.toml", blurb = "Rebuilt desert temples.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-better-end-island-neoforge.pw.toml", blurb = "Rebuilt the central End island dragon fight.", tags = ["core", "structure", "worldgen", "yungs", "end", "world-data"] },
   { file = "yungs-bridges-neoforge.pw.toml", blurb = "Bridges between villages and terrain.", tags = ["compat", "structure", "worldgen", "yungs", "world-data"] },
 ]
 
@@ -283,6 +285,8 @@ mods = [
   { file = "create-sky-village.pw.toml", blurb = "Villages built from Create blocks.", tags = ["addon", "structure", "worldgen", "create", "world-data"] },
   { file = "mmr-moogs-mineshafts-reimagined.pw.toml", blurb = "Rebuilt mineshafts.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "moogs-structure-lib.pw.toml", blurb = "Library Moog's structures need.", tags = ["library", "structure", "worldgen"] },
+  { file = "lukis-ancient-cities.pw.toml", blurb = "New ancient city layouts.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "lukis-woodland-mansions.pw.toml", blurb = "New woodland mansion layouts.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "compat-structure.pw.toml", blurb = "Structures that bridge other structure mods.", tags = ["compat", "structure", "worldgen", "world-data"] },
   { file = "compat-api.pw.toml", blurb = "Library Compat Structure needs.", tags = ["library", "compat", "structure", "worldgen"] },
 ]
@@ -372,6 +376,7 @@ mods = [
   { file = "unusual-end.pw.toml", blurb = "End biomes, mobs, and structures.", tags = ["core", "worldgen", "end", "world-data"] },
   { file = "blueprint.pw.toml", blurb = "Library Unusual End needs.", tags = ["library", "worldgen", "end"] },
   { file = "nullscape.pw.toml", blurb = "End islands and biome look.", tags = ["core", "worldgen", "end", "world-data"] },
+  { file = "betterend-neoforge.pw.toml", blurb = "BetterEnd biomes, mobs, and gear. Shares New Dawn libs with BetterNether.", tags = ["core", "worldgen", "end", "world-data"] },
 ]
 
 [[category]]
@@ -462,6 +467,7 @@ mods = [
   { file = "autochefs-delight.pw.toml", blurb = "Automated cooking.", tags = ["addon", "food", "farmers-delight"] },
   { file = "barbeques-delight.pw.toml", blurb = "Grill foods.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-betternether.pw.toml", blurb = "Cutting recipes for BetterNether.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "farmers-cutting-betterend.pw.toml", blurb = "Cutting recipes for BetterEnd: New Dawn.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-oh-the-biomes-weve-gone.pw.toml", blurb = "Cutting recipes for Oh The Biomes We've Gone.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-regions-unexplored.pw.toml", blurb = "Cutting recipes for Regions Unexplored.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-twilight-forest.pw.toml", blurb = "Cutting recipes for Twilight Forest.", tags = ["addon", "food", "farmers-delight"] },
@@ -598,6 +604,7 @@ mods = [
   { file = "refined-storage.pw.toml", blurb = "Disks, grids, and autocrafting.", tags = ["core", "tech", "storage", "refined-storage"] },
   { file = "extrastorage.pw.toml", blurb = "Larger disks and crafters.", tags = ["addon", "tech", "storage", "refined-storage"] },
   { file = "edivadlib.pw.toml", blurb = "Library ExtraStorage needs.", tags = ["library", "tech", "storage", "refined-storage"] },
+  { file = "interdimensional-wireless-transmitter.pw.toml", blurb = "Wireless transmitter that reaches every dimension.", tags = ["addon", "tech", "storage", "refined-storage"] },
   { file = "refined-storage-jei-integration.pw.toml", blurb = "Recipes in JEI.", tags = ["addon", "tech", "storage", "refined-storage", "jei"] },
   { file = "refined-storage-mekanism-integration.pw.toml", blurb = "Mekanism chemicals in the grid.", tags = ["addon", "tech", "storage", "refined-storage", "mekanism"] },
 ]
@@ -701,6 +708,13 @@ mods = [
   { file = "building-gadgets.pw.toml", blurb = "Copy, paste, and build gadgets.", tags = ["core", "building"] },
   { file = "bridging-mod.pw.toml", blurb = "Auto-bridge while sneaking.", tags = ["compat", "building"] },
   { file = "crystalix.pw.toml", blurb = "Colored glass.", tags = ["addon", "building"] },
+  { file = "chipped.pw.toml", blurb = "Block variants from a mason's table.", tags = ["addon", "building"] },
+  { file = "handcrafted.pw.toml", blurb = "Chairs, tables, and other furniture.", tags = ["addon", "building"] },
+  { file = "macaws-doors.pw.toml", blurb = "More door styles.", tags = ["addon", "building"] },
+  { file = "macaws-windows.pw.toml", blurb = "Windows, blinds, shutters, and curtains.", tags = ["addon", "building"] },
+  { file = "macaws-fences-and-walls.pw.toml", blurb = "More fences, walls, and gates.", tags = ["addon", "building"] },
+  { file = "macaws-furniture.pw.toml", blurb = "Wardrobes, couches, desks, and other furniture.", tags = ["addon", "building"] },
+  { file = "visual-workbench.pw.toml", blurb = "Items stay on the crafting table.", tags = ["addon", "building"] },
   { file = "amendments.pw.toml", blurb = "Lanterns, hanging signs, and small block tweaks.", tags = ["core", "building"] },
   { file = "supplementaries.pw.toml", blurb = "Jars, ropes, signs, and furniture.", tags = ["core", "building"] },
   { file = "selene.pw.toml", blurb = "Moonlight library Supplementaries and Amendments use.", tags = ["library", "building"] },
@@ -723,6 +737,8 @@ mods = [
 name = "Dimensions"
 mods = [
   { file = "the-twilight-forest.pw.toml", blurb = "Twilight Forest dimension.", tags = ["core", "exploration"] },
+  { file = "tw-resurrection.pw.toml", blurb = "Respawn Twilight Forest bosses.", tags = ["addon", "exploration", "world-data"] },
+  { file = "twilight-forest-dungeons-villages.pw.toml", blurb = "Twilight Forest villages and dungeons.", tags = ["addon", "exploration", "world-data"] },
 ]
 
 [[category]]
@@ -772,6 +788,7 @@ mods = [
   { file = "clean-swing-through-grass.pw.toml", blurb = "Attacks pass through grass.", tags = ["addon", "gameplay"] },
   { file = "accelerated-decay.pw.toml", blurb = "Items and corpses despawn faster.", tags = ["addon", "gameplay"] },
   { file = "too-fast.pw.toml", blurb = "Speeds up a few vanilla waits.", tags = ["addon", "gameplay"] },
+  { file = "fast-item-frames.pw.toml", blurb = "Faster, colorable, and invisible item frames.", tags = ["addon", "gameplay", "world-data"] },
 ]
 
 [[category]]
@@ -812,12 +829,17 @@ mods = [
   { file = "tagtooltips.pw.toml", blurb = "Hold a key to list item tags inside that frame.", tags = ["addon", "info"] },
   { file = "item-borders.pw.toml", blurb = "Rarity borders on item slots.", tags = ["addon", "info"] },
   { file = "durability-tooltip.pw.toml", blurb = "Durability numbers.", tags = ["addon", "info"] },
+  { file = "enchantment-descriptions.pw.toml", blurb = "What each enchantment does, on the item tooltip.", tags = ["addon", "info"] },
+  { file = "beautiful-enchanted-books.pw.toml", blurb = "Enchanted books use theme textures.", tags = ["addon", "info"] },
+  { file = "enchant-icons-countxd.pw.toml", blurb = "Resource pack. Icons next to enchantment names.", tags = ["resource-pack", "info"] },
+  { file = "loot-journal-neoforge.pw.toml", blurb = "Animated pickup notifier for looted items.", tags = ["addon", "info"] },
   { file = "equipment-compare.pw.toml", blurb = "Shift-compare armor and tools.", tags = ["addon", "info"] },
   { file = "iceberg.pw.toml", blurb = "Library Equipment Compare and Item Borders use.", tags = ["library", "info"] },
   { file = "prism-lib.pw.toml", blurb = "Library Item Borders uses.", tags = ["library", "info"] },
   { file = "toast-control.pw.toml", blurb = "Hides toast spam.", tags = ["addon", "info"] },
   { file = "better-advancements.pw.toml", blurb = "Clearer advancement screen.", tags = ["addon", "info"] },
   { file = "clickable-advancements.pw.toml", blurb = "Click advancements to focus them.", tags = ["addon", "info"] },
+  { file = "betterf3.pw.toml", blurb = "Clearer, configurable debug HUD.", tags = ["addon", "info"] },
   { file = "enhanced-boss-bars.pw.toml", blurb = "Resource pack. Boss bar style.", tags = ["resource-pack", "info"] },
 ]
 
@@ -841,7 +863,17 @@ mods = [
   { file = "flerovium.pw.toml", blurb = "Cheaper block-entity rendering.", tags = ["addon", "rendering", "optimizer"] },
   { file = "badoptimizations.pw.toml", blurb = "Skips client work that does not change.", tags = ["addon", "rendering", "optimizer"] },
   { file = "asyncparticles.pw.toml", blurb = "Particle rendering off the main thread.", tags = ["addon", "rendering", "optimizer"] },
+  { file = "particle-rain.pw.toml", blurb = "Weather drawn with particles.", tags = ["addon", "rendering"] },
+  { file = "subtle-effects.pw.toml", blurb = "Extra ambient particles and sounds.", tags = ["addon", "rendering"] },
   { file = "geckolibbetterfps.pw.toml", blurb = "Cheaper GeckoLib animations.", tags = ["library", "rendering", "optimizer"] },
+]
+
+[[category.group]]
+name = "Connected textures"
+mods = [
+  { file = "fusion-connected-textures.pw.toml", blurb = "Connected textures for resource packs.", tags = ["core", "rendering"] },
+  { file = "fusion-3d-items.pw.toml", blurb = "Resource pack. 3D item models.", tags = ["resource-pack", "rendering"] },
+  { file = "fusion-connected-glass.pw.toml", blurb = "Resource pack. Glass textures connect.", tags = ["resource-pack", "rendering"] },
 ]
 
 [[category.group]]
@@ -867,6 +899,7 @@ name = "Client"
 mods = [
   { file = "dynamic-fps.pw.toml", blurb = "Lowers FPS when the window is unfocused.", tags = ["core", "client-qol"] },
   { file = "colorful-hearts.pw.toml", blurb = "Heart colors.", tags = ["core", "client-qol"] },
+  { file = "colourful-everywhere.pw.toml", blurb = "Recolours GUIs with shader presets (NeoForge OptiGUI stand-in).", tags = ["addon", "client-qol"] },
   { file = "client-tweaks.pw.toml", blurb = "Small client annoyance toggles.", tags = ["addon", "client-qol"] },
   { file = "bad-wither-no-cookie-reloaded.pw.toml", blurb = "Mutes wither, dragon, and raid music.", tags = ["addon", "client-qol"] },
   { file = "default-options.pw.toml", blurb = "Applies pack keybinds and options.", tags = ["addon", "client-qol"] },
@@ -943,14 +976,16 @@ name = "Shared libraries"
 mods = [
   { file = "architectury-api.pw.toml", blurb = "API the FTB mods and several others share.", tags = ["library"] },
   { file = "cloth-config.pw.toml", blurb = "Config screens.", tags = ["library"] },
+  { file = "fzzy-config.pw.toml", blurb = "Config library Subtle Effects uses.", tags = ["library"] },
   { file = "yacl.pw.toml", blurb = "Config screens. Critters and Companions, Structurify, and Variants & Ventures use it.", tags = ["library"] },
   { file = "geckolib.pw.toml", blurb = "Animation library. Many mob, magic, and gun mods use it.", tags = ["library"] },
   { file = "playeranimator.pw.toml", blurb = "Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it.", tags = ["library"] },
-  { file = "bookshelf.pw.toml", blurb = "Library Botany Pots, Botany Trees, and AttributeFix use.", tags = ["library"] },
+  { file = "bookshelf.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, and Enchantment Descriptions use.", tags = ["library"] },
   { file = "balm.pw.toml", blurb = "Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use.", tags = ["library"] },
-  { file = "athena.pw.toml", blurb = "Connected textures.", tags = ["library"] },
-  { file = "puzzles-lib.pw.toml", blurb = "Library Mutant Monsters, Illager Invasion, and Eternal Nether use.", tags = ["library"] },
-  { file = "prickle.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, and Fallen Gems use.", tags = ["library"] },
+  { file = "athena.pw.toml", blurb = "Connected textures Chipped uses.", tags = ["library"] },
+  { file = "resourceful-lib.pw.toml", blurb = "Library Variants & Ventures, Chipped, and Handcrafted use.", tags = ["library"] },
+  { file = "puzzles-lib.pw.toml", blurb = "Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use.", tags = ["library"] },
+  { file = "prickle.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use.", tags = ["library"] },
   { file = "placebo.pw.toml", blurb = "Library the Fast mods and Apotheosis use.", tags = ["library"] },
   { file = "cupboard.pw.toml", blurb = "Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use.", tags = ["library"] },
 ]

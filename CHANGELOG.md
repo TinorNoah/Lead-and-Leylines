@@ -19,6 +19,28 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.9] - 2026-09-26
+
+### Added
+
+- Chipped block variants, Handcrafted and Macaw's furniture, and Macaw's doors, windows, and fences.
+- Glass connects, and many items use 3D models.
+- Enchantment tooltips say what each enchantment does.
+- Items stay visible on crafting tables.
+- Twilight Forest boss respawns, villages, and dungeons.
+- BetterEnd: New Dawn (with Farmer's Cutting), beside Nullscape and Unusual End.
+- YUNG rebuilt dungeons, strongholds, desert temples, ocean monuments, and the End island; Luki's ancient cities and woodland mansions.
+- Particle rain, subtle ambient effects, Colourful Everywhere GUI recolor, BetterF3, loot pickup toasts, prettier enchanted books, and enchantment icons.
+- Cross-dimension Refined Storage wireless, Fast Item Frames, and DarkLoot mob loot (editable datapack).
+
+### Changed
+
+### Fixed
+
+### Removed
+
+- Gun lights and gun blueprints are gone from Timeless and Classics Zero.
+
 ## [0.1.8] - 2026-09-25
 
 ### Added

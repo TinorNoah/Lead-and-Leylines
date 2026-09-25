@@ -39,7 +39,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Spawn | `spawn-4.0.8-1.21.1.jar` | both | `core`, `mob` | Extra spawn structures and mobs, including the dodo island. |
 | Teal Lib | `teallib-1.3.teal.jar` | both | `library`, `mob` | Library Spawn needs. |
 | Variants&Ventures | `variantsandventures-neoforge-1.0.26+mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
-| Resourceful Lib | `resourcefullib-neoforge-1.21-3.0.12.jar` | both | `library`, `mob` | Library Variants & Ventures needs. |
 
 ## Folklore
 

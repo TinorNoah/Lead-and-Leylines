@@ -18,6 +18,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | Loads `pack/global_packs/required_data/` (RU Lithostitched override, large-climate noise, Nether pixie villages, disabled vanilla stone blobs). Unpacked folders (`.packwizignore` blocks `*.zip`). ARR. |
 | Terralith | `Terralith_1.21.x_v2.6.2.jar` | both | Overworld biome datapack-as-mod. World data. Requires Lithostitched. Stacks with OTBWG and RU. Built-in terrain slabs off (Countered's Terrain Slabs is the pack's slab layer). |
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | both | End overhaul. World data. Stardust companion to Terralith. |
+| BetterEnd: New Dawn | `BetterEnd-21.0.35.jar` | both | End biomes/mobs/gear. World data. Shares New Dawn BCLib/WorldWeaver/WunderLib with BetterNether. Stacks with Nullscape and Unusual End. |
 | YACL | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | Required by Structurify. |
 | Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | both | Structure spacing/control. Global multiplier 2.0. Better Sparse Structures skipped (same job). |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | both | Extra overworld dungeons. World data. ARR. |
@@ -31,6 +32,13 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Compat Structure | `compatstructures-1.0.3.jar` | both | Extra structures. World data. Compat API. |
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | both | Nether fortress overhaul. World data. |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | both | River bridges. World data. |
+| YUNG's Better Dungeons | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` | both | Dungeon overhaul. World data. NeoForge `1015112`. |
+| YUNG's Better Strongholds | `YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar` | both | Stronghold overhaul. World data. NeoForge `1015105`. |
+| YUNG's Better End Island | `YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar` | both | Central End island. World data. NeoForge `1015127`. |
+| YUNG's Better Ocean Monuments | `YungsBetterOceanMonuments-1.21.1-NeoForge-4.1.2.jar` | both | Ocean monument overhaul. World data. NeoForge `1015115`. |
+| YUNG's Better Desert Temples | `YungsBetterDesertTemples-1.21.1-NeoForge-4.1.5.jar` | both | Desert temple overhaul. World data. NeoForge `1015114`. |
+| Luki's Ancient Cities | `lukis-ancient-cities-v1.2.jar` | both | Ancient city variants. World data. |
+| Luki's Woodland Mansions | `lukis-woodland-mansions-v1.0-1.21-1.21.4.jar` | both | Woodland mansion variants. World data. |
 | Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | both | Required by Moog's Mineshafts. |
 | MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | both | Mineshaft overhaul. World data. Modrinth pin. |
 | Epic Structures: Villages | `epic-structures-villages-2.0.0.jar` | both | Village overhaul. World data. ARR. |
@@ -76,7 +84,7 @@ Terralith 2.6.2 + Oh The Biomes We've Gone 2.6.0 hit `IllegalStateException: Fea
 | Bygone Nether | Held | No 1.21.1 NeoForge file. |
 | BetterNether | Removed | Old Forge project had no 1.21.1 NF file. BetterNether: New Dawn `1422293` is in. |
 | Awesome Dungeon Nether | Held | No 1.21.1 NeoForge file (later MC only). |
-| YUNG's Better Dungeons | Held | Not in the 1.20.1 pack. |
+| YUNG's Better Dungeons | Installed | NeoForge project `1015112` (not the Forge slug `510089`). |
 | WWOO | Held | Chart companion for terrain overhauls + ByePregen; not in the 1.20.1 pack. |
 | Tectonic | Removed | Player request 2026-09-22. Lithostitched stays. Existing Tectonic chunks remain until regenerated. |
 | Noisium | Dropped | Incompatible with ByePregen. |

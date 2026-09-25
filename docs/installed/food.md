@@ -17,6 +17,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Autochef's Delight | `AutochefsDelight-1.21.1-NeoForge-2.0.3.jar` | both | `addon`, `food`, `farmers-delight` | Automated cooking. |
 | Barbeque's Delight [Forge/NeoForge] | `barbequesdelight-1.3.0.jar` | both | `addon`, `food`, `farmers-delight` | Grill foods. |
 | Farmer's Cutting: BetterNether | `farmers-cutting-betternether-1.21.1-1.0-neoforge.jar` | both | `addon`, `food`, `farmers-delight` | Cutting recipes for BetterNether. |
+| Farmer's Cutting: BetterEnd | `farmers-cutting-betterend-1.21.1-2.0-neoforge.jar` | both | `addon`, `food`, `farmers-delight` | Cutting recipes for BetterEnd: New Dawn. |
 | Farmer's Cutting: Oh The Biomes We've Gone | `farmers-cutting-oh-the-biomes-weve-gone-1.21.1-2.1-neoforge.jar` | both | `addon`, `food`, `farmers-delight` | Cutting recipes for Oh The Biomes We've Gone. |
 | Farmer's Cutting: Regions Unexplored | `farmers-cutting-regions-unexplored-1.21.1-1.1b-neoforge.jar` | both | `addon`, `food`, `farmers-delight` | Cutting recipes for Regions Unexplored. |
 | Farmer's Cutting: Twilight Forest | `farmers-cutting-twilight-forest-1.21.1-1.0.jar` | both | `addon`, `food`, `farmers-delight` | Cutting recipes for Twilight Forest. |

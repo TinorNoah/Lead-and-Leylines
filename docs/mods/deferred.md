@@ -75,7 +75,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
 | Ixeris | Moves input off-thread. Skip. |
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
-| Fast Item Frames | New block-entity type (world data) + Puzzles Lib. Skip. |
+| Fast Item Frames | Installed 2026-09-26. World data + Puzzles Lib (already in). |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
 | Roxy | Translation layer for Fabric Voxy `0.2.16-beta` (1.21.11 jar). Voxy is out. Skip. |
 | Ecliptic Seasons : Fabricated | Fabric rewrite. Bundles listed it as a required dep; packwiz skipped it on NeoForge. Skip. |
@@ -122,7 +122,7 @@ Delightful.
 
 ### Maps / compasses / QoL
 
-Inventory Essentials; Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Observable; Construction Sticks; Connected Glass; Fusion; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends.
+Inventory Essentials; Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Observable; Construction Sticks; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends. Fusion and its connected-glass pack are in [content.md](content.md).
 
 ### UI / loading / shaders
 
@@ -130,7 +130,7 @@ FancyMenu; Drippy Loading Screen; Konkrete; Melody.
 
 ### Libraries (only with a consumer)
 
-Resourceful Lib (already in for Variants&Ventures); BCLib Forge (old); WunderLib Forge (old). New Dawn BCLib/WunderLib, Ice and Fire Jupiter/Uranus, and Patchouli are in [manifest.md](manifest.md).
+Resourceful Lib (already in for Variants&Ventures, Chipped, and Handcrafted); BCLib Forge (old); WunderLib Forge (old). New Dawn BCLib/WunderLib, Ice and Fire Jupiter/Uranus, and Patchouli are in [manifest.md](manifest.md).
 
 ### Other Forge leftovers
 

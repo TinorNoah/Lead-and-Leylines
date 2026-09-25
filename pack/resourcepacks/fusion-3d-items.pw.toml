@@ -1,0 +1,13 @@
+name = "Fusion 3D Items"
+filename = "Fusion 3D Items v1.0.1 for Minecraft 1.20-1.21.8.zip"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "995514ac464f299683eaa07d7567bead990480c7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 7051086
+project-id = 1315462

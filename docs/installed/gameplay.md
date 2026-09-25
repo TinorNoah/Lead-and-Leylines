@@ -27,3 +27,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Clean Swing Through Grass | `cleanswing-1.10-1.21.jar` | both | `addon`, `gameplay` | Attacks pass through grass. |
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | `addon`, `gameplay` | Items and corpses despawn faster. |
 | Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | `addon`, `gameplay` | Speeds up a few vanilla waits. |
+| Fast Item Frames | `FastItemFrames-v21.1.6-1.21.1-NeoForge.jar` | both | `addon`, `gameplay`, `world-data` | Faster, colorable, and invisible item frames. |

@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "DarkLoot mob loot (edit entity JSON under data/minecraft/loot_table/entities/)"
+  }
+}

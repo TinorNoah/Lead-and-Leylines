@@ -20,7 +20,17 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Skips client work that does not change. |
 | AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
+| Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
+| Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `library`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |
+
+## Connected textures
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Fusion (Connected Textures) | `fusion-1.3.15b-neoforge-mc1.21.1.jar` | client | `core`, `rendering` | Connected textures for resource packs. |
+| Fusion 3D Items | `Fusion 3D Items v1.0.1 for Minecraft 1.20-1.21.8.zip` | client | `resource-pack`, `rendering` | Resource pack. 3D item models. |
+| Fusion Connected Glass | `Fusion Connected Glass v1.0.1 for Minecraft 1.20-1.21.8.zip` | client | `resource-pack`, `rendering` | Resource pack. Glass textures connect. |
 
 ## Entity models
 
