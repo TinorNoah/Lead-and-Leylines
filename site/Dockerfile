@@ -1,20 +1,23 @@
 # syntax=docker/dockerfile:1
 
 ARG BUN_VERSION=1.3.14
+ARG NODE_VERSION=22
 
 FROM oven/bun:${BUN_VERSION} AS deps
 WORKDIR /app
 COPY site/package.json site/bun.lock ./
 RUN bun install --frozen-lockfile
 
-FROM oven/bun:${BUN_VERSION} AS builder
+# Next build on Linux arm64 under `bun --bun` can segfault after a successful
+# compile; use real Node for the builder stage.
+FROM node:${NODE_VERSION}-bookworm-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY site/ ./
 COPY docs/installed/catalog.json ./seed/catalog.json
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV SEED_CATALOG_PATH=/app/seed/catalog.json
-RUN bun run build
+RUN ./node_modules/.bin/next build
 
 FROM oven/bun:${BUN_VERSION} AS runner
 WORKDIR /app
