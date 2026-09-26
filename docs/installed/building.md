@@ -20,7 +20,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Visual Workbench | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | both | `addon`, `building` | Items stay on the crafting table. |
 | Amendments | `amendments-1.21-2.1.10-neoforge.jar` | both | `core`, `building` | Lanterns, hanging signs, and small block tweaks. |
 | Supplementaries | `supplementaries-1.21.1-3.9.9-neoforge.jar` | both | `core`, `building` | Jars, ropes, signs, and furniture. |
-| Moonlight Lib | `moonlight-1.21.1-3.6.8-neoforge.jar` | both | `library`, `building` | Moonlight library Supplementaries and Amendments use. |
+| Moonlight Lib | `moonlight-1.21.1-3.7.0-neoforge.jar` | both | `library`, `building` | Moonlight library Supplementaries and Amendments use. |
 | Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | both | `addon`, `building`, `world-data` | More glass types. |
 | Measurements | `Measurements-neoforge-1.21.1-3.0.3.jar` | both | `addon`, `building` | Tape measure. |
 | Mining Gadgets | `mininggadgets-1.18.8.jar` | both | `addon`, `building`, `world-data` | Laser mining gadgets. |

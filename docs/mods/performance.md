@@ -39,8 +39,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | Crash dump helper. Dedicated boot log: client-only, no-op on server. |
 | Entity Culling | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | Official Extra for Sodium 0.8.13 (fog, particles, FPS overlay). Not Chloride. |
-| Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
-| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer). |
+| Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
+| AsyncParticles | `AsyncParticles-21.1.4.5+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer). |
 | Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | Weather particles. |
 | Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | Ambient particles and sounds. Fzzy Config. |
 | More Culling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | Extra block/entity culling next to Entity Culling. Cloth Config required. See [configs.md](configs.md) for Extra leaf overlap. |
@@ -48,7 +48,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | both | Required by Subtle Effects. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | Jigsaw/NBT structure gen. Resourceful Config required. |
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | both | SLO dependency. |
-| Ksyxis | `Ksyxis-1.4.4.jar` | both | Unloads unused spawn chunks. |
+| Ksyxis | `Ksyxis-1.4.5.jar` | both | Unloads unused spawn chunks. |
 | Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | both | MC-271325 disconnect packets. |
 | quick pack | `quick-pack-neoforge-1.5.0+1.21.1.jar` | both | Faster zip datapack/resourcepack parse. Complements ModernFix. |
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | Crash-exploit filter; file tags 1.21.1–1.21.4. |

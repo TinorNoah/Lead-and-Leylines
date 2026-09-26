@@ -1,5 +1,5 @@
 {
-  "config_version": "2.0.37",
+  "config_version": "2.0.41",
   "general": {
     "enable_global_spacing_and_separation_modifier": true,
     "global_spacing_and_separation_modifier": 2.0

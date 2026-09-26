@@ -19,9 +19,9 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | The Lost Cities | `lostcities-1.21-8.4.4.jar` | both | City generation. World data. LC²H 4.2.3-LTS is in for multithreaded gen. |
 | Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | both | Ocean structures, boss, and items. World data. Requires GeckoLib and Fragmentum. Modrinth pin. |
 | Supplementaries | `supplementaries-1.21.1-3.9.9-neoforge.jar` | both | Decor and utility blocks. World data. Moonlight. |
-| Knight Lib | `knightlib-neoforge-1.21.1-2.0.2.jar` | both | Required by Olympus!. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.8.jar` | both | Greek artifacts, mobs, and structures. World data. Curios + Knight Lib. |
-| Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.3.jar` | both | Ancient Keep, trial spawners, and a boss. World data. AAA Particles. |
+| Knight Lib | `knightlib-neoforge-1.21.1-2.0.3.jar` | both | Required by Olympus!. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.9.jar` | both | Greek artifacts, mobs, and structures. World data. Curios + Knight Lib. |
+| Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | Ancient Keep, trial spawners, and a boss. World data. AAA Particles. |
 | Amendments | `amendments-1.21-2.1.10-neoforge.jar` | both | Vanilla block tweaks. World data. Moonlight. |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | both | Create-aware vein mine with FTB Ultimine. |
 | Create Crafts & Additions | `createaddition-1.7.1.jar` | both | Electric motor and alternator. World data. Create `[6.0.7,6.1.0)`. |
@@ -62,7 +62,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Apotheosis | `Apotheosis-1.21.1-8.8.0.jar` | both | Affixes and gems. World data. Apothic Attributes, Enchanting, and Spawners. Compat for Iron's Spells, Point Blank, TaCZ, and Create. Fallen Gems. Flight potions and charms are off. Balance numbers are in the configurator. Tooltip Cleanup is client-only and does not replace Tooltip Overhaul. |
 | Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Legendary Monsters | see manifest | both | Extra mobs and bosses. World data. Integrated BOMD / Mowzie / API / Patches removed with Quark. Born in Chaos has a config mod and a Jade ore label. Armageddon tooltips label tool tiers. |
 | Unusual End, BetterEnd: New Dawn, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading | see manifest | both | End expansion (Nullscape + Unusual End + BetterEnd New Dawn), magic content, a second kitchen beside Farmer's Delight, and an unofficial dungeon port. World data. Farmer's Cutting covers BetterEnd. |
-| Ecliptic Seasons | `EclipticSeasons-1.21.1-neoforge-0.15.0-rc-3-1.jar` | both | 24 solar-term seasons, weather, snow, and crops. World data. Bundles + MultiMod Patch + Serene Seasons API stub. Do not add Serene Seasons. |
+| Ecliptic Seasons | `EclipticSeasons-1.21.1-neoforge-0.15.2.1.jar` | both | 24 solar-term seasons, weather, snow, and crops. World data. Bundles + MultiMod Patch + Serene Seasons API stub. Do not add Serene Seasons. |
 | Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | both | Extra glass. World data. Fusion is already in. FastPipes and Lampicus were not added. |
 | Iron's Gems 'n Jewelry | `irons_jewelry-1.21.1-2.0.2.jar` | both | Wearable gems. World data. Curios, Iron's Lib, Atlas API. Apotheosis gems stay. |
 | Not Enough Glyphs | `not_enough_glyphs-1.21.1-4.6.2.jar` | both | Extra Ars glyphs. World data. SauceLib is embedded. |

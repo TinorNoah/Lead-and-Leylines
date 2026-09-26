@@ -27,7 +27,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | both | Extra Create recipes for backpacks. Complements the contraption integration. |
 | Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | both | Ars items in backpacks. |
 | Sophisticated Storage: Ars Compat | `arssophisticatedstoragecompat-0.3.0.jar` | both | Ars items in Sophisticated storage. |
-| Sophisticated Tactical Backpacks | `militarybackpack-2.0.0-beta.jar` | both | Tactical backpacks and ammo reload. Beta. World data. |
+| Sophisticated Tactical Backpacks | `militarybackpack-2.0.1.jar` | both | Tactical backpacks and ammo reload. Beta. World data. |
 | Mekanism + Sophisticated Backpacks Compat | `mekanismsophisticatedbackpacks-neoforge-1.21.1-1.0.1+mc1.21.1-neoforge.jar` | both | Chemical tanks in backpacks. |
 | Sophisticated Item Actions | `sophisticateditemactions-1.21.1-0.5.16.423.jar` | both | Pinned 1.21.1; later files are 1.21.11. |
 | Yukami's Sophisticated Backpack Tab | `yukamibackpacktab-1.21.1-2.2.0-neoforge.jar` | client | Inventory backpack tab. |
@@ -35,12 +35,12 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Sophisticated Chest Optimized | `sophisticated_chest_optimized-1.0.1.jar` | client | Pinned NeoForge 1.0.1; later files are Fabric. |
 | Sophisticated Backpacks / Jade | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | client | Backpack contents on Jade. |
 | Sophisticated Backpacks RS Bridge | `backpackrs-1.0.0+mc1.21.1-neoforge.jar` | both | Quick deposit into RS. |
-| Demagnetizer | `demagnetizer-neoforge-0.1.0-beta.1.jar` | both | Stops item magnet in a radius. Beta. Pinned NeoForge. |
+| Demagnetizer | `demagnetizer-neoforge-0.2.0-beta.1.jar` | both | Stops item magnet in a radius. Beta. Pinned NeoForge. |
 | Refined Storage - Mekanism Integration | `refinedstorage-mekanism-integration-1.1.1.jar` | both | RS chemicals. |
 | Functional Storage | `functionalstorage-1.21.1-1.5.8.jar` | both | Drawers. World data. Titanium. |
 | Botany Pots | `botanypots-neoforge-1.21.1-21.1.44.jar` | both | Crop pots. World data. Bookshelf + Prickle. |
 | Botany Trees | `botanytrees-neoforge-1.21.1-21.1.7.jar` | both | Tree pots. World data. |
-| Trash Cans | `trashcans-1.1.0-neoforge-mc1.21.jar` | both | Trash blocks. World data. SuperMartijn642 Core + Config. |
+| Trash Cans | `trashcans-1.1.1-neoforge-mc1.21.jar` | both | Trash blocks. World data. SuperMartijn642 Core + Config. |
 | Packing Tape | `PackingTape-1.21.1-0.15.6.jar` | both | Pickup tile entities. |
 | Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | ME network. World data. |
 | AE2: Crafting Tree | `ae2ct-1.21.1-1.1.1.jar` | both | Craft tree in the terminal. |
@@ -48,7 +48,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | AE2 MEGA Things | `AE2MEGAThings-1.21.1-2.0.4.jar` | both | Untyped disks for items, fluids, and chemicals. World data. |
 | Not Enough Patterns | `nep-1.21.1-0.5.1.jar` | both | Pattern providers for other mods' machines. |
 | Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | both | Infinite water, lava, and cobblestone. World data. |
-| AE2 Utility | `ae2utility-1.7.9.jar` | both | Pull from the ME network; one-click patterns. |
+| AE2 Utility | `ae2utility-1.8.0.jar` | both | Pull from the ME network; one-click patterns. |
 | Pattern Converter | `patternconverter-1.0.0.jar` | both | AE2 and Refined Storage pattern conversion. World data. |
 | AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | both | One press for every processor. World data. |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. |

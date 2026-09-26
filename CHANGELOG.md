@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.13] - 2026-09-27
+
+### Changed
+
+- Updated Archaion to 1.4.4 (Ancient Keep structure fixes) plus 32 other mods to their latest 1.21.1 NeoForge builds, including Ecliptic Seasons 0.15.2.1, JEI 19.57.0.449, Structurify 2.0.41, and Moonlight 3.7.0.
+
 ## [0.1.12] - 2026-09-27
 
 ### Removed

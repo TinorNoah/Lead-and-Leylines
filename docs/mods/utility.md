@@ -17,7 +17,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 |---|---|---|---|
 | Jade | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | Block/entity tooltip. WTHIT not added. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | Extra Jade integrations (Create, etc.). ARR. |
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.447.jar` | both | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. Server side is what lets Move Items fill a crafting grid. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.449.jar` | both | Recipe viewer. Replaces EMI + TMRV. File 19.57 satisfies Polymorph and Sophisticated. Server side is what lets Move Items fill a crafting grid. |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | both | Required by current JEI on both sides. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
@@ -49,7 +49,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | client | Lets both mob packs apply together. Force-enabled last among the mob packs. |
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate biomes. |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | both | Locate structures. |
-| Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | both | Teleport stones. World data. Balm. |
+| Waystones | `waystones-neoforge-1.21.1-21.1.46.jar` | both | Teleport stones. World data. Balm. |
 | AppleSkin | `appleskin-neoforge-mc1.21-3.0.9.jar` | both | Hunger/saturation HUD. |
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | client | Inventory drag-transfer. |
 | Crafting Tweaks | `craftingtweaks-neoforge-1.21.1-21.1.11.jar` | both | Crafting grid buttons. Balm. |
@@ -61,7 +61,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | client | Durability numbers. |
 | Equipment Compare | `EquipmentCompare-1.21.1-neoforge-1.3.13.jar` | client | Shift-compare gear. Iceberg. Tooltip Overhaul's own compare key is unbound so the two do not stack. |
 | Item Borders | `ItemBorders-1.21-neoforge-1.2.5.jar` | client | Rarity item borders. Iceberg + Prism. |
-| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.2.jar` | client | Only item-tooltip skin. Frames by type, then mod namespace, then rarity. GPL-3.0-only; CurseForge metadata. |
+| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.6.jar` | client | Only item-tooltip skin. Frames by type, then mod namespace, then rarity. GPL-3.0-only; CurseForge metadata. |
 | Tag Tooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | client | Hold semicolon to list tags inside the Tooltip Overhaul frame. CC-BY-SA-4.0; modpack use allowed. |
 | Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | client | Colored heart rows. |
 | Better Advancements | `BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar` | client | Advancement GUI. |
@@ -73,7 +73,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | Movement packet speed (singleplayer too). |
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | Faster leaf decay. |
 | WITS | `wits-neoforge-1.3.1.jar` | both | Structure name overlay. |
-| Lootr | `lootr-neoforge-1.21.1-1.11.38.126.jar` | both | Per-player loot chests. World data. |
+| Lootr | `lootr-neoforge-1.21.1-1.11.38.127.jar` | both | Per-player loot chests. World data. |
 | Polymorph | `polymorph-neoforge-1.2.0+1.21.1.jar` | both | Duplicate recipe picker. |
 | Almost Unified | `almostunified-neoforge-1.21.1-1.4.2.jar` | both | Ore unification. |
 | TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | both | Inventory trash slot. Balm. |
@@ -101,7 +101,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | both | Client annoyance toggles. Required on the server. ARR. Balm. |
 | AttributeFix | `attributefix-neoforge-1.21.1-21.1.3.jar` | both | Attribute id fixes. Bookshelf + Prickle. |
 | Akashic Tome | `AkashicTome-1.8-30.jar` | both | Holds other guide books. |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.48_mc1.21.1.jar` | both | Required by AmbientSounds. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.49_mc1.21.1.jar` | both | Required by AmbientSounds. |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | Ambient audio. |
 | Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | client | Aeronautics contraptions on Xaero's maps. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
@@ -127,7 +127,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | EMI / EMI Ores / EMI Enchanting / EMI QoL Tweaks | Dropped | Replaced by JEI so Create and Sophisticated plugins get a real JEI version. |
 | Continuity | Held | Needs Connector and Forgified Fabric API, and it targets Sodium 0.6. Fusion is the connected-texture mod. |
 | TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
-| JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.447.jar`). |
+| JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.449.jar`). |
 | JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |
 | WTHIT | Dropped | Overlaps Jade. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |

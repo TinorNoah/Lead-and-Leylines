@@ -20,7 +20,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | both | End overhaul. World data. Stardust companion to Terralith. |
 | BetterEnd: New Dawn | `BetterEnd-21.0.35.jar` | both | End biomes/mobs/gear. World data. Shares New Dawn BCLib/WorldWeaver/WunderLib with BetterNether. Stacks with Nullscape and Unusual End. |
 | YACL | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | Required by Structurify. |
-| Structurify | `structurify-neoforge-2.0.37+mc1.21.1.jar` | both | Structure spacing/control. Global multiplier 2.0. Better Sparse Structures skipped (same job). |
+| Structurify | `structurify-neoforge-2.0.41+mc1.21.1.jar` | both | Structure spacing/control. Global multiplier 2.0. Better Sparse Structures skipped (same job). |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | both | Extra overworld dungeons. World data. ARR. |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | both | Ocean structures. World data. ARR. |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | both | Required by Awesome Dungeon. No CurseForge NeoForge 1.21.1 file; Modrinth pin. ARR. |

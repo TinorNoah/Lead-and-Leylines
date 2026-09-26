@@ -10,7 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Create Aeronautics | `create-aeronautics-bundled-1.21.1-1.3.2.jar` | both | `core`, `transport`, `create` | Airships and physics vehicles. |
 | Sable | `sable-neoforge-1.21.1-2.0.5.jar` | both | `library`, `transport` | Physics library the vehicles use. |
-| Climbable Ropes for Create Aeronautics | `climbable_ropes-2.1.3.jar` | both | `addon`, `transport`, `create` | Climbable ropes. |
+| Climbable Ropes for Create Aeronautics | `climbable_ropes-2.1.4.jar` | both | `addon`, `transport`, `create` | Climbable ropes. |
 | Create Aeronautics x Curios API Compat | `createaeronauticscurios-neoforge-1.21.1-2.2.jar` | both | `compat`, `transport`, `create` | Aviator goggles in a Curios slot. |
 | Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | client | `addon`, `transport`, `create` | Vehicles on Xaero's maps. |
 | Create Aeronautics: Mekanism Compatibility | `create_mekanism_compat-0.1.21.jar` | both | `compat`, `transport`, `create`, `mekanism` | Mekanism blocks on vehicles. |
@@ -20,7 +20,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | both | `core`, `transport` | Teleport stones. |
+| Waystones | `waystones-neoforge-1.21.1-21.1.46.jar` | both | `core`, `transport` | Teleport stones. |
 | Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | both | `core`, `transport` | Elytra in a Curios slot. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | `addon`, `transport`, `world-data` | Elevator blocks. Jump or sneak to change floors. |
 | Tempad | `tempad-1.21.1-3.0.4-all.jar` | both | `addon`, `transport`, `world-data` | Pocket time-door travel. |
