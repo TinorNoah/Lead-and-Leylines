@@ -11,6 +11,7 @@ import os
 import re
 import shutil
 import subprocess
+import sys
 import urllib.request
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -455,12 +456,40 @@ def collect_change_note(
 
 
 def process_rss_kb(pid: int) -> int | None:
-    result = subprocess.run(
-        ["ps", "-o", "rss=", "-p", str(pid)],
-        check=False,
-        capture_output=True,
-        text=True,
-    )
+    if sys.platform == "win32":
+        try:
+            result = subprocess.run(
+                [
+                    "powershell",
+                    "-NoProfile",
+                    "-Command",
+                    f"(Get-Process -Id {pid} -ErrorAction Stop).WorkingSet64",
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+            )
+        except OSError:
+            return None
+        if result.returncode != 0:
+            return None
+        text = result.stdout.strip()
+        if not text:
+            return None
+        try:
+            return int(text) // 1024
+        except ValueError:
+            return None
+
+    try:
+        result = subprocess.run(
+            ["ps", "-o", "rss=", "-p", str(pid)],
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+    except OSError:
+        return None
     if result.returncode != 0:
         return None
     text = result.stdout.strip().split()

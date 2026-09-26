@@ -23,14 +23,18 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Waystones | `waystones-neoforge-1.21.1-21.1.45.jar` | both | `core`, `transport` | Teleport stones. |
 | Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | both | `core`, `transport` | Elytra in a Curios slot. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | `addon`, `transport`, `world-data` | Elevator blocks. Jump or sneak to change floors. |
+| Tempad | `tempad-1.21.1-3.0.4-all.jar` | both | `addon`, `transport`, `world-data` | Pocket time-door travel. |
 | Caelus API | `caelus-neoforge-7.0.1+1.21.1.jar` | both | `library`, `transport` | Elytra flight library Elytra Slot needs. |
 
 ## Pipes
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Pipez | `pipez-neoforge-1.21.1-1.2.31.jar` | both | `core`, `transport` | Item, fluid, and energy pipes. |
-| Pipez Lag Fix | `pipezlagfix-1.21.1-1.1.0.jar` | both | `addon`, `transport` | Lowers Pipez tick cost. |
+| Modern Dynamics | `Modern-Dynamics-0.9.6.jar` | both | `core`, `transport` | Item and fluid pipes. |
+| XNet | `xnet-1.21-7.0.7.jar` | both | `core`, `transport`, `world-data` | Channel-based item, fluid, and energy networks. |
+| RFTools Base | `rftoolsbase-1.21-6.0.11.jar` | both | `library`, `transport` | Base blocks XNet needs. |
+| McJtyLib | `mcjtylib-1.21-9.0.21.jar` | both | `library`, `transport` | Library McJty mods need. |
+| Simple Conveyor Belts | `belts-neoforge-0.2.2.jar` | both | `addon`, `transport` | Simple item conveyor belts. |
 
 ## Routers
 

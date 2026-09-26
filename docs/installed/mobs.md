@@ -47,3 +47,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Myths & Legends | `mythsandlegends-1.0.7.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
 | Olympus! | `olympusmythology-neoforge-1.21.1-1.0.8.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.3.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
+
+## Mob farms
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Mob Grinding Utils | `mob_grinding_utils-1.1.10+mc1.21.1.jar` | both | `core`, `mob`, `world-data` | Mob farm machines and spikes. |
+| Mob Grinding Utils: Vanillafied (16px) | `Mob Grinding Utils Vanillafied.zip` | client | `resource-pack`, `mob` | Resource pack. Vanilla-styled Mob Grinding Utils textures. |
+| BuffMobs | `buffmobs-3.3.2+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Configurable harder mobs. |

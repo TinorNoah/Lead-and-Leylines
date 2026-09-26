@@ -13,6 +13,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+### Changed
+
+### Fixed
+
+### Removed
+
+## [0.1.10] - 2026-09-26
+
+### Added
+
 - Sort inventories, lock slots, save gear sets, and move items with more mouse gestures.
 - Mute chosen sounds, add more sound effects, and hear reverb through blocks.
 - More glass, a tape measure, laser mining gadgets, elevators, and one-click multiblock building.
@@ -23,12 +33,24 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 - Compact redstone, and modded loot in When Dungeons Arise chests.
 - The vanilla recipe book is gone. JEI stays.
 - KubeJS can script recipes and loot. No scripts ship with this yet.
+- Modern Dynamics pipes, XNet channels, and simple conveyor belts for logistics.
+- Rechiseled (with Chipped, Create, and Applied Energistics bridges) beside Chipped.
+- A large Create factory wave: Enchantment Industry, Central Kitchen, New Age, Big Cannons, TFMG, Alloyed, Diesel Generators, Ore Excavation, and related addons.
+- Extended and Solar Industrialization, Flux Networks, DimStorage, Construction Sticks, Tempad, Mob Grinding Utils, Agritech, and BuffMobs.
+- Inventory Essentials beside Inventory Profiles Next.
+- Better Advanced Tooltips so the latest KubeJS can load.
 
 ### Changed
 
+- KubeJS is on build 377 (needs Better Advanced Tooltips).
+
 ### Fixed
 
+- Dropped Modern Industrialization Extentended Integrations: it crashes MI 2.5.8 looking for casing `modern_industrialization:iv`.
+
 ### Removed
+
+- Pipez and Pipez Lag Fix. Use Modern Dynamics, XNet, and conveyors instead.
 
 ## [0.1.9] - 2026-09-26
 

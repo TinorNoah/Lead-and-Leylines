@@ -2,7 +2,7 @@
 
 Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pack.toml). Re-check store pages before a file bump.
 
-**Status:** Pipez, Sophisticated/Functional storage, AE2, Refined Storage (Quartz Arsenal, Cable Tiers), Mekanism chemical RS, Demagnetizer.
+**Status:** Modern Dynamics, XNet, conveyors, Modular Routers, Sophisticated/Functional storage, AE2, Refined Storage (Quartz Arsenal, Cable Tiers), Mekanism chemical RS, DimStorage, Demagnetizer. Pipez removed 2026-09-26.
 
 ## Side (packwiz)
 
@@ -15,8 +15,10 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 
 | Mod | Pinned file | `side` | Why |
 |---|---|---|---|
-| Pipez | `pipez-neoforge-1.21.1-1.2.31.jar` | both | Item/fluid/energy pipes. ARR. World data. |
-| Pipez Lag Fix | `pipezlagfix-1.21.1-1.1.0.jar` | both | Eco mode when item-pipe destinations are full. ARR. |
+| Modern Dynamics | `Modern-Dynamics-0.9.6.jar` | both | Item/fluid pipes. Replaces Pipez. World data. |
+| XNet | `xnet-1.21-7.0.7.jar` | both | Channel networks. McJtyLib + RFTools Base. World data. |
+| Simple Conveyor Belts | `belts-neoforge-0.2.2.jar` | both | Conveyor belts. Architectury. |
+| DimStorage | `DimStorage-1.21.1-9.1.1.jar` | both | Dimensional chests/tanks. EdivadLib. World data. |
 | Sophisticated Core | `sophisticatedcore-1.21.1-1.5.1.2341.jar` | both | Shared lib for backpacks/storage. |
 | Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.3.2158.jar` | both | Backpacks. World data. |
 | Sophisticated Storage | `sophisticatedstorage-1.21.1-1.5.91.2127.jar` | both | Barrels/chests. World data. |

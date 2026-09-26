@@ -18,6 +18,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | client | `core`, `client-qol` | Drag and scroll item moving. |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | client | `addon`, `client-qol` | More mouse inventory moves beside Mouse Tweaks. |
 | Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | client | `addon`, `client-qol` | Sort, lock slots, and save gear sets. |
+| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | `addon`, `client-qol` | Extra inventory moves and sorting beside Mouse Tweaks. |
+| Recipe Essentials | `recipeessentials-1.21.1-4.7.jar` | client | `addon`, `client-qol` | Recipe book and craft helper tweaks. |
 | libIPN | `libIPN-neoforge-1.21.1-6.6.3.jar` | client | `library`, `client-qol` | Library Inventory Profiles Next uses. |
 | Extreme sound muffler - (Neo)Forge | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | `addon`, `client-qol` | Mutes sounds you pick. |
 | Sound​s | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Extra sound effects. |
