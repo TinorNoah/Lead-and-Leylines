@@ -449,7 +449,7 @@ name = "Spectrum"
 mods = [
   { file = "spectrum.pw.toml", blurb = "Progression magic.", tags = ["core", "magic"] },
   { file = "revelationary.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
-  { file = "modonomicon.pw.toml", blurb = "In-game book Spectrum and Neo Vitae use.", tags = ["library", "magic"] },
+  { file = "modonomicon.pw.toml", blurb = "In-game book Spectrum uses.", tags = ["library", "magic"] },
   { file = "lodestone.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
   { file = "spectrumjei.pw.toml", blurb = "Spectrum recipes in JEI.", tags = ["addon", "magic", "jei"] },
 ]
@@ -466,12 +466,6 @@ name = "Jewelry"
 mods = [
   { file = "irons-jewelry.pw.toml", blurb = "Gems and jewelry on Curios slots.", tags = ["core", "magic", "irons-spells", "world-data"] },
   { file = "atlas-api.pw.toml", blurb = "Library Iron's Jewelry uses.", tags = ["library", "magic"] },
-]
-
-[[category.group]]
-name = "Neo Vitae"
-mods = [
-  { file = "neovitae.pw.toml", blurb = "Blood altars, sigils, and a demon dungeon.", tags = ["core", "magic", "world-data"] },
 ]
 
 [[category]]
@@ -619,7 +613,6 @@ mods = [
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
-  { file = "bmaddon.pw.toml", blurb = "Neo Vitae blood automation for ME networks.", tags = ["compat", "tech", "storage", "ae2", "magic"] },
   { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull from Applied Energistics.", tags = ["compat", "building", "ae2"] },
 ]
 
@@ -911,7 +904,6 @@ mods = [
   { file = "mezzconfig.pw.toml", blurb = "Config library JEI uses.", tags = ["library", "info", "jei"] },
   { file = "jei-quickcraft.pw.toml", blurb = "Craft from JEI with fewer clicks.", tags = ["addon", "info", "jei"] },
   { file = "jei-stuff.pw.toml", blurb = "Extra JEI pages.", tags = ["addon", "info", "jei"] },
-  { file = "jei-worldgen.pw.toml", blurb = "Shows where blocks generate.", tags = ["addon", "info", "jei"] },
   { file = "jeioptimizer.pw.toml", blurb = "Cheaper JEI lookups.", tags = ["addon", "info", "jei"] },
   { file = "just-enough-resources-jer.pw.toml", blurb = "Mob drops and dungeon loot in JEI.", tags = ["addon", "info", "jei"] },
   { file = "smithing-template-viewer.pw.toml", blurb = "Smithing templates in JEI.", tags = ["addon", "info", "jei"] },
@@ -1051,9 +1043,7 @@ mods = [
   { file = "ferritecore.pw.toml", blurb = "Lower memory use.", tags = ["core", "optimizer"] },
   { file = "modernfix.pw.toml", blurb = "Launch and mixin fixes.", tags = ["core", "optimizer"] },
   { file = "c2me.pw.toml", blurb = "Threaded chunk generation.", tags = ["core", "optimizer"] },
-  { file = "bye-pregen.pw.toml", blurb = "Pregeneration helper. Do not add Noisium beside it.", tags = ["core", "optimizer"] },
-  { file = "chunkpregenerator.pw.toml", blurb = "Chunk pregenerator command.", tags = ["core", "optimizer"] },
-  { file = "carbon-config.pw.toml", blurb = "Library Chunk Pregenerator needs.", tags = ["library", "optimizer"] },
+  { file = "bye-pregen.pw.toml", blurb = "Faster chunk generation. Do not add Noisium beside it.", tags = ["core", "optimizer"] },
   { file = "smooth-chunk-save.pw.toml", blurb = "Spreads chunk saves out.", tags = ["core", "optimizer"] },
   { file = "ksyxis.pw.toml", blurb = "Faster world join.", tags = ["addon", "optimizer"] },
   { file = "let-me-despawn.pw.toml", blurb = "Lets persistent mobs despawn.", tags = ["core", "optimizer"] },

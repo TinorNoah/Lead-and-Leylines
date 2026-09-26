@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Boot a local dedicated server from the current pack/ tree.
 
-Default: boot, generate chunks with Chunk Pregenerator, record /tick query
+Default: boot, generate chunks with `/neoforge generate`, record /tick query
 metrics, and write docs/smoke-runs/. --skip-bench keeps the original
 boot-only check. Never talks to the panel or .env panel credentials.
 Never installs Spark (or anything else) into pack/mods/.
@@ -479,19 +479,20 @@ def run_benchmark(
             return _fail(state, "server closed stdin before spark start")
         server.drain(2.0)
 
-    pregen_cmd = f"pregen start gen radius smoketest SQUARE 0 0 {radius}"
+    # NeoForge: side length is chunkRadius * 2 (radius 8 → 16×16 = 256 chunks).
+    pregen_cmd = f"neoforge generate start 0 0 0 {radius} false"
     pregen_started = time.monotonic()
     try:
         server.send(pregen_cmd)
-        server.drain(1.0)
-        server.send("pregen info listen")
     except BrokenPipeError:
         return _fail(state, "server closed stdin before pregen")
 
     next_tick = time.monotonic() + TICK_INTERVAL_S
+    next_status = time.monotonic() + 5.0
     finished = False
     last_progress: metrics.PregenProgress | None = None
     last_logged: tuple[int, int] | None = None
+    started_total: int | None = None
     complete_since: float | None = None
 
     while not finished:
@@ -504,6 +505,12 @@ def run_benchmark(
                 state,
                 f"server exited {server.process.returncode} during pregen",
             )
+        if time.monotonic() >= next_status:
+            try:
+                server.send("neoforge generate status")
+            except BrokenPipeError:
+                return _fail(state, "server closed stdin during pregen status")
+            next_status = time.monotonic() + 5.0
         line = server.wait_line(0.5)
         if line is None:
             return _fail(
@@ -511,8 +518,12 @@ def run_benchmark(
                 f"server exited {server.process.returncode} during pregen",
             )
         if line:
-            if UNKNOWN_COMMAND.search(line) and "pregen" in "".join(state.lines[-8:]).lower():
-                return _fail(state, "pregen command was not recognized")
+            recent = "".join(state.lines[-8:]).lower()
+            if UNKNOWN_COMMAND.search(line) and "neoforge generate" in recent:
+                return _fail(state, "neoforge generate command was not recognized")
+            started = metrics.parse_pregen_started(line)
+            if started is not None:
+                started_total = started
             progress = metrics.parse_pregen_progress(line)
             if progress:
                 last_progress = progress
@@ -547,10 +558,12 @@ def run_benchmark(
         state.chunks = total
     elif last_progress is not None:
         state.chunks = last_progress.total if last_progress.done >= last_progress.total else None
+    elif started_total is not None:
+        state.chunks = started_total
     finished_chunks = None
     for line in state.lines:
         parsed = metrics.parse_pregen_finished(line)
-        if parsed:
+        if parsed and parsed.chunks > 0:
             finished_chunks = parsed.chunks
     if finished_chunks is not None:
         state.chunks = finished_chunks
@@ -680,7 +693,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         "--radius",
         type=int,
         default=DEFAULT_RADIUS,
-        help=f"Chunk Pregenerator radius (default {DEFAULT_RADIUS})",
+        help=(
+            f"/neoforge generate chunkRadius (default {DEFAULT_RADIUS}; "
+            "side length is radius×2)"
+        ),
     )
     parser.add_argument(
         "--note",

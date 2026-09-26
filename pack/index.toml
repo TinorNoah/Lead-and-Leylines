@@ -1152,11 +1152,6 @@ hash = "16ba84aa4357c8ca27afc6f92225b94ae4a965dfef3eed9240c3062436e1fd0f"
 metafile = true
 
 [[files]]
-file = "mods/bmaddon.pw.toml"
-hash = "55d0dd85f378f0d4a8f9204e8b22bd84bab1ef3a5903cd5cc9316cc445476caf"
-metafile = true
-
-[[files]]
 file = "mods/bookshelf.pw.toml"
 hash = "cf914684c4151076b726116a66f7bc81a6116655551bcce70a9e64e34e5aa308"
 metafile = true
@@ -1237,11 +1232,6 @@ hash = "86cf2ae835b8f3d981af2e88a4d19fdc3dc4f5aa3904c6ba30e25d77d3e9fcbb"
 metafile = true
 
 [[files]]
-file = "mods/carbon-config.pw.toml"
-hash = "f2c200174b5797315f33dcbe733625529cdf7940500c923d7971a04eda202c83"
-metafile = true
-
-[[files]]
 file = "mods/cerbons-api.pw.toml"
 hash = "1cb3db95dbf424de74a4572994d7b32fc8560dc31e0495d10825f195b2103462"
 metafile = true
@@ -1264,11 +1254,6 @@ metafile = true
 [[files]]
 file = "mods/chipped.pw.toml"
 hash = "3024466ae43de66612dc5ec4cfe5b3a273f71cee29fc6940308798a817d561b6"
-metafile = true
-
-[[files]]
-file = "mods/chunkpregenerator.pw.toml"
-hash = "2e2a6097ddbcdb169f02fdd3a1bd36ca39f3cc72e0601624aa1666709e1132ef"
 metafile = true
 
 [[files]]
@@ -2222,11 +2207,6 @@ hash = "c4b51dd6c0911513cb6bbbfeb28fdd9fc3423065923335a1c77edb7ca8fca57b"
 metafile = true
 
 [[files]]
-file = "mods/jei-worldgen.pw.toml"
-hash = "fef5aacc59e4d71092a090ce08be1a13ccd568fdb7acd0bb94bcf76701b1d8b7"
-metafile = true
-
-[[files]]
 file = "mods/jei.pw.toml"
 hash = "1852c162a57adb3e790ce993c024626ed62026ff5bd9591fac1be61637deae5c"
 metafile = true
@@ -2639,11 +2619,6 @@ metafile = true
 [[files]]
 file = "mods/neoauth.pw.toml"
 hash = "39fae3d58ee32b5aff7a9d15e86eda2aaaf5170e72cc302549bb53ecc827bc01"
-metafile = true
-
-[[files]]
-file = "mods/neovitae.pw.toml"
-hash = "436d86753caddb5996b5bbdb90d4aa4eb99992704134c5cbc970d70a3f3872c0"
 metafile = true
 
 [[files]]

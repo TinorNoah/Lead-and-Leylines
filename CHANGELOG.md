@@ -19,6 +19,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.11] - 2026-09-26
+
+### Removed
+
+- JEI / REI / EMI WorldGen. Worldgen pages are gone from JEI; Just Enough Resources still covers mob and dungeon loot.
+- Chunk Pregenerator (and Carbon Config). Operator pregen uses NeoForge `/neoforge generate` instead. Existing worlds keep their chunks.
+- Neo Vitae blood magic (and its Applied Energistics blood automation addon). Existing Neo Vitae items or the demon dungeon in old worlds will not load cleanly.
+
 ## [0.1.10] - 2026-09-26
 
 ### Added
