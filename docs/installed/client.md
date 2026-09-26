@@ -33,6 +33,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | `addon`, `client-qol` | Caches resource-pack loading. |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Logging off the client thread. |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | `addon`, `client-qol` | Ambient soundscapes. |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.48_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.49_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | `addon`, `client-qol` | Microsoft auth helper. |
 | Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | `core`, `resource-pack`, `client-qol` | Forces the pack's resource packs on. |

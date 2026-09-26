@@ -17,9 +17,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Faster immediate-mode rendering. |
 | Entity Culling Fabric/Forge | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Skips entities you cannot see. |
 | MoreCulling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | `addon`, `rendering`, `optimizer` | Extra block-face culling. |
-| Flerovium | `flerovium-neoforge-1.21.1-1.1.3-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
+| Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Skips client work that does not change. |
-| AsyncParticles | `AsyncParticles-21.1.4.4+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
+| AsyncParticles | `AsyncParticles-21.1.4.5+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
 | Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
 | Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `library`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |

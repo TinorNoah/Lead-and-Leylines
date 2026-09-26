@@ -34,11 +34,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Dynamic Village | `dynamicvillage-0.9-1.21.1.jar` | both | `addon`, `tech`, `create`, `worldgen` | Create-themed villages. |
 | Create: Enchantable Machinery | `createenchantablemachinery-3.6.0+mc1.21.1-neoforge.jar` | both | `addon`, `tech`, `create` | Enchant Create machines. |
 | Create: Alloyed | `alloyed-3.0.12+1.21.1-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Steel and bronze for Create. |
-| Create: Applied Kinetics | `createappliedkinetics-1.5.3-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
+| Create: Applied Kinetics | `createappliedkinetics-1.5.4-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
 | Create Nuclear | `createnuclear-1.3.2-beta.3-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Create nuclear power. |
 | Create: Metalwork | `createmetalwork-2.0.0.jar` | both | `addon`, `tech`, `create` | Extra Create metal blocks and parts. |
 | Create: Shimmer | `create-shimmer-1.3.1.jar` | both | `addon`, `tech`, `create` | Create lighting and ambience blocks. |
 | Create: Wizardry | `create_wizardry-1.21.1-0.5.1-pre1.jar` | both | `compat`, `tech`, `create`, `ars-nouveau` | Create machines for Ars Nouveau. |
 | Create: Fast SchematicCannon | `CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar` | both | `addon`, `tech`, `create` | Faster Create schematic cannons. |
 | Create: Blaze Burner Fuels | `create_blaze_burner_fuels-1.0.2-neoforge-1.21.1.jar` | both | `addon`, `tech`, `create` | More blaze burner fuels. |
-| Demagnetizer | `demagnetizer-neoforge-0.1.0-beta.1.jar` | both | `addon`, `tech`, `create` | Stops Create item magnets in a box. |
+| Demagnetizer | `demagnetizer-neoforge-0.2.0-beta.1.jar` | both | `addon`, `tech`, `create` | Stops Create item magnets in a box. |

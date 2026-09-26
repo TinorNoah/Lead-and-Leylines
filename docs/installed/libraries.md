@@ -15,7 +15,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | GeckoLib | `geckolib-neoforge-1.21.1-4.9.3.jar` | both | `library` | Animation library. Many mob, magic, and gun mods use it. |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | both | `library` | Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it. |
 | Bookshelf | `bookshelf-neoforge-1.21.1-21.1.81.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, and Enchantment Descriptions use. |
-| Balm | `balm-neoforge-1.21.1-21.0.65.jar` | both | `library` | Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use. |
+| Balm | `balm-neoforge-1.21.1-21.0.66.jar` | both | `library` | Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use. |
 | Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | `library` | Connected textures Chipped uses. |
 | Resourceful Lib | `resourcefullib-neoforge-1.21-3.0.12.jar` | both | `library` | Library Variants & Ventures, Chipped, and Handcrafted use. |
 | Puzzles Lib | `PuzzlesLib-v21.1.60-mc1.21.1-NeoForge.jar` | both | `library` | Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use. |

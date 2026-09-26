@@ -24,8 +24,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | ExtendedAE | `ExtendedAE-1.21-2.2.38-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extended pattern providers. |
 | Not Enough Patterns | `nep-1.21.1-0.5.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | More pattern slots. |
 | Better P2P | `betterp2p-1.5.2.jar` | both | `addon`, `tech`, `storage`, `ae2` | Easier P2P setup. |
-| AE2 Import Export Card | `ae2importexportcard-1.21.1-1.9.0.jar` | both | `addon`, `tech`, `storage`, `ae2` | Import and export cards. |
-| AE2 Utility | `ae2utility-1.7.9.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extra AE utilities. |
+| AE2 Import Export Card | `ae2importexportcard-1.21.1-1.9.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Import and export cards. |
+| AE2 Utility | `ae2utility-1.8.0.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extra AE utilities. |
 | AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | One press that prints every processor. |
 | AEInfinityBooster | `aeinfinitybooster-neoforge-1.21.1-1.0.0.58.jar` | both | `addon`, `tech`, `storage`, `ae2` | Infinite wireless range. |
 | Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Infinite water, lava, and cobblestone drives. |
@@ -33,6 +33,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Schematic Energistics | `schematicenergistics-1.21.1-1.5.4a.jar` | both | `addon`, `tech`, `storage`, `ae2` | Schematic cannon linked to the network. |
 | Pattern Converter | `patternconverter-1.0.0.jar` | both | `addon`, `tech`, `storage`, `ae2` | Converts patterns between AE2 and Refined Storage. |
 | Applied Mekanistics | `Applied-Mekanistics-1.6.3.jar` | both | `addon`, `tech`, `storage`, `ae2`, `mekanism` | Mekanism machines on ME networks. |
-| Applied Flux | `AppliedFlux-1.21-2.1.5-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
+| Applied Flux | `AppliedFlux-1.21-2.1.6-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |
 | Applied Construction Sticks | `appliedsticks-1.21.1-1.2.1.jar` | both | `compat`, `building`, `ae2` | Construction sticks that pull from Applied Energistics. |

@@ -36,18 +36,18 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Critters and Companions | `crittersandcompanions-neoforge-1.21.1-2.7.0.jar` | both | `core`, `mob` | Small wildlife and pets. |
 | Companions! | `companions-neoforge-1.21.1-1.3.5.jar` | both | `core`, `mob` | Companion creatures. |
-| Knight Lib | `knightlib-neoforge-1.21.1-2.0.2.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
+| Knight Lib | `knightlib-neoforge-1.21.1-2.0.3.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
 | Spawn | `spawn-4.0.8-1.21.1.jar` | both | `core`, `mob` | Extra spawn structures and mobs, including the dodo island. |
 | Teal Lib | `teallib-1.3.teal.jar` | both | `library`, `mob` | Library Spawn needs. |
-| Variants&Ventures | `variantsandventures-neoforge-1.0.26+mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
+| Variants&Ventures | `variantsandventures-neoforge-1.0.28+mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
 
 ## Folklore
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Myths & Legends | `mythsandlegends-1.0.7.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.8.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
-| Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.3.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.9.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
+| Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
 ## Mob farms
 

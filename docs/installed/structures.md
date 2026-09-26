@@ -50,9 +50,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Structurify - Structure Control | `structurify-neoforge-2.0.37+mc1.21.1.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Pushes normal-spaced structures farther apart. New chunks only. |
+| Structurify - Structure Control | `structurify-neoforge-2.0.41+mc1.21.1.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Pushes normal-spaced structures farther apart. New chunks only. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Faster structure placement. |
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | both | `library`, `structure`, `worldgen` | Library Structure Layout Optimizer needs. |
 | WITS (What Is This Structure?) | `wits-neoforge-1.3.1.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Names the structure you are standing in. |
 | Loot Integrations | `lootintegrations-1.21.1-4.7.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Mixes mod loot into structure chests. |
-| Lootr (Forge & NeoForge) | `lootr-neoforge-1.21.1-1.11.38.126.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Per-player structure loot. |
+| Lootr (Forge & NeoForge) | `lootr-neoforge-1.21.1-1.11.38.127.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Per-player structure loot. |

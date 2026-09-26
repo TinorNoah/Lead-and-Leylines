@@ -27,14 +27,14 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.3.jar` | both | `core`, `magic`, `irons-spells` | Spellbooks. Pinned to 3.16.3 so the Create addon keeps working. |
-| Iron's Lib | `irons_lib-1.21.1-2.1.1.jar` | both | `library`, `magic` | Library Iron's Spells needs. |
+| Iron's Lib | `irons_lib-1.21.1-2.2.0.jar` | both | `library`, `magic` | Library Iron's Spells needs. |
 | Ace's Spell Utils | `aces_spell_utils-1.2.7.2-1.21.1.jar` | both | `library`, `magic`, `irons-spells` | Library the Twilight spellbooks need. |
-| AzureLib | `azurelib-neo-1.21.1-3.1.11.jar` | both | `library`, `magic`, `irons-spells` | Library the Twilight spellbooks load at runtime. |
+| AzureLib | `azurelib-neo-1.21.1-3.1.12.jar` | both | `library`, `magic`, `irons-spells` | Library the Twilight spellbooks load at runtime. |
 | Spellbooks Of Twilight : Iron's Spells x The Twilight Forest Addon | `twilight_spellbooks-0.0.3.jar` | both | `addon`, `magic`, `irons-spells` | Twilight Forest spells. |
 | Iron's Spells 'N Spellbooks: Create Additions | `iss_create_additions-1.21.1-2..jar` | both | `addon`, `magic`, `create`, `irons-spells` | Create spell tools. |
 | Iron's Spells x Aeronautics Compat | `ironssablecompat-1.0.4.jar` | both | `addon`, `magic`, `irons-spells` | Teleport spells on Aeronautics ships. |
 | Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.5.1-1.21.1.jar` | both | `addon`, `magic`, `irons-spells`, `farmers-delight`, `food` | Farmer's Delight spells. |
-| Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.4.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
+| Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.5.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
 | KubeJS Iron's Spells | `irons_spells_js-4.0.3.jar` | both | `compat`, `magic`, `irons-spells` | KubeJS hooks for new spells. |
 
 ## Apotheosis
@@ -61,7 +61,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | both | `core`, `magic` | Progression magic. |
 | Revelationary | `revelationary-neoforge-1.5.2+1.21.1.jar` | both | `library`, `magic` | Library Spectrum needs. |
-| Modonomicon | `modonomicon-1.21.1-neoforge-1.120.4.jar` | both | `library`, `magic` | In-game book Spectrum uses. |
+| Modonomicon | `modonomicon-1.21.1-neoforge-1.120.7.jar` | both | `library`, `magic` | In-game book Spectrum uses. |
 | Lodestone | `lodestone-1.21.1-1.8.2.jar` | both | `library`, `magic` | Library Spectrum needs. |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | client | `addon`, `magic`, `jei` | Spectrum recipes in JEI. |
 
