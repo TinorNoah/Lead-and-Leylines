@@ -107,6 +107,17 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | client | Aeronautics contraptions on Xaero's maps. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | client | Season text on the HUD / Xaero map. Works with Ecliptic Seasons. |
+| Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | client | Sort, locked slots, gear sets. libIPN. Kotlin for Forge. AGPL-3.0-or-later. |
+| More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | client | Extra mouse moves beside Mouse Tweaks. |
+| Extreme Sound Muffler | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | Per-sound muffler. AmbientSounds stays. |
+| Sounds | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | Extra sound effects. MRU (ARR) and YACL. Fabric API was listed and not installed. |
+| Sound Physics Remastered | `sound-physics-remastered-neoforge-1.21.1-1.5.1.jar` | client | Reverb and occlusion. Alpha file. |
+| Measurements | `Measurements-neoforge-1.21.1-3.0.3.jar` | both | Tape measure. |
+| Not Enough Recipe Book | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | Removes the vanilla recipe book. OctoLib. JEI stays. |
+| Observable | `observable-5.4.4.jar` | both | In-game lag profiler. Kotlin for Forge and Architectury. |
+| Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | A bad tag entry does not wipe the tag. |
+| KubeJS | `kubejs-neoforge-2101.7.2-build.368.jar` | both | Scripting. Rhino. Pinned so Better Advanced Tooltips stays out. LootJS, Iron's Spells, and Mekanism addons are in. No scripts ship yet. |
+| OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 
 ## Considered / held / dropped
 
@@ -122,4 +133,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |
 | Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |
 | The Rename Compat Project | Dropped | Latest zip is resource pack format 42 (1.21.2). 1.21.1 only accepts format 34 unless the pack declares a range that includes 34. |
-| Legendary Tooltips, Simply Tooltips, Better Advanced Tooltips | Dropped | Tooltip Overhaul is the only item-tooltip skin. Fzzy Config left with Simply Tooltips. Kotlin for Forge stays; AE Additions, Better P2P, and Create Ultimine still need it. Tag Tooltips shows tags while its key is held. |
+| Legendary Tooltips, Simply Tooltips, Better Advanced Tooltips | Dropped | Tooltip Overhaul is the only item-tooltip skin. Fzzy Config left with Simply Tooltips. Kotlin for Forge stays; AE Additions, Better P2P, Create Ultimine, Observable, and Inventory Profiles Next still need it. Tag Tooltips shows tags while its key is held. KubeJS is pinned to build 368 because newer 2101.7.2 builds require Better Advanced Tooltips. |
+| Inventory Essentials | Dropped | Overlaps Inventory Profiles Next and Mouse Tweaks. 1.21.1 file exists. Do not stack both sorters. |
+| Nolijium | Dropped | Fog, sky, particle, and darkness toggles overlap Sodium / Iris. Last 1.21.1 file is 2025-03 and optional Embeddium. |
+| Ixeris | Dropped | Off-thread input. Already skipped. |

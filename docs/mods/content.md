@@ -63,6 +63,20 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Legendary Monsters | see manifest | both | Extra mobs and bosses. World data. Integrated BOMD and Integrated Mowzie's Mobs need Quark. Integrated Patches fixes Integrated API worldgen. Born in Chaos has a config mod and a Jade ore label. Armageddon tooltips label tool tiers. |
 | Unusual End, BetterEnd: New Dawn, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading | see manifest | both | End expansion (Nullscape + Unusual End + BetterEnd New Dawn), magic content, a second kitchen beside Farmer's Delight, and an unofficial dungeon port. World data. Farmer's Cutting covers BetterEnd. |
 | Ecliptic Seasons | `EclipticSeasons-1.21.1-neoforge-0.15.0-rc-3-1.jar` | both | 24 solar-term seasons, weather, snow, and crops. World data. Bundles + MultiMod Patch + Serene Seasons API stub. Do not add Serene Seasons. |
+| Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | both | Extra glass. World data. Fusion is already in. FastPipes and Lampicus were not added. |
+| Iron's Gems 'n Jewelry | `irons_jewelry-1.21.1-2.0.2.jar` | both | Wearable gems. World data. Curios, Iron's Lib, Atlas API. Apotheosis gems stay. |
+| Not Enough Glyphs | `not_enough_glyphs-1.21.1-4.6.2.jar` | both | Extra Ars glyphs. World data. SauceLib is embedded. |
+| Neo Vitae | `neovitae-1.21.1-1.1.27.jar` | both | Blood altars, sigils, and a demon dungeon. World data. GeckoLib and Modonomicon. |
+| Just Dire Things | `justdirethings-1.5.7.jar` | both | Automation tools and blocks beside Create and Mekanism. World data. 1.5.7 is the 1.21.1 file. |
+| Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | Separate factory tech tree. World data. GuideME. GrandPower is embedded. Router energy upgrades are in. |
+| Modular Routers | `modular-routers-13.2.7+mc1.21.1.jar` | both | Programmable routers beside Pipez. World data. Mekanistic Routers adds Mekanism modules. |
+| Little Big Redstone | `little-big-redstone-1.9.11-1.21.1.jar` | both | Compact redstone. World data. Tesseract API and GuideME. |
+| Mining Gadgets | `mininggadgets-1.18.8.jar` | both | Laser mining. World data. Create Ultimine and FTB Ultimine stay. |
+| ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | AE2 stock requests. World data. |
+| Mekanism Curios | `mekanismcurios-1.21.1-1.2.1.jar` | both | Portable QIO on a Curios slot. |
+| Multi Builder Tool | `MultiBuilderTool-1.21.1-1.1.29.jar` | both | One-click multiblocks. |
+| Loot Integrations: When Dungeons Arise | `lootintegration_wda-1.8.jar` | both | Modded loot in When Dungeons Arise chests. |
+| OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 
 Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) and FTB Quests Optimizer: [performance.md](performance.md). Pipez and Sophisticated/Functional storage: [storage.md](storage.md).
 

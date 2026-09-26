@@ -17,3 +17,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Packet Fixer | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` | both | `core`, `stability` | Repairs bad packets. |
 | Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | both | `addon`, `stability` | Fixes a disconnect packet crash. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | `core`, `stability` | Login flood protection. |
+| Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | `addon`, `stability` | A bad tag entry no longer wipes the whole tag. |

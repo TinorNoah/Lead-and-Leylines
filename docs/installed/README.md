@@ -14,30 +14,31 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Combat](combat.md) | 15 | How the player fights in melee and moves. |
 | [Bosses](bosses.md) | 13 | Boss mods and the structure addons that rebuild their arenas. |
 | [Mobs](mobs.md) | 19 | Creatures, wildlife, and the libraries those mods need. |
-| [Structures](structures.md) | 34 | Dungeons, villages, and the tools that space or label them. |
+| [Structures](structures.md) | 35 | Dungeons, villages, and the tools that space or label them. |
 | [Biomes](biomes.md) | 20 | Overworld and cave biome sets. |
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
 | [The End](end.md) | 4 | End biomes and the End expansion. |
-| [Magic](magic.md) | 41 | Spell mods and their addons. |
+| [Magic](magic.md) | 46 | Spell mods and their addons. |
 | [Food](food.md) | 19 | Kitchens and cooking. |
 | [Farming](farming.md) | 4 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
 | [Storage](storage.md) | 24 | Backpacks, chests, and trash. |
-| [Applied Energistics](applied-energistics.md) | 26 | ME storage and autocrafting. |
+| [Applied Energistics](applied-energistics.md) | 27 | ME storage and autocrafting. |
 | [Refined Storage](refined-storage.md) | 6 | Disks, grids, and the addons that extend them. |
-| [Mekanism](mekanism.md) | 10 | Machines, factories, gases, and tools. |
+| [Mekanism](mekanism.md) | 12 | Machines, factories, gases, and tools. |
 | [Create](create.md) | 10 | Contraptions and kinetics. |
-| [Transport](transport.md) | 12 | Vehicles, fast travel, and item pipes. |
+| [Automation](automation.md) | 3 | Extra machine mods beside Create and Mekanism. |
+| [Transport](transport.md) | 15 | Vehicles, fast travel, and item pipes. |
 | [Resources](resources.md) | 6 | Ores, unification, and chemistry. |
-| [Building](building.md) | 13 | Building tools and decoration. |
+| [Building](building.md) | 19 | Building tools and decoration. |
 | [Exploration](exploration.md) | 6 | Maps and dimensions. |
 | [FTB](ftb.md) | 10 | Claims, teams, quests, and the shared FTB library. |
 | [Gameplay](gameplay.md) | 15 | Small world and inventory changes. |
-| [Recipes and overlays](info.md) | 27 | JEI, Jade, and tooltip frames. |
+| [Recipes and overlays](info.md) | 29 | JEI, Jade, and tooltip frames. |
 | [Rendering](rendering.md) | 26 | Shaders, entity models, and client render optimizers. |
-| [Client](client.md) | 19 | Client-only comfort. |
-| [Performance](performance.md) | 19 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
-| [Stability](stability.md) | 9 | Crash isolation, leak patches, and network fixes. |
-| [Libraries](libraries.md) | 14 | Shared libraries used by more than one mod family. |
+| [Client](client.md) | 26 | Client-only comfort. |
+| [Performance](performance.md) | 20 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
+| [Stability](stability.md) | 10 | Crash isolation, leak patches, and network fixes. |
+| [Libraries](libraries.md) | 17 | Shared libraries used by more than one mod family. |
 
-481 entries, each listed once.
+516 entries, each listed once.

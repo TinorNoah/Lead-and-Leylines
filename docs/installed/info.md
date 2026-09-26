@@ -16,6 +16,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | `addon`, `info`, `jei` | Cheaper JEI lookups. |
 | Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | client | `addon`, `info`, `jei` | Mob drops and dungeon loot in JEI. |
 | Smithing Template Viewer for JEI/EMI | `smithingtemplateviewer-1.0.4.jar` | client | `addon`, `info`, `jei` | Smithing templates in JEI. |
+| Not Enough Recipe Book [NERB] | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | `addon`, `info`, `jei` | Removes the vanilla recipe book. |
+| ShatterLib \| OctoLib | `OctoLib-NEOFORGE-0.6.2+1.21.jar` | both | `library`, `info` | Library Not Enough Recipe Book uses. |
 
 ## Looking at the world
 

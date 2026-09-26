@@ -13,6 +13,17 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+- Sort inventories, lock slots, save gear sets, and move items with more mouse gestures.
+- Mute chosen sounds, add more sound effects, and hear reverb through blocks.
+- More glass, a tape measure, laser mining gadgets, elevators, and one-click multiblock building.
+- Programmable routers, including Mekanism parts and Modern Industrialization energy.
+- Modern Industrialization and Just Dire Things, as extra automation beside Create and Mekanism.
+- Request stock in Applied Energistics, and wear a portable QIO on a Curios slot.
+- Iron's jewelry, more Ars Nouveau glyphs, and Neo Vitae blood magic.
+- Compact redstone, and modded loot in When Dungeons Arise chests.
+- The vanilla recipe book is gone. JEI stays.
+- KubeJS can script recipes and loot. No scripts ship with this yet.
+
 ### Changed
 
 ### Fixed

@@ -30,6 +30,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | When Dungeons Arise - Forge! | `DungeonsArise-1.21.1-2.1.68-release.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Large overworld dungeons. |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Ocean dungeons for When Dungeons Arise. |
+| Loot Integrations: When Dungeons Arise & Co | `lootintegration_wda-1.8.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in When Dungeons Arise chests. |
 | Dungeon Now Loading Tricky Trials Port | `dungeonnowloading-neoforge-1.21.1-2.11.5.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Unofficial port of Dungeon Now Loading. |
 | Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Extra dungeon set. |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | both | `library`, `structure`, `worldgen` | Library Awesome Dungeon needs. |

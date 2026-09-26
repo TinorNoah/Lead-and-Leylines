@@ -268,6 +268,7 @@ name = "Dungeons"
 mods = [
   { file = "when-dungeons-arise.pw.toml", blurb = "Large overworld dungeons.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "when-dungeons-arise-seven-seas.pw.toml", blurb = "Ocean dungeons for When Dungeons Arise.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "loot-integrations-when-dungeons-arise.pw.toml", blurb = "Modded loot in When Dungeons Arise chests.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "dungeon-now-loading-1-21-1-port.pw.toml", blurb = "Unofficial port of Dungeon Now Loading.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "awesome-dungeon.pw.toml", blurb = "Extra dungeon set.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "library-ferret.pw.toml", blurb = "Library Awesome Dungeon needs.", tags = ["library", "structure", "worldgen"] },
@@ -399,6 +400,7 @@ mods = [
   { file = "sophisticated-backpacks-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Backpacks.", tags = ["compat", "magic", "sophisticated"] },
   { file = "sophisticated-storage-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Storage.", tags = ["compat", "magic", "sophisticated"] },
   { file = "ars-nouveau-refresh.pw.toml", blurb = "Resource pack. Refreshed Ars item textures.", tags = ["resource-pack", "magic", "ars-nouveau"] },
+  { file = "not-enough-glyphs.pw.toml", blurb = "More Ars glyphs.", tags = ["addon", "magic", "ars-nouveau", "world-data"] },
 ]
 
 [[category.group]]
@@ -413,6 +415,7 @@ mods = [
   { file = "irons-spells-n-spellbooks-aeronautics.pw.toml", blurb = "Teleport spells on Aeronautics ships.", tags = ["addon", "magic", "irons-spells"] },
   { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
   { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
+  { file = "kubejs-irons-spells.pw.toml", blurb = "KubeJS hooks for new spells.", tags = ["compat", "magic", "irons-spells"] },
 ]
 
 [[category.group]]
@@ -438,7 +441,7 @@ name = "Spectrum"
 mods = [
   { file = "spectrum.pw.toml", blurb = "Progression magic.", tags = ["core", "magic"] },
   { file = "revelationary.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
-  { file = "modonomicon.pw.toml", blurb = "In-game book Spectrum uses.", tags = ["library", "magic"] },
+  { file = "modonomicon.pw.toml", blurb = "In-game book Spectrum and Neo Vitae use.", tags = ["library", "magic"] },
   { file = "lodestone.pw.toml", blurb = "Library Spectrum needs.", tags = ["library", "magic"] },
   { file = "spectrumjei.pw.toml", blurb = "Spectrum recipes in JEI.", tags = ["addon", "magic", "jei"] },
 ]
@@ -448,6 +451,19 @@ name = "Forbidden and Arcanus"
 mods = [
   { file = "forbidden-arcanus.pw.toml", blurb = "Magic blocks, tools, and mobs.", tags = ["core", "magic"] },
   { file = "valhelsia-core.pw.toml", blurb = "Library Forbidden and Arcanus needs.", tags = ["library", "magic"] },
+]
+
+[[category.group]]
+name = "Jewelry"
+mods = [
+  { file = "irons-jewelry.pw.toml", blurb = "Gems and jewelry on Curios slots.", tags = ["core", "magic", "irons-spells", "world-data"] },
+  { file = "atlas-api.pw.toml", blurb = "Library Iron's Jewelry uses.", tags = ["library", "magic"] },
+]
+
+[[category.group]]
+name = "Neo Vitae"
+mods = [
+  { file = "neovitae.pw.toml", blurb = "Blood altars, sigils, and a demon dungeon.", tags = ["core", "magic", "world-data"] },
 ]
 
 [[category]]
@@ -566,10 +582,10 @@ intro = """ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.
 name = "Applied Energistics 2"
 mods = [
   { file = "applied-energistics-2.pw.toml", blurb = "ME networks and autocrafting.", tags = ["core", "tech", "storage", "ae2"] },
-  { file = "kotlin-for-forge.pw.toml", blurb = "Kotlin runtime. AE2 MEGA Things and Better P2P need it.", tags = ["library", "tech", "storage", "ae2"] },
+  { file = "kotlin-for-forge.pw.toml", blurb = "Kotlin runtime. AE2 MEGA Things, Better P2P, Observable, and Inventory Profiles Next need it.", tags = ["library", "tech", "storage", "ae2"] },
   { file = "glodium.pw.toml", blurb = "Library Applied Flux and ExtendedAE need.", tags = ["library", "tech", "storage", "ae2"] },
   { file = "applied-energistics-2-wireless-terminals.pw.toml", blurb = "Wireless terminals.", tags = ["addon", "tech", "storage", "ae2"] },
-  { file = "guideme.pw.toml", blurb = "In-game guide AE2 uses.", tags = ["library", "tech", "storage", "ae2"] },
+  { file = "guideme.pw.toml", blurb = "In-game guide AE2, Modern Industrialization, and Little Big Redstone use.", tags = ["library", "tech", "storage", "ae2"] },
   { file = "ae2-crafting-tree.pw.toml", blurb = "Crafting tree view.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "ae2-jei-integration.pw.toml", blurb = "AE2 recipes in JEI.", tags = ["addon", "tech", "storage", "ae2", "jei"] },
   { file = "ae2-things-forge.pw.toml", blurb = "DISK drives and extra cells.", tags = ["addon", "tech", "storage", "ae2"] },
@@ -591,6 +607,7 @@ mods = [
   { file = "pattern-converter.pw.toml", blurb = "Converts patterns between AE2 and Refined Storage.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
 ]
 
 [[category]]
@@ -627,6 +644,8 @@ mods = [
   { file = "mekagenjei-mekanism-generator-addon.pw.toml", blurb = "Generator recipes in JEI.", tags = ["addon", "tech", "mekanism", "jei"] },
   { file = "mekajadeupgrades.pw.toml", blurb = "Jade labels for Mekanism upgrades.", tags = ["addon", "tech", "mekanism", "jade"] },
   { file = "just-enough-mekanism-multiblocks.pw.toml", blurb = "Multiblock preview in JEI.", tags = ["addon", "tech", "mekanism", "jei"] },
+  { file = "mekanism-curios.pw.toml", blurb = "Portable QIO in a Curios slot.", tags = ["addon", "tech", "mekanism"] },
+  { file = "kubejs-mekanism.pw.toml", blurb = "KubeJS hooks for Mekanism.", tags = ["compat", "tech", "mekanism"] },
 ]
 
 [[category]]
@@ -647,6 +666,24 @@ mods = [
   { file = "create-oh-the-biomes-weve-gone-compat.pw.toml", blurb = "Create recipes for Oh The Biomes We've Gone.", tags = ["compat", "tech", "create"] },
   { file = "create-regions-unexplored-compat-crushing.pw.toml", blurb = "Crushing recipes for Regions Unexplored.", tags = ["compat", "tech", "create"] },
   { file = "demagnetizer.pw.toml", blurb = "Stops Create item magnets in a box.", tags = ["addon", "tech", "create"] },
+]
+
+[[category]]
+slug = "automation"
+title = "Automation"
+intro = """Extra machine mods beside Create and Mekanism. Pipes and routers are in [Transport](transport.md). Applied Energistics is in [Applied Energistics](applied-energistics.md)."""
+
+[[category.group]]
+name = "Modern Industrialization"
+mods = [
+  { file = "modern-industrialization.pw.toml", blurb = "A separate factory tech tree.", tags = ["core", "tech", "world-data"] },
+  { file = "modern-industrial-routers.pw.toml", blurb = "Router upgrades for this mod's energy.", tags = ["addon", "tech", "transport"] },
+]
+
+[[category.group]]
+name = "Just Dire Things"
+mods = [
+  { file = "just-dire-things.pw.toml", blurb = "Automation tools and blocks.", tags = ["core", "tech", "world-data"] },
 ]
 
 [[category]]
@@ -671,6 +708,7 @@ name = "Travel"
 mods = [
   { file = "waystones.pw.toml", blurb = "Teleport stones.", tags = ["core", "transport"] },
   { file = "elytra-slot.pw.toml", blurb = "Elytra in a Curios slot.", tags = ["core", "transport"] },
+  { file = "openblocks-elevator.pw.toml", blurb = "Elevator blocks. Jump or sneak to change floors.", tags = ["addon", "transport", "world-data"] },
   { file = "caelus.pw.toml", blurb = "Elytra flight library Elytra Slot needs.", tags = ["library", "transport"] },
 ]
 
@@ -679,6 +717,13 @@ name = "Pipes"
 mods = [
   { file = "pipez.pw.toml", blurb = "Item, fluid, and energy pipes.", tags = ["core", "transport"] },
   { file = "pipez-lag-fix.pw.toml", blurb = "Lowers Pipez tick cost.", tags = ["addon", "transport"] },
+]
+
+[[category.group]]
+name = "Routers"
+mods = [
+  { file = "modular-routers.pw.toml", blurb = "Programmable item routers.", tags = ["core", "transport", "world-data"] },
+  { file = "mekanistic-routers.pw.toml", blurb = "Mekanism modules for Modular Routers.", tags = ["compat", "transport", "mekanism"] },
 ]
 
 [[category]]
@@ -718,6 +763,12 @@ mods = [
   { file = "amendments.pw.toml", blurb = "Lanterns, hanging signs, and small block tweaks.", tags = ["core", "building"] },
   { file = "supplementaries.pw.toml", blurb = "Jars, ropes, signs, and furniture.", tags = ["core", "building"] },
   { file = "selene.pw.toml", blurb = "Moonlight library Supplementaries and Amendments use.", tags = ["library", "building"] },
+  { file = "glassential-renewed.pw.toml", blurb = "More glass types.", tags = ["addon", "building", "world-data"] },
+  { file = "measurements.pw.toml", blurb = "Tape measure.", tags = ["addon", "building"] },
+  { file = "mining-gadgets.pw.toml", blurb = "Laser mining gadgets.", tags = ["addon", "building", "world-data"] },
+  { file = "multi-builder-tool.pw.toml", blurb = "Places a multiblock in one click.", tags = ["addon", "building"] },
+  { file = "little-big-redstone.pw.toml", blurb = "Packs a redstone circuit into one block.", tags = ["addon", "building", "world-data"] },
+  { file = "tesseract-api-neoforge.pw.toml", blurb = "Library Little Big Redstone uses.", tags = ["library", "building"] },
 ]
 
 [[category]]
@@ -807,6 +858,8 @@ mods = [
   { file = "jeioptimizer.pw.toml", blurb = "Cheaper JEI lookups.", tags = ["addon", "info", "jei"] },
   { file = "just-enough-resources-jer.pw.toml", blurb = "Mob drops and dungeon loot in JEI.", tags = ["addon", "info", "jei"] },
   { file = "smithing-template-viewer.pw.toml", blurb = "Smithing templates in JEI.", tags = ["addon", "info", "jei"] },
+  { file = "notenoughrecipebook.pw.toml", blurb = "Removes the vanilla recipe book.", tags = ["addon", "info", "jei"] },
+  { file = "shatterbyte-lib.pw.toml", blurb = "Library Not Enough Recipe Book uses.", tags = ["library", "info"] },
 ]
 
 [[category.group]]
@@ -905,6 +958,13 @@ mods = [
   { file = "default-options.pw.toml", blurb = "Applies pack keybinds and options.", tags = ["addon", "client-qol"] },
   { file = "controlling.pw.toml", blurb = "Search keybinds.", tags = ["core", "client-qol"] },
   { file = "mouse-tweaks.pw.toml", blurb = "Drag and scroll item moving.", tags = ["core", "client-qol"] },
+  { file = "moremousetweaks.pw.toml", blurb = "More mouse inventory moves beside Mouse Tweaks.", tags = ["addon", "client-qol"] },
+  { file = "inventory-profiles-next.pw.toml", blurb = "Sort, lock slots, and save gear sets.", tags = ["addon", "client-qol"] },
+  { file = "libipn.pw.toml", blurb = "Library Inventory Profiles Next uses.", tags = ["library", "client-qol"] },
+  { file = "extreme-sound-muffler.pw.toml", blurb = "Mutes sounds you pick.", tags = ["addon", "client-qol"] },
+  { file = "sound.pw.toml", blurb = "Extra sound effects.", tags = ["addon", "client-qol"] },
+  { file = "mru.pw.toml", blurb = "Library Sounds uses.", tags = ["library", "client-qol"] },
+  { file = "sound-physics-remastered.pw.toml", blurb = "Reverb and occlusion for sounds.", tags = ["addon", "client-qol"] },
   { file = "searchables.pw.toml", blurb = "Search in more screens.", tags = ["addon", "client-qol"] },
   { file = "better-modlist-neoforge.pw.toml", blurb = "Clearer mods screen.", tags = ["addon", "client-qol"] },
   { file = "better-compatibility-checker.pw.toml", blurb = "Clearer incompatibility screen.", tags = ["compat", "client-qol"] },
@@ -945,6 +1005,7 @@ mods = [
   { file = "txnilib.pw.toml", blurb = "Library Cerulean needs.", tags = ["library", "optimizer"] },
   { file = "fluidium.pw.toml", blurb = "Delays fluid ticks far from players. Claimed chunks stay full speed.", tags = ["addon", "optimizer"] },
   { file = "duplicationless.pw.toml", blurb = "Library Fluidium needs. Also blocks a few dupe paths.", tags = ["library", "optimizer"] },
+  { file = "observable.pw.toml", blurb = "In-game lag profiler.", tags = ["addon", "optimizer"] },
 ]
 
 [[category]]
@@ -964,6 +1025,7 @@ mods = [
   { file = "packet-fixer.pw.toml", blurb = "Repairs bad packets.", tags = ["core", "stability"] },
   { file = "disconnect-packet-fix.pw.toml", blurb = "Fixes a disconnect packet crash.", tags = ["addon", "stability"] },
   { file = "login-protection.pw.toml", blurb = "Login flood protection.", tags = ["core", "stability"] },
+  { file = "lmft.pw.toml", blurb = "A bad tag entry no longer wipes the whole tag.", tags = ["addon", "stability"] },
 ]
 
 [[category]]
@@ -988,5 +1050,13 @@ mods = [
   { file = "prickle.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use.", tags = ["library"] },
   { file = "placebo.pw.toml", blurb = "Library the Fast mods and Apotheosis use.", tags = ["library"] },
   { file = "cupboard.pw.toml", blurb = "Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use.", tags = ["library"] },
+]
+
+[[category.group]]
+name = "KubeJS"
+mods = [
+  { file = "kubejs.pw.toml", blurb = "Script recipes, items, and events.", tags = ["library"] },
+  { file = "rhino.pw.toml", blurb = "JavaScript runtime KubeJS uses.", tags = ["library"] },
+  { file = "lootjs.pw.toml", blurb = "Loot table scripts for KubeJS.", tags = ["addon"] },
 ]
 

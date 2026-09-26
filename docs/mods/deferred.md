@@ -73,7 +73,13 @@ This file lists **only mods that are not in `pack/mods/`**.
 | TCT ClearLag | Deletes entities. ARR + TCT Core. Skip. |
 | Dimensional Threading Reforked | One world per thread. Skip. |
 | Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
-| Ixeris | Moves input off-thread. Skip. |
+| Ixeris | Moves input off-thread. Skip. Asked again 2026-09-26. Still skip. |
+| Nolijium | Fog, sky, particles, and darkness overlap Sodium / Iris. Last 1.21.1 file is 2025-03. Optional Embeddium. Skip. |
+| Inventory Essentials | 1.21.1 file exists. Overlaps Inventory Profiles Next and Mouse Tweaks. Skip. |
+| Modern Dynamics | Second pipe mod beside Pipez. Skip. |
+| Pretty X Smart Pipez, Pretty X Smart Pipez Mekanism Edition | Resource packs, not mods. `allowModDistribution` is false, so they cannot ship. Skip. |
+| Rechiseled: Applied Energistics 2 | Needs Rechiseled. Chipped is the block-variant mod. Skip. |
+| Mob Grinding Utils: Vanillafied (16px) | Resource pack. Mob Grinding Utils is not in the pack. Skip. |
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
 | Fast Item Frames | Installed 2026-09-26. World data + Puzzles Lib (already in). |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
@@ -122,7 +128,7 @@ Delightful.
 
 ### Maps / compasses / QoL
 
-Inventory Essentials; Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Observable; Construction Sticks; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends. Fusion and its connected-glass pack are in [content.md](content.md).
+Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Construction Sticks; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends. Inventory Essentials and Observable now have 1.21.1 files: Observable is installed; Inventory Essentials stays out (see the skip table above). Fusion and its connected-glass pack are in [content.md](content.md).
 
 ### UI / loading / shaders
 

@@ -55,6 +55,7 @@ List each packwiz file **once**. Put a mod in the category that matches what pla
 | Refined Storage and RS-only addons | `refined-storage` |
 | Mekanism machines / tools | `mekanism` |
 | Create kinetics (not ships) | `create` |
+| A separate factory or automation mod | `automation` |
 | Vehicles / waystones / pipes | `transport` |
 | Ores / chemistry / unification | `resources` |
 | Building gadgets / decoration | `building` |
