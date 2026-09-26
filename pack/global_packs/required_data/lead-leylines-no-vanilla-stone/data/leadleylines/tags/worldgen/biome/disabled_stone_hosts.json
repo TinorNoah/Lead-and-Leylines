@@ -3,7 +3,6 @@
     "#minecraft:is_overworld",
     { "id": "#terralith:skylands", "required": false },
     { "id": "terralith:deep_warm_ocean", "required": false },
-    { "id": "#alexscaves:alexs_caves_biomes", "required": false },
     { "id": "ars_elemental:blazing_forest", "required": false },
     { "id": "ars_elemental:cascading_forest", "required": false },
     { "id": "ars_elemental:flashing_forest", "required": false },

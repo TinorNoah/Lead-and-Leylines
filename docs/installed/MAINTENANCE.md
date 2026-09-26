@@ -61,7 +61,7 @@ List each packwiz file **once**. Put a mod in the category that matches what pla
 | Building gadgets / decoration | `building` |
 | Maps / Twilight Forest dimension | `exploration` |
 | FTB claims / quests / teams | `ftb` |
-| Quark-style vanilla tweaks / Curios / graves | `gameplay` |
+| Vanilla-style tweaks / Curios / graves | `gameplay` |
 | JEI / Jade / tooltip frames | `info` |
 | Sodium / Iris / entity models | `rendering` |
 | Client comfort only | `client` |

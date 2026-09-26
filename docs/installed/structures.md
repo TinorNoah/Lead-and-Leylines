@@ -4,13 +4,6 @@ Dungeons, villages, and the tools that space or label them. Boss arenas that bel
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
-## Integrated structures
-
-| Mod | File | Side | Tags | What it adds |
-|---|---|---|---|---|
-| Integrated API | `integrated_api-neoforge-1.21.1-1.9.0.jar` | both | `library`, `structure`, `worldgen` | Shared structure framework for the Integrated addons. |
-| Integrated Patches | `integrated_patches v1.1.0-1.21.1.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Worldgen fixes for that framework. |
-
 ## YUNG's
 
 | Mod | File | Side | Tags | What it adds |

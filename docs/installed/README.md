@@ -12,10 +12,10 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 |---|---:|---|
 | [Weapons](weapons.md) | 42 | Guns and the addons that change those guns. |
 | [Combat](combat.md) | 15 | How the player fights in melee and moves. |
-| [Bosses](bosses.md) | 13 | Boss mods and the structure addons that rebuild their arenas. |
-| [Mobs](mobs.md) | 22 | Creatures, wildlife, and the libraries those mods need. |
-| [Structures](structures.md) | 35 | Dungeons, villages, and the tools that space or label them. |
-| [Biomes](biomes.md) | 20 | Overworld and cave biome sets. |
+| [Bosses](bosses.md) | 11 | Boss mods and any structure addons that rebuild their arenas. |
+| [Mobs](mobs.md) | 23 | Creatures, wildlife, and the libraries those mods need. |
+| [Structures](structures.md) | 33 | Dungeons, villages, and the tools that space or label them. |
+| [Biomes](biomes.md) | 16 | Overworld and cave biome sets. |
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
 | [The End](end.md) | 4 | End biomes and the End expansion. |
 | [Magic](magic.md) | 45 | Spell mods and their addons. |
@@ -33,7 +33,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Building](building.md) | 24 | Building tools and decoration. |
 | [Exploration](exploration.md) | 6 | Maps and dimensions. |
 | [FTB](ftb.md) | 10 | Claims, teams, quests, and the shared FTB library. |
-| [Gameplay](gameplay.md) | 15 | Small world and inventory changes. |
+| [Gameplay](gameplay.md) | 13 | Small world and inventory changes. |
 | [Recipes and overlays](info.md) | 30 | JEI, Jade, and tooltip frames. |
 | [Rendering](rendering.md) | 26 | Shaders, entity models, and client render optimizers. |
 | [Client](client.md) | 28 | Client-only comfort. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 10 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 20 | Shared libraries used by more than one mod family. |
 
-565 entries, each listed once.
+556 entries, each listed once.

@@ -25,10 +25,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Alex's Caves Continued | `alexscaves-1.1.1-neoforge+1.21.1.jar` | both | `core`, `worldgen`, `alexs`, `world-data` | Cave biomes and their animals. |
-| Codxlib | `codxlib-1.6.1-neoforge+1.21.1.jar` | both | `library`, `worldgen`, `alexs` | Library Alex's Caves Continued and Alex's Mobs Continued share. |
-| Alex's Caves Continued Delight | `accdelight-1.0.0-neoforge+1.21.1.jar` | both | `addon`, `worldgen`, `farmers-delight`, `food`, `alexs`, `world-data` | Cooking recipes for cave animals. |
-| Alex's Caves: Spellbooks | `alexs_caves_spellbooks-1.1.5.jar` | both | `addon`, `worldgen`, `irons-spells`, `alexs`, `world-data` | Iron's Spells aimed at these caves. |
 | YUNG's Cave Biomes (Forge/NeoForge) | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | both | `addon`, `worldgen`, `yungs`, `world-data` | Cave biome set from YUNG. |
 
 ## Finding biomes
