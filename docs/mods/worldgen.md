@@ -28,7 +28,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | YUNG's API (NeoForge) | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | both | Required by YUNG's structure mods. Separate CF project from Forge 421850. |
 | YUNG's Better Caves | `YungsBetterCaves-1.21.1-NeoForge-3.1.6.jar` | both | Cave overhaul. World data. |
 | YUNG's Cave Biomes | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | both | Cave biomes. World data. Uses pack TerraBlender NeoForge; do not add TerraBlender (Forge) `563928`. |
-| Alex's Caves Continued | `alexscaves-1.1.1-neoforge+1.21.1.jar` | both | Underground cave biomes. World data. Codxlib, not original Citadel. |
+| Alex's Caves Continued | — | — | Removed 2026-09-26 with Delight and Spellbooks. Codxlib stays for Alex's Mobs. |
 | Compat Structure | `compatstructures-1.0.3.jar` | both | Extra structures. World data. Compat API. |
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | both | Nether fortress overhaul. World data. |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | both | River bridges. World data. |
@@ -65,7 +65,7 @@ Twilight Forest: [content.md](content.md).
 
 `lead-leylines-nether-fire-dragons/` moves fire dragon roosts and caves onto the same Nether biome tags. Ice and lightning dragons stay on their own biome tags. Structurify's global multiplier is 2.0, so those structure sets are also twice as far apart in new chunks.
 
-`lead-leylines-no-vanilla-stone/` removes Terralith's disabled `ore_andesite_*`, `ore_diorite_*`, and `ore_granite_*` placed features from overworld biome lists (plus Alex's Caves and Ars Elemental biomes that still reference them). Those features already had `count: 0`. Stone still comes from Terralith. Keep `vanilla_stone_gen` off.
+`lead-leylines-no-vanilla-stone/` removes Terralith's disabled `ore_andesite_*`, `ore_diorite_*`, and `ore_granite_*` placed features from overworld biome lists (plus Ars Elemental biomes that still reference them). Those features already had `count: 0`. Stone still comes from Terralith. Keep `vanilla_stone_gen` off.
 
 The RU override datapack drops `minecraft:block_predicate_filter` steps whose predicate is `lithostitched:in_structure` from: `patch/ash_vents_inferno`, `patch/cave_bioshrooms`, `patch/dropleaf`, `patch/prismarite_cluster`, `patch/redstone_bud`, `patch/redstone_bulb`, `special/lava_fall`, `special/overworld_lava_delta`. That predicate joins a chunk future on a worldgen worker; dedicated servers freeze in `ChunkMap.processUnloads` / “Saving worlds”. Reproduced **without** ByePregen or C2ME (ATM10 Aeronautics dump, Lithostitched beta4; same predicate in beta6). Those eight features can now place inside structures.
 
@@ -78,7 +78,7 @@ Terralith 2.6.2 + Oh The Biomes We've Gone 2.6.0 hit `IllegalStateException: Fea
 | WTHIT | Dropped | Overlaps Jade. Optional OTBWG tooltip dep; not added. |
 | Better Sparse Structures | Dropped | Same structure-spacing job as Structurify. Do not stack. |
 | Sparse Structures | Dropped | Different project from Better Sparse Structures; also overlaps Structurify. |
-| Alex's Caves + Citadel | Removed | Original Alex's Caves had no 1.21.1 NF file. Alex's Caves Continued `1645389` is in with Codxlib. Do not add Citadel. |
+| Alex's Caves + Citadel / Continued | Removed | Continued removed 2026-09-26 with its Delight and Spellbooks. Do not re-add Citadel or the unofficial caves port. |
 | Stalwart Dungeons | Held | No 1.21.1 NeoForge file. |
 | Bygone Nether | Held | No 1.21.1 NeoForge file. |
 | BetterNether | Removed | Old Forge project had no 1.21.1 NF file. BetterNether: New Dawn `1422293` is in. |

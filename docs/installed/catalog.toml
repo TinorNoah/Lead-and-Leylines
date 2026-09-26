@@ -149,14 +149,13 @@ mods = [
 [[category]]
 slug = "bosses"
 title = "Bosses"
-intro = """Boss mods and the structure addons that rebuild their arenas. The structure framework they share is in [Structures](structures.md)."""
+intro = """Boss mods and any structure addons that rebuild their arenas."""
 
 [[category.group]]
 name = "Bosses of Mass Destruction"
 mods = [
   { file = "bosses-of-mass-destruction-forge.pw.toml", blurb = "Lich, obsidilith, and the other BOMD bosses.", tags = ["core", "boss"] },
   { file = "cerbons-api.pw.toml", blurb = "Library BOMD needs.", tags = ["library", "boss"] },
-  { file = "integrated-bosses-of-mass-destruction.pw.toml", blurb = "Places those bosses in integrated structures.", tags = ["addon", "boss"] },
 ]
 
 [[category.group]]
@@ -177,7 +176,6 @@ mods = [
 name = "Mowzie's Mobs"
 mods = [
   { file = "mowzies-mobs.pw.toml", blurb = "Overworld bosses.", tags = ["core", "boss"] },
-  { file = "integrated-mowzies-mobs.pw.toml", blurb = "Rebuilt Mowzie structures.", tags = ["addon", "boss"] },
 ]
 
 [[category.group]]
@@ -192,12 +190,13 @@ mods = [
 [[category]]
 slug = "mobs"
 title = "Mobs"
-intro = """Creatures, wildlife, and the libraries those mods need. Alex's Caves and Codxlib are under [Biomes](biomes.md). Guns on mobs are under [Weapons](weapons.md)."""
+intro = """Creatures, wildlife, and the libraries those mods need. Guns on mobs are under [Weapons](weapons.md)."""
 
 [[category.group]]
 name = "Alex's Mobs Continued"
 mods = [
   { file = "alexs-mobs-continued.pw.toml", blurb = "Overworld animals and monsters.", tags = ["core", "mob", "alexs"] },
+  { file = "codxlib.pw.toml", blurb = "Library Alex's Mobs Continued needs.", tags = ["library", "mob", "alexs"] },
   { file = "amt.pw.toml", blurb = "Tweaks for this mob set.", tags = ["addon", "mob", "alexs"] },
   { file = "alexs-mobs-continued-farmers-delight-refabricated.pw.toml", blurb = "Cooking recipes for these animals.", tags = ["addon", "mob", "farmers-delight", "food", "alexs"] },
 ]
@@ -250,13 +249,6 @@ mods = [
 slug = "structures"
 title = "Structures"
 intro = """Dungeons, villages, and the tools that space or label them. Boss arenas that belong to one boss mod are in [Bosses](bosses.md). Nether-only structures are in [The Nether](nether.md)."""
-
-[[category.group]]
-name = "Integrated structures"
-mods = [
-  { file = "integrated-api.pw.toml", blurb = "Shared structure framework for the Integrated addons.", tags = ["library", "structure", "worldgen"] },
-  { file = "integrated-patches.pw.toml", blurb = "Worldgen fixes for that framework.", tags = ["addon", "structure", "worldgen", "world-data"] },
-]
 
 [[category.group]]
 name = "YUNG's"
@@ -336,10 +328,6 @@ mods = [
 [[category.group]]
 name = "Caves"
 mods = [
-  { file = "alexs-caves-continued.pw.toml", blurb = "Cave biomes and their animals.", tags = ["core", "worldgen", "alexs", "world-data"] },
-  { file = "codxlib.pw.toml", blurb = "Library Alex's Caves Continued and Alex's Mobs Continued share.", tags = ["library", "worldgen", "alexs"] },
-  { file = "alexs-caves-continued-delight.pw.toml", blurb = "Cooking recipes for cave animals.", tags = ["addon", "worldgen", "farmers-delight", "food", "alexs", "world-data"] },
-  { file = "alexs-caves-spellbooks.pw.toml", blurb = "Iron's Spells aimed at these caves.", tags = ["addon", "worldgen", "irons-spells", "alexs", "world-data"] },
   { file = "yungs-cave-biomes.pw.toml", blurb = "Cave biome set from YUNG.", tags = ["addon", "worldgen", "yungs", "world-data"] },
 ]
 
@@ -471,7 +459,7 @@ mods = [
 [[category]]
 slug = "food"
 title = "Food"
-intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs and Alex's Caves under [Mobs](mobs.md) and [Biomes](biomes.md), Ars foods under [Magic](magic.md)."""
+intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs under [Mobs](mobs.md), Ars foods under [Magic](magic.md)."""
 
 [[category.group]]
 name = "Farmer's Delight"
@@ -866,13 +854,6 @@ mods = [
 slug = "gameplay"
 title = "Gameplay"
 intro = """Small world and inventory changes."""
-
-[[category.group]]
-name = "Quark"
-mods = [
-  { file = "quark.pw.toml", blurb = "Small vanilla tweaks: blocks, mobs, and tools.", tags = ["core", "gameplay"] },
-  { file = "zeta.pw.toml", blurb = "Library Quark needs. Biolith ships inside the Quark jar.", tags = ["library", "gameplay"] },
-]
 
 [[category.group]]
 name = "Inventory and sleep"

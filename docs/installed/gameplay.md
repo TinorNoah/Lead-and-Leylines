@@ -4,13 +4,6 @@ Small world and inventory changes.
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
-## Quark
-
-| Mod | File | Side | Tags | What it adds |
-|---|---|---|---|---|
-| Quark | `Quark-4.1-485.jar` | both | `core`, `gameplay` | Small vanilla tweaks: blocks, mobs, and tools. |
-| Zeta | `Zeta-1.1-40.jar` | both | `library`, `gameplay` | Library Quark needs. Biolith ships inside the Quark jar. |
-
 ## Inventory and sleep
 
 | Mod | File | Side | Tags | What it adds |

@@ -1,10 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = "config/alexscaves-general.toml"
-hash = "3fb0cd38d33614b3fa4a8b99f677071e726610d37adb08eac19c0cab7417fcce"
-
-[[files]]
 file = "config/apotheosis/apothic_enchanting.cfg"
 hash = "5c5ecc830a1aa834fce992f5001c390afd194d65796b94789d48970542f77192"
 
@@ -266,7 +262,7 @@ hash = "23ed2256f95695d3465ee7d6e72654d4d910910efc81ceb400ec26eaac6df5ec"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-no-vanilla-stone/data/leadleylines/tags/worldgen/biome/disabled_stone_hosts.json"
-hash = "fa1c61f0ccd00e34c9219e0052043d3fa1b590f79803259cc01aa4b8c04f8919"
+hash = "cc0ba7cfdf6771831bc5ffde40258d9508fae0b1d8b5565607f6648b83086e0d"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-no-vanilla-stone/pack.mcmeta"
@@ -764,21 +760,6 @@ metafile = true
 [[files]]
 file = "mods/alchemylib.pw.toml"
 hash = "c9027529928d0c25dbec9b6029c59282260e5ef7eb89c903ff0c80d81be2c54f"
-metafile = true
-
-[[files]]
-file = "mods/alexs-caves-continued-delight.pw.toml"
-hash = "85f2befa8133d876829f54b6ae1e971d32e7f225b745fc224a90ee5a6f8a8bf2"
-metafile = true
-
-[[files]]
-file = "mods/alexs-caves-continued.pw.toml"
-hash = "c0947eb7bd364bcec8c3f27fc56655204a18f2cb3f5d0cfada8d3a88de581ceb"
-metafile = true
-
-[[files]]
-file = "mods/alexs-caves-spellbooks.pw.toml"
-hash = "49e0bb3823f0172ce14d4150e8dbcc5c12c35507d69a5bba336b1e7412a68b43"
 metafile = true
 
 [[files]]
@@ -2107,26 +2088,6 @@ hash = "5fe79a05b01940206b971d2131fab84e19b13a5ac849c4b7995c4bb63669852c"
 metafile = true
 
 [[files]]
-file = "mods/integrated-api.pw.toml"
-hash = "998a683cb3c418947cbc05d251b4113dbf336ef271a8b3d8ea7d6672cc9eef64"
-metafile = true
-
-[[files]]
-file = "mods/integrated-bosses-of-mass-destruction.pw.toml"
-hash = "e834243c935103ee03b7b8c2a856be48d25e25a010909552626131ce23549414"
-metafile = true
-
-[[files]]
-file = "mods/integrated-mowzies-mobs.pw.toml"
-hash = "9ba09f2166254ea6757ed3845caa78175703b0943ff77e23a96a3729da617ad0"
-metafile = true
-
-[[files]]
-file = "mods/integrated-patches.pw.toml"
-hash = "b7e1327efe5aaeece7df949afef8d536c44e05216189515347cd91cfc95c347b"
-metafile = true
-
-[[files]]
 file = "mods/interdimensional-wireless-transmitter.pw.toml"
 hash = "d094c5c4cf873481273c416d53eaa5210f7711f935ef3a02c48577958cbce39d"
 metafile = true
@@ -2802,11 +2763,6 @@ hash = "f249229252e734d54d96a7f50a1c7f81576a78b8ba86e330a708351c18ea1299"
 metafile = true
 
 [[files]]
-file = "mods/quark.pw.toml"
-hash = "50e7e41a1d53a71b6ce78af1a938ca9aecd0d59c4f9e80241b07e35def36638d"
-metafile = true
-
-[[files]]
 file = "mods/quick-pack.pw.toml"
 hash = "f4e3f040c70f8973aa1905c8a30d70e60282f0a30e3d78819e4d9db487ddb5a0"
 metafile = true
@@ -3394,11 +3350,6 @@ metafile = true
 [[files]]
 file = "mods/yungs-cave-biomes.pw.toml"
 hash = "895288a3b51192f27cbf3e7e7ebfefd0d31e5660157864a4da40828d5c1dac05"
-metafile = true
-
-[[files]]
-file = "mods/zeta.pw.toml"
-hash = "d1baffd370868590fcb2785146c278df5781d20994022749c53c0f9b2bffc7fc"
 metafile = true
 
 [[files]]

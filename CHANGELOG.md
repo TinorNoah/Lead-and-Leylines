@@ -19,6 +19,13 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.12] - 2026-09-27
+
+### Removed
+
+- Quark (and Zeta), plus Integrated Bosses of Mass Destruction, Integrated Mowzie's Mobs, Integrated API, and Integrated Patches. BOMD and Mowzie's base mods stay. Old worlds may keep missing Quark or Integrated structure pieces.
+- Alex's Caves Continued (and its Delight cooking recipes and Iron's Spells cave spellbooks). Codxlib stays for Alex's Mobs Continued. Old cave chunks may keep missing blocks.
+
 ## [0.1.11] - 2026-09-26
 
 ### Removed

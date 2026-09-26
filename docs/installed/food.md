@@ -1,6 +1,6 @@
 # Food
 
-Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs and Alex's Caves under [Mobs](mobs.md) and [Biomes](biomes.md), Ars foods under [Magic](magic.md).
+Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs under [Mobs](mobs.md), Ars foods under [Magic](magic.md).
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 

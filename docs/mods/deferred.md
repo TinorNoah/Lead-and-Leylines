@@ -28,6 +28,8 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Neo Vitae | Dropped from the pack (and BMAddon with it). World-data / demon dungeon. Revisit only with explicit approval. |
 | Chunk Pregenerator (+ Carbon Config) | Removed 2026-09-26. Hang on dedicated-server stop (`Pregen Chunk Task Queue`). Operator pregen is `/neoforge generate`. Do not re-add without fixing that shutdown hang. |
 | JEI / REI / EMI WorldGen | Removed 2026-09-26. Worldgen pages in JEI. Do not re-add; JER stays for mob/dungeon loot. |
+| Quark (+ Zeta, Integrated BOMD, Integrated Mowzie's, Integrated API, Integrated Patches) | Removed 2026-09-26. BOMD and Mowzie's base mods stay. Do not re-add Quark without those Integrated addons or an explicit structure redesign. |
+| Alex's Caves Continued (+ Delight, Spellbooks) | Removed 2026-09-26. Codxlib stays for Alex's Mobs Continued. Do not re-add unofficial Alex's Caves / Citadel. |
 
 ## Overlaps something already in the pack
 

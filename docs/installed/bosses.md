@@ -1,6 +1,6 @@
 # Bosses
 
-Boss mods and the structure addons that rebuild their arenas. The structure framework they share is in [Structures](structures.md).
+Boss mods and any structure addons that rebuild their arenas.
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
@@ -10,7 +10,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Bosses of Mass Destruction [Forge \| NeoForge] | `BOMD-NeoForge-1.21-1.3.3.jar` | both | `core`, `boss` | Lich, obsidilith, and the other BOMD bosses. |
 | CERBON's API [Forge \| Fabric \| NeoForge] | `CerbonsAPI-NeoForge-1.21-1.3.0.jar` | both | `library`, `boss` | Library BOMD needs. |
-| Integrated Bosses of Mass Destruction | `IBOMD v1.0.0-1.21.1.jar` | both | `addon`, `boss` | Places those bosses in integrated structures. |
 
 ## Qliphoth Awakening
 
@@ -31,7 +30,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Mowzie's Mobs | `mowziesmobs-1.21.1-1.8.2.jar` | both | `core`, `boss` | Overworld bosses. |
-| Integrated Mowzie's Mobs | `IMM v1.3.2-1.21.1.jar` | both | `addon`, `boss` | Rebuilt Mowzie structures. |
 
 ## Other bosses
 
