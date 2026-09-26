@@ -20,6 +20,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Sophisticated Backpacks: Ars Compat   \|   Sophisticated Backpacks Ars-Nouveau Compatibility | `arssophisticatedcompat-0.3.0.jar` | both | `compat`, `magic`, `sophisticated` | Ars items in Sophisticated Backpacks. |
 | Sophisticated Storage: Ars Compat \| Sophisticated Storage Ars-Nouveau Compatibility | `arssophisticatedstoragecompat-0.3.0.jar` | both | `compat`, `magic`, `sophisticated` | Ars items in Sophisticated Storage. |
 | Ars Nouveau Refresh | `Ars Nouveau Refresh 1.2.0.zip` | client | `resource-pack`, `magic`, `ars-nouveau` | Resource pack. Refreshed Ars item textures. |
+| Not Enough Glyphs | `not_enough_glyphs-1.21.1-4.6.2.jar` | both | `addon`, `magic`, `ars-nouveau`, `world-data` | More Ars glyphs. |
 
 ## Iron's Spells
 
@@ -34,6 +35,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Iron's Spells x Aeronautics Compat | `ironssablecompat-1.0.4.jar` | both | `addon`, `magic`, `irons-spells` | Teleport spells on Aeronautics ships. |
 | Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.5.1-1.21.1.jar` | both | `addon`, `magic`, `irons-spells`, `farmers-delight`, `food` | Farmer's Delight spells. |
 | Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.4.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
+| KubeJS Iron's Spells | `irons_spells_js-4.0.3.jar` | both | `compat`, `magic`, `irons-spells` | KubeJS hooks for new spells. |
 
 ## Apotheosis
 
@@ -59,7 +61,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | both | `core`, `magic` | Progression magic. |
 | Revelationary | `revelationary-neoforge-1.5.2+1.21.1.jar` | both | `library`, `magic` | Library Spectrum needs. |
-| Modonomicon | `modonomicon-1.21.1-neoforge-1.120.4.jar` | both | `library`, `magic` | In-game book Spectrum uses. |
+| Modonomicon | `modonomicon-1.21.1-neoforge-1.120.4.jar` | both | `library`, `magic` | In-game book Spectrum and Neo Vitae use. |
 | Lodestone | `lodestone-1.21.1-1.8.2.jar` | both | `library`, `magic` | Library Spectrum needs. |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | client | `addon`, `magic`, `jei` | Spectrum recipes in JEI. |
 
@@ -69,3 +71,16 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Forbidden and Arcanus | `forbidden_arcanus-2.6.1.jar` | both | `core`, `magic` | Magic blocks, tools, and mobs. |
 | Valhelsia Core | `valhelsia_core-neoforge-1.21.1-1.1.5.jar` | both | `library`, `magic` | Library Forbidden and Arcanus needs. |
+
+## Jewelry
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Iron's Gems 'n Jewelry | `irons_jewelry-1.21.1-2.0.2.jar` | both | `core`, `magic`, `irons-spells`, `world-data` | Gems and jewelry on Curios slots. |
+| Atlas API | `atlas_api-1.21.1-1.2.0.jar` | both | `library`, `magic` | Library Iron's Jewelry uses. |
+
+## Neo Vitae
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Neo Vitae | `neovitae-1.21.1-1.1.27.jar` | both | `core`, `magic`, `world-data` | Blood altars, sigils, and a demon dungeon. |

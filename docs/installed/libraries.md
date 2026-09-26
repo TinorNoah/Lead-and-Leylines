@@ -22,3 +22,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Prickle | `prickle-neoforge-1.21.1-21.1.11.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use. |
 | Placebo | `Placebo-1.21.1-9.9.2.jar` | both | `library` | Library the Fast mods and Apotheosis use. |
 | Cupboard | `cupboard-1.21.1-4.2.jar` | both | `library` | Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use. |
+
+## KubeJS
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| KubeJS | `kubejs-neoforge-2101.7.2-build.368.jar` | both | `library` | Script recipes, items, and events. |
+| Rhino | `rhino-2101.2.8-build.91.jar` | both | `library` | JavaScript runtime KubeJS uses. |
+| LootJS: KubeJS Addon | `lootjs-neoforge-1.21.1-3.7.0.jar` | both | `addon` | Loot table scripts for KubeJS. |

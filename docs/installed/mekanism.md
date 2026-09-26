@@ -18,3 +18,5 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | MekaGenJei (Mekanism Generator addon) | `mekagenjei-1.2.jar` | client | `addon`, `tech`, `mekanism`, `jei` | Generator recipes in JEI. |
 | MekaJadeUpgrades (Mekanism addon) | `mekajadeupgrade-1.3.jar` | both | `addon`, `tech`, `mekanism`, `jade` | Jade labels for Mekanism upgrades. |
 | Just Enough Mekanism Multiblocks | `JustEnoughMekanismMultiblocks-1.21.1-7.21.jar` | client | `addon`, `tech`, `mekanism`, `jei` | Multiblock preview in JEI. |
+| Mekanism Curios | `mekanismcurios-1.21.1-1.2.1.jar` | both | `addon`, `tech`, `mekanism` | Portable QIO in a Curios slot. |
+| KubeJS Mekanism | `kubejs-mekanism-neoforge-2101.1.7-build.18.jar` | both | `compat`, `tech`, `mekanism` | KubeJS hooks for Mekanism. |

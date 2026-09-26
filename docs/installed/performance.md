@@ -27,3 +27,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | `library`, `optimizer` | Library Cerulean needs. |
 | Fluidium | `fluidium-1.21.1-1.4.0.jar` | both | `addon`, `optimizer` | Delays fluid ticks far from players. Claimed chunks stay full speed. |
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | `library`, `optimizer` | Library Fluidium needs. Also blocks a few dupe paths. |
+| Observable | `observable-5.4.4.jar` | both | `addon`, `optimizer` | In-game lag profiler. |

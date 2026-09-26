@@ -9,10 +9,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
-| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library`, `tech`, `storage`, `ae2` | Kotlin runtime. AE2 MEGA Things and Better P2P need it. |
+| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library`, `tech`, `storage`, `ae2` | Kotlin runtime. AE2 MEGA Things, Better P2P, Observable, and Inventory Profiles Next need it. |
 | Glodium | `Glodium-1.21-2.2-neoforge.jar` | both | `library`, `tech`, `storage`, `ae2` | Library Applied Flux and ExtendedAE need. |
 | Applied Energistics 2 Wireless Terminals | `ae2wtlib-19.5.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Wireless terminals. |
-| GuideME | `guideme-21.1.19.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2 uses. |
+| GuideME | `guideme-21.1.19.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2, Modern Industrialization, and Little Big Redstone use. |
 | AE2: Crafting Tree | `ae2ct-1.21.1-1.1.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Crafting tree view. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | `addon`, `tech`, `storage`, `ae2`, `jei` | AE2 recipes in JEI. |
 | AE2 Things [Forge] | `AE2-Things-1.4.2-beta.jar` | both | `addon`, `tech`, `storage`, `ae2` | DISK drives and extra cells. |
@@ -34,3 +34,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Pattern Converter | `patternconverter-1.0.0.jar` | both | `addon`, `tech`, `storage`, `ae2` | Converts patterns between AE2 and Refined Storage. |
 | Applied Mekanistics | `Applied-Mekanistics-1.6.3.jar` | both | `addon`, `tech`, `storage`, `ae2`, `mekanism` | Mekanism machines on ME networks. |
 | Applied Flux | `AppliedFlux-1.21-2.1.5-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
+| ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |
