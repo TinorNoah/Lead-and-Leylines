@@ -42,3 +42,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | SuperMartijn642's Core Lib | `supermartijn642corelib-1.1.24a-neoforge-mc1.21.jar` | both | `library`, `storage` | Library Trash Cans needs. |
 | SuperMartijn642's Config Lib | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | both | `library`, `storage` | Config library Trash Cans needs. |
 | TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | both | `addon`, `storage` | Trash slot in the inventory. |
+| DimStorage | `DimStorage-1.21.1-9.1.1.jar` | both | `addon`, `storage`, `world-data` | Dimensional chests and tanks. |

@@ -1,0 +1,13 @@
+name = "Modern Industrialization Structure Viewer"
+filename = "miviewer-1.1.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "c52561dd63399485e710747a87a654b7bc30a48e"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8901587
+project-id = 1641515

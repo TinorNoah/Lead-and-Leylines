@@ -238,6 +238,14 @@ mods = [
   { file = "archaion.pw.toml", blurb = "Fallen-age mobs and structures.", tags = ["core", "mob"] },
 ]
 
+[[category.group]]
+name = "Mob farms"
+mods = [
+  { file = "mob-grinding-utils.pw.toml", blurb = "Mob farm machines and spikes.", tags = ["core", "mob", "world-data"] },
+  { file = "mob-grinding-utils-vanillafied.pw.toml", blurb = "Resource pack. Vanilla-styled Mob Grinding Utils textures.", tags = ["resource-pack", "mob"] },
+  { file = "buff-mobs.pw.toml", blurb = "Configurable harder mobs.", tags = ["addon", "mob"] },
+]
+
 [[category]]
 slug = "structures"
 title = "Structures"
@@ -511,6 +519,8 @@ mods = [
   { file = "botany-pots.pw.toml", blurb = "Grows crops in pots.", tags = ["core", "farming"] },
   { file = "botany-trees.pw.toml", blurb = "Grows trees in pots.", tags = ["core", "farming"] },
   { file = "harvest-with-ease.pw.toml", blurb = "Harvest crops in an area.", tags = ["core", "farming"] },
+  { file = "agritech-evolved.pw.toml", blurb = "Farming machines and crop processing.", tags = ["addon", "farming", "tech", "world-data"] },
+  { file = "kubejs-botany-pots.pw.toml", blurb = "KubeJS hooks for Botany Pots.", tags = ["compat", "farming"] },
   { file = "cobweb.pw.toml", blurb = "Library Harvest with ease needs.", tags = ["library", "farming"] },
 ]
 
@@ -571,6 +581,7 @@ mods = [
   { file = "supermartijn642s-core-lib.pw.toml", blurb = "Library Trash Cans needs.", tags = ["library", "storage"] },
   { file = "supermartijn642s-config-lib.pw.toml", blurb = "Config library Trash Cans needs.", tags = ["library", "storage"] },
   { file = "trashslot.pw.toml", blurb = "Trash slot in the inventory.", tags = ["addon", "storage"] },
+  { file = "dimstorage.pw.toml", blurb = "Dimensional chests and tanks.", tags = ["addon", "storage", "world-data"] },
 ]
 
 [[category]]
@@ -608,6 +619,8 @@ mods = [
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
+  { file = "bmaddon.pw.toml", blurb = "Neo Vitae blood automation for ME networks.", tags = ["compat", "tech", "storage", "ae2", "magic"] },
+  { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull from Applied Energistics.", tags = ["compat", "building", "ae2"] },
 ]
 
 [[category]]
@@ -665,6 +678,30 @@ mods = [
   { file = "createjeicompat.pw.toml", blurb = "Create recipes in JEI.", tags = ["compat", "tech", "create", "jei"] },
   { file = "create-oh-the-biomes-weve-gone-compat.pw.toml", blurb = "Create recipes for Oh The Biomes We've Gone.", tags = ["compat", "tech", "create"] },
   { file = "create-regions-unexplored-compat-crushing.pw.toml", blurb = "Crushing recipes for Regions Unexplored.", tags = ["compat", "tech", "create"] },
+  { file = "create-dragons-plus.pw.toml", blurb = "Shared Create addon library several factory mods need.", tags = ["library", "tech", "create"] },
+  { file = "create-enchantment-industry.pw.toml", blurb = "Liquid experience and automated enchanting.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "create-central-kitchen.pw.toml", blurb = "Create processing for Farmer's Delight foods.", tags = ["addon", "tech", "create", "farmers-delight"] },
+  { file = "create-integrated-farming.pw.toml", blurb = "Create farming automation.", tags = ["addon", "tech", "create", "farming"] },
+  { file = "create-new-age.pw.toml", blurb = "Create electricity and magnets.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "bellsandwhistles.pw.toml", blurb = "Train bells, whistles, and decoration.", tags = ["addon", "tech", "create"] },
+  { file = "create-big-cannons.pw.toml", blurb = "Create artillery.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "ritchies-projectile-library.pw.toml", blurb = "Library Create Big Cannons needs.", tags = ["library", "tech", "create"] },
+  { file = "create-big-cannons-advanced-technologies.pw.toml", blurb = "Extra Big Cannons munitions and machines.", tags = ["addon", "tech", "create"] },
+  { file = "create-connected.pw.toml", blurb = "Extra Create kinetics and logistics.", tags = ["addon", "tech", "create"] },
+  { file = "create-ore-excavation.pw.toml", blurb = "Drill veins of ore with Create.", tags = ["addon", "tech", "create", "worldgen"] },
+  { file = "create-diesel-generators.pw.toml", blurb = "Diesel engines and fuels for Create.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "create-aquatic-ambitions.pw.toml", blurb = "Create underwater processing.", tags = ["addon", "tech", "create"] },
+  { file = "create-industry.pw.toml", blurb = "Heavy Create factory machines (TFMG).", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "dynamic-village.pw.toml", blurb = "Create-themed villages.", tags = ["addon", "tech", "create", "worldgen"] },
+  { file = "create-enchantable-machinery.pw.toml", blurb = "Enchant Create machines.", tags = ["addon", "tech", "create"] },
+  { file = "create-alloyed.pw.toml", blurb = "Steel and bronze for Create.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "create-applied-kinetics.pw.toml", blurb = "Create kinetics for Applied Energistics.", tags = ["compat", "tech", "create", "ae2"] },
+  { file = "createnuclear.pw.toml", blurb = "Create nuclear power.", tags = ["addon", "tech", "create", "world-data"] },
+  { file = "create-metalwork.pw.toml", blurb = "Extra Create metal blocks and parts.", tags = ["addon", "tech", "create"] },
+  { file = "create-shimmer.pw.toml", blurb = "Create lighting and ambience blocks.", tags = ["addon", "tech", "create"] },
+  { file = "create-wizardry.pw.toml", blurb = "Create machines for Ars Nouveau.", tags = ["compat", "tech", "create", "ars-nouveau"] },
+  { file = "create-fast-schematiccannon.pw.toml", blurb = "Faster Create schematic cannons.", tags = ["addon", "tech", "create"] },
+  { file = "create-blaze-burner-fuels.pw.toml", blurb = "More blaze burner fuels.", tags = ["addon", "tech", "create"] },
   { file = "demagnetizer.pw.toml", blurb = "Stops Create item magnets in a box.", tags = ["addon", "tech", "create"] },
 ]
 
@@ -677,6 +714,10 @@ intro = """Extra machine mods beside Create and Mekanism. Pipes and routers are 
 name = "Modern Industrialization"
 mods = [
   { file = "modern-industrialization.pw.toml", blurb = "A separate factory tech tree.", tags = ["core", "tech", "world-data"] },
+  { file = "extended-industrialization.pw.toml", blurb = "Extra Modern Industrialization machines.", tags = ["addon", "tech", "world-data"] },
+  { file = "solar-industrialization.pw.toml", blurb = "Solar panels for Modern Industrialization.", tags = ["addon", "tech"] },
+  { file = "modern-industrialization-structure-viewer.pw.toml", blurb = "In-world MI multiblock preview.", tags = ["addon", "tech"] },
+  { file = "ldlib.pw.toml", blurb = "Library the MI structure viewer needs.", tags = ["library", "tech"] },
   { file = "modern-industrial-routers.pw.toml", blurb = "Router upgrades for this mod's energy.", tags = ["addon", "tech", "transport"] },
 ]
 
@@ -684,6 +725,13 @@ mods = [
 name = "Just Dire Things"
 mods = [
   { file = "just-dire-things.pw.toml", blurb = "Automation tools and blocks.", tags = ["core", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "Gadgets and wireless power"
+mods = [
+  { file = "charging-gadgets.pw.toml", blurb = "Charges tools and gadgets.", tags = ["addon", "tech"] },
+  { file = "flux-networks.pw.toml", blurb = "Wireless energy networks.", tags = ["core", "tech", "world-data"] },
 ]
 
 [[category]]
@@ -709,14 +757,18 @@ mods = [
   { file = "waystones.pw.toml", blurb = "Teleport stones.", tags = ["core", "transport"] },
   { file = "elytra-slot.pw.toml", blurb = "Elytra in a Curios slot.", tags = ["core", "transport"] },
   { file = "openblocks-elevator.pw.toml", blurb = "Elevator blocks. Jump or sneak to change floors.", tags = ["addon", "transport", "world-data"] },
+  { file = "tempad.pw.toml", blurb = "Pocket time-door travel.", tags = ["addon", "transport", "world-data"] },
   { file = "caelus.pw.toml", blurb = "Elytra flight library Elytra Slot needs.", tags = ["library", "transport"] },
 ]
 
 [[category.group]]
 name = "Pipes"
 mods = [
-  { file = "pipez.pw.toml", blurb = "Item, fluid, and energy pipes.", tags = ["core", "transport"] },
-  { file = "pipez-lag-fix.pw.toml", blurb = "Lowers Pipez tick cost.", tags = ["addon", "transport"] },
+  { file = "modern-dynamics.pw.toml", blurb = "Item and fluid pipes.", tags = ["core", "transport"] },
+  { file = "xnet.pw.toml", blurb = "Channel-based item, fluid, and energy networks.", tags = ["core", "transport", "world-data"] },
+  { file = "rftools-base.pw.toml", blurb = "Base blocks XNet needs.", tags = ["library", "transport"] },
+  { file = "mcjtylib.pw.toml", blurb = "Library McJty mods need.", tags = ["library", "transport"] },
+  { file = "simple-conveyor-belts.pw.toml", blurb = "Simple item conveyor belts.", tags = ["addon", "transport"] },
 ]
 
 [[category.group]]
@@ -766,6 +818,11 @@ mods = [
   { file = "glassential-renewed.pw.toml", blurb = "More glass types.", tags = ["addon", "building", "world-data"] },
   { file = "measurements.pw.toml", blurb = "Tape measure.", tags = ["addon", "building"] },
   { file = "mining-gadgets.pw.toml", blurb = "Laser mining gadgets.", tags = ["addon", "building", "world-data"] },
+  { file = "construction-sticks.pw.toml", blurb = "Extend and fill blocks with sticks.", tags = ["addon", "building", "world-data"] },
+  { file = "rechiseled.pw.toml", blurb = "Chisel blocks with connected textures.", tags = ["addon", "building", "world-data"] },
+  { file = "rechiseled-chipped.pw.toml", blurb = "Chisel Chipped variants in Rechiseled.", tags = ["compat", "building"] },
+  { file = "rechiseled-create.pw.toml", blurb = "Rechiseled variants for Create blocks.", tags = ["compat", "building", "create"] },
+  { file = "rechiseled-applied-energistics-2.pw.toml", blurb = "Autocraft Rechiseled blocks in Applied Energistics.", tags = ["compat", "building", "ae2"] },
   { file = "multi-builder-tool.pw.toml", blurb = "Places a multiblock in one click.", tags = ["addon", "building"] },
   { file = "little-big-redstone.pw.toml", blurb = "Packs a redstone circuit into one block.", tags = ["addon", "building", "world-data"] },
   { file = "tesseract-api-neoforge.pw.toml", blurb = "Library Little Big Redstone uses.", tags = ["library", "building"] },
@@ -867,6 +924,7 @@ name = "Looking at the world"
 mods = [
   { file = "jade.pw.toml", blurb = "Block and entity overlay.", tags = ["core", "info", "jade"] },
   { file = "jade-addons.pw.toml", blurb = "Extra Jade providers.", tags = ["addon", "info", "jade"] },
+  { file = "jade-sable-compat.pw.toml", blurb = "Jade labels for Sable physics entities.", tags = ["compat", "info", "jade"] },
 ]
 
 [[category.group]]
@@ -878,7 +936,8 @@ mods = [
 [[category.group]]
 name = "Tooltips and toasts"
 mods = [
-  { file = "tooltip-overhaul.pw.toml", blurb = "The only item-tooltip frame.", tags = ["core", "info"] },
+  { file = "tooltip-overhaul.pw.toml", blurb = "Item-tooltip frame.", tags = ["core", "info"] },
+  { file = "better-advanced-tooltips.pw.toml", blurb = "Advanced tooltip details. Required by current KubeJS.", tags = ["addon", "info"] },
   { file = "tagtooltips.pw.toml", blurb = "Hold a key to list item tags inside that frame.", tags = ["addon", "info"] },
   { file = "item-borders.pw.toml", blurb = "Rarity borders on item slots.", tags = ["addon", "info"] },
   { file = "durability-tooltip.pw.toml", blurb = "Durability numbers.", tags = ["addon", "info"] },
@@ -960,6 +1019,8 @@ mods = [
   { file = "mouse-tweaks.pw.toml", blurb = "Drag and scroll item moving.", tags = ["core", "client-qol"] },
   { file = "moremousetweaks.pw.toml", blurb = "More mouse inventory moves beside Mouse Tweaks.", tags = ["addon", "client-qol"] },
   { file = "inventory-profiles-next.pw.toml", blurb = "Sort, lock slots, and save gear sets.", tags = ["addon", "client-qol"] },
+  { file = "inventory-essentials.pw.toml", blurb = "Extra inventory moves and sorting beside Mouse Tweaks.", tags = ["addon", "client-qol"] },
+  { file = "recipe-essentials-forge-fabric.pw.toml", blurb = "Recipe book and craft helper tweaks.", tags = ["addon", "client-qol"] },
   { file = "libipn.pw.toml", blurb = "Library Inventory Profiles Next uses.", tags = ["library", "client-qol"] },
   { file = "extreme-sound-muffler.pw.toml", blurb = "Mutes sounds you pick.", tags = ["addon", "client-qol"] },
   { file = "sound.pw.toml", blurb = "Extra sound effects.", tags = ["addon", "client-qol"] },
@@ -1056,6 +1117,9 @@ mods = [
 name = "KubeJS"
 mods = [
   { file = "kubejs.pw.toml", blurb = "Script recipes, items, and events.", tags = ["library"] },
+  { file = "kubejs-additions.pw.toml", blurb = "Extra KubeJS helpers.", tags = ["library"] },
+  { file = "kubejs-create.pw.toml", blurb = "KubeJS hooks for Create.", tags = ["library", "create"] },
+  { file = "ponder.pw.toml", blurb = "Ponder scenes from KubeJS scripts.", tags = ["library", "create"] },
   { file = "rhino.pw.toml", blurb = "JavaScript runtime KubeJS uses.", tags = ["library"] },
   { file = "lootjs.pw.toml", blurb = "Loot table scripts for KubeJS.", tags = ["addon"] },
 ]

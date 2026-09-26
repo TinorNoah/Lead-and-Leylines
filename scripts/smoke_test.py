@@ -251,6 +251,8 @@ class LiveServer:
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True,
+            encoding="utf-8",
+            errors="replace",
             bufsize=1,
         )
         self.output: queue.Queue[str | None] = queue.Queue()

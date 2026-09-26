@@ -25,6 +25,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Jade 🔍 | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | `core`, `info`, `jade` | Block and entity overlay. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | `addon`, `info`, `jade` | Extra Jade providers. |
+| Jade Sable Compat | `sablejade-1.3.0.jar` | client | `compat`, `info`, `jade` | Jade labels for Sable physics entities. |
 
 ## Books
 
@@ -36,7 +37,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.2.jar` | client | `core`, `info` | The only item-tooltip frame. |
+| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.2.jar` | client | `core`, `info` | Item-tooltip frame. |
+| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | `addon`, `info` | Advanced tooltip details. Required by current KubeJS. |
 | TagTooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | client | `addon`, `info` | Hold a key to list item tags inside that frame. |
 | Item Borders [Neo/Forge] | `ItemBorders-1.21-neoforge-1.2.5.jar` | client | `addon`, `info` | Rarity borders on item slots. |
 | Durability Tooltip | `durabilitytooltip-1.2.0-neoforge-mc1.21.jar` | client | `addon`, `info` | Durability numbers. |

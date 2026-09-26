@@ -116,7 +116,9 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Not Enough Recipe Book | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | Removes the vanilla recipe book. OctoLib. JEI stays. |
 | Observable | `observable-5.4.4.jar` | both | In-game lag profiler. Kotlin for Forge and Architectury. |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | A bad tag entry does not wipe the tag. |
-| KubeJS | `kubejs-neoforge-2101.7.2-build.368.jar` | both | Scripting. Rhino. Pinned so Better Advanced Tooltips stays out. LootJS, Iron's Spells, and Mekanism addons are in. No scripts ship yet. |
+| KubeJS | `kubejs-neoforge-2101.7.2-build.377.jar` | both | Scripting. Rhino. Build 377 needs Better Advanced Tooltips (installed). LootJS, Iron's Spells, Mekanism, Create, Botany Pots, Additions, and Ponder addons are in. No scripts ship yet. |
+| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | Required by KubeJS 377. Stacks with Tooltip Overhaul. |
+| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | Extra inventory moves beside Inventory Profiles Next and Mouse Tweaks. Balm. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 
 ## Considered / held / dropped
@@ -133,7 +135,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |
 | Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |
 | The Rename Compat Project | Dropped | Latest zip is resource pack format 42 (1.21.2). 1.21.1 only accepts format 34 unless the pack declares a range that includes 34. |
-| Legendary Tooltips, Simply Tooltips, Better Advanced Tooltips | Dropped | Tooltip Overhaul is the only item-tooltip skin. Fzzy Config left with Simply Tooltips. Kotlin for Forge stays; AE Additions, Better P2P, Create Ultimine, Observable, and Inventory Profiles Next still need it. Tag Tooltips shows tags while its key is held. KubeJS is pinned to build 368 because newer 2101.7.2 builds require Better Advanced Tooltips. |
-| Inventory Essentials | Dropped | Overlaps Inventory Profiles Next and Mouse Tweaks. 1.21.1 file exists. Do not stack both sorters. |
+| Legendary Tooltips, Simply Tooltips | Dropped | Tooltip Overhaul stays the frame skin. Better Advanced Tooltips is in only because KubeJS 377 requires it. Tag Tooltips shows tags while its key is held. |
+| Inventory Essentials | Chosen | Installed beside Inventory Profiles Next (2026-09-26 override). |
 | Nolijium | Dropped | Fog, sky, particle, and darkness toggles overlap Sodium / Iris. Last 1.21.1 file is 2025-03 and optional Embeddium. |
 | Ixeris | Dropped | Off-thread input. Already skipped. |

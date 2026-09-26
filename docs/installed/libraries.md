@@ -27,6 +27,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| KubeJS | `kubejs-neoforge-2101.7.2-build.368.jar` | both | `library` | Script recipes, items, and events. |
+| KubeJS | `kubejs-neoforge-2101.7.2-build.377.jar` | both | `library` | Script recipes, items, and events. |
+| KubeJS Additions | `kubejsadditions-neoforge-1.21.1-6.0.0.jar` | both | `library` | Extra KubeJS helpers. |
+| KubeJS Create | `kubejs-create-neoforge-2101.3.1-build.18.jar` | both | `library`, `create` | KubeJS hooks for Create. |
+| Ponder for KubeJS | `ponderjs-neoforge-1.21.1-2.4.0.jar` | both | `library`, `create` | Ponder scenes from KubeJS scripts. |
 | Rhino | `rhino-2101.2.8-build.91.jar` | both | `library` | JavaScript runtime KubeJS uses. |
 | LootJS: KubeJS Addon | `lootjs-neoforge-1.21.1-3.7.0.jar` | both | `addon` | Loot table scripts for KubeJS. |

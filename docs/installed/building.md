@@ -24,6 +24,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | both | `addon`, `building`, `world-data` | More glass types. |
 | Measurements | `Measurements-neoforge-1.21.1-3.0.3.jar` | both | `addon`, `building` | Tape measure. |
 | Mining Gadgets | `mininggadgets-1.18.8.jar` | both | `addon`, `building`, `world-data` | Laser mining gadgets. |
+| Construction Sticks | `ConstructionSticks-1.21.1-1.5.0.jar` | both | `addon`, `building`, `world-data` | Extend and fill blocks with sticks. |
+| Rechiseled | `rechiseled-1.2.6-neoforge-mc1.21.jar` | both | `addon`, `building`, `world-data` | Chisel blocks with connected textures. |
+| Rechiseled: Chipped | `rechiseled_chipped-2.0-1.21.1.jar` | both | `compat`, `building` | Chisel Chipped variants in Rechiseled. |
+| Rechiseled: Create | `rechiseledcreate-1.1.1-neoforge-mc1.21.jar` | both | `compat`, `building`, `create` | Rechiseled variants for Create blocks. |
+| Rechiseled: Applied Energistics 2 | `rechiseledae-1.0.1-neoforge-mc1.21.1.jar` | both | `compat`, `building`, `ae2` | Autocraft Rechiseled blocks in Applied Energistics. |
 | Multi Builder Tool | `MultiBuilderTool-1.21.1-1.1.29.jar` | both | `addon`, `building` | Places a multiblock in one click. |
 | Little Big Redstone | `little-big-redstone-1.9.11-1.21.1.jar` | both | `addon`, `building`, `world-data` | Packs a redstone circuit into one block. |
 | Tesseract API (NeoForge) | `tesseract-api-neoforge-1.12.16-1.21.1.jar` | both | `library`, `building` | Library Little Big Redstone uses. |

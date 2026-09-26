@@ -69,7 +69,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Neo Vitae | `neovitae-1.21.1-1.1.27.jar` | both | Blood altars, sigils, and a demon dungeon. World data. GeckoLib and Modonomicon. |
 | Just Dire Things | `justdirethings-1.5.7.jar` | both | Automation tools and blocks beside Create and Mekanism. World data. 1.5.7 is the 1.21.1 file. |
 | Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | Separate factory tech tree. World data. GuideME. GrandPower is embedded. Router energy upgrades are in. |
-| Modular Routers | `modular-routers-13.2.7+mc1.21.1.jar` | both | Programmable routers beside Pipez. World data. Mekanistic Routers adds Mekanism modules. |
+| Modular Routers | `modular-routers-13.2.7+mc1.21.1.jar` | both | Programmable routers beside Modern Dynamics / XNet. World data. Mekanistic Routers adds Mekanism modules. |
 | Little Big Redstone | `little-big-redstone-1.9.11-1.21.1.jar` | both | Compact redstone. World data. Tesseract API and GuideME. |
 | Mining Gadgets | `mininggadgets-1.18.8.jar` | both | Laser mining. World data. Create Ultimine and FTB Ultimine stay. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | AE2 stock requests. World data. |
@@ -78,7 +78,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Loot Integrations: When Dungeons Arise | `lootintegration_wda-1.8.jar` | both | Modded loot in When Dungeons Arise chests. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 
-Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) and FTB Quests Optimizer: [performance.md](performance.md). Pipez and Sophisticated/Functional storage: [storage.md](storage.md).
+Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) and FTB Quests Optimizer: [performance.md](performance.md). Modern Dynamics / XNet and Sophisticated/Functional storage: [storage.md](storage.md).
 
 ## Considered / held / dropped
 
@@ -90,7 +90,7 @@ Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) a
 | Point Blank: Recipe | Held | User declined. CurseForge 1016608 has no 1.21.1 NeoForge file. The weapon printer plus JEI stays the crafting path. |
 | Pointblank: Jelly | Dropped | Fork that replaces Vic's Point Blank. Official 2.2.0 is newer. Do not install both. |
 | Continuity | Held | `continuity-3.0.0+1.21.neoforge.jar` needs Sinytra Connector and Forgified Fabric API, and it targets Sodium 0.6. Fusion is the connected-texture mod. Do not re-add those libraries. |
-| Slice & Dice, Central Kitchen, Applied Kinetics, remaining Create kitchen addons | Deferred | Farmer's Delight, Autochef, Barbeque, Create Deco, Encased, and Crafts & Additions are in. Kitchen Create addons are still a later wave. |
+| Slice & Dice and remaining Create kitchen addons | Deferred | Farmer's Delight, Autochef, Barbeque, Create Deco, Encased, Crafts & Additions, Central Kitchen, Applied Kinetics, and Integrated Farming are in. |
 | Alex's Caves / Create compat | Held | Parent is now Alex's Caves Continued; Create compat still needs its own 1.21.1 NF file. |
 | AdventureZ | Held | Project 390991's 1.21.1 file is Fabric only. |
 | ANARCHY Minibosses | Held | Requires Spell Engine, Spell Power, AzureLib, and Accessories beside Curios. |

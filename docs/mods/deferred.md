@@ -75,11 +75,13 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
 | Ixeris | Moves input off-thread. Skip. Asked again 2026-09-26. Still skip. |
 | Nolijium | Fog, sky, particles, and darkness overlap Sodium / Iris. Last 1.21.1 file is 2025-03. Optional Embeddium. Skip. |
-| Inventory Essentials | 1.21.1 file exists. Overlaps Inventory Profiles Next and Mouse Tweaks. Skip. |
-| Modern Dynamics | Second pipe mod beside Pipez. Skip. |
+| Inventory Essentials | Installed 2026-09-26 beside Inventory Profiles Next (user override). |
+| Modern Dynamics | Installed 2026-09-26 after Pipez removal. |
 | Pretty X Smart Pipez, Pretty X Smart Pipez Mekanism Edition | Resource packs, not mods. `allowModDistribution` is false, so they cannot ship. Skip. |
-| Rechiseled: Applied Energistics 2 | Needs Rechiseled. Chipped is the block-variant mod. Skip. |
-| Mob Grinding Utils: Vanillafied (16px) | Resource pack. Mob Grinding Utils is not in the pack. Skip. |
+| Rechiseled (+ Chipped / Create / AE2) | Installed 2026-09-26 beside Chipped (user override). |
+| Mob Grinding Utils (+ Vanillafied) | Installed 2026-09-26. |
+| Create: Copper & Zinc | Skipped 2026-09-26; Create: Alloyed is the metal addon. |
+| Modern Industrialization Extentended Integrations | Dropped 2026-09-26. Crashes MI 2.5.8: `Machine casing model "modern_industrialization:iv" does not exist` in `miei` stress hatches. Do not re-add until a build matches current MI casings. |
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
 | Fast Item Frames | Installed 2026-09-26. World data + Puzzles Lib (already in). |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
@@ -104,7 +106,7 @@ Source: `pack/mods/*.pw.toml` on branch `forge-1.20.1`. Do not dump-install. Rep
 
 ### Create
 
-Slice & Dice; Central Kitchen; Applied Kinetics; Alex's Caves Compat.
+Slice & Dice; Alex's Caves Compat. Central Kitchen and Applied Kinetics are installed.
 
 ### Applied Energistics 2
 
@@ -128,7 +130,7 @@ Delightful.
 
 ### Maps / compasses / QoL
 
-Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Construction Sticks; Model Gap Fix; Tempad; Perfect Graves; Dyenamics; Dyenamics and Friends. Inventory Essentials and Observable now have 1.21.1 files: Observable is installed; Inventory Essentials stays out (see the skip table above). Fusion and its connected-glass pack are in [content.md](content.md).
+Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Model Gap Fix; Perfect Graves; Dyenamics; Dyenamics and Friends. Construction Sticks, Tempad, Inventory Essentials, and Observable are installed. Fusion and its connected-glass pack are in [content.md](content.md).
 
 ### UI / loading / shaders
 

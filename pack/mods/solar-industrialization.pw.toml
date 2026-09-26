@@ -1,0 +1,13 @@
+name = "Solar Industrialization"
+filename = "solar_industrialization-1.0.8.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d8b2e3e3da9e0f866afc8d1d3b7b7911886f7b11"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8851327
+project-id = 1543167

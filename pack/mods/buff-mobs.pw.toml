@@ -1,0 +1,13 @@
+name = "BuffMobs"
+filename = "buffmobs-3.3.2+mc1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "141b62bfc253aca06df1f06d03f2c4d92125041f"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8703634
+project-id = 1325553

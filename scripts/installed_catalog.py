@@ -50,7 +50,7 @@ def load_pw_entries() -> dict[str, dict[str, Any]]:
         if not directory.exists():
             continue
         for path in sorted(directory.glob("*.pw.toml")):
-            data = tomllib.loads(path.read_text())
+            data = tomllib.loads(path.read_text(encoding="utf-8"))
             source = "unknown"
             project_id: str | int | None = None
             update = data.get("update", {})
@@ -253,7 +253,7 @@ def expected_files(
 
 def write_files(files: dict[Path, str]) -> None:
     for path, content in files.items():
-        path.write_text(content)
+        path.write_text(content, encoding="utf-8")
 
 
 def check_files(files: dict[Path, str]) -> list[str]:
@@ -262,7 +262,7 @@ def check_files(files: dict[Path, str]) -> list[str]:
         if not path.exists():
             errors.append(f"missing generated file: {path.relative_to(ROOT)}")
             continue
-        actual = path.read_text()
+        actual = path.read_text(encoding="utf-8")
         if actual != expected:
             errors.append(f"out of sync: {path.relative_to(ROOT)}")
     return errors

@@ -62,7 +62,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Complements Chunk Pregenerator, does not replace it. |
 | Cerulean | `cerulean-neoforge-1.0.0-1.21.1.jar` | both | Advancement InventoryChangeTrigger. Replaces Achievements Optimizer. TxniLib required. |
 | TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | Cerulean dependency. |
-| Pipez Lag Fix | `pipezlagfix-1.21.1-1.1.0.jar` | both | Item-pipe eco mode when the destination is full. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | Faster GeckoLib entity rendering. Alpha 1.0.2. Sodium and ImmediatelyFast already in. |
 | FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | Early-load mixins. ARR. First to remove if launch breaks next to ModernFix / quick pack. |
 | Fluidium | `fluidium-1.21.1-1.4.0.jar` | both | Distant fluid tick delay. Not a distant-entity freezer. Duplicationless required. |
