@@ -54,12 +54,10 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | Crash-exploit filter; file tags 1.21.1–1.21.4. |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | Async log writes. |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | Keeps server resource packs across rejoins. |
-| Chunk Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.4.jar` | both | Operator pregen. Carbon Config required. |
-| Carbon Config | `CarbonConfig-Neoforge-1.21.1-2.0.2.1.jar` | both | Chunk Pregenerator dependency. |
 | Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | client | Create FPS with shader packs. Compatible with Colorwheel. |
 | Create: Threaded Trains | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` | both | Train network off the server thread. See [configs.md](configs.md). |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | Quest tick cost. Older than Quests 2101.1.36; see [configs.md](configs.md). |
-| Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Complements Chunk Pregenerator, does not replace it. |
+| Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Not operator pregen; use `/neoforge generate` for that. |
 | Cerulean | `cerulean-neoforge-1.0.0-1.21.1.jar` | both | Advancement InventoryChangeTrigger. Replaces Achievements Optimizer. TxniLib required. |
 | TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | Cerulean dependency. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | Faster GeckoLib entity rendering. Alpha 1.0.2. Sodium and ImmediatelyFast already in. |

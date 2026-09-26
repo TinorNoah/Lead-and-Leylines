@@ -35,5 +35,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Applied Mekanistics | `Applied-Mekanistics-1.6.3.jar` | both | `addon`, `tech`, `storage`, `ae2`, `mekanism` | Mekanism machines on ME networks. |
 | Applied Flux | `AppliedFlux-1.21-2.1.5-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |
-| BloodMagic AE2 Addition(and NeoVitae) | `bmaddon1.21.1-beta1.jar` | both | `compat`, `tech`, `storage`, `ae2`, `magic` | Neo Vitae blood automation for ME networks. |
 | Applied Construction Sticks | `appliedsticks-1.21.1-1.2.1.jar` | both | `compat`, `building`, `ae2` | Construction sticks that pull from Applied Energistics. |

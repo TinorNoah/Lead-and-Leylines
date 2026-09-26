@@ -12,9 +12,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | FerriteCore ((Neo)Forge) | `ferritecore-7.0.3-neoforge.jar` | both | `core`, `optimizer` | Lower memory use. |
 | ModernFix | `modernfix-neoforge-5.27.24+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |
 | Concurrent Chunk Management Engine | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | `core`, `optimizer` | Threaded chunk generation. |
-| Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | `core`, `optimizer` | Pregeneration helper. Do not add Noisium beside it. |
-| Chunk-Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.4.jar` | both | `core`, `optimizer` | Chunk pregenerator command. |
-| Carbon Config | `CarbonConfig-Neoforge-1.21.1-2.0.2.1.jar` | both | `library`, `optimizer` | Library Chunk Pregenerator needs. |
+| Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | `core`, `optimizer` | Faster chunk generation. Do not add Noisium beside it. |
 | Server Performance - Smooth Chunk Save | `smoothchunk-1.21-4.1.jar` | both | `core`, `optimizer` | Spreads chunk saves out. |
 | Ksyxis | `Ksyxis-1.4.4.jar` | both | `addon`, `optimizer` | Faster world join. |
 | Let Me Despawn | `letmedespawn-1.21.x-neoforge-1.5.0.jar` | both | `core`, `optimizer` | Lets persistent mobs despawn. |

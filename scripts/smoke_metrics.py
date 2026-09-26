@@ -41,10 +41,16 @@ CANT_KEEP_UP_RE = re.compile(
     re.I,
 )
 PREGEN_PROGRESS_RES = (
+    re.compile(
+        r"(?:Generation status!|Generation stopped!)\s*(\d+)\s+out of\s+(\d+)\s+chunks",
+        re.I,
+    ),
     re.compile(r"Current/Total:\s*(\d+)\s*/\s*(\d+)", re.I),
     re.compile(r"(\d+)\s*/\s*(\d+)\s+Chunks", re.I),
 )
+PREGEN_STARTED_RE = re.compile(r"Generating\s+(\d+)\s+chunks,\s+in an area of", re.I)
 PREGEN_FINISHED_RE = re.compile(
+    r"Generation Done!|"
     r"Pregen(?:er)?ation\s+Finished:.*?Chunks\s*=\s*(\d+)",
     re.I,
 )
@@ -202,21 +208,38 @@ def parse_pregen_progress(line: str) -> PregenProgress | None:
     return None
 
 
+def parse_pregen_started(line: str) -> int | None:
+    match = PREGEN_STARTED_RE.search(strip_ansi(line))
+    return int(match.group(1)) if match else None
+
+
 def parse_pregen_finished(line: str) -> PregenFinished | None:
     match = PREGEN_FINISHED_RE.search(strip_ansi(line))
     if not match:
         return None
-    return PregenFinished(chunks=int(match.group(1)))
+    if match.group(1):
+        return PregenFinished(chunks=int(match.group(1)))
+    return PregenFinished(chunks=0)
 
 
 def latest_pregen_total(lines: list[str]) -> tuple[int | None, int | None]:
     """Return (done, total) from progress lines, preferring a finished count."""
     done: int | None = None
     total: int | None = None
+    started_total: int | None = None
     for line in lines:
+        started = parse_pregen_started(line)
+        if started is not None:
+            started_total = started
         finished = parse_pregen_finished(line)
         if finished:
-            return finished.chunks, finished.chunks
+            if finished.chunks > 0:
+                return finished.chunks, finished.chunks
+            if started_total is not None:
+                return started_total, started_total
+            if total is not None:
+                return total, total
+            return None, None
         progress = parse_pregen_progress(line)
         if progress:
             done, total = progress.done, progress.total
@@ -320,7 +343,7 @@ Do not use `/neoforge tps`; it reports a static 20.000 on this pack.
 ## Pregen
 
 - Duration: {pregen_s}
-- Chunks (from Chunk Pregenerator output): {chunks}
+- Chunks (from `/neoforge generate` output): {chunks}
 - Average CPS: {cps}
 
 ## Can't keep up

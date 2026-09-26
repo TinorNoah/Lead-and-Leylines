@@ -52,7 +52,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Quantified API | `quantified api-omni-2.2.3.jar` | both | LC²H scheduler / optional GPU path. Dedicated Mac smoke fell back to CPU (`liblwjgl.dylib` missing in the isolated probe). |
 | BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | Faster `/locate`. TerraBlender-aware. Does not change generated biomes. |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Generation MSPT. See [performance.md](performance.md). |
-| Chunk Pregenerator | `Chunk-Pregenerator-Neoforge-1.21-4.5.4.jar` | both | Operator pregen, not the same job as ByePregen. |
 | Feature Recycler | `Feature-Recycler-neoforge-2.0.0.jar` | both | Breaks Minecraft feature-order cycles so Terralith + Oh The Biomes We've Gone can generate. ARR. Not a second structure-spacing mod. |
 | ATO - All the Ores | `alltheores-3.2.0_neoforge_1.21.1.jar` | both | Extra ores. World data. Almost Unified is in for unification. |
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | both | Create village structure. World data. Optional Create dep lookup failed for this MC/loader; the village jar itself listed 1.21.1 NeoForge. |
@@ -66,7 +65,7 @@ Twilight Forest: [content.md](content.md).
 
 `lead-leylines-nether-fire-dragons/` moves fire dragon roosts and caves onto the same Nether biome tags. Ice and lightning dragons stay on their own biome tags. Structurify's global multiplier is 2.0, so those structure sets are also twice as far apart in new chunks.
 
-`lead-leylines-no-vanilla-stone/` removes Terralith's disabled `ore_andesite_*`, `ore_diorite_*`, and `ore_granite_*` placed features from overworld biome lists (plus Alex's Caves and Ars Elemental biomes that still reference them). Those features already had `count: 0`. JEI WorldGen logged `Missing data` because the stub is a count plus a rarity filter and has no height range. Stone still comes from Terralith. Keep `vanilla_stone_gen` off.
+`lead-leylines-no-vanilla-stone/` removes Terralith's disabled `ore_andesite_*`, `ore_diorite_*`, and `ore_granite_*` placed features from overworld biome lists (plus Alex's Caves and Ars Elemental biomes that still reference them). Those features already had `count: 0`. Stone still comes from Terralith. Keep `vanilla_stone_gen` off.
 
 The RU override datapack drops `minecraft:block_predicate_filter` steps whose predicate is `lithostitched:in_structure` from: `patch/ash_vents_inferno`, `patch/cave_bioshrooms`, `patch/dropleaf`, `patch/prismarite_cluster`, `patch/redstone_bud`, `patch/redstone_bulb`, `special/lava_fall`, `special/overworld_lava_delta`. That predicate joins a chunk future on a worldgen worker; dedicated servers freeze in `ChunkMap.processUnloads` / “Saving worlds”. Reproduced **without** ByePregen or C2ME (ATM10 Aeronautics dump, Lithostitched beta4; same predicate in beta6). Those eight features can now place inside structures.
 
@@ -89,4 +88,5 @@ Terralith 2.6.2 + Oh The Biomes We've Gone 2.6.0 hit `IllegalStateException: Fea
 | Tectonic | Removed | Player request 2026-09-22. Lithostitched stays. Existing Tectonic chunks remain until regenerated. |
 | Noisium | Dropped | Incompatible with ByePregen. |
 | FastNoise | Dropped | Compatible with ByePregen unless RTF is also in. Exclusive Tectonic-era smoke: no CPS gain vs Tectonic-only baseline. |
-| Chunky | Dropped for now | Pack uses Chunk Pregenerator. Chunky was in the freeze report only as the pregen driver, not the root cause. |
+| Chunky | Dropped for now | Use NeoForge `/neoforge generate` for operator pregen. Chunky was in a freeze report only as the pregen driver, not the root cause. |
+| Chunk Pregenerator | Removed 2026-09-26 | Non-daemon `Pregen Chunk Task Queue` threads hang dedicated-server stop after saves finish. Carbon Config removed with it. |

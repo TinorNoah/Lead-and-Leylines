@@ -18,12 +18,12 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Biomes](biomes.md) | 20 | Overworld and cave biome sets. |
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
 | [The End](end.md) | 4 | End biomes and the End expansion. |
-| [Magic](magic.md) | 46 | Spell mods and their addons. |
+| [Magic](magic.md) | 45 | Spell mods and their addons. |
 | [Food](food.md) | 19 | Kitchens and cooking. |
 | [Farming](farming.md) | 6 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
 | [Storage](storage.md) | 25 | Backpacks, chests, and trash. |
-| [Applied Energistics](applied-energistics.md) | 29 | ME storage and autocrafting. |
+| [Applied Energistics](applied-energistics.md) | 28 | ME storage and autocrafting. |
 | [Refined Storage](refined-storage.md) | 6 | Disks, grids, and the addons that extend them. |
 | [Mekanism](mekanism.md) | 12 | Machines, factories, gases, and tools. |
 | [Create](create.md) | 34 | Contraptions and kinetics. |
@@ -34,11 +34,11 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Exploration](exploration.md) | 6 | Maps and dimensions. |
 | [FTB](ftb.md) | 10 | Claims, teams, quests, and the shared FTB library. |
 | [Gameplay](gameplay.md) | 15 | Small world and inventory changes. |
-| [Recipes and overlays](info.md) | 31 | JEI, Jade, and tooltip frames. |
+| [Recipes and overlays](info.md) | 30 | JEI, Jade, and tooltip frames. |
 | [Rendering](rendering.md) | 26 | Shaders, entity models, and client render optimizers. |
 | [Client](client.md) | 28 | Client-only comfort. |
-| [Performance](performance.md) | 20 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
+| [Performance](performance.md) | 18 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
 | [Stability](stability.md) | 10 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 20 | Shared libraries used by more than one mod family. |
 
-570 entries, each listed once.
+565 entries, each listed once.
