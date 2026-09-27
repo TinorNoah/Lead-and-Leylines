@@ -1,3 +1,5 @@
+import { unstable_cache } from "next/cache";
+
 import { enrichMod, getModMetadataMap } from "./metadata";
 import { getCatalogSnapshot } from "./source";
 import type { CatalogSnapshot, EnrichedMod } from "./types";
@@ -7,6 +9,8 @@ export type BrowserData = {
   mods: EnrichedMod[];
   tags: Record<string, string>;
 };
+
+export const CATALOG_CACHE_TAG = "catalog";
 
 export async function loadBrowserData(options?: {
   force?: boolean;
@@ -21,3 +25,10 @@ export async function loadBrowserData(options?: {
     tags: snapshot.catalog.tags,
   };
 }
+
+/** Cached for page + /api/mods; webhook calls revalidateTag(CATALOG_CACHE_TAG). */
+export const loadCachedBrowserData = unstable_cache(
+  async () => loadBrowserData(),
+  ["browser-data"],
+  { revalidate: 600, tags: [CATALOG_CACHE_TAG] },
+);

@@ -1,6 +1,7 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 
+import { CATALOG_CACHE_TAG } from "@/lib/catalog";
 import { getCatalogSnapshot } from "@/lib/source";
 import { siteConfig } from "@/lib/env";
 import { extractPushSha, verifyGitHubSignature } from "@/lib/webhook";
@@ -41,6 +42,7 @@ export async function POST(request: Request) {
   }
 
   const snapshot = await getCatalogSnapshot({ force: true, sha });
+  revalidateTag(CATALOG_CACHE_TAG, "max");
   revalidatePath("/");
   revalidatePath("/api/mods");
 
@@ -49,6 +51,6 @@ export async function POST(request: Request) {
     sha: snapshot.commit?.sha ?? sha,
     source: snapshot.source,
     mod_count: snapshot.catalog.mod_count,
-    revalidated: ["/", "/api/mods"],
+    revalidated: ["/", "/api/mods", CATALOG_CACHE_TAG],
   });
 }

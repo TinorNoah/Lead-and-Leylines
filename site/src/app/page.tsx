@@ -3,14 +3,14 @@ import { Suspense } from "react";
 import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { LeylineParticles } from "@/components/LeylineParticles";
 import { SiteHeader } from "@/components/SiteHeader";
-import { loadBrowserData } from "@/lib/catalog";
+import { loadCachedBrowserData } from "@/lib/catalog";
 import { fetchReleaseChannels } from "@/lib/release";
 
-/** Match CACHE_TTL_SECONDS; webhook also calls revalidatePath("/"). */
+/** Match CACHE_TTL_SECONDS; webhook also calls revalidatePath("/") + revalidateTag. */
 export const revalidate = 600;
 
 export default async function HomePage() {
-  const data = await loadBrowserData();
+  const data = await loadCachedBrowserData();
   const { catalog, source } = data.snapshot;
   const { official, prerelease } = await fetchReleaseChannels(catalog.pack.version);
 

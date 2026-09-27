@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-import { loadBrowserData } from "@/lib/catalog";
+import { loadCachedBrowserData } from "@/lib/catalog";
 
 export const runtime = "nodejs";
 /** Match CACHE_TTL_SECONDS; webhook also revalidates this path. */
@@ -10,7 +10,7 @@ const CACHE_CONTROL = "public, s-maxage=600, stale-while-revalidate=86400";
 
 export async function GET() {
   try {
-    const data = await loadBrowserData();
+    const data = await loadCachedBrowserData();
     return NextResponse.json(
       {
         pack: data.snapshot.catalog.pack,

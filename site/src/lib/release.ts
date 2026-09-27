@@ -86,7 +86,7 @@ async function fetchJson(url: string, signal: AbortSignal): Promise<unknown | nu
   const response = await fetch(url, {
     headers: authHeaders(),
     signal,
-    cache: "no-store",
+    next: { revalidate: 600 },
   });
   if (!response.ok) {
     console.warn("github release fetch", url, response.status);

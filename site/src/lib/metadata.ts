@@ -75,7 +75,11 @@ async function fetchWithTimeout(url: string, init: RequestInit = {}): Promise<Re
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
   try {
-    return await fetch(url, { ...init, signal: controller.signal, cache: "no-store" });
+    return await fetch(url, {
+      ...init,
+      signal: controller.signal,
+      next: { revalidate: 600 },
+    });
   } finally {
     clearTimeout(timer);
   }

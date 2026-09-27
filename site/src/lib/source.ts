@@ -121,17 +121,30 @@ function authHeaders(): Record<string, string> {
   return headers;
 }
 
-async function fetchWithTimeout(url: string, init: RequestInit = {}): Promise<Response> {
+async function fetchWithTimeout(
+  url: string,
+  init: RequestInit = {},
+  opts: { revalidate?: number } = {},
+): Promise<Response> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+  const revalidate = opts.revalidate ?? 600;
   try {
-    return await fetch(url, { ...init, signal: controller.signal, cache: "no-store" });
+    return await fetch(url, {
+      ...init,
+      signal: controller.signal,
+      // Align with page/API ISR — no-store would force every route dynamic.
+      next: { revalidate },
+    });
   } finally {
     clearTimeout(timer);
   }
 }
 
-async function fetchCommit(sha?: string): Promise<{ commit: CommitInfo; etag: string | null }> {
+async function fetchCommit(
+  sha?: string,
+  opts: { revalidate?: number } = {},
+): Promise<{ commit: CommitInfo; etag: string | null }> {
   const { githubRepo, githubBranch } = siteConfig();
   const memory = state();
   const ref = sha && /^[0-9a-f]{40}$/i.test(sha) ? sha : githubBranch;
@@ -140,7 +153,7 @@ async function fetchCommit(sha?: string): Promise<{ commit: CommitInfo; etag: st
   if (!sha && memory.commitEtag) {
     headers["If-None-Match"] = memory.commitEtag;
   }
-  const response = await fetchWithTimeout(url, { headers });
+  const response = await fetchWithTimeout(url, { headers }, opts);
   if (response.status === 304 && memory.snapshot?.commit) {
     return { commit: memory.snapshot.commit, etag: memory.commitEtag };
   }
@@ -161,12 +174,19 @@ async function fetchCommit(sha?: string): Promise<{ commit: CommitInfo; etag: st
   return { commit, etag: response.headers.get("etag") };
 }
 
-async function fetchCatalogAtSha(sha: string): Promise<CatalogPayload> {
+async function fetchCatalogAtSha(
+  sha: string,
+  opts: { revalidate?: number } = {},
+): Promise<CatalogPayload> {
   const { githubRepo } = siteConfig();
   const url = `https://raw.githubusercontent.com/${githubRepo}/${sha}/docs/installed/catalog.json`;
-  const response = await fetchWithTimeout(url, {
-    headers: { "User-Agent": "lead-and-leylines-mod-browser" },
-  });
+  const response = await fetchWithTimeout(
+    url,
+    {
+      headers: { "User-Agent": "lead-and-leylines-mod-browser" },
+    },
+    opts,
+  );
   if (!response.ok) {
     throw new Error(`raw catalog ${response.status}`);
   }
@@ -177,9 +197,14 @@ async function fetchCatalogAtSha(sha: string): Promise<CatalogPayload> {
   return parsed;
 }
 
-async function refreshFromGitHub(forcedSha?: string): Promise<CatalogSnapshot> {
+async function refreshFromGitHub(
+  forcedSha?: string,
+  opts: { bypassNextCache?: boolean } = {},
+): Promise<CatalogSnapshot> {
   const memory = state();
-  const { commit, etag } = await fetchCommit(forcedSha);
+  // Webhook / force refresh must bypass Next Data Cache.
+  const fetchOpts = opts.bypassNextCache || forcedSha ? { revalidate: 0 } : { revalidate: 600 };
+  const { commit, etag } = await fetchCommit(forcedSha, fetchOpts);
   if (
     !forcedSha &&
     memory.snapshot?.commit?.sha === commit.sha &&
@@ -189,7 +214,7 @@ async function refreshFromGitHub(forcedSha?: string): Promise<CatalogSnapshot> {
     memory.snapshot = { ...memory.snapshot, fetchedAt: new Date().toISOString() };
     return memory.snapshot;
   }
-  const catalog = await fetchCatalogAtSha(commit.sha);
+  const catalog = await fetchCatalogAtSha(commit.sha, fetchOpts);
   await writeThrough(catalog);
   const snapshot: CatalogSnapshot = {
     catalog,
@@ -226,7 +251,9 @@ export async function getCatalogSnapshot(options?: {
           memory.snapshot = local;
         }
         try {
-          return await refreshFromGitHub(options?.sha);
+          return await refreshFromGitHub(options?.sha, {
+            bypassNextCache: forceRefresh,
+          });
         } catch (error) {
           console.error("catalog refresh failed", error);
           if (memory.snapshot) {
@@ -286,7 +313,7 @@ export async function getCatalogSnapshot(options?: {
 
   memory.inFlight = (async () => {
     try {
-      return await refreshFromGitHub(options?.sha);
+      return await refreshFromGitHub(options?.sha, { bypassNextCache: true });
     } catch (error) {
       console.error("catalog refresh failed", error);
       return memory.snapshot!;
