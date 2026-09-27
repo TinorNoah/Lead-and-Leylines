@@ -4,15 +4,6 @@ Creatures, wildlife, and the libraries those mods need. Guns on mobs are under [
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
-## Alex's Mobs Continued
-
-| Mod | File | Side | Tags | What it adds |
-|---|---|---|---|---|
-| Alex's Mobs Continued | `alexsmobs-2.2.2-neoforge+1.21.1.jar` | both | `core`, `mob`, `alexs` | Overworld animals and monsters. |
-| Codxlib | `codxlib-1.6.1-neoforge+1.21.1.jar` | both | `library`, `mob`, `alexs` | Library Alex's Mobs Continued needs. |
-| [AMT] \| Alex's Mobs: Tweaks | `alex-mobs-tweaks-omni-1.3.1.jar` | both | `addon`, `mob`, `alexs` | Tweaks for this mob set. |
-| Alex's Mobs Continued Delight | `amcdelight-1.0.1-neoforge+1.21.1.jar` | both | `addon`, `mob`, `farmers-delight`, `food`, `alexs` | Cooking recipes for these animals. |
-
 ## Ice and Fire
 
 | Mod | File | Side | Tags | What it adds |

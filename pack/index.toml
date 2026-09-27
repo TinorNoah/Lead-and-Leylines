@@ -1119,16 +1119,6 @@ hash = "c9027529928d0c25dbec9b6029c59282260e5ef7eb89c903ff0c80d81be2c54f"
 metafile = true
 
 [[files]]
-file = "mods/alexs-mobs-continued-farmers-delight-refabricated.pw.toml"
-hash = "285a7a961ffdaa5fcd89872375000993c83b8f7efbc1f42f380ae30871e3e711"
-metafile = true
-
-[[files]]
-file = "mods/alexs-mobs-continued.pw.toml"
-hash = "a0776da8b4630d1dc0400c8c903c0f8a4bc261b8a878cd16a3966c98a0e71e5b"
-metafile = true
-
-[[files]]
 file = "mods/alltheleaks.pw.toml"
 hash = "c71a37f05849d41b3b2a883c55afc4d32de7e05beff02b6f94a833be0c59635c"
 metafile = true
@@ -1161,11 +1151,6 @@ metafile = true
 [[files]]
 file = "mods/amplified-nether.pw.toml"
 hash = "bab5e563745cc5de2b70d95706944a1daccdb00dd06c77a955d1455e7b1bb039"
-metafile = true
-
-[[files]]
-file = "mods/amt.pw.toml"
-hash = "7e84605d4c7108a5c9bd45aa76ce85837887bfb5711a359bab021a03b54a93cc"
 metafile = true
 
 [[files]]
@@ -1611,11 +1596,6 @@ metafile = true
 [[files]]
 file = "mods/cobweb.pw.toml"
 hash = "40802547d9f1f916dfeefea8e0c52499edfc6940daca5b7f60e5c365a4ead296"
-metafile = true
-
-[[files]]
-file = "mods/codxlib.pw.toml"
-hash = "9efbe591998da8af4097f025135e7e4350dbb4b36ad243e3e632914d096d1140"
 metafile = true
 
 [[files]]

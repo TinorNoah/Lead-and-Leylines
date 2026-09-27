@@ -52,7 +52,7 @@ sophisticated = "Sophisticated Backpacks / Storage."
 yungs = "YUNG's structure mods."
 farmers-delight = "Farmer's Delight cluster."
 harvestcraft = "Pam's HarvestCraft."
-alexs = "Alex's Mobs / Caves Continued."
+
 
 [[category]]
 slug = "weapons"
@@ -185,14 +185,6 @@ slug = "mobs"
 title = "Mobs"
 intro = """Creatures, wildlife, and the libraries those mods need. Guns on mobs are under [Weapons](weapons.md)."""
 
-[[category.group]]
-name = "Alex's Mobs Continued"
-mods = [
-  { file = "alexs-mobs-continued.pw.toml", blurb = "Overworld animals and monsters.", tags = ["core", "mob", "alexs"] },
-  { file = "codxlib.pw.toml", blurb = "Library Alex's Mobs Continued needs.", tags = ["library", "mob", "alexs"] },
-  { file = "amt.pw.toml", blurb = "Tweaks for this mob set.", tags = ["addon", "mob", "alexs"] },
-  { file = "alexs-mobs-continued-farmers-delight-refabricated.pw.toml", blurb = "Cooking recipes for these animals.", tags = ["addon", "mob", "farmers-delight", "food", "alexs"] },
-]
 
 [[category.group]]
 name = "Ice and Fire"
@@ -451,7 +443,7 @@ mods = [
 [[category]]
 slug = "food"
 title = "Food"
-intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Alex's Mobs under [Mobs](mobs.md), Ars foods under [Magic](magic.md)."""
+intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Ars foods under [Magic](magic.md)."""
 
 [[category.group]]
 name = "Farmer's Delight"
