@@ -2,7 +2,7 @@
 
 import Fuse from "fuse.js";
 import { LayoutGrid, List, Rows3, Search, SlidersHorizontal } from "lucide-react";
-import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import type { CatalogCategory, EnrichedMod } from "@/lib/types";
@@ -56,10 +56,6 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   searchParamsRef.current = searchParams;
 
   const trimmedDraft = draftQuery.trim();
-  const deferredQuery = useDeferredValue(trimmedDraft);
-  // Clearing the box must drop results immediately — deferred search can keep
-  // the previous Fuse query while React is busy rendering hundreds of cards.
-  const searchQuery = trimmedDraft === "" ? "" : deferredQuery;
 
   useEffect(() => {
     // External URL changes only (back/forward, shared links, Clear filters).
@@ -115,10 +111,12 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
     [mods],
   );
 
+  // Filter on the box text directly. Deferring the query string broke search:
+  // while deferred lag was still "", a typed query showed all 553 mods.
   const filtered = useMemo(() => {
     let list = mods;
-    if (searchQuery) {
-      list = fuse.search(searchQuery).map((result) => result.item);
+    if (trimmedDraft) {
+      list = fuse.search(trimmedDraft).map((result) => result.item);
     }
     if (selectedCategory) {
       list = list.filter((mod) => mod.category === selectedCategory);
@@ -130,7 +128,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
       list = list.filter((mod) => selectedTags.every((tag) => mod.tags.includes(tag)));
     }
     return list;
-  }, [mods, fuse, searchQuery, selectedCategory, selectedSide, selectedTags]);
+  }, [mods, fuse, trimmedDraft, selectedCategory, selectedSide, selectedTags]);
 
   const tagCounts = useMemo(() => {
     const counts = new Map<string, number>();
