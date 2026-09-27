@@ -13,7 +13,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Weapons](weapons.md) | 42 | Guns and the addons that change those guns. |
 | [Combat](combat.md) | 15 | How the player fights in melee and moves. |
 | [Bosses](bosses.md) | 9 | Boss mods and any structure addons that rebuild their arenas. |
-| [Mobs](mobs.md) | 23 | Creatures, wildlife, and the libraries those mods need. |
+| [Mobs](mobs.md) | 19 | Creatures, wildlife, and the libraries those mods need. |
 | [Structures](structures.md) | 33 | Dungeons, villages, and the tools that space or label them. |
 | [Biomes](biomes.md) | 16 | Overworld and cave biome sets. |
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 10 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 20 | Shared libraries used by more than one mod family. |
 
-553 entries, each listed once.
+549 entries, each listed once.
