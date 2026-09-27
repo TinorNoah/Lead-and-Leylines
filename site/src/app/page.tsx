@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { connection } from "next/server";
 
 import { CatalogBrowser } from "@/components/CatalogBrowser";
 import { LeylineParticles } from "@/components/LeylineParticles";
@@ -6,10 +7,11 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { loadCachedBrowserData } from "@/lib/catalog";
 import { fetchReleaseChannels } from "@/lib/release";
 
-/** Match CACHE_TTL_SECONDS; webhook also calls revalidatePath("/") + revalidateTag. */
+/** Runtime ISR window; connection() prevents baking empty icons at docker build. */
 export const revalidate = 600;
 
 export default async function HomePage() {
+  await connection();
   const data = await loadCachedBrowserData();
   const { catalog, source } = data.snapshot;
   const { official, prerelease } = await fetchReleaseChannels(catalog.pack.version);
