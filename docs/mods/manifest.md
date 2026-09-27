@@ -390,7 +390,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Gunsmith Lib | `gunsmithlib-neoforge-1.21.1-tacz1.1.8-6.4.4.jar` | CurseForge 1264058 / 8799282 | both | library | Required by Ragnarok Zero. Matches TaCZ 1.1.8. | TaCZ | defaults | 2026-09-25 |
 | Create: Apokinetics | `apokinetics-1.0.6.jar` | CurseForge 1606442 / 8790422 | both | tech | Apotheosis on Create machines. | Apotheosis, Create 6.0.10 | defaults | 2026-09-25 |
 | Apothic Compats | `apothic_compats-0.2.4.3.jar` | CurseForge 1188699 / 8936047 | both | magic | Apotheosis datapack compat. | Apotheosis, Placebo | defaults | 2026-09-25 |
-| Apothic Category Compat | `apothic_compat-2.0.2.jar` | CurseForge 1516278 / 8219980 | both | magic | Loot categories for mods already in the pack. | Apotheosis | defaults | 2026-09-25 |
 | Fallen Gems & Affixes | `fallen_gems_affixes-1.21.1-1.0.0.jar` | CurseForge 1286177 / 6927716 | both | magic | Extra gems and affixes. World data. | Apotheosis, Additional Attributes, Patchouli | defaults | 2026-09-25 |
 | Additional Attributes | `additional_attributes-1.21.1-1.2.2.jar` | CurseForge 986624 / 6388896 | both | library | Required by Fallen Gems. | none | defaults | 2026-09-25 |
 | Apotheosis No Flight | `apotheosisnoflight-1.21.1-1.0.0.jar` | CurseForge 1612036 / 8529729 | both | magic | Turns off Apotheosis flight potions and charms. | Apotheosis, Apothic Attributes | defaults | 2026-09-25 |

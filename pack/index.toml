@@ -161,6 +161,74 @@ file = "global_packs/required_data/lead-leylines-large-climate/pack.mcmeta"
 hash = "28d29b4228da7fdf226b830e5a3c2c25c1fb3efa03c54685c99ac7df04831c04"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/ae_universal_press/recipe/overloadprocessorpress.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/ae_universal_press/recipe/printedcompatprocessor.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/ae_universal_press/recipe/unoverloaded_circuit_board_print.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/agritechevolved/recipe/planter/crop/biomeswevegone/japanses_orchid.json"
+hash = "04d8885769a5ed62de099947c150812d42b769ffa5a35385ef41b17dcb516072"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/agritechevolved/recipe/planter/crop/biomeswevegone/pale_pumkin_seeds.json"
+hash = "663f9a1e09053c0a5371d30f8220b9ff27aaea710c27e0b8ec59fb34f36df535"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/apotheosis/data_maps/item/loot_category_overrides.json"
+hash = "ec8d9f21801ad4aaada2d5d8d0647062a3ae8c3d1294685848566d27ad3fdb6b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/armageddon_mod/recipe/bsotlh_duplication_recipe.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/blueprint/data_maps/dimension/modded_biome_slice_sizes.json"
+hash = "7afd2711456e91004d7e0dc6043cef1bcda8249f8cdc57c20160d1452bb42e74"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/cbc_at/recipe/cutting/rocket_pod_breech_cast_mould.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/cbc_at/recipe/cutting/rocket_pod_rail_cast_mould.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/cbc_at/recipe/cutting/twin_autocannon_barrel_cast_mould.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/cbc_at/recipe/munition/rocket/rocket_fuzing.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/create_shimmer/recipe/coloring/blue_castle_door.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/create_shimmer/recipe/coloring/pink_castle_door.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/create_shimmer/recipe/coloring/violet_castle_door.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/create_shimmer/recipe/coloring/yellow_castle_door.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/createdeco/recipe/placard.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/arid.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
@@ -183,6 +251,14 @@ hash = "f4dc21e8164f6cf248f2e134770e956a61fd0d4299093c7ae6ccc2ffc59ab158"
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rainless.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/jadensnetherexpansiondelight/recipe/blue_scale_fungus_roll.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/jadensnetherexpansiondelight/recipe/red_scale_fungus_roll.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_hoglin_stable.json"
@@ -237,6 +313,126 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/spawn/neoforge/
 hash = "19007f531461a3799fe76c9041927bd7773820ef27d62e0d54404dd52c832859"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/spectrum/recipe/mod_integration/gobber/anvil_crushing/globette_nether_from_buds.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/spectrum/recipe/titration_barrel/bristle_mead_fluid.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/spectrum/recipe/titration_barrel/infused_beverages/lager_fluid.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/spectrum/recipe/titration_barrel/infused_beverages/mead_fluid.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/alchemy_table.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/butcher_table.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/composter.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/lumber_table.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/mushgloom_torch.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/mycologist_table.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/aurora_cake_slice.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/glacier_cake_slice.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/phytochemical_cake_slice.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/torchberry_cake_slice.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/rainbow_ice_cream.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/refreshing_ice_cream.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/twilight_ice_cream.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/blob_stew_farmer_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/carved_squash_farmer_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_juice_farming_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_petals_via_cutting.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_planks_via_cutting.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_slab_via_cutting.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_stairs_via_cutting.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/chorus_tea_farming_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/ender_stew_farming_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/small_squash_farmer_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/stripped_chorus_cane_block_compa.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/warped_squash_farmer_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/warped_stew_farming_delight.json"
+hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/yungscavebiomes/worldgen/biome/lost_caves.json"
 hash = "de947cc471e598e0da5f3d77e9533024a10b9ee97e1feff74078cecf0b5c9697"
 
@@ -273,7 +469,135 @@ file = "global_packs/required_data/lead-leylines-no-vanilla-stone/pack.mcmeta"
 hash = "1aab859a5bbfe82731ca6fac04fb19c058a7611ecaf16f60ae2809428a47f2b5"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/dawnberry_crate.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/dawnberry_jelly.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/dawnberry_pie.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/lightchee_crate.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/lightchee_jelly.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/lightchee_pie.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_amber_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_aqua_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_beige_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_coral_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_forest_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_ginger_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_indigo_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_maroon_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_mint_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_navy_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_olive_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_rose_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_slate_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_tan_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_teal_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/create_connected/loot_table/blocks/dye_depot_verdant_fan_dyeing_catalyst.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/brass_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/copper_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/creative_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/industrial_iron_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/railway_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/refined_radiance_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/shadow_steel_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createcasing/loot_table/blocks/weathered_iron_slicer.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/createdieselgenerators/loot_table/blocks/andesite_girder_strut.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-orphan-loot/data/extendedae/loot_table/blocks/ex_emc_interface.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/farmers_spell/loot_table/rewards/foodgeist_satisfied.json"
 hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
 
 [[files]]
@@ -613,6 +937,34 @@ file = "global_packs/required_data/lead-leylines-orphan-loot/data/mekmm/loot_tab
 hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/spawn/loot_table/archaeology/anthill.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/aurora_cake.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/glacier_cake.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/phytochemical_cake.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/torchberry_cake.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/unusualend/loot_table/blocks/celestial_fluid.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-orphan-loot/data/unusualend/loot_table/blocks/warped_endstone_sprouts.json"
+hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-orphan-loot/pack.mcmeta"
 hash = "0b7cb004d6935d96f0480f559f40ead189f3e269dc2d4dc7c83ea012cf819a5b"
 
@@ -854,11 +1206,6 @@ metafile = true
 [[files]]
 file = "mods/apothic-attributes.pw.toml"
 hash = "5fbeebfba16e5480242c5e0db97a9167289500e53bc0df1a0a872c0e62f55de8"
-metafile = true
-
-[[files]]
-file = "mods/apothic-category-compat.pw.toml"
-hash = "bb6ff3eae2a5ea83c677f5347648b71641c3fccbc1a7a8f85474d6318f87391a"
 metafile = true
 
 [[files]]

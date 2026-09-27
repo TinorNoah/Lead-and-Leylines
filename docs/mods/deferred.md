@@ -31,6 +31,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | JEI / REI / EMI WorldGen | Removed 2026-09-26. Worldgen pages in JEI. Do not re-add; JER stays for mob/dungeon loot. |
 | Quark (+ Zeta, Integrated BOMD, Integrated Mowzie's, Integrated API, Integrated Patches) | Removed 2026-09-26. BOMD and Mowzie's base mods stay. Do not re-add Quark without those Integrated addons or an explicit structure redesign. |
 | Alex's Caves Continued (+ Delight, Spellbooks) | Removed 2026-09-26. Codxlib stays for Alex's Mobs Continued. Do not re-add unofficial Alex's Caves / Citadel. |
+| Apothic Category Compat | Removed 2026-09-27. Its loot-category data map hard-referenced absent Alex's Caves / Cataclysm / Undergarden items (boot DataMapLoader ERROR). Pack datapack `lead-leylines-load-fixes` keeps the in-pack bow overrides (Alex's Mobs blasters, Born in Chaos pumpkin gun, Twilight Forest block-and-chain / cube). Affix-blacklist config from that jar is gone; use Apotheosis datapacks if needed. |
 
 ## Overlaps something already in the pack
 

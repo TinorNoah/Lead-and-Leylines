@@ -49,7 +49,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | AttributeFix | `attributefix-neoforge-1.21.1-21.1.3.jar` | both | `library`, `magic` | Fixes attribute stacking. Fallen Gems needs it. |
 | Fallen Gems & Affixes | `fallen_gems_affixes-1.21.1-1.0.0.jar` | both | `addon`, `magic`, `apotheosis` | Extra gems and affixes. |
 | Apothic Compats | `apothic_compats-0.2.4.3.jar` | both | `compat`, `magic`, `apotheosis` | Apotheosis loot data for other mods. |
-| Apothic Category Compat | `apothic_compat-2.0.2.jar` | both | `compat`, `magic`, `apotheosis` | Loot categories for mods already in the pack. |
 | Apotheosis No Flight | `apotheosisnoflight-1.21.1-1.0.0.jar` | both | `addon`, `magic`, `apotheosis` | Turns off flight potions and charms. |
 | Apotheosis Balance Configurator | `apotheosis_balance-1.21.1-2.1.0.jar` | both | `addon`, `magic`, `apotheosis` | Affix numbers in a config. |
 | Apothic Tooltip Cleanup | `apothic_tooltip_cleanup-1.3.0.jar` | client | `addon`, `magic`, `apotheosis` | Shorter affix lines. Client only. Tooltip Overhaul still draws the frame. |

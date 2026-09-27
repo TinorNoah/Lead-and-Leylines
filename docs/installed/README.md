@@ -18,7 +18,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Biomes](biomes.md) | 16 | Overworld and cave biome sets. |
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
 | [The End](end.md) | 4 | End biomes and the End expansion. |
-| [Magic](magic.md) | 45 | Spell mods and their addons. |
+| [Magic](magic.md) | 44 | Spell mods and their addons. |
 | [Food](food.md) | 19 | Kitchens and cooking. |
 | [Farming](farming.md) | 6 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 10 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 20 | Shared libraries used by more than one mod family. |
 
-554 entries, each listed once.
+553 entries, each listed once.
