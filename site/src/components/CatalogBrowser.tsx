@@ -52,8 +52,14 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const searchRef = useRef<HTMLInputElement>(null);
   // Tracks the last `q` we intentionally applied (typing sync or clear/back).
   const lastAppliedUrlQ = useRef(queryFromUrl);
+  const searchParamsRef = useRef(searchParams);
+  searchParamsRef.current = searchParams;
 
-  const deferredQuery = useDeferredValue(draftQuery.trim());
+  const trimmedDraft = draftQuery.trim();
+  const deferredQuery = useDeferredValue(trimmedDraft);
+  // Clearing the box must drop results immediately — deferred search can keep
+  // the previous Fuse query while React is busy rendering hundreds of cards.
+  const searchQuery = trimmedDraft === "" ? "" : deferredQuery;
 
   useEffect(() => {
     // External URL changes only (back/forward, shared links, Clear filters).
@@ -74,22 +80,25 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   }, []);
 
   // Debounce URL writes so typing does not thrash Next.js navigation.
+  // Do not depend on searchParams — its identity churn cancels the clear timeout.
   useEffect(() => {
+    const next = trimmedDraft;
+    const delay = next === "" ? 0 : SEARCH_URL_DEBOUNCE_MS;
     const handle = window.setTimeout(() => {
-      const next = draftQuery.trim();
-      if ((searchParams.get("q") ?? "") === next) {
+      const params = new URLSearchParams(searchParamsRef.current.toString());
+      const current = params.get("q") ?? "";
+      if (current === next) {
         lastAppliedUrlQ.current = next;
         return;
       }
       lastAppliedUrlQ.current = next;
-      const params = new URLSearchParams(searchParams.toString());
       if (next) params.set("q", next);
       else params.delete("q");
       const qs = params.toString();
       router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
-    }, SEARCH_URL_DEBOUNCE_MS);
+    }, delay);
     return () => window.clearTimeout(handle);
-  }, [draftQuery, pathname, router, searchParams]);
+  }, [trimmedDraft, pathname, router]);
 
   const fuse = useMemo(
     () =>
@@ -108,8 +117,8 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
 
   const filtered = useMemo(() => {
     let list = mods;
-    if (deferredQuery) {
-      list = fuse.search(deferredQuery).map((result) => result.item);
+    if (searchQuery) {
+      list = fuse.search(searchQuery).map((result) => result.item);
     }
     if (selectedCategory) {
       list = list.filter((mod) => mod.category === selectedCategory);
@@ -121,7 +130,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
       list = list.filter((mod) => selectedTags.every((tag) => mod.tags.includes(tag)));
     }
     return list;
-  }, [mods, fuse, deferredQuery, selectedCategory, selectedSide, selectedTags]);
+  }, [mods, fuse, searchQuery, selectedCategory, selectedSide, selectedTags]);
 
   const tagCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -229,7 +238,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   };
 
   const hasFilters = Boolean(
-    selectedCategory || selectedSide || selectedTags.length || draftQuery.trim(),
+    selectedCategory || selectedSide || selectedTags.length || trimmedDraft,
   );
 
   return (
