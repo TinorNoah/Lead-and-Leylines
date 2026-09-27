@@ -166,13 +166,6 @@ mods = [
 ]
 
 [[category.group]]
-name = "Legendary Monsters"
-mods = [
-  { file = "legendary-monsters.pw.toml", blurb = "Mid-game and late-game bosses.", tags = ["core", "boss"] },
-  { file = "box-of-structures-legendary-monsters.pw.toml", blurb = "Rebuilt arenas for those bosses.", tags = ["addon", "boss"] },
-]
-
-[[category.group]]
 name = "Mowzie's Mobs"
 mods = [
   { file = "mowzies-mobs.pw.toml", blurb = "Overworld bosses.", tags = ["core", "boss"] },
