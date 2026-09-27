@@ -2,7 +2,7 @@
 
 import Fuse from "fuse.js";
 import { LayoutGrid, List, Rows3, Search, SlidersHorizontal } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import type { CatalogCategory, EnrichedMod } from "@/lib/types";
@@ -24,6 +24,9 @@ type Props = {
 
 type ViewMode = "cards" | "list" | "grouped";
 
+const PAGE_SIZE = 48;
+const SEARCH_URL_DEBOUNCE_MS = 250;
+
 function parseList(value: string | null): string[] {
   if (!value) return [];
   return value
@@ -37,21 +40,29 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const query = searchParams.get("q") ?? "";
+  const queryFromUrl = searchParams.get("q") ?? "";
   const selectedTags = parseList(searchParams.get("tags"));
   const selectedCategory = searchParams.get("category") ?? "";
   const selectedSide = searchParams.get("side") ?? "";
   const view = (searchParams.get("view") as ViewMode) || "cards";
   const selectedModFile = searchParams.get("mod") ?? "";
 
-  const [draftQuery, setDraftQuery] = useState(query);
+  const [draftQuery, setDraftQuery] = useState(queryFromUrl);
   const [tagQuery, setTagQuery] = useState("");
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef<HTMLInputElement>(null);
+  // Tracks the last `q` we intentionally applied (typing sync or clear/back).
+  const lastAppliedUrlQ = useRef(queryFromUrl);
+
+  const deferredQuery = useDeferredValue(draftQuery.trim());
 
   useEffect(() => {
-    setDraftQuery(query);
-  }, [query]);
+    // External URL changes only (back/forward, shared links, Clear filters).
+    if (queryFromUrl === lastAppliedUrlQ.current) return;
+    lastAppliedUrlQ.current = queryFromUrl;
+    setDraftQuery(queryFromUrl);
+  }, [queryFromUrl]);
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
@@ -63,6 +74,24 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
+
+  // Debounce URL writes so typing does not thrash Next.js navigation.
+  useEffect(() => {
+    const handle = window.setTimeout(() => {
+      const next = draftQuery.trim();
+      if ((searchParams.get("q") ?? "") === next) {
+        lastAppliedUrlQ.current = next;
+        return;
+      }
+      lastAppliedUrlQ.current = next;
+      const params = new URLSearchParams(searchParams.toString());
+      if (next) params.set("q", next);
+      else params.delete("q");
+      const qs = params.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    }, SEARCH_URL_DEBOUNCE_MS);
+    return () => window.clearTimeout(handle);
+  }, [draftQuery, pathname, router, searchParams]);
 
   const fuse = useMemo(
     () =>
@@ -81,8 +110,8 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
 
   const filtered = useMemo(() => {
     let list = mods;
-    if (query.trim()) {
-      list = fuse.search(query.trim()).map((result) => result.item);
+    if (deferredQuery) {
+      list = fuse.search(deferredQuery).map((result) => result.item);
     }
     if (selectedCategory) {
       list = list.filter((mod) => mod.category === selectedCategory);
@@ -94,7 +123,17 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
       list = list.filter((mod) => selectedTags.every((tag) => mod.tags.includes(tag)));
     }
     return list;
-  }, [mods, fuse, query, selectedCategory, selectedSide, selectedTags]);
+  }, [mods, fuse, deferredQuery, selectedCategory, selectedSide, selectedTags]);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [deferredQuery, selectedCategory, selectedSide, selectedTags, view]);
+
+  const visibleMods = useMemo(
+    () => filtered.slice(0, visibleCount),
+    [filtered, visibleCount],
+  );
+  const hasMore = visibleCount < filtered.length;
 
   const tagCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -145,13 +184,6 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
     router.replace(next ? `${pathname}?${next}` : pathname, { scroll: false });
   }
 
-  function setSearch(value: string) {
-    updateParams((params) => {
-      if (value.trim()) params.set("q", value.trim());
-      else params.delete("q");
-    });
-  }
-
   function toggleTag(tag: string) {
     updateParams((params) => {
       const current = parseList(params.get("tags"));
@@ -170,14 +202,15 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   }
 
   function resetFilters() {
+    lastAppliedUrlQ.current = "";
+    setDraftQuery("");
+    setTagQuery("");
     updateParams((params) => {
       params.delete("category");
       params.delete("side");
       params.delete("tags");
       params.delete("q");
     });
-    setDraftQuery("");
-    setTagQuery("");
   }
 
   const filterProps = {
@@ -207,7 +240,9 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
       }),
   };
 
-  const hasFilters = Boolean(selectedCategory || selectedSide || selectedTags.length || query);
+  const hasFilters = Boolean(
+    selectedCategory || selectedSide || selectedTags.length || draftQuery.trim(),
+  );
 
   return (
     <div className="mx-auto w-full max-w-[1560px] px-4 pb-16 pt-4 sm:px-6 lg:px-8">
@@ -215,7 +250,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
         className="sticky top-0 z-20 -mx-4 mb-5 border-b border-card-border/60 bg-background px-4 py-3 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8"
         onSubmit={(event) => {
           event.preventDefault();
-          setSearch(draftQuery);
+          searchRef.current?.blur();
         }}
       >
         <div className="relative">
@@ -226,6 +261,8 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
             onChange={(event) => setDraftQuery(event.target.value)}
             placeholder="Search mods, tags, bosses…"
             className="h-12 pl-10 pr-24 text-base"
+            autoComplete="off"
+            spellCheck={false}
           />
           <kbd className="pointer-events-none absolute right-3 top-1/2 hidden -translate-y-1/2 rounded border border-card-border bg-chip px-2 py-0.5 font-mono text-[10px] text-muted sm:inline">
             ⌘K
@@ -241,8 +278,18 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="text-sm text-muted">
-              Showing <span className="font-mono text-foreground">{filtered.length}</span> of{" "}
-              <span className="font-mono text-foreground">{mods.length}</span> mods
+              {view !== "grouped" && hasMore ? (
+                <>
+                  Showing first{" "}
+                  <span className="font-mono text-foreground">{visibleMods.length}</span> of{" "}
+                  <span className="font-mono text-foreground">{filtered.length}</span> matches
+                </>
+              ) : (
+                <>
+                  Showing <span className="font-mono text-foreground">{filtered.length}</span> of{" "}
+                  <span className="font-mono text-foreground">{mods.length}</span> mods
+                </>
+              )}
               {hasFilters ? (
                 <button
                   type="button"
@@ -298,7 +345,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
 
           {view === "cards" ? (
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-              {filtered.map((mod) => (
+              {visibleMods.map((mod) => (
                 <ModCard
                   key={mod.file}
                   mod={mod}
@@ -310,7 +357,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
           ) : null}
 
           {view === "list" ? (
-            <ModList mods={filtered} selectedFile={selectedModFile} onOpen={openMod} />
+            <ModList mods={visibleMods} selectedFile={selectedModFile} onOpen={openMod} />
           ) : null}
 
           {view === "grouped" ? (
@@ -334,6 +381,18 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
                   ))}
                 </div>
               ))}
+            </div>
+          ) : null}
+
+          {hasMore && view !== "grouped" ? (
+            <div className="flex justify-center pt-2">
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+              >
+                Show more ({filtered.length - visibleCount} remaining)
+              </Button>
             </div>
           ) : null}
 

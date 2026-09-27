@@ -15,7 +15,7 @@ export function ModCard({ mod, selected, onOpen }: Props) {
       type="button"
       onClick={() => onOpen(mod)}
       className={cn(
-        "flex h-full w-full flex-col gap-3 rounded border border-card-border bg-card p-4 text-left transition hover:border-card-border-active hover:bg-card-elevated",
+        "flex h-full w-full flex-col gap-3 rounded border border-card-border bg-card p-4 text-left transition hover:border-card-border-active hover:bg-card-elevated [content-visibility:auto] [contain-intrinsic-size:auto_180px]",
         selected &&
           "border-primary/60 bg-gradient-to-r from-[rgba(223,177,108,0.08)] to-transparent shadow-[var(--ley-glow)]",
       )}
@@ -26,6 +26,8 @@ export function ModCard({ mod, selected, onOpen }: Props) {
           <img
             src={mod.iconUrl}
             alt=""
+            loading="lazy"
+            decoding="async"
             className="h-11 w-11 rounded border border-card-border object-cover"
           />
         ) : (

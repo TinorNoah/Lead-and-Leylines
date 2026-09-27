@@ -49,7 +49,8 @@ export function LeylineParticles() {
       canvas!.style.width = `${width}px`;
       canvas!.style.height = `${height}px`;
       ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = reducedMotion ? 18 : Math.min(70, Math.floor((width * height) / 28000));
+      // Keep the particle budget low — O(n²) leyline threads used to dominate mid-range CPUs.
+      const count = reducedMotion ? 12 : Math.min(36, Math.floor((width * height) / 48000));
       particles = Array.from({ length: count }, () => createParticle(width, height));
     }
 
@@ -80,10 +81,11 @@ export function LeylineParticles() {
       ctx.globalAlpha = 1;
 
       if (!reducedMotion) {
-        // Soft leyline threads between nearby particles
+        // Sparse threads: only connect each particle to a few later neighbors.
         for (let i = 0; i < particles.length; i += 1) {
           const a = particles[i]!;
-          for (let j = i + 1; j < particles.length; j += 1) {
+          const limit = Math.min(particles.length, i + 6);
+          for (let j = i + 1; j < limit; j += 1) {
             const b = particles[j]!;
             const dx = a.x - b.x;
             const dy = a.y - b.y;

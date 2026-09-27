@@ -16,6 +16,7 @@ type MetaCacheFile = {
 type MetaState = {
   cache: MetaCacheFile | null;
   inFlight: Promise<Record<string, ModMetadata>> | null;
+  backgroundRefresh: Promise<void> | null;
 };
 
 const globalState = globalThis as typeof globalThis & {
@@ -24,7 +25,11 @@ const globalState = globalThis as typeof globalThis & {
 
 function state(): MetaState {
   if (!globalState.__llMetaState) {
-    globalState.__llMetaState = { cache: null, inFlight: null };
+    globalState.__llMetaState = {
+      cache: null,
+      inFlight: null,
+      backgroundRefresh: null,
+    };
   }
   return globalState.__llMetaState;
 }
@@ -160,6 +165,81 @@ function fallbackUrl(mod: CatalogMod): string | null {
   return null;
 }
 
+function neededMods(mods: CatalogMod[]): CatalogMod[] {
+  return mods.filter((mod) => mod.project_id != null && mod.source !== "unknown");
+}
+
+function missingMods(mods: CatalogMod[], entries: Record<string, ModMetadata>): CatalogMod[] {
+  return neededMods(mods).filter((mod) => {
+    const key = cacheKey(mod.source, mod.project_id as string | number);
+    return !entries[key];
+  });
+}
+
+function isStale(updatedAt: string): boolean {
+  const age = updatedAt ? Date.now() - Date.parse(updatedAt) : Number.POSITIVE_INFINITY;
+  return !Number.isFinite(age) || age > META_TTL_MS;
+}
+
+async function refreshMetadata(
+  mods: CatalogMod[],
+  onlyMissing: boolean,
+): Promise<Record<string, ModMetadata>> {
+  const cache = await loadCache();
+  const targets = onlyMissing ? missingMods(mods, cache.entries) : neededMods(mods);
+  if (targets.length === 0) {
+    if (!onlyMissing) {
+      const touched: MetaCacheFile = {
+        updatedAt: new Date().toISOString(),
+        entries: cache.entries,
+      };
+      await saveCache(touched);
+    }
+    return cache.entries;
+  }
+
+  const curseIds = targets
+    .filter((mod) => mod.source === "curseforge")
+    .map((mod) => mod.project_id as string | number);
+  const modrinthIds = targets
+    .filter((mod) => mod.source === "modrinth")
+    .map((mod) => String(mod.project_id));
+
+  const { curseforgeApiKey } = siteConfig();
+  const fresh: Record<string, ModMetadata> = {};
+  if (curseforgeApiKey && curseIds.length > 0) {
+    Object.assign(fresh, await fetchCurseForge(curseIds, curseforgeApiKey));
+  }
+  if (modrinthIds.length > 0) {
+    Object.assign(fresh, await fetchModrinth(modrinthIds));
+  }
+
+  const next: MetaCacheFile = {
+    updatedAt: new Date().toISOString(),
+    entries: { ...cache.entries, ...fresh },
+  };
+  await saveCache(next);
+  return next.entries;
+}
+
+function scheduleBackgroundRefresh(mods: CatalogMod[], onlyMissing: boolean): void {
+  const memory = state();
+  if (memory.backgroundRefresh) return;
+  memory.backgroundRefresh = refreshMetadata(mods, onlyMissing)
+    .then(() => undefined)
+    .catch((error) => {
+      console.warn("background meta refresh failed", error);
+    })
+    .finally(() => {
+      memory.backgroundRefresh = null;
+    });
+}
+
+/**
+ * Returns store icons/summaries without blocking the page on network when a
+ * usable cache already exists. Missing or stale entries refresh in the background.
+ * Only the first cold start (empty cache) awaits a network fill.
+ */
 export async function getModMetadataMap(
   mods: CatalogMod[],
 ): Promise<Record<string, ModMetadata>> {
@@ -170,40 +250,20 @@ export async function getModMetadataMap(
 
   memory.inFlight = (async () => {
     const cache = await loadCache();
-    const needed = mods.filter((mod) => mod.project_id != null && mod.source !== "unknown");
-    const missing = needed.filter((mod) => {
-      const key = cacheKey(mod.source, mod.project_id as string | number);
-      return !cache.entries[key];
-    });
-    const age = cache.updatedAt ? Date.now() - Date.parse(cache.updatedAt) : Number.POSITIVE_INFINITY;
-    const stale = !Number.isFinite(age) || age > META_TTL_MS;
+    const missing = missingMods(mods, cache.entries);
+    const stale = isStale(cache.updatedAt);
+    const hasEntries = Object.keys(cache.entries).length > 0;
 
-    if (missing.length === 0 && !stale) {
+    // Warm cache: serve immediately; fill gaps / TTL refresh off the request path.
+    if (hasEntries) {
+      if (missing.length > 0 || stale) {
+        scheduleBackgroundRefresh(mods, missing.length > 0 && !stale);
+      }
       return cache.entries;
     }
 
-    const curseIds = needed
-      .filter((mod) => mod.source === "curseforge")
-      .map((mod) => mod.project_id as string | number);
-    const modrinthIds = needed
-      .filter((mod) => mod.source === "modrinth")
-      .map((mod) => String(mod.project_id));
-
-    const { curseforgeApiKey } = siteConfig();
-    const fresh: Record<string, ModMetadata> = {};
-    if (curseforgeApiKey && curseIds.length > 0) {
-      Object.assign(fresh, await fetchCurseForge(curseIds, curseforgeApiKey));
-    }
-    if (modrinthIds.length > 0) {
-      Object.assign(fresh, await fetchModrinth(modrinthIds));
-    }
-
-    const next: MetaCacheFile = {
-      updatedAt: new Date().toISOString(),
-      entries: { ...cache.entries, ...fresh },
-    };
-    await saveCache(next);
-    return next.entries;
+    // Cold start: must wait once so icons are not all monograms forever.
+    return refreshMetadata(mods, false);
   })();
 
   try {

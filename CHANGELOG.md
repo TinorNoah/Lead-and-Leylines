@@ -17,6 +17,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+- Mod list site: search updates as you type, pages stop waiting on store APIs, and the card grid loads in chunks so browsing stays responsive.
+
 ### Removed
 
 ## [0.1.16] - 2026-09-27

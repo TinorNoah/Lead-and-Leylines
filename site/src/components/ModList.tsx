@@ -37,7 +37,13 @@ export function ModList({ mods, selectedFile, onOpen }: Props) {
                   <div className="flex items-center gap-2">
                     {mod.iconUrl ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={mod.iconUrl} alt="" className="h-8 w-8 rounded border border-card-border object-cover" />
+                      <img
+                        src={mod.iconUrl}
+                        alt=""
+                        loading="lazy"
+                        decoding="async"
+                        className="h-8 w-8 rounded border border-card-border object-cover"
+                      />
                     ) : (
                       <div className="flex h-8 w-8 items-center justify-center rounded border border-card-border bg-chip text-[10px] font-semibold text-primary">
                         {monogram(mod.name)}

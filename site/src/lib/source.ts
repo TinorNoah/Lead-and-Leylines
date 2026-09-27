@@ -265,6 +265,25 @@ export async function getCatalogSnapshot(options?: {
   }
 
   memory.lastRefreshAttemptAt = now;
+
+  // Have a usable snapshot already — refresh in the background so the page
+  // never waits on GitHub for a routine poll.
+  if (!forceRefresh && memory.snapshot) {
+    if (!memory.inFlight) {
+      memory.inFlight = (async () => {
+        try {
+          return await refreshFromGitHub(options?.sha);
+        } catch (error) {
+          console.error("catalog refresh failed", error);
+          return memory.snapshot!;
+        } finally {
+          memory.inFlight = null;
+        }
+      })();
+    }
+    return memory.snapshot;
+  }
+
   memory.inFlight = (async () => {
     try {
       return await refreshFromGitHub(options?.sha);

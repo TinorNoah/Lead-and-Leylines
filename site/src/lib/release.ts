@@ -2,6 +2,16 @@ import { siteConfig } from "./env";
 import type { ReleaseChannel, ReleaseChannels, ReleaseInfo } from "./types";
 
 const FETCH_TIMEOUT_MS = 8_000;
+const RELEASE_CACHE_TTL_MS = 60_000;
+
+type ReleaseCache = {
+  fetchedAt: number;
+  channels: ReleaseChannels;
+};
+
+const globalReleaseState = globalThis as typeof globalThis & {
+  __llReleaseCache?: ReleaseCache;
+};
 
 type GitHubReleaseBody = {
   tag_name?: string;
@@ -92,6 +102,11 @@ async function fetchJson(url: string, signal: AbortSignal): Promise<unknown | nu
 export async function fetchReleaseChannels(
   fallbackVersion?: string,
 ): Promise<ReleaseChannels> {
+  const cached = globalReleaseState.__llReleaseCache;
+  if (cached && Date.now() - cached.fetchedAt < RELEASE_CACHE_TTL_MS) {
+    return cached.channels;
+  }
+
   const { githubRepo } = siteConfig();
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
@@ -138,16 +153,26 @@ export async function fetchReleaseChannels(
       }
     }
 
+    let channels: ReleaseChannels;
     if (!official && !prerelease && fallbackVersion) {
-      return {
+      channels = {
         official: releaseFromPackVersion(fallbackVersion, "release"),
         prerelease: null,
       };
+    } else {
+      channels = { official, prerelease };
     }
 
-    return { official, prerelease };
+    globalReleaseState.__llReleaseCache = {
+      fetchedAt: Date.now(),
+      channels,
+    };
+    return channels;
   } catch (error) {
     console.warn("github releases failed", error);
+    if (cached) {
+      return cached.channels;
+    }
     if (fallbackVersion) {
       return {
         official: null,
