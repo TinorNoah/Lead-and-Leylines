@@ -17,7 +17,9 @@ COPY site/ ./
 COPY docs/installed/catalog.json ./seed/catalog.json
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV SEED_CATALOG_PATH=/app/seed/catalog.json
-RUN ./node_modules/.bin/next build
+# Next 16 defaults to Turbopack for `next build`; google font CSS resolution
+# fails there in this image ("queries have exactly one entry").
+RUN ./node_modules/.bin/next build --webpack
 
 FROM oven/bun:${BUN_VERSION} AS runner
 WORKDIR /app
