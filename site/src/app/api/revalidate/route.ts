@@ -1,3 +1,4 @@
+import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 
 import { getCatalogSnapshot } from "@/lib/source";
@@ -40,10 +41,14 @@ export async function POST(request: Request) {
   }
 
   const snapshot = await getCatalogSnapshot({ force: true, sha });
+  revalidatePath("/");
+  revalidatePath("/api/mods");
+
   return NextResponse.json({
     ok: true,
     sha: snapshot.commit?.sha ?? sha,
     source: snapshot.source,
     mod_count: snapshot.catalog.mod_count,
+    revalidated: ["/", "/api/mods"],
   });
 }

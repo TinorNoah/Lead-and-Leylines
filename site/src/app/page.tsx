@@ -6,7 +6,8 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { loadBrowserData } from "@/lib/catalog";
 import { fetchReleaseChannels } from "@/lib/release";
 
-export const dynamic = "force-dynamic";
+/** Match CACHE_TTL_SECONDS; webhook also calls revalidatePath("/"). */
+export const revalidate = 600;
 
 export default async function HomePage() {
   const data = await loadBrowserData();
