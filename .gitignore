@@ -10,6 +10,9 @@ dist/
 .cache/
 *.sparkprofile
 
+# Bulky smoke-test console dumps (keep audit markdown; re-copy logs locally with --keep)
+docs/smoke-runs/logs/
+
 # Local Minecraft / launcher instances (repo-root only; not datapack data/minecraft/)
 .minecraft/
 /minecraft/

@@ -418,7 +418,6 @@ mods = [
   { file = "attributefix.pw.toml", blurb = "Fixes attribute stacking. Fallen Gems needs it.", tags = ["library", "magic"] },
   { file = "fallen-gems-affixes.pw.toml", blurb = "Extra gems and affixes.", tags = ["addon", "magic", "apotheosis"] },
   { file = "apothic-compats.pw.toml", blurb = "Apotheosis loot data for other mods.", tags = ["compat", "magic", "apotheosis"] },
-  { file = "apothic-category-compat.pw.toml", blurb = "Loot categories for mods already in the pack.", tags = ["compat", "magic", "apotheosis"] },
   { file = "apotheosis-no-flight.pw.toml", blurb = "Turns off flight potions and charms.", tags = ["addon", "magic", "apotheosis"] },
   { file = "apotheosis-balance-configurator.pw.toml", blurb = "Affix numbers in a config.", tags = ["addon", "magic", "apotheosis"] },
   { file = "apothic-tooltip-cleanup.pw.toml", blurb = "Shorter affix lines. Client only. Tooltip Overhaul still draws the frame.", tags = ["addon", "magic", "apotheosis"] },

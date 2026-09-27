@@ -19,6 +19,13 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.16] - 2026-09-27
+
+### Fixed
+
+- Cleared boot recipe and loot parse spam from soft-deps and broken bridges (empty orphan loot for Create Connected Dye Depot catalysts, Create Encased slicers, Ars Delight / Twilight Delight cake blocks, and related tables; disabled the matching bad recipes; fixed Agritech Evolved BWG pale pumpkin and Japanese orchid planter typos).
+- Removed Apothic Category Compat (data map pointed at Alex's Caves / Cataclysm / Undergarden items we do not ship); kept the in-pack Apotheosis bow loot-category overrides in the load-fixes datapack.
+
 ## [0.1.15] - 2026-09-27
 
 ### Removed
