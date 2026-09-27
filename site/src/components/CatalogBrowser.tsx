@@ -24,7 +24,6 @@ type Props = {
 
 type ViewMode = "cards" | "list" | "grouped";
 
-const PAGE_SIZE = 48;
 const SEARCH_URL_DEBOUNCE_MS = 250;
 
 function parseList(value: string | null): string[] {
@@ -41,8 +40,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const searchParams = useSearchParams();
 
   const queryFromUrl = searchParams.get("q") ?? "";
-  const tagsParam = searchParams.get("tags") ?? "";
-  const selectedTags = parseList(tagsParam);
+  const selectedTags = parseList(searchParams.get("tags"));
   const selectedCategory = searchParams.get("category") ?? "";
   const selectedSide = searchParams.get("side") ?? "";
   const view = (searchParams.get("view") as ViewMode) || "cards";
@@ -51,7 +49,6 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const [draftQuery, setDraftQuery] = useState(queryFromUrl);
   const [tagQuery, setTagQuery] = useState("");
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const searchRef = useRef<HTMLInputElement>(null);
   // Tracks the last `q` we intentionally applied (typing sync or clear/back).
   const lastAppliedUrlQ = useRef(queryFromUrl);
@@ -125,18 +122,6 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
     }
     return list;
   }, [mods, fuse, deferredQuery, selectedCategory, selectedSide, selectedTags]);
-
-  useEffect(() => {
-    setVisibleCount(PAGE_SIZE);
-    // Use tagsParam (string), not selectedTags (new array every render) — that
-    // reset visibleCount on every click and made Show more look broken.
-  }, [deferredQuery, selectedCategory, selectedSide, tagsParam, view]);
-
-  const visibleMods = useMemo(
-    () => filtered.slice(0, visibleCount),
-    [filtered, visibleCount],
-  );
-  const hasMore = visibleCount < filtered.length;
 
   const tagCounts = useMemo(() => {
     const counts = new Map<string, number>();
@@ -281,18 +266,8 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
         <section className="space-y-4">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div className="text-sm text-muted">
-              {view !== "grouped" && hasMore ? (
-                <>
-                  Showing first{" "}
-                  <span className="font-mono text-foreground">{visibleMods.length}</span> of{" "}
-                  <span className="font-mono text-foreground">{filtered.length}</span> matches
-                </>
-              ) : (
-                <>
-                  Showing <span className="font-mono text-foreground">{filtered.length}</span> of{" "}
-                  <span className="font-mono text-foreground">{mods.length}</span> mods
-                </>
-              )}
+              Showing <span className="font-mono text-foreground">{filtered.length}</span> of{" "}
+              <span className="font-mono text-foreground">{mods.length}</span> mods
               {hasFilters ? (
                 <button
                   type="button"
@@ -348,7 +323,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
 
           {view === "cards" ? (
             <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-              {visibleMods.map((mod) => (
+              {filtered.map((mod) => (
                 <ModCard
                   key={mod.file}
                   mod={mod}
@@ -360,7 +335,7 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
           ) : null}
 
           {view === "list" ? (
-            <ModList mods={visibleMods} selectedFile={selectedModFile} onOpen={openMod} />
+            <ModList mods={filtered} selectedFile={selectedModFile} onOpen={openMod} />
           ) : null}
 
           {view === "grouped" ? (
@@ -384,18 +359,6 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
                   ))}
                 </div>
               ))}
-            </div>
-          ) : null}
-
-          {hasMore && view !== "grouped" ? (
-            <div className="flex justify-center pt-2">
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
-              >
-                Show more ({filtered.length - visibleCount} remaining)
-              </Button>
             </div>
           ) : null}
 
