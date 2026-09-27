@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.14] - 2026-09-27
+
+### Fixed
+
+- Spawn Clams no longer try to natural-spawn (constructor crash with Spectrum and Forbidden Arcanus was spamming the server and contributing to join timeouts). Other Spawn mobs stay.
+
 ## [0.1.13] - 2026-09-27
 
 ### Changed

@@ -233,12 +233,16 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplo
 hash = "98ef6f98d26d4947cb3293682029e6cba88b4c706e5ec13102f3e179148d8ca9"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/spawn/neoforge/biome_modifier/add_clam.json"
+hash = "19007f531461a3799fe76c9041927bd7773820ef27d62e0d54404dd52c832859"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/yungscavebiomes/worldgen/biome/lost_caves.json"
 hash = "de947cc471e598e0da5f3d77e9533024a10b9ee97e1feff74078cecf0b5c9697"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/pack.mcmeta"
-hash = "b8533c4bc208333b6d80b5e5f45963c2e6b4b6f588ecf8988b301d4e6f5a141e"
+hash = "4e885becc110f2b1f81bd20f538d2d826b41681b6b755edd7052daa79f9f184c"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-nether-fire-dragons/data/iceandfire/tags/worldgen/biome/structure_gen/fire.json"
