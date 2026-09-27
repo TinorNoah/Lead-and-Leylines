@@ -24,6 +24,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Myths of the Sea | Requires GeckoLib 4.7.4. The pack is on 4.9.3. |
 | Somake Spells | Apothic Attributes is in. Still requires Cataclysm. |
 | Weapons of Legendary Monsters | Forge 1.20.1 only. Project 1169738. |
+| Legendary Monsters (+ Box of Structures: Legendary Monsters) | Removed 2026-09-27. Living entities never get default attributes on NeoForge 1.21.1 (`has no attributes`; bosses missing /summon fails — upstream #6). No LM-only library deps were in the pack. Do not re-add until a build registers `EntityAttributeCreationEvent` correctly. |
 | Eternal Hunts | Requires Cataclysm, Mowzie's Mobs, and Born in Chaos. Cataclysm is not in the pack. |
 | Neo Vitae | Dropped from the pack (and BMAddon with it). World-data / demon dungeon. Revisit only with explicit approval. |
 | Chunk Pregenerator (+ Carbon Config) | Removed 2026-09-26. Hang on dedicated-server stop (`Pregen Chunk Task Queue`). Operator pregen is `/neoforge generate`. Do not re-add without fixing that shutdown hang. |

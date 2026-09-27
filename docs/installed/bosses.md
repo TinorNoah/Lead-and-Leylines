@@ -18,13 +18,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Qliphoth Awakening | `fdbosses-3.2-1.21.1.jar` | both | `core`, `boss` | Boss rush and its arenas. |
 | FDLib | `fdlib-1.0.9-1.21.1.jar` | both | `library`, `boss` | Library Qliphoth needs. |
 
-## Legendary Monsters
-
-| Mod | File | Side | Tags | What it adds |
-|---|---|---|---|---|
-| Legendary Monsters | `legendary_monsters-2.2.3 MC 1.21.1.jar` | both | `core`, `boss` | Mid-game and late-game bosses. |
-| Box of Structures: Legendary Monsters | `boslm-1.21.1-1.1.1.jar` | both | `addon`, `boss` | Rebuilt arenas for those bosses. |
-
 ## Mowzie's Mobs
 
 | Mod | File | Side | Tags | What it adds |

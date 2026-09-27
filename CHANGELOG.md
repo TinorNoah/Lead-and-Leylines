@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.15] - 2026-09-27
+
+### Removed
+
+- Legendary Monsters and Box of Structures: Legendary Monsters (bosses never registered default attributes on NeoForge, so arenas and summons were broken). Old worlds may keep missing LM blocks or structures.
+
 ## [0.1.14] - 2026-09-27
 
 ### Fixed

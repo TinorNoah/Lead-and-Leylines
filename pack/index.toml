@@ -1177,11 +1177,6 @@ hash = "66f64dd86c6a39c69d0feca05c79f58f30ebffcd6d4851628b671acb6eb8be18"
 metafile = true
 
 [[files]]
-file = "mods/box-of-structures-legendary-monsters.pw.toml"
-hash = "9217fc41388895723ff8d7a109534128aa149211d132a8e59f4b19ea671a5c6a"
-metafile = true
-
-[[files]]
 file = "mods/bridging-mod.pw.toml"
 hash = "9ea9a3018efe43ae83284cb05614459dc5eb69ef4816228ba79766551fcddad2"
 metafile = true
@@ -2264,11 +2259,6 @@ metafile = true
 [[files]]
 file = "mods/ldlib.pw.toml"
 hash = "add65f8e2180439bc7da2c1be05fe509a8205b9da7a36f375e12c1454006448f"
-metafile = true
-
-[[files]]
-file = "mods/legendary-monsters.pw.toml"
-hash = "3e1ed5bf60a3fdb842e364b3cad7d280cb1bd2d5128de95592fd719fb9c94bc8"
 metafile = true
 
 [[files]]
