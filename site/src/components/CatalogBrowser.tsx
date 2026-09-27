@@ -41,7 +41,8 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
   const searchParams = useSearchParams();
 
   const queryFromUrl = searchParams.get("q") ?? "";
-  const selectedTags = parseList(searchParams.get("tags"));
+  const tagsParam = searchParams.get("tags") ?? "";
+  const selectedTags = parseList(tagsParam);
   const selectedCategory = searchParams.get("category") ?? "";
   const selectedSide = searchParams.get("side") ?? "";
   const view = (searchParams.get("view") as ViewMode) || "cards";
@@ -127,7 +128,9 @@ export function CatalogBrowser({ mods, categories, tagVocabulary }: Props) {
 
   useEffect(() => {
     setVisibleCount(PAGE_SIZE);
-  }, [deferredQuery, selectedCategory, selectedSide, selectedTags, view]);
+    // Use tagsParam (string), not selectedTags (new array every render) — that
+    // reset visibleCount on every click and made Show more look broken.
+  }, [deferredQuery, selectedCategory, selectedSide, tagsParam, view]);
 
   const visibleMods = useMemo(
     () => filtered.slice(0, visibleCount),

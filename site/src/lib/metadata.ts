@@ -254,11 +254,19 @@ export async function getModMetadataMap(
 
   memory.inFlight = (async () => {
     const cache = await loadCache();
+    const needed = neededMods(mods);
     const missing = missingMods(mods, cache.entries);
     const stale = isStale(cache.updatedAt);
+    const covered = needed.length - missing.length;
+    const coverage = needed.length === 0 ? 1 : covered / needed.length;
     const hasEntries = Object.keys(cache.entries).length > 0;
 
-    // Warm cache: serve immediately; fill gaps / TTL refresh off the request path.
+    // Sparse cache (e.g. build-time Modrinth-only) must not ship as "warm" —
+    // await a gap fill so ISR does not bake hundreds of monograms for 10 minutes.
+    if (hasEntries && missing.length > 0 && coverage < 0.9) {
+      return refreshMetadata(mods, true);
+    }
+
     if (hasEntries) {
       if (missing.length > 0 || stale) {
         scheduleBackgroundRefresh(mods, missing.length > 0 && !stale);
