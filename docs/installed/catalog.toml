@@ -869,7 +869,7 @@ mods = [
   { file = "mezzconfig.pw.toml", blurb = "Config library JEI uses.", tags = ["library", "info", "jei"] },
   { file = "jei-quickcraft.pw.toml", blurb = "Craft from JEI with fewer clicks.", tags = ["addon", "info", "jei"] },
   { file = "jei-stuff.pw.toml", blurb = "Extra JEI pages.", tags = ["addon", "info", "jei"] },
-  { file = "jeioptimizer.pw.toml", blurb = "Cheaper JEI lookups.", tags = ["addon", "info", "jei"] },
+  { file = "just-enough-threads.pw.toml", blurb = "Off-thread JEI startup indexing for faster joins.", tags = ["addon", "optimizer", "jei"] },
   { file = "just-enough-resources-jer.pw.toml", blurb = "Mob drops and dungeon loot in JEI.", tags = ["addon", "info", "jei"] },
   { file = "smithing-template-viewer.pw.toml", blurb = "Smithing templates in JEI.", tags = ["addon", "info", "jei"] },
   { file = "notenoughrecipebook.pw.toml", blurb = "Removes the vanilla recipe book.", tags = ["addon", "info", "jei"] },

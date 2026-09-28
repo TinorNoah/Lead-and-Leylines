@@ -19,6 +19,22 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.18] - 2026-09-28
+
+### Added
+
+- Just Enough Threads: moves JEI's startup indexing off the main thread so joining a world is less likely to freeze.
+
+### Changed
+
+- Login Protection invulnerability window increased from 50 s to 250 s (5× the default) so players have more time to get their bearings after joining or respawning.
+
+### Fixed
+
+### Removed
+
+- JEIOptimizer: replaced by Just Enough Threads (same role; both mods target the same JEI routines).
+
 ## [0.1.17] - 2026-09-27
 
 ### Fixed

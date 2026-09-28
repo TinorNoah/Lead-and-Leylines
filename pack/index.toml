@@ -25,6 +25,10 @@ file = "config/iceandfire/iaf-common.json"
 hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
 
 [[files]]
+file = "config/logprot.json"
+hash = "2bd1bdc60fa8673e30420c6d75992676ff1c2edb52accbb4625283ebbb15d19c"
+
+[[files]]
 file = "config/structurify.json"
 hash = "51b3106c735621eba9e4f819b8f53bc8858f2f6f6aec9f9292e75f315e6fac71"
 
@@ -2499,11 +2503,6 @@ hash = "47c701c67e70b60b3a71c9ec4aff707ea0411f033024730b1ca0567b8526a824"
 metafile = true
 
 [[files]]
-file = "mods/jeioptimizer.pw.toml"
-hash = "12b3adb4e3121414fa782cd6cf3254cff69d9cb8557b2b7db45868120c657cfc"
-metafile = true
-
-[[files]]
 file = "mods/jet-just-enough-tacz.pw.toml"
 hash = "3ecf14c379d87063c5cc08f5d70e26af1cf54ce5dcaeb38ab5665909f79f35f7"
 metafile = true
@@ -2526,6 +2525,11 @@ metafile = true
 [[files]]
 file = "mods/just-enough-resources-jer.pw.toml"
 hash = "09b23a881bdecac75d237719e1f85e8a8b6b06fbad220f8ca4e2abeef9ad0843"
+metafile = true
+
+[[files]]
+file = "mods/just-enough-threads.pw.toml"
+hash = "e100ec7536ce0a2ca56d3f1ff42f06807500666eb290525221ce6cbd4cef25cd"
 metafile = true
 
 [[files]]

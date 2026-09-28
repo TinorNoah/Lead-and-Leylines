@@ -1,6 +1,6 @@
 # Lead and Leylines — mod manifest
 
-Synced with `pack/mods/*.pw.toml` on 2026-09-26. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Browse what is installed, grouped by type: [`docs/installed/`](../installed/README.md). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md). Distribution: [distribution.md](distribution.md). Not-yet-added candidates and remaining Forge mods: [deferred.md](deferred.md).
+Synced with `pack/mods/*.pw.toml` on 2026-09-28. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Browse what is installed, grouped by type: [`docs/installed/`](../installed/README.md). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md). Distribution: [distribution.md](distribution.md). Not-yet-added candidates and remaining Forge mods: [deferred.md](deferred.md).
 
 First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extra/culling/Create/FTB Quests/Pipez.
 
@@ -80,7 +80,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | CurseForge 1689768 / 8932688 | both | library | Required by current JEI on both sides. | none | defaults | 2026-09-22 |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | CurseForge 1074338 / 7727898 | client | recipes | Extra AE2 JEI pages. | JEI, AE2 | defaults | 2026-09-22 |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | CurseForge 1230497 / 6359014 | client | recipes | RS recipe transfer. 2.0.x is Minecraft 26.1.2. | JEI, RS | defaults | 2026-09-22 |
-| JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | CurseForge 1570444 / 8872445 | client | recipes | Faster JEI filter on join. ARR. Built against JEI 19.56; pack has 19.57. | JEI | defaults | 2026-09-22 |
+| Just Enough Threads | `justenoughthreads-0.14.1+1.21.1.jar` | CurseForge 1605658 / 8928917 | client | recipes | Multi-threaded JEI startup — moves ingredient indexing off the main thread. Replaces JEIOptimizer (same role; overlap risk). | JEI | defaults | 2026-09-28 |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | CurseForge 1482785 / 8848988 | client | recipes | Backpack recipe transfer. | JEI, Sophisticated | defaults | 2026-09-22 |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | CurseForge 1133580 / 7452053 | client | recipes | Armor trim preview. 1.1.0 is 26.1.2-only. | JEI | defaults | 2026-09-22 |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | CurseForge 1422344 / 8534122 | client | recipes | Paginated sequenced assembly (7+ steps). | JEI, Create | defaults | 2026-09-22 |
@@ -638,3 +638,4 @@ Long lists: [deferred.md](deferred.md).
 | C2ME OpenCL | 2026-09-18 | Java 25 class files on a Java 21 pack; TerraBlender listed as biome-placement fail. | No while Java 21. |
 | Fast Noise | 2026-09-18 | Tectonic CPS A/B: 7.62 vs 7.73 baseline. | No for CPS. |
 | ScalableLux | 2026-09-18 | Tectonic CPS A/B: 4.89 vs 7.73 baseline; lighting analysis errors. | No for CPS. |
+| JEIOptimizer | 2026-09-28 | Replaced by Just Enough Threads — both mods target the same JEI startup routines and running both risks instability. Built against JEI 19.56 while pack has 19.57. | No while Just Enough Threads is in. |
