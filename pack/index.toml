@@ -25,10 +25,6 @@ file = "config/iceandfire/iaf-common.json"
 hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
 
 [[files]]
-file = "config/logprot.json"
-hash = "2bd1bdc60fa8673e30420c6d75992676ff1c2edb52accbb4625283ebbb15d19c"
-
-[[files]]
 file = "config/structurify.json"
 hash = "51b3106c735621eba9e4f819b8f53bc8858f2f6f6aec9f9292e75f315e6fac71"
 
@@ -3794,4 +3790,4 @@ metafile = true
 
 [[files]]
 file = "user_jvm_args.txt"
-hash = "7b66a0bf909c12f6c069f3c084a67faadaf9ff187b7e842a094ecb8641ecde5f"
+hash = "80c083de79d05d261598750ded8aa62a518cd79c54b50996803bbb7ee8e2313e"

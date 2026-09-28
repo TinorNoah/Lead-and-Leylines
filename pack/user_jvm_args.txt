@@ -4,3 +4,6 @@
 # Other launchers: paste the same flags into that instance's Java arguments.
 # Do not add -XX:+ZGenerational.
 -XX:+UseZGC
+# Login/read timeout: 5× the 30s NeoForge default (prevents "Timed Out" kicks during registry sync on join).
+-Dfml.loginTimeout=150
+-Dfml.readTimeout=150

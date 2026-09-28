@@ -19,15 +19,17 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.19] - 2026-09-28
+
+### Changed
+
+- Login timeout increased from 30 s to 150 s (5×) via `-Dfml.loginTimeout=150 -Dfml.readTimeout=150` in `user_jvm_args.txt` — prevents "Timed Out" kicks during registry sync on join for players on slow connections or lower-end hardware.
+
 ## [0.1.18] - 2026-09-28
 
 ### Added
 
 - Just Enough Threads: moves JEI's startup indexing off the main thread so joining a world is less likely to freeze.
-
-### Changed
-
-- Login Protection invulnerability window increased from 50 s to 250 s (5× the default) so players have more time to get their bearings after joining or respawning.
 
 ### Fixed
 
