@@ -9,7 +9,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Create | `create-1.21.1-6.0.10.jar` | both | `core`, `tech`, `create` | Contraptions, kinetics, and trains' base mod. |
-| Create Crafts & Additions | `createaddition-1.7.1.jar` | both | `core`, `addon`, `tech`, `create` | Electric motor, alternator, and power. |
+| Create Crafts & Additions | `createaddition-1.7.1.jar` | both | `addon`, `tech`, `create` | Electric motor, alternator, and power. |
 | Create Deco | `createdeco-2.1.3.jar` | both | `addon`, `tech`, `create` | Decoration blocks. |
 | Create Encased | `Create Encased-1.21.1-1.9.0-ht3.jar` | both | `addon`, `tech`, `create` | Encased blocks. |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | both | `addon`, `tech`, `create` | Vein mine with Create. |
@@ -37,9 +37,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Alloyed | `alloyed-3.0.12+1.21.1-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Steel and bronze for Create. |
 | Create: Applied Kinetics | `createappliedkinetics-1.5.4-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
 | Create Nuclear | `createnuclear-1.3.2-beta.3-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Create nuclear power. |
-| Create: Metalwork | `createmetalwork-2.0.0.jar` | both | `addon`, `tech`, `create` | Extra Create metal blocks and parts. |
+| Create: Metalwork | `createmetalwork-neoforge-1.21.1-3.0.0.jar` | both | `addon`, `tech`, `create` | Extra Create metal blocks and parts. |
 | Create: Shimmer | `create-shimmer-1.3.1.jar` | both | `addon`, `tech`, `create` | Create lighting and ambience blocks. |
-| Create: Wizardry | `create_wizardry-1.21.1-0.5.1-pre1.jar` | both | `compat`, `tech`, `create`, `ars-nouveau` | Create machines for Ars Nouveau. |
 | Create: Fast SchematicCannon | `CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar` | both | `addon`, `tech`, `create` | Faster Create schematic cannons. |
 | Create: Blaze Burner Fuels | `create_blaze_burner_fuels-1.0.2-neoforge-1.21.1.jar` | both | `addon`, `tech`, `create` | More blaze burner fuels. |
 | Demagnetizer | `demagnetizer-neoforge-0.2.0-beta.1.jar` | both | `addon`, `tech`, `create` | Stops Create item magnets in a box. |

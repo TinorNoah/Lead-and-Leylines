@@ -1,6 +1,6 @@
 # Bosses
 
-Boss mods and any structure addons that rebuild their arenas.
+Boss mods and any structure addons that rebuild their arenas. Bosses' Rise is an Epic Fight boss pack; the rest of Epic Fight is in [Combat](combat.md).
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
@@ -22,13 +22,13 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Mowzie's Mobs | `mowziesmobs-1.21.1-1.8.2.jar` | both | `core`, `boss` | Overworld bosses. |
+| Mowzie's Mobs | `mowziesmobs-1.21.1-1.8.2.jar` | both | `core`, `boss` | Mowzie's bosses and their guards. |
 
 ## Other bosses
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Mutant Monsters | `MutantMonsters-v21.1.1-1.21.1-NeoForge.jar` | both | `core`, `boss` | Giant mutant mobs. |
 | Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | both | `core`, `boss` | Ocean bosses and the maze. |
 | Fragmentum [NeoForge Edition] | `fragmentum-5.0.0+1.21.1-neoforge.jar` | both | `library`, `boss` | Library Aquamirae needs. |
 | Illager Arena | `illager_arena-1.0.1-neoforge-1.21.1.jar` | both | `core`, `boss` | Desert arena of illager bosses. |
+| Bosses'Rise - Epic Souls like boss fights | `block_factorys_bosses-2.1.2-neo-1.21.1.jar` | both | `core`, `boss`, `epic-fight` | Extra boss fights that use Epic Fight movesets. |

@@ -14,7 +14,7 @@ boss = "Boss fights and arenas."
 mob = "Creatures and wildlife."
 worldgen = "Biomes, structures, or terrain."
 structure = "Dungeons, villages, landmarks."
-world-data = "Adds or changes world generation data."
+world-data = "Adds blocks, recipes, or loot data."
 guns = "Firearms."
 melee = "Melee weapons or combat movesets."
 magic = "Spells, enchanting, gems."
@@ -52,12 +52,14 @@ sophisticated = "Sophisticated Backpacks / Storage."
 yungs = "YUNG's structure mods."
 farmers-delight = "Farmer's Delight cluster."
 harvestcraft = "Pam's HarvestCraft."
+twilight-forest = "The Twilight Forest and its addons."
+modern-industrialization = "Modern Industrialization and its addons."
 
 
 [[category]]
 slug = "weapons"
 title = "Weapons"
-intro = """Guns and the addons that change those guns. Player melee animation is in [Combat](combat.md). Apotheosis itself is in [Magic](magic.md). Refined Storage is in [Refined Storage](refined-storage.md)."""
+intro = """Guns, gun packs, and the addons that change those guns. Melee movesets and parkour are in [Combat](combat.md). Apotheosis is in [Magic](magic.md)."""
 
 [[category.group]]
 name = "Timeless and Classics Zero"
@@ -65,7 +67,7 @@ mods = [
   { file = "tacz-1-21-1.pw.toml", blurb = "Guns. Unofficial 1.21.1 port.", tags = ["core", "guns", "tacz"] },
   { file = "gunsmith-lib.pw.toml", blurb = "Library Ragnarok and other TaCZ addons use.", tags = ["library", "guns", "tacz"] },
   { file = "tacz-addon.pw.toml", blurb = "Extra TaCZ parts and behavior.", tags = ["addon", "guns", "tacz"] },
-  { file = "tacz-runtime-compat.pw.toml", blurb = "Keeps TaCZ loading with the rest of the pack.", tags = ["compat", "guns", "tacz"] },
+  { file = "tacz-runtime-compat.pw.toml", blurb = "Keeps TaCZ loading beside the rest of the pack.", tags = ["compat", "guns", "tacz"] },
   { file = "tacz-pack-upgrader.pw.toml", blurb = "Updates older gun-pack data.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-refit.pw.toml", blurb = "Recipe and stat editor.", tags = ["addon", "guns", "tacz"] },
   { file = "curios-for-ammo-box.pw.toml", blurb = "Ammo box on a Curios slot.", tags = ["addon", "guns", "tacz"] },
@@ -85,7 +87,7 @@ mods = [
   { file = "tacz-bandits.pw.toml", blurb = "Gun-using bandits.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-turrets.pw.toml", blurb = "Placeable gun turrets.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-tactical-breaching.pw.toml", blurb = "Door-breaching charges.", tags = ["addon", "guns", "tacz"] },
-  { file = "elite-x-quality-guns.pw.toml", blurb = "Extra gun set.", tags = ["addon", "guns", "tacz"] },
+  { file = "elite-x-quality-guns.pw.toml", blurb = "Extra gun set.", tags = ["content-pack", "guns", "tacz"] },
   { file = "lr-tactical-1-21-1.pw.toml", blurb = "LesRaisins tactical gear.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-cs.pw.toml", blurb = "CS+ gun pack.", tags = ["content-pack", "guns", "tacz"] },
   { file = "tacz-mcs2-gunpack.pw.toml", blurb = "MCS2 gun pack.", tags = ["content-pack", "guns", "tacz"] },
@@ -104,14 +106,10 @@ mods = [
 ]
 
 [[category.group]]
-name = "Other weapons"
+name = "Armageddon"
 mods = [
-  { file = "weapons-of-miracles-epicfight.pw.toml", blurb = "Weapon movesets for Epic Fight.", tags = ["core", "epic-fight", "melee"] },
-  { file = "p1neros-epic-bow.pw.toml", blurb = "Bow moveset for Epic Fight.", tags = ["addon", "epic-fight", "melee"] },
-  { file = "compatlink-epic-fight-weapons-compat.pw.toml", blurb = "Lets more weapons use Epic Fight moves.", tags = ["compat", "epic-fight", "melee"] },
   { file = "armageddon.pw.toml", blurb = "Tiered weapons and armor.", tags = ["core", "melee"] },
   { file = "armageddon-tooltips.pw.toml", blurb = "Labels which Armageddon tier a tool is.", tags = ["addon", "melee"] },
-  { file = "refined-storage-quartz-arsenal.pw.toml", blurb = "Weapons crafted through Refined Storage.", tags = ["addon", "melee"] },
 ]
 
 [[category]]
@@ -123,17 +121,18 @@ intro = """How the player fights in melee and moves. Guns are in [Weapons](weapo
 name = "Epic Fight"
 mods = [
   { file = "epic-fight-mod.pw.toml", blurb = "Souls-like combat.", tags = ["core", "melee", "epic-fight"] },
-  { file = "aaa-particles.pw.toml", blurb = "Effekseer particles. Archaion and Gunsmith Lib use them too.", tags = ["addon", "melee"] },
+  { file = "weapons-of-miracles-epicfight.pw.toml", blurb = "Weapon movesets for Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "p1neros-epic-bow.pw.toml", blurb = "Bow moveset for Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "compatlink-epic-fight-weapons-compat.pw.toml", blurb = "Lets more weapons use Epic Fight moves.", tags = ["compat", "melee", "epic-fight"] },
   { file = "epic-fight-client-tweaks.pw.toml", blurb = "Client combat options.", tags = ["addon", "melee", "epic-fight"] },
   { file = "epic-fight-fps-optimizer.pw.toml", blurb = "Lowers Epic Fight render cost.", tags = ["addon", "melee", "epic-fight"] },
   { file = "epic-fight-progressive-difficulty.pw.toml", blurb = "Fights get harder over time.", tags = ["addon", "melee", "epic-fight"] },
   { file = "epicfightcurioscompat.pw.toml", blurb = "Curios slots while Epic Fight mode is on. Client only.", tags = ["compat", "melee", "epic-fight"] },
   { file = "epic-fight-x-parcool.pw.toml", blurb = "ParCool movement during Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
   { file = "epic-fight-x-punchy-neo.pw.toml", blurb = "Hides Punchy fists while Epic Fight mode is on.", tags = ["addon", "melee", "epic-fight"] },
-  { file = "epic-fight-twilight-forest-compat.pw.toml", blurb = "Twilight Forest weapons in Epic Fight.", tags = ["compat", "melee", "epic-fight"] },
+  { file = "epic-fight-twilight-forest-compat.pw.toml", blurb = "Twilight Forest weapons in Epic Fight.", tags = ["compat", "melee", "epic-fight", "twilight-forest"] },
   { file = "ice-and-fire-x-epic-fight.pw.toml", blurb = "Ice and Fire armor in Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
   { file = "neo-forge-epic-fight-x-irons-spells-enhanced.pw.toml", blurb = "Iron's Spells cast animations.", tags = ["addon", "melee", "epic-fight", "irons-spells"] },
-  { file = "bossesrise.pw.toml", blurb = "Extra boss fights built for Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
 ]
 
 [[category.group]]
@@ -147,7 +146,7 @@ mods = [
 [[category]]
 slug = "bosses"
 title = "Bosses"
-intro = """Boss mods and any structure addons that rebuild their arenas."""
+intro = """Boss mods and any structure addons that rebuild their arenas. Bosses' Rise is an Epic Fight boss pack; the rest of Epic Fight is in [Combat](combat.md)."""
 
 [[category.group]]
 name = "Bosses of Mass Destruction"
@@ -166,16 +165,16 @@ mods = [
 [[category.group]]
 name = "Mowzie's Mobs"
 mods = [
-  { file = "mowzies-mobs.pw.toml", blurb = "Overworld bosses.", tags = ["core", "boss"] },
+  { file = "mowzies-mobs.pw.toml", blurb = "Mowzie's bosses and their guards.", tags = ["core", "boss"] },
 ]
 
 [[category.group]]
 name = "Other bosses"
 mods = [
-  { file = "mutant-monsters.pw.toml", blurb = "Giant mutant mobs.", tags = ["core", "boss"] },
   { file = "aquamirae.pw.toml", blurb = "Ocean bosses and the maze.", tags = ["core", "boss"] },
   { file = "fragmentum-neoforge.pw.toml", blurb = "Library Aquamirae needs.", tags = ["library", "boss"] },
   { file = "illager-arena.pw.toml", blurb = "Desert arena of illager bosses.", tags = ["core", "boss"] },
+  { file = "bossesrise.pw.toml", blurb = "Extra boss fights that use Epic Fight movesets.", tags = ["core", "boss", "epic-fight"] },
 ]
 
 [[category]]
@@ -199,6 +198,7 @@ mods = [
   { file = "born-in-chaos.pw.toml", blurb = "Chaos mobs and infected ore.", tags = ["core", "mob"] },
   { file = "born-in-configuration.pw.toml", blurb = "Config screen for Born in Chaos.", tags = ["addon", "mob"] },
   { file = "born-in-chaos-jade-compat.pw.toml", blurb = "Jade shows infected diamond ore as diamond ore.", tags = ["compat", "mob", "jade"] },
+  { file = "mutant-monsters.pw.toml", blurb = "Mutant versions of vanilla mobs, some boss-sized.", tags = ["core", "mob"] },
 ]
 
 [[category.group]]
@@ -221,17 +221,17 @@ mods = [
 ]
 
 [[category.group]]
-name = "Mob farms"
+name = "Mob difficulty and farms"
 mods = [
   { file = "mob-grinding-utils.pw.toml", blurb = "Mob farm machines and spikes.", tags = ["core", "mob", "world-data"] },
   { file = "mob-grinding-utils-vanillafied.pw.toml", blurb = "Resource pack. Vanilla-styled Mob Grinding Utils textures.", tags = ["resource-pack", "mob"] },
-  { file = "buff-mobs.pw.toml", blurb = "Configurable harder mobs.", tags = ["addon", "mob"] },
+  { file = "buff-mobs.pw.toml", blurb = "Makes mobs harder, per mob type.", tags = ["addon", "mob"] },
 ]
 
 [[category]]
 slug = "structures"
 title = "Structures"
-intro = """Dungeons, villages, and the tools that space or label them. Boss arenas that belong to one boss mod are in [Bosses](bosses.md). Nether-only structures are in [The Nether](nether.md)."""
+intro = """Dungeons, villages, and the tools that space or label them. Boss arenas that belong to one boss mod are in [Bosses](bosses.md). Nether structures are in [The Nether](nether.md) and the End dragon-fight island is in [The End](end.md)."""
 
 [[category.group]]
 name = "YUNG's"
@@ -242,7 +242,6 @@ mods = [
   { file = "yungs-better-strongholds-neoforge.pw.toml", blurb = "Rebuilt strongholds.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
   { file = "yungs-better-ocean-monuments-neoforge.pw.toml", blurb = "Rebuilt ocean monuments.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
   { file = "yungs-better-desert-temples-neoforge.pw.toml", blurb = "Rebuilt desert temples.", tags = ["core", "structure", "worldgen", "yungs", "world-data"] },
-  { file = "yungs-better-end-island-neoforge.pw.toml", blurb = "Rebuilt the central End island dragon fight.", tags = ["core", "structure", "worldgen", "yungs", "end", "world-data"] },
   { file = "yungs-bridges-neoforge.pw.toml", blurb = "Bridges between villages and terrain.", tags = ["compat", "structure", "worldgen", "yungs", "world-data"] },
 ]
 
@@ -251,13 +250,11 @@ name = "Dungeons"
 mods = [
   { file = "when-dungeons-arise.pw.toml", blurb = "Large overworld dungeons.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "when-dungeons-arise-seven-seas.pw.toml", blurb = "Ocean dungeons for When Dungeons Arise.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "loot-integrations.pw.toml", blurb = "Library that mixes mod loot into structure chests.", tags = ["library", "structure", "world-data"] },
   { file = "loot-integrations-when-dungeons-arise.pw.toml", blurb = "Modded loot in When Dungeons Arise chests.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "dungeon-now-loading-1-21-1-port.pw.toml", blurb = "Unofficial port of Dungeon Now Loading.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "awesome-dungeon.pw.toml", blurb = "Extra dungeon set.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "library-ferret.pw.toml", blurb = "Library Awesome Dungeon needs.", tags = ["library", "structure", "worldgen"] },
-  { file = "the-lost-cities.pw.toml", blurb = "Ruined city worldgen.", tags = ["core", "structure", "worldgen", "world-data"] },
-  { file = "lc2h.pw.toml", blurb = "Multithreaded Lost Cities generation.", tags = ["addon", "structure", "worldgen", "world-data"] },
-  { file = "quantified-api.pw.toml", blurb = "Library Lost Cities: Multithreaded needs.", tags = ["library", "structure", "worldgen"] },
 ]
 
 [[category.group]]
@@ -266,13 +263,16 @@ mods = [
   { file = "epic-villages.pw.toml", blurb = "Rebuilt villages.", tags = ["core", "structure", "worldgen", "world-data"] },
   { file = "epic-structures-witch-huts.pw.toml", blurb = "Rebuilt witch huts.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "epic-structures-jungle-temples.pw.toml", blurb = "Rebuilt jungle temples.", tags = ["addon", "structure", "worldgen", "world-data"] },
-  { file = "create-sky-village.pw.toml", blurb = "Villages built from Create blocks.", tags = ["addon", "structure", "worldgen", "create", "world-data"] },
+  { file = "create-sky-village.pw.toml", blurb = "Villages made of Create blocks.", tags = ["addon", "structure", "worldgen", "create", "world-data"] },
   { file = "mmr-moogs-mineshafts-reimagined.pw.toml", blurb = "Rebuilt mineshafts.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "moogs-structure-lib.pw.toml", blurb = "Library Moog's structures need.", tags = ["library", "structure", "worldgen"] },
   { file = "lukis-ancient-cities.pw.toml", blurb = "New ancient city layouts.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "lukis-woodland-mansions.pw.toml", blurb = "New woodland mansion layouts.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "the-lost-cities.pw.toml", blurb = "Ruined city worldgen.", tags = ["core", "structure", "worldgen", "world-data"] },
+  { file = "lc2h.pw.toml", blurb = "Multithreaded Lost Cities generation.", tags = ["addon", "structure", "worldgen", "world-data"] },
+  { file = "quantified-api.pw.toml", blurb = "Library Lost Cities: Multithreaded needs.", tags = ["library", "structure", "worldgen"] },
   { file = "compat-structure.pw.toml", blurb = "Structures that bridge other structure mods.", tags = ["compat", "structure", "worldgen", "world-data"] },
-  { file = "compat-api.pw.toml", blurb = "Library Compat Structure needs.", tags = ["library", "compat", "structure", "worldgen"] },
+  { file = "compat-api.pw.toml", blurb = "Library Compat Structure needs.", tags = ["library", "structure"] },
 ]
 
 [[category.group]]
@@ -282,7 +282,6 @@ mods = [
   { file = "structure-layout-optimizer.pw.toml", blurb = "Faster structure placement.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "resourceful-config.pw.toml", blurb = "Library Structure Layout Optimizer needs.", tags = ["library", "structure", "worldgen"] },
   { file = "wits.pw.toml", blurb = "Names the structure you are standing in.", tags = ["addon", "structure", "worldgen", "world-data"] },
-  { file = "loot-integrations.pw.toml", blurb = "Mixes mod loot into structure chests.", tags = ["addon", "structure", "worldgen", "world-data"] },
   { file = "lootr.pw.toml", blurb = "Per-player structure loot.", tags = ["core", "structure", "worldgen", "world-data"] },
 ]
 
@@ -311,7 +310,7 @@ mods = [
 [[category.group]]
 name = "Caves"
 mods = [
-  { file = "yungs-cave-biomes.pw.toml", blurb = "Cave biome set from YUNG.", tags = ["addon", "worldgen", "yungs", "world-data"] },
+  { file = "yungs-cave-biomes.pw.toml", blurb = "Cave biome set from YUNG.", tags = ["core", "worldgen", "yungs", "world-data"] },
 ]
 
 [[category.group]]
@@ -342,13 +341,13 @@ mods = [
   { file = "nether-remastered.pw.toml", blurb = "Nether structures and mobs.", tags = ["addon", "worldgen", "nether", "world-data"] },
   { file = "just-in-nether.pw.toml", blurb = "Small Nether additions.", tags = ["addon", "worldgen", "nether", "world-data"] },
   { file = "nether-villager-trader.pw.toml", blurb = "Nether trading.", tags = ["addon", "worldgen", "nether", "world-data"] },
-  { file = "yungs-better-nether-fortresses-neoforge.pw.toml", blurb = "Rebuilt nether fortresses.", tags = ["addon", "worldgen", "nether", "yungs", "world-data"] },
+  { file = "yungs-better-nether-fortresses-neoforge.pw.toml", blurb = "Rebuilt nether fortresses.", tags = ["addon", "structure", "worldgen", "nether", "yungs", "world-data"] },
 ]
 
 [[category]]
 slug = "end"
 title = "The End"
-intro = """End biomes and the End expansion."""
+intro = """End biomes and the End expansion. The rebuilt central dragon-fight island is here too."""
 
 [[category.group]]
 name = "The End"
@@ -357,12 +356,13 @@ mods = [
   { file = "blueprint.pw.toml", blurb = "Library Unusual End needs.", tags = ["library", "worldgen", "end"] },
   { file = "nullscape.pw.toml", blurb = "End islands and biome look.", tags = ["core", "worldgen", "end", "world-data"] },
   { file = "betterend-neoforge.pw.toml", blurb = "BetterEnd biomes, mobs, and gear. Shares New Dawn libs with BetterNether.", tags = ["core", "worldgen", "end", "world-data"] },
+  { file = "yungs-better-end-island-neoforge.pw.toml", blurb = "Rebuilt the central End island dragon fight.", tags = ["addon", "structure", "worldgen", "end", "yungs", "world-data"] },
 ]
 
 [[category]]
 slug = "magic"
 title = "Magic"
-intro = """Spell mods and their addons. Gun affixes for TaCZ and Point Blank are in [Weapons](weapons.md). Cooking spells are listed here because they extend Iron's Spells."""
+intro = """Spell mods and their addons. Gun affixes for TaCZ and Point Blank are in [Weapons](weapons.md). Foods that other mods bring are in [Food](food.md). Cooking spells are listed here because they extend Iron's Spells."""
 
 [[category.group]]
 name = "Ars Nouveau"
@@ -372,12 +372,10 @@ mods = [
   { file = "ars-elemental.pw.toml", blurb = "Elemental spells.", tags = ["addon", "magic", "ars-nouveau"] },
   { file = "ars-elemancy.pw.toml", blurb = "Dual-element gear.", tags = ["addon", "magic", "ars-nouveau"] },
   { file = "ars-controle.pw.toml", blurb = "Spell control and filters.", tags = ["addon", "magic", "ars-nouveau"] },
-  { file = "ars-creo.pw.toml", blurb = "Ars machines on Create.", tags = ["addon", "magic", "ars-nouveau"] },
-  { file = "ars-technica.pw.toml", blurb = "Ars tools on Create.", tags = ["addon", "magic", "ars-nouveau"] },
-  { file = "ars-energistique.pw.toml", blurb = "Ars sources in Applied Energistics.", tags = ["addon", "magic", "ars-nouveau"] },
-  { file = "ars-nouveaus-flavors-delight.pw.toml", blurb = "Ars foods.", tags = ["addon", "magic", "ars-nouveau", "farmers-delight", "food"] },
-  { file = "sophisticated-backpacks-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Backpacks.", tags = ["compat", "magic", "sophisticated"] },
-  { file = "sophisticated-storage-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Storage.", tags = ["compat", "magic", "sophisticated"] },
+  { file = "ars-creo.pw.toml", blurb = "Ars machines on Create.", tags = ["addon", "magic", "ars-nouveau", "create"] },
+  { file = "ars-technica.pw.toml", blurb = "Ars tools on Create.", tags = ["addon", "magic", "ars-nouveau", "create"] },
+  { file = "create-wizardry.pw.toml", blurb = "Create machines for Ars Nouveau.", tags = ["addon", "magic", "ars-nouveau", "create"] },
+  { file = "ars-energistique.pw.toml", blurb = "Ars sources in Applied Energistics.", tags = ["addon", "magic", "ars-nouveau", "ae2"] },
   { file = "ars-nouveau-refresh.pw.toml", blurb = "Resource pack. Refreshed Ars item textures.", tags = ["resource-pack", "magic", "ars-nouveau"] },
   { file = "not-enough-glyphs.pw.toml", blurb = "More Ars glyphs.", tags = ["addon", "magic", "ars-nouveau", "world-data"] },
 ]
@@ -387,9 +385,9 @@ name = "Iron's Spells"
 mods = [
   { file = "irons-spells-n-spellbooks.pw.toml", blurb = "Spellbooks. Pinned to 3.16.3 so the Create addon keeps working.", tags = ["core", "magic", "irons-spells"] },
   { file = "irons-lib.pw.toml", blurb = "Library Iron's Spells needs.", tags = ["library", "magic"] },
-  { file = "aces-spell-utils.pw.toml", blurb = "Library the Twilight spellbooks need.", tags = ["library", "magic", "irons-spells"] },
-  { file = "azurelib.pw.toml", blurb = "Library the Twilight spellbooks load at runtime.", tags = ["library", "magic", "irons-spells"] },
-  { file = "spellbooks-of-twilight-irons-spells-x-the-twilight.pw.toml", blurb = "Twilight Forest spells.", tags = ["addon", "magic", "irons-spells"] },
+  { file = "aces-spell-utils.pw.toml", blurb = "Library the Twilight spellbooks need.", tags = ["library", "magic", "irons-spells", "twilight-forest"] },
+  { file = "azurelib.pw.toml", blurb = "Library the Twilight spellbooks load at runtime.", tags = ["library", "magic", "irons-spells", "twilight-forest"] },
+  { file = "spellbooks-of-twilight-irons-spells-x-the-twilight.pw.toml", blurb = "Twilight Forest spells.", tags = ["addon", "magic", "irons-spells", "twilight-forest"] },
   { file = "create-spellworks-irons-spells-n-spellbooks.pw.toml", blurb = "Create spell tools.", tags = ["addon", "magic", "create", "irons-spells"] },
   { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
   { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
@@ -440,7 +438,7 @@ mods = [
 [[category]]
 slug = "food"
 title = "Food"
-intro = """Kitchens and cooking. Mob-specific cooking that belongs to one creature mod stays on that mod's page: Ars foods under [Magic](magic.md)."""
+intro = """Kitchens and cooking, including the food addons that other mods bring (Ars Nouveau, Twilight Forest, Jaden's Nether Expansion)."""
 
 [[category.group]]
 name = "Farmer's Delight"
@@ -450,16 +448,22 @@ mods = [
   { file = "mysterious-mountain-lib.pw.toml", blurb = "Library Corn Delight needs.", tags = ["library", "food"] },
   { file = "my-nethers-delight.pw.toml", blurb = "Nether foods.", tags = ["addon", "food", "farmers-delight"] },
   { file = "jadens-nether-expansion-delight.pw.toml", blurb = "Foods from Jaden's Nether Expansion.", tags = ["addon", "food", "jade", "farmers-delight"] },
-  { file = "twilights-flavors-delight.pw.toml", blurb = "Twilight Forest foods.", tags = ["addon", "food", "farmers-delight"] },
+  { file = "ars-nouveaus-flavors-delight.pw.toml", blurb = "Foods from Ars Nouveau.", tags = ["addon", "food", "ars-nouveau", "farmers-delight"] },
+  { file = "twilights-flavors-delight.pw.toml", blurb = "Twilight Forest foods.", tags = ["addon", "food", "farmers-delight", "twilight-forest"] },
   { file = "autochefs-delight.pw.toml", blurb = "Automated cooking.", tags = ["addon", "food", "farmers-delight"] },
   { file = "barbeques-delight.pw.toml", blurb = "Grill foods.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-betternether.pw.toml", blurb = "Cutting recipes for BetterNether.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-betterend.pw.toml", blurb = "Cutting recipes for BetterEnd: New Dawn.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-oh-the-biomes-weve-gone.pw.toml", blurb = "Cutting recipes for Oh The Biomes We've Gone.", tags = ["addon", "food", "farmers-delight"] },
   { file = "farmers-cutting-regions-unexplored.pw.toml", blurb = "Cutting recipes for Regions Unexplored.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-twilight-forest.pw.toml", blurb = "Cutting recipes for Twilight Forest.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "spice-of-life-carrot-edition.pw.toml", blurb = "Food variety raises max health.", tags = ["core", "food"] },
+  { file = "farmers-cutting-twilight-forest.pw.toml", blurb = "Cutting recipes for Twilight Forest.", tags = ["addon", "food", "farmers-delight", "twilight-forest"] },
+]
+
+[[category.group]]
+name = "Hunger and health"
+mods = [
   { file = "appleskin.pw.toml", blurb = "Hunger and saturation on the food tooltip.", tags = ["core", "food"] },
+  { file = "spice-of-life-carrot-edition.pw.toml", blurb = "Food variety raises max health.", tags = ["core", "food"] },
 ]
 
 [[category.group]]
@@ -516,6 +520,7 @@ mods = [
   { file = "sophisticated-backpacks-create-integration.pw.toml", blurb = "Create inventory on backpacks.", tags = ["addon", "storage", "create", "sophisticated"] },
   { file = "create-sophisticated-backpacks-compat.pw.toml", blurb = "Create contraptions can use backpacks.", tags = ["compat", "storage", "create", "sophisticated"] },
   { file = "sophisticated-backpacks-jade-compatibility.pw.toml", blurb = "Jade labels on backpacks.", tags = ["compat", "storage", "jade", "sophisticated"] },
+  { file = "sophisticated-backpacks-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Backpacks.", tags = ["compat", "storage", "sophisticated", "ars-nouveau"] },
   { file = "sophisticated-backpacks-rs-bridge-quick-deposit.pw.toml", blurb = "Deposit a backpack into Refined Storage.", tags = ["addon", "storage", "sophisticated"] },
   { file = "mekanism-sophisticated-backpacks-compat-chemical.pw.toml", blurb = "Mekanism chemical tanks in backpacks.", tags = ["compat", "storage", "mekanism", "sophisticated"] },
   { file = "sophisticated-inventory-interactions.pw.toml", blurb = "Extra inventory clicks.", tags = ["addon", "storage", "sophisticated"] },
@@ -530,6 +535,7 @@ name = "Sophisticated Storage"
 mods = [
   { file = "sophisticated-storage.pw.toml", blurb = "Upgradable chests and barrels.", tags = ["core", "storage", "sophisticated"] },
   { file = "sophisticated-storage-create-integration.pw.toml", blurb = "Create inventory on those chests.", tags = ["addon", "storage", "create", "sophisticated"] },
+  { file = "sophisticated-storage-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Storage.", tags = ["compat", "storage", "sophisticated", "ars-nouveau"] },
   { file = "sophisticated-chest-optimized.pw.toml", blurb = "Cheaper chest rendering.", tags = ["addon", "storage", "sophisticated"] },
 ]
 
@@ -550,13 +556,12 @@ mods = [
 [[category]]
 slug = "applied-energistics"
 title = "Applied Energistics"
-intro = """ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.md). The Ars bridge is in [Magic](magic.md). The Mekanism bridge is listed here and again noted under [Mekanism](mekanism.md)."""
+intro = """ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.md). The Ars bridge is in [Magic](magic.md). The Mekanism bridges are here; Mekanism itself is in [Mekanism](mekanism.md). Kotlin for Forge, which several AE2 addons need, is in [Libraries](libraries.md)."""
 
 [[category.group]]
 name = "Applied Energistics 2"
 mods = [
   { file = "applied-energistics-2.pw.toml", blurb = "ME networks and autocrafting.", tags = ["core", "tech", "storage", "ae2"] },
-  { file = "kotlin-for-forge.pw.toml", blurb = "Kotlin runtime. AE2 MEGA Things, Better P2P, Observable, and Inventory Profiles Next need it.", tags = ["library", "tech", "storage", "ae2"] },
   { file = "glodium.pw.toml", blurb = "Library Applied Flux and ExtendedAE need.", tags = ["library", "tech", "storage", "ae2"] },
   { file = "applied-energistics-2-wireless-terminals.pw.toml", blurb = "Wireless terminals.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "guideme.pw.toml", blurb = "In-game guide AE2, Modern Industrialization, and Little Big Redstone use.", tags = ["library", "tech", "storage", "ae2"] },
@@ -582,18 +587,19 @@ mods = [
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
-  { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull from Applied Energistics.", tags = ["compat", "building", "ae2"] },
+  { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull items from Applied Energistics.", tags = ["compat", "building", "ae2"] },
 ]
 
 [[category]]
 slug = "refined-storage"
 title = "Refined Storage"
-intro = """Disks, grids, and the addons that extend them. Quartz Arsenal weapons are in [Weapons](weapons.md). The backpack deposit bridge is in [Storage](storage.md). Applied Energistics is in [Applied Energistics](applied-energistics.md)."""
+intro = """Disks, grids, autocrafting, and the addons that extend them, including the wireless crafting grid. The backpack deposit bridge is in [Storage](storage.md). Applied Energistics is in [Applied Energistics](applied-energistics.md)."""
 
 [[category.group]]
 name = "Refined Storage"
 mods = [
   { file = "refined-storage.pw.toml", blurb = "Disks, grids, and autocrafting.", tags = ["core", "tech", "storage", "refined-storage"] },
+  { file = "refined-storage-quartz-arsenal.pw.toml", blurb = "Wireless crafting grid for Refined Storage networks.", tags = ["addon", "tech", "storage", "refined-storage"] },
   { file = "extrastorage.pw.toml", blurb = "Larger disks and crafters.", tags = ["addon", "tech", "storage", "refined-storage"] },
   { file = "edivadlib.pw.toml", blurb = "Library ExtraStorage needs.", tags = ["library", "tech", "storage", "refined-storage"] },
   { file = "interdimensional-wireless-transmitter.pw.toml", blurb = "Wireless transmitter that reaches every dimension.", tags = ["addon", "tech", "storage", "refined-storage"] },
@@ -632,7 +638,7 @@ intro = """Contraptions and kinetics, including trains. Fast travel, pipes, and 
 name = "Create"
 mods = [
   { file = "create.pw.toml", blurb = "Contraptions, kinetics, and trains' base mod.", tags = ["core", "tech", "create"] },
-  { file = "createaddition.pw.toml", blurb = "Electric motor, alternator, and power.", tags = ["core", "addon", "tech", "create"] },
+  { file = "createaddition.pw.toml", blurb = "Electric motor, alternator, and power.", tags = ["addon", "tech", "create"] },
   { file = "create-deco.pw.toml", blurb = "Decoration blocks.", tags = ["addon", "tech", "create"] },
   { file = "create-encased.pw.toml", blurb = "Encased blocks.", tags = ["addon", "tech", "create"] },
   { file = "create-ultimine.pw.toml", blurb = "Vein mine with Create.", tags = ["addon", "tech", "create"] },
@@ -662,7 +668,6 @@ mods = [
   { file = "createnuclear.pw.toml", blurb = "Create nuclear power.", tags = ["addon", "tech", "create", "world-data"] },
   { file = "create-metalwork.pw.toml", blurb = "Extra Create metal blocks and parts.", tags = ["addon", "tech", "create"] },
   { file = "create-shimmer.pw.toml", blurb = "Create lighting and ambience blocks.", tags = ["addon", "tech", "create"] },
-  { file = "create-wizardry.pw.toml", blurb = "Create machines for Ars Nouveau.", tags = ["compat", "tech", "create", "ars-nouveau"] },
   { file = "create-fast-schematiccannon.pw.toml", blurb = "Faster Create schematic cannons.", tags = ["addon", "tech", "create"] },
   { file = "create-blaze-burner-fuels.pw.toml", blurb = "More blaze burner fuels.", tags = ["addon", "tech", "create"] },
   { file = "demagnetizer.pw.toml", blurb = "Stops Create item magnets in a box.", tags = ["addon", "tech", "create"] },
@@ -676,12 +681,12 @@ intro = """Extra machine mods beside Create and Mekanism. Pipes and routers are 
 [[category.group]]
 name = "Modern Industrialization"
 mods = [
-  { file = "modern-industrialization.pw.toml", blurb = "A separate factory tech tree.", tags = ["core", "tech", "world-data"] },
-  { file = "extended-industrialization.pw.toml", blurb = "Extra Modern Industrialization machines.", tags = ["addon", "tech", "world-data"] },
-  { file = "solar-industrialization.pw.toml", blurb = "Solar panels for Modern Industrialization.", tags = ["addon", "tech"] },
-  { file = "modern-industrialization-structure-viewer.pw.toml", blurb = "In-world MI multiblock preview.", tags = ["addon", "tech"] },
-  { file = "ldlib.pw.toml", blurb = "Library the MI structure viewer needs.", tags = ["library", "tech"] },
-  { file = "modern-industrial-routers.pw.toml", blurb = "Router upgrades for this mod's energy.", tags = ["addon", "tech", "transport"] },
+  { file = "modern-industrialization.pw.toml", blurb = "A separate factory tech tree.", tags = ["core", "tech", "modern-industrialization", "world-data"] },
+  { file = "extended-industrialization.pw.toml", blurb = "Extra Modern Industrialization machines.", tags = ["addon", "tech", "modern-industrialization", "world-data"] },
+  { file = "solar-industrialization.pw.toml", blurb = "Solar panels for Modern Industrialization.", tags = ["addon", "tech", "modern-industrialization"] },
+  { file = "modern-industrialization-structure-viewer.pw.toml", blurb = "In-world MI multiblock preview.", tags = ["addon", "tech", "modern-industrialization"] },
+  { file = "ldlib.pw.toml", blurb = "Library the MI structure viewer needs.", tags = ["library", "tech", "modern-industrialization"] },
+  { file = "modern-industrial-routers.pw.toml", blurb = "Router upgrades for Modern Industrialization energy.", tags = ["addon", "tech", "modern-industrialization", "transport"] },
 ]
 
 [[category.group]]
@@ -719,7 +724,7 @@ mods = [
   { file = "xnet.pw.toml", blurb = "Channel-based item, fluid, and energy networks.", tags = ["core", "transport", "world-data"] },
   { file = "rftools-base.pw.toml", blurb = "Base blocks XNet needs.", tags = ["library", "transport"] },
   { file = "mcjtylib.pw.toml", blurb = "Library McJty mods need.", tags = ["library", "transport"] },
-  { file = "simple-conveyor-belts.pw.toml", blurb = "Simple item conveyor belts.", tags = ["addon", "transport"] },
+  { file = "simple-conveyor-belts.pw.toml", blurb = "Simple item conveyor belts.", tags = ["core", "transport"] },
 ]
 
 [[category.group]]
@@ -795,9 +800,9 @@ mods = [
 [[category.group]]
 name = "Dimensions"
 mods = [
-  { file = "the-twilight-forest.pw.toml", blurb = "Twilight Forest dimension.", tags = ["core", "exploration"] },
-  { file = "tw-resurrection.pw.toml", blurb = "Respawn Twilight Forest bosses.", tags = ["addon", "exploration", "world-data"] },
-  { file = "twilight-forest-dungeons-villages.pw.toml", blurb = "Twilight Forest villages and dungeons.", tags = ["addon", "exploration", "world-data"] },
+  { file = "the-twilight-forest.pw.toml", blurb = "Twilight Forest dimension.", tags = ["core", "exploration", "twilight-forest"] },
+  { file = "tw-resurrection.pw.toml", blurb = "Respawn Twilight Forest bosses.", tags = ["addon", "exploration", "twilight-forest", "world-data"] },
+  { file = "twilight-forest-dungeons-villages.pw.toml", blurb = "Twilight Forest villages and dungeons.", tags = ["addon", "exploration", "twilight-forest", "world-data"] },
 ]
 
 [[category]]
@@ -918,7 +923,7 @@ mods = [
   { file = "asyncparticles.pw.toml", blurb = "Particle rendering off the main thread.", tags = ["addon", "rendering", "optimizer"] },
   { file = "particle-rain.pw.toml", blurb = "Weather drawn with particles.", tags = ["addon", "rendering"] },
   { file = "subtle-effects.pw.toml", blurb = "Extra ambient particles and sounds.", tags = ["addon", "rendering"] },
-  { file = "geckolibbetterfps.pw.toml", blurb = "Cheaper GeckoLib animations.", tags = ["library", "rendering", "optimizer"] },
+  { file = "geckolibbetterfps.pw.toml", blurb = "Cheaper GeckoLib animations.", tags = ["addon", "rendering", "optimizer"] },
 ]
 
 [[category.group]]
@@ -933,9 +938,9 @@ mods = [
 name = "Entity models"
 mods = [
   { file = "entity-model-features.pw.toml", blurb = "Custom entity models. Some mobs stay on vanilla models while Epic Fight is in.", tags = ["core", "rendering"] },
-  { file = "entity-texture-features-fabric.pw.toml", blurb = "Custom entity textures. EMF needs this.", tags = ["core", "rendering"] },
-  { file = "emf-compat-core.pw.toml", blurb = "EMF compat library.", tags = ["library", "compat", "rendering"] },
-  { file = "fresh-animations.pw.toml", blurb = "Resource pack. Fresh Animations.", tags = ["core", "resource-pack", "rendering"] },
+  { file = "entity-texture-features-fabric.pw.toml", blurb = "Custom entity textures. EMF needs this.", tags = ["addon", "rendering"] },
+  { file = "emf-compat-core.pw.toml", blurb = "EMF compat library.", tags = ["library", "rendering"] },
+  { file = "fresh-animations.pw.toml", blurb = "Resource pack. Fresh Animations.", tags = ["resource-pack", "rendering"] },
   { file = "fresh-animations-extensions.pw.toml", blurb = "Resource pack. Fresh Animations extensions.", tags = ["resource-pack", "rendering"] },
   { file = "darkest-ages-mobs.pw.toml", blurb = "Resource pack. Darkest Ages mobs.", tags = ["resource-pack", "rendering"] },
   { file = "darkest-ages-mobs-fresh-animations.pw.toml", blurb = "Resource pack. Darkest Ages plus Fresh Animations.", tags = ["resource-pack", "rendering"] },
@@ -977,13 +982,13 @@ mods = [
   { file = "ambientsounds.pw.toml", blurb = "Ambient soundscapes.", tags = ["addon", "client-qol"] },
   { file = "creativecore.pw.toml", blurb = "Library AmbientSounds uses.", tags = ["library", "client-qol"] },
   { file = "neoauth.pw.toml", blurb = "Microsoft auth helper.", tags = ["addon", "client-qol"] },
-  { file = "globalpacks.pw.toml", blurb = "Forces the pack's resource packs on.", tags = ["core", "resource-pack", "client-qol"] },
+  { file = "globalpacks.pw.toml", blurb = "Loads the pack's required resource and data packs.", tags = ["core", "client-qol"] },
 ]
 
 [[category]]
 slug = "performance"
 title = "Performance"
-intro = """Tick, memory, and chunk-saving work that runs on the server and in singleplayer. Render-only mods are in [Rendering](rendering.md). Placebo and Cupboard are in [Libraries](libraries.md)."""
+intro = """Tick, memory, and chunk-saving work that runs on the server and in singleplayer. Render-only mods are in [Rendering](rendering.md). Placebo, Cupboard, and Kotlin for Forge are in [Libraries](libraries.md)."""
 
 [[category.group]]
 name = "Tick and memory"
@@ -1048,6 +1053,8 @@ mods = [
   { file = "yacl.pw.toml", blurb = "Config screens. Critters and Companions, Structurify, and Variants & Ventures use it.", tags = ["library"] },
   { file = "geckolib.pw.toml", blurb = "Animation library. Many mob, magic, and gun mods use it.", tags = ["library"] },
   { file = "playeranimator.pw.toml", blurb = "Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it.", tags = ["library"] },
+  { file = "kotlin-for-forge.pw.toml", blurb = "Kotlin runtime. AE2 addons, Create Ultimine, Observable, and Inventory Profiles Next need it.", tags = ["library"] },
+  { file = "aaa-particles.pw.toml", blurb = "Effekseer particle engine. Epic Fight, Archaion, and Gunsmith Lib use it.", tags = ["library"] },
   { file = "bookshelf.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, and Enchantment Descriptions use.", tags = ["library"] },
   { file = "balm.pw.toml", blurb = "Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use.", tags = ["library"] },
   { file = "athena.pw.toml", blurb = "Connected textures Chipped uses.", tags = ["library"] },

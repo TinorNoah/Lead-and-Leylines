@@ -1,6 +1,6 @@
 # Performance
 
-Tick, memory, and chunk-saving work that runs on the server and in singleplayer. Render-only mods are in [Rendering](rendering.md). Placebo and Cupboard are in [Libraries](libraries.md).
+Tick, memory, and chunk-saving work that runs on the server and in singleplayer. Render-only mods are in [Rendering](rendering.md). Placebo, Cupboard, and Kotlin for Forge are in [Libraries](libraries.md).
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 

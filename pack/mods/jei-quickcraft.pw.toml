@@ -1,13 +1,13 @@
 name = "JEI QuickCraft"
-filename = "jei-quickcraft-1.21.1-neoforge-1.0.jar"
+filename = "jei-quickcraft-1.21.1-neoforge-1.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1fc9dd416be78b868636ee119b89816525b1c746"
+hash = "f10db9cf1b640e51804fc20b865bbaf0e752f0a2"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8429819
+file-id = 9016974
 project-id = 1520978

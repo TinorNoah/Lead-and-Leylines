@@ -39,7 +39,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | CurseForge 714059 / 6467772 | both | library | SLO dependency. | none | defaults | 2026-09-18 |
 | Ksyxis | `Ksyxis-1.4.5.jar` | CurseForge 537533 / 8971236 | both | worldgen | Unloads unused spawn chunks. | none | defaults | 2026-09-18 |
 | Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | CurseForge 1173964 / 6064142 | both | stability | MC-271325 disconnect packets. | none | defaults | 2026-09-18 |
-| quick pack | `quick-pack-neoforge-1.5.0+1.21.1.jar` | CurseForge 1380888 / 8619206 | both | IO | Faster zip pack parse. | none | defaults | 2026-09-18 |
+| quick pack | `quick-pack-neoforge-1.5.1+1.21.1.jar` | CurseForge 1380888 / 9005037 | both | IO | Faster zip pack parse. | none | defaults | 2026-09-18 |
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | CurseForge 1079896 / 8071070 | both | stability | Server crash-exploit filter; file tags 1.21.1–1.21.4. | none | defaults | 2026-09-18 |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | CurseForge 1491426 / 8631010 | client | IO | Async log writes. | none | defaults | 2026-09-18 |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | CurseForge 1125284 / 7602181 | client | client QoL | Keeps server resource packs across rejoins. | none | defaults | 2026-09-18 |
@@ -52,7 +52,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | CurseForge 1217518 / 8908301 | client | renderer | Create FPS with shader packs. Compatible with Colorwheel. | Create | defaults | 2026-09-18 |
 | Create: Threaded Trains | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` | CurseForge 1381890 / 7208558 | both | optimizer | Train network off the server thread. | Create | See [configs.md](configs.md) | 2026-09-18 |
 | Architectury API | `architectury-13.0.11-neoforge.jar` | CurseForge 419699 / 8492726 | both | library | FTB dependency. | none | defaults | 2026-09-18 |
-| FTB Library | `ftb-library-neoforge-2101.1.36.jar` | CurseForge 404465 / 8858846 | both | library | FTB Quests/Teams. | Architectury | defaults | 2026-09-18 |
+| FTB Library | `ftb-library-neoforge-2101.1.37.jar` | CurseForge 404465 / 9008089 | both | library | FTB Quests/Teams. | Architectury | defaults | 2026-09-18 |
 | FTB Teams | `ftb-teams-neoforge-2101.1.11.jar` | CurseForge 404468 / 8724782 | both | utility | Shared quest progress. | FTB Library, Architectury | defaults | 2026-09-18 |
 | FTB Quests | `ftb-quests-neoforge-2101.1.36.jar` | CurseForge 289412 / 8885017 | both | quests | Quest book. | FTB Library, FTB Teams, Architectury | defaults | 2026-09-18 |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | CurseForge 912469 / 7576461 | both | optimizer | Quest tick cost. | FTB Quests | See [configs.md](configs.md) | 2026-09-18 |
@@ -75,18 +75,18 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Sophisticated Backpacks / Jade | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | CurseForge 1668275 / 8734110 | client | utility | Backpack contents on Jade. | Jade, Backpacks | defaults | 2026-09-22 |
 | TACZ / Jade Compatibility | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | CurseForge 1662986 / 8703158 | client | utility | Gun info on Jade. | Jade, TaCZ | defaults | 2026-09-22 |
 | Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.450.jar` | CurseForge 238222 / 9009406 | both | recipes | Recipe viewer. Replaces EMI + TMRV so Polymorph (≥19.52) and Sophisticated (≥19.32) get a real JEI version. Server side registers the recipe-transfer channel Move Items uses. | MezzConfig | defaults | 2026-09-30 |
-| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | CurseForge 1689768 / 8932688 | both | library | Required by current JEI on both sides. | none | defaults | 2026-09-22 |
+| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.5.jar` | CurseForge 1689768 / 8987766 | both | library | Required by current JEI on both sides. | none | defaults | 2026-09-22 |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | CurseForge 1074338 / 7727898 | client | recipes | Extra AE2 JEI pages. | JEI, AE2 | defaults | 2026-09-22 |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | CurseForge 1230497 / 6359014 | client | recipes | RS recipe transfer. 2.0.x is Minecraft 26.1.2. | JEI, RS | defaults | 2026-09-22 |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | CurseForge 1482785 / 8848988 | client | recipes | Backpack recipe transfer. | JEI, Sophisticated | defaults | 2026-09-22 |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | CurseForge 1133580 / 7452053 | client | recipes | Armor trim preview. 1.1.0 is 26.1.2-only. | JEI | defaults | 2026-09-22 |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | CurseForge 1422344 / 8534122 | client | recipes | Paginated sequenced assembly (7+ steps). | JEI, Create | defaults | 2026-09-22 |
 | JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | CurseForge 978621 / 8938121 | both | recipes | Extra JEI helpers. Required network channels need the jar on dedicated servers. | JEI | defaults | 2026-09-23 |
-| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | CurseForge 1520978 / 8429819 | both | recipes | Craft from JEI using inventory. ARR. Required network channels need the jar on dedicated servers. | JEI | defaults | 2026-09-23 |
+| JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.1.jar` | CurseForge 1520978 / 9016974 | both | recipes | Craft from JEI using inventory. ARR. Required network channels need the jar on dedicated servers. | JEI | defaults | 2026-09-23 |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | CurseForge 1258607 / 8752438 | client | recipes | Spectrum pages in JEI. | JEI, Spectrum | defaults | 2026-09-22 |
 | FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | CurseForge 1103259 / 6695679 | client | recipes | FTB quest/filter pages in JEI. | JEI, FTB | defaults | 2026-09-22 |
 | MekaGenJei | `mekagenjei-1.2.jar` | CurseForge 1347827 / 7224975 | client | recipes | Mekanism Generators JEI pages. | JEI, Mekanism Generators | defaults | 2026-09-22 |
-| Just Enough Mekanism Multiblocks | `JustEnoughMekanismMultiblocks-1.21.1-7.21.jar` | CurseForge 898746 / 8903943 | client | recipes | Multiblock overlays in JEI. | JEI, Mekanism | defaults | 2026-09-22 |
+| Just Enough Mekanism Multiblocks | `JustEnoughMekanismMultiblocks-1.21.1-7.22.jar` | CurseForge 898746 / 8999939 | client | recipes | Multiblock overlays in JEI. | JEI, Mekanism | defaults | 2026-09-22 |
 | Mekanism: Ponders | `mekanism_ponders-1.0.3-1.21.1.jar` | CurseForge 1448575 / 8007326 | client | recipes | Create ponder scenes for Mekanism. | Create, Mekanism | defaults | 2026-09-22 |
 | Just Enough TaCZ | `just_enough_tacz-1.2.0.jar` | CurseForge 1536413 / 8180476 | client | recipes | TaCZ gun recipes in JEI. | JEI, TaCZ, Berezka's library | defaults | 2026-09-22 |
 | Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | CurseForge 240630 / 6506298 | client | recipes | Ore/mob pages in JEI. Not Fabric 26.x. | JEI | defaults | 2026-09-22 |
@@ -95,7 +95,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Feature Recycler | `Feature-Recycler-neoforge-2.0.0.jar` | CurseForge 1077985 / 5829420 | both | worldgen | Reorders biome features so Terralith + OTBWG do not crash. ARR. | none | defaults | 2026-09-18 |
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | CurseForge 570354 / 7078265 | both | worldgen | End overhaul. World data. | none | defaults | 2026-09-18 |
 | YACL | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | CurseForge 667299 / 7437845 | both | library | Required by Structurify. | none | defaults | 2026-09-18 |
-| Structurify | `structurify-neoforge-2.0.41+mc1.21.1.jar` | CurseForge 1087551 / 8955745 | both | worldgen | Structure spacing. | YACL | global multiplier 2.0 | 2026-09-18 |
+| Structurify | `structurify-neoforge-2.0.42+mc1.21.1.jar` | CurseForge 1087551 / 9017330 | both | worldgen | Structure spacing. | YACL | global multiplier 2.0 | 2026-09-18 |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | CurseForge 442508 / 7150870 | both | worldgen | Extra dungeons. World data. ARR. | none | defaults | 2026-09-18 |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | CurseForge 953637 / 7142896 | both | worldgen | Ocean structures. World data. ARR. | none | defaults | 2026-09-18 |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | Modrinth DOB2l4oJ / AKcIMUil | both | library | Required by Awesome Dungeon. ARR. On CurseForge as 522351 / 6118136 but `allowModDistribution = false`, so it is **not** manifest-referenced; embedded from Modrinth instead. | none | defaults | 2026-09-18 |
@@ -114,13 +114,13 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | CurseForge 690971 / 8778897 | client | HUD | Season on HUD / Xaero. | none (ES optional) | defaults | 2026-09-22 |
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | CurseForge 1015118 / 6606621 | both | worldgen | Fortress overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | CurseForge 1015149 / 5812553 | both | worldgen | River bridges. World data. | YUNG's API | defaults | 2026-09-18 |
-| Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | CurseForge 1337167 / 8885814 | both | library | Required by Moog's Mineshafts. | none | defaults | 2026-09-18 |
+| Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.4.0.jar` | CurseForge 1337167 / 8998912 | both | library | Required by Moog's Mineshafts. | none | defaults | 2026-09-18 |
 | MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | CurseForge 1570795 / 8312865 | both | worldgen | Mineshaft overhaul. World data. | Moog's Structure Lib | defaults | 2026-09-18 |
 | Epic Structures: Villages | `epic-structures-villages-2.0.0.jar` | CurseForge 1308486 / 8830175 | both | worldgen | Village overhaul. World data. ARR. | none | defaults | 2026-09-18 |
 | Epic Structures: Witch Huts | `Epic Witch Huts v1.3.1.jar` | CurseForge 1335768 / 8383193 | both | worldgen | Witch hut overhaul. World data. ARR. | none | defaults | 2026-09-18 |
 | Epic Structures: Jungle Temples | `Epic Jungle Temples v1.0.2.jar` | CurseForge 1600197 / 8611815 | both | worldgen | Jungle temple overhaul. World data. ARR. | none | defaults | 2026-09-18 |
 | Amplified Nether | `Amplified_Nether_26.2_v1.2.16.jar` | CurseForge 552176 / 8425271 | both | worldgen | Taller Nether. World data. | none | defaults | 2026-09-18 |
-| Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.16.jar` | CurseForge 1407992 / 8916189 | both | worldgen | Nether biomes. World data. | Lithostitched, GeckoLib | defaults | 2026-09-18 |
+| Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.18.jar` | CurseForge 1407992 / 9006065 | both | worldgen | Nether biomes. World data. | Lithostitched, GeckoLib | defaults | 2026-09-18 |
 | Countered's Terrain Slabs | `terrain_slabs-neoforge-3.1.2.jar` | CurseForge 1125437 / 8216091 | both | worldgen | Terrain slabs. World data. | Architectury | defaults | 2026-09-18 |
 | Fragmentum (NeoForge) | `fragmentum-5.0.0+1.21.1-neoforge.jar` | CurseForge 1123977 / 8921953 | both | library | Required by Aquamirae. | none | defaults | 2026-09-18 |
 | Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | CurseForge 536254 / 8931374 | both | content | Ocean structures and boss. World data. | GeckoLib, Fragmentum | defaults | 2026-09-18 |
@@ -192,9 +192,9 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | CurseForge 1140741 / 7069504 | client | auth | Microsoft auth helper. | none | defaults | 2026-09-18 |
 | Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | CurseForge 551894 / 7404415 | both | utility | Join-time modlist check. | none | defaults | 2026-09-18 |
 | Crash Utilities | `crashutilities-9.0.4.jar` | CurseForge 371813 / 5993450 | both | stability | Extra crash helpers. | none | defaults | 2026-09-18 |
-| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.1.2341.jar` | CurseForge 618298 / 8838842 | both | library | Sophisticated storage/backpacks. | none | defaults | 2026-09-18 |
-| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.3.2158.jar` | CurseForge 422301 / 8845926 | both | storage | Backpacks. World data. | Sophisticated Core | defaults | 2026-09-18 |
-| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.5.91.2127.jar` | CurseForge 619320 / 8687896 | both | storage | Barrels/chests. World data. | Sophisticated Core | defaults | 2026-09-18 |
+| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.2.2343.jar` | CurseForge 618298 / 8985869 | both | library | Sophisticated storage/backpacks. | none | defaults | 2026-09-18 |
+| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.6.2174.jar` | CurseForge 422301 / 9008234 | both | storage | Backpacks. World data. | Sophisticated Core | defaults | 2026-09-18 |
+| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.6.0.2136.jar` | CurseForge 619320 / 8985962 | both | storage | Barrels/chests. World data. | Sophisticated Core | defaults | 2026-09-18 |
 | Functional Storage | `functionalstorage-1.21.1-1.5.8.jar` | CurseForge 556861 / 8459097 | both | storage | Drawers. World data. | Titanium | defaults | 2026-09-18 |
 | Botany Pots | `botanypots-neoforge-1.21.1-21.1.44.jar` | CurseForge 353928 / 8243851 | both | farming | Crop pots. World data. | Bookshelf, Prickle | defaults | 2026-09-18 |
 | Botany Trees | `botanytrees-neoforge-1.21.1-21.1.7.jar` | CurseForge 411357 / 8188485 | both | farming | Tree pots. World data. | Bookshelf, Prickle | defaults | 2026-09-18 |
@@ -208,7 +208,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.12.jar` | CurseForge 889915 / 8909889 | both | utility | FTB cross-mod hooks. ARR. | FTB Library | defaults | 2026-09-18 |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | CurseForge 1231381 / 8086425 | both | optimizer | Create-aware vein mine. | Create | defaults | 2026-09-18 |
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | CurseForge 1104939 / 8004708 | both | worldgen | Create village structure. World data. | Create | defaults | 2026-09-18 |
-| Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar` | CurseForge 1238567 / 8833933 | both | storage | Create contraptions + backpacks. | Create, Backpacks, Core | defaults | 2026-09-18 |
+| Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.1.171.jar` | CurseForge 1238567 / 8985949 | both | storage | Create contraptions + backpacks. | Create, Backpacks, Core | defaults | 2026-09-18 |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar` | CurseForge 1226755 / 8503147 | both | storage | Create + storage. | Create, Storage, Core | defaults | 2026-09-18 |
 | Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | CurseForge 1320115 / 6844021 | both | storage | Create recipes for backpacks (complement to 1238567). | Create, Backpacks | defaults | 2026-09-22 |
 | Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | CurseForge 1653477 / 8653384 | both | storage | Ars items in backpacks. | Ars, Backpacks | defaults | 2026-09-22 |
@@ -222,7 +222,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Sophisticated Backpacks RS Bridge | `backpackrs-1.0.0+mc1.21.1-neoforge.jar` | CurseForge 1664334 / 8710301 | both | storage | Quick deposit into RS. | Backpacks, RS | defaults | 2026-09-22 |
 | Demagnetizer | `demagnetizer-neoforge-0.2.0-beta.1.jar` | CurseForge 1698500 / 8948717 | both | QoL | Stops item magnet in a radius. Beta. Pinned NeoForge, not Fabric. | none | defaults | 2026-09-22 |
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | CurseForge 533097 / 8896937 | both | optimizer | Threaded chunk gen/IO. Alpha. ByePregen disables C2ME FluidPostProcessingFilter. OpenCL module not shipped (Java 25). | none | defaults | 2026-09-18 |
-| Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | CurseForge 223794 / 7027323 | both | storage | ME network. World data. | GuideME | defaults | 2026-09-18 |
+| Applied Energistics 2 | `appliedenergistics2-19.2.18.jar` | CurseForge 223794 / 8992605 | both | storage | ME network. World data. | GuideME | defaults | 2026-09-18 |
 | GuideME | `guideme-21.1.19.jar` | CurseForge 1173950 / 8897145 | both | library | AE2 guidebook. | none | defaults | 2026-09-18 |
 | AE2 Things | `AE2-Things-1.4.2-beta.jar` | CurseForge 609977 / 5637783 | both | storage | AE2 disks. Beta 1.4.2. World data. | AE2, GuideME | defaults | 2026-09-18 |
 | Ars Énergistique | `arseng-2.1.1-beta.jar` | CurseForge 905641 / 6203425 | both | magic | Ars + AE2 bridge. Beta. | Ars Nouveau, AE2 | defaults | 2026-09-18 |
@@ -238,18 +238,19 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Mekanism Extras | `mekanism_extras-1.21.1-1.4.1.jar` | CurseForge 1026040 / 8677677 | both | tech | Extra Mekanism machines. World data. | Mekanism | defaults | 2026-09-22 |
 | Patchouli | `Patchouli-1.21.1-93-NEOFORGE.jar` | CurseForge 306770 / 7730942 | both | library | Guidebooks. Required by Mekanism Elements. | none | defaults | 2026-09-23 |
 | Mekanism Elements | `MekanismElements-1.21.1-3.0.16-NeoForge.jar` | CurseForge 1103224 / 8839186 | both | tech | Extra element processing. World data. | Mekanism, Patchouli | defaults | 2026-09-22 |
-| Ars Nouveau | `ars_nouveau-1.21.1-5.13.1.jar` | CurseForge 401955 / 8721482 | both | magic | Spellcrafting. World data. | none | defaults | 2026-09-18 |
-| Spectrum | `spectrum-1.12.7-1.21.1-neo.jar` | CurseForge 556967 / 8866762 | both | magic | Progression magic. World data. | Revelationary, Modonomicon, Curios | defaults | 2026-09-18 |
+| Ars Nouveau | `ars_nouveau-1.21.1-5.13.2.jar` | CurseForge 401955 / 8993194 | both | magic | Spellcrafting. World data. | none | defaults | 2026-09-18 |
+| Ars Elemental | `ars_elemental-1.21.1-0.7.10.3.jar` | CurseForge 561470 / 8999174 | both | magic | Elemental spell addon. | Ars Nouveau | defaults | 2026-09-18 |
+| Spectrum | `spectrum-1.12.8-1.21.1-neo.jar` | CurseForge 556967 / 9013018 | both | magic | Progression magic. World data. | Revelationary, Modonomicon, Curios | defaults | 2026-09-18 |
 | Complementary Reimagined | `ComplementaryReimagined_r5.9.3.zip` | CurseForge 627557 / 8884654 | client | shader | Matches Euphoria r5.9.3. | Iris | defaults | 2026-09-18 |
 | Complementary Unbound | `ComplementaryUnbound_r5.9.3.zip` | CurseForge 385587 / 8884656 | client | shader | Matches Euphoria r5.9.3. | Iris | defaults | 2026-09-18 |
 | BSL Shaders | `BSL_v10.1.1.zip` | CurseForge 322506 / 7588844 | client | shader | Latest CF 1.21.1-tagged BSL. | Iris | defaults | 2026-09-18 |
 | Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar` | CurseForge 915902 / 8884680 | client | shader | Complementary extras. | Colorwheel | defaults | 2026-09-18 |
-| Colorwheel | `colorwheel-neoforge-1.3.0-beta3+mc1.21.1.jar` | CurseForge 1254143 / 8845482 | client | renderer | Iris shader extras. Beta. | none | defaults | 2026-09-18 |
+| Colorwheel | `colorwheel-neoforge-1.3.0+mc1.21.1.jar` | CurseForge 1254143 / 8990905 | client | renderer | Iris shader extras. Beta. | none | defaults | 2026-09-18 |
 | Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | CurseForge 1285475 / 7924942 | client | renderer | Colorwheel companion. | Colorwheel | defaults | 2026-09-18 |
 | [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r6.jar` | CurseForge 1353462 / 8547439 | both | combat | Unofficial 1.21.1 TaCZ. World data. Not compatible with 1.20.1 TaCZ worlds. | none | defaults | 2026-09-22 |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | CurseForge 1353465 / 8387504 | both | combat | Converts 1.20.1 gun packs for this port. | TaCZ | defaults | 2026-09-22 |
 | TaCZ addon | `taczaddon-1.1.8.2-neoforge-1.21.1.jar` | CurseForge 1238419 / 8836214 | both | combat | Extra TaCZ features. | TaCZ | defaults | 2026-09-22 |
-| [TaCZ] Tactical Breaching | `tacz_tactical_breaching-neoforge-1.21.1-1.0.5.jar` | CurseForge 1552880 / 8752892 | both | combat | Breaching, glass damage, shells, smoke. | TaCZ | distant-gunshot debug off | 2026-09-22 |
+| [TaCZ] Tactical Breaching | `tactical_breaching-tacz-sbw-neoforge-1.21.1-1.0.5.jar` | CurseForge 1552880 / 9001109 | both | combat | Breaching, glass damage, shells, smoke. | TaCZ | distant-gunshot debug off | 2026-09-22 |
 | [TaCZ] Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | CurseForge 1339813 / 8191224 | both | combat | Ammo box curios slot. | TaCZ, Curios | defaults | 2026-09-22 |
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | CurseForge 1338332 / 8618447 | both | combat | AE2 ammo box. | TaCZ, AE2 | defaults | 2026-09-22 |
 | Elite X Quality Guns (TACZ) | `Elite x Quality Guns Neoforge v5.1 - 1.21.1.jar` | CurseForge 1084662 / 7952386 | both | combat | Gun pack. | TaCZ | defaults | 2026-09-22 |
@@ -264,7 +265,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | EMF Compat: Core | `emf_compat_core_1.21.1_2.0.0.jar` | CurseForge 1605113 / 8793794 | client | library | Required by EMF Compat: TACZ. | EMF | defaults | 2026-09-22 |
 | EMF Compat: TACZ | `emf_compat_tacz_1.21.1_1.0.0.jar` | CurseForge 1629329 / 8546543 | client | renderer | TaCZ entity models with EMF. | EMF Compat Core, TaCZ | defaults | 2026-09-22 |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | CurseForge 1547520 / 8152341 | both | combat | Runtime gun-pack hooks. | TaCZ | defaults | 2026-09-22 |
-| Punchy! | `punchy-2.8b-neoforge-1.21.1.jar` | CurseForge 1374153 / 8976087 | client | renderer | First-person punch anims. Required by Don't Punch My TACZ. Hidden while Epic Fight mode is on. | none | defaults | 2026-09-22 |
+| Punchy! | `punchy-2.8c-neoforge-1.21.1.jar` | CurseForge 1374153 / 9004863 | client | renderer | First-person punch anims. Required by Don't Punch My TACZ. Hidden while Epic Fight mode is on. | none | defaults | 2026-09-22 |
 | Don't Punch My TACZ | `dont-punch-my-tacz-v0.5.2-1.21.1-neo.jar` | CurseForge 1691793 / 8932034 | client | combat | Pinned NeoForge jar, not Fabric. | TaCZ, Punchy | defaults | 2026-09-22 |
 | Epic Fight X Punchy! Neo | `punchy_epicfight_neoforge.jar` | CurseForge 1491729 / 7789794 | client | combat | Hides Punchy first-person arms while Epic Fight mode is active. Client-only. | Punchy, Epic Fight | defaults | 2026-09-23 |
 | [UNOFFICIAL] LesRaisins Tactical Equipements | `LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar` | CurseForge 1432620 / 8745260 | both | combat | Tactical gear pack. | TaCZ | defaults | 2026-09-22 |
@@ -284,7 +285,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Jaden's Nether Expansion | `Jadens-Nether-Expansion-2.4.1.jar` | CurseForge 1111833 / 8707156 | both | worldgen | Extra Nether biomes/mobs. World data. | Elysium, Lodestone | defaults | 2026-09-22 |
 | Jaden's Nether Expansion Delight | `jadensnetherexpansiondelight-1.21.1-1.0.4a-neoforge.jar` | CurseForge 1190275 / 8232964 | both | farming | Delight recipes for Jaden's. | FD, Jaden's | defaults | 2026-09-22 |
 | Netherite Tweaks & Fixes | `netherite_tweaks_luna-1.2.2-neoforge-1.21.1.jar` | CurseForge 1239001 / 7282661 | both | QoL | Netherite tweaks. | none | defaults | 2026-09-22 |
-| Puzzles Lib | `PuzzlesLib-v21.1.60-mc1.21.1-NeoForge.jar` | CurseForge 495476 / 8829114 | both | library | Required by Eternal Nether. | none | defaults | 2026-09-22 |
 | Eternal Nether | `EternalNether-v21.1.3-1.21.1-NeoForge.jar` | CurseForge 1252482 / 6751611 | both | worldgen | Extra Nether structures. World data. | Puzzles Lib | defaults | 2026-09-22 |
 | WunderLib: New Dawn | `wunderlib-21.0.10.jar` | CurseForge 1422273 / 7469725 | both | library | BetterNether New Dawn stack. Pinned 21.0.x. | none | defaults | 2026-09-22 |
 | WorldWeaver: New Dawn | `worldweaver-21.0.25.jar` | CurseForge 1422284 / 8594162 | both | library | BetterNether New Dawn stack. Pinned 21.0.x. | BCLib New Dawn | defaults | 2026-09-22 |
@@ -296,7 +296,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Farmer's Cutting: BetterNether | `farmers-cutting-betternether-1.21.1-1.0-neoforge.jar` | CurseForge 1114065 / 7649818 | both | farming | Cutting recipes for BetterNether. | FD, BetterNether | defaults | 2026-09-22 |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | CurseForge 658587 / 7389814 | both | library | Required by Epic Fight. Filename says forge; file tags NeoForge 1.21.1. | none | defaults | 2026-09-22 |
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | CurseForge 405076 / 8175609 | both | combat | Souls-like combat. World data. | playerAnimator | defaults | 2026-09-22 |
-| AAA Particles | `aaa_particles-neoforge-1.21.1-2.3.0.jar` | CurseForge 979809 / 8983699 | both | combat | Effekseer particle effects. Kept without Nightfall. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
+| AAA Particles | `aaa_particles-neoforge-1.21.1-2.3.1.jar` | CurseForge 979809 / 8995061 | both | combat | Effekseer particle effects. Kept without Nightfall. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
 | Knight Lib | `knightlib-neoforge-1.21.1-2.0.3.jar` | CurseForge 1105855 / 8958408 | both | library | Required by Olympus!. | none | defaults | 2026-09-23 |
 | Olympus! | `olympusmythology-neoforge-1.21.1-1.0.9.jar` | CurseForge 1667111 / 8962781 | both | content | Greek artifacts, mobs, and structures. World data. | Curios, Knight Lib | defaults | 2026-09-23 |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | CurseForge 1620396 / 8983496 | both | content | Ancient Keep, trial spawners, and a boss. World data. ARR. | AAA Particles | defaults | 2026-09-23 |
@@ -327,7 +327,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Pattern Converter | `patternconverter-1.0.0.jar` | CurseForge 1311295 / 6795530 | both | storage | Convert AE2 and Refined Storage patterns. World data. | none | defaults | 2026-09-24 |
 | AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | CurseForge 1222746 / 8306511 | both | storage | One press for every processor. World data. | AE2 | defaults | 2026-09-24 |
 | Akashic Tome | `AkashicTome-1.8-30.jar` | CurseForge 250577 / 7773841 | both | utility | One book that holds other books. | none | defaults | 2026-09-24 |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.49_mc1.21.1.jar` | CurseForge 257814 / 8975261 | both | library | Required by AmbientSounds. | none | defaults | 2026-09-24 |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.50_mc1.21.1.jar` | CurseForge 257814 / 9009568 | both | library | Required by AmbientSounds. | none | defaults | 2026-09-24 |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | CurseForge 254284 / 8043019 | both | utility | Ambient audio. | CreativeCore | defaults | 2026-09-24 |
 | Ars Controle | `ars_controle-1.21.1-1.6.16.jar` | CurseForge 1061812 / 8847869 | both | magic | Extra Ars spell control. World data. | Ars Nouveau, Curios | defaults | 2026-09-24 |
 | Ars Elemancy | `ars_elemancy-1.21.1-1.18.3.jar` | CurseForge 1153666 / 8349780 | both | magic | Dual-element Ars Elemental gear. World data. | Ars Nouveau, Ars Elemental | defaults | 2026-09-24 |
@@ -351,7 +351,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Teal Lib | `teallib-1.3.teal.jar` | CurseForge 1597849 / 8507094 | both | library | Required by Spawn. | none | defaults | 2026-09-24 |
 | Iron's Lib | `irons_lib-1.21.1-2.2.0.jar` | CurseForge 1492763 / 8973642 | both | library | Required by Iron's Spells 3.16.3. | none | defaults | 2026-09-24 |
 | Ace's Spell Utils | `aces_spell_utils-1.2.7.2-1.21.1.jar` | CurseForge 1299492 / 8789930 | both | library | Required by Twilight spellbooks. | Iron's Spells | defaults | 2026-09-24 |
-| AzureLib | `azurelib-neo-1.21.1-3.1.12.jar` | CurseForge 817423 / 8969045 | both | library | Required by Twilight spellbooks at runtime. Not declared in that mod's metadata. | none | defaults | 2026-09-24 |
+| AzureLib | `azurelib-neo-1.21.1-3.1.13.jar` | CurseForge 817423 / 8986133 | both | library | Required by Twilight spellbooks at runtime. Not declared in that mod's metadata. | none | defaults | 2026-09-24 |
 | Illager Arena | `illager_arena-1.0.1-neoforge-1.21.1.jar` | CurseForge 1358983 / 7077445 | both | content | Desert illager structure. World data. | none | defaults | 2026-09-24 |
 | Qliphoth Awakening | `fdbosses-3.2-1.21.1.jar` | CurseForge 1271707 / 8373639 | both | content | Boss fights. World data. ARR. | FDLib | defaults | 2026-09-24 |
 | Bosses of Mass Destruction | `BOMD-NeoForge-1.21-1.3.3.jar` | CurseForge 941573 / 8448640 | both | content | Boss fights. World data. LGPL. | CERBON's API, GeckoLib, Cloth Config | defaults | 2026-09-24 |
@@ -364,11 +364,11 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Born In Configuration | `borninconfiguration-3.2.2.jar` | CurseForge 1019091 / 8122961 | both | utility | Born in Chaos config. MIT. | Born in Chaos | defaults | 2026-09-24 |
 | Born in Chaos Jade compat | `infected_ore_info-1.1.0.jar` | CurseForge 1510842 / 8700301 | both | utility | Jade shows infected diamond ore as diamond ore. MIT. | Born in Chaos, Jade | defaults | 2026-09-24 |
 | Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.3.jar` | CurseForge 855414 / 8680204 | both | magic | Spellbooks beside Ars Nouveau. World data. ARR. Pin this file; the Create addon accepts only 3.16.x. | Iron's Lib, GeckoLib, playerAnimator, Curios | defaults | 2026-09-24 |
-| Spellbooks of Twilight | `twilight_spellbooks-0.0.3.jar` | CurseForge 1683668 / 8854684 | both | magic | Twilight Forest spells for Iron's Spells. ARR. Metadata does not declare the parents. | Ace's Spell Utils, AzureLib. Twilight Forest and Iron's Spells are in. | defaults | 2026-09-24 |
-| Iron's Spells Create Additions | `iss_create_additions-1.21.1-2..jar` | CurseForge 1698578 / 8923489 | both | magic | Create spell tools. MIT. Matches Create 6.0.10 and NeoForge 21.1.250. | Iron's Spells 3.16.3, Create | defaults | 2026-09-24 |
-| Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.5.1-1.21.1.jar` | CurseForge 1631240 / 8760428 | both | magic | Farmer's Delight spells. ARR. | Farmer's Delight, Iron's Spells, GeckoLib | defaults | 2026-09-24 |
+| Spellbooks of Twilight | `twilight_spellbooks-0.0.4.jar` | CurseForge 1683668 / 9014615 | both | magic | Twilight Forest spells for Iron's Spells. ARR. Metadata does not declare the parents. | Ace's Spell Utils, AzureLib. Twilight Forest and Iron's Spells are in. | defaults | 2026-09-24 |
+| Iron's Spells Create Additions | `ISS-Create-Additions-2.18.0-battery-network-fix.jar` | CurseForge 1698578 / 8985084 | both | magic | Create spell tools. MIT. Matches Create 6.0.10 and NeoForge 21.1.250. | Iron's Spells 3.16.3, Create | defaults | 2026-09-24 |
+| Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.6.0-1.21.1.jar` | CurseForge 1631240 / 9008722 | both | magic | Farmer's Delight spells. ARR. | Farmer's Delight, Iron's Spells, GeckoLib | defaults | 2026-09-24 |
 
-| Apothic Attributes | `ApothicAttributes-1.21.1-2.10.1.jar` | CurseForge 898963 / 8502288 | both | library | Required by Apotheosis 8.8.0. | Placebo | defaults | 2026-09-25 |
+| Apothic Attributes | `ApothicAttributes-1.21.1-2.11.0.jar` | CurseForge 898963 / 9006294 | both | library | Required by Apotheosis 8.8.0. | Placebo | defaults | 2026-09-25 |
 | Apotheosis | `Apotheosis-1.21.1-8.8.0.jar` | CurseForge 313970 / 8826922 | both | magic | Affixes, gems, and gear. World data. MIT code, ARR assets. CurseForge metadata. | Apothic Attributes, Placebo | defaults | 2026-09-25 |
 | Apothic Enchanting | `ApothicEnchanting-1.21.1-1.6.2.jar` | CurseForge 1063926 / 8797650 | both | magic | Enchanting overhaul. World data. | Apothic Attributes, Placebo | defaults | 2026-09-25 |
 | Apothic Spawners | `ApothicSpawners-1.21.1-1.4.0.jar` | CurseForge 986583 / 8469405 | both | magic | Movable spawners. World data. | Placebo | defaults | 2026-09-25 |
@@ -377,6 +377,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Apotheosis Modern Ragnarok: Zero | `apotheosis_modern_ragnarok-neoforge-1.21.1-tacz1.1.8-7.0.1.jar` | CurseForge 966582 / 8483829 | both | combat | Affixes on TaCZ guns. GPL-3.0. | Apotheosis, Gunsmith Lib, TaCZ | defaults | 2026-09-25 |
 | Gunsmith Lib | `gunsmithlib-neoforge-1.21.1-tacz1.1.8-6.4.4.jar` | CurseForge 1264058 / 8799282 | both | library | Required by Ragnarok Zero. Matches TaCZ 1.1.8. | TaCZ | defaults | 2026-09-25 |
 | Create: Apokinetics | `apokinetics-1.0.6.jar` | CurseForge 1606442 / 8790422 | both | tech | Apotheosis on Create machines. | Apotheosis, Create 6.0.10 | defaults | 2026-09-25 |
+| Create: Metalwork | `createmetalwork-neoforge-1.21.1-3.0.0.jar` | CurseForge 966104 / 8995820 | both | tech | Extra Create metal blocks and parts. | Create | defaults | 2026-09-26 |
 | Apothic Compats | `apothic_compats-0.2.4.3.jar` | CurseForge 1188699 / 8936047 | both | magic | Apotheosis datapack compat. | Apotheosis, Placebo | defaults | 2026-09-25 |
 | Fallen Gems & Affixes | `fallen_gems_affixes-1.21.1-1.0.0.jar` | CurseForge 1286177 / 6927716 | both | magic | Extra gems and affixes. World data. | Apotheosis, Additional Attributes, Patchouli | defaults | 2026-09-25 |
 | Additional Attributes | `additional_attributes-1.21.1-1.2.2.jar` | CurseForge 986624 / 6388896 | both | library | Required by Fallen Gems. | none | defaults | 2026-09-25 |
@@ -384,8 +385,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Apotheosis Balance Configurator | `apotheosis_balance-1.21.1-2.1.0.jar` | CurseForge 1379530 / 8210944 | both | magic | Affix numbers live in a config. Do not also add Apothic Nerf. | Apotheosis, Apothic Attributes | defaults | 2026-09-25 |
 | Apothic Tooltip Cleanup | `apothic_tooltip_cleanup-1.3.0.jar` | CurseForge 1536956 / 8270836 | client | QoL | Shortens affix and gem lines. Tooltip Overhaul stays the frame. | Apotheosis | defaults | 2026-09-25 |
 | Epic Fight x Iron's Spells | `efiscompat-2.6.0-neoforge-1.21.1-port.jar` | CurseForge 1476569 / 7704805 | both | combat | Spell animations in Epic Fight. GPL-3.0. | Epic Fight, Iron's Spells | defaults | 2026-09-25 |
-| Puzzles Lib | `PuzzlesLib-v21.1.60-mc1.21.1-NeoForge.jar` | CurseForge 495476 / 8829114 | both | library | Required by Mutant Monsters and Illager Invasion. | none | defaults | 2026-09-25 |
-| Mutant Monsters | `MutantMonsters-v21.1.1-1.21.1-NeoForge.jar` | CurseForge 852665 / 7232511 | both | content | Mutant bosses. World data. AGPL-3.0-or-later. | Puzzles Lib | defaults | 2026-09-25 |
+| Puzzles Lib | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | CurseForge 495476 / 9007719 | both | library | Required by Eternal Nether, Mutant Monsters, and Illager Invasion. | none | defaults | 2026-09-22 |
+| Mutant Monsters | `MutantMonsters-v21.1.1-1.21.1-NeoForge.jar` | CurseForge 852665 / 7232511 | both | content | Mutant mobs, some boss-tier. World data. AGPL-3.0-or-later. | Puzzles Lib | defaults | 2026-09-25 |
 | Illager Invasion | `IllagerInvasion-v21.1.6-1.21.1-NeoForge.jar` | CurseForge 891324 / 6492670 | both | content | Illager expansion port. World data. MIT. Extensible Enums is embedded. | Puzzles Lib | defaults | 2026-09-25 |
 | Mowzie's Mobs | `mowziesmobs-1.21.1-1.8.2.jar` | CurseForge 250498 / 7760267 | both | content | Overworld bosses. World data. Custom license; credit the CurseForge page. | GeckoLib | defaults | 2026-09-25 |
 | Myths & Legends | `mythsandlegends-1.0.7.jar` | CurseForge 1133244 / 8922514 | both | content | Folklore mobs and structures. World data. ARR. | GeckoLib, Curios | defaults | 2026-09-25 |
@@ -445,7 +446,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | CurseForge 495267 / 7810574 | client | QoL | Sort, locked slots, gear sets. AGPL-3.0-or-later. | libIPN, Kotlin for Forge | defaults | 2026-09-26 |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | CurseForge 1134081 / 6958493 | client | QoL | Extra mouse inventory moves. | Mouse Tweaks, Cloth Config | defaults | 2026-09-26 |
 | Extreme Sound Muffler | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | CurseForge 363363 / 7895926 | client | QoL | Per-sound muffler. | none | defaults | 2026-09-26 |
-| MRU | `mru-1.0.40+1.21.1-neoforge.jar` | CurseForge 669659 / 8858776 | client | library | Sounds dependency. ARR. | none | defaults | 2026-09-26 |
+| MRU | `mru-1.0.41+1.21.1-neoforge.jar` | CurseForge 669659 / 9004036 | client | library | Sounds dependency. ARR. | none | defaults | 2026-09-26 |
 | Sounds | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | CurseForge 925889 / 7325254 | client | QoL | Extra sound effects. CurseForge also lists Fabric API; that dependency does not resolve on this loader and was not installed. | MRU, YACL | defaults | 2026-09-26 |
 | Sound Physics Remastered | `sound-physics-remastered-neoforge-1.21.1-1.5.1.jar` | CurseForge 535489 / 7032247 | client | QoL | Reverb and occlusion. Alpha file. | none (Cloth Config optional, already in) | defaults | 2026-09-26 |
 | Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | CurseForge 945149 / 8871444 | both | building | Extra glass. World data. | Fusion (already in). FastPipes and Lampicus optional, not added | defaults | 2026-09-26 |
@@ -478,6 +479,10 @@ World-data: Create, Modern Dynamics, XNet, FTB Quests/Chunks, Twilight Forest, L
 ## 2026-09-26 logistics and Create factory wave
 
 Removed Pipez + Pipez Lag Fix. Added Modern Dynamics, XNet (+ McJtyLib, RFTools Base), Simple Conveyor Belts, Rechiseled (+ Chipped/Create/AE2), Mob Grinding Utils (+ Vanillafied pack), Inventory Essentials, Better Advanced Tooltips, Construction Sticks (+ Applied), DimStorage, Flux Networks, Charging Gadgets, Recipe Essentials, MI Extended/Solar/Structure Viewer, BuffMobs, Agritech Evolved, Tempad, Jade Sable Compat, KubeJS Additions/Create/Botany Pots/Ponder, Create Dragons Plus, and the approved Create factory wave (Enchantment Industry, Central Kitchen, New Age, Bells & Whistles, Big Cannons + Adv Tech + RPL, Connected, Ore Excavation, Diesel Generators, Aquatic Ambitions, TFMG, Dynamic Village, Enchantable Machinery, Alloyed, Integrated Farming, Applied Kinetics, Nuclear, Metalwork, Shimmer, Wizardry, Fast SchematicCannon, Blaze Burner Fuels). Dropped MI Extentended Integrations (crashes MI 2.5.8 on missing `iv` casing). Skipped Ixeris, Nolijium, Create Copper & Zinc. Catalog regenerated; see `docs/installed/catalog.toml`.
+
+## 2026-09-30 update wave
+
+Updated 29 mods to their latest 1.21.1 NeoForge builds. Apotheosis was deliberately **held at 8.8.0**: 8.9.0 changed `GemCaseTile.upgradeGem`/`getUpgradeMatch` to drop their trailing `net.minecraft.world.Container` parameter, and Apokinetics 1.0.6 (`apokinetics-1.0.6.jar`, newest build, declares `apotheosis [8.5.3,)` so version checks do not catch it) mixins the old 3-arg signature. The mixin fails hard at mod construction and no dedicated-server or client boot completes. Apothic Compats and irons_apothic were reverted alongside Apotheosis so the trio stays on one Apotheosis version; both declare open ranges (`[8.0.1,)` and `[8.6.0,)`) but 0.2.5.5 was compiled against 8.9.0. Revisit when Apokinetics ships a build matching 8.9.0's signature, or if the pack drops Apokinetics. Also held: nothing else. NeoForge `21.1.251`/`21.1.252` were identified but not applied in this change.
 
 ## Credits / Attribution
 

@@ -22,7 +22,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | XNet | `xnet-1.21-7.0.7.jar` | both | `core`, `transport`, `world-data` | Channel-based item, fluid, and energy networks. |
 | RFTools Base | `rftoolsbase-1.21-6.0.11.jar` | both | `library`, `transport` | Base blocks XNet needs. |
 | McJtyLib | `mcjtylib-1.21-9.0.21.jar` | both | `library`, `transport` | Library McJty mods need. |
-| Simple Conveyor Belts | `belts-neoforge-0.2.2.jar` | both | `addon`, `transport` | Simple item conveyor belts. |
+| Simple Conveyor Belts | `belts-neoforge-0.2.2.jar` | both | `core`, `transport` | Simple item conveyor belts. |
 
 ## Routers
 

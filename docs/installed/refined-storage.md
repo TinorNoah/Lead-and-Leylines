@@ -1,6 +1,6 @@
 # Refined Storage
 
-Disks, grids, and the addons that extend them. Quartz Arsenal weapons are in [Weapons](weapons.md). The backpack deposit bridge is in [Storage](storage.md). Applied Energistics is in [Applied Energistics](applied-energistics.md).
+Disks, grids, autocrafting, and the addons that extend them, including the wireless crafting grid. The backpack deposit bridge is in [Storage](storage.md). Applied Energistics is in [Applied Energistics](applied-energistics.md).
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
@@ -9,6 +9,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | `core`, `tech`, `storage`, `refined-storage` | Disks, grids, and autocrafting. |
+| Refined Storage - Quartz Arsenal | `refinedstorage-quartz-arsenal-neoforge-1.0.8.jar` | both | `addon`, `tech`, `storage`, `refined-storage` | Wireless crafting grid for Refined Storage networks. |
 | ExtraStorage | `ExtraStorage-1.21.1-5.0.10.jar` | both | `addon`, `tech`, `storage`, `refined-storage` | Larger disks and crafters. |
 | EdivadLib | `EdivadLib-1.21-3.0.0.jar` | both | `library`, `tech`, `storage`, `refined-storage` | Library ExtraStorage needs. |
 | Interdimensional Wireless Transmitter | `interdimensionalwirelesstransmitter-neoforge-1.21.1-0.1.5.jar` | both | `addon`, `tech`, `storage`, `refined-storage` | Wireless transmitter that reaches every dimension. |

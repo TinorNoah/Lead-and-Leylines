@@ -45,7 +45,7 @@ List each packwiz file **once**. Put a mod in the category that matches what pla
 | Dungeons / villages / structure spacing | `structures` |
 | Overworld / cave biomes | `biomes` |
 | Nether biomes / nether structures | `nether` |
-| End biomes / End expansion | `end` |
+| End biomes / End expansion / End structures | `end` |
 | Spells / enchanting / gems / magic mods | `magic` |
 | Cooking / meals | `food` |
 | Pots / harvest helpers | `farming` |
@@ -73,8 +73,23 @@ List each packwiz file **once**. Put a mod in the category that matches what pla
 
 - A TaCZ addon, gun pack, or TaCZ×X bridge goes in the **TaCZ group** under `weapons`, not under Create/AE2/magic alone.
 - A library used by only one mod (Gunsmith Lib, FDLib, Blueprint, …) goes in **that mod’s group**, tagged `library`.
-- A library shared by many unrelated mods (GeckoLib, Placebo, Architectury, …) goes under `libraries`.
+- A library shared by many unrelated mods (GeckoLib, Placebo, Architectury, Kotlin for Forge, AAA Particles, …) goes under `libraries`.
 - Cross-links belong in the category `intro` text (“see also”), not as duplicate rows.
+
+**Bridges and content addons.** A mod that joins two families is filed with the one that *gains* the feature, using the name the author gave it:
+
+| Mod | Filed with | Why |
+|---|---|---|
+| `Rechiseled: Applied Energistics 2` | Building (Rechiseled) | Rechiseled gains AE2 blocks |
+| `Sophisticated Backpacks: Ars Compat` | Storage (Sophisticated) | Sophisticated gains Ars items — the other seven Sophisticated bridges are there too |
+| `Ars Énergistique` | Magic (Ars Nouveau) | Ars gains AE2 storage, so the bridge is not an AE2 row |
+| `Ars Creo`, `Ars Technica`, `Create: Wizardry` | Magic (Ars Nouveau) | All three Create×Ars bridges sit together; keep them together |
+| `Applied TaCZ`, `[TaCZ] Applied Ammo Box` | Weapons (TaCZ) | TaCZ is the parent |
+| `Epic Fight × Iron's Spells` | Combat (Epic Fight) | Epic Fight gains the cast animation |
+
+Content addons follow their **content**, not their parent: `Twilight's Flavors & Delight` and `Ars Nouveau's Flavors & Delight` are both in Food, `Farmer's Cutting: *` is in Food, and `Create: Sky Village` is under Structures. A group of one ecosystem must not collect its own `<X>'s <Y>` rows from other pages.
+
+Structure mods follow their **dimension**: a nether structure (YUNG's Better Nether Fortresses) is in `nether`, and the End dragon-fight island (YUNG's Better End Island) is in `end`, while vanilla structures (YUNG's Better Dungeons, strongholds, ocean monuments) stay in `structures`.
 
 ### 3. Role tag (pick one primary)
 
@@ -89,9 +104,13 @@ Exactly one of these should lead the `tags` list:
 | `content-pack` | Gun/content pack under `pack/tacz/` or `pack/pointblank/` |
 | `resource-pack` | Client resource pack under `pack/resourcepacks/` |
 
+Never write two role tags on one row (`core` + `addon`, `library` + `compat`); `--check` does not catch this. A themed group that holds several unrelated mods (Pipes, Folklore, Chests and trash) may list each of them as `core`; a group that is one mod’s ecosystem has exactly one `core`, and official multi-jar modules of a single mod (Mekanism Generators and Tools, the four Pam’s HarvestCraft 2 jars) are all `core`.
+
 ### 4. Theme and ecosystem tags
 
-Add the category’s theme tag when it fits (`guns`, `magic`, `tech`, `optimizer`, …) and ecosystem tags when the mod clearly belongs to one (`tacz`, `point-blank`, `create`, `ae2`, `mekanism`, `epic-fight`, `apotheosis`, `ars-nouveau`, `irons-spells`, `jei`, `jade`, `alexs`, `yungs`, `farmers-delight`, `harvestcraft`, `sophisticated`, `ftb`).
+Add the category’s theme tag when it fits (`guns`, `magic`, `tech`, `optimizer`, …) and ecosystem tags when the mod clearly belongs to one (`tacz`, `point-blank`, `create`, `ae2`, `refined-storage`, `mekanism`, `epic-fight`, `apotheosis`, `ars-nouveau`, `irons-spells`, `jei`, `jade`, `yungs`, `farmers-delight`, `harvestcraft`, `sophisticated`, `twilight-forest`, `modern-industrialization`, `ftb`). The ecosystem tag is how a mod is still found after a bridge moves to its parent’s page, so add it even when the row lives elsewhere.
+
+Order matters: the browser shows only the **first three** manual tags on a card, so write **role → theme → ecosystem(s)** and keep the parent’s ecosystem last.
 
 Do **not** put `side`, `curseforge`/`modrinth`, or `mod`/`tacz-pack` in `tags` — `installed_catalog.py` derives those into `catalog.json` automatically.
 

@@ -20,6 +20,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Born in Chaos | `born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar` | both | `core`, `mob` | Chaos mobs and infected ore. |
 | Born In Configuration | `borninconfiguration-3.2.2.jar` | both | `addon`, `mob` | Config screen for Born in Chaos. |
 | Born in Chaos Jade compat | `infected_ore_info-1.1.0.jar` | both | `compat`, `mob`, `jade` | Jade shows infected diamond ore as diamond ore. |
+| Mutant Monsters | `MutantMonsters-v21.1.1-1.21.1-NeoForge.jar` | both | `core`, `mob` | Mutant versions of vanilla mobs, some boss-sized. |
 
 ## Companions and wildlife
 
@@ -40,10 +41,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Olympus! | `olympusmythology-neoforge-1.21.1-1.0.9.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
-## Mob farms
+## Mob difficulty and farms
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Mob Grinding Utils | `mob_grinding_utils-1.1.10+mc1.21.1.jar` | both | `core`, `mob`, `world-data` | Mob farm machines and spikes. |
 | Mob Grinding Utils: Vanillafied (16px) | `Mob Grinding Utils Vanillafied.zip` | client | `resource-pack`, `mob` | Resource pack. Vanilla-styled Mob Grinding Utils textures. |
-| BuffMobs | `buffmobs-3.3.2+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Configurable harder mobs. |
+| BuffMobs | `buffmobs-3.3.2+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |

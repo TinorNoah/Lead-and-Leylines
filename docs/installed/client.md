@@ -23,7 +23,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | libIPN | `libIPN-neoforge-1.21.1-6.6.3.jar` | client | `library`, `client-qol` | Library Inventory Profiles Next uses. |
 | Extreme sound muffler - (Neo)Forge | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | `addon`, `client-qol` | Mutes sounds you pick. |
 | Sound​s | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Extra sound effects. |
-| MRU | `mru-1.0.40+1.21.1-neoforge.jar` | client | `library`, `client-qol` | Library Sounds uses. |
+| MRU | `mru-1.0.41+1.21.1-neoforge.jar` | client | `library`, `client-qol` | Library Sounds uses. |
 | Sound Physics Remastered | `sound-physics-remastered-neoforge-1.21.1-1.5.1.jar` | client | `addon`, `client-qol` | Reverb and occlusion for sounds. |
 | Searchables | `Searchables-neoforge-1.21.1-1.0.2.jar` | client | `addon`, `client-qol` | Search in more screens. |
 | Better Modlist | `better_modlist-21.1.1.jar` | client | `addon`, `client-qol` | Clearer mods screen. |
@@ -33,6 +33,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | `addon`, `client-qol` | Caches resource-pack loading. |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Logging off the client thread. |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | `addon`, `client-qol` | Ambient soundscapes. |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.49_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.50_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | `addon`, `client-qol` | Microsoft auth helper. |
-| Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | `core`, `resource-pack`, `client-qol` | Forces the pack's resource packs on. |
+| Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | `core`, `client-qol` | Loads the pack's required resource and data packs. |

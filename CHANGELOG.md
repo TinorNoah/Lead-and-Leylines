@@ -19,6 +19,32 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.1.22] - 2026-09-30
+
+### Added
+
+- Sophisticated Storage 1.6.0: linked storage. Link barrels, chests, and shulker boxes with an Ender Linker to share one inventory across several blocks.
+- Colorwheel 1.3.0 final, with a new `indirect` backend that skips geometry hidden behind other blocks. Create-heavy scenes can gain roughly 30% more FPS.
+
+### Changed
+
+- Updated 29 mods to their latest 1.21.1 NeoForge builds, including Applied Energistics 2, Ars Nouveau and Ars Elemental, Spectrum, the four Sophisticated mods, and Create: Metalwork 3.0.0.
+- Apothic Attributes now caps Protection Shred at 90% instead of 100%.
+- Applied Energistics 2 crafting CPUs list storage amounts more readably.
+
+### Fixed
+
+- Fixed an Applied Energistics 2 item duplication bug that could trigger when a large extract operation was split up.
+- Fixed Sophisticated Backpacks losing their contents after a chunk reload, and rendering white after a chunk load.
+- Fixed Ars Nouveau deleting waystones and iron doors with its Break spell instead of treating them as breakable.
+- Fixed a crash when Moog's Structure Lib structures were wrapped by another mod such as Lithostitched.
+- Fixed Infernal Expansion's Lashing, Leaping, Disarming, and Illuminating spells being unobtainable, and its Blindsight Tongue Whip wrongly accepting Sharpness and Looting.
+- Fixed items in Spectrum's fluid-logged blocks not floating to the surface, and several Spectrum items being unobtainable outside DD biomes.
+- Fixed non-stackable items stuck in Ars Nouveau lecterns when read through a repository.
+- Fixed Moog's Structure Lib leaving floating lumps of ground above structures with deep tunnels.
+
+### Removed
+
 ## [0.1.21] - 2026-09-30
 
 ### Changed
