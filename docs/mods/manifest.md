@@ -99,8 +99,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Structurify | `structurify-neoforge-2.0.41+mc1.21.1.jar` | CurseForge 1087551 / 8955745 | both | worldgen | Structure spacing. | YACL | global multiplier 2.0 | 2026-09-18 |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | CurseForge 442508 / 7150870 | both | worldgen | Extra dungeons. World data. ARR. | none | defaults | 2026-09-18 |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | CurseForge 953637 / 7142896 | both | worldgen | Ocean structures. World data. ARR. | none | defaults | 2026-09-18 |
-| Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | Modrinth DOB2l4oJ / AKcIMUil | both | library | Required by Awesome Dungeon. No CF NeoForge 1.21.1 file. ARR. | none | defaults | 2026-09-18 |
-| Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | Modrinth ptzsjBKT / 5vFWzKiI | both | worldgen | Extra dungeons. World data. ARR. | Library Ferret | defaults | 2026-09-18 |
+| Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | CurseForge 522351 / 6118136 | both | library | Required by Awesome Dungeon. ARR. Per-loader CF project. | none | defaults | 2026-09-18 |
+| Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | CurseForge 530465 / 6265989 | both | worldgen | Extra dungeons. World data. ARR. Per-loader CF project. | Library Ferret | defaults | 2026-09-18 |
 | YUNG's API (NeoForge) | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | CurseForge 1015100 / 8894736 | both | library | Required by YUNG's structure mods. | none | defaults | 2026-09-18 |
 | YUNG's Better Caves | `YungsBetterCaves-1.21.1-NeoForge-3.1.6.jar` | CurseForge 340583 / 8806071 | both | worldgen | Cave overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Cave Biomes | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | CurseForge 1111586 / 6913179 | both | worldgen | Cave biomes. World data. Packwiz tried to pull TerraBlender Forge `563928`; that was removed. Use NeoForge `940057`. | YUNG's API, GeckoLib, TerraBlender NF | defaults | 2026-09-22 |
@@ -116,7 +116,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | YUNG's Better Nether Fortresses | `YungsBetterNetherFortresses-1.21.1-NeoForge-3.1.5.jar` | CurseForge 1015118 / 6606621 | both | worldgen | Fortress overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Bridges | `YungsBridges-1.21.1-NeoForge-5.1.1.jar` | CurseForge 1015149 / 5812553 | both | worldgen | River bridges. World data. | YUNG's API | defaults | 2026-09-18 |
 | Moog's Structure Lib | `MoogsStructureLib-neoforge-1.21.1-3.3.1.jar` | CurseForge 1337167 / 8885814 | both | library | Required by Moog's Mineshafts. | none | defaults | 2026-09-18 |
-| MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | Modrinth z25hqseO / gQlqjs2o | both | worldgen | Mineshaft overhaul. World data. | Moog's Structure Lib | defaults | 2026-09-18 |
+| MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | CurseForge 1570795 / 8312865 | both | worldgen | Mineshaft overhaul. World data. | Moog's Structure Lib | defaults | 2026-09-18 |
 | Epic Structures: Villages | `epic-structures-villages-2.0.0.jar` | CurseForge 1308486 / 8830175 | both | worldgen | Village overhaul. World data. ARR. | none | defaults | 2026-09-18 |
 | Epic Structures: Witch Huts | `Epic Witch Huts v1.3.1.jar` | CurseForge 1335768 / 8383193 | both | worldgen | Witch hut overhaul. World data. ARR. | none | defaults | 2026-09-18 |
 | Epic Structures: Jungle Temples | `Epic Jungle Temples v1.0.2.jar` | CurseForge 1600197 / 8611815 | both | worldgen | Jungle temple overhaul. World data. ARR. | none | defaults | 2026-09-18 |
@@ -124,7 +124,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.16.jar` | CurseForge 1407992 / 8916189 | both | worldgen | Nether biomes. World data. | Lithostitched, GeckoLib | defaults | 2026-09-18 |
 | Countered's Terrain Slabs | `terrain_slabs-neoforge-3.1.2.jar` | CurseForge 1125437 / 8216091 | both | worldgen | Terrain slabs. World data. | Architectury | defaults | 2026-09-18 |
 | Fragmentum (NeoForge) | `fragmentum-5.0.0+1.21.1-neoforge.jar` | CurseForge 1123977 / 8921953 | both | library | Required by Aquamirae. | none | defaults | 2026-09-18 |
-| Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | Modrinth k23mNPhZ / iUPJ8ziU | both | content | Ocean structures and boss. World data. | GeckoLib, Fragmentum | defaults | 2026-09-18 |
+| Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | CurseForge 536254 / 8931374 | both | content | Ocean structures and boss. World data. | GeckoLib, Fragmentum | defaults | 2026-09-18 |
 | FastBoot | `fastboot-1.21.x-v1.3neo.jar` | CurseForge 1030285 / 6998687 | client | optimizer | Early-load mixins; skips per-version data conversion on boot. ARR. | none | defaults | 2026-09-18 |
 | Fluidium | `fluidium-1.21.1-1.4.0.jar` | CurseForge 1306029 / 7481400 | both | optimizer | Distant fluid ticks delayed (default 32 blocks, 50% skip). Claimed/force-loaded chunks stay full-speed. | Duplicationless | defaults | 2026-09-18 |
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | CurseForge 1380105 / 8646414 | both | library | Required by Fluidium (`mandatory=true` `[1.1.5,)`). Not DoesPotatoTick. | none | defaults | 2026-09-18 |
@@ -561,13 +561,13 @@ Removed Pipez + Pipez Lag Fix. Added Modern Dynamics, XNet (+ McJtyLib, RFTools 
 | YACL | isXander | LGPL-3.0-or-later | CurseForge reference. |
 | Structurify | See CurseForge page | See CurseForge page | CurseForge reference. |
 | When Dungeons Arise / Seven Seas | Aurelj | ARR | CurseForge metadata only; do not embed the jars. |
-| Library Ferret, Awesome Dungeon | JTL | ARR | Modrinth metadata; do not embed the jars. |
+| Library Ferret, Awesome Dungeon | JTL | ARR | CurseForge metadata; do not rehost the jars. |
 | YUNG's API / Better Caves / Better Nether Fortresses / Bridges | YUNG | LGPL-3.0-only | CurseForge reference. |
-| Moog's Structure Lib / Mineshafts | Moog | See project pages | CurseForge / Modrinth metadata. |
+| Moog's Structure Lib / Mineshafts | Moog | See project pages | CurseForge metadata; do not rehost the jars. |
 | Epic Structures | See CurseForge pages | ARR | CurseForge metadata only; do not embed the jars. |
 | Infernal Expansion Redux | See CurseForge page | See CurseForge page | CurseForge reference. |
 | Countered's Terrain Slabs | Countered | See CurseForge page | CurseForge reference. |
-| Fragmentum, Aquamirae | Obscuria | Obscuria licenses | CurseForge / Modrinth metadata; do not embed the jars. |
+| Fragmentum, Aquamirae | Obscuria | Obscuria licenses | CurseForge metadata; do not rehost the jars. |
 | FastBoot | dnlayu | ARR | CurseForge metadata only; do not embed the jar. |
 | Fluidium, Duplicationless | Kall | MIT | CurseForge reference. |
 | LC²H | Admany | BRSSLA V2.0.0 | CurseForge metadata only; do not embed the jar. |
