@@ -1,13 +1,13 @@
 name = "Create: Metalwork"
-filename = "createmetalwork-2.0.0.jar"
+filename = "createmetalwork-neoforge-1.21.1-3.0.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e53cb0ce472f6eabc299c7545df5259bdb136de0"
+hash = "251b18b4a337f75a8090e5a90c872bceefb3caeb"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7287996
+file-id = 8995820
 project-id = 966104

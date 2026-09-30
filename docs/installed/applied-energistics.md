@@ -1,6 +1,6 @@
 # Applied Energistics
 
-ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.md). The Ars bridge is in [Magic](magic.md). The Mekanism bridge is listed here and again noted under [Mekanism](mekanism.md).
+ME storage and autocrafting. The TaCZ bridge is in [Weapons](weapons.md). The Ars bridge is in [Magic](magic.md). The Mekanism bridges are here; Mekanism itself is in [Mekanism](mekanism.md). Kotlin for Forge, which several AE2 addons need, is in [Libraries](libraries.md).
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
@@ -8,8 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Applied Energistics 2 | `appliedenergistics2-19.2.17.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
-| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library`, `tech`, `storage`, `ae2` | Kotlin runtime. AE2 MEGA Things, Better P2P, Observable, and Inventory Profiles Next need it. |
+| Applied Energistics 2 | `appliedenergistics2-19.2.18.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
 | Glodium | `Glodium-1.21-2.2-neoforge.jar` | both | `library`, `tech`, `storage`, `ae2` | Library Applied Flux and ExtendedAE need. |
 | Applied Energistics 2 Wireless Terminals | `ae2wtlib-19.5.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Wireless terminals. |
 | GuideME | `guideme-21.1.19.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2, Modern Industrialization, and Little Big Redstone use. |
@@ -35,4 +34,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Applied Mekanistics | `Applied-Mekanistics-1.6.3.jar` | both | `addon`, `tech`, `storage`, `ae2`, `mekanism` | Mekanism machines on ME networks. |
 | Applied Flux | `AppliedFlux-1.21-2.1.6-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |
-| Applied Construction Sticks | `appliedsticks-1.21.1-1.2.1.jar` | both | `compat`, `building`, `ae2` | Construction sticks that pull from Applied Energistics. |
+| Applied Construction Sticks | `appliedsticks-1.21.1-1.2.1.jar` | both | `compat`, `building`, `ae2` | Construction sticks that pull items from Applied Energistics. |

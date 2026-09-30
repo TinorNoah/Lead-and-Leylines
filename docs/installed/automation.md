@@ -8,12 +8,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | `core`, `tech`, `world-data` | A separate factory tech tree. |
-| Extended Industrialization | `extended-industrialization-1.16.2-1.21.1.jar` | both | `addon`, `tech`, `world-data` | Extra Modern Industrialization machines. |
-| Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech` | Solar panels for Modern Industrialization. |
-| Modern Industrialization Structure Viewer | `miviewer-1.1.5.jar` | both | `addon`, `tech` | In-world MI multiblock preview. |
-| LDLib | `ldlib2-neoforge-1.21.1-2.2.41-all.jar` | both | `library`, `tech` | Library the MI structure viewer needs. |
-| Modern Industrial Routers | `modernindustrialrouters-2.1.1.jar` | both | `addon`, `tech`, `transport` | Router upgrades for this mod's energy. |
+| Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | `core`, `tech`, `modern-industrialization`, `world-data` | A separate factory tech tree. |
+| Extended Industrialization | `extended-industrialization-1.16.2-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `world-data` | Extra Modern Industrialization machines. |
+| Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech`, `modern-industrialization` | Solar panels for Modern Industrialization. |
+| Modern Industrialization Structure Viewer | `miviewer-1.1.5.jar` | both | `addon`, `tech`, `modern-industrialization` | In-world MI multiblock preview. |
+| LDLib | `ldlib2-neoforge-1.21.1-2.2.41-all.jar` | both | `library`, `tech`, `modern-industrialization` | Library the MI structure viewer needs. |
+| Modern Industrial Routers | `modernindustrialrouters-2.1.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `transport` | Router upgrades for Modern Industrialization energy. |
 
 ## Just Dire Things
 

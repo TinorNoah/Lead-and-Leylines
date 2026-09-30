@@ -25,7 +25,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| YUNG's Cave Biomes (Forge/NeoForge) | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | both | `addon`, `worldgen`, `yungs`, `world-data` | Cave biome set from YUNG. |
+| YUNG's Cave Biomes (Forge/NeoForge) | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | both | `core`, `worldgen`, `yungs`, `world-data` | Cave biome set from YUNG. |
 
 ## Finding biomes
 
