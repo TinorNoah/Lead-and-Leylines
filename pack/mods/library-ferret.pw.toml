@@ -3,11 +3,11 @@ filename = "libraryferret-neoforge-1.21.1-4.0.0.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "95887e3ae531dc7e8a39e2c285c8a27cf06d698c"
-mode = "metadata:curseforge"
+url = "https://cdn.modrinth.com/data/DOB2l4oJ/versions/AKcIMUil/libraryferret-neoforge-1.21.1-4.0.0.jar"
+hash-format = "sha512"
+hash = "493bf0c3f90f14bc4b24d46ab14026a934cf5b00db454a0126a10e6afd062f2e28fdd4500ef0c757bcf7f2e39eca6c5378e592209021b652c1b8a1650c06ac1a"
 
 [update]
-[update.curseforge]
-file-id = 6118136
-project-id = 522351
+[update.modrinth]
+mod-id = "DOB2l4oJ"
+version = "AKcIMUil"

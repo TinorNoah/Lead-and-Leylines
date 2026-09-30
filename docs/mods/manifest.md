@@ -99,8 +99,8 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Structurify | `structurify-neoforge-2.0.41+mc1.21.1.jar` | CurseForge 1087551 / 8955745 | both | worldgen | Structure spacing. | YACL | global multiplier 2.0 | 2026-09-18 |
 | When Dungeons Arise | `DungeonsArise-1.21.1-2.1.68-release.jar` | CurseForge 442508 / 7150870 | both | worldgen | Extra dungeons. World data. ARR. | none | defaults | 2026-09-18 |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | CurseForge 953637 / 7142896 | both | worldgen | Ocean structures. World data. ARR. | none | defaults | 2026-09-18 |
-| Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | CurseForge 522351 / 6118136 | both | library | Required by Awesome Dungeon. ARR. Per-loader CF project. | none | defaults | 2026-09-18 |
-| Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | CurseForge 530465 / 6265989 | both | worldgen | Extra dungeons. World data. ARR. Per-loader CF project. | Library Ferret | defaults | 2026-09-18 |
+| Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | Modrinth DOB2l4oJ / AKcIMUil | both | library | Required by Awesome Dungeon. ARR. On CurseForge as 522351 / 6118136 but `allowModDistribution = false`, so it is **not** manifest-referenced; embedded from Modrinth instead. | none | defaults | 2026-09-18 |
+| Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | Modrinth ptzsjBKT / 5vFWzKiI | both | worldgen | Extra dungeons. World data. ARR. On CurseForge as 530465 / 6265989 but `allowModDistribution = false`, so it is **not** manifest-referenced; embedded from Modrinth instead. | Library Ferret | defaults | 2026-09-18 |
 | YUNG's API (NeoForge) | `YungsApi-1.21.1-NeoForge-5.1.9.jar` | CurseForge 1015100 / 8894736 | both | library | Required by YUNG's structure mods. | none | defaults | 2026-09-18 |
 | YUNG's Better Caves | `YungsBetterCaves-1.21.1-NeoForge-3.1.6.jar` | CurseForge 340583 / 8806071 | both | worldgen | Cave overhaul. World data. | YUNG's API | defaults | 2026-09-18 |
 | YUNG's Cave Biomes | `YungsCaveBiomes-1.21.1-NeoForge-3.1.1.jar` | CurseForge 1111586 / 6913179 | both | worldgen | Cave biomes. World data. Packwiz tried to pull TerraBlender Forge `563928`; that was removed. Use NeoForge `940057`. | YUNG's API, GeckoLib, TerraBlender NF | defaults | 2026-09-22 |
@@ -561,7 +561,7 @@ Removed Pipez + Pipez Lag Fix. Added Modern Dynamics, XNet (+ McJtyLib, RFTools 
 | YACL | isXander | LGPL-3.0-or-later | CurseForge reference. |
 | Structurify | See CurseForge page | See CurseForge page | CurseForge reference. |
 | When Dungeons Arise / Seven Seas | Aurelj | ARR | CurseForge metadata only; do not embed the jars. |
-| Library Ferret, Awesome Dungeon | JTL | ARR | CurseForge metadata; do not rehost the jars. |
+| Library Ferret, Awesome Dungeon | JTL | ARR | CurseForge has these with distribution disabled, so there is no metadata reference to use. Embedded from Modrinth; that is the author's deliberate choice, not a rehosting mistake. |
 | YUNG's API / Better Caves / Better Nether Fortresses / Bridges | YUNG | LGPL-3.0-only | CurseForge reference. |
 | Moog's Structure Lib / Mineshafts | Moog | See project pages | CurseForge metadata; do not rehost the jars. |
 | Epic Structures | See CurseForge pages | ARR | CurseForge metadata only; do not embed the jars. |
