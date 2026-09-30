@@ -18,3 +18,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | both | `addon`, `stability` | Fixes a disconnect packet crash. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | `core`, `stability` | Login flood protection. |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | `addon`, `stability` | A bad tag entry no longer wipes the whole tag. |
+
+## Lead and Leylines Patches
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Lead and Leylines Patches | `leylines-patches-0.1.0.jar` | both | `core`, `stability` | Pack-owned fixes for confirmed mod conflicts. |

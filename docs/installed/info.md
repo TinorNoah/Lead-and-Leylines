@@ -8,7 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.449.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.450.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
 | JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.0.jar` | both | `addon`, `info`, `jei` | Craft from JEI with fewer clicks. |
 | JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | both | `addon`, `info`, `jei` | Extra JEI pages. |
@@ -24,7 +24,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Jade 🔍 | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | `core`, `info`, `jade` | Block and entity overlay. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | `addon`, `info`, `jade` | Extra Jade providers. |
-| Jade Sable Compat | `sablejade-1.3.0.jar` | client | `compat`, `info`, `jade` | Jade labels for Sable physics entities. |
 
 ## Books
 

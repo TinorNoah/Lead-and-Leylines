@@ -10,6 +10,7 @@ import {
   toCurseForgeModIds,
 } from "../src/lib/chunks.ts";
 import { extractPushSha, verifyGitHubSignature } from "../src/lib/webhook.ts";
+import { isPackReleaseTag } from "../src/lib/release.ts";
 
 function testChunks() {
   const modrinth = Array.from({ length: 250 }, (_, i) => `id-${i}`);
@@ -54,6 +55,14 @@ function testWebhook() {
   );
 }
 
+function testPackReleaseTags() {
+  assert.equal(isPackReleaseTag("v0.1.19"), true);
+  assert.equal(isPackReleaseTag("patches-v0.1.0"), false);
+  assert.equal(isPackReleaseTag("v0.1.0-rc.1"), false);
+  assert.equal(isPackReleaseTag("patches-v0.1.0-beta"), false);
+}
+
 testChunks();
 testWebhook();
+testPackReleaseTags();
 console.log("unit tests passed");

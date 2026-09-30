@@ -11,13 +11,21 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ## [Unreleased]
 
+## [0.1.20] - 2026-09-30
+
 ### Added
 
+- A project-owned compatibility patch for the Weapons of Miracles × Modern Industrialization drill enchantment crash.
+
 ### Changed
+
+- Updated Just Enough Items (JEI) to the latest compatible 1.21.1 NeoForge beta.
 
 ### Fixed
 
 ### Removed
+
+- Create Aeronautics and its Sable physics library, plus every addon that existed only to teach another mod about them: Climbable Ropes, Curios API Compat, Mekanism Compatibility, the Sable Xaero's map overlay, Jade Sable Compat, TACZ, Point Blank, and Iron's Spells compat. Create trains and Create: Threaded Trains are unchanged. Existing vehicles in a world stay in the save and must be removed by hand.
 
 ## [0.1.19] - 2026-09-28
 

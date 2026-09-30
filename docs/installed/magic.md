@@ -32,7 +32,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | AzureLib | `azurelib-neo-1.21.1-3.1.12.jar` | both | `library`, `magic`, `irons-spells` | Library the Twilight spellbooks load at runtime. |
 | Spellbooks Of Twilight : Iron's Spells x The Twilight Forest Addon | `twilight_spellbooks-0.0.3.jar` | both | `addon`, `magic`, `irons-spells` | Twilight Forest spells. |
 | Iron's Spells 'N Spellbooks: Create Additions | `iss_create_additions-1.21.1-2..jar` | both | `addon`, `magic`, `create`, `irons-spells` | Create spell tools. |
-| Iron's Spells x Aeronautics Compat | `ironssablecompat-1.0.4.jar` | both | `addon`, `magic`, `irons-spells` | Teleport spells on Aeronautics ships. |
 | Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.5.1-1.21.1.jar` | both | `addon`, `magic`, `irons-spells`, `farmers-delight`, `food` | Farmer's Delight spells. |
 | Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.5.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
 | KubeJS Iron's Spells | `irons_spells_js-4.0.3.jar` | both | `compat`, `magic`, `irons-spells` | KubeJS hooks for new spells. |
