@@ -1,8 +1,8 @@
 name = "Lead and Leylines Patches"
-filename = "leylines-patches-0.1.0.jar"
+filename = "leylines-patches-0.2.0.jar"
 side = "both"
 
 [download]
-url = "https://github.com/TinorNoah/Lead-and-Leylines-Patches/releases/download/patches-v0.1.0/leylines-patches-0.1.0.jar"
+url = "https://github.com/TinorNoah/Lead-and-Leylines-Patches/releases/download/patches-v0.2.0/leylines-patches-0.2.0.jar"
 hash-format = "sha256"
-hash = "8a9f37649c33c5123aa3c63975bdf94f9e376217d5850deeddb54b317460f691"
+hash = "15841743c0ec7f1c90891981c11a7336c186e2d09b5d014f3e668f3e193ee4ac"

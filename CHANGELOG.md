@@ -19,6 +19,7 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+- Fixed a crash when searching Creative Search for Modern Industrialization and Extended Industrialization electric tools on a multiplayer server.
 - Fixed the recipe viewer (JEI) failing to open. Just Enough Threads was patching a JEI search class whose constructor changed in JEI 19.57, which stopped JEI from starting at all.
 
 ### Removed
