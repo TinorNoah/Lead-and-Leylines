@@ -1,0 +1,8 @@
+name = "Lead and Leylines Patches"
+filename = "leylines-patches-0.1.0.jar"
+side = "both"
+
+[download]
+url = "https://github.com/TinorNoah/Lead-and-Leylines-Patches/releases/download/patches-v0.1.0/leylines-patches-0.1.0.jar"
+hash-format = "sha256"
+hash = "8a9f37649c33c5123aa3c63975bdf94f9e376217d5850deeddb54b317460f691"

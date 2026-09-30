@@ -18,7 +18,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | both | `addon`, `guns`, `tacz` | Applied Energistics ammo box. |
 | Applied TaCZ | `AppliedTaCZ-1.21.1-19.0.1.jar` | both | `addon`, `guns`, `tacz` | Crafts and stores TaCZ guns in Applied Energistics. |
 | Create: Timeless and Classics Zero [TaCZ] Unofficial Port | `tacz_c-1.0.2+neoforge.1.21.1.jar` | both | `addon`, `guns`, `tacz`, `create` | Create recipes for TaCZ. |
-| TACZ Aeronautics compat | `tacz_aero_compat-1.8.0.jar` | both | `compat`, `guns`, `tacz` | Bullets hit Aeronautics vehicles. |
 | TACZ / Jade Compatibility \|Timeless and classics Zero addon | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | client | `compat`, `guns`, `tacz`, `jade` | Jade labels for guns. |
 | [JET] Just Enough TaCZ | `just_enough_tacz-1.2.0.jar` | client | `addon`, `guns`, `tacz`, `jei` | Gun recipes in JEI. |
 | Berezka's library | `berezka_api-1.2.9.5-fix-neoforge-1.21.1.jar` | both | `library`, `guns`, `tacz` | Library Just Enough TaCZ needs. |
@@ -43,7 +42,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Vic's Point Blank | `pointblank-neoforge-1.21-2.2.0.jar` | both | `core`, `guns`, `point-blank` | Second gun system, beside TaCZ. |
-| Point Blank Aeronautics compat | `pointblank_aero_compat-1.0.0.jar` | both | `compat`, `guns`, `point-blank` | Bullets hit Aeronautics vehicles. |
 | Apotheosis x Point Blank Compat | `apothic-pointblank-1.2.0.jar` | both | `compat`, `guns`, `point-blank`, `apotheosis` | Apotheosis affixes and gems on these guns. |
 | Point Blank Official \|\| Point Blank Extended Edition Pack | `pbext-ext 1.0.zip` | both | `content-pack`, `guns`, `point-blank` | Official extended gun pack. |
 | Point Blank Official \|\| Gun Gale Pack | `ggo-ext 1.0.zip` | both | `content-pack`, `guns`, `point-blank` | Official Gun Gale pack. |

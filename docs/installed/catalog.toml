@@ -72,7 +72,6 @@ mods = [
   { file = "tacz-applied-ammo-box.pw.toml", blurb = "Applied Energistics ammo box.", tags = ["addon", "guns", "tacz"] },
   { file = "applied-tacz.pw.toml", blurb = "Crafts and stores TaCZ guns in Applied Energistics.", tags = ["addon", "guns", "tacz"] },
   { file = "create-timeless-and-classics-zero-tacz-port.pw.toml", blurb = "Create recipes for TaCZ.", tags = ["addon", "guns", "tacz", "create"] },
-  { file = "tacz-aeronautics-compat.pw.toml", blurb = "Bullets hit Aeronautics vehicles.", tags = ["compat", "guns", "tacz"] },
   { file = "tacz-jade-compatibility-timeless-and-classics-zero.pw.toml", blurb = "Jade labels for guns.", tags = ["compat", "guns", "tacz", "jade"] },
   { file = "jet-just-enough-tacz.pw.toml", blurb = "Gun recipes in JEI.", tags = ["addon", "guns", "tacz", "jei"] },
   { file = "berezka-library.pw.toml", blurb = "Library Just Enough TaCZ needs.", tags = ["library", "guns", "tacz"] },
@@ -97,7 +96,6 @@ mods = [
 name = "Vic's Point Blank"
 mods = [
   { file = "vics-point-blank.pw.toml", blurb = "Second gun system, beside TaCZ.", tags = ["core", "guns", "point-blank"] },
-  { file = "point-blank-aeronautics-compat.pw.toml", blurb = "Bullets hit Aeronautics vehicles.", tags = ["compat", "guns", "point-blank"] },
   { file = "apotheosis-x-point-blank-compat.pw.toml", blurb = "Apotheosis affixes and gems on these guns.", tags = ["compat", "guns", "point-blank", "apotheosis"] },
   { file = "point-blank-official-point-blank-extended-edition.pw.toml", blurb = "Official extended gun pack.", tags = ["content-pack", "guns", "point-blank"] },
   { file = "point-blank-official-gun-gale-pack.pw.toml", blurb = "Official Gun Gale pack.", tags = ["content-pack", "guns", "point-blank"] },
@@ -393,7 +391,6 @@ mods = [
   { file = "azurelib.pw.toml", blurb = "Library the Twilight spellbooks load at runtime.", tags = ["library", "magic", "irons-spells"] },
   { file = "spellbooks-of-twilight-irons-spells-x-the-twilight.pw.toml", blurb = "Twilight Forest spells.", tags = ["addon", "magic", "irons-spells"] },
   { file = "create-spellworks-irons-spells-n-spellbooks.pw.toml", blurb = "Create spell tools.", tags = ["addon", "magic", "create", "irons-spells"] },
-  { file = "irons-spells-n-spellbooks-aeronautics.pw.toml", blurb = "Teleport spells on Aeronautics ships.", tags = ["addon", "magic", "irons-spells"] },
   { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
   { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
   { file = "kubejs-irons-spells.pw.toml", blurb = "KubeJS hooks for new spells.", tags = ["compat", "magic", "irons-spells"] },
@@ -629,7 +626,7 @@ mods = [
 [[category]]
 slug = "create"
 title = "Create"
-intro = """Contraptions and kinetics. Ships, trains, and ropes are in [Transport](transport.md). Spell and storage bridges that extend another mod stay on that mod's page."""
+intro = """Contraptions and kinetics, including trains. Fast travel, pipes, and routers are in [Transport](transport.md). Spell and storage bridges that extend another mod stay on that mod's page."""
 
 [[category.group]]
 name = "Create"
@@ -649,6 +646,7 @@ mods = [
   { file = "create-integrated-farming.pw.toml", blurb = "Create farming automation.", tags = ["addon", "tech", "create", "farming"] },
   { file = "create-new-age.pw.toml", blurb = "Create electricity and magnets.", tags = ["addon", "tech", "create", "world-data"] },
   { file = "bellsandwhistles.pw.toml", blurb = "Train bells, whistles, and decoration.", tags = ["addon", "tech", "create"] },
+  { file = "create-threaded-trains.pw.toml", blurb = "Train scheduling off the main thread.", tags = ["addon", "tech", "create"] },
   { file = "create-big-cannons.pw.toml", blurb = "Create artillery.", tags = ["addon", "tech", "create", "world-data"] },
   { file = "ritchies-projectile-library.pw.toml", blurb = "Library Create Big Cannons needs.", tags = ["library", "tech", "create"] },
   { file = "create-big-cannons-advanced-technologies.pw.toml", blurb = "Extra Big Cannons munitions and machines.", tags = ["addon", "tech", "create"] },
@@ -702,19 +700,7 @@ mods = [
 [[category]]
 slug = "transport"
 title = "Transport"
-intro = """Vehicles, fast travel, and item pipes. Gun and spell compat that only teaches a projectile to hit a ship stays on the [Weapons](weapons.md) or [Magic](magic.md) page."""
-
-[[category.group]]
-name = "Create Aeronautics"
-mods = [
-  { file = "create-aeronautics.pw.toml", blurb = "Airships and physics vehicles.", tags = ["core", "transport", "create"] },
-  { file = "sable.pw.toml", blurb = "Physics library the vehicles use.", tags = ["library", "transport"] },
-  { file = "create-aeronautics-climbable-ropes.pw.toml", blurb = "Climbable ropes.", tags = ["addon", "transport", "create"] },
-  { file = "create-aeronautics-x-curios-api-compat.pw.toml", blurb = "Aviator goggles in a Curios slot.", tags = ["compat", "transport", "create"] },
-  { file = "create-xaeros-map.pw.toml", blurb = "Vehicles on Xaero's maps.", tags = ["addon", "transport", "create"] },
-  { file = "create-aeronautics-mekanism-compatibility.pw.toml", blurb = "Mekanism blocks on vehicles.", tags = ["compat", "transport", "create", "mekanism"] },
-  { file = "create-threaded-trains.pw.toml", blurb = "Train scheduling off the main thread.", tags = ["addon", "transport", "create"] },
-]
+intro = """Fast travel, item pipes, and routers. Create trains are in [Create](create.md). Gun and spell compat that only teaches a projectile to hit a moving contraption has no place here.""" 
 
 [[category.group]]
 name = "Travel"
@@ -881,7 +867,6 @@ name = "Looking at the world"
 mods = [
   { file = "jade.pw.toml", blurb = "Block and entity overlay.", tags = ["core", "info", "jade"] },
   { file = "jade-addons.pw.toml", blurb = "Extra Jade providers.", tags = ["addon", "info", "jade"] },
-  { file = "jade-sable-compat.pw.toml", blurb = "Jade labels for Sable physics entities.", tags = ["compat", "info", "jade"] },
 ]
 
 [[category.group]]
@@ -1042,6 +1027,12 @@ mods = [
   { file = "disconnect-packet-fix.pw.toml", blurb = "Fixes a disconnect packet crash.", tags = ["addon", "stability"] },
   { file = "login-protection.pw.toml", blurb = "Login flood protection.", tags = ["core", "stability"] },
   { file = "lmft.pw.toml", blurb = "A bad tag entry no longer wipes the whole tag.", tags = ["addon", "stability"] },
+]
+
+[[category.group]]
+name = "Lead and Leylines Patches"
+mods = [
+  { file = "leylines-patches.pw.toml", blurb = "Pack-owned fixes for confirmed mod conflicts.", tags = ["core", "stability"] },
 ]
 
 [[category]]

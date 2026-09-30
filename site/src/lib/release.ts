@@ -37,6 +37,10 @@ function versionFromTag(tag: string): string {
   return tag.replace(/^v/i, "");
 }
 
+export function isPackReleaseTag(tag: string): boolean {
+  return /^v\d+\.\d+\.\d+$/.test(tag);
+}
+
 function channelLabel(channel: ReleaseChannel): string {
   switch (channel) {
     case "release":
@@ -54,7 +58,7 @@ export { channelLabel };
 
 function toReleaseInfo(body: GitHubReleaseBody, channel: ReleaseChannel): ReleaseInfo | null {
   const tag = body.tag_name?.trim();
-  if (!tag || !body.html_url) {
+  if (!tag || !isPackReleaseTag(tag) || !body.html_url) {
     return null;
   }
   const version = versionFromTag(tag);

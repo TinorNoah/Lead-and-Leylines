@@ -1,6 +1,6 @@
 # Create
 
-Contraptions and kinetics. Ships, trains, and ropes are in [Transport](transport.md). Spell and storage bridges that extend another mod stay on that mod's page.
+Contraptions and kinetics, including trains. Fast travel, pipes, and routers are in [Transport](transport.md). Spell and storage bridges that extend another mod stay on that mod's page.
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
@@ -23,6 +23,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Integrated Farming | `create-integrated-farming-1.4.3.jar` | both | `addon`, `tech`, `create`, `farming` | Create farming automation. |
 | Create: New Age | `create-new-age-1.2.0+neoforge-mc1.21.1.jar` | both | `addon`, `tech`, `create`, `world-data` | Create electricity and magnets. |
 | Create: Bells & Whistles | `bellsandwhistles-0.4.7-1.21.1.jar` | both | `addon`, `tech`, `create` | Train bells, whistles, and decoration. |
+| Create: Threaded Trains | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `tech`, `create` | Train scheduling off the main thread. |
 | Create Big Cannons | `createbigcannons-5.11.7+mc.1.21.1.jar` | both | `addon`, `tech`, `create`, `world-data` | Create artillery. |
 | Ritchie's Projectile Library | `ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar` | both | `library`, `tech`, `create` | Library Create Big Cannons needs. |
 | Create Big Cannons: Advanced Technologies | `cbc_at_Neoforge_1.21.1_0.1.4c.jar` | both | `addon`, `tech`, `create` | Extra Big Cannons munitions and machines. |

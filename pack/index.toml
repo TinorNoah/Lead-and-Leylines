@@ -1699,26 +1699,6 @@ hash = "7a0a95e7bac14e0f9c1480057862255631eca9789c3b305b0685256107791e2f"
 metafile = true
 
 [[files]]
-file = "mods/create-aeronautics-climbable-ropes.pw.toml"
-hash = "3a2ae957df07f167b9be65d2d702aa88f0d57dca9d58fb0d1d5e4bf60ae1aeb0"
-metafile = true
-
-[[files]]
-file = "mods/create-aeronautics-mekanism-compatibility.pw.toml"
-hash = "16f12fa9a69e00d5e4688d1e7fdf66af3f77e440192f56e7dc23cb1cf1d765fd"
-metafile = true
-
-[[files]]
-file = "mods/create-aeronautics-x-curios-api-compat.pw.toml"
-hash = "8c8f015bcce51748c7d9b8c9e0a8b6cbe2a55c5afc5279d64d25930bb5b11269"
-metafile = true
-
-[[files]]
-file = "mods/create-aeronautics.pw.toml"
-hash = "efc9a3f8d4d0098687667f5ce7be29262202bcba23b0cec29811dcac1b0799fc"
-metafile = true
-
-[[files]]
 file = "mods/create-alloyed.pw.toml"
 hash = "1f756ed3d16ee7011c2b4491840c794b06b0be20888239bd128b519d7a687f63"
 metafile = true
@@ -1871,11 +1851,6 @@ metafile = true
 [[files]]
 file = "mods/create-wizardry.pw.toml"
 hash = "dc4ffdaeb0382a88140895521643ed3d95f9dc76fdfd5566dcf9ca0b13e0b218"
-metafile = true
-
-[[files]]
-file = "mods/create-xaeros-map.pw.toml"
-hash = "06c3371d8fc38ca4540dda43a882904cb79fa20af835827d251097c27f6f6348"
 metafile = true
 
 [[files]]
@@ -2444,11 +2419,6 @@ hash = "3f8f749b654d18560d45dfb160e839566f72d9150e86f7f881c5e205f5660c55"
 metafile = true
 
 [[files]]
-file = "mods/irons-spells-n-spellbooks-aeronautics.pw.toml"
-hash = "6c1a221023ee631137ab0a56e35366d37af30db5a013fcd6016c3e90cbcbdd81"
-metafile = true
-
-[[files]]
 file = "mods/irons-spells-n-spellbooks.pw.toml"
 hash = "4f7ef8bd9e05ab690a81d0f698d38a25bbaf0729953fd015bca3a852aadf7689"
 metafile = true
@@ -2461,11 +2431,6 @@ metafile = true
 [[files]]
 file = "mods/jade-addons.pw.toml"
 hash = "055b6a985f7b81ef953c5c516b56cd6889ef327e1789e2e2723860fa021817a5"
-metafile = true
-
-[[files]]
-file = "mods/jade-sable-compat.pw.toml"
-hash = "306fe19350968b44302aec1d6da1c10e503cf4629f4f686bc22a387bdbdc7a9c"
 metafile = true
 
 [[files]]
@@ -2495,7 +2460,7 @@ metafile = true
 
 [[files]]
 file = "mods/jei.pw.toml"
-hash = "47c701c67e70b60b3a71c9ec4aff707ea0411f033024730b1ca0567b8526a824"
+hash = "dff78a2bb35aed61cf73edaf1913c1fafec2a3a50551e022648c658cc21e32f9"
 metafile = true
 
 [[files]]
@@ -2591,6 +2556,11 @@ metafile = true
 [[files]]
 file = "mods/let-me-despawn.pw.toml"
 hash = "dd4dd28e505ef8a6dae0569c92b03732302094e952068db010924fe945a27170"
+metafile = true
+
+[[files]]
+file = "mods/leylines-patches.pw.toml"
+hash = "2d5fad08bbbaedaeb0a9a7680aa3ee386da5c60ffce95327fbfd02d86e6dc929"
 metafile = true
 
 [[files]]
@@ -3039,11 +3009,6 @@ hash = "5b30dafc9e96471978376ee010cec0ddf592377ac94192c9370cb37973e1e95f"
 metafile = true
 
 [[files]]
-file = "mods/point-blank-aeronautics-compat.pw.toml"
-hash = "b6a6f8449da5972c8734b5655afc808e9560921dc1d59982c1398455bf19dc53"
-metafile = true
-
-[[files]]
 file = "mods/polymorph.pw.toml"
 hash = "2e2af1cc71b69b26ae87bcb78d75fb0186d690ee1b85d8d4586eec112aa51b66"
 metafile = true
@@ -3171,11 +3136,6 @@ metafile = true
 [[files]]
 file = "mods/ritchies-projectile-library.pw.toml"
 hash = "c62b51a8248d15e3cb63880ac123a92dd6a67973a1eafc4c4cb09f3f74481f78"
-metafile = true
-
-[[files]]
-file = "mods/sable.pw.toml"
-hash = "f21e2db6083eb58ee1b96630cf345c38ee7b93296da7990f27155480f3f2b6e1"
 metafile = true
 
 [[files]]
@@ -3381,11 +3341,6 @@ metafile = true
 [[files]]
 file = "mods/tacz-addon.pw.toml"
 hash = "cecac2f4198b9a3e7f1606354ff411932ff24076284cc6f17f4add1160338591"
-metafile = true
-
-[[files]]
-file = "mods/tacz-aeronautics-compat.pw.toml"
-hash = "56f8281643a4471c6e6bd5bd8d5b8b6d2984f8569f44344ce8a2bf00c97461f9"
 metafile = true
 
 [[files]]

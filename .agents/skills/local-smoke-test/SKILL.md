@@ -5,7 +5,7 @@ description: Use when a mod, config, or pack change needs a local dedicated-serv
 
 # Local smoke test
 
-Run `python scripts/smoke_test.py` from the repo root after a mod or config change. Default is a full benchmark: boot, `/neoforge generate` with chunkRadius 8, `/tick query` samples, then a report under `docs/smoke-runs/` (see `index.md`). Timeout is 900 seconds. The server zip this script builds reuses cached jars (packwiz cache, then `.cache/mod-files`) and downloads only missing files. Do not clear those caches or download the jars by hand.
+Run `python scripts/smoke_test.py` from the repo root after a mod or config change. The default 8 GiB allocation runs a full benchmark: boot, `/neoforge generate` with chunkRadius 8, `/tick query` samples, then a report under `docs/smoke-runs/` (see `index.md`). Timeout is 900 seconds. The server zip this script builds reuses cached jars (packwiz cache, then `.cache/mod-files`) and downloads only missing files. Do not clear those caches or download the jars by hand.
 
 `--skip-bench` is the original boot-only check (300s, no generate, no report). Use it for a quick "did world load break?" pass.
 

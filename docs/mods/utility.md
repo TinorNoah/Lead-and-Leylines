@@ -103,7 +103,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Akashic Tome | `AkashicTome-1.8-30.jar` | both | Holds other guide books. |
 | CreativeCore | `CreativeCore_NEOFORGE_v2.13.49_mc1.21.1.jar` | both | Required by AmbientSounds. |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | Ambient audio. |
-| Create - Xaero's map | `sablexaeromaps-1.21.1-1.4.0.jar` | client | Aeronautics contraptions on Xaero's maps. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | client | Season text on the HUD / Xaero map. Works with Ecliptic Seasons. |
 | Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | client | Sort, locked slots, gear sets. libIPN. Kotlin for Forge. AGPL-3.0-or-later. |
