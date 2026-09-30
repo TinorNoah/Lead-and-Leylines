@@ -15,6 +15,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+### Fixed
+
+### Removed
+
+## [0.1.21] - 2026-09-30
+
+### Changed
+
 - JEI may take noticeably longer to finish loading its recipe list after entering a world, now that its startup work runs on the main thread again.
 
 ### Fixed
