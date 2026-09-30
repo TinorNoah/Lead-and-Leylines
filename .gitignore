@@ -16,9 +16,13 @@ docs/smoke-runs/logs/
 # Local Minecraft / launcher instances (repo-root only; not datapack data/minecraft/)
 .minecraft/
 /minecraft/
+/logs/
 instances/
 prismlauncher/
 *.prism
+
+# Local crash pastes
+/test*.txt
 
 # packwiz cache
 .packwiz/
