@@ -34,11 +34,11 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Exploration](exploration.md) | 6 | Maps and dimensions. |
 | [FTB](ftb.md) | 10 | Claims, teams, quests, and the shared FTB library. |
 | [Gameplay](gameplay.md) | 13 | Small world and inventory changes. |
-| [Recipes and overlays](info.md) | 29 | JEI, Jade, and tooltip frames. |
+| [Recipes and overlays](info.md) | 28 | JEI, Jade, and tooltip frames. |
 | [Rendering](rendering.md) | 26 | Shaders, entity models, and client render optimizers. |
 | [Client](client.md) | 28 | Client-only comfort. |
 | [Performance](performance.md) | 18 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 20 | Shared libraries used by more than one mod family. |
 
-540 entries, each listed once.
+539 entries, each listed once.
