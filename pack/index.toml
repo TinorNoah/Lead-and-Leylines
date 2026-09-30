@@ -1250,7 +1250,7 @@ metafile = true
 
 [[files]]
 file = "mods/aquamirae.pw.toml"
-hash = "e6a467189e205ef2a715773dbafd48a6dadf67fa93d1493c32b694e44108d0a6"
+hash = "757921935b51950b75942ee354e1a31c14ad5b0fe86d874687c77b71f352d2e1"
 metafile = true
 
 [[files]]
@@ -1360,7 +1360,7 @@ metafile = true
 
 [[files]]
 file = "mods/awesome-dungeon.pw.toml"
-hash = "3d360591d88d1cd6abf7ea5d9da21c253c22544388bbf3534aa736905bef5735"
+hash = "2d906161b28c76204c7396c39a546e6f4c4922e8a38d79e569840caf6f28670f"
 metafile = true
 
 [[files]]
@@ -2570,7 +2570,7 @@ metafile = true
 
 [[files]]
 file = "mods/library-ferret.pw.toml"
-hash = "599c8c37e60b9f1fbfb29d10eb9ede3d174b72287b9fbe407e90b6417a27a441"
+hash = "926676b2db046e4afad874f4a2e9a90e86e96b6ca233f6113052b5d0e9d57f3b"
 metafile = true
 
 [[files]]
@@ -2760,7 +2760,7 @@ metafile = true
 
 [[files]]
 file = "mods/mmr-moogs-mineshafts-reimagined.pw.toml"
-hash = "ac4880fffcc7c1a5e81069e9baa91e4ea06f5f3ed9760214bc318852efbcc2a0"
+hash = "baaf8e67ea58c4d4ba9721d4f47db213cd93d9cbdb33664c91c8a8762a618dde"
 metafile = true
 
 [[files]]

@@ -11,6 +11,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ## [Unreleased]
 
+### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
 ## [0.1.20] - 2026-09-30
 
 ### Added
