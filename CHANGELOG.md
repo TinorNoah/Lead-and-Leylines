@@ -15,9 +15,15 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- JEI may take noticeably longer to finish loading its recipe list after entering a world, now that its startup work runs on the main thread again.
+
 ### Fixed
 
+- Fixed the recipe viewer (JEI) failing to open. Just Enough Threads was patching a JEI search class whose constructor changed in JEI 19.57, which stopped JEI from starting at all.
+
 ### Removed
+
+- Removed Just Enough Threads, which was breaking JEI. Its startup optimization can come back in a build that supports the current JEI.
 
 ## [0.1.20] - 2026-09-30
 

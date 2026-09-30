@@ -21,7 +21,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.3.jar` | both | Required by current JEI on both sides. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
-| JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Faster JEI ingredient filter on world join. ARR. |
+| JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Dropped. Faster JEI ingredient filter on world join, but built against JEI 19.56 and replaced by Just Enough Threads, which then broke on JEI 19.57. ARR. |
+| Just Enough Threads | `justenoughthreads-0.14.1+1.21.1.jar` | client | Dropped 2026-09-30. Moved JEI's startup indexing off the main thread, but its `JeiNativeSearchBuilderMixin` targets the 1-arg `ElementSearch(ElementPrefixParser)` constructor that JEI 19.57 replaced, so with `require = 1` it threw `InvalidInjectionException` and JEI never opened. Re-add only with a build for JEI 19.57+. ARR. |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | client | Backpack recipe transfer. |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | client | Armor trim preview in JEI. 1.1.0 is 26.1.2-only. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | Paginated sequenced-assembly recipes with 7+ steps. |

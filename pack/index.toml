@@ -2489,11 +2489,6 @@ hash = "09b23a881bdecac75d237719e1f85e8a8b6b06fbad220f8ca4e2abeef9ad0843"
 metafile = true
 
 [[files]]
-file = "mods/just-enough-threads.pw.toml"
-hash = "e100ec7536ce0a2ca56d3f1ff42f06807500666eb290525221ce6cbd4cef25cd"
-metafile = true
-
-[[files]]
 file = "mods/just-in-nether.pw.toml"
 hash = "8157030f52f5706b5f1a67de952fb34f84638a38e7e5ebe8b0d8a801ddd761e4"
 metafile = true
