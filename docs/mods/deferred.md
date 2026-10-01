@@ -32,6 +32,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Quark (+ Zeta, Integrated BOMD, Integrated Mowzie's, Integrated API, Integrated Patches) | Removed 2026-09-26. BOMD and Mowzie's base mods stay. Do not re-add Quark without those Integrated addons or an explicit structure redesign. |
 | Alex's Caves Continued (+ Delight, Spellbooks) | Removed 2026-09-26. Codxlib stays for Alex's Mobs Continued. Do not re-add unofficial Alex's Caves / Citadel. |
 | Apothic Category Compat | Removed 2026-09-27. Its loot-category data map hard-referenced absent Alex's Caves / Cataclysm / Undergarden items (boot DataMapLoader ERROR). Pack datapack `lead-leylines-load-fixes` keeps the in-pack bow overrides (Alex's Mobs blasters, Born in Chaos pumpkin gun, Twilight Forest block-and-chain / cube). Affix-blacklist config from that jar is gone; use Apotheosis datapacks if needed. |
+| StructureOverlapless (`1451998`) | Held 2026-10-01 after research. Wraps `ChunkGenerator#tryGenerateStructure` with a MixinExtras `@WrapOperation`; Structurify 2.0.42 already wraps the same method with `@WrapMethod`, and both use `defaultRequire: 1`, so a lost injection point is a boot crash. Project is 0-star with no README, the 1.21.1 NeoForge file (`7722759`, not the Fabric `7722840`) had 0 downloads, and its in-memory structure index is cleared on every `LevelEvent.Save`, so on a live server the guarantee only holds within a session. Structurify spacing 2.0 already halves density. Revisit with a smoke test that boots the server with both mixins and a worldgen bench. |
 
 ## Overlaps something already in the pack
 
@@ -136,7 +137,7 @@ Delightful.
 
 ### Maps / compasses / QoL
 
-Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; MmmMmmMmmMmm; Model Gap Fix; Perfect Graves; Dyenamics; Dyenamics and Friends. Construction Sticks, Tempad, Inventory Essentials, and Observable are installed. Fusion and its connected-glass pack are in [content.md](content.md).
+Inventory Tweaks ReFoxed; No trampling on farmland (no 1.21.1 NF); NetherPortalFix; Model Gap Fix; Perfect Graves; Dyenamics; Dyenamics and Friends. Construction Sticks, Tempad, Inventory Essentials, and Observable are installed. MmmMmmMmmMmm is installed (see [manifest.md](manifest.md)). Fusion and its connected-glass pack are in [content.md](content.md).
 
 ### UI / loading / shaders
 

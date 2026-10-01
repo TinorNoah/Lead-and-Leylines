@@ -21,6 +21,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | `addon`, `client-qol` | Extra inventory moves and sorting beside Mouse Tweaks. |
 | Recipe Essentials | `recipeessentials-1.21.1-4.7.jar` | client | `addon`, `client-qol` | Recipe book and craft helper tweaks. |
 | libIPN | `libIPN-neoforge-1.21.1-6.6.3.jar` | client | `library`, `client-qol` | Library Inventory Profiles Next uses. |
+| KeyBind Bundles | `keybindbundles-1.4.0.jar` | client | `addon`, `client-qol` | Collapse several keybinds into one. |
+| KeybindsPurger | `KeybindsPurger-1.4.0-neoforge-1.21.1.jar` | client | `addon`, `client-qol` | Clears conflicting keybinds. |
+| No Chat Reports | `NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar` | both | `core`, `client-qol` | Chat cannot be reported to Mojang. |
+| Borderless Window | `borderless-neoforge-1.21.1-1.7.5_1-all.jar` | client | `addon`, `client-qol` | Borderless fullscreen window. |
+| FlickerFix | `flickerfix-1.21.1-6.1.0.jar` | client | `addon`, `client-qol`, `stability` | Stops night vision flicker. |
 | Extreme sound muffler - (Neo)Forge | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | `addon`, `client-qol` | Mutes sounds you pick. |
 | Sound​s | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Extra sound effects. |
 | MRU | `mru-1.0.41+1.21.1-neoforge.jar` | client | `library`, `client-qol` | Library Sounds uses. |

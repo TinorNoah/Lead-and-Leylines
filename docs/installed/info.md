@@ -8,6 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Just Enough Professions (JEP) | `JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar` | client | `addon`, `info`, `jei` | Profession workstations and skills in JEI. |
 | Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.450.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.5.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
 | JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.1.jar` | both | `addon`, `info`, `jei` | Craft from JEI with fewer clicks. |
@@ -15,6 +16,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | client | `addon`, `info`, `jei` | Mob drops and dungeon loot in JEI. |
 | Smithing Template Viewer for JEI/EMI | `smithingtemplateviewer-1.0.4.jar` | client | `addon`, `info`, `jei` | Smithing templates in JEI. |
 | Not Enough Recipe Book [NERB] | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | `addon`, `info`, `jei` | Removes the vanilla recipe book. |
+| Just Enough Threads [JEI Startup Optimize] | `justenoughthreads-0.14.2+1.21.1.jar` | client | `addon`, `info`, `jei`, `optimizer` | Builds the JEI search index off the main thread. |
 | ShatterLib \| OctoLib | `OctoLib-NEOFORGE-0.6.2+1.21.jar` | both | `library`, `info` | Library Not Enough Recipe Book uses. |
 
 ## Looking at the world
@@ -23,6 +25,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Jade 🔍 | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | `core`, `info`, `jade` | Block and entity overlay. |
 | Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | `addon`, `info`, `jade` | Extra Jade providers. |
+| More Overlays Updated | `moreoverlays-1.24.2-mc1.21.1-neoforge.jar` | client | `core`, `info`, `jei` | Light level, chunk border, and JEI search overlays. |
 
 ## Books
 

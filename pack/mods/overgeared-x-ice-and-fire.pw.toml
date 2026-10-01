@@ -1,0 +1,13 @@
+name = "Overgeared x Ice and Fire"
+filename = "overgeared_iceandfire-1.21.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "819c4025e2064852a0f28098461ef3a8f03f0972"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8841687
+project-id = 1688041

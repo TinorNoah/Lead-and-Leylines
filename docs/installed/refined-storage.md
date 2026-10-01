@@ -15,3 +15,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Interdimensional Wireless Transmitter | `interdimensionalwirelesstransmitter-neoforge-1.21.1-0.1.5.jar` | both | `addon`, `tech`, `storage`, `refined-storage` | Wireless transmitter that reaches every dimension. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | `addon`, `tech`, `storage`, `refined-storage`, `jei` | Recipes in JEI. |
 | Refined Storage - Mekanism Integration | `refinedstorage-mekanism-integration-1.1.1.jar` | both | `addon`, `tech`, `storage`, `refined-storage`, `mekanism` | Mekanism chemicals in the grid. |
+| Refined Storage - Curios Integration | `refinedstorage-curios-integration-1.0.0.jar` | both | `addon`, `tech`, `storage`, `refined-storage` | Worn network items in Curios slots. |

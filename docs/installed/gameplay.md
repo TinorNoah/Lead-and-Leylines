@@ -21,3 +21,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | `addon`, `gameplay` | Items and corpses despawn faster. |
 | Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | `addon`, `gameplay` | Speeds up a few vanilla waits. |
 | Fast Item Frames | `FastItemFrames-v21.1.6-1.21.1-NeoForge.jar` | both | `addon`, `gameplay`, `world-data` | Faster, colorable, and invisible item frames. |
+| Fuel Goes Here | `fuelgoeshere-1.21.1-1.2.0.jar` | both | `addon`, `gameplay` | Fuel goes to the fuel slot even when it is smeltable. |
+| Get It Together, Drops! | `getittogetherdrops-neoforge-1.21.5-1.4.jar` | both | `addon`, `gameplay` | Dropped stacks merge by tag. |
+| Hey Berry! SHUT UP | `heyberryshutup-1.21.0-2.0.4.jar` | both | `addon`, `gameplay` | Villagers stop taking berry bush damage. |
+| In Control! | `incontrol-1.21-10.3.0.jar` | both | `addon`, `gameplay` | Rules for what spawns where. |
+| I'm Fast | `imfast-NEOFORGE-1.21.1-1.0.3.jar` | both | `addon`, `stability` | Stops movement desync kicking or spamming the log. |

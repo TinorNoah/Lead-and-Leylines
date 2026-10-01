@@ -1,0 +1,13 @@
+name = "Overgeared: Universal Compatibility"
+filename = "overgeared_universal-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "e90f2c61069b3c15dc366df2e525d106e43a57a7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8644103
+project-id = 1651686

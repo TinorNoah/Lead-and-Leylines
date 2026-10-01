@@ -17,6 +17,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Macaw's Windows | `mcw-mcwwindows-2.4.2-mc1.21.1neoforge.jar` | both | `addon`, `building` | Windows, blinds, shutters, and curtains. |
 | Macaw's Fences and Walls | `mcw-mcwfences-1.2.1-mc1.21.1neoforge.jar` | both | `addon`, `building` | More fences, walls, and gates. |
 | Macaw's Furniture | `mcw-furniture-3.4.1-mc1.21.1neoforge.jar` | both | `addon`, `building` | Wardrobes, couches, desks, and other furniture. |
+| Macaw's Lights and Lamps | `mcw-lights-1.1.5-mc1.21.1neoforge.jar` | both | `addon`, `building` | Lamps, torches, and street lights. |
+| Macaw's Stairs | `mcw-mcwstairs-1.0.2-mc1.21.1neoforge.jar` | both | `addon`, `building` | Stairs, handrails, and balconies. |
+| Macaw's Paths and Pavings | `mcw-mcwpaths-1.1.1-mc1.21.1neoforge.jar` | both | `addon`, `building`, `world-data` | Paths and pavings. |
+| MmmMmmMmmMmm (Target Dummy) | `dummmmmmy-1.21-2.1.2-neoforge.jar` | both | `core`, `building`, `world-data` | Target dummy that shows damage numbers. |
+| Additional Lights | `additional_lights-neoforge-1.21-2.1.10.jar` | both | `addon`, `building`, `world-data` | Lantern, torch, and lamp variants. |
+| FramedBlocks | `FramedBlocks-10.6.2.jar` | both | `addon`, `building`, `world-data` | Picture frames for any block. |
 | Visual Workbench | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | both | `addon`, `building` | Items stay on the crafting table. |
 | Amendments | `amendments-1.21-2.1.10-neoforge.jar` | both | `core`, `building` | Lanterns, hanging signs, and small block tweaks. |
 | Supplementaries | `supplementaries-1.21.1-3.9.9-neoforge.jar` | both | `core`, `building` | Jars, ropes, signs, and furniture. |

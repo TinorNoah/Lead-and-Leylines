@@ -1,0 +1,13 @@
+name = "Applied Industrialization"
+filename = "Applied-Industrialization-1.3.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "049938c9a0df9a4e2e827ed81ad01f6a0cbbb058"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9020730
+project-id = 1671614

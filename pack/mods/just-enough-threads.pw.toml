@@ -1,0 +1,13 @@
+name = "Just Enough Threads [JEI Startup Optimize]"
+filename = "justenoughthreads-0.14.2+1.21.1.jar"
+side = "client"
+
+[download]
+hash-format = "sha1"
+hash = "5fa6170098b26b51da2a2ec15f12eb1fc96c12c4"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9025858
+project-id = 1605658

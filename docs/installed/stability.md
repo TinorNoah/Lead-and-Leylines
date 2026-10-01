@@ -14,10 +14,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Configurable | `configurable-3.5.2+1.21.1-neoforge.jar` | both | `library`, `stability` | Library Neruina needs. |
 | Crash Utilities | `crashutilities-9.0.4.jar` | both | `core`, `stability` | Crash report tools. |
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | `core`, `stability` | Blocks known crash exploits. |
-| Packet Fixer | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` | both | `core`, `stability` | Repairs bad packets. |
-| Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | both | `addon`, `stability` | Fixes a disconnect packet crash. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | `core`, `stability` | Login flood protection. |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | `addon`, `stability` | A bad tag entry no longer wipes the whole tag. |
+| Connectivity | `connectivity-1.21.1-7.7.jar` | both | `core`, `stability` | Fixes login timeouts, oversized payloads, and ghostblocks. |
+| fix GPU memory leak | `gpumemleakfix-1.21-1.8.jar` | client | `addon`, `stability` | Fixes a client GPU memory leak. |
 
 ## Lead and Leylines Patches
 

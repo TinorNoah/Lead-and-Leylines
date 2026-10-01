@@ -9,6 +9,55 @@ Git tags are `vX.Y.Z`. Headers here are `## [X.Y.Z]` with no `v`.
 
 Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forge-1.20.1`). Do not reuse tags `v0.0.1`–`v0.0.9`. The first 1.21.1 NeoForge GitHub/store ship is `v0.1.0`.
 
+## [0.1.23] - 2026-10-01
+
+### Added
+
+- Just Enough Threads 0.14.2, which moves JEI's startup indexing off the main thread so joining a world stops freezing. The previous 0.14.1 build was pulled because it broke JEI entirely on JEI 19.57; 0.14.2 skips that mixin when the JEI constructor it targets is absent.
+- Connectivity 7.7, which fixes login timeouts, oversized payloads, decoder errors, and ghostblocks.
+- NeoForge 21.1.252 (was 21.1.250).
+- Awesome Dungeon gets two more editions: ocean dungeons in the Overworld oceans, and a dungeon set in the End.
+- Epic Structures: Dungeons and Igloo, joining the Villages, Jungle Temples, and Witch Huts already in the pack.
+- Yggdrasils, a pack of very large Norse dungeon structures, with a Loot Integrations addon so those chests roll modded loot.
+- Simply Swords 1.70.2 (katanas, spears, glaives, rapiers, and more), Simply More for extra weapon types, and Simply Swords Create Lines for Create production lines. Simply Swords needs Simply Tooltips from 1.63.0 onward, so that is installed too; it only draws its own tooltips over Simply Swords weapons and leaves every other item's tooltip to Tooltip Overhaul.
+- Overgeared, which rebuilds tool and armor crafting around forging, and Overgeared JEI Compat so its items show up in the recipe viewer.
+- Just Enough Professions (JEP): profession workstations and skills in JEI. Client-side.
+- Steve's Carts (plus its PolyLib library) for customizable minecart automation, and Logistics Network for item, fluid, and energy routing.
+- Applied Industrialization (AE2 blocks for Modern Industrialization), Industrialization Overdrive (extra MI machines), Modern Industrialization Extended Integrations (MI hatches that draw on Create stress), and AE2 Network Analyser for inspecting ME networks.
+- Ars Polymorphia (Polymorph support for Ars storage lecterns) and Ars Unification (Ars Nouveau can craft from other mods' recipes).
+- Creeper Overhaul, Enderman Overhaul, and AI Improvements for mob behaviour.
+- Structure Essentials for faster structure locating and a nearby-structure command.
+- In Control! for deciding what spawns where.
+- Gravitational Modulating Additional Unit, extra Mekanism-side features.
+- A batch of server/client fixes and optimizers: I'm Fast (stops movement desync kicks and log spam), Connectivity's neighbours Chunk Sending, Fast Async World Save and Structure Essentials, Leaky (cleans item piles and broken farms), Invasive Optimizations, Better Fps - Render Distance, and fix GPU memory leak.
+- Macaw's Paths and Pavings, joining the other Macaw's decoration mods.
+- Overgeared's companion addons: Overgearium (broad cross-mod compatibility), OvergearedXSimplySwords, Overgeared x Ice and Fire, and Overgeared: Universal Compatibility for per-metal tool heads.
+- ATi Structures, an overworld structure pack, with a Loot Integrations addon for its chests. ATi also authors the Epic Structures mods already in the pack.
+- Gateways to Eternity: giant portals, monster hordes, and large rewards.
+- Loot Integrations addons for Awesome Dungeon, Born in Chaos, Ice and Fire, vanilla chests, and YUNG's structures, so those chests roll modded loot.
+- Macaw's Lights and Lamps, and Macaw's Stairs (stairs, handrails, and balconies).
+- FTB Ranks, so server ranks and permissions sit next to FTB Teams.
+- Additional Lights (lantern, torch, and lamp variants) and FramedBlocks (picture frames for any block).
+- Iris & Oculus Search, a search bar for Iris shader settings.
+- Fuel Goes Here, so fuel goes to the fuel slot even when it is also smeltable.
+- Get It Together, Drops! for merging dropped stacks, and Hey Berry! SHUT UP so villagers stop dying to berry bushes.
+- Client comfort: KeyBind Bundles, KeybindsPurger, Borderless Window, and FlickerFix for night vision flicker.
+- MmmMmmMmmMmm target dummies, so you can place one, equip it with armor, and read the damage numbers off it.
+- More Overlays Updated: F7 shows a light-level and mob-spawn overlay, F9 draws chunk borders, and a double-click in the JEI search field greys out everything that does not match.
+- Refined Storage - Curios Integration, so Refined Storage network items can be worn in Curios slots.
+- No Chat Reports, so your chat cannot be reported to Mojang.
+
+### Changed
+
+- NeoForge moved from 21.1.250 to 21.1.252.
+- Packet Fixer and Disconnect Packet Fix are gone: Connectivity covers the same oversized-packet and login-timeout problems, and all three patched the same networking internals.
+
+### Fixed
+
+### Removed
+
+- Packet Fixer and Disconnect Packet Fix, replaced by Connectivity.
+
 ## [Unreleased]
 
 ### Added

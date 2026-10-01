@@ -8,6 +8,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Leaky - Item Lag Fix | `leaky-1.21-3.4.jar` | both | `addon`, `optimizer` | Cleans up item piles and broken farms. |
+| Chunk Sending | `chunksending-1.21-3.9.jar` | both | `addon`, `optimizer` | Faster chunk packet delivery. |
+| Fast Async World Save[Forge/Neo/Fabric] | `fastasyncworldsave-1.21-2.6.jar` | both | `addon`, `optimizer` | Saves the world without tick spikes. |
+| Invasive Optimizations | `invasiveopts-1.0.24.jar` | both | `addon`, `optimizer` | Deeper optimizations for other mods. |
 | Lithium (Fabric/NeoForge) | `lithium-neoforge-0.15.4+mc1.21.1.jar` | both | `core`, `optimizer` | Gameplay and tick optimizer. |
 | FerriteCore ((Neo)Forge) | `ferritecore-7.0.3-neoforge.jar` | both | `core`, `optimizer` | Lower memory use. |
 | ModernFix | `modernfix-neoforge-5.27.24+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |

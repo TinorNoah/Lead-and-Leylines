@@ -1,0 +1,13 @@
+name = "simplyswords create lines"
+filename = "simplyswords_create_lines-1.0.5-neoforge-1.21.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2891d28fec8bc83053836ec872ffe95b0d7008ce"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8492922
+project-id = 1595470

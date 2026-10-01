@@ -1,0 +1,13 @@
+name = "Modern Industrialization Extended Integrations"
+filename = "miei-1.21.1-1.0.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "9afdfbc68cc95ab5cd2f4570af5ca36d9603c37b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8996731
+project-id = 1681995

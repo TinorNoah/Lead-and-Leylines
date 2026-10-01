@@ -1,0 +1,13 @@
+name = "Loot Integrations: Awesome Dungeon"
+filename = "lootintegrations_awesome-1.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "41a4cdda9fedbea9cfb70d81b3dd3670bcf9f78c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8920888
+project-id = 1129961

@@ -23,6 +23,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
 | Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |
+| Iris & Oculus Search | `IrisSearch-1.8.1-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |
+| Better Fps - Render Distance | `betterfpsdist-1.21.1-6.1.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper far-chunk rendering. |
 
 ## Connected textures
 

@@ -8,6 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Structure Essentials | `structureessentials-1.21.1-5.0.jar` | both | `addon`, `exploration`, `worldgen` | Faster structure locating and a nearby-structure command. |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | client | `core`, `exploration` | Minimap. |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | client | `core`, `exploration` | World map. |
 | Icon Xaero's | `Icon Xaero's 1.22.zip` | client | `resource-pack`, `exploration` | Resource pack. Map icons. |

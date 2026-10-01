@@ -27,6 +27,18 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Dungeon Now Loading Tricky Trials Port | `dungeonnowloading-neoforge-1.21.1-2.11.5.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Unofficial port of Dungeon Now Loading. |
 | Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Extra dungeon set. |
 | Library Ferret | `libraryferret-neoforge-1.21.1-4.0.0.jar` | both | `library`, `structure`, `worldgen` | Library Awesome Dungeon needs. |
+| Awesome Dungeon Ocean | `awesomedungeonocean-neoforge-1.21.1-3.3.0.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Ocean dungeons for Awesome Dungeon. |
+| Epic Structures: Dungeons | `epic-structures-dungeons-1.2.5.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Dungeons of varying rarity and size. |
+| Loot Integrations: Awesome Dungeon | `lootintegrations_awesome-1.7.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in Awesome Dungeon chests. |
+| Loot Integrations: Born in Chaos | `lootintegrations_borninchaos-1.1.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in Born in Chaos chests. |
+| Loot Integrations: Ice and Fire | `lootintegrations_iceandfire-1.3.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in Ice and Fire chests and boss drops. |
+| Loot Integrations: Randomized Loot Compatibility | `lootintegrations_vanilla-1.8.jar` | both | `addon`, `structure`, `world-data` | Modded loot in vanilla chests. |
+| Yung Structures Addon for Loot Integrations | `lootintegrations_yungs-1.6.jar` | both | `addon`, `structure`, `worldgen`, `yungs`, `world-data` | Modded loot in YUNG's structure chests. |
+| Yggdrasils | `Yggdrasil-6.0.0.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Gigantic Norse dungeon structures. |
+| ATi Structures | `ATi Structures V1.4.7.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Overworld structures of many kinds. |
+| Loot Integrations: ATi Structures, Epic Structures Villages & Witch Huts | `lootintegrations_ati-1.3.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in ATi and Epic Structures chests. |
+| Gateways to Eternity | `GatewaysToEternity-1.21.1-5.1.0.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Giant portals, monster hordes, and large rewards. |
+| Loot Integrations: Yggdrasils | `lootintegrations_yggdrasils-1.3.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in Yggdrasils chests. |
 
 ## Villages and landmarks
 
@@ -35,6 +47,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Epic Structures: Villages  | `epic-structures-villages-2.0.0.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Rebuilt villages. |
 | Epic Structures: Witch Huts | `Epic Witch Huts v1.3.1.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Rebuilt witch huts. |
 | Epic Structures: Jungle Temples | `Epic Jungle Temples v1.0.2.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Rebuilt jungle temples. |
+| Epic Structures: Igloo | `epic-structures-igloo-1.0.5 1.21+ 26+.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Cozy igloos of varying sizes. |
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | both | `addon`, `structure`, `worldgen`, `create`, `world-data` | Villages made of Create blocks. |
 | MMR - Moog's Mineshafts Reimagined | `MoogsMineshaftsReimagined-1.21-1.0.3.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Rebuilt mineshafts. |
 | Moog's Structure Lib (moogs_structures) | `MoogsStructureLib-neoforge-1.21.1-3.4.0.jar` | both | `library`, `structure`, `worldgen` | Library Moog's structures need. |

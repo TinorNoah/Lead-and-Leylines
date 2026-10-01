@@ -8,6 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Gravitational Modulating Additional Unit | `GravitationalModulatingAdditionalUnit-1.21.1-6.4.jar` | both | `addon`, `tech`, `mekanism` | Extra Gravitational Modulating Unit features. |
 | Mekanism | `Mekanism-1.21.1-10.7.19.85.jar` | both | `core`, `tech`, `mekanism` | Machines, ore processing, and gases. |
 | Mekanism Generators | `MekanismGenerators-1.21.1-10.7.19.85.jar` | both | `core`, `tech`, `mekanism` | Power generators. |
 | Mekanism Tools | `MekanismTools-1.21.1-10.7.19.85.jar` | both | `core`, `tech`, `mekanism` | Mekanism armor and tools. |

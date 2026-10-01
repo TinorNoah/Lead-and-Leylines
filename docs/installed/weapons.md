@@ -4,6 +4,21 @@ Guns, gun packs, and the addons that change those guns. Melee movesets and parko
 
 Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.md).
 
+## Simply Swords
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Simply Swords [Fabric & Forge] | `simplyswords-neoforge-1.70.2-1.21.1.jar` | both | `core`, `melee`, `world-data` | Katanas, spears, glaives, rapiers, and more. |
+| Simply More | `simplymore-forge-1.3.0_alpha.jar` | both | `addon`, `melee`, `world-data` | More Simply Swords weapon types. |
+| Simply Tooltips | `SimplyTooltips-neoforge-0.1.5.jar` | both | `addon`, `melee` | Simply Swords weapon tooltips. Renders only tagged Simply Swords items. |
+| simplyswords create lines | `simplyswords_create_lines-1.0.5-neoforge-1.21.1.jar` | both | `addon`, `melee`, `create`, `world-data` | Create production lines for Simply Swords weapons. |
+| Overgeared | `overgeared-neoforge-1.21.1-1.6.19.jar` | both | `addon`, `melee`, `world-data` | Forging overhaul for tools and armor. |
+| Overgeared JEI Compat | `overgeared_jei_compat-1.0.0.jar` | both | `compat`, `info`, `jei` | Overgeared items in JEI. |
+| Overgearium | `overgearium-1.21.1-1.0.0.jar` | both | `addon`, `melee` | Broad Overgeared compatibility across other mods. |
+| OvergearedXSimplySwords (NeoForge) | `overgearedxsimplyswords-1.1.0-1.21.1.jar` | both | `addon`, `melee` | Overgeared forging for Simply Swords. |
+| Overgeared x Ice and Fire | `overgeared_iceandfire-1.21.1-1.0.0.jar` | both | `addon`, `melee` | Overgeared forging for Ice and Fire. |
+| Overgeared: Universal Compatibility | `overgeared_universal-1.0.0.jar` | both | `addon`, `melee` | Per-metal Overgeared parts for its other compat packs. |
+
 ## Timeless and Classics Zero
 
 | Mod | File | Side | Tags | What it adds |

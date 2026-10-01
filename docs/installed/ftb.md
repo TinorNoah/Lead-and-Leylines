@@ -10,6 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | FTB Library (NeoForge) | `ftb-library-neoforge-2101.1.37.jar` | both | `library`, `ftb` | Library the other FTB mods need. |
 | FTB Teams (NeoForge) | `ftb-teams-neoforge-2101.1.11.jar` | both | `core`, `ftb` | Teams. |
+| FTB Ranks (NeoForge) | `ftb-ranks-neoforge-2101.1.5.jar` | both | `core`, `ftb` | Ranks and permissions. |
 | FTB Chunks (NeoForge) | `ftb-chunks-neoforge-2101.1.22.jar` | both | `core`, `ftb` | Claims and the chunk map. |
 | FTB Essentials (Forge & Fabric) | `ftb-essentials-neoforge-2101.1.10.jar` | both | `addon`, `ftb` | Homes, warps, and kit commands. |
 | FTB Quests (NeoForge) | `ftb-quests-neoforge-2101.1.36.jar` | both | `core`, `ftb` | Quest book. |

@@ -13,3 +13,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Nullscape | `Nullscape_1.21.x_v1.2.14.jar` | both | `core`, `worldgen`, `end`, `world-data` | End islands and biome look. |
 | BetterEnd: New Dawn | `BetterEnd-21.0.35.jar` | both | `core`, `worldgen`, `end`, `world-data` | BetterEnd biomes, mobs, and gear. Shares New Dawn libs with BetterNether. |
 | YUNG's Better End Island (NeoForge) [1.20.4 - 1.21.1 ONLY] | `YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar` | both | `addon`, `structure`, `worldgen`, `end`, `yungs`, `world-data` | Rebuilt the central End island dragon fight. |
+| Awesome Dungeon The End edition - Neoforge | `awesomedungeonend-neoforge-1.21.1-3.1.1.jar` | both | `addon`, `structure`, `worldgen`, `end`, `world-data` | Dungeons in the End. |

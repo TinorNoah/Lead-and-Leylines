@@ -8,6 +8,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Ars Polymorphia | `ars_polymorphia-1.0.3.jar` | both | `addon`, `magic`, `ars-nouveau` | Polymorph support for Ars storage lecterns. |
+| Ars Unification | `ars_unification-1.2.21.jar` | both | `addon`, `magic`, `ars-nouveau` | Lets Ars Nouveau craft from other mods' recipes. |
 | Ars Nouveau | `ars_nouveau-1.21.1-5.13.2.jar` | both | `core`, `magic`, `ars-nouveau` | Spellcrafting. |
 | Ars Additions | `ars_additions-1.21.1-21.3.0.jar` | both | `addon`, `magic`, `ars-nouveau` | Extra Ars blocks and items. |
 | Ars Elemental | `ars_elemental-1.21.1-0.7.10.3.jar` | both | `addon`, `magic`, `ars-nouveau` | Elemental spells. |

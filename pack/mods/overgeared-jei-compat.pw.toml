@@ -1,0 +1,13 @@
+name = "Overgeared JEI Compat"
+filename = "overgeared_jei_compat-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "17ea595d202c6d5b2312d2d766229ec56044d639"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8868127
+project-id = 1693293

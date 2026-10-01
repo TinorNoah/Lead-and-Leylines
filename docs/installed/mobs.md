@@ -26,6 +26,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
+| Creeper Overhaul | `CreeperOverhaul-neoforge-1.21.1-4.0.6.jar` | both | `addon`, `mob`, `world-data` | Overhauled creepers. |
+| Enderman Overhaul | `endermanoverhaul-neoforge-1.21.1-2.0.3.jar` | both | `addon`, `mob`, `world-data` | Overhauled endermen. |
+| AI Improvements: Performance Tuning | `AI-Improvements-1.21-0.5.3.jar` | both | `addon`, `mob`, `optimizer` | Cheaper, smarter mob AI. |
 | Critters and Companions | `crittersandcompanions-neoforge-1.21.1-2.7.0.jar` | both | `core`, `mob` | Small wildlife and pets. |
 | Companions! | `companions-neoforge-1.21.1-1.3.5.jar` | both | `core`, `mob` | Companion creatures. |
 | Knight Lib | `knightlib-neoforge-1.21.1-2.0.3.jar` | both | `library`, `mob` | Library Companions and Olympus share. |

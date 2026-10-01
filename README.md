@@ -12,9 +12,9 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.1.22 |
+| Pack version | 0.1.23 |
 | Minecraft | 1.21.1 |
-| Mod loader | NeoForge 21.1.250 |
+| Mod loader | NeoForge 21.1.252 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
 | Packwiz format | packwiz:1.1.0 |
 | Mods | Performance stack plus Create, FTB Quests, Pipez, biomes, Jade, EMI, and worldgen (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
