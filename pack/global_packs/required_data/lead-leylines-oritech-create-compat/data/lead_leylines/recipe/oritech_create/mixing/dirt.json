@@ -1,0 +1,17 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:sands/colorless"
+    },
+    {
+      "item": "oritech:biomass"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:dirt",
+      "count": 1
+    }
+  ]
+}

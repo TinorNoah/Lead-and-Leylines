@@ -1,0 +1,13 @@
+{
+    "type": "create:crushing",
+    "ingredients": [ { "item": "regions_unexplored:argillite_grass_block" } ],
+    "processingTime": 150,
+    "results": [
+      { "id": "minecraft:clay_ball",   "count": 1, "chance": 0.30 },
+      { "id": "minecraft:gravel",      "count": 1, "chance": 0.22 },
+      { "id": "minecraft:dirt",        "count": 1, "chance": 0.22 },
+      { "id": "minecraft:flint",       "count": 1, "chance": 0.12 },
+      { "id": "minecraft:wheat_seeds", "count": 1, "chance": 0.06 },
+      { "id": "minecraft:raw_iron",    "count": 1, "chance": 0.02 }
+    ]
+  }

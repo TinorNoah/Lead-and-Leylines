@@ -1,0 +1,31 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:prismoss_sprout"
+    }
+  ],
+  "processingTime": 160,
+  "results": [
+    {
+      "id": "minecraft:moss_block",
+      "count": 1,
+      "chance": 0.3
+    },
+    {
+      "id": "minecraft:glow_lichen",
+      "count": 1,
+      "chance": 0.25
+    },
+    {
+      "id": "minecraft:cobblestone",
+      "count": 1,
+      "chance": 0.15
+    },
+    {
+      "id": "minecraft:gravel",
+      "count": 1,
+      "chance": 0.2
+    }
+  ]
+}

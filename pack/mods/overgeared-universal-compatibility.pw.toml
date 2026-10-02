@@ -1,9 +1,0 @@
-name = "Overgeared: Universal Compatibility"
-filename = "overgeared_universal-1.0.0.jar"
-side = "both"
-
-[download]
-url = "https://edge.forgecdn.net/files/8644/103/overgeared_universal-1.0.0.jar"
-hash-format = "sha1"
-hash = "e90f2c61069b3c15dc366df2e525d106e43a57a7"
-

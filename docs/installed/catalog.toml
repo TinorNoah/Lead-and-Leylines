@@ -54,6 +54,7 @@ farmers-delight = "Farmer's Delight cluster."
 harvestcraft = "Pam's HarvestCraft."
 twilight-forest = "The Twilight Forest and its addons."
 modern-industrialization = "Modern Industrialization and its addons."
+oritech = "Oritech and its addons."
 
 
 [[category]]
@@ -68,12 +69,6 @@ mods = [
   { file = "simply-more.pw.toml", blurb = "More Simply Swords weapon types.", tags = ["addon", "melee", "world-data"] },
   { file = "simply-tooltips.pw.toml", blurb = "Simply Swords weapon tooltips. Renders only tagged Simply Swords items.", tags = ["addon", "melee"] },
   { file = "simplyswords-create-lines.pw.toml", blurb = "Create production lines for Simply Swords weapons.", tags = ["addon", "melee", "create", "world-data"] },
-  { file = "overgeared.pw.toml", blurb = "Forging overhaul for tools and armor.", tags = ["addon", "melee", "world-data"] },
-  { file = "overgeared-jei-compat.pw.toml", blurb = "Overgeared items in JEI.", tags = ["compat", "info", "jei"] },
-  { file = "overgearium.pw.toml", blurb = "Broad Overgeared compatibility across other mods.", tags = ["addon", "melee"] },
-  { file = "overgearedxsimplyswords-1-21-1.pw.toml", blurb = "Overgeared forging for Simply Swords.", tags = ["addon", "melee"] },
-  { file = "overgeared-x-ice-and-fire.pw.toml", blurb = "Overgeared forging for Ice and Fire.", tags = ["addon", "melee"] },
-  { file = "overgeared-universal-compatibility.pw.toml", blurb = "Per-metal Overgeared parts for its other compat packs.", tags = ["addon", "melee"] },
 ]
 
 [[category.group]]
@@ -486,11 +481,6 @@ mods = [
   { file = "twilights-flavors-delight.pw.toml", blurb = "Twilight Forest foods.", tags = ["addon", "food", "farmers-delight", "twilight-forest"] },
   { file = "autochefs-delight.pw.toml", blurb = "Automated cooking.", tags = ["addon", "food", "farmers-delight"] },
   { file = "barbeques-delight.pw.toml", blurb = "Grill foods.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-betternether.pw.toml", blurb = "Cutting recipes for BetterNether.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-betterend.pw.toml", blurb = "Cutting recipes for BetterEnd: New Dawn.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-oh-the-biomes-weve-gone.pw.toml", blurb = "Cutting recipes for Oh The Biomes We've Gone.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-regions-unexplored.pw.toml", blurb = "Cutting recipes for Regions Unexplored.", tags = ["addon", "food", "farmers-delight"] },
-  { file = "farmers-cutting-twilight-forest.pw.toml", blurb = "Cutting recipes for Twilight Forest.", tags = ["addon", "food", "farmers-delight", "twilight-forest"] },
 ]
 
 [[category.group]]
@@ -683,7 +673,6 @@ mods = [
   { file = "create-better-fps.pw.toml", blurb = "Cheaper Create rendering.", tags = ["addon", "tech", "create"] },
   { file = "createjeicompat.pw.toml", blurb = "Create recipes in JEI.", tags = ["compat", "tech", "create", "jei"] },
   { file = "create-oh-the-biomes-weve-gone-compat.pw.toml", blurb = "Create recipes for Oh The Biomes We've Gone.", tags = ["compat", "tech", "create"] },
-  { file = "create-regions-unexplored-compat-crushing.pw.toml", blurb = "Crushing recipes for Regions Unexplored.", tags = ["compat", "tech", "create"] },
   { file = "create-dragons-plus.pw.toml", blurb = "Shared Create addon library several factory mods need.", tags = ["library", "tech", "create"] },
   { file = "create-enchantment-industry.pw.toml", blurb = "Liquid experience and automated enchanting.", tags = ["addon", "tech", "create", "world-data"] },
   { file = "create-central-kitchen.pw.toml", blurb = "Create processing for Farmer's Delight foods.", tags = ["addon", "tech", "create", "farmers-delight"] },
@@ -727,6 +716,14 @@ mods = [
   { file = "modern-industrialization-structure-viewer.pw.toml", blurb = "In-world MI multiblock preview.", tags = ["addon", "tech", "modern-industrialization"] },
   { file = "ldlib.pw.toml", blurb = "Library the MI structure viewer needs.", tags = ["library", "tech", "modern-industrialization"] },
   { file = "modern-industrial-routers.pw.toml", blurb = "Router upgrades for Modern Industrialization energy.", tags = ["addon", "tech", "modern-industrialization", "transport"] },
+]
+
+[[category.group]]
+name = "Oritech"
+mods = [
+  { file = "oritech.pw.toml", blurb = "Animated factory multiblocks, reactors, and a bedrock extractor. Runs on the pack's shared Forge Energy.", tags = ["core", "tech", "oritech", "world-data"] },
+  { file = "oritech-things.pw.toml", blurb = "Tiered Speed, Processing, and Capacitor addons, plus accelerator controls.", tags = ["addon", "tech", "oritech", "world-data"] },
+  { file = "applied-oritech.pw.toml", blurb = "ME Dock and pattern provider so Oritech machines join an ME network.", tags = ["compat", "tech", "oritech", "ae2"] },
 ]
 
 [[category.group]]
@@ -889,7 +886,6 @@ mods = [
   { file = "cosmetic-armor-reworked.pw.toml", blurb = "Cosmetic armor over real armor.", tags = ["addon", "gameplay"] },
   { file = "comforts.pw.toml", blurb = "Sleeping bags and hammocks.", tags = ["core", "gameplay"] },
   { file = "epitaphs.pw.toml", blurb = "Graves.", tags = ["core", "gameplay"] },
-  { file = "darksleep.pw.toml", blurb = "Sleep percentage instead of one player skipping night.", tags = ["addon", "gameplay"] },
   { file = "akashic-tome.pw.toml", blurb = "One book that holds other books.", tags = ["addon", "gameplay"] },
   { file = "polymorph.pw.toml", blurb = "Picks which recipe crafts when several conflict.", tags = ["core", "gameplay"] },
   { file = "crafting-tweaks.pw.toml", blurb = "Inventory crafting buttons.", tags = ["addon", "gameplay"] },

@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 48,
+    "description": "Lead and Leylines: Create processing recipes for Oritech and Oritech metals, ported from Create Oritech Compat 1.0, which shipped 14 of its 18 recipes in the pre-1.21.1 \"item\" ingredient format and could not load them."
+  }
+}

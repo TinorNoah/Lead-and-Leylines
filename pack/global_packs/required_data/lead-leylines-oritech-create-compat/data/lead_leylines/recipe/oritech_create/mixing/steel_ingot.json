@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:dusts/coal"
+    },
+    {
+      "tag": "c:ingots/iron"
+    }
+  ],
+  "results": [
+    {
+      "id": "oritech:steel_ingot",
+      "count": 1
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:chalk"
+    }
+  ],
+  "processingTime": 160,
+  "results": [
+    {
+      "id": "minecraft:white_dye",
+      "count": 1,
+      "chance": 0.35
+    },
+    {
+      "id": "minecraft:calcite",
+      "count": 1,
+      "chance": 0.2
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 0.25
+    },
+    {
+      "id": "minecraft:bone_meal",
+      "count": 1,
+      "chance": 0.12
+    }
+  ]
+}

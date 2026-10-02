@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "tag": "c:ingots/nickel"
+    },
+    {
+      "tag": "c:gems/diamond"
+    }
+  ],
+  "results": [
+    {
+      "id": "oritech:adamant_ingot",
+      "count": 1
+    }
+  ]
+}

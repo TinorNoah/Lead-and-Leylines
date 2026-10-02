@@ -1,0 +1,36 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:pointed_redstone"
+    }
+  ],
+  "processingTime": 160,
+  "results": [
+    {
+      "id": "minecraft:cobblestone",
+      "count": 1,
+      "chance": 0.35
+    },
+    {
+      "id": "minecraft:gravel",
+      "count": 1,
+      "chance": 0.25
+    },
+    {
+      "id": "minecraft:flint",
+      "count": 1,
+      "chance": 0.2
+    },
+    {
+      "id": "minecraft:raw_iron",
+      "count": 1,
+      "chance": 0.05
+    },
+    {
+      "id": "minecraft:raw_copper",
+      "count": 1,
+      "chance": 0.04
+    }
+  ]
+}
