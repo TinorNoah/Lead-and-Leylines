@@ -51,22 +51,30 @@ def run_packwiz(*args: str) -> None:
         raise SystemExit(f"packwiz {' '.join(args)} failed with exit {result.returncode}")
 
 
-def export_client_artifacts(pack: dict[str, str]) -> dict[str, Path]:
+def export_client_artifacts(
+    pack: dict[str, str], *, skip_mrpack: bool = False
+) -> dict[str, Path]:
     paths = dist_paths(pack)
     print("packwiz refresh")
     run_packwiz("refresh")
     print(f"exporting ATLauncher CurseForge zip -> {paths['client_zip'].name}")
     run_packwiz("curseforge", "export", "-y", "-o", str(paths["client_zip"]))
-    print(f"exporting ATLauncher mrpack -> {paths['mrpack'].name}")
-    run_packwiz(
-        "modrinth",
-        "export",
-        "-y",
-        "--restrictDomains=false",
-        "-o",
-        str(paths["mrpack"]),
-    )
-    findings = report_embedded_mods(paths["client_zip"], paths["mrpack"])
+    mrpack = None
+    if skip_mrpack:
+        print("skipping the ATLauncher mrpack (--skip-mrpack)")
+        paths["mrpack"].unlink(missing_ok=True)
+    else:
+        print(f"exporting ATLauncher mrpack -> {paths['mrpack'].name}")
+        run_packwiz(
+            "modrinth",
+            "export",
+            "-y",
+            "--restrictDomains=false",
+            "-o",
+            str(paths["mrpack"]),
+        )
+        mrpack = paths["mrpack"]
+    findings = report_embedded_mods(paths["client_zip"], mrpack)
     print_report(findings)
     return paths
 

@@ -271,6 +271,15 @@ def parse_args() -> argparse.Namespace:
         help="do not sync the local Prism instance",
     )
     parser.add_argument(
+        "--skip-mrpack",
+        action="store_true",
+        help=(
+            "do not build the ATLauncher .mrpack; the Modrinth format cannot "
+            "reference mods that have no Modrinth project, and building it "
+            "would require bundling their jars"
+        ),
+    )
+    parser.add_argument(
         "--skip-stores",
         action="store_true",
         help="do not publish CurseForge even if --curseforge or --upload-stores is set",
@@ -336,6 +345,11 @@ def main() -> None:
         print("WARNING: skipping local Prism sync (--skip-prism)")
     else:
         print("Prism: will sync the local instance after the Pelican update")
+    if args.skip_mrpack:
+        print(
+            "WARNING: skipping the ATLauncher .mrpack (--skip-mrpack); "
+            "ATLauncher testers get no pack from this release"
+        )
     if curseforge == "local":
         print("CurseForge: will upload from this machine after the Pelican update")
     elif curseforge == "actions":
@@ -349,10 +363,12 @@ def main() -> None:
     url = ""
     paths: dict[str, Path] | None = None
     if gh_token:
-        paths = export_client_artifacts(pack)
+        paths = export_client_artifacts(pack, skip_mrpack=args.skip_mrpack)
         zip_path = paths["client_zip"]
         mrpack_path = paths["mrpack"]
-        if not zip_path.is_file() or not mrpack_path.is_file():
+        if not zip_path.is_file():
+            raise SystemExit("packwiz export did not produce the client zip")
+        if not args.skip_mrpack and not mrpack_path.is_file():
             raise SystemExit("packwiz export did not produce zip and mrpack")
         print(f"exporting server mods zip -> {paths['server_zip'].name}")
         build_server_mods_zip(pack, paths["server_zip"])
@@ -376,9 +392,10 @@ def main() -> None:
         upload_github_asset(
             owner=owner, repo=repo, release_id=release_id, path=zip_path, token=gh_token
         )
-        upload_github_asset(
-            owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
-        )
+        if not args.skip_mrpack:
+            upload_github_asset(
+                owner=owner, repo=repo, release_id=release_id, path=mrpack_path, token=gh_token
+            )
         upload_github_asset(
             owner=owner,
             repo=repo,
