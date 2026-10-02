@@ -51,30 +51,111 @@ def run_packwiz(*args: str) -> None:
         raise SystemExit(f"packwiz {' '.join(args)} failed with exit {result.returncode}")
 
 
-def export_client_artifacts(
-    pack: dict[str, str], *, skip_mrpack: bool = False
-) -> dict[str, Path]:
+def unresolvable_mods() -> list[dict[str, str]]:
+    """Mods packwiz can fetch but no metadata source can update.
+
+    A ``[download] url`` with no ``[update]`` block is what packwiz needs for a
+    mod its CurseForge API refuses to serve: the CurseForge export bundles the
+    jar under ``overrides/``, while the Modrinth export emits a bare index entry
+    pointing at that url. Those are the mods that get bundled below. Only
+    CurseForge CDN urls qualify, so pack-owned jars pinned to a release URL keep
+    their index entry.
+    """
+    found = []
+    for meta in sorted(MODS_DIR.glob("*.pw.toml")):
+        data = tomllib.loads(meta.read_text())
+        download = data.get("download") or {}
+        url = str(download.get("url") or "")
+        if not url or data.get("update") or "forgecdn.net" not in url:
+            continue
+        found.append(
+            {
+                "name": str(data.get("name") or meta.stem),
+                "filename": str(data["filename"]),
+                "url": str(download["url"]),
+            }
+        )
+    return found
+
+
+def _fetch(url: str, filename: str) -> Path:
+    target = LOCAL_MOD_CACHE / filename
+    if target.is_file() and target.stat().st_size:
+        return target
+    LOCAL_MOD_CACHE.mkdir(parents=True, exist_ok=True)
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    with urllib.request.urlopen(request) as response, target.open("wb") as handle:
+        shutil.copyfileobj(response, handle)
+    return target
+
+
+def bundle_unresolvable_mods(mrpack: Path) -> list[str]:
+    """Move CurseForge-only mods from the mrpack index into overrides/mods/.
+
+    packwiz writes a url-only mod into ``modrinth.index.json``, which every
+    launcher resolves at install time. Bundling the jar instead makes the
+    mrpack self-contained, at the cost of shipping an All-Rights-Reserved file
+    inside the archive. This is a deliberate choice for the mods listed in
+    docs/mods/manifest.md, not a general policy.
+    """
+    mods = unresolvable_mods()
+    if not mods:
+        return []
+    wanted = {mod["filename"] for mod in mods}
+    with zipfile.ZipFile(mrpack) as archive:
+        present = set(archive.namelist())
+        index = json.loads(archive.read("modrinth.index.json"))
+    entries = {
+        entry["path"].split("/")[-1]: entry
+        for entry in index.get("files", [])
+        if entry.get("path", "").startswith("mods/")
+    }
+    targets = [
+        (mod, entries[mod["filename"]])
+        for mod in mods
+        if mod["filename"] in entries and f"overrides/mods/{mod['filename']}" not in present
+    ]
+    if not targets:
+        return []
+    for mod, _entry in targets:
+        print(f"bundling into mrpack overrides: {mod['name']}")
+    staged = {mod["filename"]: _fetch(mod["url"], mod["filename"]) for mod, _ in targets}
+    rewritten = mrpack.with_suffix(".mrpack.tmp")
+    with zipfile.ZipFile(mrpack) as source, zipfile.ZipFile(
+        rewritten, "w", zipfile.ZIP_DEFLATED
+    ) as out:
+        dropped = {entry["path"] for _mod, entry in targets}
+        index["files"] = [
+            entry for entry in index.get("files", []) if entry.get("path") not in dropped
+        ]
+        for item in source.infolist():
+            if item.filename == "modrinth.index.json":
+                continue
+            out.writestr(item, source.read(item.filename))
+        out.writestr("modrinth.index.json", json.dumps(index, indent=2))
+        for mod, _entry in targets:
+            out.write(staged[mod["filename"]], f"overrides/mods/{mod['filename']}")
+    rewritten.replace(mrpack)
+    return [mod["name"] for mod, _ in targets]
+
+
+def export_client_artifacts(pack: dict[str, str]) -> dict[str, Path]:
     paths = dist_paths(pack)
     print("packwiz refresh")
     run_packwiz("refresh")
     print(f"exporting ATLauncher CurseForge zip -> {paths['client_zip'].name}")
     run_packwiz("curseforge", "export", "-y", "-o", str(paths["client_zip"]))
-    mrpack = None
-    if skip_mrpack:
-        print("skipping the ATLauncher mrpack (--skip-mrpack)")
-        paths["mrpack"].unlink(missing_ok=True)
-    else:
-        print(f"exporting ATLauncher mrpack -> {paths['mrpack'].name}")
-        run_packwiz(
-            "modrinth",
-            "export",
-            "-y",
-            "--restrictDomains=false",
-            "-o",
-            str(paths["mrpack"]),
-        )
-        mrpack = paths["mrpack"]
-    findings = report_embedded_mods(paths["client_zip"], mrpack)
+    print(f"exporting ATLauncher mrpack -> {paths['mrpack'].name}")
+    run_packwiz(
+        "modrinth",
+        "export",
+        "-y",
+        "--restrictDomains=false",
+        "-o",
+        str(paths["mrpack"]),
+    )
+    bundle_unresolvable_mods(paths["mrpack"])
+    findings = report_embedded_mods(paths["client_zip"], paths["mrpack"])
     print_report(findings)
     return paths
 
