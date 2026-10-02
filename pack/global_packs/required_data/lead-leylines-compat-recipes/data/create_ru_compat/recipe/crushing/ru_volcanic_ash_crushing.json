@@ -1,0 +1,31 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:volcanic_ash"
+    }
+  ],
+  "processingTime": 140,
+  "results": [
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 0.12
+    },
+    {
+      "id": "minecraft:gray_dye",
+      "count": 1,
+      "chance": 0.2
+    },
+    {
+      "id": "minecraft:gunpowder",
+      "count": 1,
+      "chance": 0.04
+    },
+    {
+      "id": "minecraft:sand",
+      "count": 1,
+      "chance": 0.15
+    }
+  ]
+}

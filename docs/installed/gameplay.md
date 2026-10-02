@@ -13,7 +13,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Cosmetic Armor Reworked | `cosmeticarmorreworked-1.21.1-v1-neoforge.jar` | both | `addon`, `gameplay` | Cosmetic armor over real armor. |
 | Comforts | `comforts-neoforge-9.0.5+1.21.1.jar` | both | `core`, `gameplay` | Sleeping bags and hammocks. |
 | Epitaphs | `epitaphs-2.2.0_neoforge_1.21.1.jar` | both | `core`, `gameplay` | Graves. |
-| DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | both | `addon`, `gameplay` | Sleep percentage instead of one player skipping night. |
 | Akashic Tome | `AkashicTome-1.8-30.jar` | both | `addon`, `gameplay` | One book that holds other books. |
 | Polymorph | `polymorph-neoforge-1.2.0+1.21.1.jar` | both | `core`, `gameplay` | Picks which recipe crafts when several conflict. |
 | Crafting Tweaks | `craftingtweaks-neoforge-1.21.1-21.1.11.jar` | both | `addon`, `gameplay` | Inventory crafting buttons. |

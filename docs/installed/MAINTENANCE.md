@@ -87,7 +87,7 @@ List each packwiz file **once**. Put a mod in the category that matches what pla
 | `Applied TaCZ`, `[TaCZ] Applied Ammo Box` | Weapons (TaCZ) | TaCZ is the parent |
 | `Epic Fight × Iron's Spells` | Combat (Epic Fight) | Epic Fight gains the cast animation |
 
-Content addons follow their **content**, not their parent: `Twilight's Flavors & Delight` and `Ars Nouveau's Flavors & Delight` are both in Food, `Farmer's Cutting: *` is in Food, and `Create: Sky Village` is under Structures. A group of one ecosystem must not collect its own `<X>'s <Y>` rows from other pages.
+Content addons follow their **content**, not their parent: `Twilight's Flavors & Delight` and `Ars Nouveau's Flavors & Delight` are both in Food, and `Create: Sky Village` is under Structures. (The `Farmer's Cutting: *` rows were the example here until 2026-10-03, when those five mods were replaced by the `lead-leylines-compat-recipes` datapack — see [docs/mods/datapack-consolidation.md](../mods/datapack-consolidation.md).) A group of one ecosystem must not collect its own `<X>'s <Y>` rows from other pages.
 
 Structure mods follow their **dimension**: a nether structure (YUNG's Better Nether Fortresses) is in `nether`, and the End dragon-fight island (YUNG's Better End Island) is in `end`, while vanilla structures (YUNG's Better Dungeons, strongholds, ocean monuments) stay in `structures`.
 
@@ -108,7 +108,7 @@ Never write two role tags on one row (`core` + `addon`, `library` + `compat`); `
 
 ### 4. Theme and ecosystem tags
 
-Add the category’s theme tag when it fits (`guns`, `magic`, `tech`, `optimizer`, …) and ecosystem tags when the mod clearly belongs to one (`tacz`, `point-blank`, `create`, `ae2`, `refined-storage`, `mekanism`, `epic-fight`, `apotheosis`, `ars-nouveau`, `irons-spells`, `jei`, `jade`, `yungs`, `farmers-delight`, `harvestcraft`, `sophisticated`, `twilight-forest`, `modern-industrialization`, `ftb`). The ecosystem tag is how a mod is still found after a bridge moves to its parent’s page, so add it even when the row lives elsewhere.
+Add the category’s theme tag when it fits (`guns`, `magic`, `tech`, `optimizer`, …) and ecosystem tags when the mod clearly belongs to one (`tacz`, `point-blank`, `create`, `ae2`, `refined-storage`, `mekanism`, `epic-fight`, `apotheosis`, `ars-nouveau`, `irons-spells`, `jei`, `jade`, `yungs`, `farmers-delight`, `harvestcraft`, `sophisticated`, `twilight-forest`, `modern-industrialization`, `oritech`, `ftb`). The ecosystem tag is how a mod is still found after a bridge moves to its parent’s page, so add it even when the row lives elsewhere.
 
 Order matters: the browser shows only the **first three** manual tags on a card, so write **role → theme → ecosystem(s)** and keep the parent’s ecosystem last.
 

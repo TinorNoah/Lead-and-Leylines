@@ -1,0 +1,41 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "regions_unexplored:peat_coarse_dirt"
+    }
+  ],
+  "processingTime": 140,
+  "results": [
+    {
+      "id": "minecraft:dirt",
+      "count": 1,
+      "chance": 0.6
+    },
+    {
+      "id": "minecraft:mud",
+      "count": 1,
+      "chance": 0.25
+    },
+    {
+      "id": "minecraft:clay_ball",
+      "count": 1,
+      "chance": 0.2
+    },
+    {
+      "id": "minecraft:bone_meal",
+      "count": 1,
+      "chance": 0.12
+    },
+    {
+      "id": "minecraft:brown_dye",
+      "count": 1,
+      "chance": 0.1
+    },
+    {
+      "id": "minecraft:coal",
+      "count": 1,
+      "chance": 0.06
+    }
+  ]
+}

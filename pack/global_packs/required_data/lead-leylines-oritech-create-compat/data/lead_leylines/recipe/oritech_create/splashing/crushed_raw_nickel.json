@@ -1,0 +1,19 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "item": "create:crushed_raw_nickel"
+    }
+  ],
+  "results": [
+    {
+      "id": "oritech:nickel_nugget",
+      "count": 9
+    },
+    {
+      "id": "oritech:small_platinum_dust",
+      "count": 1,
+      "chance": 0.1
+    }
+  ]
+}

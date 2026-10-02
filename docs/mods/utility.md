@@ -39,7 +39,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | MekaJadeUpgrades | `mekajadeupgrade-1.3.jar` | both | Mekanism upgrade info on Jade. |
 | TACZ / Jade Compatibility | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | client | Gun info on Jade. |
 | Spice of Life: Carrot Edition | `solcarrot-1.21.1-1.16.6.jar` | both | Food diversity. |
-| DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | both | Sets `playersSleepingPercentage` to 50 on world load. ARR. |
+| DarkSleep - RPG Sleep Percentage | ported to `lead-leylines-load-fixes` | both | Sets `playersSleepingPercentage` to 50 on world load. Mod removed 2026-10-03; the mod is ARR so **no data was copied** — the gamerule is reimplemented as `lead_leylines:sleep_rules` in a `#minecraft:load` function. |
 | Xaero's Minimap | `xaerominimap-neoforge-1.21.1-26.5.0.jar` | client | Minimap. |
 | Xaero's World Map | `xaeroworldmap-neoforge-1.21.1-1.46.0.jar` | client | Full world map. |
 | Icon Xaero's | `Icon Xaero's 1.22.zip` | client | Map icons for Xaero's. CurseForge metadata. Force-enabled by Global Packs. |

@@ -149,6 +149,2278 @@ file = "global_packs/required_data/darkloot/pack.mcmeta"
 hash = "0a076d50e7cb01d83157daa898dce17c22e3a4ba065a86fc16a4ecf2cffcef21"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_argillite_crushing.json"
+hash = "597183169a2cbb192e6c53529ab343b10b475c3bdda053ccd59b784a38286fe2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_argillite_grass_block_crushing.json"
+hash = "901e0f66cc027d83d92da220cfd8bf0fabad076e806084ca90a40cc7a003853e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_ash_crushing.json"
+hash = "7c2d45faace080b5384ca0c78b11b2940bd326c6650e44f390271489d1920d17"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_ashen_dirt_crushing.json"
+hash = "df3add2da2a62699ab48562f1889af3873215b42974b3914e48e44a58fe3c0b2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_ashen_grass_crushing.json"
+hash = "81eef4cc0380ddb039b539029d39f5b36fc6fd0e60de20c4b2d5099f02af00c2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_brimsprout_nylium_crushing.json"
+hash = "83e958c5a8f5889356b27dbfe41df17984c5c5a5abc97e63a573feba035be0bc"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_chalk_crushing.json"
+hash = "b124785533d80e4ed1b5e142221366d15accf519636ca29bbe971fde733483db"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_chalk_grass_block_crushing.json"
+hash = "c147c61582d56036992b631a486966dac18a0a04607450c8185b936fb8bed113"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_cobalt_nylium_crushing.json"
+hash = "68ce386bfc0e57aa0b5ada34fe7b730fc65ed586829669941426c694aa9ea672"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_deepslate_grass_block_crushing.json"
+hash = "38499d3644adf7494586a27e7e19102ab58d9a4d4edbf35e3b7c211d6f384a35"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_deepslate_prismoss_crushing.json"
+hash = "ca227a840856bd34ad82c3ca09c8ad05f8bedddd4e240dce9808b6ff5f90a481"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_deepslate_viridescent_nylium_crushing.json"
+hash = "1aa8113e4eac1f6e5d697409f9c2404c053b768d677041f1295b60c7d074042b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_glistering_nylium_crushing.json"
+hash = "0d127d40f9f11e2a8f0f55ab46e5c612928220801fd12d643d54f261ed23c9e1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_peat_coarse_dirt_crushing.json"
+hash = "9de058aad6c9fb77c2f5a3637684621b330da5b67dd4061397eb9dc228265f8d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_peat_dirt_crushing.json"
+hash = "aef61d09e7c261e19f113157d5abb35e5a3a8797252031506d7b0a839bc53d26"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_peat_grass_block_crushing.json"
+hash = "920e754a718aecbdd1530c44132102260bbc77a732f1b48b7dc9777c944968ab"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_peat_mud_crushing.json"
+hash = "edb749f8c927743fd00aee28c0d95b10bdfbc0b4d30ba99a080bc3b238e05207"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_peat_podzol_crushing.json"
+hash = "53d504b6c495607ee57d1a1103d560a6194cb7f983ab9ee3db54b810341f77aa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_pointed_redstone_crushing.json"
+hash = "71bede2f43b8b49af7bdc600ddc5d4904f44bec5dfc30a5f23f348aac40774a5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_prismoss_crushing.json"
+hash = "ac636c29b5bd6eee99ef56773f74c3a64f3e71e51ae2a6e015990521f85849ed"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_prismoss_sprout_crushing.json"
+hash = "d0668ee4f8583eddba8885a569af2516e42ce6d6a6bbfcd17d939e039ce95f32"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_sandy_grass_crushing.json"
+hash = "5ada08b1bc08953e4a3c159825ff96148b020d456ed22efcb397847dc4e2cbfb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_silt_coarse_dirt_crushing.json"
+hash = "896102b7c0368dd0f9c7f7e8d6066c032ca9198e127fa007c819096022094191"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_silt_dirt_crushing.json"
+hash = "183607085a982da8acd4159219b3ac754a1caf1c2151a58d8fb1b2078341617e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_silt_grass_block_crushing.json"
+hash = "eac6005c67250517d7990b1211ade1cf10dc11b29267c238cd24ac4f10b6dd5f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_silt_mud_crushing.json"
+hash = "58533cce8970c28f7b65c2d5ba8b9d68070ccc74554e22251bd69360604a06c3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_silt_podzol_crushing.json"
+hash = "8c70705ec74c91ebf1e3f067d5d41c7f5b430be0956668252d77d4b0e5a4e005"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_stone_grass_block_crushing.json"
+hash = "fa6aa8b992ec6b70c42eb76e9abbe82c2ab2437f2c141033ab8408f4f6096d8e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_viridescent_nylium_crushing.json"
+hash = "af38d9b9f2f11cef67f555623113de1b96f24bb3752e349a32fa635c9872d56e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/create_ru_compat/recipe/crushing/ru_volcanic_ash_crushing.json"
+hash = "247abdde1561928e999dbcaa163b5ec4d182f80f11c62aaf19714e11941a4168"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/blue_vine_seed.json"
+hash = "ad9755a87ed4f6ddd5474e8978ed202d6fde1895e43d99ac93f1fd05873a81ae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/bushy_grass.json"
+hash = "51aba1f21dbbbd095cfaf22c7702855d0685d6be01906bfadc8ea2ab169e7604"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_cyan.json"
+hash = "3a9f362f8edd9340fdbc87b5336f3c7848df25a7349f0aa76ef92b3b62a5f1ec"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_green.json"
+hash = "5450c0798066252f2105d21287a7c971871361920f17a3712ac10250298e0ec0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_light_blue.json"
+hash = "447d011d97f35df10304dc697ee914babf65d2f751642d8a9b1316167eb31160"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_orange.json"
+hash = "c4a24473fa48f3f1115a8a9f575a389a133eb8f72bce0cea30070850e6c867d4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_purple.json"
+hash = "c66f5a749d86909bf77167555be8a0d91f913eb2c97e686531a3318742fa52bd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/charnia_red.json"
+hash = "bdc1901849e0c75e74547ea03756ee16f925e26b0d3bb4f56ed83f6be9e27028"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/creeping_moss.json"
+hash = "76f95cac64e86db5316ad5171c837a6586afcb2b541d7f9a51974623cc4b362e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_bark.json"
+hash = "317a688118e9d17d8af1479ee65f6676d870b05bb44b65a4339cb78856bbe551"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_door.json"
+hash = "661771ff5820dda1fb54e7bca364c7831886d1f6b81c6a88385a89ea25a78180"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_hanging_sign.json"
+hash = "809a564b89023f6345654faa06f054160b1d2f8f6fba902e4da6a6975ef3ad91"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_log.json"
+hash = "883100899a27bb896903ad0429688ac5c7faacea5c6018e2a106b15b8fbabcec"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_sign.json"
+hash = "eacda0a26b5a0d6c3e8266001fc4170fa7d7fac62f2c4520b0b466ba7d342cc9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/dragon_tree_trapdoor.json"
+hash = "0d5f60285c1cb36dc4e42ea85a7faa2b920014885838df189919d5d625245727"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_bark.json"
+hash = "cbacdc25a53287fef492b6875c6e52abe3fa60009e371d56bca24ab0df07a33f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_door.json"
+hash = "6a4983ce72c465447032e445c16e201fce3b2099f7441d58b513bfac8e228720"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_hanging_sign.json"
+hash = "b104690e4f1e8f4b7195a7d35abef5830751c6eac92a579517d073664d8a7133"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_log.json"
+hash = "b347962255d0a748d44a42b8a1db1447986a27a5fa8c892fdfd701e4c03af074"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_sign.json"
+hash = "dc233ebc9ff6ba44df6fa6203428e80b13672f9654fc8c8dca5f58b8b72ee8e4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/end_lotus_trapdoor.json"
+hash = "9327ab5c3aede1150bdbcc588233d754e60bdc6351a1876f45b7daa2b63b2350"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_bark.json"
+hash = "f30f87d369f91d3e351a63de106206b13efdfab51a9f02688ec5d7627d848299"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_door.json"
+hash = "b6bcc5093f9b812fc037a9d3d7980414596d1073a4deedb9f17371cae20e99df"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_hanging_sign.json"
+hash = "0725f2b45e5aa2e9c1be5188d32a27164a322a78c753919c3e3e1ac27c66abb4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_log.json"
+hash = "af8f9ab66cc3c82f5ad133f9a854bc32d61a85e89bec0b1aa30b02f303a58464"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_sign.json"
+hash = "6ef4cbeccb67d38ac42819264cf4ca9c45f0d67db4f0c469af99f43d03a00143"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/helix_tree_trapdoor.json"
+hash = "9140c0cc1e2e209ea092d5c796ba182c8b571841c44aa982018d6cd95e80ee7e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_bark.json"
+hash = "e57ff98eaed318bed9183f683e93485c26371a176ece867d3cfe68cc38f8226b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_door.json"
+hash = "9c534d4650b9a14fc5021e765d5e1ee2e2460fd2cf1150ba08480f321472ab2f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_hanging_sign.json"
+hash = "058ff71dd613a9ffdfbd6a95d7927438ac195219e664b41c72332d32ffb69a9a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_log.json"
+hash = "75049bf694fb9b2fb8c351246d5a530d796c31e0707ec79eba6a2f4e6839ddf7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_sign.json"
+hash = "ef07bc6d053c0df2275612bd910d3e0792b57092a643805bb815037a7c410aeb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/jellyshroom_trapdoor.json"
+hash = "963cd765da686705898de5ed07fc12b9425c510d22b442dc6d53165c1f054383"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_bark.json"
+hash = "0fc9f912fe8abac26a09cd0d130cb4f6d6566251dcc1d79da5bbd82c803fcfa3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_door.json"
+hash = "b758b49ac18a8720c08452d67f42b2c34e5425bd31be2a879d662c3da03b819b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_hanging_sign.json"
+hash = "8b2b7579a6e6736b10222bd2240a02efdaec4b0605e528333859aaaa97579540"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_log.json"
+hash = "c9f45a603f9ea2e4d7ed6470546b2fe5da640356504a0312a5ce1c108fbc5283"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_sign.json"
+hash = "b302956d06c97857f5759876a145f93d82d54ddd26446e2d4b3cfabe5f34149a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lacugrove_trapdoor.json"
+hash = "b22a9e1bb5da5192c590502ba4e1c56419f9c90e3a7643c2fa71b3dae6b1ce37"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_bark.json"
+hash = "ad907487456aefafff50cb0ede91e48e89539d161da00ed15cce0e25d46cf48f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_door.json"
+hash = "6272b5134da27284b1a3554ba41660ca833b9d37ffc86952ee049c2e04becfe8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_hanging_sign.json"
+hash = "f93ac6b119105f992153c02c8107d04abbb52c62088a41495e7cc509d6b3cc1d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_log.json"
+hash = "aeb70bec05d2d59592d7560c8f2756347e571f23db92571c25b62f7649a9a823"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_sign.json"
+hash = "04a8de4f42d0e0af74d7a2a169b955ec20f2023638f92a741e041373ef8e590b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/lucernia_trapdoor.json"
+hash = "c467cd93c5f6451d4c5b55a1da68cbeaa3c81b6e305115116829177024edf664"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_bark.json"
+hash = "e4ee4c05e4dbd009f3009c3ebc305a98703f0f6329133ef29d51dcb71142eb04"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_door.json"
+hash = "8e46b9540a132a0531a51f1b0d6cdab00d8ed4fbca845f983b465243f07cda02"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_hanging_sign.json"
+hash = "c74ab8ee453392553699f955f50df5103e1f9e455581e329fe9d57ef18c2c6ae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_log.json"
+hash = "6023b75861c82487514f8ebe06cc8f3bde1e39ed14e25fab45d9073a79fbd637"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_sign.json"
+hash = "43da0ec76d9de951e7be4b0167643d012a63370809040e81a31eefa22833a62d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/mossy_glowshroom_trapdoor.json"
+hash = "a6cfa21702448bf0215b1c7991f9c5a8aa143288a8f5bd85cad532d5133c57cb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/purple_polypore.json"
+hash = "317040066b1b253d170f1d60644d4b43147f69d124bd196ffcceee46a7dcf03f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_bark.json"
+hash = "55d6422f6752e38a2d2970807f790cea768731f907f9d811d90dc36a26892af3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_door.json"
+hash = "5fa72fb5076709aa27a60f3eac28516a2b9f71f1853c251de489c40984ce8a3e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_hanging_sign.json"
+hash = "d440815a195458ec7e4cd6b7c7410cf0c64d02ee9fb77fbbf2b4b78efaebad7b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_log.json"
+hash = "14d23c6000612cdb87e26606da1c555e05027242dff96d4083fc0b00c2ebd69e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_sign.json"
+hash = "5c37184a6a8b9948958e30111ce0c7f9088387f7202d3c00bdfcf229d7132c4a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/pythadendron_trapdoor.json"
+hash = "3134cc4e3dd30ba9963a026ee2a70acde6fe284588eccaade121840b14805a07"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/shadow_plant.json"
+hash = "b3a83d7c541f7e2e28e2b7e763e6f3af394c509ae0f7f06e4a829b1eaee05bfb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/smaragdant_crystal.json"
+hash = "8a0384b0ccf921082f31ba04ce649ecb4159b77a9a50d3dd3ad94607001fe998"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tail_moss.json"
+hash = "d730b1fc54c8a62e211cdb6e52c718d4fcc705402d07556adfea38e6253b7b1a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_bark.json"
+hash = "93877ab3a7df2cfcee121dacab49000ff9dc7f227d01f7a68ebf129c2d4f3dfe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_door.json"
+hash = "145db452c58ad26030b29c1aa54072f74008806d461840866d01025d7a0df34b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_hanging_sign.json"
+hash = "c700b9940ca0fcb525f37dd5e325011b69274c6dacc1e07fca96662a1fac8ca8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_log.json"
+hash = "9b21eb770af94344b3e35d6526b2bf5a3bf886e4ee331830c99bd6e09deea77f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_sign.json"
+hash = "5222bb125882c285ee9a3bd6754dfd1a9d5540f798d2d7eacd19cb17f8abf3ea"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/tenanea_trapdoor.json"
+hash = "5f0840a838a0301ab0d62a34a67ee06e25a991b2062717aeb1da0349f948e1d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/twisted_moss.json"
+hash = "c5b964f7d783587d9703ed6299fea1554e9c29a7225b703d875ecebb26f8cf19"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/twisted_umbrella_moss.json"
+hash = "ff2a555ec04034aca309c44fe066a96f1e3e9cf95b10af3fa4a7c18b4a515f9c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_moss.json"
+hash = "9fe89bb56b48f5ace1f09c75294684b260a5383744b0782db215ad1deebf4dc3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_bark.json"
+hash = "20436d9c321526ed4b60637a6ae96263acceafcfef50bb6c1e12ecf23ca10229"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_door.json"
+hash = "0e6dad088452aff0ee71b3f7b59a5a0810e1ef5c09d99442c8706daf8637019a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_hanging_sign.json"
+hash = "aee8069b27db93f19fefa21696b77e76136572030dde675ce1c10b66732d5885"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_log.json"
+hash = "4faa9192f2f932bec6bcc7e28e3209f7a501bba35e055e80ffc81c4b42daa573"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_sign.json"
+hash = "506e4486c6e62ad9eba8df7ef44ea53dff58739828667ed2904442752f14f5de"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbe/recipe/umbrella_tree_trapdoor.json"
+hash = "54998eae719e7fbf375a8e3445ac0e116d3429fc19ac066c77e5849bd50bac1d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_bark.json"
+hash = "7481028efd8d1cec693af7393d7df4fd5d86a0ad0f847a7e161a9eba2919ed3b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_door.json"
+hash = "1da4e499668600767dffd46e32d179c5a1c930cdd7277eda1358ecfb244c8424"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_hanging_sign.json"
+hash = "91bde873f5d6fbec118a80547a473d590df036cb7ae8ad643810ee4db83c4e6a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_log.json"
+hash = "4da3203653a1aee711bf31b21ca5546fede062a9de3c22303364d6821877a8d4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_sign.json"
+hash = "60e64b762d214fc4f717914b46bd1e3a0916c35ceb04c24a24f55463935d390b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/anchor_tree_trapdoor.json"
+hash = "295c2584fa00db0bc1e6ced4b59a08d67c4e381492b35801989fad2d3f65f652"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/gray_mold.json"
+hash = "54e3ba3dad23455c530e0d41f8897c3dd411a978bc021ed353245f433f9bb8d4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_bark.json"
+hash = "5e6e3cf1096f15014466bbc2809d488cd86c8bbe0c650b73ba1faf38bc728373"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_door.json"
+hash = "59bb8382cea9fd617c8192adec4e5b1df47eb9b92f0d9860f938696c8e7fcecd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_hanging_sign.json"
+hash = "6ecdabf4ce7d4ad7febe62968a1129e7ecff9451d2084990abbc71316a35216f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_log.json"
+hash = "6380de70267d3ab25b969ef81e5311a880843a31ba2130d0cc097c2dd510d5e4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_sign.json"
+hash = "1814cfc4ddf8de4961e429ba2415dfe8fedf16ace0d1704cdb011bb5d52b5276"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/mushroom_fir_trapdoor.json"
+hash = "b04f5f26468b0ba09015e3374c54e889515586f7b226b1b83651f88a40972a93"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_mushroom_door.json"
+hash = "b018fee939fba3b6837a306d2d3ae3c8efe733a818094dc804d7eb068bfb2142"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_mushroom_hanging_sign.json"
+hash = "ab86ece90cba29d3879967b7ae871176504d72f104be26af2ea9d39c89aedbbb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_mushroom_sign.json"
+hash = "575bfb91df03f9adcc48d32072067de05e234726461a6ef95e4bc935a2267cd9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_mushroom_trapdoor.json"
+hash = "d7347314804dcac0140069df80611e128caa68b36a91ff72ddf25e4df671ac8f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_reed_door.json"
+hash = "471e8a16f6f73efdc7130413780933f37d94901d074a4238bb78a5170f814301"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_reed_hanging_sign.json"
+hash = "8346ba20ca6c08ac3ec5c5492282ae91e132bc4fc272f0ef71277b47fcd39519"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_reed_sign.json"
+hash = "1266fd403a96918b7d56af6510f86af1274e6be356858b6aad7cae3defeaf384"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_reed_trapdoor.json"
+hash = "016d57c562834f6a6d9a13fb53fc80e8546b1c1ad65e7c2c5b2f4026223c51b9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_bark.json"
+hash = "25dce72492754acc763f1732df3b4ef5818054131855870df17049133fa66b15"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_door.json"
+hash = "74a6599d4af8aa754865814296f77c2365ce7cd7b493ec9a3367b65ee6e220e5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_hanging_sign.json"
+hash = "88122d016aaead9410ca1e8aae5c376262dfde5c340e628b783f22342cf1c726"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_log.json"
+hash = "fda5961fe9aafc9faaf25a9bf5c94c5048f3fe4641ebc83bf83c816241ef4450"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_sign.json"
+hash = "06d47347ee6dd43a9a0005c0274a3b869c64be5bf07928738c9e43611e2052e6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/nether_sakura_trapdoor.json"
+hash = "d16a1913a17279bb24ffe87df7a659081b80b62290d6499b5044a7fed76434b1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_bark.json"
+hash = "ab7695be4c6569a521b6120705f8831f43e332e418ea26b3652822ec45e8182e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_door.json"
+hash = "9b9131d23851d374184d15eb09cece4d1ed9118c375ac2abd8d23e5e0150a8d8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_hanging_sign.json"
+hash = "a518a437e4fc17f588cd40ee7a6c735b2cc85ec382b84699c825acedb9599065"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_log.json"
+hash = "435236b710b2ab6cfc7c3344362dfff2b74bb2eea89af2e6a4ca9d6247f4f10e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_sign.json"
+hash = "a81da2d8314b43e12fe40c505abfefad3e7d59e7fb57c4c24ab770f9c80327a8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/rubeus_trapdoor.json"
+hash = "cd0de9b183e006ea381ef7b8c6cc3b10e36bd07792425fea3d0ae995a8e4627d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_bark.json"
+hash = "4b34d4251addb3909554dbaf88b49258c38b94ea099b31dcfe4d2c6239c2e8b7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_door.json"
+hash = "6339d4a252544f8a019d312b12838728884ef73f185bb21b598d2d3fe41abb6a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_hanging_sign.json"
+hash = "e15d305646a1ff547fad04732aed441c035c80b610d11081ced71f4e1e7f7374"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_log.json"
+hash = "0aa92b28873f647dde88ea434987ad8b9c062ac1dfcabda6699093b6a1e2bcf6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_sign.json"
+hash = "4db2f48881a1a9e12bac7647708eb31b8086d8c4bf9c66e2efb4384884d832c9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/stalagnate_trapdoor.json"
+hash = "5968f78dd316a32edcdfcaf48728a235f1474adef92474d9e0748cca7e34f0be"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_bark.json"
+hash = "04296b3cfb45ad54619dcf88bf653854d9b1d468f04d4e2604378365f41f5e5c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_door.json"
+hash = "f14212ca2b28fa1e76643e65e1e7461a1a95dc2ef616003510b5c390e530a4a0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_hanging_sign.json"
+hash = "013f3a4f0d8f005b9f5a86c32d9e191efe62e68986a83dd9d45b20faa16d9ae3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_log.json"
+hash = "b44d8258251fed31565d9a67af98c4ea8ff6a1d3f787d9df65710a15b2a40a0b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_sign.json"
+hash = "2f06214bcf2784b141f912f350afe244ebee60e18b2f9f066265fd67448b44e3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/wart_trapdoor.json"
+hash = "2e4b97af972e4059225aa268560f704a9a007c84ca8986b050674608a38fb01f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_bark.json"
+hash = "6cdd13f9cccab2d77b70e56856f0ed3d4fc60bf58eaecfd86e755a910a55784e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_door.json"
+hash = "4bbb7f74d4bbcf5d78bde4d36d45f2e509ce80fb59b6ac7d9b3ac9df0ddaaaf0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_hanging_sign.json"
+hash = "077360142f52d7c04db456344dea96139e3e24dbc4bd22474be6ea51984fa463"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_log.json"
+hash = "71a01623fbda4e8c79b1756ee56cd3206e345dde54dd13591689e890ff976eca"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_sign.json"
+hash = "7717dace99d708cee452cdef6e32f566a78ecaab7f57e9ae87f06743daaf9569"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbn/recipe/willow_trapdoor.json"
+hash = "f7ef3ca39dc913c310be436b360ed695effb7bb673409c0bcd7a1eda3614afc5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_door.json"
+hash = "560357fbda0c01f704069eb26e271b5ca809bf30102bdd392286cfd94cc3a025"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_hanging_sign.json"
+hash = "f62183547f8f073838ca1a4a31d325313b048bc0e1d884635b1b8c749ac87e01"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_log.json"
+hash = "efafc453e7f119b86f20e27b97f8df4c344855e8dff06a34f0fb3ae1a9493574"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_sign.json"
+hash = "dbdb75ed8f56105e46a6327cf9855522e9e82252bdce11873994a7614d5dd4ce"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_trapdoor.json"
+hash = "53fd30ffe72b1459352ca2232ac921c68e9787624affe9c8f3df4661e987bff7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/aspen_wood.json"
+hash = "62c61a86d8268661ecd6abc383827f8a0b96b289e1871d25044acb597b98577f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_door.json"
+hash = "a830f968276e58b05e0ef81cf85f653b11b30d436f6c8363cac943758bb4a524"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_hanging_sign.json"
+hash = "85a405c77c33ddb8cc28f5ef6284b1300d5b4b92a3f5fce7bf6e934dbf1c8c95"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_log.json"
+hash = "7366eb768d0cf48ed59899bec34c92b1b01f81c85a907d0ebb54d3563d263758"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_sign.json"
+hash = "0df0084587a59b31580d5e094b8e4f183a9dbb1ac37f592414038ffa1ffedca7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_trapdoor.json"
+hash = "244977701f8a0434dbfabf47f121a33baa7faaaba34e8f5f71b39588bec76a8e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/baobab_wood.json"
+hash = "4398e98d10dc1ff251b59fb7bbed4846c383faa71e6e37f0489ff5ff63667d7c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/black_dye_from_tag.json"
+hash = "83753290395bef3e401b769fbbab3761451931301c57c432eacd000e33a42a93"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_dye_from_tag.json"
+hash = "a727f444e3ce187c6310f1b0ea4137f58475c610bf1a88653fc9225b8c1fed03"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_door.json"
+hash = "ea25da95cfca5b354c654040860402931e69c381e0e8777e35ed8dad8d29f8b3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_hanging_sign.json"
+hash = "1f58df849989e2f5c313bf22a86cc3f2e72ecd164f58aadc50b610c3058ca02b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_log.json"
+hash = "7478d5f716fc3195b43422beb935f67d4b09ab768d91f2f572f2f827226ae680"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_sign.json"
+hash = "4591df1b125a4c703de626f481491523aaf7eaf7fa4a6e4a62325b6bfcf9c576"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_trapdoor.json"
+hash = "8e8e9f396e4cdc4025bbf0af8f9eed0a6a7f5d32aaf3674db4be62f34fc76264"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/blue_enchanted_wood.json"
+hash = "99f50462a207cf4ca023026654fe906dcb16b5609a7dc74b2b99b451933be3bb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_door.json"
+hash = "24d907f571f1b45083bed01d69575d91b0fede06638f2b998dc15d298d9f404c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_hanging_sign.json"
+hash = "e5335ecc78cb0d0f917a649e6196bad8e774a05b18bd80d3143cd69bc6a12447"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_log.json"
+hash = "61e6659957da8a9615ef2b225b8e58910859d37b79aa525759c52e60d8963d1c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_sign.json"
+hash = "61f4733b89333c6ef7f4545792422a21dbcc02df6ed5916044e305a519495bef"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_trapdoor.json"
+hash = "41de48090519b4dc023a5af9aa1638222e62c02b4b6fd312067065d41e7e2f41"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cika_wood.json"
+hash = "fac4f77f07e182bd9f6c6f910e14e73660c7fe91c7cdbb182274ae85d5762858"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cyan_dye_from_tag.json"
+hash = "5b4e66a37d3817d3be5db81f30c5be8369835eb25a073c0233bcc00b50bd2e38"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_door.json"
+hash = "6fd748d1bf54f024c8636e6ef0e26f914388c4c7f44644cbe58d6b8f1e2ee0a3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_hanging_sign.json"
+hash = "edf7143984b3b9b772776711d44133718dc2a1e60b85e8c51965f02e276dccd7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_log.json"
+hash = "4b42eb5462cd1f0733fc8b00c238fcf11ff23645f57bf9a27452e5e8e863a5f9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_sign.json"
+hash = "e8857d9b9592e95b14ed19e9de4e7f0cadf5f278b54cc37faf1b51cd2f605c53"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_trapdoor.json"
+hash = "025d31130db82007c0a1b01fc586a8a3fdb48eea3dbf6fcf391f6e784829f57c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/cypress_wood.json"
+hash = "ab6e2a2f42ba64fd0d903767313380a8cf3facccb68f64827751a217e73b8296"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_door.json"
+hash = "fcc5864b55752e82345699153a7bea2bf15c42e1b7232b26f5848843e1cd738c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_hanging_sign.json"
+hash = "7863f49595acba45c144882d48ff621f3544a7eef0e47d8881178a8cbd88ac32"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_log.json"
+hash = "ad6eb939d1e19c642076cfe27eb7478f8f8f8a7e43ba8e8b1fff0b4c4a5c1956"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_sign.json"
+hash = "1daf5d2be9e3c42059a8cb5b564e2a886302661c1da0dd73f038f4772bda305d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_trapdoor.json"
+hash = "4599f2bfd435e6f382e4aec20ea014d7f066095941b3ff0bcef431ed65e11396"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ebony_wood.json"
+hash = "a3e3413724d382948c3579788721047cb3788ea7d41cd36f48a70e4cb6e5174f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_door.json"
+hash = "b26484fad5e47541e712084291fdc4c78936a6e8b876e0e6fdb7090b58056899"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_hanging_sign.json"
+hash = "e83f1eb3b65f0e33742f3da3f375280680af4dcaff4cc21123e2986a5cb54f0b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_log.json"
+hash = "3499e3a95013e39842400b33ab21103461a1a05b6f5cf97381f8239257522b5b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_sign.json"
+hash = "f10ced038b568c0b75c3c4b2924e503f760b587146270d35d4d7c4e69ab93e12"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_trapdoor.json"
+hash = "85d9723d92eec787cc9cf1458ade61de6d64dbefab84c9385bb1561ec5ea10b9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/fir_wood.json"
+hash = "3ec9443662f50689f423a2e403cbfc903b37451498336b12c64b8748a6786edd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_door.json"
+hash = "91da9ea3896698e279e8c6f80025e55ecfda1ecc41d8f053aca15403596c951a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_hanging_sign.json"
+hash = "c0b9e2270c3198d425e9c22846bea2bf0d207ac0adcb4b101f12384299d6259d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_sign.json"
+hash = "63db3575df7cf3fff7809620322671c2ede0a385a4755a43173f354244a92537"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_stem.json"
+hash = "541e2dafab5d997519e6aba20b482ee7204019459ccaec300cbbee9e9b2f5949"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_trapdoor.json"
+hash = "0e71b4902983e937f3566f396d59bc16507d22a12109241d2ce7795dbb66f601"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/florus_wood.json"
+hash = "e16f82f562c4e4823a8fb43acfc658c75206f0aff679685ca8346a0d3a7b02f9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_dye_from_tag.json"
+hash = "5ecab6bb544b5cb0f4183c6f782882ac0631e33f3ed05560c0d84ad7d6e8e454"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_door.json"
+hash = "3f9fd5bddf0982a4cab60ae3085e2b52e9a1aae51e1f4c877d472b2de30d1760"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_hanging_sign.json"
+hash = "0d823db0abbe7c1e630bad7ffda10117f4f61afc2c2d6b79525ba8af1c002815"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_log.json"
+hash = "4f6db32d5e54adf9e59ac176ce0e7b0dea898a3ed052c3d4c55e37fcd11489aa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_sign.json"
+hash = "4b23891de363ebd3dda8fe06e179c658a9e0b11434fdb0c96f86fe9336deccf7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_trapdoor.json"
+hash = "b3f31486d86938b1f2e2acd8b6b02d188490c0c14f87e34214f25c51b52c4ff3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/green_enchanted_wood.json"
+hash = "d3375caf45c52e182e257c1933e580a7713dfcfb3e5e59cc3f4f15be29a7e155"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_door.json"
+hash = "419e9bf084ce82a8466999054277eb258a14095f6f1ebe198ff1a65bd58f2a99"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_hanging_sign.json"
+hash = "550e1b0c0c6f45b74bd980612aeaeb3d1c13e81c17d20caffc30e2e336940a12"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_log.json"
+hash = "b35f14c9af4ce370a57fe6143ac0f48f8f182f4155164d8ff104e4a7b4ef29d4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_sign.json"
+hash = "de3ed354a2767ff1f1c667b0182e3bd135244b77b2393ae967061538bf054e3d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_trapdoor.json"
+hash = "7aecb1fed4f40ea7a648c749eb0a5166d6bab2740ff16b1915428e582771623e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/holly_wood.json"
+hash = "a74927487031561e5206136e4a13aa5bb5de1f2606f008d3cd57ab5019b19ce4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_door.json"
+hash = "14ffad5dc65630a69137b0ef9e636d6b1256aebef70ed3d2d6d7b008c9fdbc22"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_hanging_sign.json"
+hash = "ab583567e903ec3b894d5b07827208c52885bba5ed27edbb8623a6d8bd5bfc44"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_log.json"
+hash = "a266f7616f8e4bc6e89a01b75d29b33a5e7cf62833887e3bbbd12204f88fd160"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_sign.json"
+hash = "c7efe17f581fc624a9b96c056cdb1ece80200c3f4129a70a34b04a5514d2483a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_trapdoor.json"
+hash = "a0651fbbe67cfa918a6685ce83f2bdaeaaaa7d314bd74ab4f520b592d3db1fca"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/ironwood_wood.json"
+hash = "32b80c0f109bde04402f3bbc8b184553a0de2727a4e225570c1da622fa90a477"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_door.json"
+hash = "27e4a9e015765a237cf18694393fdf8475ff9f27cf36f1afcd22c345f6db21d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_hanging_sign.json"
+hash = "bb776d2865d5b89b4dacccf7caf21b39b84c91fc326c50f027359ec3ab1b42b7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_log.json"
+hash = "b532607f545177a73fa463aefdb0c75980d0be88b5eee903b5953f9161e618ae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_sign.json"
+hash = "22ac8676bb286381912b1605beca88995a5fad6a029518dbb423f890a31571d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_trapdoor.json"
+hash = "205ece3bcf61877ec26339f943c801033c71fedc950799c014ba9886ad24a20a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/jacaranda_wood.json"
+hash = "f4f10a679b94f61816b92913024d70194391bda888bed42d918bd09b4302754f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/light_blue_dye_from_tag.json"
+hash = "beb6b44fa264febf15081f12cf65c9172f6ddf6b16792c5c8e402c60e30db13d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/lime_dye_from_tag.json"
+hash = "98bf84c4d0181110523738cfc08cd472e80887c711f3422d0f749fb7be80d590"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/magenta_dye_from_tag.json"
+hash = "497f9976e33b991488542cdca314fff10ff175ab28c03e5dc84303d5cb6f200e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_door.json"
+hash = "3205944a3d7bce3e386476f53beaeac3133c0463ee2d5fa15598eaa4391cef1f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_hanging_sign.json"
+hash = "435fbabe0ec2794bc81429e5eaca4d59154bcef69a38b152f034fb44f5565951"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_log.json"
+hash = "71d1a8036a45972454febd394f5f8588d780c700dd2fbf5dfd522ffe007d7a5d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_sign.json"
+hash = "02471d2a53ae752ce9864eb8b9ec7d3998d4d0e144f61f8c1ad45dc17272a620"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_trapdoor.json"
+hash = "cb5de9dee902efda127917a78e2e47cf432294e9a1b162a0cf28a7bc02d97ff1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/mahogany_wood.json"
+hash = "703dbdfd88d6c7c7e3bc51b0ecadede1ef046af80f3692b3dc77b1052f4761d5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_door.json"
+hash = "2538aa7d1df64ba8526ed1be9416bb0af27f5e9b74f16372712690cb8cf39654"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_hanging_sign.json"
+hash = "e46d3b9b829376e79c10f60598e94161481ec9ccc0478f0605df516d3808cb50"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_log.json"
+hash = "faa899d98847b911635cb8852cab1ad798bf3f2fcbc3a583beec464e28424e7b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_sign.json"
+hash = "80fdc7cd851bde0371f93216e82a2784c98d4b3cfbb8d24c0379caa984a0de89"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_trapdoor.json"
+hash = "b0a7ca81cd126a2580b6c58aa9c9dad06cfe0ad95678734e98059a8693698296"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/maple_wood.json"
+hash = "f048057c9bc60ee61269ca5e29da14e21bfda99d0d36990f2690a62f47eaa5d1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/orange_dye_from_tag.json"
+hash = "751bdd5ad114da2288e6234e31ebc2e38bf661df0f0b9af52b17b525e6f9f645"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_door.json"
+hash = "b2b035dda64b785c886feab9331ea5fa361b1d3d153c23ffb043a23a61caa265"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_hanging_sign.json"
+hash = "47b37685e5c7a402e2425eb751eb11e796baf5b1fd86c4a0cba77b9bc9038d6d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_log.json"
+hash = "abc9f41644ead091ca621a1e52b368a34642c8c2cc14dbe2c1f07ab3fc47c0b3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_sign.json"
+hash = "e2e3cd3ccab18a63477234e4215159c154e12404925e097b7d72decb6f373d6b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_trapdoor.json"
+hash = "ebe8d79cc89892df5c063705d0e787b1be3a44bd98b6b9638d5f190e95b2afbe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palm_wood.json"
+hash = "39b29e59b029bbc30958e5f9158a52d54c6a01902db35d65a4cda5ec2cfbdd4c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palo_verde_log.json"
+hash = "2e4d53d8c5ef0ccb94682649f70becec2a02f00750e23f473ad3044152a432d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/palo_verde_wood.json"
+hash = "812b7fff5b8a10c4247ddf6aa4f248343f21a29398e3e65f7853eafe5145558f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_door.json"
+hash = "80b21b1a9358b57696e6626e49e8d2f7d44bcace08d7841be2da8f2d2cdfda43"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_hanging_sign.json"
+hash = "1a3903fbca8bb161e71323d551b1e52669379855c2f981f2f83938166b52686c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_log.json"
+hash = "f01db52de317d9ab1928780724d28315330c17c8d7101fb764843b37e30b8f72"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_sign.json"
+hash = "a28df5bd8e585a4245658fbe0422775b27aa4cc1a1dfe56ba86c181899d30596"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_trapdoor.json"
+hash = "6e250d471a62df653a27757a9205a5eeac7ec6d5a9c3d6dce8535a8dca1c95a1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pine_wood.json"
+hash = "374607364ccd3d38a579c8f310a4bd2c57f2c82ca76cc316dc72f5499ee1da61"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/pink_dye_from_tag.json"
+hash = "6d9f976b39ea85cb4c0ebd6248cbde9c33352bacf99314e53eaf8de03fd68f64"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/purple_dye_from_tag.json"
+hash = "b235386e3b62e1545e430d9c2858e6c21cab1b6ffb8734b658e0d1cab0e1cbaa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_door.json"
+hash = "44feefde5f3a9abc2f39d73dd100f74e2f2d19db1b4ee554bf3f50225afc26fa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_hanging_sign.json"
+hash = "fd9dfaaab6e1b299f07720e19e754f849f592dbbc2ccf2ba13620ab01bd159fe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_log.json"
+hash = "3c9c1915ee8aec9e4ff3370e239b6268038d16c6eb0b35e6cb6badc3f5d629ef"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_sign.json"
+hash = "08f24136da61130a7bf19059b83f66f948a61f504009b69d231aa4ad0dbf6915"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_trapdoor.json"
+hash = "5828aee9faa85dfb61746d7182b0c9d44a6aef74424fca93324075f56b4809a8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/rainbow_eucalyptus_wood.json"
+hash = "668529587a64e79a4b265d00d0ecddd4c6ba960285866e97f7e3ee9e369c71ae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/red_dye_from_tag.json"
+hash = "a4ddf79ac63a86d819a2e3360936d648bfcd48cbc0f308d6ec4d2cae6d4c9951"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_door.json"
+hash = "9ec7c580e0145223a22cbccda6c66baadc960e3fef2d40c656aab333f2c68956"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_hanging_sign.json"
+hash = "0ee10e06f22057cc8df55941b155da5df317b1de426d16f2f34a4e255eee2c95"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_log.json"
+hash = "d34de3d4836237e3732aad8cd6b62cb3fb43346288d8761d38d2383d5f1faab7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_sign.json"
+hash = "96890490d3d665735e724e33d43315b30a7d22f7cb57d0fe911173f5345dbed0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_trapdoor.json"
+hash = "c4bb98ba7c975a173042a793a24eecb5668fea8410833a4f99b912db27879220"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/redwood_wood.json"
+hash = "5989baaa854bd5bdef622ae3985092b5cbc9f3208d6e3e64f6c9601253aff9e4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_door.json"
+hash = "6931b665452f62b1fc53b2258bf927e92babf6bb4c489730d4e4d7163a4de06d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_hanging_sign.json"
+hash = "ea7717f0bed6ad11a0b56e042038440f482cc11285f19854b18488ef4a1c14cb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_log.json"
+hash = "ad20a71d2c7e0bdef69cd71951ddd35b48689a964c39d89e9facf1157d909f05"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_sign.json"
+hash = "a7d4f641a4003d24aeba25bfa1827ec328476ff53ad1688e0e2c8b293754afc6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_trapdoor.json"
+hash = "1607b27203bd1935714dd53b9b2d4e68a0c9628ba96117e7170f25ab4257c426"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/sakura_wood.json"
+hash = "8d039d38898fc0cb369cadbc9ec55f6d743ac41694772682aa1e3e7017689de9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_door.json"
+hash = "1a1f606ea88f0ccfe1ec6daf7da584c981eea3eea139ff7f52f535abe06aaeef"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_hanging_sign.json"
+hash = "737b2a7111f53a9ecc1a366b7369934e7837c27c45606cc258411f20ba978281"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_log.json"
+hash = "5e2b1076b1b3206c5e1fd961b17bc677952fd38e85a16356e2b2199e926e9eb7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_sign.json"
+hash = "0fc5bc4d15ad17e3a2456d569cf1aac9a480916fc187695d052c076117e9d212"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_trapdoor.json"
+hash = "799f9b632eefdee6e2f35f5347de7407c7fed15b384c8ec30e139398d87f0152"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/skyris_wood.json"
+hash = "e87dce3c19f15717d9bfb91cac241acd60429500ca50f187fc3872cda7a63a79"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_door.json"
+hash = "8a85e889638e4def7d4d5fcaf76f920052c530c01a178562467faa916c82a9d7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_hanging_sign.json"
+hash = "ccaff54e1d9ed66147af1b90b6ff405a9a400565a4be8c5d30966037eedf494b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_log.json"
+hash = "2cfc38a04b7e1563bee6a40f043045e4ecca9a78ea30f4079469232402759e88"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_sign.json"
+hash = "f6d6afa0e4dca5f5a58fba6cb9776a09f47d05c03df4e45932d83db111c07ec6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_trapdoor.json"
+hash = "5237e5fe211476eef641fac7cf96354c950cde8c2ca5ef417ec8b67906f751e7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/spirit_wood.json"
+hash = "56451b703c1d4a9e10b8089debc894b2afb9971b114ceeeda4d828438eea6649"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_dye_from_tag.json"
+hash = "ff3c37b3e7d1d4f320a8cdd63b55ee45fbaaf82c962a77e54531ae1c070db93c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_door.json"
+hash = "9c03c0f49f25ad4a6eb5c8d916efb47c06cde5e1550fd65160d1e6ca3c6467c0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_hanging_sign.json"
+hash = "64eacf67d7b28c555f1654dadf0e9fc70a877bd0435d149de7d106535cd39d29"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_log.json"
+hash = "633af97ef79d2f8da743d6aa5012498811a706b88a7470d2c928a6dcb0cb2881"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_sign.json"
+hash = "40239aa2d80ddb20b885290825fa5a8fec5d5723881e164b46feec012da978a5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_trapdoor.json"
+hash = "81ff48ca50dd0a2e74d59f3679f5698838b4bb978e7faefb2de0758fa78fc344"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/white_mangrove_wood.json"
+hash = "7a23e22db9ae940867281b953bb8857d7e6f3374c0bddd5b710287a888022646"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_door.json"
+hash = "c68a21aab29830964d0076686c9748b94d28ae2ff8e3f27b47677706f5e08be3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_hanging_sign.json"
+hash = "6f4faabfc8921841587bb8f862d852c8c3d11413a559aaddf64443b65f95a06c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_log.json"
+hash = "6070ceaa704dbd1ef0bb991f5ba37060a9de3789291eb938f76e6cf36874de04"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_sign.json"
+hash = "2605131ba84a84939eb78fda18663e79a8d9c5d62d2c3692b701a777843b60dc"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_trapdoor.json"
+hash = "7bcceb06c11c558580fcce1402849bef3f4d1c75321b52732d22701ab4d4e180"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/willow_wood.json"
+hash = "52d17ebc86437e4a2eedc79a8bc2e5c9e77aa68a4abb3993bab6b3483392a185"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_door.json"
+hash = "43aeaed6cd8bb1cd5990e0951aa491d101508322824c70af55cf4d55c089410b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_hanging_sign.json"
+hash = "2ac1682b68265bb15d8b18868d94f8adbe5dcaa9621a14359c9c52117e42b1be"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_log.json"
+hash = "29b11f5e1c42d2f23eb415a4cbf50534153b5fc39f9d09788eaae29a440a4c80"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_sign.json"
+hash = "43ee0967d538f25053bb27717afef690308b0a299c05ad0836b0a2dc4a943a46"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_trapdoor.json"
+hash = "d5ed16c7ecd262a8790bd9344963f3fff7de976b567d58d4a02cad134a0acecb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/witch_hazel_wood.json"
+hash = "2932bb19dce50ce3dd24c975a6bf6f83562aacfc123a877d7c996314c418a3d7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/yellow_dye_from_tag.json"
+hash = "2bb72f3b668f64b5781fe9617e86133e1dca58fa4c6cf662f8565f9ed772c8aa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_door.json"
+hash = "18cb396a98c145e81a60cf4e5d02334435f8806ff830a239072d2a8bb4bfc889"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_hanging_sign.json"
+hash = "127152da4a21cbfcb9c148f681d92557767278464e169fa0e4f79bb4fab546e8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_log.json"
+hash = "fb430e3b111b9eb3f433d7deee39e3ec6a0d68cc6fdffbcdb3837c38b589b07d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_sign.json"
+hash = "f2c7ed7ea976de644f70c6811f7860a450c30cb8d74fd9f9c5b87dac224a1da1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_trapdoor.json"
+hash = "9f550a2cee223be5f8a59d45501628bd3bdcf18b0d598c0dff810decf3c8b9bf"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcbwg/recipe/zelkova_wood.json"
+hash = "aef3c05617110dd215a1e02c64f1934d079d9037810b465b3cd3658a88682548"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/alpha_dandelion.json"
+hash = "c329a1366f786ca87e21b960a69732926c66331052ee0f689fbd42bad27c4f8e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/alpha_rose.json"
+hash = "c1dca52f4686960686c6f0dc591977e36e9b00bc6daccb9c158aa152277ecdbb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/ashen_log.json"
+hash = "d1e9d2f822d280a9d53162e4097f660a35f632dbc276ba91b907bd70aeb672d7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/ashen_wood.json"
+hash = "48a73f1b6a6f2605b89df56e6fda403ffd6f06f7d6772967768b0556583d9365"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/aster.json"
+hash = "114871fa41a1271975b67ec91b7972ea0358808d4822f3fa234d356f0caa05c1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/bamboo_log.json"
+hash = "6a80965ed9c70fb598d1bb9e8fd2a2c028c1a043c7206bacee4ff23206232171"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_door.json"
+hash = "107d80a3b9f179616bb5cfbc444e0bf1f55ea8788e27b8e31eb0d6559c5ab281"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_hanging_sign.json"
+hash = "8537baa6222c6e6d588fcac44b4557e5dd94bf6a1a995f6b46e12d5a0388039f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_log.json"
+hash = "bc77fee19b76d1080ff831c0265f20f8c5c1c043f58c21d6024698cc711ec510"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_sign.json"
+hash = "3b4b8d3d389d8df1299369b9109792d7b6b85b2f947ba48d33a7a9c3734c19ef"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_trapdoor.json"
+hash = "babc34de29642c168ef7bf1ba0be9cc7b934c39d93e2731e1af09bd95c903e8f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/baobab_wood.json"
+hash = "f43d64aed999915cd4579e2bef04daf69b62cea294f3f46e5f67923c5a960455"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/black_snowbelle.json"
+hash = "e409825317f4ddc4c624179ec0545f1c2ff1f7db0093e968299f5cb0b2a22148"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_door.json"
+hash = "79e4300d6afa8f0b2bdef4d18fa9d98a6ee54d67251f63cad228c8eb74116b17"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_hanging_sign.json"
+hash = "1be20f6cc92c1d601ce3b6431313379585604d791b6de1dc74d308d5ce910d57"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_log.json"
+hash = "866f62bce8d0e7a57ce73c19c790f16bf88b2a60a6c3467d0daba36bd07272ab"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_sign.json"
+hash = "910b4668bbcff01139795b42229dbf92e3159875772e921917a3b545dc1bd257"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_trapdoor.json"
+hash = "596526a8a4f64efb3857ff74376e42778ce12bcea299c54280b101a6f36c44f0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blackwood_wood.json"
+hash = "81bab972cfc9e8259d923c93f4126f4592cae9a4287c2ef779a918f32084ce0e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/bleeding_heart.json"
+hash = "80bb2cb4244ce2956f07c3c1c357f9c1ed06a0363b51f8dea19c27f35566a7ad"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom.json"
+hash = "143c9d7c189dc3fa2913eb5aacb51faa2ea4c3e5b7a6e7e19f9c91eaacb041cd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_door.json"
+hash = "0e6cfc6919246df55367b71a45201e2d8b2abd74b7bd9bd8ff1a36795d573005"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_hanging_sign.json"
+hash = "c5fc14932f708c5544f0f44a9ff03b13fc2e34657ee3fd090ea73cc3c85d734a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_hyphae.json"
+hash = "2d221bca17c314af60c7c7d219728dc0d217ee814d95b9496a95bc8207c16ff6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_sign.json"
+hash = "60ce686dc0bb27ee24c0d6937bd826eab43158fefb93048343d296b9341e0813"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_stem.json"
+hash = "c0faff64ff494fda95367a599aee685edc5dc86f08bbff78dfbe254e5f4f6368"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_bioshroom_trapdoor.json"
+hash = "371239f4a44a611afd998b71384b909d89ebfeda1af7cd64683e227b675805a4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_lupine.json"
+hash = "d89bf30c6f5856077e2949ce2f972a370d8ecae8e50e5814e720ed8969071f9f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_magnolia_flowers.json"
+hash = "348b04e94ef19e9d6c05e91708dada2c1a53855acdb6427cd8900993552f9f0e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/blue_snowbelle.json"
+hash = "8c78e8e4b8e1c50d3503ff6a78b85d5d437905b95c011c5219a8dd79c9e0a839"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_door.json"
+hash = "71ebacb68e72a3a73b62ba39315083ec235946f804c28c8e1e0ae14f1ff96e83"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_hanging_sign.json"
+hash = "83102be976148e1a0dca21990319547349b3785c35e2e8e52cefe1559d33b1f0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_log.json"
+hash = "60a37d811259e5a8fc8b40ef6337d5a96771f40e1e38a5f6124cf5266e34a5d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_log_magma.json"
+hash = "ea338b0a9d47380695e7ac5d24e88ff00cedb99095d5e6cb2a6870c400a34162"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_sign.json"
+hash = "29f7c7abba9ae2fb5003ff8b78c346aaf453df0669ba2d76f830760229519ddf"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_trapdoor.json"
+hash = "998b6a83c16743bf90e8eba587768baeeaff34fad2d225dcdeaeb9ca37f25373"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brimwood_wood.json"
+hash = "21ccf7f9574e528e1e47604847bef8aa5532c360fb92f84a179b428bbdf6da0d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/brown_snowbelle.json"
+hash = "f42ced5759690dda910809c9de2def12d57bfc4db917cd4e20fa02852a13d987"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cactus_flower.json"
+hash = "f1fda611da259db5161e972ac5ad4e56c8307fae7517537b53f95c1366cc2b2c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cattail.json"
+hash = "f8d9dde4aba541d8a28c7e630c47032eeb07cb81268b1ca60119b2785c84c9d0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cave_hyssop.json"
+hash = "80e12133af0d76c9809502b13f67eca248cab8fddd5a3818fb828466c304a89d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_door.json"
+hash = "ab325f26d9360807450513eba47ec6a226fd5d34b288d8c1469486b28523f8e0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_hanging_sign.json"
+hash = "c9d8ec68ba21c11543ecc72fbcbc9fa7d947752573500defe07e0aa90984b49c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_log.json"
+hash = "eade8467291c6517fdeb06b1125323849e7452cf645dd0f1e999bc087fb6813a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_sign.json"
+hash = "76cbbd09b7772a1b4376769569fe9a426a4e639ce8d84245bedb2a692a1bb491"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_trapdoor.json"
+hash = "0c67c18c4c2f280f91524310863eb4e9bdf19602e6aa89c744d43e915417dd26"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cobalt_wood.json"
+hash = "970adf2e503ed6436b13ec3d2f7b05a8d561e9133454297e75891f81471bf045"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cyan_snowbelle.json"
+hash = "95092a251c82ebf6f78b9f74530a9f2b09293e3eda253355f21f94c83939548e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_door.json"
+hash = "d3fb9dc3b12ab0207d7ba7be5e79e0c225bbe6b213cebd619d57d0ffa8d74738"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_hanging_sign.json"
+hash = "f6ee2ca728b30ff11f432eefad21cd4c3a3ec225d7fec91ad9ea2654db4b5916"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_log.json"
+hash = "6ac3bc6167ceebbec66ad21098f9143c3d5911db2c3e3d6db35a8b82d13584ee"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_sign.json"
+hash = "66096c98832d6d41f74f635de6970a375d95dbb82ddf9fb57b5e95b20ce7dd54"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_trapdoor.json"
+hash = "6c5240d771e87f42f53b8aa73e92b8ecd0d84cd6276e87cea1b93a0854024aed"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/cypress_wood.json"
+hash = "a72e4877ccce19c2613cd572264ce48478ac226e0c1f5a304965b2692ca8bec7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/daisy.json"
+hash = "8a875aee8af8aaadd02dacf71a8977deb7dd03c5a155f7dd5ce3b800fa70d143"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/day_lily.json"
+hash = "570158288cef05fdbb007ac315342c1d057037fda02b7a5da4e3bacfedd8f40f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_door.json"
+hash = "440f4cd39b85db3135370cdaac0b20707cc549df9413f8e888698d93db05c0d6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_hanging_sign.json"
+hash = "9909423876e974b09a99d8e09adeddc29f56eae28f63b4c52f9e74c7916fcebe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_log.json"
+hash = "2ee4408fc526c7593ecc92928d0fa5556bc7b08715ee30e7d27c35b1fb90f405"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_sign.json"
+hash = "9f9e8a9ce998612567a492b045b2e261c320528a69846202a6452e5bf6a01cdb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_steppe_shrub.json"
+hash = "12bdefe4c57bd79c0c1ba1b93acc3a88d772aff6b5a56b64993a40ae58771ebc"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_trapdoor.json"
+hash = "414fa10336962263a0b3fd498ee1b2a5854fc6a9ef24f8a59ae4e5f9116b03b2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dead_wood.json"
+hash = "5915876007762427df7134f098061164262e3ae0b4c06061b0a496239b9fed88"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/dorcel.json"
+hash = "0a3b9a481064ef2bd7ab1ff8996758722f2a2c427e3301603217d9ab6aa91217"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_door.json"
+hash = "79edaabe15f6c654faabefb2b4c4aa0fa9c0413a40885e6fb91a881f2fa4e985"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_hanging_sign.json"
+hash = "fbf37cf4b4451e20fdf323d288a5fb626c9f1d549dde254f1c848366164f448f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_log.json"
+hash = "a4da8cac7ba04456e73d9c06dd3ccf6ba997832fe0066dddf43b9bcbaa5cdd0c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_sign.json"
+hash = "e9a2f355c1fc9dff21a303b8a25dfbce9482ee5c3bd005a2b4fb709f0c8fc05b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_trapdoor.json"
+hash = "b870d1affee5b74a203eb3684604584644cff3242583536b63dc3319b5232d78"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/eucalyptus_wood.json"
+hash = "bb716f96d8a826f1fae6d65862144a6d0dc887fe38e8c34a6368767c0ac7364e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/felicia_daisy.json"
+hash = "b29d0c1668c96fa217a811b195074db364d6d61a0422cae16b175c2a128e4bc4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/fireweed.json"
+hash = "32964c7900bd700eb2c27826c43f8b3b6de347d10d25b33d20ff6fe0a23f5584"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/glistering_bloom.json"
+hash = "c271b36fa803e7de890633ffef3fa484305f98ae51a42b1b07069a7699f2f4e8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/gray_snowbelle.json"
+hash = "f7bc5a3173027819bdf1c40dbf0035eacf22433e2b875d8b35883fcf42287b6a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom.json"
+hash = "db0625534ff753eb90b2d00421f1097b9259bffea16a5a0947c1ae7206e57813"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_door.json"
+hash = "010869956cce73e91fe95b973b4c40ca1556706e7afdb03e7300e9afba33f074"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_hanging_sign.json"
+hash = "56e0ff1b5b6efc66270efec9ac1f6279e5ea8ba5a12e3808f8a88eac61a8d777"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_hyphae.json"
+hash = "cd3e40ae24581630d48e508f686aa246ae794a64f833a7d0ee2e8b2b78dc6fb2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_sign.json"
+hash = "483b7f138d602ade33a5a1a15968a45a6d6fd38e54927e83ae369f26919402c9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_stem.json"
+hash = "04b86e19ebb882323420a300975cbbc0342430d520c2dcea30941cd83e6dd66d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_bioshroom_trapdoor.json"
+hash = "1919de6d4b3893e41a7596abe0cbe3794d531edcc304ebd15aa2dcf15f68ff37"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/green_snowbelle.json"
+hash = "2e7ea8af3886332b481d169a96c1bce74e7115fcdb863f9c55dfd562a8721190"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/hibiscus.json"
+hash = "cfe823b31b69033c9c600b677cc6924c5461380be54d6aeb912acae575ac6636"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/hyssop.json"
+hash = "231f3e8dee279008c28a95d08783177a570d44104aa0dbf66f139a9a737847da"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_door.json"
+hash = "f558e9c92129726da392d51c129fd80c1b8dd93ee1a885d085015f3f65d533da"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_hanging_sign.json"
+hash = "112f1b3485b861add4fde4de15ed02d3aed683648123dac59ff6c0d5b2878b2a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_log.json"
+hash = "a107b28262f9f75e0a77ac1dfc8249c067c296f9ac6af85e58d072512a0c8b75"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_sign.json"
+hash = "a1b5e854c6b934c45f9a922d9e125f6fbbadda52a60a4f23b776ca07bbba4a26"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_trapdoor.json"
+hash = "2834cbb182c94a266e762f72c5d212021b5cceeac7e0ff94438f10eddd619b6f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/joshua_wood.json"
+hash = "a13f355c4f25ffea6626f76ea6cabb3d038bf1df9f47b6e36bb380fc64af9ce4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_door.json"
+hash = "618658d52844606d9014e8f51aca40edb94111f46be11b57e274b5c3415db340"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_hanging_sign.json"
+hash = "aa7eb55f2eb5d65123d7a1fa524020b76a088bfc25a02f3607363e95e9744bfa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_log.json"
+hash = "1c711b2db907a36c3e13391d238b28b922b14e6a2c10295dc785381276489a83"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_sign.json"
+hash = "b87dbf8db9b02f0e56dd240d567862450cae66bed08978050d13b038860708e9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_trapdoor.json"
+hash = "f693b6524216bbdccc47202adafd75214aedf14d9b4833a7882324c8c02f6e00"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/kapok_wood.json"
+hash = "17a70aba25f3dfc7bec511f362c9a2ff2ab0adce051e1a851d097792266fdc1b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_door.json"
+hash = "bcdd45163a20698cab67a887246c6407f98ca599e5cca781c5b9aae7d11e2c92"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_hanging_sign.json"
+hash = "dcb81d1c93f5c97316faabb3ea2a23d5c302a2f17ca375eba5ff4d1cf08e584d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_log.json"
+hash = "5eac6392c83110475fc0c5ae8dc102f0954ca8d9cab9dbe029b358b4d89aebd9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_sign.json"
+hash = "796ee483a1a5ec4284a9011e3118562b9ddd233069e5b31e0ad90b560619dbdf"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_trapdoor.json"
+hash = "3852d5774cb67d827d0b06c5d27ac67fd88aaa7c1323fad55a218a0aba521c40"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/larch_wood.json"
+hash = "7baf8fadabeac4bebaf09015ea34f5df45354e8a61a9aefc19bbdacd440b58be"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/light_blue_snowbelle.json"
+hash = "979a9fdc715a49e461cd5ffebd363b6dd52ca6b6a861ebbc80ccc5c347dbdcb5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/light_gray_snowbelle.json"
+hash = "859540aee311c04f004f60225c0f073708d24f23705487b991023c8307eb15cd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/lime_snowbelle.json"
+hash = "31d3ccce0ac1bd49211d186dfffa416596aceff142eff7e9faca504864fd8c16"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magenta_snowbelle.json"
+hash = "0ca729ad349178fe45e3a8f6f48f7beba23c077fa714150f1225247dc377eae9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_door.json"
+hash = "6a0db6f313a71508be82057e834c9056d6eb20a3427e00d30c74f7f45c2882ff"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_hanging_sign.json"
+hash = "cf60b388e199f18df1b1acc35678ead8db3dba8ec8bdb6a922aa417fac7a7041"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_log.json"
+hash = "f3261ea2a48c100836ec550ede2473ffbef1e5e7d4298ce361185da51a349650"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_sign.json"
+hash = "2df34f7095d2747bfcf3c7edfb6c454b31199c278228c0f5e9499fbdc10fc701"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_trapdoor.json"
+hash = "132d39d68a5c1d1e126625b5675f5220108ec23495e4fc6788c0efe56525a00d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/magnolia_wood.json"
+hash = "95114e1f1fc7f7c888cde7015e146a50511102ad3e9698def8574b176e8a5992"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mallow.json"
+hash = "8c92a0a9943ab1c5e85368833f4e46dab52bdf09162ae79301091bcdd98d6be3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_door.json"
+hash = "26577a00a68a60c44277c0804e329abcdef533e444fbfa44304f68255950d75e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_hanging_sign.json"
+hash = "60a3d7b3d724acf180e2f049bf7ae56286d27124156738e7e2eeb215d63168c4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_log.json"
+hash = "7578768be6ca5e1b1f3aadc0813442b827e989b569356cb0817a71e8f1a08288"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_sign.json"
+hash = "5aa70ae1ea920c4cd815d15ecf013e0e5fe538f7a89f86b24a311f45ee156f6b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_trapdoor.json"
+hash = "5886e837c450c3f2c5f7d2b43edff92dadbb97067e688d0564be8d8d6d28479d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/maple_wood.json"
+hash = "404d264aba1e26ca646be075180ad56b2510b0444b6e675438d24b3c3c5086eb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_door.json"
+hash = "c6b6f941b17ed23f958b75213fccb8b67ed86f086ed83d52a7b928b577187ad7"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_hanging_sign.json"
+hash = "cc9c6f2247a2b06bb1e1a1bc86bdcae622af967bba2e3705cae7a1c657f6875e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_log.json"
+hash = "c32a4135ad07b1b8915f24800e9a9c84ffacd2948f66d9bd2c709f18c4464e6c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_sign.json"
+hash = "28aba1802fc9bea54f0c4cb6a50bf7abf7367393d7d377813b75c9e7d4e273a8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_trapdoor.json"
+hash = "bac4acb0d095199d438405c6fa6a254c05ab1bd61e3dba459d6b03fb163c83b0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/mauve_wood.json"
+hash = "0267b355876974c4167b25ba784342319b42f89e468a6a56aba2ce50c10c2306"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/meadow_sage.json"
+hash = "08eb2efe2c2d26b2f44c51cc4e186c82bd115b2b13fc0b72b4781f38654db8f4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/orange_coneflower.json"
+hash = "a77214ebe3ed0d35c560e1dea69832c3e5d8fa57b11f90ab5e7b789b0ce39cbe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/orange_snowbelle.json"
+hash = "b5db1daee25b3fa60d45e63c078a98d6ae77c0dff00931be347a31c98375da89"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_door.json"
+hash = "c35fe8e971e962e5d0477a04090dac155a98461747fc74c7094666319fd05c8a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_hanging_sign.json"
+hash = "ba52826b86338b55806fed5304a9217fa8fc77a7b8f01413f368227b921994a4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_log.json"
+hash = "1efdc5d56ec48ff257c6da091b39ee221a08047c0a493fa7f477dce7e7d7abfb"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_sign.json"
+hash = "d76a751daf24423b8e163d4b3431f7afc7164a6287783a0a4f0b4f3dfdfa8381"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_trapdoor.json"
+hash = "fb3d4e5da45696dcd4ca5a1a432941d99fec4107d9fe848f4375c8f730db7669"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/palm_wood.json"
+hash = "c79099e881ff585d57df39006c3416daedf80955fb525578bf3251ad2efb593d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_door.json"
+hash = "387af83ab323e655561b113ef3ab1c0028f40c2925f50663ede5465edb054cac"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_hanging_sign.json"
+hash = "454fcd5651da5213f1dd209ba8e998f8dbdcb434a6987d0018fdc7c9fcb2141d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_log.json"
+hash = "9fa8f34ff538fae59a21e9bc6f65eb8df86153f510c879af122714b1125320df"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_sign.json"
+hash = "67d2005ec6120820a4cea5a55300dc68fafebb795e4a64a5412983b89b12bf21"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_trapdoor.json"
+hash = "55c031eefa34b22290629106d600a60e0516d15cabab1aa4314bef589f88c6a1"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pine_wood.json"
+hash = "4bdc4a41b88013c3c57c47b9ca46a9ded2a9b693bf621d3fa26c7d8155196358"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom.json"
+hash = "76cfeb0f0cf6de5a4570133520b6c3bfa5255587c082ab1de99e173491b82749"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_door.json"
+hash = "7e601dc7a28af68c9adf21e19ec3ad75ba38b3076a788729511597d539487875"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_hanging_sign.json"
+hash = "50784d8aac47644584704bc857e49d9511d4ad4594208b304ee5c58324097314"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_hyphae.json"
+hash = "6525a14713fc255554f581522adee1ddac2dabd142d0c5317f0621a26319c4f2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_sign.json"
+hash = "8cbaee44de7ba8cb26484c28bdfc7e5c78eb66255519c5481e06c5b80c028f71"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_stem.json"
+hash = "96fd69305fb9075d8cbb0718f35d1abc2b72b5f6562f36e69e47bbc2832c8e07"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_bioshroom_trapdoor.json"
+hash = "89f74e68f18ae7b194f555b87f48bc2914a685207668cb263f4fda07976ba65b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_lupine.json"
+hash = "2725ba357ea1f526b09437534b019efb8b70eb9038ff84e887f58f9f642c7a3c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_magnolia_flowers.json"
+hash = "31d1715da524ce78cc8ef60bf8508db33d3356bec202d7e94043656c139ca519"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/pink_snowbelle.json"
+hash = "6c1711922288960c0af32b7781869eb135da5acba21933379f8152fabd6713e4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/poppy_bush.json"
+hash = "eccb0574dd396d35c5b658f6dc902a4212ee91545effac3d653352b8a9d342f0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/purple_coneflower.json"
+hash = "5d09ed095f0248ecb3797d9783baebf8326caef285852bddcaeb7a0925423be5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/purple_lupine.json"
+hash = "6387ec172400850196b8799561250aadc802f323abdd78e38411bdf1f8dde498"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/purple_snowbelle.json"
+hash = "3a69885be57a8efb33a8764e096cff90c73e2c63c26c62d5cd05f1847e0e3069"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/red_lupine.json"
+hash = "91feb335f3588325c22471ab78426aea91a68f8e164b96517492e0754ed4caae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/red_snowbelle.json"
+hash = "fffc9caabf0d15af075b0350b9405dead921119106bb65cf1652e0f77cee9088"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_door.json"
+hash = "df5300049d7914b82e40c7daa3a66c46fd8aa9f5b956c898d4117b4c41ffb0fd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_hanging_sign.json"
+hash = "b4460b8cdf2f2c70fea46c64b462ae0415739e3a01f7d1f33787a13974291d0d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_log.json"
+hash = "2a1c4f9b88bc5bc400edc12974dbfcfb0c1aaa934713674cec69eae70d3cead4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_sign.json"
+hash = "07ef31368d808633a49b5200f3ecb69b991805edde384c2ac40450df75c17609"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_trapdoor.json"
+hash = "c3fd7db3a22bca778158fdbccbb1b295855f67bd248fb994191b172f855cc53d"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/redwood_wood.json"
+hash = "e57cbb329c4a3166be1664b3890293fe78bb01a93af8eadc19d68a1a9fc698bd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/salmon_poppy_bush.json"
+hash = "19003783cb4e07ac17b44bf4d008649daa09695cb7731c4653f8179560b70008"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/silver_birch_log.json"
+hash = "455cb6a78f15ba6f74791caa6ef57c7b2b369d63a554a7b7047af863ee8257de"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/silver_birch_wood.json"
+hash = "a9dabd8d8d5b47c611090fff6e5fe302b6c112dea91e6952fd90e714ce325b30"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/small_desert_shrub.json"
+hash = "cc6aebba81f8ead9384e4066bad483b02d865dae17c27f970f40e3b66cd6ae8e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/small_oak_log.json"
+hash = "0b37dda5ca9197d7f3e983891411349fae41d3eaefd200c2cf57ff9cee968602"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_door.json"
+hash = "773e820420cf35cd5a60dc21748dfe738d4a5d1d8b1ce7660b22fcb8ac7dc8bf"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_hanging_sign.json"
+hash = "0a10e5332a5d7a871649a96115a2d1a7aa54a1028e6844de8878ccf12081c41f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_log.json"
+hash = "5f754db5a8ccea501b76facded04a9e9accaf56dd6c69d2cbe0d447089842280"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_sign.json"
+hash = "1ca80a256991d998f47fb451df6cb89766c495b8224a65465a80b09f24151947"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_trapdoor.json"
+hash = "2c1291bbaff5f840ef58cdcb7822b642036894acbc37671b4e564cb9fcd9fb39"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/socotra_wood.json"
+hash = "e25ffdefdf05fe58f6a92be9a6abe52467cff6863072bad0935850d3bb56a0d0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/tall_yellow_bioshroom.json"
+hash = "d33b2acb5c9fe8013b525861b5a5ac06ea181c295ca3194a3aafea5f44cc9454"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/tassel.json"
+hash = "6e786dc6d8c8f527d73b600796b0253a9c921d20ee188c3dea1fc861d85efc21"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/tsubaki.json"
+hash = "084754aea4db02f2a72c10939f1c8aebdc0e28c88dcbe71ead887161126b411b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/waratah.json"
+hash = "c667ea61f2697efb83c817ed9ae2f347ccc1ca3b310550c3cec69f3a0c99ee89"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/white_magnolia_flowers.json"
+hash = "b9ac9fd9f75d2452cede92d663e0f85e49f467055059d64c1cf539bcc5389310"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/white_snowbelle.json"
+hash = "00efa7e450cbda84aa5ff6d441a70ae3ce5ac8a829f700431372f2c1d3f6cb43"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/white_trillium.json"
+hash = "953e5658d99d6d99b6a2259929b9f147bbea18a229d14649eb6772276b344240"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_door.json"
+hash = "82d6411eebe029b3374f17b5c6c80af0845bdf5653ea3bf44b95e017f82f80ad"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_hanging_sign.json"
+hash = "f0220d8e30026367c0a2d4d1dc801c42a3605de9dabc2c4bbd76b5e09a39fd09"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_log.json"
+hash = "913946a9b0c8957529c694bd1059ebe343f62da60d3016f49ae9b2e898b721ba"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_sign.json"
+hash = "ed88021b109fcccbba40422ba1ee6f9f1b82490ddb31b07b1ba7df52b4cd3c72"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_trapdoor.json"
+hash = "43a99b96e37f4cada1040e0a4b812e2c955e047c58014d657de3503742e758ac"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/willow_wood.json"
+hash = "05627128fde93ef6c90888363ddd037567a296eedfb5f4570e8a1b5b376a7e41"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/wilting_trillium.json"
+hash = "44880625847097aa2cf667d280c31c59e604f96400626a429b33755f1db5a766"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_door.json"
+hash = "5fb28ab1777d3fc3b240f152e29154d2176f6b8a5b7be9c2dd3f323d99dcb930"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_hanging_sign.json"
+hash = "81db645b25a159b5436db73d0641c88c6d7bb8d0d633abfb64363f21228c8205"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_hyphae.json"
+hash = "2d87ea4946302d0fd7835ad72ee72a7256f62975ded788aa49a5f022f5b4a43b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_sign.json"
+hash = "5e28ea28983c405016192983ca79323f8a6086b188cc25f0a71c3e7cde1763c0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_stem.json"
+hash = "1f54464194b6e8db9459d3ffc1e2a8d5fa4c6142e97f64d756cda8a83af4e42a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_bioshroom_trapdoor.json"
+hash = "7b47c17596e83f924820fd05131e0f0c43360027a7f3135580b028aaf4b09e53"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_lupine.json"
+hash = "50ee15c15d2a5a5ecf38374366c3f84c8687eefe20d7232f01ffd138a5953790"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fcru/recipe/yellow_snowbelle.json"
+hash = "c38104cebcec38c7d66a3546a59304fe0063e25b589ccfd0516e9f06a3f85bd2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_door.json"
+hash = "3081f6e2d04b10602f58c91a6ef559c0278ae199f2f11151b29b807f0cd89e37"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_hanging_sign.json"
+hash = "abd28e607db4d8e3a746b53d946638f278098e2bc3f817c3a0a0248e5ebb7393"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_log.json"
+hash = "1f93404fdbff8ed4ea33f084d44f83f23e6c6aaf2dc562e6f7daa0ccb5c188cd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_sign.json"
+hash = "01766b409794d8bc4cb28ed15ae6e81e507b2e5b2446dc7b27188aa401a5b48f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_trapdoor.json"
+hash = "bebe0cab123eeaedbeb2e3a0bf91aee61d713c273d5a5a73367792ebb393a891"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/canopy_wood.json"
+hash = "13529b8624cb212b5f8e64f0b3d743a959ebe0c7a0f0fa153383426c8523ee54"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_door.json"
+hash = "81c744e6018fe3dae96b251872a0c0755acbf184605e8c537fc6b4b4290c12dc"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_hanging_sign.json"
+hash = "035be64a6faf1e0b23eb4d378b2bde05a55855dbb0dd9233d84b309978ee0cf0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_log.json"
+hash = "31be9993c8934487b43354b5a7edcd71b24cf8fefc4c08a89612dc40611af9c4"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_sign.json"
+hash = "60889adf177a2001f96effc07ca6be435a2414764abcc51a4e1c1780256e82cc"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_trapdoor.json"
+hash = "9bcb86e14e2a3cce2d757980828e8cbb963d04b9aa701255f646783edb56d888"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/dark_wood.json"
+hash = "181a040e6ac29c5c98bde84fd84654024000fc006dd82c7d9ea564d94ad8f57b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/huge_water_lily.json"
+hash = "5641bc7211b3b0aabf49f0432df0adc39206e92aacc854f0ca45a67a10bf2289"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_door.json"
+hash = "347ee30e7f9b25d05b649ff3347a5d43288dc36ec747c337abeb562d4e242d37"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_hanging_sign.json"
+hash = "e4821c0cded7a0b94ae93c6095ddf19104f6f7504efa8acad25773b553cce9a2"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_log.json"
+hash = "1c364708f25540636d57d4d6a9a72897b1bbc669b855d7af7a005e920386e89f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_sign.json"
+hash = "35b39507c07f7313ba6db19b3e0d388d0b99051a8efde9b6a76f53f759917d72"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_trapdoor.json"
+hash = "d01aacce07ad279aee6e4347db91b8529ca52a70f6836d074caa529cd0294272"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mangrove_wood.json"
+hash = "9f98375de0e35e81db015b201a9b51558b912ca4172b5c783bd72923290e9b6b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_door.json"
+hash = "4a1d50f5eeacde60556d30e0cde225422b722c44927336994129af44432b79aa"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_hanging_sign.json"
+hash = "b0ed7ab720fccd0c26cdc668d5a534a46df9a655eb472787c0b68b9621f4f7ac"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_log.json"
+hash = "1f0c9765398b616a230a16e21be2582d54f16364ee40b2592638919291ed09e3"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_sign.json"
+hash = "556a94f5f712024656328874bbfab04f77179b1cf31dfd844e6091353e1aa6f9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_trapdoor.json"
+hash = "1e281b40f16417b1e5a32dfcae207f1004f827c2d183a954bc9090d054d428ae"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/mining_wood.json"
+hash = "ab95473363e904d33de0bb3c8e1efb0141ca96bea9c0538a6eb24aa787a2e29a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_door.json"
+hash = "7917246fba1447f8e65b3eec70e7570fb4b912f6740cb5d545344c49979b234e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_hanging_sign.json"
+hash = "bab86ffcc0bf8a34852ed090e0fee779f1a964c6628289b223b4bbdbb3d0e459"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_log.json"
+hash = "6367b91ca764bb0dd714a9f0ae53d21df3e47f5545eba5858db33cf37fe196b6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_sign.json"
+hash = "9ff779308797769fec9947127ca0bd783fcf57d2868a08138430186c59a3fd9a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_trapdoor.json"
+hash = "b134318e5037d551512ecd2772e815e0edaebe962cb2c69156f09ef6bf53153b"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/sorting_wood.json"
+hash = "34f7c7c0e789e129ee31e63da5fea69822ac7d37c2731b04fce66f43b8460294"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/thorn_rose.json"
+hash = "0a6a3d6511147ecf30e9ff33560995e4e3ad523c34a7c1c44668592086bbc990"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_door.json"
+hash = "b3007a4086d7086d3e6e0cce8acd67f7fcf1c0fb3b4efee765c60fa666794e7a"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_hanging_sign.json"
+hash = "c1dbbfa7eea7942890c2981a93e930c49338a42ea1e939aaf775a38cfaf81582"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_log.json"
+hash = "c090a0d30be8bb2285f5733caa0990d6d04c27896e5245898a71b22967c71589"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_sign.json"
+hash = "cd59ee74edc6b77fa699395cc99ff8849954cd8ed295142a8a7cffaa091c4638"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_trapdoor.json"
+hash = "7aa860361a9aadee5b0bd0395ccc2bde2f0d59ebabe673e04323fb21e9cbc580"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/time_wood.json"
+hash = "a65bf6ba2b2951dcc6b4a629c9e2b5fcd300e5c077329bbb11671286fc9886a6"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_door.json"
+hash = "c2fbe64f86a70e33fc9096e91713841460d904e4c841c5d3d3a4c42e099d8fdd"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_hanging_sign.json"
+hash = "84c6f69afd6560e9bb80d407b0530fc1798e4a6d667d07a04bd82d7a47ad1c2e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_log.json"
+hash = "69d3d3793e0528d90bc2643cf64fe8085d98327dccca4fc48e4a0d6c0b5d7115"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_sign.json"
+hash = "15ea9322f639fa5be1defd8e429e09b14ca3281219842fcb14555876b9e28a29"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_trapdoor.json"
+hash = "3b36ebab4d9df6f500924adbea4733ee019a8a46baa992c11f98bc5ea7551a41"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/transformation_wood.json"
+hash = "574b55d11ffeea51abda63470e59804f257d00c697cc0f2cdb385b108b675f48"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_door.json"
+hash = "374ebc86c89057ad0807ae934351b8741873753b933817b30cb8d7e06fec3d48"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_hanging_sign.json"
+hash = "01b6761fe4b0902285a2f1ba4467faa0dc202c82032a6425449e3a7c945ae872"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_log.json"
+hash = "5e67948915b0405318808948f14926fe05b41d450771fcd9ef96b31ab8168e56"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_sign.json"
+hash = "62eadefe4c53aa2041d848d22bc786cd253fa11d9187fc62951dbed56f02e25c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_trapdoor.json"
+hash = "9d90a97a28dd713c9f75c799aa6e923149ba7f6349f23314ef93ac0d3c9aa142"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/data/fctf/recipe/twilight_oak_wood.json"
+hash = "ae7ad4849357f3e5e4aa63d16aeba2a254919955237387c6484c993bdc154129"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-compat-recipes/pack.mcmeta"
+hash = "d98902350e35831c42bd2f2ec08b2ebf9ff8b39b43206cc3da2ba0259d7f46c6"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-large-climate/data/minecraft/worldgen/noise/temperature.json"
 hash = "b77e9576fbd97ccbd6a16d2691b3c9d34bf16c993a433deffebf48bb1049dc86"
 
@@ -259,6 +2531,14 @@ hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/jadensnetherexpansiondelight/recipe/red_scale_fungus_roll.json"
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/lead_leylines/function/sleep_rules.mcfunction"
+hash = "b8844de5b34a861bf89901395606a82e3a57e2e1170e2b6e72af904209832c62"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/minecraft/tags/function/load.json"
+hash = "f739d9a51d3b962f7f17b1d2957e7fc621c2db624964d58b70661199ee8466ed"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_hoglin_stable.json"
@@ -467,6 +2747,82 @@ hash = "cc0ba7cfdf6771831bc5ffde40258d9508fae0b1d8b5565607f6648b83086e0d"
 [[files]]
 file = "global_packs/required_data/lead-leylines-no-vanilla-stone/pack.mcmeta"
 hash = "1aab859a5bbfe82731ca6fac04fb19c058a7611ecaf16f60ae2809428a47f2b5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/blasting/nickel_ingot_from_crushed.json"
+hash = "50afdfe61bbac080e0d40f17ba91e07cf57f551a9590b9c0d2c74bef95488b86"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/blasting/platinum_ingot_from_crushed.json"
+hash = "910e3a09591204fc08044923670a81a0e0e9edbf7fda41f46820cb65f28198d8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/crushing/biomass.json"
+hash = "66182f175d9b5a67de18fa17dac2efb7af9e9a7cb5a9420df6568dcda2ced814"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/crushing/biomass_from_hay_block.json"
+hash = "f926e3c2b1bb02169e4eac96c619f81a14e21ace81db6bf234517b81ed2d2f92"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/crushing/biomass_from_packed_wheat.json"
+hash = "d7d52e17da7a16b471f0eb2f394504b4012596f893c5b245f1ae18a22d1d7eb5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/crushing/uranium_crystal.json"
+hash = "e0b7faead1f803fa7592215ca1ab13188d7cf3fa6d69ca4d3e3836912fa30afe"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/adamant_ingot.json"
+hash = "1b6755e1a6e4894795042b76c9ccf3b2b9ad1672a41d144a9735f36c8436ea82"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/biosteel_ingot.json"
+hash = "e3fc0e4f47b8fcb3238705f429dc8e32a58e8782ef5a7e0bb384946b8eb10ec0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/dirt.json"
+hash = "7c1ea2008d06ae7382211b506a5414e61403906123d5dc36817afb4094a1ba25"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/duratium_ingot.json"
+hash = "4bf19aba6c98a2876e5e4d2b74d53bd3d3cfa5eb9859efdd6c4d125251c33aa8"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/electrum_ingot.json"
+hash = "af79b7fc9e6e5494dfeccd8c80988135955155a207c5c933da0eeb8ea3e4b9f9"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/energite_ingot.json"
+hash = "6b9dfdf5f47c4229c6765f99fc3b7e86ec86c9c389a2c90ef9db34e6babad6c5"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/mixing/steel_ingot.json"
+hash = "4e1b1a5237d92933ca89a693584d062e4a55342fa028f1804249eb9e9b66857c"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/smelting/nickel_ingot_from_crushed.json"
+hash = "aa570af0dc164e4270286c7d58e55eaa67673084d2cd1c6a41d691e84d2fe604"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/smelting/platinum_ingot_from_crushed.json"
+hash = "6b50974f5ea0228214dc95e5983eebd0e52a2f72aa435c8d96f2c6df634956e0"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/splashing/crushed_raw_nickel.json"
+hash = "0355a56f958076aad9c20ffadc197d5141bbd580f2a4649885296c958e5fa615"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/splashing/crushed_raw_planitnum.json"
+hash = "f4b6a7edfa27956cb26a46be31f3f0e31f3e50182afc2a120dedc7415daff63f"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/data/lead_leylines/recipe/oritech_create/splashing/crushed_raw_uranium.json"
+hash = "3dfa5f17a58d23a762c6e8167453a3cf3fc6db94040040f361468bf2b17075db"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-oritech-create-compat/pack.mcmeta"
+hash = "a45437e44433106d1e52426d4f19848f764e9bc79ba086d8a285a97fdea67c24"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-orphan-loot/data/arsdelight/loot_table/blocks/dawnberry_crate.json"
@@ -1264,6 +3620,11 @@ hash = "f15037bbd326999cb63b1267628f64c29ca3df1650c2276e492cb5ff88fbed7e"
 metafile = true
 
 [[files]]
+file = "mods/applied-oritech.pw.toml"
+hash = "c052e14507aeb80442793c56fd62d2acbd47d7c97f421faaea6b45af127f7ccc"
+metafile = true
+
+[[files]]
 file = "mods/applied-tacz.pw.toml"
 hash = "96501d25f61ab1b7e36e955bb216c77ce9703eb5d9f351f05345914aa307713f"
 metafile = true
@@ -1874,11 +4235,6 @@ hash = "cba6d7d04b6068e326445672253580520a87873fc1065f7682984a9b9d91deb5"
 metafile = true
 
 [[files]]
-file = "mods/create-regions-unexplored-compat-crushing.pw.toml"
-hash = "c32143cdc359d9c72b8207c0b8646a1842a6d486bd96ebea7c99b0999cd29674"
-metafile = true
-
-[[files]]
 file = "mods/create-shimmer.pw.toml"
 hash = "a74b17daa61cf2a1aea1732385b2abd6f6a117dd5fe0b306b5c508212cb6dfb6"
 metafile = true
@@ -1976,11 +4332,6 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "6b6683fd8ec53d10d4fbef3b3d53922a1aaa8ef4d2e4b52bb819dc451f5d6b3d"
-metafile = true
-
-[[files]]
-file = "mods/darksleep.pw.toml"
-hash = "157fde2866101ad91b70f154a5c51156308e30e4408dc19045762865a8f750e3"
 metafile = true
 
 [[files]]
@@ -2221,31 +4572,6 @@ metafile = true
 [[files]]
 file = "mods/fallen-gems-affixes.pw.toml"
 hash = "098d6df59e763cab80879ddfb051bac33f0a2bcc931886577d0d358edce919fc"
-metafile = true
-
-[[files]]
-file = "mods/farmers-cutting-betterend.pw.toml"
-hash = "9048a47a5ca8249edb6dc7a5b0a358fd4fa1cb9cff5e292ced739a881bbe7856"
-metafile = true
-
-[[files]]
-file = "mods/farmers-cutting-betternether.pw.toml"
-hash = "ae25df30bd36426a5a0a0d45532b35ba9a33dff434e9206c5d5dbf3f07724bbd"
-metafile = true
-
-[[files]]
-file = "mods/farmers-cutting-oh-the-biomes-weve-gone.pw.toml"
-hash = "44030876800c6a4cb0be4f78a906db0c230dea8f60007afbbd67262f194e0751"
-metafile = true
-
-[[files]]
-file = "mods/farmers-cutting-regions-unexplored.pw.toml"
-hash = "94058325dbe4f6fbad3faeb93b9dc32085ce14e598f2ed493dde870f41d615f5"
-metafile = true
-
-[[files]]
-file = "mods/farmers-cutting-twilight-forest.pw.toml"
-hash = "bacccc035c065405ea03826be6bbcad6e65f6622584109af3108cedaa7df1b7f"
 metafile = true
 
 [[files]]
@@ -3184,33 +5510,13 @@ hash = "bc3e79ec7c82f0e4b752ba7f41709e1e87e25169cf96b7c38dafefeaf876a80f"
 metafile = true
 
 [[files]]
-file = "mods/overgeared-jei-compat.pw.toml"
-hash = "35a94566b89f9d6dd9051d2f797ffbd8756cf6563c9708d95bf2a1d23aaeafff"
+file = "mods/oritech-things.pw.toml"
+hash = "f905ac52fa4b4aa04280cfa8fb84954d5950b1fe4198a58d46be9b18419d29c9"
 metafile = true
 
 [[files]]
-file = "mods/overgeared-universal-compatibility.pw.toml"
-hash = "15f1d4953279a5b29ce2e5c5a7467fe8dd212090f3f1ae1fecc99cd3eb5ddbd1"
-metafile = true
-
-[[files]]
-file = "mods/overgeared-x-ice-and-fire.pw.toml"
-hash = "6d91f7decb22b4e0626be0a4b08aab0ca92bcdae52e373aaadb773cdaf40e522"
-metafile = true
-
-[[files]]
-file = "mods/overgeared.pw.toml"
-hash = "f18c552cff6aba370aa7004745b2d6e2799b5499be99fce2f1cbcad800889dde"
-metafile = true
-
-[[files]]
-file = "mods/overgearedxsimplyswords-1-21-1.pw.toml"
-hash = "6718b653b0bb3999238b401805ee81c4cd281c7a308d8138bdce993d34db37ff"
-metafile = true
-
-[[files]]
-file = "mods/overgearium.pw.toml"
-hash = "c440565bfce9de226c9b52b4773a879fad2321c31570ff35c1861a6af908d90f"
+file = "mods/oritech.pw.toml"
+hash = "1e095c1ef3d6f3a375df601a208657313d2c8a541d4d58944d808d292dddef81"
 metafile = true
 
 [[files]]

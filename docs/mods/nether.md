@@ -19,7 +19,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Just-In NETHER | `just_in_nether-1.2.1-neoforge-1.21.1.jar` | both | Extra Nether content. World data. |
 | Nether Villager Trader | `nethervillagertrader-2.0.0-neoforge-1.21.1.jar` | both | Piglin/villager trading in the Nether. |
 | Netherite Tweaks & Fixes | `netherite_tweaks_luna-1.2.2-neoforge-1.21.1.jar` | both | Netherite recipe/item tweaks. |
-| Farmer's Cutting: BetterNether | `farmers-cutting-betternether-1.21.1-1.0-neoforge.jar` | both | Cutting board recipes for BetterNether woods. |
+| Farmer's Cutting: BetterNether | ported to `lead-leylines-compat-recipes` | both | 51 cutting-board recipes for BetterNether woods. Mod removed 2026-10-03; see [datapack-consolidation.md](datapack-consolidation.md). |
 
 ## Considered / held / dropped
 

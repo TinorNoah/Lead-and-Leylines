@@ -1,6 +1,6 @@
 # Lead and Leylines — mod manifest
 
-Synced with `pack/mods/*.pw.toml` on 2026-10-01. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Browse what is installed, grouped by type: [`docs/installed/`](../installed/README.md). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md). Distribution: [distribution.md](distribution.md). Pack-owned compatibility fixes: [standalone patch repository](https://github.com/TinorNoah/Lead-and-Leylines-Patches#current-fixes). Not-yet-added candidates and remaining Forge mods: [deferred.md](deferred.md).
+Synced with `pack/mods/*.pw.toml` on 2026-10-02. Minecraft, loader, and pack version: see [`pack/pack.toml`](../../pack/pack.toml). Browse what is installed, grouped by type: [`docs/installed/`](../installed/README.md). Decision logs: [performance.md](performance.md), [utility.md](utility.md), [storage.md](storage.md), [nether.md](nether.md), [worldgen.md](worldgen.md), [content.md](content.md). Config notes: [configs.md](configs.md). Distribution: [distribution.md](distribution.md). Pack-owned compatibility fixes: [standalone patch repository](https://github.com/TinorNoah/Lead-and-Leylines-Patches#current-fixes). Not-yet-added candidates and remaining Forge mods: [deferred.md](deferred.md).
 
 First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extra/culling/Create/FTB Quests/Pipez.
 
@@ -44,7 +44,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | CurseForge 1491426 / 8631010 | client | IO | Async log writes. | none | defaults | 2026-09-18 |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | CurseForge 1125284 / 7602181 | client | client QoL | Keeps server resource packs across rejoins. | none | defaults | 2026-09-18 |
 | Create | `create-1.21.1-6.0.10.jar` | CurseForge 328085 / 7963363 | both | tech | Contraptions and kinetics. | none (Flywheel embedded) | defaults | 2026-09-18 |
-| Create Regions Unexplored Compat: Crushing | `create_ru_compat-1.0.0.jar` | CurseForge 1431845 / 7469182 | both | tech | Crushing recipes for RU blocks. | Create, RU | defaults | 2026-09-22 |
 | Create: Oh The Biomes We've Gone Compat | `create-otbwg-compat-1.0.jar` | CurseForge 1285600 / 6645097 | both | tech | Create recipes for OTBWG. File also tags 1.20.1 Forge. | Create, OTBWG | defaults | 2026-09-22 |
 | Ametrin API | `ametrin-1.21.1-0.2.4.jar` | CurseForge 670599 / 5608814 | both | library | Required by Block Variants. Pinned 1.21.1; later files are 1.21.11. | none | defaults | 2026-09-22 |
 | Block Variants | `block_variants-1.21.1-6.1.1.jar` | CurseForge 481119 / 8581915 | both | content | Extra block variants. World data. | Ametrin | defaults | 2026-09-22 |
@@ -130,7 +129,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | LC²H [Lost Cities: Multithreaded] | `lc2h-omni-4.2.4-LTS.jar` | CurseForge 1325431 / 8928853 | both | worldgen | Async Lost Cities gen. Omni jar tags 1.21.1 NeoForge. BRSSLA V2.0.0. | Lost Cities, Quantified API | defaults | 2026-09-18 |
 | Quantified API | `quantified api-omni-2.2.3.jar` | CurseForge 1397967 / 8830709 | both | library | Required by LC²H (`quantified` `[2.2.2,)`). Omni jar tags 1.21.1 NeoForge. | none | defaults | 2026-09-18 |
 | BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | CurseForge 1376024 / 7488072 | both | worldgen | Faster `/locate` biome/structure search. No worldgen change. | none | defaults | 2026-09-18 |
-| DarkSleep - RPG Sleep Percentage | `darksleep-neoforge-1.21.1-1.0.1.jar` | CurseForge 1106281 / 5741536 | both | QoL | Sets `playersSleepingPercentage` to 50 on load. ARR. | none | defaults | 2026-09-18 |
 | MemGuard | `memguard-1.0.4.jar` | CurseForge 1468440 / 8192435 | both | stability | Lightweight heap-usage log after Create 6 mixin strip. Complements AllTheLeaks. | none | defaults | 2026-09-18 |
 | Balm | `balm-neoforge-1.21.1-21.0.66.jar` | CurseForge 531761 / 8969738 | both | library | Waystones, Crafting Tweaks, TrashSlot, Default Options. | none | defaults | 2026-09-18 |
 | Iceberg | `Iceberg-1.21.1-neoforge-1.3.2.jar` | CurseForge 520110 / 6423863 | both | library | Equipment Compare, Item Borders. | none | defaults | 2026-09-18 |
@@ -293,7 +291,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Nether Remastered | `nether_remastered-2.6-neoforge-1.21.1.jar` | CurseForge 872516 / 8145295 | both | worldgen | Nether structures. World data. | none | defaults | 2026-09-22 |
 | Nether Villager Trader | `nethervillagertrader-2.0.0-neoforge-1.21.1.jar` | CurseForge 989053 / 7154899 | both | QoL | Nether trading. | none | defaults | 2026-09-22 |
 | Just-In NETHER | `just_in_nether-1.2.1-neoforge-1.21.1.jar` | CurseForge 1074911 / 8919842 | both | worldgen | Extra Nether content. World data. | none | defaults | 2026-09-22 |
-| Farmer's Cutting: BetterNether | `farmers-cutting-betternether-1.21.1-1.0-neoforge.jar` | CurseForge 1114065 / 7649818 | both | farming | Cutting recipes for BetterNether. | FD, BetterNether | defaults | 2026-09-22 |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | CurseForge 658587 / 7389814 | both | library | Required by Epic Fight. Filename says forge; file tags NeoForge 1.21.1. | none | defaults | 2026-09-22 |
 | Epic Fight | `epic-fight-21.17.3.1-mc1.21.1-neoforge.jar` | CurseForge 405076 / 8175609 | both | combat | Souls-like combat. World data. | playerAnimator | defaults | 2026-09-22 |
 | AAA Particles | `aaa_particles-neoforge-1.21.1-2.3.1.jar` | CurseForge 979809 / 8995061 | both | combat | Effekseer particle effects. Kept without Nightfall. Architectury embedded. KubeJS optional, not added. | none | defaults | 2026-09-23 |
@@ -427,7 +424,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Fast Item Frames | `FastItemFrames-v21.1.6-1.21.1-NeoForge.jar` | CurseForge 1210171 / 6963018 | both | content | Faster item frames. World data. | Puzzles Lib | defaults | 2026-09-26 |
 | Colourful Everywhere | `colourfuleverywhere-1.21-1.3.6.jar` | CurseForge 1684964 / 8824518 | client | QoL | Shader GUI recolor. OptiGUI / Colourful Containers stand-in. MIT. | Cloth Config embedded | defaults | 2026-09-26 |
 | BetterEnd: New Dawn | `BetterEnd-21.0.35.jar` | CurseForge 1422294 / 8896285 | both | worldgen | End biomes/mobs. World data. Pinned 21.0.x. | New Dawn libs | defaults | 2026-09-26 |
-| Farmer's Cutting: BetterEnd | `farmers-cutting-betterend-1.21.1-2.0-neoforge.jar` | CurseForge 1146834 / 7648264 | both | farming | Cutting recipes for BetterEnd. | BetterEnd New Dawn, Farmer's Delight | defaults | 2026-09-26 |
 | YUNG's Better Dungeons (NeoForge) | `YungsBetterDungeons-1.21.1-NeoForge-5.1.4.jar` | CurseForge 1015112 / 5954804 | both | worldgen | Dungeon overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
 | YUNG's Better Strongholds (NeoForge) | `YungsBetterStrongholds-1.21.1-NeoForge-5.1.3.jar` | CurseForge 1015105 / 6272264 | both | worldgen | Stronghold overhaul. World data. | YUNG's API | defaults | 2026-09-26 |
 | YUNG's Better End Island (NeoForge) | `YungsBetterEndIsland-1.21.1-NeoForge-3.1.2.jar` | CurseForge 1015127 / 6300968 | both | worldgen | Central End island. World data. | YUNG's API | defaults | 2026-09-26 |
@@ -473,7 +469,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Modern Industrial Routers | `modernindustrialrouters-2.1.1.jar` | CurseForge 1012297 / 7674083 | both | logistics | Router upgrades for Modern Industrialization energy. Metadata lists no dependencies. | Modular Routers, Modern Industrialization | defaults | 2026-09-26 |
 | Lead and Leylines Patches | `leylines-patches-0.1.0.jar` | Project-owned prerelease (`patches-v0.1.0`; [artifact and source](https://github.com/TinorNoah/Lead-and-Leylines-Patches/releases/tag/patches-v0.1.0)) | both | stability | Pack-side fix for the MI 2.5.8 × Weapons of Miracles null enchantment-lookup crash affecting steam drills and diesel tools. See the [source and regression ledger](https://github.com/TinorNoah/Lead-and-Leylines-Patches#current-fixes). | Minecraft / NeoForge; Modern Industrialization 2.5.8 (exact) | pack-owned Mixin fix | 2026-09-30 |
 
-World-data: Create, Modern Dynamics, XNet, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, BetterEnd New Dawn, dungeon/structure mods (including YUNG Better Dungeons/Strongholds/End Island/Ocean Monuments/Desert Temples and Luki ancient cities/mansions, Awesome Dungeon and its Ocean and End editions, and Epic Structures Villages/Jungle Temples/Witch Huts/Dungeons/Igloo), Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage (plus Interdimensional Wireless Transmitter), Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, Ecliptic Seasons, Crystalix, Create Deco, Create Encased, Create Crafts & Additions, Epitaphs, Comforts, Artifacts, Ars Controle, Ars Elemancy, Ars Technica, Ars Flavors, Autochef's Delight, Barbeque's Delight, Building Gadgets, Infinity Drives, Pattern Converter, Schematic Energistics, AE2 MEGA Things, Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Iron's Spells and its spell addons, Apotheosis (enchanting, spawners, and Fallen Gems), Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Unusual End, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading, Chipped, Handcrafted, Macaw's Doors, Macaw's Windows, Macaw's Fences and Walls, Macaw's Furniture, Macaw's Lights and Lamps, Macaw's Stairs, Additional Lights, FramedBlocks, MmmMmmMmmMmm, Visual Workbench, Fast Item Frames, Twilight Forest Bosses Resurrection / Dungeons & Villages, Glassential Renewed, Iron's Gems 'n Jewelry, Little Big Redstone, Modular Routers, Mekanistic Routers, Modern Industrial Routers, Mining Gadgets, ME Requester, OpenBlocks Elevator, Just Dire Things, Modern Industrialization, and Not Enough Glyphs write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
+World-data: Create, Modern Dynamics, XNet, FTB Quests/Chunks, Twilight Forest, Lost Cities, Regions Unexplored, Oh The Biomes We've Gone, Terralith, Nullscape, BetterEnd New Dawn, dungeon/structure mods (including YUNG Better Dungeons/Strongholds/End Island/Ocean Monuments/Desert Temples and Luki ancient cities/mansions, Awesome Dungeon and its Ocean and End editions, and Epic Structures Villages/Jungle Temples/Witch Huts/Dungeons/Igloo), Amplified Nether, Infernal Expansion Redux, BetterNether New Dawn, Jaden's Nether, Eternal Nether, Nether Remastered, Cave Biomes, Compat Structure, Terrain Slabs, Aquamirae, Archaion, Olympus!, Waystones, Lootr, ATO, Supplementaries, Amendments, Sophisticated/Functional storage, Botany, Trash Cans, Create Sky Village, AE2, Refined Storage (plus Interdimensional Wireless Transmitter), Mekanism (plus Extras/Elements/Covers), Ars Nouveau, Farmer's Delight cluster, Alchemistry, Spectrum, TaCZ, Vic's Point Blank, Epic Fight, Ice and Fire CE, Variants&Ventures, Block Variants, Ecliptic Seasons, Crystalix, Create Deco, Create Encased, Create Crafts & Additions, Epitaphs, Comforts, Artifacts, Ars Controle, Ars Elemancy, Ars Technica, Ars Flavors, Autochef's Delight, Barbeque's Delight, Building Gadgets, Infinity Drives, Pattern Converter, Schematic Energistics, AE2 MEGA Things, Illager Arena, Qliphoth Awakening, Bosses of Mass Destruction, Spawn, Critters and Companions, Companions, Armageddon, Born in Chaos, Iron's Spells and its spell addons, Apotheosis (enchanting, spawners, and Fallen Gems), Mutant Monsters, Illager Invasion, Mowzie's Mobs, Myths & Legends, Unusual End, Forbidden and Arcanus, Pam's HarvestCraft 2, Dungeon Now Loading, Chipped, Handcrafted, Macaw's Doors, Macaw's Windows, Macaw's Fences and Walls, Macaw's Furniture, Macaw's Lights and Lamps, Macaw's Stairs, Additional Lights, FramedBlocks, MmmMmmMmmMmm, Visual Workbench, Fast Item Frames, Twilight Forest Bosses Resurrection / Dungeons & Villages, Glassential Renewed, Iron's Gems 'n Jewelry, Little Big Redstone, Modular Routers, Mekanistic Routers, Modern Industrial Routers, Mining Gadgets, ME Requester, OpenBlocks Elevator, Just Dire Things, Modern Industrialization, Not Enough Glyphs, and the Oritech family (Oritech plus Oritech Things and Applied Oritech — adding ores, the `oritech:oil` fluid, reactor multiblock frames, bedrock resource nodes, oil springs, uranium patches, and the Amethyst Fish) write blocks/items/dimensions/terrain/biomes/season state. Those are not a clean uninstall. New world required for the 1.21.1 cutover. Removing Tectonic does not rewrite already-generated chunks.
 
 
 ## 2026-09-26 logistics and Create factory wave
@@ -547,10 +543,7 @@ Simply Swords moved from the 1.62.0 pin to **1.70.2** (latest) with **Simply Too
 | Simply Swords | `simplyswords-neoforge-1.70.2-1.21.1.jar` | CurseForge 659887 / 8746001 | both | weapons | Katanas, spears, glaives, rapiers, and more, at the latest 1.21.1 NeoForge build. 1.63.0+ hard-requires Simply Tooltips (`[0.1,)`), so that mod is now installed too. Custom "Timefall Development" license; CurseForge metadata only. World data. | Architectury API `[13.0.11,)`, Fzzy Config `[0.6.6,)`, **Simply Tooltips `[0.1,)`** (all in) | defaults | 2026-10-01 |
 | Simply Tooltips | `SimplyTooltips-neoforge-0.1.5.jar` | CurseForge 1475755 / 8715141 | both | weapons | Required by Simply Swords 1.63.0+. Its scope is an item tag, not a global override: the shipped `data/simplytooltips/tags/item/simply_swords_compat.json` contains only `#simplyswords:uniques`, so it renders those items and nothing else. That is why it does not add a second tooltip frame next to Tooltip Overhaul. The mod's own description offers opt-in for other items, which this pack does not take. Mixin config is `required: true` with two client mixins on `DrawContext` and `Screen`. Timefall Development License 1.2. | Architectury API, Fzzy Config (both in) | defaults | 2026-10-01 |
 | Simply More | `simplymore-forge-1.3.0_alpha.jar` | CurseForge 1095252 / 8736778 | both | weapons | More Simply Swords weapon types. ARR. **CurseForge has `allowModDistribution = false`** — see the distribution note below. The filename really does say `-forge-` even though the file is tagged NeoForge 1.21.1; packwiz's hash matches the CurseForge record exactly. | Architectury API, Fzzy Config, Simply Swords, Simply Tooltips (all in) | defaults | 2026-10-01 |
-| Overgeared: Universal Compatibility | `overgeared_universal-1.0.0.jar` | CurseForge 1651686 / 8644103 | both | weapons | Per-metal Overgeared tool heads and metal parts for the other Overgeared compat packs. MIT. **Also `allowModDistribution = false`** and not on Modrinth. | Overgeared | defaults | 2026-10-01 |
 | simplyswords create lines | `simplyswords_create_lines-1.0.5-neoforge-1.21.1.jar` | CurseForge 1595470 / 8492922 | both | weapons | Create production lines for Simply Swords weapons. ARR. World data. | Simply Swords, Create | defaults | 2026-10-01 |
-| Overgeared | `overgeared-neoforge-1.21.1-1.6.19.jar` | CurseForge 1277786 / 8936600 | both | weapons | Rebuilds tool and armor crafting around forging. Its Quark and Dragon's Survival integrations are **optional**, so it does not drag in the banned Quark. MIT. World data. Note: a tool/armor balance overhaul sitting next to Apotheosis and its Balance Configurator — watch for interaction. | none | defaults | 2026-10-01 |
-| Overgeared JEI Compat | `overgeared_jei_compat-1.0.0.jar` | CurseForge 1693293 / 8868127 | both | weapons | Overgeared items in JEI. Apache-2.0. Ships a mixin, so it is in the JEI-internals breakage class; JEI itself is unaffected on the server smoke test. | Overgeared, JEI | defaults | 2026-10-01 |
 | Just Enough Professions (JEP) | `JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar` | CurseForge 417645 / 7966681 | **client** | info | Profession workstations and skills in JEI. MIT. Client-only per its CurseForge tags, so the dedicated-server smoke test never loads it. | JEI (optional) | defaults | 2026-10-01 |
 | AE2 Network Analyser | `AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar` | CurseForge 961856 / 7622554 | both | applied-energistics | Visual analyser for ME networks. LGPL-3.0, no mixins, ~2.2M downloads. | AE2, Glodium (both in) | defaults | 2026-10-01 |
 | Applied Industrialization | `Applied-Industrialization-1.3.0.jar` | CurseForge 1671614 / 9020730 | both | applied-energistics | AE2 blocks for Modern Industrialization. ARR. Uploaded 2026-09-30 with 3 files, so it is a very new build. One mixin. | none required (AE2/MI optional but both in) | defaults | 2026-10-01 |
@@ -575,9 +568,6 @@ Simply Swords moved from the 1.62.0 pin to **1.70.2** (latest) with **Simply Too
 | Invasive Optimizations | `invasiveopts-1.0.24.jar` | CurseForge 1528432 / 8782897 | both | performance | Deeper optimizations aimed at other mods. MIT. The author ships the warning "If you experience any issues, disable this mod first"; its optional integrations include Pipez (removed from this pack) and Accessories (this pack uses Curios), so those bridges stay inert. | none | defaults | 2026-10-01 |
 | Better Fps - Render Distance | `betterfpsdist-1.21.1-6.1.jar` | CurseForge 551520 / 8319712 | **client** | rendering | Cheaper far-chunk rendering. ARR. | Cupboard (in) | defaults | 2026-10-01 |
 | fix GPU memory leak | `gpumemleakfix-1.21-1.8.jar` | CurseForge 882495 / 5513549 | **client** | stability | Fixes a client GPU memory leak. ARR. **Newest build is 2024-07-08**, the oldest in this wave. | Cupboard (in) | defaults | 2026-10-01 |
-| Overgearium | `overgearium-1.21.1-1.0.0.jar` | CurseForge 1545491 / 8117120 | both | weapons | Broad Overgeared compatibility: "almost universal overgeared modded compatibility". MIT, 1 mixin. | Overgeared | defaults | 2026-10-01 |
-| OvergearedXSimplySwords | `overgearedxsimplyswords-1.1.0-1.21.1.jar` | CurseForge 1506011 / 7883223 | both | weapons | Overgeared forging for Simply Swords materials. MIT, no mixins. | Overgeared, Simply Swords (both in) | defaults | 2026-10-01 |
-| Overgeared x Ice and Fire | `overgeared_iceandfire-1.21.1-1.0.0.jar` | CurseForge 1688041 / 8841687 | both | weapons | Overgeared forging for Ice and Fire materials. MIT, no mixins. | Overgeared, Ice and Fire (both in) | defaults | 2026-10-01 |
 | ATi Structures | `ATi Structures V1.4.7.jar` | CurseForge 964608 / 8984311 | both | worldgen | Overworld structure pack by ATii / HardWater, the same authors as the installed Epic Structures mods. `LicenseRef-All-Rights-Reserved`, 0 downloads on the 1.21.1 file, updated 2026-09-26. World data. | none | defaults | 2026-10-01 |
 | Loot Integrations: ATi Structures… | `lootintegrations_ati-1.3.jar` | CurseForge 1420613 / 8920862 | both | content | Modded loot in ATi Structures and Epic Structures villages/witch huts. ARR. | Loot Integrations, ATi Structures | defaults | 2026-10-01 |
 | Gateways to Eternity | `GatewaysToEternity-1.21.1-5.1.0.jar` | CurseForge 417802 / 6926284 | both | worldgen | Giant portals, monster hordes, and large rewards, by Shadows_of_Fire (the Applied Flux author). MIT, 1 mixin, ships a JEI plugin. **Newest build 2025-08-25 with 0 downloads on the 1.21.1 file.** World data. | none required (Placebo, Apothic Attributes in) | defaults | 2026-10-01 |
@@ -592,6 +582,117 @@ Second half of the same user-supplied candidate list, researched one at a time a
 | No Chat Reports | `NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar` | CurseForge 634062 / 5885735 | both | client QoL | Chat cannot be reported to Mojang and the server name is hidden on the disconnect screen. `side: both` on purpose: the server-side mixins are what let the pack's own test server accept our clients. WTFPL. | none | defaults | 2026-10-01 |
 | Refined Storage - Curios Integration | `refinedstorage-curios-integration-1.0.0.jar` | CurseForge 1230729 / 6360514 | both | storage | Two Curios slots so RS network items can be worn. Official Refined Mods addon, MIT, 11 KB. Declares RS `2.0.0-beta.1` as a bare (minimum) version — the installed RS Mekanism Integration uses the same pattern at `beta.17` and boots against 2.0.9. | Refined Storage (have 2.0.9), Curios `[9.2,)` (have 9.5.1) | defaults | 2026-10-01 |
 | MmmMmmMmmMmm (Target Dummy) | `dummmmmmy-1.21-2.1.2-neoforge.jar` | CurseForge 225738 / 8903254 | both | content | Placeable target dummy with damage numbers; armor can be equipped on it. Adds one block and one entity, so `side: both`. **Supplementaries Team License v1.5** — see the Credits note. Common mixins wrap `LivingEntity#actuallyHurt`, `Player#actuallyHurt`, `SwordItem#hurtEnemy`, `DiggerItem#hurtEnemy`, and `EnchantmentItem`, all with `defaultRequire: 1`, on the same damage path Epic Fight and ParCool use; a client fight test is the only real proof. No target method overlaps `leylines_patches`, which only injects into MI/EI `getAllEnchantments`. | Moonlight Lib `[1.21-3.2.3,)` (have 3.7.0) | defaults | 2026-10-01 |
+
+## 2026-10-02 Oritech family wave
+
+User-supplied CurseForge IDs for the Oritech family. All five resolved to real 1.21.1 NeoForge releases and installed with **no new dependencies** — Oritech's three hard deps were already present and version-compatible (Architectury API 13.0.11 against `[13.0.2,)`, Athena 4.0.6, GeckoLib 4.9.3), as were AE2 19.2.18 and Create 6.0.10 for the addons. **Three of the five shipped**; two were removed during verification, for the reasons in [Oritech rejections](#oritech-rejections-2026-10-02) below.
+
+Key facts verified from the jars rather than the project pages:
+
+- **Oritech energy is Forge Energy.** `rearth/oritech/neoforge/NeoforgeEnergyApiImpl` registers `net.neoforged.neoforge.capabilities.Capabilities$EnergyStorage` and also handles GrandPower's `ILongEnergyStorage`. So Oritech shares one FE pool with Mekanism, Modern Industrialization, and Create Crafts & Additions rather than adding a third power system. This was the deciding factor.
+- **Built-in data compat with the pack's core mods.** Oritech ships centrifuge recipes for Create and Mekanism clumps (lead, osmium, tin, nickel, platinum, uranium, zinc), pulverizer/grinder/laser recipes for AE2 certus, fluix and sky dust, and a `c:` tag tree. It also ships a JEI plugin (`rearth/oritech/init/compat/jei/`) that touches only stable JEI 19.x API — `IRecipeRegistration`, `IGuiHandlerRegistration`, `IGhostIngredientHandler`, `IRecipeCatalystRegistration` — all present in the pack's JEI 19.57.0.450, and it declares **no** hard JEI dependency. Still a JEI-integrating mod, so the client is the real test.
+- **No vanilla ore-gen removal.** `OritechConfig` has no "remove vanilla ores" option; worldgen is additive only (oil springs, bedrock resource nodes, uranium patches, nickel and platinum). Safe against the Terralith + TerraBlender region-size-6 setup.
+- **Small mixin footprint.** `oritech.mixins.json` is 3 common (`EntityLaserDropsMixin`, `MachineControllerLifecycleMixin`) + 2 client, and `oritech_forge.mixins.json` adds 1 client (`ExtendMachineRenderBounds`).
+- **Oritech registers the "Ender IO" metal names itself.** `oritech:adamant_ingot`, `duratium_ingot`, `electrum_ingot`, `energite_ingot`, and `biosteel_ingot` all exist in 1.2.12 and have Oracle Index pages, so the Create-side recipes for them are worth keeping even though Ender IO is not in the pack.
+
+| Mod | Pinned file | Source | `side` | Category | Why | Required deps | Config | Date added |
+|---|---|---|---|---|---|---|---|---|
+| Oritech | `oritech-neoforge-1.21.1-1.2.12.jar` | CurseForge 1030830 / 8780299 | both | tech | Fourth full tech tree, added on request. Animated multiblocks, processing chains, item/fluid/energy pipes, drones, nuclear reactors, particle accelerators, and a bedrock extractor. **Forge Energy native**, so it shares the pack's existing FE pool. CC0-1.0. World data. | Architectury API `[13.0.2,)` (have 13.0.11), Athena (have 4.0.6), GeckoLib (have 4.9.3) | defaults; see configs.md | 2026-10-02 |
+| Applied Oritech | `applied_oritech-1.0.4+1.21.1.jar` | CurseForge 1686167 / 8944224 | both | applied-energistics | ME Dock, ME Pattern Provider addon, and ME Interface addon, so Oritech machines join ME networks for autocrafting and item stocking. **Zero mixins** (`applied_oritech.mixins.json` has empty `mixins` and `client` lists), which is why it is the safest mod in this wave. MIT. The strongest pack-specific case for this family. | Oritech `[1.2.12,)` (exact match), Applied Energistics 2 `[19.2.0,)` (have 19.2.18) | defaults | 2026-10-02 |
+| Oritech Things | `oritechthings-0.0.46.jar` | CurseForge 1166849 / 8547739 | both | tech | Largest community addon (4.7M downloads, 6 authors, actively maintained). Tiered Speed/Efficiency/Processing/Capacitor/Acceptor addons tiers 2–9, exo jetpack, particle-accelerator target controller and speed sensor, frame placer, and the Amethyst Fish mob. **License ambiguity accepted by the user — see Credits.** Self-declared alpha. 7 mixins. | Oritech `[1.2.0,)` | defaults | 2026-10-02 |
+
+Verification: `scripts/smoke_test.py` passes at 20.0 TPS with 0 "can't keep up" over 289 generated chunks, and the log confirms `Oritech initialization complete` plus the Oritech Jade plugin loading. `Entity oritechthings:amethyst_fish has no attributes` also appears, but that line is a **pack-wide NeoForge 1.21.1 quirk**, not an Oritech Things defect — hundreds of entities from every installed mod (Twilight Forest, Ars Nouveau, Ice and Fire, Spawn, and so on) log it on every boot.
+
+Open design note for a future pass: Oritech's **Bedrock Extractor** can produce "renewable" metals late-game, which may undercut the Mekanism and Modern Industrialization ore chains. The user chose to leave defaults and evaluate in real play rather than gate it with a KubeJS script or datapack yet. Config candidates not enabled at add time, all reviewable in [configs.md](configs.md): `worldGeneration.easyFindFeatures` (surface markers for oil wells and ore nodes, a real QoL win under large biomes), `reactor.safeMode` (cooldown instead of explosion), and `machineSoundVolumeMultiplier` / `machineVolumeMultiplier`, which are worth checking in a 400-mod pack.
+
+## Create Oritech recipes ported into the pack
+
+`pack/global_packs/required_data/lead-leylines-oritech-create-compat/` carries **18 Create recipes** under `data/lead_leylines/recipe/oritech_create/`, ported from Create Oritech Compat 1.0 (CurseForge 1211589 / 6255439, MIT, FixedDolphin927) after that mod was removed. `global_packs/required_data/` is force-enabled by `global_packs.toml`, so no config edit is needed.
+
+The upstream mod shipped **14 of its 18 recipes in a format Minecraft 1.21.1 cannot parse**, which produced 14 `Parsing error loading recipe` ERROR lines on every server boot. It had been broken since 2025-03-02 with no bug report. Two separate problems were involved:
+
+1. **Result field (14 recipes).** The `results` / `result` objects still used the pre-1.21.1 `"item"` key, which the 1.21.1 `ItemStack` codec rejects. Migrated to `"id"`. The four recipes that did load upstream — `blasting` and `smelting` for nickel and platinum — are the reference shape and confirm the fix.
+2. **Non-existent input tags (2 recipes).** `crushing/biomass` used input tag `oritech:biomass` and `mixing/biosteel_ingot` used `oritech:raw_biopolymer`. Neither tag exists in Oritech 1.2.12, so both recipes could never match even with the format fixed. Repointed to the obvious intent: the first to the real Oritech plant-matter tag `oritech:biomatter`, the second to the `oritech:raw_biopolymer` **item** (which does exist).
+
+One trap worth recording: **Create 6.0.10 uses two different codecs in the same recipe file.** Processing `ingredients` / `ingredient` go through Create's own codec and want `"item"` / `"tag"`, while `results` / `result` go through the vanilla 1.21.1 `ItemStack` codec and want `"id"` / `"count"`. Migrating the ingredient side to `"id"` — the obvious blanket fix — breaks all 18. Verified by boot: `Loaded 48034 recipes` with the broken version, `Loaded 48047` after, an exact **+13** for the 13 that were failing, with the 5 already-working recipes unchanged.
+
+Net effect: 18 working Create recipes where the mod previously delivered 4, and zero recipe-parse errors from this family.
+
+## Farmer's Cutting and Create RU recipes ported into the pack
+
+Seven data-only mods removed; their JSON now ships as
+`pack/global_packs/required_data/lead-leylines-compat-recipes/`. Full census,
+byte-verification and the re-sync procedure are in
+[datapack-consolidation.md](datapack-consolidation.md).
+
+| Source mod | CurseForge | Recipes | Namespace |
+|---|---|---|---|
+| Farmer's Cutting: BetterNether | 1114065 / 7649818 | 51 | `fcbn` |
+| Farmer's Cutting: Twilight Forest | 1131152 / 5859455 | 50 | `fctf` |
+| Farmer's Cutting: BetterEnd | 1146834 / 7648264 | 76 | `fcbe` |
+| Farmer's Cutting: Oh The Biomes We've Gone | 1094819 / 6274107 | 165 | `fcbwg` |
+| Farmer's Cutting: Regions Unexplored | 1133629 / 7642854 | 195 | `fcru` |
+| Create Regions Unexplored Compat | 1431845 / 7469182 | 30 | `create_ru_compat` |
+| **Total** | | **567** | |
+
+Facts verified from the jars, not the project pages:
+
+- **All five Farmer's Cutting JARs contain zero `.class` files** and each ships a
+  `pack.mcmeta`. They were never code mods — they are Modrinth datapacks
+  packaged as JARs (`lowcodefml`). The upstream repo is a *generator*
+  (`fcgenerator.py` plus per-mod folders), which is independent confirmation
+  that the recipes are machine-generated pure data.
+- **`create_ru_compat` has one class with an empty constructor body.** Its only
+  purpose is making the JAR a valid mod container. Its
+  `META-INF/accesstransformer.cfg` is **0 bytes**, so there is no access
+  transformer and no mixin to lose.
+- **Only two recipe serializers are involved**, `farmersdelight:cutting` (537)
+  and `create:crushing` (30). Both are registered by mods that **stay** in the
+  pack, so no serializer disappears along with the JARs. Every file sits under
+  its own source namespace, with no cross-namespace spill and no
+  self-references. All 567 parse as JSON.
+
+**Verification is the recipe count, and it matched exactly.** Because the
+datapack recipes carry the same IDs as the mod recipes, they override them
+while both are installed — so the datapack was added *first* and booted before
+anything was removed. That canary proved the datapack loads and overrides;
+then the seven mods were removed and the count was re-checked:
+
+| State | Recipes loaded |
+|---|---|
+| Datapack added, 7 mods still installed | `Loaded 47540 recipes` |
+| 7 mods removed, datapack alone | `Loaded 47540 recipes` |
+
+Identical, which is the strongest available proof that the port lost nothing.
+Both boots passed with **no ERROR or WARN attributable to any ported
+namespace**. The log does contain 17 `RuntimeDistCleaner/DISTXFORM` ERROR lines
+and many `Entity <x> has no attributes` lines; both are pre-existing pack-wide
+NeoForge 1.21.1 noise unrelated to this change, and the latter is the quirk
+already recorded on the Oritech wave.
+
+`DarkSleep` was the seventh mod and is a different shape: its entire behaviour
+is `gamerule playersSleepingPercentage 50` in a `#minecraft:load` function. Its
+JAR declares `All Rights Reserved`, so **none of its data was copied**. The
+gamerule is reimplemented as
+`lead-leylines-load-fixes/data/lead_leylines/function/sleep_rules.mcfunction`
+and added to `#minecraft:load` in the same datapack, in a pack-owned namespace.
+The tag is additive (no `"replace"`), so any mod-provided load functions still
+run.
+
+Unlike the Create Oritech port, **no recipe needed fixing** — these were
+correct to begin with, which is why the before/after counts are equal rather
+than higher.
+
+## Oritech rejections (2026-10-02)
+
+Two of the five requested mods did not ship. Both were installed first, on explicit user request over my recommendation, and then removed because verification showed the recommendation was right for a harder reason than I had given.
+
+| Mod | Source | What verification found | Why it is out |
+|---|---|---|---|
+| Extended Oritech | CurseForge 1390979 / 7305507 | **Hard crash at mod construction.** `NoClassDefFoundError: rearth/oritech/client/ui/BasicMachineScreenHandler` from `net.cjsah.mod.extendedoritech.init.ModBlockEntities.<clinit>`. That class exists in Oritech **1.0.1** and was **removed before 1.2.6** — confirmed absent in 1.2.6, 1.2.8, 1.2.9, and 1.2.12. | Not a mixin risk but a missing-class failure, and there is **no working version pair on CurseForge**: the only Oritech builds that still ship the class are 1.0.x, which would break Applied Oritech (requires `[1.2.12,)`) and Oritech Things (requires `[1.2.0,)`). Revisit only if the author ships a build against Oritech 1.2.x+. Its 3 required mixins into Oritech internals were a second, smaller risk on top. |
+| Create Oritech Compat | CurseForge 1211589 / 6255439 | 14 of 18 recipes fail to parse on 1.21.1; one more references a tag that no longer exists. 21k downloads, one file, last updated 2025-03-02, no bug report. | Content was worth keeping, the mod was not. Ported to `lead-leylines-oritech-create-compat` and removed. Its own jar filename also said `1.20.1` while declaring 1.21.1. |
+
+The Oritech Things license ambiguity was **not** a rejection reason; the user accepted it explicitly. See Credits.
 
 ## Credits / Attribution
 
@@ -687,7 +788,9 @@ Second half of the same user-supplied candidate list, researched one at a time a
 | LC²H | Admany | BRSSLA V2.0.0 | CurseForge metadata only; do not embed the jar. |
 | Quantified API | Admany | See CurseForge page | CurseForge metadata only; do not embed the jar. |
 | BiomeSpy | MoePus | LGPL-3.0-only | CurseForge reference. |
-| DarkSleep | GamerPotion | ARR | CurseForge metadata only; do not embed the jar. |
+| Farmer's Cutting (5 mods) | Joshcraft2002 | MIT (declared in-jar) | Recipes are ported into `lead-leylines-compat-recipes`; no jar ships. Attribution retained. |
+| Create Regions Unexplored Compat | Starion | MIT (declared in-jar) | Recipes are ported into `lead-leylines-compat-recipes`; no jar ships. Attribution retained. |
+| DarkSleep | GamerPotion | ARR | **No data copied.** Behaviour reimplemented as one vanilla gamerule in a pack-owned datapack. |
 | MemGuard | See CurseForge project 1468440 | MIT (in-jar) | CurseForge reference. |
 | Wave 1 QoL/storage/FTB (Xaero, Waystones, Sophisticated, etc.) | See each CurseForge page | Mix of MIT/ARR/LGPL | CurseForge metadata; do not embed ARR jars. |
 | Tooltip Overhaul | Xylonity | GPL-3.0-only | CurseForge metadata only; do not embed the jar. |
@@ -733,6 +836,10 @@ Second half of the same user-supplied candidate list, researched one at a time a
 | No Chat Reports | Aizistral | WTFPL | CurseForge reference. |
 | Refined Storage - Curios Integration | Refined Mods | MIT | CurseForge reference. |
 | MmmMmmMmmMmm (Target Dummy) | MehVahdJukaar and contributors | Supplementaries Team License v1.5 — permits personal use and use "obtained exclusively from Our Sources"; public redistribution of the software is prohibited | Same arrangement as the already-shipped Supplementaries and Amendments: the CurseForge manifest references the official file and the pack never rehosts the jar. Credit the Supplementaries Team. If the pack ever embeds a jar instead of referencing it, remove this mod. |
+| Oritech | Rearth | CC0-1.0 (public domain dedication; no rights reserved) | CurseForge reference. Credit Rearth. Some Oritech art is derived from Techarium (CC BY-NC 4.0) and malcolmriley's unused-textures repo (CC BY 4.0); the author credits both in the project description. |
+| Applied Oritech | Jiu_Qianqi (beipuo) | MIT | CurseForge reference. Credit the author. |
+| Oritech Things | Lumengrid and contributors (Lumengrid, muroalparco, MtcLeo05, DevDyna, Sirios_dev) | **Unverifiable and most likely non-commercial.** The jar's `neoforge.mods.toml` says `license = "CC4.0"` on every published version checked (0.0.9 through 0.0.46), which most plausibly abbreviates CC BY-NC 4.0. The GitHub repository has no real LICENSE file — only an unused NeoForge `TEMPLATE_LICENSE.txt` — and CurseForge reports no license for the project. The user accepted this ambiguity explicitly on 2026-10-02, in the same spirit as the shipped Simply More and Overgeared: Universal Compatibility ARR situation. | **Do not embed this jar.** Keep it CurseForge-metadata-only so the file is fetched from CurseForge, never redistributed by the pack. Credit the author list above. If the author confirms a non-commercial license in writing, decide whether a published MIT pack can carry it at all before the next store release; if they confirm no restriction, record the corrected license here. |
+| Create Oritech Compat (recipes ported, mod removed) | FixedDolphin927 (fixdol) | MIT | The mod is **not** shipped. Its 18 Create recipes were ported into `pack/global_packs/required_data/lead-leylines-oritech-create-compat/` and corrected for 1.21.1, so credit the author for the recipe design even though no jar is distributed. Do not re-add the mod while the datapack is in place — the datapack owns this content. |
 | Automation and QoL wave (KubeJS build 368, Modern Industrialization, Just Dire Things, routers, jewelry, glyphs, sounds) | See each CurseForge page | Mix of licenses; MRU is ARR | CurseForge metadata; do not embed ARR jars. |
 
 ## Future / Deferred Mods
@@ -754,10 +861,17 @@ Long lists: [deferred.md](deferred.md).
 
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
+| Farmer's Cutting x5 (BetterNether, Twilight Forest, BetterEnd, Oh The Biomes We've Gone, Regions Unexplored) | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (537 `farmersdelight:cutting` recipes). All five JARs contain **zero class files** — they are datapacks packaged as mods. Recipe count before and after removal is identical at 47,540. | No. The ported datapack is byte-identical and verified. |
+| Create Regions Unexplored Compat: Crushing | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (30 `create:crushing` recipes). Its only class is an empty-constructor dummy and its access transformer file is 0 bytes. Note this is **not** the same mod as `create-otbwg-compat`, which stays. | No. Ported. |
+| DarkSleep - RPG Sleep Percentage | 2026-10-03 | Behaviour reimplemented as one vanilla gamerule (`playersSleepingPercentage 50`) in `lead-leylines-load-fixes`. The mod declares **All Rights Reserved**, so no data was copied; only the documented behaviour was reimplemented. | No. A datapack line is not worth a jar. |
 | Packet Fixer | 2026-10-01 | Superseded by Connectivity. Both raised the vanilla packet size limit, and together with Disconnect Packet Fix that was three mods patching the same networking internals. | No. Connectivity covers oversized payloads. |
 | Disconnect Packet Fix | 2026-10-01 | Superseded by Connectivity; the MC-271325 disconnect-packet class of failure is inside Connectivity's login/play handler mixins. | No. |
 | Simply More (CurseForge 1095252) | 2026-10-01 | Never shipped. CurseForge distribution is disabled and the similarly named Modrinth project is a different mod ("Simply m'Ore"); it also hard-requires the Simply Tooltips chain. | If the author enables CurseForge distribution or publishes on Modrinth. |
-| Overgeared: Universal Compatibility (CurseForge 1651686) | 2026-10-01 | Never shipped. CurseForge distribution disabled and not on Modrinth. Its job (per-metal tool heads for the other Overgeared compat packs) is unmet, so Overgeared's cross-mod forging coverage is thinner than the author intended. | If distribution is enabled. |
+| Overgeared (CurseForge 1277786) | 2026-10-02 | Removed on request, temporarily. **The reason is a real pack bug, not a preference:** Overgeared 1.6.19 ships stub copies of **44** vanilla recipes under `data/minecraft/recipe/` in which both the ingredient and the result are `minecraft:air`, and 9 of them fail to parse on 1.21.1 (the `{"item": "minecraft:air"}` shape the 1.21.1 `ItemStack` codec rejects). Those 9 were logging a `Parsing error loading recipe` ERROR on every server boot, and the practical effect is that **vanilla diamond armor had no crafting recipe at all**. The other 35 stubs covered all gold, iron and stone tool and armor recipes, `netherite_ingot`, `bucket`, `cauldron`, `shears`, `flint_and_steel`, `arrow` / `spectral_arrow` / `tipped_arrow`, and three iron blast recipes. Verified after removal: recipe-parse errors went 9 → **0**. | If the author ships a 1.21.1 build that stubs those recipes in a parseable form, or stops stubbing them. Re-adding means re-testing for the same 9 errors first. |
+| Overgeared addons (5 mods) | 2026-10-02 | Removed with Overgeared because every one declares it as a **required** dependency, so none can stay: Overgeared JEI Compat (`overgeared [1,)`, plus JEI), Overgeared x Ice and Fire (`overgeared [1.21.1-1.6.17,)`, plus Ice and Fire), OvergearedXSimplySwords (`overgeared [1.0.0,)`, plus Simply Swords), Overgearium (`overgeared [0,)`), and Overgeared: Universal Compatibility (`overgeared [1.0,)`). Nothing outside the family depended on Overgeared, and no Overgeared config, KubeJS script, or datapack referenced it, so the removal left no orphans. | With Overgeared. Simply Swords and Ice and Fire both stay in the pack, they only lose their Overgeared forging variants. |
+| Overgeared: Universal Compatibility (CurseForge 1651686) | 2026-10-02 | Superseded by the row above. It **did** ship from 2026-10-01, pinned by direct CurseForge CDN URL because `allowModDistribution = false` and it is not on Modrinth; the earlier "never shipped" note on this row was stale. | — |
+| Extended Oritech (CurseForge 1390979) | 2026-10-02 | Installed, then removed in the same session. Hard `NoClassDefFoundError: rearth/oritech/client/ui/BasicMachineScreenHandler` at mod construction; the class was removed from Oritech before 1.2.6 and Extended Oritech 1.1.2 was built in Dec 2025 against Oritech 1.0.x. No working version pair exists, because pinning Oritech to 1.0.x would break Applied Oritech and Oritech Things. | Only if the author ships a build against Oritech 1.2.x or later. |
+| Create Oritech Compat (CurseForge 1211589) | 2026-10-02 | Installed, then removed in the same session. 14 of its 18 recipes shipped in the pre-1.21.1 `"item"` ingredient format and could not load, causing 14 recipe-parse ERROR lines per boot; a 15th referenced a tag that no longer exists. The content was worth keeping, so it was ported to `pack/global_packs/required_data/lead-leylines-oritech-create-compat/` and corrected. | No, not while the ported datapack is in place. It would re-add 14 broken recipes and duplicate working ones. |
 | Epic Fight Compat (CurseForge 1704141) | 2026-10-01 | Never shipped. Its CurseForge project has `allowModDistribution = false` and the author publishes only there, so a metadata reference would not download for players and rehosting the jar would break the author's choice. The pack already runs CompatLink Epic Fight Weapons Compat for the same goal, plus 11 other Epic Fight bridges. | If the author enables CurseForge distribution or publishes on Modrinth. |
 | Just Zoom (CurseForge 561885) | 2026-10-01 | Never shipped. License is DSMSLv3 ("Don't Sell My Mods"), which does not grant redistribution in a published pack, and it hard-requires Konkrete, which the pack does not carry. | Only with an OSI-style license. |
 | Library Ferret - NeoForge (CurseForge 522351 / 6118136) | 2026-10-01 | packwiz pulled a second, CurseForge-sourced entry for a library the pack already tracks from Modrinth. The existing `library-ferret.pw.toml` pin was kept. | No. The Modrinth pin covers it. |

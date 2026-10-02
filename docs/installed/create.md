@@ -16,7 +16,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | client | `addon`, `tech`, `create` | Cheaper Create rendering. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | `compat`, `tech`, `create`, `jei` | Create recipes in JEI. |
 | Create: Oh The Biomes We've Gone Compat | `create-otbwg-compat-1.0.jar` | both | `compat`, `tech`, `create` | Create recipes for Oh The Biomes We've Gone. |
-| Create Regions Unexplored Compat: Crushing | `create_ru_compat-1.0.0.jar` | both | `compat`, `tech`, `create` | Crushing recipes for Regions Unexplored. |
 | Create: Dragons Plus | `CreateDragonsPlus-1.11.9.jar` | both | `library`, `tech`, `create` | Shared Create addon library several factory mods need. |
 | Create: Enchantment Industry | `create-enchantment-industry-2.5.4.jar` | both | `addon`, `tech`, `create`, `world-data` | Liquid experience and automated enchanting. |
 | Create: Central Kitchen | `create-central-kitchen-2.6.2.jar` | both | `addon`, `tech`, `create`, `farmers-delight` | Create processing for Farmer's Delight foods. |
