@@ -1,0 +1,19 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:blue_rose_bush"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 4,
+      "id": "minecraft:blue_dye"
+    },
+    {
+      "chance": 0.05,
+      "id": "minecraft:green_dye"
+    }
+  ]
+}

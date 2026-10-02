@@ -1,0 +1,26 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:advanced_refill_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:gold_ingot"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:redstone"
+    },
+    {
+      "id": "sophisticatedbackpacks:refill_upgrade"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:diamond"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Sophisticated Storage | `sophisticatedstorage-1.21.1-1.5.91.2127.jar` | both | Barrels/chests. World data. |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.0.168.jar` | both | Create recipes for backpacks. |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar` | both | Create recipes for storage. |
-| Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | both | Extra Create recipes for backpacks. Complements the contraption integration. |
+| Create: Sophisticated Backpacks Compat | ported to `lead-leylines-compat-recipes` | both | 57 `create:milling` recipes. Mod removed 2026-10-03; MIT-licensed recipes copied verbatim. |
 | Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | both | Ars items in backpacks. |
 | Sophisticated Storage: Ars Compat | `arssophisticatedstoragecompat-0.3.0.jar` | both | Ars items in Sophisticated storage. |
 | Sophisticated Tactical Backpacks | `militarybackpack-2.0.1.jar` | both | Tactical backpacks and ammo reload. Beta. World data. |

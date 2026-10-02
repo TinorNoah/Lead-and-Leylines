@@ -44,7 +44,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | CurseForge 1491426 / 8631010 | client | IO | Async log writes. | none | defaults | 2026-09-18 |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | CurseForge 1125284 / 7602181 | client | client QoL | Keeps server resource packs across rejoins. | none | defaults | 2026-09-18 |
 | Create | `create-1.21.1-6.0.10.jar` | CurseForge 328085 / 7963363 | both | tech | Contraptions and kinetics. | none (Flywheel embedded) | defaults | 2026-09-18 |
-| Create: Oh The Biomes We've Gone Compat | `create-otbwg-compat-1.0.jar` | CurseForge 1285600 / 6645097 | both | tech | Create recipes for OTBWG. File also tags 1.20.1 Forge. | Create, OTBWG | defaults | 2026-09-22 |
+
 | Ametrin API | `ametrin-1.21.1-0.2.4.jar` | CurseForge 670599 / 5608814 | both | library | Required by Block Variants. Pinned 1.21.1; later files are 1.21.11. | none | defaults | 2026-09-22 |
 | Block Variants | `block_variants-1.21.1-6.1.1.jar` | CurseForge 481119 / 8581915 | both | content | Extra block variants. World data. | Ametrin | defaults | 2026-09-22 |
 | Block Variants - Oh The Biomes We've Gone | `block_variants_bwg-1.21.1-1.0.1.jar` | CurseForge 1503165 / 8705273 | both | content | OTBWG wood variants. World data. | Block Variants, OTBWG | defaults | 2026-09-22 |
@@ -208,7 +208,7 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | Create: Sky Village | `create_sky_village-0.0.38 NeoForge 1.21.1.jar` | CurseForge 1104939 / 8004708 | both | worldgen | Create village structure. World data. | Create | defaults | 2026-09-18 |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.1.171.jar` | CurseForge 1238567 / 8985949 | both | storage | Create contraptions + backpacks. | Create, Backpacks, Core | defaults | 2026-09-18 |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.21.209.jar` | CurseForge 1226755 / 8503147 | both | storage | Create + storage. | Create, Storage, Core | defaults | 2026-09-18 |
-| Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | CurseForge 1320115 / 6844021 | both | storage | Create recipes for backpacks (complement to 1238567). | Create, Backpacks | defaults | 2026-09-22 |
+
 | Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | CurseForge 1653477 / 8653384 | both | storage | Ars items in backpacks. | Ars, Backpacks | defaults | 2026-09-22 |
 | Sophisticated Storage: Ars Compat | `arssophisticatedstoragecompat-0.3.0.jar` | CurseForge 1653878 / 8655579 | both | storage | Ars items in Sophisticated storage. | Ars, Storage | defaults | 2026-09-22 |
 | Sophisticated Tactical Backpacks | `militarybackpack-2.0.1.jar` | CurseForge 1665194 / 8981531 | both | storage | Tactical backpacks + ammo reload. Beta. World data. | Backpacks | defaults | 2026-09-22 |
@@ -862,7 +862,9 @@ Long lists: [deferred.md](deferred.md).
 | Mod | Removed on | Why | Re-add? |
 |---|---|---|---|
 | Farmer's Cutting x5 (BetterNether, Twilight Forest, BetterEnd, Oh The Biomes We've Gone, Regions Unexplored) | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (537 `farmersdelight:cutting` recipes). All five JARs contain **zero class files** — they are datapacks packaged as mods. Recipe count before and after removal is identical at 47,540. | No. The ported datapack is byte-identical and verified. |
-| Create Regions Unexplored Compat: Crushing | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (30 `create:crushing` recipes). Its only class is an empty-constructor dummy and its access transformer file is 0 bytes. Note this is **not** the same mod as `create-otbwg-compat`, which stays. | No. Ported. |
+| Create Regions Unexplored Compat: Crushing | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (30 `create:crushing` recipes). Its only class is an empty-constructor dummy and its access transformer file is 0 bytes. Note this is **not** the same mod as `create-otbwg-compat`, which was also removed the same day. | No. Ported. |
+| Create: Oh The Biomes We've Gone Compat | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (86 `create:milling` recipes). **Zero class files** — recipes only. MIT per the JAR's own `neoforge.mods.toml`. CurseForge also reports `allowModDistribution = false`, so `metadata:curseforge` was a latent install failure; the datapack removes that problem. | No. Ported and byte-verified. |
+| Create: Sophisticated Backpacks Compat | 2026-10-03 | Ported to `lead-leylines-compat-recipes` (57 `create:milling` recipes). **Zero class files** — recipes only. MIT per the JAR's own `neoforge.mods.toml`. Same `allowModDistribution = false` problem as the mod above. | No. Ported and byte-verified. |
 | DarkSleep - RPG Sleep Percentage | 2026-10-03 | Behaviour reimplemented as one vanilla gamerule (`playersSleepingPercentage 50`) in `lead-leylines-load-fixes`. The mod declares **All Rights Reserved**, so no data was copied; only the documented behaviour was reimplemented. | No. A datapack line is not worth a jar. |
 | Packet Fixer | 2026-10-01 | Superseded by Connectivity. Both raised the vanilla packet size limit, and together with Disconnect Packet Fix that was three mods patching the same networking internals. | No. Connectivity covers oversized payloads. |
 | Disconnect Packet Fix | 2026-10-01 | Superseded by Connectivity; the MC-271325 disconnect-packet class of failure is inside Connectivity's login/play handler mixins. | No. |

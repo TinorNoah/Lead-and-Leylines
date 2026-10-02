@@ -1,0 +1,26 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:smoking_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:redstone"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:iron_ingot"
+    },
+    {
+      "id": "sophisticatedbackpacks:upgrade_base"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:smoker"
+    }
+  ]
+}

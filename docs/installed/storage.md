@@ -12,7 +12,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.6.2174.jar` | both | `core`, `storage`, `sophisticated` | Upgradable backpacks. |
 | Sophisticated Tactical Backpacks (And Ammo Reload Upgrade) | `militarybackpack-2.0.1.jar` | both | `addon`, `storage`, `sophisticated` | Tactical backpacks and an ammo reload upgrade. |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.1.171.jar` | both | `addon`, `storage`, `create`, `sophisticated` | Create inventory on backpacks. |
-| Create: Sophisticated Backpacks Compat | `create_sophback_compat-1.0.jar` | both | `compat`, `storage`, `create`, `sophisticated` | Create contraptions can use backpacks. |
 | Sophisticated Backpacks / Jade \| Compatibility | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | client | `compat`, `storage`, `jade`, `sophisticated` | Jade labels on backpacks. |
 | Sophisticated Backpacks: Ars Compat   \|   Sophisticated Backpacks Ars-Nouveau Compatibility | `arssophisticatedcompat-0.3.0.jar` | both | `compat`, `storage`, `sophisticated`, `ars-nouveau` | Ars items in Sophisticated Backpacks. |
 | Sophisticated Backpacks RS Bridge \| Quick Deposit into Refined Storage Networks | `backpackrs-1.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `storage`, `sophisticated` | Deposit a backpack into Refined Storage. |

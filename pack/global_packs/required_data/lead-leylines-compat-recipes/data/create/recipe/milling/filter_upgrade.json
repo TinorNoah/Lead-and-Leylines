@@ -1,0 +1,22 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:filter_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:string"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:redstone"
+    },
+    {
+      "id": "sophisticatedbackpacks:upgrade_base"
+    }
+  ]
+}

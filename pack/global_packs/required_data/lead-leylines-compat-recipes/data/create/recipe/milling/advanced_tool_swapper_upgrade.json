@@ -1,0 +1,25 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:advanced_tool_swapper_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "sophisticatedbackpacks:tool_swapper_upgrade"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:redstone"
+    },
+    {
+      "id": "minecraft:gold_ingot"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:diamond"
+    }
+  ]
+}

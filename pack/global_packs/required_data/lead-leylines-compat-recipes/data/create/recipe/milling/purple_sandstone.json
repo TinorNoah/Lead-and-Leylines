@@ -1,0 +1,14 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "biomeswevegone:purple_sandstone"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "id": "biomeswevegone:purple_sand"
+    }
+  ]
+}
