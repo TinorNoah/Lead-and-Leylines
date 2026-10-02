@@ -1,0 +1,26 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:xp_pump_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:ender_eye"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:redstone"
+    },
+    {
+      "id": "sophisticatedbackpacks:advanced_pump_upgrade"
+    },
+    {
+      "count": 1,
+      "id": "minecraft:experience_bottle"
+    }
+  ]
+}

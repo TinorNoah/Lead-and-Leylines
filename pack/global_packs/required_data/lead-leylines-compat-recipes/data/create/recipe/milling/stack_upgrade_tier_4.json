@@ -1,0 +1,18 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:stack_upgrade_tier_4"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 4,
+      "id": "minecraft:netherite_block"
+    },
+    {
+      "id": "sophisticatedbackpacks:stack_upgrade_tier_3"
+    }
+  ]
+}

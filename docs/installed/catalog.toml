@@ -542,7 +542,7 @@ mods = [
   { file = "sophisticated-backpacks.pw.toml", blurb = "Upgradable backpacks.", tags = ["core", "storage", "sophisticated"] },
   { file = "sophisticated-tactical-backpacks.pw.toml", blurb = "Tactical backpacks and an ammo reload upgrade.", tags = ["addon", "storage", "sophisticated"] },
   { file = "sophisticated-backpacks-create-integration.pw.toml", blurb = "Create inventory on backpacks.", tags = ["addon", "storage", "create", "sophisticated"] },
-  { file = "create-sophisticated-backpacks-compat.pw.toml", blurb = "Create contraptions can use backpacks.", tags = ["compat", "storage", "create", "sophisticated"] },
+  
   { file = "sophisticated-backpacks-jade-compatibility.pw.toml", blurb = "Jade labels on backpacks.", tags = ["compat", "storage", "jade", "sophisticated"] },
   { file = "sophisticated-backpacks-ars-compat-sophisticated.pw.toml", blurb = "Ars items in Sophisticated Backpacks.", tags = ["compat", "storage", "sophisticated", "ars-nouveau"] },
   { file = "sophisticated-backpacks-rs-bridge-quick-deposit.pw.toml", blurb = "Deposit a backpack into Refined Storage.", tags = ["addon", "storage", "sophisticated"] },
@@ -672,7 +672,7 @@ mods = [
   { file = "create-ultimine.pw.toml", blurb = "Vein mine with Create.", tags = ["addon", "tech", "create"] },
   { file = "create-better-fps.pw.toml", blurb = "Cheaper Create rendering.", tags = ["addon", "tech", "create"] },
   { file = "createjeicompat.pw.toml", blurb = "Create recipes in JEI.", tags = ["compat", "tech", "create", "jei"] },
-  { file = "create-oh-the-biomes-weve-gone-compat.pw.toml", blurb = "Create recipes for Oh The Biomes We've Gone.", tags = ["compat", "tech", "create"] },
+  
   { file = "create-dragons-plus.pw.toml", blurb = "Shared Create addon library several factory mods need.", tags = ["library", "tech", "create"] },
   { file = "create-enchantment-industry.pw.toml", blurb = "Liquid experience and automated enchanting.", tags = ["addon", "tech", "create", "world-data"] },
   { file = "create-central-kitchen.pw.toml", blurb = "Create processing for Farmer's Delight foods.", tags = ["addon", "tech", "create", "farmers-delight"] },

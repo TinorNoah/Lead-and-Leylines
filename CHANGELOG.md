@@ -13,6 +13,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+### Changed
+
+### Fixed
+
+### Removed
+
+## [0.1.24] - 2026-10-03
+
+### Added
+
 - Oritech, a new tech tree with animated factory multiblocks, ore processing, item and fluid pipes, drones, nuclear reactors, and particle accelerators. It runs on the same Forge Energy as Mekanism and Modern Industrialization, so you can power it from generators you already have.
 - Applied Oritech, so Oritech machines can sit on an ME network: an ME Dock, a pattern provider, and an interface for handing Oritech items to Applied Energistics.
 - Oritech Things, the main Oritech addon: tiered Speed, Processing, Capacitor, and Acceptor addons that push machines further, plus particle-accelerator controls, a frame placer, and Amethyst Fish that swim out of infested geodes.
@@ -21,6 +31,7 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 ### Changed
 
 - Seven fewer mods to install and keep up to date. The Farmer's Delight cutting-board recipes for BetterNether, Twilight Forest, BetterEnd, Oh The Biomes We've Gone and Regions Unexplored, plus Create crushing recipes for Regions Unexplored, now ship inside the pack as ordinary data instead of as separate mods. All 567 recipes are unchanged, so nothing about crafting differs.
+- Two more mods gone, same idea. Create's milling recipes for Oh The Biomes We've Gone blocks and for Sophisticated Backpacks upgrades are now part of the pack, so those two addons no longer need installing. All 143 recipes are unchanged. As a bonus this clears a packaging problem: CurseForge marks both projects as not available for automatic download, so a fresh install could previously have refused them.
 - The sleep rule is now the pack's own. Half your players still need to be in bed to skip the night, exactly as before.
 
 ### Fixed
@@ -80,16 +91,6 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 ### Removed
 
 - Packet Fixer and Disconnect Packet Fix, replaced by Connectivity.
-
-## [Unreleased]
-
-### Added
-
-### Changed
-
-### Fixed
-
-### Removed
 
 ## [0.1.22] - 2026-09-30
 

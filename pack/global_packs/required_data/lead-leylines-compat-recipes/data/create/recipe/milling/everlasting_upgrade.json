@@ -1,0 +1,22 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:everlasting_upgrade"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:nether_star"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:end_crystal"
+    },
+    {
+      "id": "sophisticatedbackpacks:upgrade_base"
+    }
+  ]
+}

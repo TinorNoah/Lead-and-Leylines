@@ -1,0 +1,18 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:stack_upgrade_tier_1"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:iron_block"
+    },
+    {
+      "id": "sophisticatedbackpacks:stack_upgrade_starter_tier"
+    }
+  ]
+}

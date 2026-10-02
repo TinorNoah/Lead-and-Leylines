@@ -22,11 +22,11 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Food](food.md) | 15 | Kitchens and cooking, including the food addons that other mods bring (Ars Nouveau, Twilight Forest, Jaden's Nether Expansion). |
 | [Farming](farming.md) | 6 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
-| [Storage](storage.md) | 27 | Backpacks, chests, and trash. |
+| [Storage](storage.md) | 26 | Backpacks, chests, and trash. |
 | [Applied Energistics](applied-energistics.md) | 29 | ME storage and autocrafting. |
 | [Refined Storage](refined-storage.md) | 8 | Disks, grids, autocrafting, and the addons that extend them, including the wireless crafting grid. |
 | [Mekanism](mekanism.md) | 13 | Machines, factories, gases, and tools. |
-| [Create](create.md) | 33 | Contraptions and kinetics, including trains. |
+| [Create](create.md) | 32 | Contraptions and kinetics, including trains. |
 | [Automation](automation.md) | 14 | Extra machine mods beside Create and Mekanism. |
 | [Transport](transport.md) | 15 | Fast travel, item pipes, and routers. |
 | [Resources](resources.md) | 6 | Ores, unification, and chemistry. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 22 | Shared libraries used by more than one mod family. |
 
-594 entries, each listed once.
+592 entries, each listed once.

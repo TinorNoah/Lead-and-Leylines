@@ -1,0 +1,23 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "sophisticatedbackpacks:upgrade_base"
+    }
+  ],
+  "processing_time": 50,
+  "results": [
+    {
+      "count": 2,
+      "id": "minecraft:string"
+    },
+    {
+      "count": 2,
+      "id": "minecraft:iron_ingot"
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:leather"
+    }
+  ]
+}
