@@ -3190,7 +3190,7 @@ metafile = true
 
 [[files]]
 file = "mods/overgeared-universal-compatibility.pw.toml"
-hash = "d485a8b034abd7cfb5e0210e3f72906e2b6df52cacb91355bbec017b7e6e8d81"
+hash = "e0f99a7c973efbbef9d6beae7d176f1df8caa6467780dd23061861a55472512b"
 metafile = true
 
 [[files]]
@@ -3455,7 +3455,7 @@ metafile = true
 
 [[files]]
 file = "mods/simply-more.pw.toml"
-hash = "366abe0451afc7f9ce00a1ca991cb1fe481573e3c6ff6d5c0085ee86852a1298"
+hash = "e0a187e6274c8ce93c08cf5c8b3f9efa772fcd49fcdcae17377f40df1a3a31dc"
 metafile = true
 
 [[files]]
