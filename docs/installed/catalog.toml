@@ -615,7 +615,6 @@ mods = [
   { file = "infinity-drives.pw.toml", blurb = "Infinite water, lava, and cobblestone drives.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "cable-tiers.pw.toml", blurb = "Faster cables.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "schematic-energistics.pw.toml", blurb = "Schematic cannon linked to the network.", tags = ["addon", "tech", "storage", "ae2"] },
-  { file = "pattern-converter.pw.toml", blurb = "Converts patterns between AE2 and Refined Storage.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
@@ -715,7 +714,6 @@ intro = """Extra machine mods beside Create and Mekanism. Pipes and routers are 
 name = "Modern Industrialization"
 mods = [
   { file = "industrialization-overdrive.pw.toml", blurb = "Extra Modern Industrialization machines.", tags = ["addon", "tech", "modern-industrialization"] },
-  { file = "modern-industrialization-extended-integrations.pw.toml", blurb = "MI hatches that draw from Create stress and similar sources.", tags = ["addon", "tech", "modern-industrialization", "create"] },
   { file = "modern-industrialization.pw.toml", blurb = "A separate factory tech tree.", tags = ["core", "tech", "modern-industrialization", "world-data"] },
   { file = "extended-industrialization.pw.toml", blurb = "Extra Modern Industrialization machines.", tags = ["addon", "tech", "modern-industrialization", "world-data"] },
   { file = "solar-industrialization.pw.toml", blurb = "Solar panels for Modern Industrialization.", tags = ["addon", "tech", "modern-industrialization"] },

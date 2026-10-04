@@ -21,8 +21,13 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 ### Fixed
 
 - Three of the seven broken tags behind the "some tags are a bit cooked" startup error are fixed. Twilight's Flavors & Delight was shipping recipes and tag entries for foods it only registers when Neapolitan is installed, so `farmersdelight:snacks`, `farmersdelight:sweets`, and `diet:sugars` never resolved. The warning still names four other tags, all upstream bugs in other mods, so the chat error can still appear on join until those are handled separately.
+- Global Packs no longer loads the `resourcepacks/` folder as a data pack. Those are client resource pack zips, so the entry did nothing except make Global Packs re-resolve the whole client pack folder on every data sync.
+- Dropped two dead `alexsmobs` entries from the Apotheosis bow loot-category overrides. Alex's Mobs is not in the pack, so each one logged a data-map ERROR on every boot.
 
 ### Removed
+
+- Pattern Converter. Its Integrated Dynamics converter style pointed at `integrateddynamics` textures the pack does not have, which logged missing-texture warnings on every resource reload.
+- Modern Industrialization Extended Integrations. It added MI-style hatches to Mekanism, PneumaticCraft and Create machines, but shipped 23 block loot tables for hatch items that Modern Industrialization does not register, so every boot logged a loot-table parse error and those hatch blocks dropped nothing when broken.
 
 ## [0.1.24] - 2026-10-03
 

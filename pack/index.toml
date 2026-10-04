@@ -18,7 +18,7 @@ hash = "e8a9765227148e6008255c5be7df4068dcd53f3c0aeeeaa49fcf381f2ef9e6df"
 
 [[files]]
 file = "config/global_packs.toml"
-hash = "88f20a87314571a2254cd4238b756a1b28d50c40d33e19914f4c7cf6cceddf91"
+hash = "ce813154b121486e0793530cef136c4293bb10d19e12d4c123471df331d89d61"
 
 [[files]]
 file = "config/iceandfire/iaf-common.json"
@@ -3026,7 +3026,7 @@ hash = "663f9a1e09053c0a5371d30f8220b9ff27aaea710c27e0b8ec59fb34f36df535"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/apotheosis/data_maps/item/loot_category_overrides.json"
-hash = "ec8d9f21801ad4aaada2d5d8d0647062a3ae8c3d1294685848566d27ad3fdb6b"
+hash = "639ed6d6e6ecb87d6c1c0acf86de38eff1af77ba470ac23cb1c2f660f93b9887"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/armageddon_mod/recipe/bsotlh_duplication_recipe.json"
@@ -5853,11 +5853,6 @@ hash = "0ba21332abb8b6e807d9ea24fb842a9bdb6c46cc0a1c591c8eb05546c0aac607"
 metafile = true
 
 [[files]]
-file = "mods/modern-industrialization-extended-integrations.pw.toml"
-hash = "a4d38716541536e057250c826a41135cbdcd91c144b028e15d209e43f13cca9c"
-metafile = true
-
-[[files]]
 file = "mods/modern-industrialization-structure-viewer.pw.toml"
 hash = "10549fdce71a47c0100e11805025b3511441cdc88d203d24fa5c5325408e7f3c"
 metafile = true
@@ -6090,11 +6085,6 @@ metafile = true
 [[files]]
 file = "mods/patchouli.pw.toml"
 hash = "3718e8a37d0dc2939cc350cce74bcb9c36b59f48baf4560e62804f7ca6478185"
-metafile = true
-
-[[files]]
-file = "mods/pattern-converter.pw.toml"
-hash = "ddc9b39686bddf18e08a57ad64d7f92a2eb22ab1212bce1285b732ab9b4e89bd"
 metafile = true
 
 [[files]]

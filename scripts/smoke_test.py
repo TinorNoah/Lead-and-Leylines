@@ -212,16 +212,34 @@ def server_command(work: Path, java: str, memory_mb: int) -> list[str]:
     """Dedicated boot: run.sh on Unix; Java + win_args.txt on Windows (no WSL)."""
     if os.name != "nt":
         return ["bash", "run.sh"]
-    matches = list(work.glob("libraries/net/neoforged/neoforge/*/win_args.txt"))
+    matches = sorted(work.glob("libraries/net/neoforged/neoforge/*/win_args.txt"))
     if not matches:
         raise SystemExit("missing win_args.txt; NeoForge is not installed yet")
-    win_args = matches[0].relative_to(work).as_posix()
+    pinned = None
+    stamp = work / ".neoforge-version"
+    if stamp.is_file():
+        pinned = stamp.read_text(encoding="utf-8").strip()
+    wanted = [m for m in matches if m.parent.name == pinned] if pinned else []
+    if wanted:
+        win_args = wanted[0]
+    elif len(matches) == 1:
+        win_args = matches[0]
+    else:
+        raise SystemExit(
+            f"work dir has several NeoForge installs ({', '.join(m.parent.name for m in matches)}) "
+            f"and none matches the pinned {pinned!r}; delete {work / 'libraries/net/neoforged/neoforge'} "
+            "and rerun so the installer lays down the pinned version"
+        )
+    if pinned and win_args.parent.name != pinned:
+        raise SystemExit(
+            f"refusing to boot NeoForge {win_args.parent.name} while the pack pins {pinned}"
+        )
     return [
         java,
         "-Xms128M",
         f"-Xmx{memory_mb}M",
         "@user_jvm_args.txt",
-        f"@{win_args}",
+        f"@{win_args.relative_to(work).as_posix()}",
         "nogui",
     ]
 

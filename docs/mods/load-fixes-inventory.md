@@ -167,7 +167,7 @@ See short summary in [configs.md](configs.md) “Orphan loot tables”.
 | --- | --- |
 | Was | `pack/mods/apothic-category-compat.pw.toml` → `apothic_compat-2.0.2.jar` (CurseForge 1516278) |
 | Why | `data/apotheosis/data_maps/item/loot_category_overrides.json` hard-coded absent `alexscaves:*`, `cataclysm:*`, `undergarden:slingshot` → DataMapLoader ERROR every boot |
-| Kept in datapack | `lead-leylines-load-fixes/data/apotheosis/data_maps/item/loot_category_overrides.json` with only in-pack bows: `alexsmobs:hemolymph_blaster`, `alexsmobs:blood_sprayer`, `born_in_chaos_v1:pumpkinhandgun`, `twilightforest:block_and_chain`, `twilightforest:cube_of_annihilation` |
+| Kept in datapack | `lead-leylines-load-fixes/data/apotheosis/data_maps/item/loot_category_overrides.json` with only in-pack bows: `born_in_chaos_v1:pumpkinhandgun`, `twilightforest:block_and_chain`, `twilightforest:cube_of_annihilation`. The two `alexsmobs:*` entries were dropped on 2026-10-04 when Alex's Mobs left the pack; they were the same class of dead reference this row exists to prevent, and NeoForge's `DataMapLoader` logged an ERROR for each one every boot. |
 | Lost with jar | Affix blacklist config (`apothic_compat-common.toml` / `/ac reload`) — use Apotheosis datapacks if you need that again |
 | Deferred note | [deferred.md](deferred.md) |
 | Re-add? | Only if upstream drops soft-dep rows **or** those mods join the pack |
