@@ -3205,34 +3205,6 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/m
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
 [[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/aurora_cake_slice.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/glacier_cake_slice.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/phytochemical_cake_slice.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/neapolitan/torchberry_cake_slice.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/rainbow_ice_cream.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/refreshing_ice_cream.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-load-fixes/data/twilightdelight/recipe/twilight_ice_cream.json"
-hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
-
-[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/unusualend/recipe/blob_stew_farmer_delight.json"
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
@@ -3866,22 +3838,6 @@ hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-orphan-loot/data/spawn/loot_table/archaeology/anthill.json"
-hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/aurora_cake.json"
-hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/glacier_cake.json"
-hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/phytochemical_cake.json"
-hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
-
-[[files]]
-file = "global_packs/required_data/lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/torchberry_cake.json"
 hash = "aaf87d1508595df0157e537486510d4cee8e5cfdde0144df0a5c51bfa9795e0a"
 
 [[files]]
@@ -5989,6 +5945,11 @@ metafile = true
 [[files]]
 file = "mods/natures-compass.pw.toml"
 hash = "2e9a8daaa0e0cc9cdfb67422e0f928f2db6a1f2984b8636eb2b5091c5fb23e29"
+metafile = true
+
+[[files]]
+file = "mods/neapolitan.pw.toml"
+hash = "55ff0b12591e858a83633b5dc788464c908375a79e4043ac11b3518a776cc358"
 metafile = true
 
 [[files]]

@@ -35,13 +35,8 @@ Each row: **delete the override** only after the “Fix later” condition is tr
 | `jadensnetherexpansiondelight:red_scale_fungus_roll` | Unknown item `netherexp:red_scale_fungus` | `…/red_scale_fungus_roll.json` | Same |
 | `cbc_at:munition/rocket/rocket_fuzing` | Unknown recipe serializer `cbc_at:rocket_munition_fuzing` | `…/cbc_at/recipe/munition/rocket/rocket_fuzing.json` | CBC Advanced Technologies update that registers the serializer, or remove the recipe from that mod |
 | `spectrum:mod_integration/gobber/anvil_crushing/globette_nether_from_buds` | Gobber soft-dep JSON missing `levels` / broken shape | `…/spectrum/recipe/mod_integration/gobber/anvil_crushing/globette_nether_from_buds.json` | Add Gobber **and** a Spectrum build that ships a valid recipe, or leave disabled (Gobber not in pack) |
-| `twilightdelight:neapolitan/aurora_cake_slice` | Unknown item `twilightdelight:aurora_cake_slice` (Neapolitan bridge) | `…/twilightdelight/recipe/neapolitan/aurora_cake_slice.json` | Add Neapolitan **or** Twilight Delight build that registers cake-slice items without it |
-| `twilightdelight:neapolitan/glacier_cake_slice` | Unknown `twilightdelight:glacier_cake_slice` | `…/glacier_cake_slice.json` | Same |
-| `twilightdelight:neapolitan/phytochemical_cake_slice` | Unknown `twilightdelight:phytochemical_cake_slice` | `…/phytochemical_cake_slice.json` | Same |
-| `twilightdelight:neapolitan/torchberry_cake_slice` | Unknown `twilightdelight:torchberry_cake_slice` | `…/torchberry_cake_slice.json` | Same |
-| `twilightdelight:rainbow_ice_cream` | Ingredient parse; refs Neapolitan ice cream items | `…/rainbow_ice_cream.json` | Add Neapolitan + matching Twilight Delight recipes |
-| `twilightdelight:refreshing_ice_cream` | Same family | `…/refreshing_ice_cream.json` | Same |
-| `twilightdelight:twilight_ice_cream` | Refs `neapolitan:strawberry_ice_cream` | `…/twilight_ice_cream.json` | Same |
+
+The seven `twilightdelight` Neapolitan-bridge recipes (`neapolitan/{aurora,glacier,phytochemical,torchberry}_cake_slice`, `rainbow_ice_cream`, `refreshing_ice_cream`, `twilight_ice_cream`) used to be listed here as unknown-item failures. **Resolved 2026-10-04 by installing Neapolitan 6.0.1** (CurseForge 382016 / 7119475); the overrides are deleted and the recipes are live again. Root cause was upstream: Twilight's Flavors & Delight 3.2.3 registers those items only behind `isLoaded("neapolitan")` but ships its recipes, tags, and loot tables unconditionally. See the manifest wave note.
 
 ### Malformed 1.21 ingredient JSON (`item` vs `id` / cutting format)
 
@@ -147,12 +142,10 @@ Path prefix: `pack/global_packs/required_data/lead-leylines-orphan-loot/data/`.
 | `createdieselgenerators:blocks/andesite_girder_strut` | `createdieselgenerators:andesite_girder_strut` | CDG update that registers the block |
 | `farmers_spell:rewards/foodgeist_satisfied` | `irons_spellbooks:ink_epic` | Iron’s Spellbooks id rename / Farmers Spell update |
 | `spawn:archaeology/anthill` | `spawn:roly_poly` | Spawn update that registers roly poly |
-| `twilightdelight:blocks/aurora_cake` | `twilightdelight:aurora_cake_slice` | Same Neapolitan / TD fix as recipes |
-| `twilightdelight:blocks/glacier_cake` | `twilightdelight:glacier_cake_slice` | Same |
-| `twilightdelight:blocks/phytochemical_cake` | `twilightdelight:phytochemical_cake_slice` | Same |
-| `twilightdelight:blocks/torchberry_cake` | `twilightdelight:torchberry_cake_slice` | Same |
 | `unusualend:blocks/celestial_fluid` | `unusualend:celestial_fluid` | Unusual End update |
 | `unusualend:blocks/warped_endstone_sprouts` | `unusualend:warped_endstone_sprouts` | Unusual End update |
+
+Four `twilightdelight:blocks/{aurora,glacier,phytochemical,torchberry}_cake` tables were also emptied in this batch because the matching `twilightdelight:*_cake_slice` items never registered. **Removed 2026-10-04** — Neapolitan 6.0.1 makes them register, so the `minecraft:empty` overrides are deleted and the cakes drop their slices again.
 
 ### Older orphan-loot (still present)
 
@@ -202,13 +195,27 @@ From the same audit — not silenced by datapack:
 - Patchouli BetterEnd / BetterNether books (`use_resource_pack` false)
 - KubeJS `mbtool` plugin ClassNotFound
 - My Nether’s Delight `minersdelight:cup_variant` WARN (Miner's Delight not installed)
-- Mass `Entity … has no attributes` log noise
+- Mass `Entity … has no attributes` log noise (now includes `neapolitan:chimpanzee` and `neapolitan:plantain_spider`; this is the normal pack-wide pattern, roughly 470 lines, not a Neapolitan defect)
 - Optional mixin soft-deps (Copycats+, Scorched Guns, FramedBlocks, AE2LT, …)
+
+### Broken tags still logging (2026-10-04)
+
+LMFT 1.1.1+1.21.9 mixes into `TagLoader.tryBuildTag`, so it logs entries that fail to resolve and then reports `It seems that some tags are a bit cooked` instead of letting the tag throw. Installing Neapolitan cleared three of the seven. Four remain, in descending order of value:
+
+| Tag (as LMFT prints it) | Real file | Bad entries | Fix |
+| --- | --- | --- | --- |
+| `blueprint:generates_overrides` | `data/blueprint/tags/trim_material/generates_overrides.json` (Unusual End 2.3.1b) | `prismalite_gem`, `shiny_crystal`, `citrine_chunk`, `pearlescent_ingot` | **Real fix available, not yet applied.** Blueprint 8.2.0 declares this a `TagKey<TrimMaterial>` — the 1.21.9 *registry* tag — but Unusual End writes plain item IDs. Unusual End does ship the correct registry entries: `unusualend:citrine_material`, `pearlescent_material`, `prismatic_material`, `shiny_material`. A 4-line datapack file with `"replace": true` and those IDs is the whole fix; single contributor, so the snapshot risk is nil. |
+| `farmersdelight:pies` | `data/farmersdelight/tags/block/pies.json` (Ars Delight 2.2.2) | `arsdelight:dawnberry_pie`, `arsdelight:lightchee_pie` | Same root cause as the emptied `arsdelight:blocks/dawnberry_pie` loot table above — those two blocks never register. Needs an Ars Delight build that registers them. A `"replace": true` restating the 9 valid entries (4 Farmer's Delight + 5 Ars Delight) would silence it at the cost of a 2-contributor snapshot. |
+| `minecraft:rabbit_food` | `data/minecraft/tags/item/rabbit_food.json` (Pam's Harvest Crops 1.0.9) | `pamhc2crops:_blackberryitem` | **Upstream typo, leave it.** The jar literally contains `"pamhc2crops: blackberryitem"` — a space where the `:` belongs. Not worth a 58-entry snapshot of a vanilla tag to add one berry to rabbit food. |
+| `apothic_pointblank:gun/small_arms` | `data/apothic_pointblank/tags/item/gun/small_arms.json` | `pointblank:mk23` | Stale tag: Point Blank 2.2.0 has no `mk23` id at all. Harmless; a 46-entry snapshot to drop one line is not worth it. |
+
+Also worth knowing: LMFT's in-game error can be silenced without touching any of this, either with `-Dlmft.disable_error_output=true` in `pack/user_jvm_args.txt` or `"disableIngameError": true` in its generated config. That only hides the chat message and the summary ERROR — the WARN lines stay in `latest.log`.
 
 ---
 
 ## Suggested restore order
 
-1. **Safe content adds:** Neapolitan (unlocks Twilight Delight ice cream / cake slice recipes + cake loot), Dye Depot (Create Connected fan catalysts), AE2LT / Extended Terminal (Universal Press recipes) — each needs a normal mod research + install approval.
+1. **Safe content adds:** ~~Neapolitan~~ **done 2026-10-04** (CurseForge 382016 / 7119475). Still open: Dye Depot (Create Connected fan catalysts), AE2LT / Extended Terminal (Universal Press recipes) — each needs a normal mod research + install approval.
 2. **Upstream waits:** Unusual End Delight/cutting recipes, TF DNV tables, Create Shimmer castle doors, Create Deco placard, CBC-AT moulds/fuzing, Spectrum honey titration, Armageddon stack-2, Jaden fungus rolls, CDG girder strut, Spawn roly poly, Unusual End block loot.
 3. **Do not re-add casually:** Apothic Category Compat, Evolved Mekanism / ProjectE just to clear old orphan loot.
+4. **Cheap real fix, not yet applied:** the `blueprint:trim_material/generates_overrides` override in the table above. It is a genuine Blueprint/Unusual End wiring bug, it is 4 lines, and it has no snapshot downside — unlike the other three.

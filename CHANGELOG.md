@@ -13,9 +13,14 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+- Neapolitan, a food mod of flavored ice creams, milkshakes, and cakes, each flavor with its own effect, plus the strawberry fields biome and chimpanzees and plantain spiders that live in it.
+- Twilight's Flavors & Delight now has all of its food. Aurora, glacier, phytochemical, and torchberry cake slices, and the ice creams and milkshakes built on them, were missing because that mod only creates them when Neapolitan is installed. They are craftable now, and the flavored cakes drop their slices again.
+
 ### Changed
 
 ### Fixed
+
+- Three of the seven broken tags behind the "some tags are a bit cooked" startup error are fixed. Twilight's Flavors & Delight was shipping recipes and tag entries for foods it only registers when Neapolitan is installed, so `farmersdelight:snacks`, `farmersdelight:sweets`, and `diet:sugars` never resolved. The warning still names four other tags, all upstream bugs in other mods, so the chat error can still appear on join until those are handled separately.
 
 ### Removed
 
