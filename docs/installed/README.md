@@ -23,11 +23,11 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Farming](farming.md) | 6 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
 | [Storage](storage.md) | 26 | Backpacks, chests, and trash. |
-| [Applied Energistics](applied-energistics.md) | 29 | ME storage and autocrafting. |
+| [Applied Energistics](applied-energistics.md) | 28 | ME storage and autocrafting. |
 | [Refined Storage](refined-storage.md) | 8 | Disks, grids, autocrafting, and the addons that extend them, including the wireless crafting grid. |
 | [Mekanism](mekanism.md) | 13 | Machines, factories, gases, and tools. |
 | [Create](create.md) | 32 | Contraptions and kinetics, including trains. |
-| [Automation](automation.md) | 14 | Extra machine mods beside Create and Mekanism. |
+| [Automation](automation.md) | 13 | Extra machine mods beside Create and Mekanism. |
 | [Transport](transport.md) | 15 | Fast travel, item pipes, and routers. |
 | [Resources](resources.md) | 6 | Ores, unification, and chemistry. |
 | [Building](building.md) | 30 | Building tools and decoration. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 22 | Shared libraries used by more than one mod family. |
 
-592 entries, each listed once.
+590 entries, each listed once.

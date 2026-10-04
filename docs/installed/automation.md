@@ -9,7 +9,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Industrialization Overdrive | `industrialization_overdrive-1.14.0+1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization` | Extra Modern Industrialization machines. |
-| Modern Industrialization Extended Integrations | `miei-1.21.1-1.0.2.jar` | both | `addon`, `tech`, `modern-industrialization`, `create` | MI hatches that draw from Create stress and similar sources. |
 | Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | `core`, `tech`, `modern-industrialization`, `world-data` | A separate factory tech tree. |
 | Extended Industrialization | `extended-industrialization-1.16.2-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `world-data` | Extra Modern Industrialization machines. |
 | Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech`, `modern-industrialization` | Solar panels for Modern Industrialization. |

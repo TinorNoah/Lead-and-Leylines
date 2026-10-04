@@ -49,7 +49,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Not Enough Patterns | `nep-1.21.1-0.5.1.jar` | both | Pattern providers for other mods' machines. |
 | Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | both | Infinite water, lava, and cobblestone. World data. |
 | AE2 Utility | `ae2utility-1.8.0.jar` | both | Pull from the ME network; one-click patterns. |
-| Pattern Converter | `patternconverter-1.0.0.jar` | both | AE2 and Refined Storage pattern conversion. World data. |
 | AE2 Universal Press | `ae_universal_press-2.1.1-neoforge-1.21.1.jar` | both | One press for every processor. World data. |
 | Refined Storage | `refinedstorage-neoforge-2.0.9.jar` | both | RS 2. World data. |
 | Quartz Arsenal | `refinedstorage-quartz-arsenal-neoforge-1.0.8.jar` | both | Wireless crafting grid. Replaces RS Addons. |

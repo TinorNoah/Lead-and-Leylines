@@ -32,7 +32,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Infinity Drives | `infinitystorage-1.21.1-1.0.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Infinite water, lava, and cobblestone drives. |
 | Cable Tiers | `cabletiers-neoforge-1.21.1-0.6.14.jar` | both | `addon`, `tech`, `storage`, `ae2` | Faster cables. |
 | Schematic Energistics | `schematicenergistics-1.21.1-1.5.4a.jar` | both | `addon`, `tech`, `storage`, `ae2` | Schematic cannon linked to the network. |
-| Pattern Converter | `patternconverter-1.0.0.jar` | both | `addon`, `tech`, `storage`, `ae2` | Converts patterns between AE2 and Refined Storage. |
 | Applied Mekanistics | `Applied-Mekanistics-1.6.3.jar` | both | `addon`, `tech`, `storage`, `ae2`, `mekanism` | Mekanism machines on ME networks. |
 | Applied Flux | `AppliedFlux-1.21-2.1.6-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |

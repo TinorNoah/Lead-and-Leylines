@@ -14,6 +14,13 @@ log_pack_ids = false
 
 # This config allows you to add or remove folders or single files as Data-/Resourcepacks
 # For that simply specify the file path to the folder/file relative to your <instance> folder
+#
+# The 13 zips below log a FileAlreadyExistsException each launch: Global Packs calls
+# Files.createDirectories() on every path it is handed, and these are files, not folders. The
+# packs still register and load, so the errors are cosmetic. Do not "fix" them by pointing the
+# packwiz filename at global_packs/required_resources/ instead: packwiz's CurseForge export does
+# not emit an overrides entry for them, CurseForge installs texture packs into resourcepacks/ by
+# its own rule, and the folder entry here would then enable only lead-leylines-armageddon-models.
 [resourcepacks]
 required = [
     "global_packs/required_resources/",
@@ -38,7 +45,6 @@ enable_builtin = []
 [datapacks]
 required = [
     "datapacks/",
-    "resourcepacks/",
     "global_packs/required_data/"
 ]
 
