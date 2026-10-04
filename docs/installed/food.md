@@ -18,6 +18,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Autochef's Delight | `AutochefsDelight-1.21.1-NeoForge-2.0.3.jar` | both | `addon`, `food`, `farmers-delight` | Automated cooking. |
 | Barbeque's Delight [Forge/NeoForge] | `barbequesdelight-1.3.0.jar` | both | `addon`, `food`, `farmers-delight` | Grill foods. |
 
+## Neapolitan
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Neapolitan | `neapolitan-1.21.1-6.0.1.jar` | both | `core`, `food` | Flavored ice creams, milkshakes, and cakes, plus the strawberry fields biome. Also unlocks Twilight's Flavors & Delight's flavored desserts. |
+
 ## Hunger and health
 
 | Mod | File | Side | Tags | What it adds |

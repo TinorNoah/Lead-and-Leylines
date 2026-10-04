@@ -379,7 +379,7 @@ intro = """End biomes and the End expansion. The rebuilt central dragon-fight is
 name = "The End"
 mods = [
   { file = "unusual-end.pw.toml", blurb = "End biomes, mobs, and structures.", tags = ["core", "worldgen", "end", "world-data"] },
-  { file = "blueprint.pw.toml", blurb = "Library Unusual End needs.", tags = ["library", "worldgen", "end"] },
+  { file = "blueprint.pw.toml", blurb = "Library Unusual End and Neapolitan need.", tags = ["library", "worldgen", "end"] },
   { file = "nullscape.pw.toml", blurb = "End islands and biome look.", tags = ["core", "worldgen", "end", "world-data"] },
   { file = "betterend-neoforge.pw.toml", blurb = "BetterEnd biomes, mobs, and gear. Shares New Dawn libs with BetterNether.", tags = ["core", "worldgen", "end", "world-data"] },
   { file = "yungs-better-end-island-neoforge.pw.toml", blurb = "Rebuilt the central End island dragon fight.", tags = ["addon", "structure", "worldgen", "end", "yungs", "world-data"] },
@@ -481,6 +481,12 @@ mods = [
   { file = "twilights-flavors-delight.pw.toml", blurb = "Twilight Forest foods.", tags = ["addon", "food", "farmers-delight", "twilight-forest"] },
   { file = "autochefs-delight.pw.toml", blurb = "Automated cooking.", tags = ["addon", "food", "farmers-delight"] },
   { file = "barbeques-delight.pw.toml", blurb = "Grill foods.", tags = ["addon", "food", "farmers-delight"] },
+]
+
+[[category.group]]
+name = "Neapolitan"
+mods = [
+  { file = "neapolitan.pw.toml", blurb = "Flavored ice creams, milkshakes, and cakes, plus the strawberry fields biome. Also unlocks Twilight's Flavors & Delight's flavored desserts.", tags = ["core", "food"] },
 ]
 
 [[category.group]]

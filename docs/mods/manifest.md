@@ -692,6 +692,20 @@ Two of the five requested mods did not ship. Both were installed first, on expli
 
 The Oritech Things license ambiguity was **not** a rejection reason; the user accepted it explicitly. See Credits.
 
+## 2026-10-04 Twilight Delight Neapolitan bridge wave
+
+Added to fix Twilight's Flavors & Delight shipping data for content it only registers when Neapolitan is present. Not a "more desserts" decision — see the note under the table.
+
+| Mod | Pinned file | Source | `side` | Category | Why | Required deps | Config | Date added |
+|---|---|---|---|---|---|---|---|---|
+| Neapolitan | `neapolitan-1.21.1-6.0.1.jar` | CurseForge 382016 / 7119475 | both | content | **Fixes missing Twilight's Flavors & Delight content.** Also brings its own ice creams, milkshakes, cakes, the `neapolitan:strawberry_fields` biome, chimpanzees, and plantain spiders. World data — hard to remove later. **Abnormals License (ARR)**, see Credits. 7 server mixins with `required: true` / `defaultRequire: 1`, including `LivingEntityMixin` and `ItemMixin`; smoke test is the only real proof. `client_side`/`server_side` are both `required` on Modrinth, hence `side = both`. | Blueprint `[8.0.6,)` (have 8.2.0); Minecraft `[1.21.1]`; NeoForge `[21.1.160,)` (have 21.1.252) — **no ecosystem bump**. Farmer's Delight is soft-compat, not required. | defaults (`config/neapolitan-common.toml`: `blocks.strawberry_bush`, `mobs.chimpanzee`, `mobs.plantain_spider`, `worldgen.suspicious_banana_plant`) | 2026-10-04 |
+
+**Why Neapolitan and not a datapack patch.** Twilight's Flavors & Delight 3.2.3 gates `NeapolitanCakes` and `NeapolitanFood` behind `isLoaded("neapolitan")` (`TwilightDelight.class`, `TagGen.class`; `NeapolitanFoodType extends Neapolitan's IFoodType`, `TDIceCreamItem extends IceCreamItem`) while shipping its tags, recipes, and loot tables unconditionally — an upstream bug. LMFT 1.1.1 logged it as 3 unresolvable tags on every boot: `farmersdelight:item/snacks`, `farmersdelight:item/sweets`, and `diet:item/sugars`, ending in the `It seems that some tags are a bit cooked` error. Neapolitan is the only thing that makes those 15 items register. A tag override could have silenced the log but would have left the content missing and frozen a snapshot of Farmer's Delight's tags.
+
+Restored by this change: 7 disabled recipes under `lead-leylines-load-fixes/data/twilightdelight/recipe/` (`neapolitan/{aurora,glacier,phytochemical,torchberry}_cake_slice`, `rainbow_ice_cream`, `refreshing_ice_cream`, `twilight_ice_cream`) and 4 emptied loot tables under `lead-leylines-orphan-loot/data/twilightdelight/loot_table/blocks/`. `python scripts/smoke_test.py --skip-bench --memory 8192` passes, all three tag warnings are gone, and the restored recipes and loot tables parse without error. Neapolitan's own two `has no attributes` log lines join the existing pack-wide noise of roughly 470 such lines (already tracked in `load-fixes-inventory.md`).
+
+**Still unverified:** `neapolitan:strawberry_fields` is injected as a *vanilla* datapack biome (tagged `c:is_plains` and `c:is_rare`, and spliced into the mineshaft / ruined portal / trial chamber biome tags) on a TerraBlender `overworld_region_size = 6` + Terralith pack. A boot-only smoke test cannot show terrain. Check the biome on a real generated chunk before treating this as settled. Note the pack's `lead-leylines-large-climate` datapack overrides `minecraft/worldgen/noise/temperature.json` and `vegetation.json` rather than listing biomes, so the new biome inherits the pack's climate points with no datapack edit — that part is fine.
+
 ## Credits / Attribution
 
 | Mod | Author / project | License note | Required credit |
@@ -732,6 +746,9 @@ The Oritech Things license ambiguity was **not** a rejection reason; the user ac
 | Cerulean | Txni | GPL-3.0-only | CurseForge reference. |
 | Bye?Pregen! | MoePus | LGPL-3.0-only | CurseForge reference. |
 | The Twilight Forest | TeamTwilight | See CurseForge page | CurseForge reference. |
+| Neapolitan | TeamAbnormals (credits: bageldotjpg, five, Markus1002) | **Abnormals License 1.0 — "All Rights Reserved."** Modpack Clarification permits modpack inclusion provided the copy is an unmodified official download and it is marked as included in the Modpack. | **CurseForge reference only — never rehost the jar.** This row plus the `docs/installed` catalog entry is the "marked as included" half. Credit TeamAbnormals and the three credited authors. |
+| Unusual End | TeamAbnormals | **Abnormals License 1.0** — same terms as Neapolitan. Shipped since 2026-09-25 without a Credits row until now. | CurseForge reference only. Credit TeamAbnormals. |
+| Blueprint | TeamAbnormals | **Abnormals License 1.0** — same terms as Neapolitan. Shipped since 2026-09-25 without a Credits row until now. | CurseForge reference only. Credit TeamAbnormals. |
 | The Lost Cities | McJty | MIT | CurseForge reference. |
 | Lithostitched | Apollounknowndev | MIT | CurseForge reference. |
 | TerraBlender (NeoForge) | Glitchfiend | LGPL-3.0-only | CurseForge reference. Use project 940057, not Forge 563928. |

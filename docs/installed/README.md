@@ -19,7 +19,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [The Nether](nether.md) | 13 | Nether biomes, structures, and mobs. |
 | [The End](end.md) | 6 | End biomes and the End expansion. |
 | [Magic](magic.md) | 43 | Spell mods and their addons. |
-| [Food](food.md) | 15 | Kitchens and cooking, including the food addons that other mods bring (Ars Nouveau, Twilight Forest, Jaden's Nether Expansion). |
+| [Food](food.md) | 16 | Kitchens and cooking, including the food addons that other mods bring (Ars Nouveau, Twilight Forest, Jaden's Nether Expansion). |
 | [Farming](farming.md) | 6 | Pots and area harvest. |
 | [Seasons](seasons.md) | 5 | The season clock. |
 | [Storage](storage.md) | 26 | Backpacks, chests, and trash. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 22 | Shared libraries used by more than one mod family. |
 
-590 entries, each listed once.
+591 entries, each listed once.
