@@ -53,6 +53,19 @@ Two findings worth keeping:
 
 A caution learned the hard way: an early version of the check reported 55 of 63 as "all items resolve, re-enable candidates". It only matched `"item": "..."` and missed that 1.21.1 recipes put results and containers under `"id"`. The broken item in `jadensnetherexpansiondelight:blue_scale_fungus_roll` is in its `container`, so the tool would have recommended deleting a working override. The pattern now matches `item`, `id` and `fluid`.
 
+## TODO — deferred, not started
+
+**Revalidating the 63 recipe overrides needs boot tests, and none have been run.** Deferred at the user's request on 2026-10-05. Nothing here is blocking a release; the overrides are all still doing their job.
+
+State as of 2026-10-05 (`python scripts/audit_overrides.py --inventory --items`):
+
+- **0** overrides are re-enableable from files alone.
+- **1** (`ae_universal_press:overloadprocessorpress`) has upstream JSON that does not parse and can never work as shipped — it needs a rewrite, and only if AE Universal Press is kept at all, since its other two recipes are blocked on `ae2lt` and `extendedterminal`, mods this pack does not have.
+- **4** are blocked on a missing item that is still unresolvable.
+- **40** have a cause an item check cannot judge (malformed JSON, missing serializer, stale tag, or unrecorded).
+
+When someone picks this up: work the batch table below, one namespace per commit, `packwiz refresh` then `python scripts/smoke_test.py --skip-bench --memory 8192`, grep the log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`, and record the outcome here either way. Expected yield is low — the mods have not been updated since 2026-09-27.
+
 **Run the script first — it may remove the need for batches entirely.**
 
 ```
