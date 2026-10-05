@@ -45,6 +45,10 @@ file = "config/iceandfire/iaf-common.json"
 hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
 
 [[files]]
+file = "config/iris.properties"
+hash = "17103cadee9de0513fa3fdb8b23569b80126f51160888c8f1945890072b53ba9"
+
+[[files]]
 file = "config/modernfix-mixins.properties"
 hash = "fe63a4a10f620ea92b75479d256a3c85ae0a77ee47d1acca6bb7de08a31f6c33"
 

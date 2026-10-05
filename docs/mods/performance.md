@@ -86,6 +86,7 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Shader packs (BSL, Complementary, …) | Chosen | Complementary r5.9.3 + BSL v10.1.1 + Euphoria + Colorwheel. |
 | Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. Replaces Iris Flywheel Compat for Create + Iris. |
 | Iris Flywheel Compat | Dropped | Mixin conflict with Colorwheel (`irisflw` any); Colorwheel author will not fix it. |
+| Iris config | `pack/config/iris.properties` | Seven legacy keys pinned to Iris 1.8.14-beta.1's own generated values, so an Iris update cannot silently change shader state. The pack does **not** force `enableShaders=true` and leaves `shaderPack` empty so players pick their own from the four shipped packs. Do not copy ATM-10 here: it sets `enableShaders=true` and `allowUnknownShaders=true`, which are pack policy, not correctness. Iris 1.8.14 moved shadow distance and colour space into Sodium's config, so those are not in this file. |
 | Voxy, Voxy Server Side, Forgified Fabric API | Dropped | Distant LOD removed on request. Forgified Fabric API was only required by the local Voxy renderer. Do not re-add. |
 | Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Voxy is out. Do not add. |
 | voxy-forged (GitHub) | Dropped | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Do not build it into Prism. |
