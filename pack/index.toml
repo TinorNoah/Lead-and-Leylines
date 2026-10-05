@@ -1,12 +1,24 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/alltheleaks.json"
+hash = "fc5eabff6b6f88e723464cb7993cb7f9f9412a4510fda0945b03e9b338bdea48"
+
+[[files]]
 file = "config/apotheosis/apothic_enchanting.cfg"
 hash = "5c5ecc830a1aa834fce992f5001c390afd194d65796b94789d48970542f77192"
 
 [[files]]
 file = "config/bclib/client.json"
 hash = "da72cfb6d973948564bd4ce3c4ece839fb2f980b8895ee6253fbec9cac6749ec"
+
+[[files]]
+file = "config/c2me.toml"
+hash = "82ec6474f1451b705f1aaf3094e41075ee5e045f1e5a89b13f433b14a27bee86"
+
+[[files]]
+file = "config/chunksending.json"
+hash = "bd6d15b8e778eb337e6dc5680b44c90a8ba473a26011eecf50a88b7b3c2bf9df"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
@@ -17,12 +29,28 @@ file = "config/entity_model_features.json"
 hash = "e8a9765227148e6008255c5be7df4068dcd53f3c0aeeeaa49fcf381f2ef9e6df"
 
 [[files]]
+file = "config/ferritecore-mixin.toml"
+hash = "241cebd35259b5321701adfaf6d09677d5d1c94587ddb8b5efa225aeef78550e"
+
+[[files]]
+file = "config/fml.toml"
+hash = "7ae45a7cf511c42ec04ea49a8a93f2d533bec9dffa9fd6ac569d3e4754cbc2f5"
+
+[[files]]
 file = "config/global_packs.toml"
 hash = "ce813154b121486e0793530cef136c4293bb10d19e12d4c123471df331d89d61"
 
 [[files]]
 file = "config/iceandfire/iaf-common.json"
 hash = "8995d03ecbedd6f871c7d046bea13a33b548d35365766909dec878ea67cddb50"
+
+[[files]]
+file = "config/iris.properties"
+hash = "17103cadee9de0513fa3fdb8b23569b80126f51160888c8f1945890072b53ba9"
+
+[[files]]
+file = "config/modernfix-mixins.properties"
+hash = "fe63a4a10f620ea92b75479d256a3c85ae0a77ee47d1acca6bb7de08a31f6c33"
 
 [[files]]
 file = "config/structurify.json"
@@ -6295,11 +6323,6 @@ metafile = true
 [[files]]
 file = "mods/smithing-template-viewer.pw.toml"
 hash = "8586c264889ccec731f99cf52af7f078b6fbb47dfa105d6f7aa36c0fdcd9263a"
-metafile = true
-
-[[files]]
-file = "mods/smooth-chunk-save.pw.toml"
-hash = "75a42a9eba356b81f33bb160c5da533e7fdf90b478b43bc463d37264c47bcf4e"
 metafile = true
 
 [[files]]

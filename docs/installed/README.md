@@ -37,8 +37,8 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Recipes and overlays](info.md) | 31 | JEI, Jade, and tooltip frames. |
 | [Rendering](rendering.md) | 28 | Shaders, entity models, and client render optimizers. |
 | [Client](client.md) | 33 | Client-only comfort. |
-| [Performance](performance.md) | 22 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
+| [Performance](performance.md) | 21 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 22 | Shared libraries used by more than one mod family. |
 
-591 entries, each listed once.
+590 entries, each listed once.

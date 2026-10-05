@@ -1,0 +1,46 @@
+# NeoForge (FML) launch config — Lead and Leylines
+#
+# Pins loader-level launch behaviour so a future NeoForge default change cannot
+# silently alter it. Everything here except the two noted lines is also the
+# NeoForge 21.1.252 default, copied from a real first boot so this file is known
+# to parse. Loader version: pack/pack.toml [versions].
+#
+# Early window (854x480, fbScale 1) renders while the mod list initializes, so
+# the player sees a small window instead of a black screen during the ~85s boot.
+# NeoForge already defaults to these values; they are pinned here on purpose.
+earlyWindowProvider = "fmlearlywindow"
+earlyWindowWidth = 854
+earlyWindowHeight = 480
+earlyWindowFBScale = 1
+earlyWindowMaximized = false
+earlyWindowControl = true
+
+# Already the NeoForge default. Off the optimized data-fixer path on the client;
+# servers already have it disabled.
+disableOptimizedDFU = true
+
+# -1 means "derive from processor count" for early-init parallelism.
+maxThreads = -1
+
+# Per-mod config directory for server-side configs.
+defaultConfigPath = "defaultconfigs"
+
+# Filesystem watcher that hot-reloads a config when edited. Left on: it is a
+# development convenience, costs one watch, and turning it off breaks anyone
+# editing configs in an instance by hand.
+disableConfigWatcher = false
+
+# NeoForge global version check. Left ON (the loader default). ATM-10 sets this
+# false; that is a UX choice about suppressing the "new NeoForge available"
+# prompt, not a performance setting, so it is not copied here. Flip to false only
+# if the prompt itself becomes a complaint.
+versionCheck = true
+
+# Startup GL version blacklist for buggy drivers. Empty = no skipping.
+earlyWindowSkipGLVersions = []
+
+earlyWindowSquir = false
+
+# No dependency overrides. ATM-10 forces `allthetweaks = ["+bcc"]` here for its
+# own mod; nothing in this pack needs an override.
+dependencyOverrides = {}

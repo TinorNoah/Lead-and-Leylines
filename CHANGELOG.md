@@ -18,6 +18,10 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- Shaders now have a fixed starting configuration instead of whatever your launcher happens to write on first run. They are still off until you turn them on, and you still pick which pack to use from the four included.
+- The readme now says how much memory to give the game, and explains where that number comes from.
+- Model and texture loading now happens off the main thread while the game starts, so entering the world is less likely to stutter on this pack's resource packs. Every other performance setting stays on its mod default; this only pins the ones that were already tuned, so a mod update can no longer quietly change them.
+
 ### Fixed
 
 - Three of the seven broken tags behind the "some tags are a bit cooked" startup error are fixed. Twilight's Flavors & Delight was shipping recipes and tag entries for foods it only registers when Neapolitan is installed, so `farmersdelight:snacks`, `farmersdelight:sweets`, and `diet:sugars` never resolved. The warning still names four other tags, all upstream bugs in other mods, so the chat error can still appear on join until those are handled separately.
@@ -26,6 +30,7 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+- Smooth Chunk Save. Timed against the rest of the save stack it made chunk saves slower rather than faster, and did nothing to reduce lag spikes, so it was costing a little performance for no benefit.
 - Pattern Converter. Its Integrated Dynamics converter style pointed at `integrateddynamics` textures the pack does not have, which logged missing-texture warnings on every resource reload.
 - Modern Industrialization Extended Integrations. It added MI-style hatches to Mekanism, PneumaticCraft and Create machines, but shipped 23 block loot tables for hatch items that Modern Industrialization does not register, so every boot logged a loot-table parse error and those hatch blocks dropped nothing when broken.
 

@@ -32,7 +32,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Configurable | `configurable-3.5.2+1.21.1-neoforge.jar` | both | Required by Neruina. |
 | Clumps | `Clumps-neoforge-1.21.1-19.0.0.1.jar` | both | XP orb merge. |
 | AllTheLeaks | `alltheleaks-1.1.13+1.21.1-neoforge.jar` | both | Known leak patches. |
-| Smooth Chunk Save | `smoothchunk-1.21-4.1.jar` | both | Spreads chunk saves. Requires Cupboard. |
 | Cupboard | `cupboard-1.21.1-4.2.jar` | both | Required by Smooth Chunk Save. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | Client-side rendering skip work. |
 | Dynamic FPS | `dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar` | client | Lowers FPS when unfocused. File lists 1.21.1. |
@@ -66,7 +65,11 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
 | MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
-No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
+Optimizer configs are now committed under `pack/config/` and pinned to their own mod defaults so a mod update cannot silently change them: `modernfix-mixins.properties`, `fml.toml`, `alltheleaks.json`, `c2me.toml`, `chunksending.json`, `ferritecore-mixin.toml`. One real override: `mixin.perf.dynamic_resources=true`, unverified on a real client. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
+
+**Save path, measured.** `scripts/save_bench.py` times `save-all flush` and shutdown against one pre-generated world, 3 trials per configuration. On 1089 chunks at 8 GiB: no save mods 6609 ms flush / 296 ms P99; C2ME alone 3409 ms / 290 ms P99; Fast Async World Save alone 7646 ms / **90 ms** P99; Smooth Chunk Save alone 7339 ms / 292 ms P99. Every configuration wrote a byte-identical world with zero save errors, so reliability did not separate them. Consequences: **Smooth Chunk Save removed** (slower flush than nothing and no spike benefit). **Fast Async World Save kept** — the only save-path mod that cuts the worst tick spike, and it does so with C2ME off *and* on. **C2ME kept**, but note it is not a save-path mod: it is the whole chunk system (threaded chunkgen, async chunk IO, density-function compiler), and its flush win is a side effect of rewriting chunk IO. Do not re-add Smooth Chunk Save.
+
+Note that `scripts/smoke_test.py` cannot confirm this removal. Its CPS and boot numbers are dominated by machine load on this pack: on 2026-10-05, runs with the mod absent measured 129.0s / 13.5 CPS and 122.3s / 14.1 CPS, while a run with the mod present measured 121.3s / 10.9 CPS, so the mod is not what moved those numbers. `save_bench.py` is the tool for save-path questions because its trials run back-to-back against one fixed world.
 
 ## Considered / held / dropped
 
@@ -83,6 +86,7 @@ Full named-list skip reasons and the remaining 1.20.1 Forge mods: [deferred.md](
 | Shader packs (BSL, Complementary, …) | Chosen | Complementary r5.9.3 + BSL v10.1.1 + Euphoria + Colorwheel. |
 | Colorwheel / Colorwheel Patcher | Chosen | Shader companion; in with Euphoria. Replaces Iris Flywheel Compat for Create + Iris. |
 | Iris Flywheel Compat | Dropped | Mixin conflict with Colorwheel (`irisflw` any); Colorwheel author will not fix it. |
+| Iris config | `pack/config/iris.properties` | Seven legacy keys pinned to Iris 1.8.14-beta.1's own generated values, so an Iris update cannot silently change shader state. The pack does **not** force `enableShaders=true` and leaves `shaderPack` empty so players pick their own from the four shipped packs. Do not copy ATM-10 here: it sets `enableShaders=true` and `allowUnknownShaders=true`, which are pack policy, not correctness. Iris 1.8.14 moved shadow distance and colour space into Sodium's config, so those are not in this file. |
 | Voxy, Voxy Server Side, Forgified Fabric API | Dropped | Distant LOD removed on request. Forgified Fabric API was only required by the local Voxy renderer. Do not re-add. |
 | Roxy | Dropped | Translation layer for Fabric Voxy `0.2.16-beta` (Minecraft 1.21.11 jar). Voxy is out. Do not add. |
 | voxy-forged (GitHub) | Dropped | Unofficial NeoForge Voxy. ARR; no release jars; cannot go in packwiz. Do not build it into Prism. |
