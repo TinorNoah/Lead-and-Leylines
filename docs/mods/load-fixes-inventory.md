@@ -33,6 +33,26 @@ Some may be fixed upstream. `scripts/smoke_test.py` never loads a player in, so 
 
 Rules: one namespace per batch; max 10 recipes or 20 loot tables per batch; each batch is one commit so a failure is one `git revert`; `packwiz refresh` from `pack/` then `python scripts/smoke_test.py --skip-bench --memory 8192`; grep the resulting log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`; record every outcome below including "still broken".
 
+**What the script can and cannot settle (measured 2026-10-05)**
+
+`--inventory --items` reads each mod's original recipe and buckets all 63:
+
+| Bucket | Count | Meaning |
+|---|---|---|
+| STILL BLOCKED | 4 | Cause was a missing item and it is *still* unresolvable |
+| STILL BROKEN | 1 | The upstream JSON does not even parse, so it can never work as shipped |
+| UNKNOWN — needs a boot test | 40 | Cause was malformed JSON, a missing serializer, a stale tag, or was never recorded |
+| RE-ENABLE CANDIDATE | **0** | Nothing is re-enableable from files alone |
+
+Also note the 63 are not all recipes: **45 recipe, 7 tag, 5 worldgen, 2 data map, 2 loot modifier, 1 advancement, 1 neoforge data.** Item-existence analysis is only meaningful for the 45.
+
+Two findings worth keeping:
+
+- `ae_universal_press:overloadprocessorpress` — the upstream JSON is **malformed**, not merely referencing a missing item. It can never work without us rewriting it.
+- The four STILL BLOCKED recipes need mods we do not have (`ae2lt`, `extendedterminal`) or an item that still does not register (`netherexp:blue_scale_fungus`, `netherexp:red_scale_fungus`). Disabling them is correct today.
+
+A caution learned the hard way: an early version of the check reported 55 of 63 as "all items resolve, re-enable candidates". It only matched `"item": "..."` and missed that 1.21.1 recipes put results and containers under `"id"`. The broken item in `jadensnetherexpansiondelight:blue_scale_fungus_roll` is in its `container`, so the tool would have recommended deleting a working override. The pattern now matches `item`, `id` and `fluid`.
+
 **Run the script first — it may remove the need for batches entirely.**
 
 ```

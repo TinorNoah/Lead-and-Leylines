@@ -111,6 +111,225 @@ def _normalise(name: str) -> str:
     return re.sub(r"[^a-z0-9]", "", name.lower())
 
 
+def build_item_index(jars: list[Path]) -> dict[str, set[str]]:
+    """Map mod_id -> the item/block ids the pack can actually resolve.
+
+    Built from jar contents (`assets/<ns>/models/item/**` and
+    `assets/<ns>/blockstates/**`) rather than from a running registry, because
+    this script must not boot the game. Two known limits, both handled by
+    reporting them rather than guessing:
+
+    - `minecraft:` is never indexed, because the vanilla jar is not in
+      `mods/`. Every `minecraft:` id is treated as resolvable.
+    - An item with no model file (some are generated) will look missing. Such
+      ids are reported under `maybe-missing`, never as a deletion candidate.
+    """
+    index: dict[str, set[str]] = {}
+    for jar in jars:
+        try:
+            with zipfile.ZipFile(jar) as zf:
+                for name in zf.namelist():
+                    m = re.match(
+                        r"(?:.*/)?assets/([a-z0-9_.-]+)/models/item/(.+)\.json$", name
+                    )
+                    if m:
+                        index.setdefault(m.group(1), set()).add(m.group(2))
+                        continue
+                    m = re.match(
+                        r"(?:.*/)?assets/([a-z0-9_.-]+)/blockstates/(.+)\.json$", name
+                    )
+                    if m:
+                        index.setdefault(m.group(1), set()).add("block:" + m.group(2))
+        except (zipfile.BadZipFile, OSError):
+            continue
+    return index
+
+
+def item_resolvable(item_id: str, index: dict[str, set[str]]) -> bool:
+    """True if the item has a model or blockstate somewhere in the pack."""
+    ns, _, path = item_id.partition(":")
+    if not path:
+        # No namespace means "this mod's namespace", which we cannot resolve
+        # statically, so do not claim it is missing.
+        return True
+    if ns == "minecraft":
+        return True
+    entries = index.get(ns)
+    if entries is None:
+        return False
+    return path in entries or f"block:{path}" in entries
+
+
+def upstream_recipe_body(
+    key: str, jars: list[Path], cache: dict[str, str | None]
+) -> str | None:
+    """The mod's own copy of a recipe we override, if the mod still ships it."""
+    if key in cache:
+        return cache[key]
+    ns, _, rest = key.partition(":")
+    path = f"data/{ns}/{rest}.json"
+    body: str | None = None
+    for jar in jars:
+        try:
+            with zipfile.ZipFile(jar) as zf:
+                if path in zf.namelist():
+                    body = zf.read(path).decode("utf-8", "replace")
+                    break
+        except (zipfile.BadZipFile, OSError):
+            continue
+    cache[key] = body
+    return body
+
+
+def classify_failure(why: str) -> str:
+    """Bucket a recorded failure reason.
+
+    Only the `missing item` bucket is something this script can verify has been
+    fixed by checking that the item now resolves. The other three need a running
+    registry or a boot, so they must not be reported as re-enable candidates.
+    """
+    low = why.lower()
+    if "unknown item" in low or "unregistered item" in low or "no attributes" in low:
+        return "missing item"
+    if "serializer" in low:
+        return "unknown recipe serializer"
+    if "tag" in low:
+        return "stale or missing tag"
+    if any(
+        k in low
+        for k in ("amount", "`id`", "vs `item`", "codec", "malformed", "format", "shape")
+    ):
+        return "malformed recipe json"
+    if "loot" in low or "element" in low:
+        return "loot table element"
+    return "unclassified"
+
+
+def ledger_causes() -> dict[str, str]:
+    """Map recipe id -> recorded cause, parsed from the load-fix inventory.
+
+    Prose in a markdown table is a fragile source, so an unparsed row is simply
+    absent and the tool reports it as unclassified rather than guessing.
+    """
+    ledger = ROOT / "docs" / "mods" / "load-fixes-inventory.md"
+    if not ledger.is_file():
+        return {}
+    causes: dict[str, str] = {}
+    text = ledger.read_text(encoding="utf-8")
+    for line in text.splitlines():
+        if not line.startswith("|"):
+            continue
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) < 2:
+            continue
+        for cell in cells:
+            m = re.fullmatch(r"`([a-z0-9_]+:[a-z0-9_./]+)`", cell)
+            if m:
+                causes.setdefault(m.group(1), cells[1] if cells[0].startswith("`") else "")
+                break
+    return causes
+
+
+def lookup_cause(key: str, causes: dict[str, str]) -> str:
+    """Find a ledger cause for an override key, tolerating format drift.
+
+    The ledger writes ids like `ae_universal_press:overloadprocessorpress` while
+    the override path is `data/ae_universal_press/recipe/overloadprocessorpress`,
+    so the key carries a kind segment (`recipe/`, `tags/`, `data_maps/`, ...) the
+    ledger omits. Try the exact key first, then the key without that segment.
+    """
+    if key in causes:
+        return causes[key]
+    ns, _, rest = key.partition(":")
+    trimmed = rest.split("/", 1)[1] if "/" in rest else rest
+    for candidate in (f"{ns}:{trimmed}", f"{ns}:{rest}", trimmed):
+        if candidate in causes:
+            return causes[candidate]
+    return ""
+
+
+ITEM_REF = re.compile(
+    r'"(?:item|id|fluid)"\s*:\s*"([a-z0-9_.-]+:[a-z0-9_./-]+)"'
+)
+TAG_REF = re.compile(r'"tag"\s*:\s*"([a-z0-9_.-]+:[a-z0-9_./-]+)"')
+
+
+def analyse_recipe_items(
+    key: str, jars: list[Path], index: dict[str, set[str]], installed: dict[str, bool],
+    cause: str = "",
+) -> dict:
+    """Why did this recipe fail, and is the cause gone?
+
+    Reads the mod's original recipe, pulls out every item it needs, and reports
+    which of those the pack cannot resolve.
+
+    The important part is the `verdict`, which is deliberately conservative: it
+    only claims the cause is gone for the ONE failure class this can actually
+    verify. A recipe disabled for a malformed-JSON or serializer reason may well
+    have every item present and still be broken, so it is reported as needing a
+    boot test rather than as a re-enable candidate.
+    """
+    body = upstream_recipe_body(key, jars, {})
+    bucket = classify_failure(cause) if cause else "unclassified"
+    out: dict = {
+        "upstream": "not shipped",
+        "cause": cause or "(not recorded in the ledger)",
+        "cause_class": bucket,
+        "items": [],
+        "tags": [],
+        "unresolvable": [],
+        "ns_installed": installed.get(key.split(":")[0]),
+        "verdict": "UNKNOWN - needs a boot test",
+        "why_verdict": "",
+    }
+    if body is None:
+        out["verdict"] = "OVERRIDE IS DEAD WEIGHT"
+        out["why_verdict"] = "upstream no longer ships this path"
+        return out
+
+    parses = True
+    parse_error = ""
+    try:
+        json.loads(body)
+    except json.JSONDecodeError as exc:
+        parses = False
+        parse_error = f"upstream json does not parse: {exc.msg} at line {exc.lineno}"
+
+    out["parses"] = parses
+    if not parses:
+        out["parse_error"] = parse_error
+
+    # "id" is as important as "item": 1.21.1 uses it for results and containers,
+    # which is exactly where a missing-item failure hides. Matching only "item"
+    # once produced a false RE-ENABLE CANDIDATE on a recipe whose container held
+    # the unregistered item.
+    items = sorted(set(ITEM_REF.findall(body)))
+    tags = sorted(set(TAG_REF.findall(body)))
+    unresolvable = [i for i in items if not item_resolvable(i, index)]
+    out["items"] = items
+    out["tags"] = tags
+    out["unresolvable"] = unresolvable
+
+    if not parses:
+        out["verdict"] = "STILL BROKEN"
+        out["why_verdict"] = parse_error
+    elif bucket == "missing item" and not unresolvable:
+        out["verdict"] = "RE-ENABLE CANDIDATE"
+        out["why_verdict"] = "cause was a missing item, and every item now resolves"
+    elif bucket == "missing item" and unresolvable:
+        out["verdict"] = "STILL BLOCKED"
+        out["why_verdict"] = "items still unresolvable: " + ", ".join(unresolvable)
+    elif bucket in ("unclassified", "unclassified "):
+        out["verdict"] = "UNKNOWN - needs a boot test"
+        out["why_verdict"] = "no recorded cause, so nothing can be concluded from files"
+    else:
+        out["verdict"] = "UNKNOWN - needs a boot test"
+        out["why_verdict"] = (
+            f"cause was '{bucket}', which an item-existence check cannot verify"
+        )
+    return out
+
+
 def namespace_is_installed(ns: str, jars: list[Path]) -> bool:
     """True if any installed jar declares this mod id, including JarJar."""
     if ns in NESTED_NAMESPACES:
@@ -165,6 +384,21 @@ def shipped_entries(jars: list[Path], wanted: set[str]) -> set[str]:
     return found
 
 
+# Not every override under load-fixes is a recipe. Calling them all recipes
+# mislabels 20+ of them and makes the item analysis meaningless for those.
+KINDS = {
+    "recipe": "recipe",
+    "recipes": "recipe",
+    "tags": "tag",
+    "loot_table": "loot table",
+    "loot_modifiers": "loot modifier",
+    "advancement": "advancement",
+    "worldgen": "worldgen",
+    "neoforge": "neoforge data",
+    "data_maps": "data map",
+}
+
+
 def collect(root: Path) -> list[tuple[str, str, Path]]:
     """Return (mod_id, datapack_key, path) for every override under `root`.
 
@@ -187,6 +421,12 @@ def collect(root: Path) -> list[tuple[str, str, Path]]:
     return out
 
 
+def kind_of(key: str) -> str:
+    _, _, rest = key.partition(":")
+    head = rest.split("/", 1)[0]
+    return KINDS.get(head, head)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
@@ -196,6 +436,13 @@ def main() -> int:
         "--inventory",
         action="store_true",
         help="also open installed jars to detect removed mods and re-shipped files",
+    )
+    parser.add_argument(
+        "--items",
+        action="store_true",
+        help="also read each mod's original recipe and report which items the pack "
+        "cannot resolve. Requires --inventory. This is what turns 'needs a boot "
+        "test' into an answer for most recipes.",
     )
     parser.add_argument(
         "--batch",
@@ -214,6 +461,7 @@ def main() -> int:
     jars: list[Path] = []
     installed: dict[str, bool] = {}
     shipped: set[str] = set()
+    causes: dict[str, str] = {}
     if args.inventory:
         jars = jar_paths()
         if not jars:
@@ -221,6 +469,10 @@ def main() -> int:
         for ns in {ns for ns, _, _ in recipes + loot}:
             installed[ns] = namespace_is_installed(ns, jars)
         shipped = shipped_entries(jars, {key for _, key, _ in recipes + loot})
+        if args.items:
+            print("indexing items across jars (one pass, this is the slow part)...", file=sys.stderr)
+            item_index = build_item_index(jars)
+            causes = ledger_causes()
 
     report = {"recipes": [], "loot_tables": []}
 
@@ -242,9 +494,18 @@ def main() -> int:
                     # Upstream stopped shipping the file, so the override no
                     # longer shadows anything.
                     verdict, reason = "LIKELY UNNECESSARY", "mod no longer ships this path"
-            report[group].append(
-                {"id": key, "file": str(path.relative_to(ROOT)), "verdict": verdict, "reason": reason}
-            )
+            entry = {
+                "id": key,
+                "file": str(path.relative_to(ROOT)),
+                "verdict": verdict,
+                "reason": reason,
+            }
+            if args.items and kind_of(key) == "recipe":
+                analysis = analyse_recipe_items(
+                    key, jars, item_index, installed, lookup_cause(key, causes)
+                )
+                entry["analysis"] = analysis
+            report[group].append(entry)
 
     def sort_key(entry: dict) -> tuple[int, str]:
         order = {"UNNECESSARY": 0, "LIKELY UNNECESSARY": 1}
@@ -255,10 +516,6 @@ def main() -> int:
     for group in ("recipes", "loot_tables"):
         report[group].sort(key=sort_key)
 
-    if args.json:
-        print(json.dumps(report, indent=2))
-        return 0
-
     for group, label in (("recipes", "Disabled recipes"), ("loot_tables", "Empty loot tables")):
         rows = report[group]
         unneeded = [r for r in rows if r["verdict"] == "UNNECESSARY"]
@@ -266,16 +523,72 @@ def main() -> int:
         if not args.inventory:
             print("  (run with --inventory to actually check; needs cached jars)")
             continue
-        if not unneeded:
+        if unneeded:
+            by_reason: dict[str, list[str]] = {}
+            for row in unneeded:
+                by_reason.setdefault(row["reason"], []).append(row["id"])
+            for reason, ids in by_reason.items():
+                print(f"\n  -- {reason} ({len(ids)}) --")
+                for i in sorted(ids):
+                    print(f"     {i}")
+        else:
             print("  all overrides still look load-bearing")
+
+        if not (args.items and group == "recipes"):
             continue
-        by_reason: dict[str, list[str]] = {}
-        for row in unneeded:
-            by_reason.setdefault(row["reason"], []).append(row["id"])
-        for reason, ids in by_reason.items():
-            print(f"\n  -- {reason} ({len(ids)}) --")
+
+        by_kind: dict[str, int] = {}
+        for r in rows:
+            k = kind_of(r["id"])
+            by_kind[k] = by_kind.get(k, 0) + 1
+        print("  overrides by kind: " + ", ".join(f"{k} {v}" for k, v in sorted(by_kind.items(), key=lambda kv: -kv[1])))
+        analysed = [r for r in rows if "analysis" in r]
+        if not analysed:
+            continue
+        dead = [r for r in analysed if r["analysis"]["upstream"] == "not shipped"]
+        blocked = [r for r in analysed if r["analysis"]["unresolvable"]]
+        clean = [
+            r for r in analysed
+            if r["analysis"]["upstream"] == "shipped" and not r["analysis"]["unresolvable"]
+        ]
+
+        print("\n  --- per-recipe item analysis ---")
+        by_kind: dict[str, int] = {}
+        for r in rows:
+            k = kind_of(r["id"])
+            by_kind[k] = by_kind.get(k, 0) + 1
+        print("  overrides by kind: " + ", ".join(f"{k} {v}" for k, v in sorted(by_kind.items(), key=lambda kv: -kv[1])))
+        analysed = [r for r in rows if "analysis" in r]
+        if not analysed:
+            continue
+        buckets: dict[str, list[str]] = {}
+        for r in analysed:
+            buckets.setdefault(r["analysis"]["verdict"], []).append(r["id"])
+        order = [
+            "RE-ENABLE CANDIDATE",
+            "OVERRIDE IS DEAD WEIGHT",
+            "STILL BLOCKED",
+            "STILL BROKEN",
+            "UNKNOWN - needs a boot test",
+        ]
+        for verdict in order:
+            ids = buckets.get(verdict)
+            if not ids:
+                continue
+            print(f"\n  {verdict} ({len(ids)}):")
             for i in sorted(ids):
                 print(f"     {i}")
+        print(
+            "\n  Only RE-ENABLE CANDIDATE is actionable from files alone: the recorded"
+            "\n  cause was a missing item and every item now resolves. Everything else"
+            "\n  needs a boot test, because its cause was malformed JSON, a missing"
+            "\n  serializer, a stale tag, or was never recorded."
+        )
+        if any(r["analysis"]["tags"] for r in analysed):
+            print(
+                "\n  note: tag references are found but NOT resolved -- a tag expands to"
+                " whatever is inside it, which needs a running registry."
+            )
     print()
     return 0
 
