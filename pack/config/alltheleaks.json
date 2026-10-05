@@ -1,9 +1,12 @@
 {
   // AllTheLeaks 1.1.13+1.21.1-neoforge (pinned in pack/mods/alltheleaks.pw.toml).
   // Keys are this pack's installed version's own set, taken from a real boot.
-  // Do not paste ATM-10's alltheleaks.json: it is written for a different
-  // AllTheLeaks build and carries keys (entitySectionCME, scoreboardDebug)
-  // that do not exist here.
+  //
+  // ATM-10 runs this exact same jar. Do not copy their alltheleaks.json anyway:
+  // it is stale, left over from before they bumped 1.1.12 -> 1.1.13. It still
+  // carries entitySectionCME and scoreboardDebug, which 1.1.13 no longer writes,
+  // and lacks the six keys below that 1.1.13 does write. Only their mod
+  // versions are current, not their config.
   "version": 1,
 
   // Dedupe identical ingredient lists across recipes. Cuts retained memory in

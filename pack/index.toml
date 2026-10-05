@@ -2,7 +2,7 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/alltheleaks.json"
-hash = "b987e85692d7118ab8deca4d464eb82086b6cb9ab59b5f3f80ea8c24c34c766b"
+hash = "fc5eabff6b6f88e723464cb7993cb7f9f9412a4510fda0945b03e9b338bdea48"
 
 [[files]]
 file = "config/apotheosis/apothic_enchanting.cfg"
