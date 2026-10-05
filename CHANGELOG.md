@@ -18,6 +18,7 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- The first few minutes after launch now show the item list filling in more smoothly, with a shorter stretch where the game briefly freezes while it does so. The underlying JEI indexing still takes a while on a pack this size; give it a moment after the main menu before opening the item list.
 - Shaders now have a fixed starting configuration instead of whatever your launcher happens to write on first run. They are still off until you turn them on, and you still pick which pack to use from the four included.
 - The readme now says how much memory to give the game, and explains where that number comes from.
 - Model and texture loading now happens off the main thread while the game starts, so entering the world is less likely to stutter on this pack's resource packs. Every other performance setting stays on its mod default; this only pins the ones that were already tuned, so a mod update can no longer quietly change them.
