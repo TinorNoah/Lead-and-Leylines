@@ -106,7 +106,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | Ambient audio. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | Mutes wither/dragon/raid music. |
 | SeasonHud | `seasonhud-neoforge-1.21.1-2.0.10.jar` | client | Season text on the HUD / Xaero map. Works with Ecliptic Seasons. |
-| Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | client | Sort, locked slots, gear sets. libIPN. Kotlin for Forge. AGPL-3.0-or-later. |
+tlin for Forge. AGPL-3.0-or-later. |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | client | Extra mouse moves beside Mouse Tweaks. |
 | Extreme Sound Muffler | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | Per-sound muffler. AmbientSounds stays. |
 | Sounds | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | Extra sound effects. MRU (ARR) and YACL. Fabric API was listed and not installed. |
@@ -117,7 +117,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | A bad tag entry does not wipe the tag. |
 | KubeJS | `kubejs-neoforge-2101.7.2-build.377.jar` | both | Scripting. Rhino. Build 377 needs Better Advanced Tooltips (installed). LootJS, Iron's Spells, Mekanism, Create, Botany Pots, Additions, and Ponder addons are in. No scripts ship yet. |
 | Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | Required by KubeJS 377. Stacks with Tooltip Overhaul. |
-| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | Extra inventory moves beside Inventory Profiles Next and Mouse Tweaks. Balm. |
+| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | Extra inventory moves beside Mouse Tweaks. Balm. Does not depend on Inventory Profiles Next. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 
 ## Considered / held / dropped
@@ -135,6 +135,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |
 | The Rename Compat Project | Dropped | Latest zip is resource pack format 42 (1.21.2). 1.21.1 only accepts format 34 unless the pack declares a range that includes 34. |
 | Legendary Tooltips, Simply Tooltips | Dropped | Tooltip Overhaul stays the frame skin. Better Advanced Tooltips is in only because KubeJS 377 requires it. Tag Tooltips shows tags while its key is held. |
-| Inventory Essentials | Chosen | Installed beside Inventory Profiles Next (2026-09-26 override). |
+| Inventory Essentials | Chosen | Installed beside Inventory Profiles Next (2026-09-26 override). **Stale 2026-10-05:** IPN was removed; Inventory Essentials declares no IPN dependency, so re-decide this row. |
 | Nolijium | Dropped | Fog, sky, particle, and darkness toggles overlap Sodium / Iris. Last 1.21.1 file is 2025-03 and optional Embeddium. |
 | Ixeris | Dropped | Off-thread input. Already skipped. |

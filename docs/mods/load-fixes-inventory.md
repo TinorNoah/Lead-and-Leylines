@@ -21,16 +21,11 @@ Pack-side overrides from the [2026-09-27T063607Z smoke audit](../smoke-runs/2026
 
 A sweep of all 831 non-orphan datapack JSON files (475 KB) found **zero** references to the 120 orphan ids. That does **not** make them safe to delete — the referent is the block at runtime, not a file in our datapacks. `minecraft:empty` is what resolves that reference without error.
 
-### Two distinct causes inside the 120 orphan loot tables
+### All 120 belong to mods that are still installed
 
-This matters when re-enabling, because one group is pure garbage and the other is load-bearing:
+An earlier version of this file claimed ~37 belonged to removed mods. That was wrong: the check matched namespaces against **jar filenames** in `pack/mods/`, and several mods have a filename that differs from their `modId` (`arsdelight-2.2.2.jar` is Ars Nouveau's Flavors & Delight). Matching on the `modId` declared inside each jar shows **all ten namespaces are installed**, including `mekmm` as a JarJar inside Mekanism Extras.
 
-| Cause | Count | Namespaces |
-|---|---|---|
-| Mod **fully removed** — no block exists, table cannot fail any more | ~37 | `arsdelight`, `create_connected`, `createcasing`, `unusualend`, `farmers_spell`, `createdieselgenerators`, `extendedae` |
-| Mod **present**, specific item unregistered — block still exists and still needs *a* table | ~83 | `mekmm` (JarJar in `mekanism_extras`), `spawn` |
-
-Only the first group is a candidate for straight deletion. The second group is why the override is an empty table rather than a deletion.
+Consequence: every one of the 120 empties is still load-bearing — the block exists and needs *a* table — which is exactly why the override is an empty table rather than a deletion. `python3 scripts/audit_overrides.py --inventory` reports 0 unnecessary of 120.
 
 ### Revalidation plan (2026-09-27 overrides)
 
@@ -38,15 +33,22 @@ Some may be fixed upstream. `scripts/smoke_test.py` never loads a player in, so 
 
 Rules: one namespace per batch; max 10 recipes or 20 loot tables per batch; each batch is one commit so a failure is one `git revert`; `packwiz refresh` from `pack/` then `python scripts/smoke_test.py --skip-bench --memory 8192`; grep the resulting log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`; record every outcome below including "still broken".
 
+**Run the script first — it may remove the need for batches entirely.**
+
+```
+python3 scripts/audit_overrides.py --inventory --batch removed
+```
+
+As of 2026-10-05 it reports **0 of 63 recipes and 0 of 120 loot tables** look unnecessary: every namespace's mod is still installed and still ships the shadowed path. So the static file check finds no free wins, and any real re-enablement has to come from a boot test.
+
 | Batch | Contents | Rationale |
 |---|---|---|
-| 1 | The removed-mod namespaces (~37 loot tables) | Highest yield — the mod is gone, so its tables can no longer parse-fail |
-| 2 | `unusualend` (13 recipes + 2 loot) | Largest single recipe group |
-| 3 | `tf_dnv` (6), `netherexp` (6), `eclipticseasons` (6) | Three whole namespaces |
-| 4 | `spectrum` (4), `regions_unexplored` (4), `create_shimmer` (4), `cbc_at` (4) | Small even groups |
-| 5 | `mekmm` (80) + `spawn` (3) loot | **Last.** Blocks still exist; re-enabling a broken table re-breaks it. Lowest yield, largest blast radius. |
+| 1 | `unusualend` (13 recipes) | Largest single recipe group |
+| 2 | `tf_dnv` (6), `netherexp` (6), `eclipticseasons` (6) | Three whole namespaces |
+| 3 | `spectrum` (4), `regions_unexplored` (4), `create_shimmer` (4), `cbc_at` (4) | Small even groups |
+| 4 | `mekmm` (80) + `spawn` (3) loot | **Last.** Blocks still exist; re-enabling a broken table re-breaks it. Largest blast radius. |
 
-Expected yield is low. These overrides were correct 8 days after being written and the mods have not been updated since; batch 1 is the only one where deletion is likely.
+Expected yield is low. These overrides were correct 8 days after being written and the mods have not been updated since. The script narrows the field to only what a boot can settle; it cannot tell whether an item now *registers*, only whether the jar contains the file.
 
 Full write-up: [phase2-followups.md](phase2-followups.md).
 

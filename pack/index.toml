@@ -5426,11 +5426,6 @@ hash = "c80877608a13534a9c1c3da74b0ebc61c399e8f4f90fa3742f8695c3a0cf1545"
 metafile = true
 
 [[files]]
-file = "mods/inventory-profiles-next.pw.toml"
-hash = "8f0aff1f654ff4bee8d46f4581133662e04049a5570d54e0d4602f6d17a0d8b4"
-metafile = true
-
-[[files]]
 file = "mods/iris-search.pw.toml"
 hash = "b4b3d6e8c35a322d0c11e34021d5c1e6c89b9e58394c67ab93fc71d23ff0e38f"
 metafile = true
@@ -5613,11 +5608,6 @@ metafile = true
 [[files]]
 file = "mods/leylines-patches.pw.toml"
 hash = "1a2ea561575b50b427d5a86f008c90e97ca70fa0ee02590311e1007ac13203ee"
-metafile = true
-
-[[files]]
-file = "mods/libipn.pw.toml"
-hash = "6fdc7f01fd9da8addbbd8ca0eb4c0465759a8ff85d20cb7f73bda7578fad5ab1"
 metafile = true
 
 [[files]]

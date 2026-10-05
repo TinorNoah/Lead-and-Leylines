@@ -14,7 +14,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | YetAnotherConfigLib | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | `library` | Config screens. Critters and Companions, Structurify, and Variants & Ventures use it. |
 | GeckoLib | `geckolib-neoforge-1.21.1-4.9.3.jar` | both | `library` | Animation library. Many mob, magic, and gun mods use it. |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | both | `library` | Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it. |
-| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library` | Kotlin runtime. AE2 addons, Create Ultimine, Observable, and Inventory Profiles Next need it. |
+| Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library` | Kotlin runtime. AE2 addons, Better P2P, Fzzy Config, Observable, and Tempad need it. |
 | AAA Particles | `aaa_particles-neoforge-1.21.1-2.3.1.jar` | both | `library` | Effekseer particle engine. Epic Fight, Archaion, and Gunsmith Lib use it. |
 | Bookshelf | `bookshelf-neoforge-1.21.1-21.1.81.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, and Enchantment Descriptions use. |
 | Balm | `balm-neoforge-1.21.1-21.0.66.jar` | both | `library` | Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use. |

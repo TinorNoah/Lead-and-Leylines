@@ -54,14 +54,24 @@ Changing recipes to `minecraft:empty` — `minecraft:empty` is a loot-table type
 
 **The safety finding.** I swept all 831 non-orphan datapack JSON files (475 KB) for references to the 120 orphan ids: **zero referrers.** That means every one of the 120 could be deleted without a dangling reference *within our datapacks*. But it does **not** mean they are safe to delete — the reference is the block itself, at runtime, not a file in our datapacks. That is precisely why `minecraft:empty` was chosen over deletion.
 
-**Two distinct causes inside the 120, which matter for revalidation:**
+**Correction — all 120 belong to mods that ARE installed.**
 
-| Cause | Count | Namespaces |
-|---|---|---|
-| Mod fully removed — no block exists, table is pure garbage | ~37 | `arsdelight` (6), `create_connected` (16), `createcasing` (8), `unusualend` (2), `farmers_spell` (1), `createdieselgenerators` (1), `extendedae` (1) |
-| Mod present, specific item unregistered — block still exists and still needs *a* table | ~83 | `mekmm` (80, JarJar in `mekanism_extras`), `spawn` (3) |
+An earlier version of this document claimed ~37 of the 120 belonged to removed mods. That was wrong, and the error is worth recording because it is easy to repeat: it came from matching namespaces against **jar filenames** in `pack/mods/`. `arsdelight` looked absent because there is no `arsdelight.pw.toml` — the mod is **Ars Nouveau's Flavors & Delight**, whose jar is `arsdelight-2.2.2.jar` with `modId = "arsdelight"`.
 
-VERIFIED by scanning `pack/mods/` and the installed jars for each namespace: only `spawn` and `mekmm`/`mekanism_extras` are present.
+Matching on the `modId` declared inside each jar's `mods.toml`, all ten namespaces are installed:
+
+| Namespace | Mod |
+|---|---|
+| `mekmm` (80) | JarJar inside Mekanism Extras |
+| `create_connected` (16) | Create: Connected |
+| `createcasing` (8) | Create: Casings |
+| `arsdelight` (6) | Ars Nouveau's Flavors & Delight |
+| `mekanism_extras` (4) | Mekanism Extras |
+| `spawn` (3) | Spawn |
+| `unusualend` (2) | Unusual End |
+| `createdieselgenerators`, `extendedae`, `farmers_spell` (1 each) | installed |
+
+So **every** one of the 120 empties is still load-bearing: the block exists and needs *a* table. That is why `scripts/audit_overrides.py` reports 0 unnecessary out of 120, and it kills the "batch 1, highest yield" idea from the revalidation plan — there is no free win there.
 
 ## 3. Revalidation plan for the 63 disabled recipes and 120 empty loot tables
 
