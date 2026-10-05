@@ -1,0 +1,31 @@
+{
+  // AllTheLeaks 1.1.13+1.21.1-neoforge (pinned in pack/mods/alltheleaks.pw.toml).
+  // Keys are this pack's installed version's own set, taken from a real boot.
+  // Do not paste ATM-10's alltheleaks.json: it is written for a different
+  // AllTheLeaks build and carries keys (entitySectionCME, scoreboardDebug)
+  // that do not exist here.
+  "version": 1,
+
+  // Dedupe identical ingredient lists across recipes. Cuts retained memory in
+  // a 570-mod pack where hundreds of mods ship near-identical tag-based
+  // ingredient arrays. ATM-10 enables this.
+  "ingredientDedupe": true,
+
+  // Pack ships Flux Networks (pack/mods/flux-networks.pw.toml) and Applied Flux
+  // (applied-flux.pw.toml). This stops networks in unloaded chunks from ticking.
+  // ATM-10 enables this and also ships Flux Networks.
+  "skipTickingUnloadedFluxNetworks": true,
+
+  // Defaults, kept explicit so an AllTheLeaks update cannot change them:
+  "disableSearchTree": false,
+  "disableEternalStarlightProgress": false,
+  "memoryUsageWarningPercentage": 90,
+  "showSummaryOnDebugScreen": true,
+  "logIntervalInMinutes": 10,
+
+  // Debug output. All off: this is a distributed pack, not a dev instance.
+  "debugItemStackModifications": false,
+  "debugNativeImage": false,
+  "debugChunkLoading": false,
+  "debugThreadsStuck": false
+}

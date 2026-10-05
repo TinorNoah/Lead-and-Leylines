@@ -18,6 +18,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- Model and texture loading now happens off the main thread while the game starts, so entering the world is less likely to stutter on this pack's resource packs. Every other performance setting stays on its mod default; this only pins the ones that were already tuned, so a mod update can no longer quietly change them.
+
 ### Fixed
 
 - Three of the seven broken tags behind the "some tags are a bit cooked" startup error are fixed. Twilight's Flavors & Delight was shipping recipes and tag entries for foods it only registers when Neapolitan is installed, so `farmersdelight:snacks`, `farmersdelight:sweets`, and `diet:sugars` never resolved. The warning still names four other tags, all upstream bugs in other mods, so the chat error can still appear on join until those are handled separately.

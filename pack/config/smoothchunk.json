@@ -1,0 +1,35 @@
+{
+  // Smooth Chunk Save 4.1 (pinned in pack/mods/smooth-chunk-save.pw.toml).
+  // Every value below is the mod default, pinned here so a mod update cannot
+  // silently change save behaviour. Kept because this pack's benchmark harness
+  // can measure a regression here; see docs/smoke-runs/.
+  //
+  // Overlap warning: this is one of three save-path optimizers running together
+  // (Smooth Chunk Save, C2ME ENHANCED autosave in config/c2me.toml, and Fast
+  // Async World Save, which ships no config). Values left at defaults on purpose
+  // — retuning one layer without removing another is how this stack turns into
+  // a stall. See docs/mods/performance.md.
+  "chunkSaveDelay": {
+    // Delay before a chunk is saved to disk, 
+    // Default: 300 seconds
+    "chunkSaveDelay": 300
+  },
+
+  "chunkUnloadLimit": {
+    // Maximum amount of chunks unloaded per tick, 
+    // Default: 20, vanilla:200
+    "chunkUnloadLimit": 20
+  },
+
+  "disableProtoSave": {
+    // Disables saving of protochunks(not fully generated chunks) to reduce saving lag. 
+    // Default: true
+    "disableProtoSave": true
+  },
+
+  "debugLogging": {
+    // Enables debug logging of how many chunks got saved in a tick. 
+    // Default: false
+    "debugLogging": false
+  }
+}

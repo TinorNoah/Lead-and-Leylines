@@ -66,7 +66,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
 | MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
 | C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
-No pack config overlays yet; defaults only. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
+Optimizer configs are now committed under `pack/config/` and pinned to their own mod defaults so a mod update cannot silently change them: `modernfix-mixins.properties`, `fml.toml`, `alltheleaks.json`, `c2me.toml`, `chunksending.json`, `smoothchunk.json`, `ferritecore-mixin.toml`. One real override: `mixin.perf.dynamic_resources=true`, unverified on a real client. Saving still has three overlapping layers (C2ME ENHANCED autosave, Smooth Chunk Save, Fast Async World Save) with no measured attribution; reducing that stack is a removal decision, not a config one. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
 ## Considered / held / dropped
 
