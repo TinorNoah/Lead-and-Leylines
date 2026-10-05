@@ -1068,7 +1068,6 @@ mods = [
   { file = "modernfix.pw.toml", blurb = "Launch and mixin fixes.", tags = ["core", "optimizer"] },
   { file = "c2me.pw.toml", blurb = "Threaded chunk generation.", tags = ["core", "optimizer"] },
   { file = "bye-pregen.pw.toml", blurb = "Faster chunk generation. Do not add Noisium beside it.", tags = ["core", "optimizer"] },
-  { file = "smooth-chunk-save.pw.toml", blurb = "Spreads chunk saves out.", tags = ["core", "optimizer"] },
   { file = "ksyxis.pw.toml", blurb = "Faster world join.", tags = ["addon", "optimizer"] },
   { file = "let-me-despawn.pw.toml", blurb = "Lets persistent mobs despawn.", tags = ["core", "optimizer"] },
   { file = "almanac-lib.pw.toml", blurb = "Library Let Me Despawn needs.", tags = ["library", "optimizer"] },
@@ -1132,7 +1131,7 @@ mods = [
   { file = "puzzles-lib.pw.toml", blurb = "Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use.", tags = ["library"] },
   { file = "prickle.pw.toml", blurb = "Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use.", tags = ["library"] },
   { file = "placebo.pw.toml", blurb = "Library the Fast mods and Apotheosis use.", tags = ["library"] },
-  { file = "cupboard.pw.toml", blurb = "Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use.", tags = ["library"] },
+  { file = "cupboard.pw.toml", blurb = "Library Fast Async World Save, Loot Integrations, Clickable Advancements, and Login Protection use.", tags = ["library"] },
 ]
 
 [[category.group]]

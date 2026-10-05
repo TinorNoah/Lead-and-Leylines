@@ -17,12 +17,13 @@
 #   not in this pack, so that optimization stays live. Re-check if Biolith is ever
 #   added.
 #
-# autosave: this pack runs THREE overlapping save-path optimizers — C2ME
-# (autoSave.mode, ENHANCED), Smooth Chunk Save (pack/config/smoothchunk.json),
-# and Fast Async World Save (ships no config). That stack is the most likely
-# source of a save-related stall. Reducing it is a mod-removal decision, not a
-# config decision; see docs/mods/performance.md and docs/audit_atm-10_phase1.md
-# recommendation R4. Do not paper over it by editing these values.
+# autosave: this pack runs TWO save-path optimizers — C2ME (autoSave.mode,
+# ENHANCED) and Fast Async World Save. That pairing is deliberate and measured,
+# see docs/mods/performance.md and scripts/save_bench.py: C2ME halves flush
+# latency, Fast Async World Save cuts the worst tick spike from ~296ms to
+# ~90ms, and together they do both. Smooth Chunk Save was removed because it
+# was slower than running neither. Do not re-add it, and do not paper over this
+# stack by editing these values.
 version = 3
 # ================================================================
 # (Default: 

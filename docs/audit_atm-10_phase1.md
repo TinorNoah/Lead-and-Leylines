@@ -114,7 +114,7 @@ ATM-10 commits `config/iris.properties`. My pack ships Iris 1.8.14-beta.1 with n
 
 ## Applied
 
-R2, R3, R4, and R5 were implemented on a feature branch after this audit. Committed configs under `pack/config/`: `modernfix-mixins.properties`, `fml.toml`, `alltheleaks.json`, `c2me.toml`, `chunksending.json`, `smoothchunk.json`, `ferritecore-mixin.toml`.
+R2, R3, and R5 were implemented on a feature branch after this audit. Committed configs under `pack/config/`: `modernfix-mixins.properties`, `fml.toml`, `alltheleaks.json`, `c2me.toml`, `chunksending.json`, `ferritecore-mixin.toml`. R4 (the save-path stack) needed a benchmark first; it is resolved below.
 
 Two corrections to the audit above, both found by booting a real server and reading the generated defaults rather than trusting the reference:
 
@@ -122,6 +122,29 @@ Two corrections to the audit above, both found by booting a real server and read
 - **ATM-10's `alltheleaks.json` is stale, not a different version.** Both packs run the identical file, `alltheleaks-1.1.13+1.21.1-neoforge.jar` (CurseForge mod 1091339, file-id 8943912, 2026-09-22; ATM-10 bumped 1.1.12 -> 1.1.13 in `changelogs/CHANGELOG-ATM10-8.1-8.2.md:79`). Their committed config still carries `entitySectionCME` and `scoreboardDebug`, which 1.1.13 no longer writes, and is missing six keys 1.1.13 does write — it was never regenerated after the bump. So their config is not a clean reference for any mod; only their *mod versions* are current. The two keys that overlap (`ingredientDedupe`, `skipTickingUnloadedFluxNetworks`) are still comparable and were carried across. Our file was built from this pack's own generated key set, with every key verified present in `ATLProperties.class`.
 
 Measured result: **no server-side effect, as expected.** Four runs (`docs/smoke-runs/2026-10-05T005028Z.md`, `-011753Z`, `-012002Z`, `-012208Z`) span ~15.9-21.2 CPS and ~68-95s boot regardless of whether the configs were present. A deliberate control run with the configs *removed* scored 21.195 CPS / 67.7s boot, i.e. better than the run with them — so the first run's apparent gain (post-gen P99 455ms -> 7.4ms) was run-to-run variance, not a fix. The 95.3s outlier was a cold-cache first boot.
+
+### R4 resolved — measured, and the audit's framing was wrong
+
+`scripts/smoke_test.py` cannot answer this: it never issues `save-all`, never times a flush, and never measures shutdown. `scripts/save_bench.py` was written to do that. It generates one world once, copies it per trial, and times `save-all flush` (first flush is the only one doing real work — later flushes measured 19-291 ms against 6609 ms for the first) plus shutdown, 3 trials per configuration, 1089 chunks, 8 GiB.
+
+| Configuration | flush0 median | vs none | P99 tick after flush | shutdown | save errors |
+|---|---|---|---|---|---|
+| none (all three removed) | 6609 ms | — | 296 ms | 30.0 s | 0 |
+| Smooth Chunk Save only | 7339 ms | +11% | 292 ms | 28.9 s | 0 |
+| Fast Async World Save only | 7646 ms | +16% | **90 ms** | 27.3 s | 0 |
+| C2ME only | 3409 ms | −48% | 290 ms | 23.8 s | 0 |
+| all three | 3311 ms | −50% | **81 ms** | 24.1 s | 0 |
+
+Repeat spread within each configuration was about ±250 ms, so unlike the boot/CPS numbers earlier in this audit these differences are real. Every configuration produced a byte-identical 26,673,152-byte world with 24 region files and zero save errors, so reliability did not separate them.
+
+Two things this changed about the audit:
+
+- **The three are not the same kind of mod, so "keep the best one" was the wrong question.** Smooth Chunk Save's mixins are `ChunkAccess`, `ChunkMap`, `ChunkMapSlowUnload`, `ServerChunkCache` — the real chunk-save path. Fast Async World Save's are `DimensionDataStorage` and `LevelStorageSource` — playerdata/level.dat/entity data, *not* chunk saves. C2ME is a full chunk-system replacement (threaded chunkgen, async chunk IO, density-function compiler) with `autoSave.mode` as roughly one of forty settings; its flush win is a side effect of rewriting chunk IO, not an autosave feature. Removing C2ME to "keep only the best save optimizer" would have gutted worldgen.
+- **The two Someaddon mods fail opposite tests.** Both are *slower* than running nothing on flush latency. But Fast Async World Save cuts the worst tick spike from 296 ms to 90 ms, and does so with C2ME off (90 ms) as well as on (81 ms), so it is its own effect rather than a C2ME interaction — consistent with it moving playerdata/level.dat writes off the tick thread.
+
+Outcome: **Smooth Chunk Save removed.** It was strictly worse than running nothing on both metrics. Fast Async World Save and C2ME both stay.
+
+What this does *not* settle: `save_bench.py` does not measure chunks-per-second, so C2ME's contribution to worldgen is still unquantified by this benchmark. The pack's documented 16-21 CPS presumably depends on it, but that has not been isolated by removal.
 
 Still unverified: `mixin.perf.dynamic_resources=true` is client-side (13 of its mixins are in ModernFix's `client` list) and the dedicated-server harness never loads client mods. A Prism client boot is required.
 

@@ -17,7 +17,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | ModernFix | `modernfix-neoforge-5.27.24+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |
 | Concurrent Chunk Management Engine | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | `core`, `optimizer` | Threaded chunk generation. |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | `core`, `optimizer` | Faster chunk generation. Do not add Noisium beside it. |
-| Server Performance - Smooth Chunk Save | `smoothchunk-1.21-4.1.jar` | both | `core`, `optimizer` | Spreads chunk saves out. |
 | Ksyxis | `Ksyxis-1.4.5.jar` | both | `addon`, `optimizer` | Faster world join. |
 | Let Me Despawn | `letmedespawn-1.21.x-neoforge-1.5.0.jar` | both | `core`, `optimizer` | Lets persistent mobs despawn. |
 | Almanac Lib | `Almanac-1.21.1-2-neoforge-1.5.2.jar` | both | `library`, `optimizer` | Library Let Me Despawn needs. |

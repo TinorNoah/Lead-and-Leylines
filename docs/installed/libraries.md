@@ -23,7 +23,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Puzzles Lib | `puzzleslib-v21.1.62-mc1.21.1+neoforge.jar` | both | `library` | Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use. |
 | Prickle | `prickle-neoforge-1.21.1-21.1.11.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use. |
 | Placebo | `Placebo-1.21.1-9.9.2.jar` | both | `library` | Library the Fast mods and Apotheosis use. |
-| Cupboard | `cupboard-1.21.1-4.2.jar` | both | `library` | Library Smooth Chunk Save, Loot Integrations, Clickable Advancements, and Login Protection use. |
+| Cupboard | `cupboard-1.21.1-4.2.jar` | both | `library` | Library Fast Async World Save, Loot Integrations, Clickable Advancements, and Login Protection use. |
 
 ## KubeJS
 

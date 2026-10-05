@@ -28,6 +28,7 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+- Smooth Chunk Save. Timed against the rest of the save stack it made chunk saves slower rather than faster, and did nothing to reduce lag spikes, so it was costing a little performance for no benefit.
 - Pattern Converter. Its Integrated Dynamics converter style pointed at `integrateddynamics` textures the pack does not have, which logged missing-texture warnings on every resource reload.
 - Modern Industrialization Extended Integrations. It added MI-style hatches to Mekanism, PneumaticCraft and Create machines, but shipped 23 block loot tables for hatch items that Modern Industrialization does not register, so every boot logged a loot-table parse error and those hatch blocks dropped nothing when broken.
 
