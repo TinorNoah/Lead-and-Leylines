@@ -10,6 +10,54 @@ Pack-side overrides from the [2026-09-27T063607Z smoke audit](../smoke-runs/2026
 | Empty loot table | `pack/global_packs/required_data/lead-leylines-orphan-loot/` | `data/<ns>/loot_table/<path>.json` → `{"type": "minecraft:empty"}` | Same: delete override, `packwiz refresh` |
 | Recipe rewrite | load-fixes | Full corrected JSON at the mod’s recipe path | Replace with upstream when fixed, or delete if upstream ships the fix |
 
+### Why the two suppression mechanisms differ
+
+| Kind | Mechanism | Count | Why |
+|---|---|---|---|
+| Disable recipe | `"neoforge:conditions": [{"type": "neoforge:false"}]` | 63 | A recipe id is referenced by nothing at runtime. It is an entry the recipe book and JEI read, so suppressing the entry removes it cleanly. |
+| Empty loot table | `{"type": "minecraft:empty"}` | 120 | A block's loot table id **is** referenced, implicitly, by the block itself — break the block and Minecraft looks up `data/<ns>/loot_table/blocks/<block_id>`. |
+
+**Do not "harmonise" these.** Converting a loot table to `neoforge:false` makes that implicit lookup fail, reintroducing exactly the `Couldn't parse element` / missing-table errors the override exists to remove. 118 of the 120 are `blocks/` tables, and 83 of those belong to mods that are **still installed** — `spawn` (3) and `mekmm` (80), which is a JarJar inside `mekanism_extras-1.21.1-1.4.1.jar`. Converting recipes to `minecraft:empty` is not a valid substitution at all: `minecraft:empty` is a loot-table type, not a recipe type, so the file would fail to parse instead of disabling.
+
+A sweep of all 831 non-orphan datapack JSON files (475 KB) found **zero** references to the 120 orphan ids. That does **not** make them safe to delete — the referent is the block at runtime, not a file in our datapacks. `minecraft:empty` is what resolves that reference without error.
+
+### Two distinct causes inside the 120 orphan loot tables
+
+This matters when re-enabling, because one group is pure garbage and the other is load-bearing:
+
+| Cause | Count | Namespaces |
+|---|---|---|
+| Mod **fully removed** — no block exists, table cannot fail any more | ~37 | `arsdelight`, `create_connected`, `createcasing`, `unusualend`, `farmers_spell`, `createdieselgenerators`, `extendedae` |
+| Mod **present**, specific item unregistered — block still exists and still needs *a* table | ~83 | `mekmm` (JarJar in `mekanism_extras`), `spawn` |
+
+Only the first group is a candidate for straight deletion. The second group is why the override is an empty table rather than a deletion.
+
+### Revalidation plan (2026-09-27 overrides)
+
+Some may be fixed upstream. `scripts/smoke_test.py` never loads a player in, so revalidation must use it as a boot-only checker.
+
+Rules: one namespace per batch; max 10 recipes or 20 loot tables per batch; each batch is one commit so a failure is one `git revert`; `packwiz refresh` from `pack/` then `python scripts/smoke_test.py --skip-bench --memory 8192`; grep the resulting log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`; record every outcome below including "still broken".
+
+| Batch | Contents | Rationale |
+|---|---|---|
+| 1 | The removed-mod namespaces (~37 loot tables) | Highest yield — the mod is gone, so its tables can no longer parse-fail |
+| 2 | `unusualend` (13 recipes + 2 loot) | Largest single recipe group |
+| 3 | `tf_dnv` (6), `netherexp` (6), `eclipticseasons` (6) | Three whole namespaces |
+| 4 | `spectrum` (4), `regions_unexplored` (4), `create_shimmer` (4), `cbc_at` (4) | Small even groups |
+| 5 | `mekmm` (80) + `spawn` (3) loot | **Last.** Blocks still exist; re-enabling a broken table re-breaks it. Lowest yield, largest blast radius. |
+
+Expected yield is low. These overrides were correct 8 days after being written and the mods have not been updated since; batch 1 is the only one where deletion is likely.
+
+Full write-up: [phase2-followups.md](phase2-followups.md).
+
+### ATM-10 bugs that do not apply here
+
+Checked and dismissed, so nobody ports them on a hunch:
+
+- **NaN health/absorption on login.** ATM-10 has `fix_death_bug.js` repairing `getHealth()` and `getAbsorptionAmount()` when they are NaN on `PlayerEvents.loggedIn`. No NaN appears in any of the 20 smoke-run reports (the sole hit, `2026-09-26T063821Z.md:304`, is an unrelated Vulkan float-control line). The mechanism is plausible in this pack — Apotheosis, Epic Fight, ParCool and Point Blank all touch attributes — but no symptom has been reported. **No workaround added on a guess.**
+- **Biome alias `biomeswevegone:skyrise_vale` → `:skyris_vale`.** `biomeswevegone` is not in this pack at all. Both spellings ship in `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar`, which *is* installed, but nothing references the wrong spelling here (`grep -riE 'skyrise|skyris' pack/ docs/` = no match). **Not applicable.**
+
+
 Recipe id `namespace:path/with/slashes` maps to:
 
 `data/namespace/recipe/path/with/slashes.json`
