@@ -15,8 +15,9 @@ Both packs are Minecraft 1.21.1, so config mechanisms transfer. Mod-specific key
 
 | | This pack | ATM-10 |
 |---|---|---|
-| Committed `config/` files | **20** | **123** (100 top-level + 23 subdirs) |
+| Committed `config/` files | **20** | **206** (99 top-level + 107 in mod subdirs; quest/lang/sNBT content excluded) |
 | `defaultconfigs/` | **absent** | 3 files |
+| Files with a real non-default setting | 20 (all deliberate) | **21 of 206 — 185 only re-state mod defaults** |
 | `-common.toml` committed | 1 | 38 |
 | `-client.toml` committed | 0 | 20 |
 | `-server.toml` committed | 0 | 19 |
@@ -27,7 +28,7 @@ Both packs are Minecraft 1.21.1, so config mechanisms transfer. Mod-specific key
 | Area | ATM-10 does | My pack does | Gap or difference | Evidence | Confidence |
 |---|---|---|---|---|---|
 | `defaultconfigs/` | 3 files: `ftbultimine/ftbultimine-server.snbt`, `incontrol/spawn.json`, `justdirethings-common.toml`. These are **server-override** files that land in `world/serverconfig/`, letting a server admin tune per-world without touching mod defaults | **Absent.** No `defaultconfigs/` directory exists at all | The pack runs a dedicated server and generates **73 `-server.toml` files** at boot, none of them pack-overridable | `_reference_pack/defaultconfigs/` vs `ls pack/defaultconfigs` = missing; `find dist/_smoke-test/config -name '*-server.toml' \| wc -l` = 73 | VERIFIED |
-| Config breadth | 123 committed files covering gameplay, worldgen, rendering and JEI | 20, and `docs/mods/configs.md` states the policy explicitly: *"Defaults are the pack unless a row below says otherwise. Do not dump every mod's full config into git."* | **Deliberate, and stated.** ATM-10's breadth is a consequence of 800+ mods, not better practice | `docs/mods/configs.md:3` vs `ls _reference_pack/config \| wc -l` | VERIFIED |
+| Config breadth | 20, and `docs/mods/configs.md` states the policy explicitly: *"Defaults are the pack unless a row below says otherwise. Do not dump every mod's full config into git."* | **~90% of ATM-10's surface is re-stated defaults, not content.** Of their 206 real config files, 185 carry no non-default value; only 21 change anything. The count was never the gap | `docs/mods/configs.md:3` vs diff-against-documented-default scan of `_reference_pack/config` | VERIFIED |
 | Client-only configs on the server | Unknown — no server artifact in git | **5 client-only config files ship in the server zip**: `iris.properties`, `defaultoptions/keybindings.txt`, `entity_model_features.json`, `tooltipoverhaul/custom_frames.json`, `tooltipoverhaul/tooltipoverhaul.toml` | Dead weight on every dedicated server; none of the owning mods is present server-side | `zipfile` read of `dist/Lead-and-Leylines-0.1.24-server-mods.zip`; owners `irisshaders`/`defaultoptions`/`entity-model-features`/`tooltipoverhaul` are all `side = "client"` | VERIFIED |
 | packwiz `side` on configs | n/a | **Not used.** All 20 config index entries have no `side` field; `side` appears only on `mods/*.pw.toml` | The index cannot express "this config is client-only", so every config goes to every install | `pack/index.toml` config entries vs `pack/mods/apotheosis.pw.toml:3` | VERIFIED |
 | Server-vs-client config sync | `-server.toml`/`-client.toml`/`-common.toml` split respected across 77 committed files | Only 1 `-common.toml` (`tacz_tactical_breaching-common`) is committed; the other 19 are plain or mod-specific | The suffix convention is not used as a routing mechanism here | `ls pack/config` vs `ls _reference_pack/config` | VERIFIED |
@@ -37,6 +38,16 @@ Both packs are Minecraft 1.21.1, so config mechanisms transfer. Mod-specific key
 | Resource packs | 1 zip in repo; rest presumably as CurseForge metadata | **13 loose zips** in `pack/resourcepacks/` + 2 texture packs as CurseForge metadata in `mods/` + 1 unpacked required-resource folder | Mixed mechanism, deliberately — `global_packs.toml` comments explain why the zips stay loose | `pack/config/global_packs.toml` comment block above `[resourcepacks].required` | VERIFIED |
 | Global Packs error noise | not applicable | 13 `FileAlreadyExistsException` per launch because `resourcepacks/` files are handed to a folder-creating API. Documented as cosmetic | Known and accepted; the file comments explain the alternative (pointing at `required_resources/`) breaks the CurseForge export | `pack/config/global_packs.toml` comment | VERIFIED |
 | Pack-side server tuning surface | 3 `defaultconfigs/` entries covering Ultimine permissions, spawn rules, and JDT tick speed | **None** | This pack has 73 generated `-server.toml` files with no pack override for any of them | `_reference_pack/defaultconfigs/` vs `dist/_smoke-test/config/*-server.toml` | VERIFIED |
+
+## 2b. What ATM-10's 21 non-default configs actually do
+
+**Correction:** this audit first reported 123 files (it counted subdirectories as single files). The real number is **206** real config files — and 185 of them only re-state the mod's own documented defaults. Only 21 change anything:
+
+**Difficulty / economy rebalancing — 17 files.** Boss cooldowns cut hard in `cataclysm-common.toml` (128: incinerator 400→100, maelstrom 180→45, bulwark 80→20); `oritech-common.toml` (35: energy/tick 32→64→128→256→512); `modular_machinery_reborn*` (41: size 2048→10280, transfer 128→1028); `extremereactors/common.toml` (4: power ×4, fuel ×0.8); `ironfurnaces-common.toml` (5, tier 1→2); `create_enchantment_industry-server.toml` (2: max enchant 30→50); `modern_industrialization-server.toml` (1: FE/EU 10→16); `refinedstorage-common.toml` (1: energy 1000→50000); `actuallyadditions-common.toml` (1: laser rate → Integer.MAX); `solcarrot-server.toml` (2: hearts 2→3); `pylons-server.toml` (1: harvester delay 60→20); `justdirethings-server.toml` (1: time-wand cost 100→750); `industrialforegoingsouls` (6: damage 4→12); `apotheosis/enchantments.cfg` (2: one enchantment 5→1).
+
+**Client cosmetics — 4 files.** `packmenu.cfg` (13: title/splash/panorama off), `cosmeticarmorreworked-client.toml` (4: buttons nudged 1–2px), `curios-client.toml` (2), `invtweaks-client.toml` (1).
+
+This strengthens R2: most of that 17-file group is server-operator balance policy, but ATM-10 ships it in `config/` to every client, where clients ignore it. It belongs in `defaultconfigs/` (`world/serverconfig/`), editable per-world.
 
 ## 3. Recommendations
 
@@ -82,9 +93,9 @@ Worth stating because the phase-1 instinct is "ATM-10 has more, add more." ATM-1
 
 13 `FileAlreadyExistsException` per launch is ugly but documented and cosmetic. The `global_packs.toml` comment already records that the obvious fix (pointing at `required_resources/`) breaks the CurseForge export because the launcher installs texture packs into `resourcepacks/` by its own rule. Leave it.
 
-### R5 — Consider the config count itself (impact: low, risk: low)
+### R5 — The config count was never the gap (no action)
 
-123 vs 20 sounds like a gap and is not one. ATM-10 carries configs for 800+ mods; this pack carries 570 and documents a deliberate policy. The right question is not "do we have as many files" but "is every override we have actually load-bearing" — and `scripts/audit_overrides.py` was built to answer that for overrides. **No change recommended.**
+206 vs 20 sounds like a gap and is not one. 185 of their 206 only re-state documented defaults; 21 change anything (17 difficulty/economy, 4 cosmetics). This pack carries 20 deliberate overrides and a written policy. The right question is not "do we have as many files" but "is every override we have actually load-bearing" — and `scripts/audit_overrides.py` was built to answer that for overrides. **No change recommended.**
 
 ## 4. What this pack does better — do not "fix" these
 
@@ -98,8 +109,7 @@ Worth stating because the phase-1 instinct is "ATM-10 has more, add more." ATM-1
 
 - **Whether packwiz applies `side` to non-mod index entries.** R1 depends on this. Needs a scratch-pack test.
 - **What ATM-10's server actually excludes.** Their server artifact is built by CurseForge and is not in the repo, so their client-config-on-server situation is unknown.
-- **Whether this pack wants `defaultconfigs/` at all.** That is a server-policy decision, not a technical one. R2 assumes yes because three ATM-10 uses look applicable.
-- **Whether FTB Ultimine or InControl are installed.** Not checked in this audit; both are candidates for R2 and the answer changes the entries worth writing.
+- **Whether this pack wants `defaultconfigs/` at all.** That is a server-policy decision, not a technical one. R2 assumes yes because three ATM-10 uses look applicable. FTB Ultimine and InControl are both confirmed installed (`pack/mods/ftb-ultimine-forge.pw.toml`, `pack/mods/in-control.pw.toml`).
 
 ## Remaining phases / follow-up tasks
 
