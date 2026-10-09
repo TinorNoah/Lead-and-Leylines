@@ -82,7 +82,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
 | Ixeris | Moves input off-thread. Skip. Asked again 2026-09-26. Still skip. |
 | Nolijium | Fog, sky, particles, and darkness overlap Sodium / Iris. Last 1.21.1 file is 2025-03. Optional Embeddium. Skip. |
-| Inventory Essentials | Installed 2026-09-26 beside Inventory Profiles Next (user override). |
+| Inventory Essentials | Installed 2026-09-26 beside Inventory Profiles Next (user override). **Stale 2026-10-05:** Inventory Profiles Next was removed; Inventory Essentials declares no IPN dependency and still works standalone, so this row now needs a real justification or removal. |
 | Modern Dynamics | Installed 2026-09-26 after Pipez removal. |
 | Pretty X Smart Pipez, Pretty X Smart Pipez Mekanism Edition | Resource packs, not mods. `allowModDistribution` is false, so they cannot ship. Skip. |
 | Rechiseled (+ Chipped / Create / AE2) | Installed 2026-09-26 beside Chipped (user override). |

@@ -10,6 +10,89 @@ Pack-side overrides from the [2026-09-27T063607Z smoke audit](../smoke-runs/2026
 | Empty loot table | `pack/global_packs/required_data/lead-leylines-orphan-loot/` | `data/<ns>/loot_table/<path>.json` → `{"type": "minecraft:empty"}` | Same: delete override, `packwiz refresh` |
 | Recipe rewrite | load-fixes | Full corrected JSON at the mod’s recipe path | Replace with upstream when fixed, or delete if upstream ships the fix |
 
+### Why the two suppression mechanisms differ
+
+| Kind | Mechanism | Count | Why |
+|---|---|---|---|
+| Disable recipe | `"neoforge:conditions": [{"type": "neoforge:false"}]` | 63 | A recipe id is referenced by nothing at runtime. It is an entry the recipe book and JEI read, so suppressing the entry removes it cleanly. |
+| Empty loot table | `{"type": "minecraft:empty"}` | 120 | A block's loot table id **is** referenced, implicitly, by the block itself — break the block and Minecraft looks up `data/<ns>/loot_table/blocks/<block_id>`. |
+
+**Do not "harmonise" these.** Converting a loot table to `neoforge:false` makes that implicit lookup fail, reintroducing exactly the `Couldn't parse element` / missing-table errors the override exists to remove. 118 of the 120 are `blocks/` tables, and 83 of those belong to mods that are **still installed** — `spawn` (3) and `mekmm` (80), which is a JarJar inside `mekanism_extras-1.21.1-1.4.1.jar`. Converting recipes to `minecraft:empty` is not a valid substitution at all: `minecraft:empty` is a loot-table type, not a recipe type, so the file would fail to parse instead of disabling.
+
+A sweep of all 831 non-orphan datapack JSON files (475 KB) found **zero** references to the 120 orphan ids. That does **not** make them safe to delete — the referent is the block at runtime, not a file in our datapacks. `minecraft:empty` is what resolves that reference without error.
+
+### All 120 belong to mods that are still installed
+
+An earlier version of this file claimed ~37 belonged to removed mods. That was wrong: the check matched namespaces against **jar filenames** in `pack/mods/`, and several mods have a filename that differs from their `modId` (`arsdelight-2.2.2.jar` is Ars Nouveau's Flavors & Delight). Matching on the `modId` declared inside each jar shows **all ten namespaces are installed**, including `mekmm` as a JarJar inside Mekanism Extras.
+
+Consequence: every one of the 120 empties is still load-bearing — the block exists and needs *a* table — which is exactly why the override is an empty table rather than a deletion. `python3 scripts/audit_overrides.py --inventory` reports 0 unnecessary of 120.
+
+### Revalidation plan (2026-09-27 overrides)
+
+Some may be fixed upstream. `scripts/smoke_test.py` never loads a player in, so revalidation must use it as a boot-only checker.
+
+Rules: one namespace per batch; max 10 recipes or 20 loot tables per batch; each batch is one commit so a failure is one `git revert`; `packwiz refresh` from `pack/` then `python scripts/smoke_test.py --skip-bench --memory 8192`; grep the resulting log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`; record every outcome below including "still broken".
+
+**What the script can and cannot settle (measured 2026-10-05)**
+
+`--inventory --items` reads each mod's original recipe and buckets all 63:
+
+| Bucket | Count | Meaning |
+|---|---|---|
+| STILL BLOCKED | 4 | Cause was a missing item and it is *still* unresolvable |
+| STILL BROKEN | 1 | The upstream JSON does not even parse, so it can never work as shipped |
+| UNKNOWN — needs a boot test | 40 | Cause was malformed JSON, a missing serializer, a stale tag, or was never recorded |
+| RE-ENABLE CANDIDATE | **0** | Nothing is re-enableable from files alone |
+
+Also note the 63 are not all recipes: **45 recipe, 7 tag, 5 worldgen, 2 data map, 2 loot modifier, 1 advancement, 1 neoforge data.** Item-existence analysis is only meaningful for the 45.
+
+Two findings worth keeping:
+
+- `ae_universal_press:overloadprocessorpress` — the upstream JSON is **malformed**, not merely referencing a missing item. It can never work without us rewriting it.
+- The four STILL BLOCKED recipes need mods we do not have (`ae2lt`, `extendedterminal`) or an item that still does not register (`netherexp:blue_scale_fungus`, `netherexp:red_scale_fungus`). Disabling them is correct today.
+
+A caution learned the hard way: an early version of the check reported 55 of 63 as "all items resolve, re-enable candidates". It only matched `"item": "..."` and missed that 1.21.1 recipes put results and containers under `"id"`. The broken item in `jadensnetherexpansiondelight:blue_scale_fungus_roll` is in its `container`, so the tool would have recommended deleting a working override. The pattern now matches `item`, `id` and `fluid`.
+
+## TODO — deferred, not started
+
+**Revalidating the 63 recipe overrides needs boot tests, and none have been run.** Deferred at the user's request on 2026-10-05. Nothing here is blocking a release; the overrides are all still doing their job.
+
+State as of 2026-10-05 (`python scripts/audit_overrides.py --inventory --items`):
+
+- **0** overrides are re-enableable from files alone.
+- **1** (`ae_universal_press:overloadprocessorpress`) has upstream JSON that does not parse and can never work as shipped — it needs a rewrite, and only if AE Universal Press is kept at all, since its other two recipes are blocked on `ae2lt` and `extendedterminal`, mods this pack does not have.
+- **4** are blocked on a missing item that is still unresolvable.
+- **40** have a cause an item check cannot judge (malformed JSON, missing serializer, stale tag, or unrecorded).
+
+When someone picks this up: work the batch table below, one namespace per commit, `packwiz refresh` then `python scripts/smoke_test.py --skip-bench --memory 8192`, grep the log for `Parsing error loading recipe|Couldn't parse element|Failed to load|Unknown recipe`, and record the outcome here either way. Expected yield is low — the mods have not been updated since 2026-09-27.
+
+**Run the script first — it may remove the need for batches entirely.**
+
+```
+python3 scripts/audit_overrides.py --inventory --batch removed
+```
+
+As of 2026-10-05 it reports **0 of 63 recipes and 0 of 120 loot tables** look unnecessary: every namespace's mod is still installed and still ships the shadowed path. So the static file check finds no free wins, and any real re-enablement has to come from a boot test.
+
+| Batch | Contents | Rationale |
+|---|---|---|
+| 1 | `unusualend` (13 recipes) | Largest single recipe group |
+| 2 | `tf_dnv` (6), `netherexp` (6), `eclipticseasons` (6) | Three whole namespaces |
+| 3 | `spectrum` (4), `regions_unexplored` (4), `create_shimmer` (4), `cbc_at` (4) | Small even groups |
+| 4 | `mekmm` (80) + `spawn` (3) loot | **Last.** Blocks still exist; re-enabling a broken table re-breaks it. Largest blast radius. |
+
+Expected yield is low. These overrides were correct 8 days after being written and the mods have not been updated since. The script narrows the field to only what a boot can settle; it cannot tell whether an item now *registers*, only whether the jar contains the file.
+
+Full write-up: [phase2-followups.md](phase2-followups.md).
+
+### ATM-10 bugs that do not apply here
+
+Checked and dismissed, so nobody ports them on a hunch:
+
+- **NaN health/absorption on login.** ATM-10 has `fix_death_bug.js` repairing `getHealth()` and `getAbsorptionAmount()` when they are NaN on `PlayerEvents.loggedIn`. No NaN appears in any of the 20 smoke-run reports (the sole hit, `2026-09-26T063821Z.md:304`, is an unrelated Vulkan float-control line). The mechanism is plausible in this pack — Apotheosis, Epic Fight, ParCool and Point Blank all touch attributes — but no symptom has been reported. **No workaround added on a guess.**
+- **Biome alias `biomeswevegone:skyrise_vale` → `:skyris_vale`.** `biomeswevegone` is not in this pack at all. Both spellings ship in `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar`, which *is* installed, but nothing references the wrong spelling here (`grep -riE 'skyrise|skyris' pack/ docs/` = no match). **Not applicable.**
+
+
 Recipe id `namespace:path/with/slashes` maps to:
 
 `data/namespace/recipe/path/with/slashes.json`

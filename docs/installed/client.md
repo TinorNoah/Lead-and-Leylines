@@ -17,10 +17,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Controlling | `Controlling-neoforge-1.21.1-19.0.5.jar` | client | `core`, `client-qol` | Search keybinds. |
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | client | `core`, `client-qol` | Drag and scroll item moving. |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | client | `addon`, `client-qol` | More mouse inventory moves beside Mouse Tweaks. |
-| Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | client | `addon`, `client-qol` | Sort, lock slots, and save gear sets. |
 | Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | `addon`, `client-qol` | Extra inventory moves and sorting beside Mouse Tweaks. |
 | Recipe Essentials | `recipeessentials-1.21.1-4.7.jar` | client | `addon`, `client-qol` | Recipe book and craft helper tweaks. |
-| libIPN | `libIPN-neoforge-1.21.1-6.6.3.jar` | client | `library`, `client-qol` | Library Inventory Profiles Next uses. |
 | KeyBind Bundles | `keybindbundles-1.4.0.jar` | client | `addon`, `client-qol` | Collapse several keybinds into one. |
 | KeybindsPurger | `KeybindsPurger-1.4.0-neoforge-1.21.1.jar` | client | `addon`, `client-qol` | Clears conflicting keybinds. |
 | No Chat Reports | `NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar` | both | `core`, `client-qol` | Chat cannot be reported to Mojang. |

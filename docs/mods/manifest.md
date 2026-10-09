@@ -436,8 +436,6 @@ First 1.21.1 NeoForge wave: performance and client smoothness. Second wave: Extr
 | KubeJS Mekanism | `kubejs-mekanism-neoforge-2101.1.7-build.18.jar` | CurseForge 418651 / 7213666 | both | tech | Mekanism scripting. Beta file. | KubeJS, Mekanism | defaults | 2026-09-26 |
 | LootJS | `lootjs-neoforge-1.21.1-3.7.0.jar` | CurseForge 570630 / 8009262 | both | scripting | Loot scripts. | KubeJS | defaults | 2026-09-26 |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | CurseForge 656346 / 7084444 | both | stability | One bad tag entry does not wipe the tag. Wide-version jar that lists 1.21.1. | none | defaults | 2026-09-26 |
-| libIPN | `libIPN-neoforge-1.21.1-6.6.3.jar` | CurseForge 679177 / 7810552 | client | library | Inventory Profiles Next GUI library. | Kotlin for Forge | defaults | 2026-09-26 |
-| Inventory Profiles Next | `InventoryProfilesNext-neoforge-1.21.1-2.2.5.jar` | CurseForge 495267 / 7810574 | client | QoL | Sort, locked slots, gear sets. AGPL-3.0-or-later. | libIPN, Kotlin for Forge | defaults | 2026-09-26 |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | CurseForge 1134081 / 6958493 | client | QoL | Extra mouse inventory moves. | Mouse Tweaks, Cloth Config | defaults | 2026-09-26 |
 | Extreme Sound Muffler | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | CurseForge 363363 / 7895926 | client | QoL | Per-sound muffler. | none | defaults | 2026-09-26 |
 | MRU | `mru-1.0.41+1.21.1-neoforge.jar` | CurseForge 669659 / 9004036 | client | library | Sounds dependency. ARR. | none | defaults | 2026-09-26 |
@@ -844,7 +842,6 @@ Restored by this change: 7 disabled recipes under `lead-leylines-load-fixes/data
 | Just Enough Threads | Tonywww | ARR | CurseForge metadata only; do not embed the jar. |
 | Visual Workbench | Fuzs | MPL-2.0 | CurseForge reference. |
 | MRU | IMB11, Cassian | ARR | CurseForge metadata only; do not embed the jar. |
-| Inventory Profiles Next | mirinimi | AGPL-3.0-or-later | CurseForge reference. |
 | Rhino | LatvianModder | MPL-2.0 | CurseForge reference. |
 | More Overlays Updated | FeldiM2425 (original), RiDGo8 (maintainer) | MIT; author states modpack redistribution is allowed with credit | Keep a credit line naming both authors. The pack references the **Modrinth** file (byte-identical to CurseForge 391382 / 6981252) because the CurseForge API exposes no `downloadUrl` for this project. |
 | No Chat Reports | Aizistral | WTFPL | CurseForge reference. |
@@ -915,6 +912,8 @@ Long lists: [deferred.md](deferred.md).
 | Create Aeronautics addons and compat | 2026-09-30 | Removed with Create Aeronautics: Climbable Ropes for Create Aeronautics, Create Aeronautics x Curios API Compat, Create Aeronautics: Mekanism Compatibility, Create - Xaero's map (Sable map overlay), Jade Sable Compat, TACZ Aeronautics compat, Point Blank Aeronautics compat, Iron's Spells x Aeronautics. All existed only to teach another mod about Aeronautics. Every remaining reference to `sable` / `aeronautics` in the pack (Colorwheel, Create Big Cannons, Spawn, ParCool compat) is `type = "optional"` in that mod's `neoforge.mods.toml`, so nothing else breaks. | Only alongside Create Aeronautics. |
 | JEIOptimizer | 2026-09-28 | Replaced by Just Enough Threads — both mods target the same JEI startup routines and running both risks instability. Built against JEI 19.56 while pack has 19.57. | No while Just Enough Threads is in. |
 | Just Enough Threads 0.14.1 | 2026-09-30 | JEI 19.57 killed the whole recipe viewer: `JeiNativeSearchBuilderMixin` wraps `ISearchStorageBuilder.build()` inside the 1-arg `ElementSearch(ElementPrefixParser)` constructor, which JEI replaced with a 3-arg form. The injection is `require = 1`, so the missing target throws `InvalidInjectionException` and JEI reports `RuntimeException: JEI failed to start`. The game keeps running, so JEI was silently dead. JET 0.14.1's own guard only checked that *some* `<init>` calls `build()`, which is still true, so it did not step aside as its changelog promised. Not fixable by downgrading JEI: that constructor is gone from 19.42 onward, while five mods independently floor JEI at 19.51-19.54 (ldlib2, Polymorph, FTB XMod Compat, Sophisticated JEI Index, JEI Stuff). | **Re-added 2026-10-01 as 0.14.2**, which fixes the guard. See the 2026-10-01 wave row. |
+
+| Inventory Profiles Next + libIPN | 2026-10-05 | Removed on request. Both `client`-side; nothing in the pack depends on either. `Inventory Essentials` was installed beside IPN as a deliberate 2026-09-26 override but its `mods.toml` declares **no** IPN dependency, so it stands alone — its stated rationale in `deferred.md` and `utility.md` is now stale and worth revisiting. Kotlin for Forge stays: AE2MEGAThings, Better P2P, Fzzy Config, Observable and Tempad still require it. No keybind entries in `pack/config/defaultoptions/keybindings.txt` and no config directory, so nothing else needed cleaning. No world-data or server impact. | 2 mods removed; packwiz refreshed. |
 
 ## JEI startup optimization
 
