@@ -13,6 +13,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Added
 
+### Changed
+
+### Fixed
+
+### Removed
+
+## [0.1.25] - 2026-10-09
+
+### Added
+
 - Neapolitan, a food mod of flavored ice creams, milkshakes, and cakes, each flavor with its own effect, plus the strawberry fields biome and chimpanzees and plantain spiders that live in it.
 - Twilight's Flavors & Delight now has all of its food. Aurora, glacier, phytochemical, and torchberry cake slices, and the ice creams and milkshakes built on them, were missing because that mod only creates them when Neapolitan is installed. They are craftable now, and the flavored cakes drop their slices again.
 
