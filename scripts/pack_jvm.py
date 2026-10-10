@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 USER_JVM_ARGS = ROOT / "pack" / "user_jvm_args.txt"
 
 CONFLICTING_FLAGS = (
+    "-XX:+UseZGC",
     "-XX:+UseG1GC",
     "-XX:+UseShenandoahGC",
     "-XX:+ZGenerational",

@@ -1,9 +1,33 @@
-# Lead and Leylines — Java 21 (see pack.toml). Use ZGC, not G1.
+# Lead and Leylines — Java 21 (see pack.toml).
+# GC block below is All the Mods 10's server tuning set (ATM10 8.2 server
+# pack, user_jvm_args.txt), G1GC throughout: ZGC's extra native headroom kept
+# costing us Linux OOM-kills (exit 137) on tight boxes.
+# Deliberately NOT copied from ATM10: their -Xms4G/-Xmx8G. Heap stays computed
+# in server/run.sh (container minus 2G headroom) and in the launcher Memory tab,
+# so a heap line here must never silently override it.
+# Kept from this pack: 5x login/read timeout (prevents "Timed Out" kicks
+# during registry sync on join).
 # Prism: scripts/update_prism.py copies these flags into instance.cfg.
 # Dedicated NeoForge: server/run.sh is @this file plus @unix_args.txt.
 # Other launchers: paste the same flags into that instance's Java arguments.
-# Do not add -XX:+ZGenerational.
--XX:+UseZGC
+-XX:+UseG1GC
+-XX:+ParallelRefProcEnabled
+-XX:MaxGCPauseMillis=200
+-XX:+UnlockExperimentalVMOptions
+-XX:+DisableExplicitGC
+-XX:+AlwaysPreTouch
+-XX:G1NewSizePercent=30
+-XX:G1MaxNewSizePercent=40
+-XX:G1HeapRegionSize=8M
+-XX:G1ReservePercent=20
+-XX:G1HeapWastePercent=5
+-XX:G1MixedGCCountTarget=4
+-XX:InitiatingHeapOccupancyPercent=15
+-XX:G1MixedGCLiveThresholdPercent=90
+-XX:G1RSetUpdatingPauseTimePercent=5
+-XX:SurvivorRatio=32
+-XX:+PerfDisableSharedMem
+-XX:MaxTenuringThreshold=1
 # Login/read timeout: 5× the 30s NeoForge default (prevents "Timed Out" kicks during registry sync on join).
 -Dfml.loginTimeout=150
 -Dfml.readTimeout=150
