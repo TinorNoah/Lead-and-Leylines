@@ -1,0 +1,13 @@
+{
+  "name": "join-test",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mineflayer bot that logs into the local smoke-test server and times the join phases.",
+  "type": "module",
+  "scripts": {
+    "join": "node join-test.mjs"
+  },
+  "dependencies": {
+    "mineflayer": "4.39.0"
+  }
+}
