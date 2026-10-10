@@ -12,7 +12,7 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.1.25 |
+| Pack version | 0.1.26 |
 | Minecraft | 1.21.1 |
 | Mod loader | NeoForge 21.1.252 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseG1GC`) |

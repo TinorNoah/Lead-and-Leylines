@@ -15,6 +15,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+### Fixed
+
+### Removed
+
+## [0.1.26] - 2026-10-10
+
+### Added
+
+### Changed
+
 - Switched the Java 21 garbage collector from ZGC to G1GC, using All the Mods 10's server tuning block. ZGC's extra native memory kept getting the dedicated server OOM-killed (exit 137) on tight boxes, and a return trip into fresh terrain chunk generation was enough to trigger it. Heap size rules are unchanged in the launcher; the dedicated server now reserves 2 GB below its container limit instead of 1.5 GB.
 
 ### Fixed
