@@ -1,0 +1,9 @@
+{
+  "replace": true,
+  "values": [
+    "unusualend:citrine_material",
+    "unusualend:pearlescent_material",
+    "unusualend:prismatic_material",
+    "unusualend:shiny_material"
+  ]
+}

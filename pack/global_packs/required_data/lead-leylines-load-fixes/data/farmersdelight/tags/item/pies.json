@@ -1,0 +1,14 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:pumpkin_pie",
+    "farmersdelight:apple_pie",
+    "farmersdelight:sweet_berry_cheesecake",
+    "farmersdelight:chocolate_pie",
+    "arsdelight:mendosteen_pie_slice",
+    "arsdelight:bastion_pie_slice",
+    "arsdelight:bombegrante_pie_slice",
+    "arsdelight:frostaya_pie_slice",
+    "arsdelight:flashpine_pie_slice"
+  ]
+}
