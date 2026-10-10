@@ -15,7 +15,7 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 | Pack version | 0.1.25 |
 | Minecraft | 1.21.1 |
 | Mod loader | NeoForge 21.1.252 |
-| Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseZGC`) |
+| Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseG1GC`) |
 | Packwiz format | packwiz:1.1.0 |
 | Mods | Performance stack plus Create, Mekanism and Modern Industrialization, FTB Quests, logistics (XNet, Modern Dynamics), storage (Applied Energistics 2, Refined Storage), JEI, biomes, Jade, and worldgen (see [docs/mods/manifest.md](docs/mods/manifest.md)) |
 
@@ -25,7 +25,7 @@ A git tag `vX.Y.Z` must match pack version `X.Y.Z`. Tags `v0.0.1`–`v0.0.9` alr
 
 The pack is in early development on Minecraft 1.21.1 NeoForge. This cut has the performance stack plus Create, Mekanism and Modern Industrialization, FTB Quests, logistics, storage, JEI, biomes, Jade, and the ported worldgen set. New world required. The CurseForge listing is not public yet.
 
-**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseZGC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After the store listing exists, install from CurseForge instead.
+**Testers (ATLauncher):** download the `.mrpack` (or `.zip`) from the [GitHub Release](https://github.com/TinorNoah/Lead-and-Leylines/releases). Instances → **Import** → **Browse** → that file → **Install**. Then set that instance's Java arguments to `-XX:+UseG1GC` (same flags as `user_jvm_args.txt` in the instance folder) and use **Java 21**. After the store listing exists, install from CurseForge instead.
 
 Prism developers: [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -33,7 +33,7 @@ Prism and other launchers must use the Minecraft version and NeoForge version in
 
 ### Memory
 
-Allocate **8 GB** to start, and **12 GB** if you run shaders or a high render distance. Do not allocate your entire system RAM: this pack uses ZGC, which needs native memory on top of the Java heap, and over-allocating gets the process killed by the OS instead of failing gracefully. The dedicated server reserves 1.5 GB below its container limit for exactly this reason (see [`server/run.sh`](server/run.sh)).
+Allocate **8 GB** to start, and **12 GB** if you run shaders or a high render distance. Do not allocate your entire system RAM: the JVM needs native memory on top of the Java heap, and over-allocating gets the process killed by the OS instead of failing gracefully. The dedicated server reserves 2 GB below its container limit for exactly this reason (see [`server/run.sh`](server/run.sh)).
 
 Where the numbers come from: the server side is measured. Across the runs recorded in [`docs/smoke-runs/`](docs/smoke-runs/), the dedicated server's resident memory after worldgen peaks at about 7.4 GB inside an 8 GB container, so 8 GB is the floor for this pack's server and the client should not be given less. **The client figures are an estimate, not a measurement** — the local test harness only boots a dedicated server and never loads client mods, so nobody has recorded this pack's client memory on real hardware. If you get stutter, GC pauses, or a crash on world join, raise the allocation before filing a bug, and note what you used.
 

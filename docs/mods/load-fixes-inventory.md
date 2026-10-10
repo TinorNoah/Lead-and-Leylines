@@ -281,18 +281,76 @@ From the same audit — not silenced by datapack:
 - Mass `Entity … has no attributes` log noise (now includes `neapolitan:chimpanzee` and `neapolitan:plantain_spider`; this is the normal pack-wide pattern, roughly 470 lines, not a Neapolitan defect)
 - Optional mixin soft-deps (Copycats+, Scorched Guns, FramedBlocks, AE2LT, …)
 
-### Broken tags still logging (2026-10-04)
+### Broken tags — fixed 2026-10-10 with `replace: true` snapshots
 
-LMFT 1.1.1+1.21.9 mixes into `TagLoader.tryBuildTag`, so it logs entries that fail to resolve and then reports `It seems that some tags are a bit cooked` instead of letting the tag throw. Installing Neapolitan cleared three of the seven. Four remain, in descending order of value:
+An early attempt used NeoForge's `remove` array (tiny files, no snapshot). The
+2026-10-10 smoke boot proved KubeJS ignores `remove` — all five tag errors
+persisted — so these are full snapshots instead. Cost: if one of these mods
+ships a corrected tag, our snapshot wins and the new entries stay missing until
+someone re-checks. Re-check trigger per row is the mod updating.
 
-| Tag (as LMFT prints it) | Real file | Bad entries | Fix |
+| Tag | Snapshot file under `lead-leylines-load-fixes/data/` | Dropped bad entries | Re-check when |
 | --- | --- | --- | --- |
-| `blueprint:generates_overrides` | `data/blueprint/tags/trim_material/generates_overrides.json` (Unusual End 2.3.1b) | `prismalite_gem`, `shiny_crystal`, `citrine_chunk`, `pearlescent_ingot` | **Real fix available, not yet applied.** Blueprint 8.2.0 declares this a `TagKey<TrimMaterial>` — the 1.21.9 *registry* tag — but Unusual End writes plain item IDs. Unusual End does ship the correct registry entries: `unusualend:citrine_material`, `pearlescent_material`, `prismatic_material`, `shiny_material`. A 4-line datapack file with `"replace": true` and those IDs is the whole fix; single contributor, so the snapshot risk is nil. |
-| `farmersdelight:pies` | `data/farmersdelight/tags/block/pies.json` (Ars Delight 2.2.2) | `arsdelight:dawnberry_pie`, `arsdelight:lightchee_pie` | Same root cause as the emptied `arsdelight:blocks/dawnberry_pie` loot table above — those two blocks never register. Needs an Ars Delight build that registers them. A `"replace": true` restating the 9 valid entries (4 Farmer's Delight + 5 Ars Delight) would silence it at the cost of a 2-contributor snapshot. |
-| `minecraft:rabbit_food` | `data/minecraft/tags/item/rabbit_food.json` (Pam's Harvest Crops 1.0.9) | `pamhc2crops:_blackberryitem` | **Upstream typo, leave it.** The jar literally contains `"pamhc2crops: blackberryitem"` — a space where the `:` belongs. Not worth a 58-entry snapshot of a vanilla tag to add one berry to rabbit food. |
-| `apothic_pointblank:gun/small_arms` | `data/apothic_pointblank/tags/item/gun/small_arms.json` | `pointblank:mk23` | Stale tag: Point Blank 2.2.0 has no `mk23` id at all. Harmless; a 46-entry snapshot to drop one line is not worth it. |
+| `minecraft:rabbit_food` (item, 59 entries) | `minecraft/tags/item/rabbit_food.json` | `pamhc2crops:_blackberryitem` (jar has `"pamhc2crops: blackberryitem"`, space for `:`) | Pam's HarvestCraft 2 Crops fixes the typo (also restates vanilla carrot/golden_carrot/dandelion, FD cabbage, pam trees fruit, spectrum enchanted carrot, and the 3 uppercase vanilla entries lowercased) |
+| `farmersdelight:pies` (block, 9 entries) | `farmersdelight/tags/block/pies.json` | `arsdelight:dawnberry_pie`, `arsdelight:lightchee_pie` (blocks never register) | Ars Delight registers those blocks |
+| `farmersdelight:pies` (item, 9 entries) | `farmersdelight/tags/item/pies.json` | `arsdelight:dawnberry_pie_slice`, `arsdelight:lightchee_pie_slice` (same; the mod's own file marks them `required: false`, snapshot drops them outright) | Same |
+| `apothic_pointblank:gun/small_arms` (item, 45 entries) | `apothic_pointblank/tags/item/gun/small_arms.json` | `pointblank:mk23` (no such id in Point Blank 2.2.0) | Point Blank re-adds `mk23` or Apothic Point Blank drops it |
+| `blueprint:generates_overrides` (trim_material, 4 entries) | `blueprint/tags/trim_material/generates_overrides.json` | `prismalite_gem`, `shiny_crystal`, `citrine_chunk`, `pearlescent_ingot` (plain item ids in a trim-material registry tag) — replaced with the real materials `citrine_material`, `pearlescent_material`, `prismatic_material`, `shiny_material` | Unusual End writes registry ids upstream |
+| `netherexp:soul_has_feature/ecto_soul_sand` (biome) | `netherexp/tags/worldgen/biome/soul_has_feature/ecto_soul_sand.json` (`values: []`, no `replace`) | n/a — empty stub silences the `MappedRegistry` WARN; behaviour is unchanged (feature already attached nowhere) | Jaden's Nether Expansion ships the tag |
 
-Also worth knowing: LMFT's in-game error can be silenced without touching any of this, either with `-Dlmft.disable_error_output=true` in `pack/user_jvm_args.txt` or `"disableIngameError": true` in its generated config. That only hides the chat message and the summary ERROR — the WARN lines stay in `latest.log`.
+Fixing the three root item/block tags also clears the two cascades for free:
+`c:animal_foods` (references `#minecraft:rabbit_food`) and `create:brittle`
+(references `#farmersdelight:pies`) need no files of their own.
+
+### Missing-file stubs + broken advancement parents (2026-10-10 audit boot)
+
+Same boot surfaced three `MappedRegistry ... not present in data pack` WARNs and
+three unloadable advancements. All six are upstream missing files, fixed with
+minimal pack overrides (verified in the follow-up boot):
+
+| Symptom | File | Why this shape |
+| --- | --- | --- |
+| `netherexp:fossil_ore_convertible` (block) | `netherexp/tags/block/fossil_ore_convertible.json` (`values: []`) | No jar ships it; empty = today's behaviour |
+| `forbidden_arcanus:modifier/soulbound_incompatible` (enchantment) | `forbidden_arcanus/tags/enchantment/modifier/soulbound_incompatible.json` (`values: []`) | Mod ships every sibling (`eternal`→unbreaking+mending…) but forgot this one; its item-registry twin is literally `{"values": []}` |
+| `irons_jewelry:nether_findable` (pattern) | `irons_jewelry/tags/irons_jewelry/pattern/nether_findable.json` (`values: []`) | No jar ships it; empty = today's behaviour |
+| `dungeons_arise:find_fishing_hut`, `find_thornborn_towers` | `dungeons_arise/advancement/<name>.json` | Both name parent `find_small_prairie_house`, which doesn't exist in the jar; reparented to the mod's verified root `wda_root`, file otherwise byte-identical |
+| `netherexp:.../big_brain_time` | `netherexp/advancement/nether/soul_sand_valley/big_brain_time.json` | Parent path has a bogus `soul_sand_valley/` segment; repointed to the real `netherexp:nether/brain_food`, file otherwise byte-identical |
+
+Deliberately left: AlmostUnified's `stella_arcanum ... multiple stone variant tags`
+ERROR. Forbidden Arcanus lists stella in **both** stone and deepslate variant tags
+because the ore genuinely generates in both (`ore_stella_arcanum` targets
+`stone_ore_replaceables` and `deepslate_ore_replaceables`), so "fixing" a tag
+would lie about worldgen. AlmostUnified skips unification for it, and stella has
+no duplicates from any other mod, so the skip is a no-op. Silencing it via
+`ignored_items` would mean owning a copy of AU's whole `materials.json` —
+not worth 2 log lines.
+
+### Upstream reports filed 2026-10-10 (re-check these before deleting overrides)
+
+- Tempad missing file: https://github.com/terrarium-earth/Tempad/issues/194
+- Jaden parent typo: https://github.com/ThatJadenXgamer/Jadens-Nether-Expansion/issues/354
+- Jaden missing tags: https://github.com/ThatJadenXgamer/Jadens-Nether-Expansion/issues/355
+- Forbidden Arcanus missing tag: https://github.com/stal111/Forbidden-Arcanus/issues/549
+- Dungeons Arise missing parent: https://github.com/LunaPixelStudios/When-Dungeons-Arise/issues/5
+- Apothic stale mk23: https://github.com/Visteus/Apothic-PB/issues/2
+- ArsDelight unregistered pies: https://github.com/Minecraft-LightLand/Ars-Nouveau-Flavors-Delight/issues/16
+- Iron's Jewelry missing tag: https://github.com/iron431/irons-jewelry/issues/55
+- Unusual End trim ids: commented on https://github.com/SashaKYotoz/Unusual-End/issues/7 (already open)
+- Jupiter nested-table WARNs: commented on https://github.com/IAFEnvoy/Jupiter/issues/9 (already open)
+- Pam's typo (`pamhc2crops: blackberryitem`): NOT filed — Pam's takes bugs in Discord only (see Modrinth page). Re-check when pamhc2crops updates past 1.0.9.
+
+Also in this pass: `data/tempad/loot_modifiers/tempad_loot_modifier.json`,
+a never-firing `neoforge:add_table` (`random_chance 0` on `minecraft:empty`). Tempad 3.0.4 registers the modifier id in
+`global_loot_modifiers.json` but ships no file for it, so `LootModifierManager`
+logged `Not a JSON object: null` every boot. Delete our file if Tempad ships it.
+
+Still deliberately untouched (upstream, harmless, verified 2026-10-10): the
+Jupiter `Cannot find suitable entry` WARN flood (flat key lookup vs nested
+tables in Oritech/CableTiers/RS-addons configs — keys exist, mods read them
+fine), Epic Fight's `air_slash` params without a registered skill, Elite X
+guns' missing `_backup` reload script, Moonlight's Quark color sets (Quark is
+out by policy), Modern Ragnarok `projection_magic` min>max power, and the
+fallen_gems/Apotheosis staff gem-bonus overlap.
 
 ---
 

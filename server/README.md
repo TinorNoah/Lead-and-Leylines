@@ -60,9 +60,11 @@ If the Generic egg warns that the file is not a server pack, it will use the cli
 
 Re-copy these onto the server **after every egg reinstall** (the install script writes `/mnt/server`):
 
-- `run.sh` — NeoForge start. Panel startup is `bash run.sh`. Uses Java 21 ZGC from `user_jvm_args.txt`. Sets `-Xmx` below the panel `SERVER_MEMORY` limit (about 1.5 GiB headroom) so ZGC and native memory do not trigger Linux OOM kill (exit 137). Do not add `-XX:+ZGenerational`.
+- `run.sh` — NeoForge start. Panel startup is `bash run.sh`. Uses Java 21 G1GC from `user_jvm_args.txt`. Sets `-Xmx` below the panel `SERVER_MEMORY` limit (about 2 GiB headroom) so GC and native memory do not trigger Linux OOM kill (exit 137).
 - `user_jvm_args.txt` — copied from `pack/user_jvm_args.txt`
 - `ops.json`
 - `server-icon.png` — 64×64 leyline emblem shown beside the server name in the multiplayer list
 
-The NeoForge egg’s default startup is `java … @unix_args.txt` and ignores `user_jvm_args.txt`. Local NeoForge deploys set startup to `bash run.sh` so ZGC actually applies. The CurseForge Generic egg keeps its own startup.
+`server.properties` is panel state, not overlay: after a fresh install set `allow-flight=true`, `max-tick-time=180000`, `simulation-distance=5`, `view-distance=8`, `motd=Lead and Leylines` (ATM10 8.2 values, own motd). Distances and the watchdog take effect on restart.
+
+The NeoForge egg’s default startup is `java … @unix_args.txt` and ignores `user_jvm_args.txt`. Local NeoForge deploys set startup to `bash run.sh` so G1GC actually applies. The CurseForge Generic egg keeps its own startup.

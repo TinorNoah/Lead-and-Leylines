@@ -17,7 +17,7 @@ The single list of open work. Details live in the linked docs — this file is t
 
 - [ ] **Override revalidation boot tests** — `scripts/audit_overrides.py --inventory --items` reports **0** re-enable candidates, so the rest needs boots batched per namespace. Plan and batches: `docs/mods/load-fixes-inventory.md` ("TODO — deferred, not started").
 - [ ] **JEI Stuff's server-side join sync** — still unmeasured. Client cost is 4.5s of an 11.9min index, so it is not the client stall.
-- [ ] **`smoke_test.py` join measurement** — the harness never logs a player in, so it cannot measure join sync at all.
+- [ ] **`smoke_test.py` join measurement** — harness added (`scripts/join-test/`, Mineflayer bot; see `local-smoke-test` skill), but the 2026-10-10 spike proved vanilla-protocol bots are rejected at NeoForge negotiation (`vanilla.client.not_supported`), so no login timing. Remaining paths: HeadlessMc real client (Linux+Xvfb, not set up) or fake-player mods (skip login sync itself).
 - [ ] **`dynamic_resources` boot-time proof** — proven safe and active through a full F3+T reload, speedup unproven (306s vs 315s is noise, no baseline with it off).
 - [ ] **Inventory Essentials re-decision** — rationale went stale when IPN was removed; it declares no IPN dependency, so it stands alone but needs a real justification or removal.
 

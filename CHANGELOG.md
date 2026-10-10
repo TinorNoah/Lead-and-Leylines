@@ -15,7 +15,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- Switched the Java 21 garbage collector from ZGC to G1GC, using All the Mods 10's server tuning block. ZGC's extra native memory kept getting the dedicated server OOM-killed (exit 137) on tight boxes, and a return trip into fresh terrain chunk generation was enough to trigger it. Heap size rules are unchanged in the launcher; the dedicated server now reserves 2 GB below its container limit instead of 1.5 GB.
+
 ### Fixed
+
+- Silenced the boot-time tag errors (`minecraft:rabbit_food`, `farmersdelight:pies`, `apothic_pointblank:gun/small_arms` and their `c:animal_foods` / `create:brittle` cascades, plus `blueprint:generates_overrides`) with pack tag snapshots that drop the unregistered entries, an empty stub for NetherExp's missing `soul_has_feature/ecto_soul_sand` biome tag, and a disabled stand-in for Tempad's missing loot-modifier file.
+- Repaired three unloadable advancements (Dungeons Arise fishing hut / thornborn towers reparented to the mod root; Jaden's `big_brain_time` repointed at the real `brain_food`) and stubbed three missing registry tags (`netherexp:fossil_ore_convertible`, Forbidden Arcanus `soulbound_incompatible`, Iron's Jewelry `nether_findable`).
 
 ### Removed
 

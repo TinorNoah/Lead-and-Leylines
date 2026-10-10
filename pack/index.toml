@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/QuantifiedAPI/quantified_config.json"
+hash = "8be0f3f8a28081385e25a956638addbcffbb5d2970c1013129b807578a076a3c"
+
+[[files]]
 file = "config/alltheleaks.json"
 hash = "fc5eabff6b6f88e723464cb7993cb7f9f9412a4510fda0945b03e9b338bdea48"
 
@@ -3057,12 +3061,20 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/apotheosis/data
 hash = "639ed6d6e6ecb87d6c1c0acf86de38eff1af77ba470ac23cb1c2f660f93b9887"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/apothic_pointblank/tags/item/gun/small_arms.json"
+hash = "9fdc750e854f5d13ff780b9050370e42f130eeb11a6cb62a8c6cb2db0939d438"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/armageddon_mod/recipe/bsotlh_duplication_recipe.json"
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/blueprint/data_maps/dimension/modded_biome_slice_sizes.json"
 hash = "7afd2711456e91004d7e0dc6043cef1bcda8249f8cdc57c20160d1452bb42e74"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/blueprint/tags/trim_material/generates_overrides.json"
+hash = "a6fb92b9ed91412dfbfd3579f32ebc435817a56bf95e560018ca51885d2dd358"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/cbc_at/recipe/cutting/rocket_pod_breech_cast_mould.json"
@@ -3101,6 +3113,14 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/createdeco/reci
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/dungeons_arise/advancement/find_fishing_hut.json"
+hash = "c23ca8ecc9e2cb545c1f960ea5fb7d774212424c728d24786a8efdb7d5177aba"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/dungeons_arise/advancement/find_thornborn_towers.json"
+hash = "ee862a3818693d1420555ec6389294f1a17743535c3e3811e2f58e937c671084"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/arid.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
@@ -3125,6 +3145,22 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/farmersdelight/tags/block/pies.json"
+hash = "68e69a32022927ded347d0672e9fe19d54e0bf6fec88455d954a0d093bb73f5e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/farmersdelight/tags/item/pies.json"
+hash = "085761b11fbd28d0e7461d86b9c948e6b6378cbc4e2ba5aa44863b1b0ddb1018"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/forbidden_arcanus/tags/enchantment/modifier/soulbound_incompatible.json"
+hash = "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/irons_jewelry/tags/irons_jewelry/pattern/nether_findable.json"
+hash = "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/jadensnetherexpansiondelight/recipe/blue_scale_fungus_roll.json"
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 
@@ -3141,12 +3177,20 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/minecraft/tags/
 hash = "f739d9a51d3b962f7f17b1d2957e7fc621c2db624964d58b70661199ee8466ed"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/minecraft/tags/item/rabbit_food.json"
+hash = "79de692d23948db72840070cb06034b9038e5e8fa242ebd0932034609e8be9db"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_hoglin_stable.json"
 hash = "2ca6a8c428d5bc964f68a1fd0a9ec125168fb7a04710c230fbe05b25a502690a"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/mynethersdelight/loot_modifiers/add_loot_bastion_treasure.json"
 hash = "d42d8060adf1daf267990ce9f752a7f26275cd6433283372a06c49763c2d5705"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/advancement/nether/soul_sand_valley/big_brain_time.json"
+hash = "ee18ee69a2a391fd4a7d3faf6e34baf436aa62ea706ed97728e031bddf7cd139"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/advancement/recipes/misc/warphopper_fur_paper.json"
@@ -3171,6 +3215,14 @@ hash = "731325666d9118aee13bdd7a9beec73f6ff659a5184f777a1efd3309fd259024"
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/recipe/warphopper_fur_paper.json"
 hash = "97fd9db5cd2a4cbe50cff732055a0dbc0704a8ff395acca638a3880821eb8b26"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/tags/block/fossil_ore_convertible.json"
+hash = "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/netherexp/tags/worldgen/biome/soul_has_feature/ecto_soul_sand.json"
+hash = "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/regions_unexplored/worldgen/biome/eucalyptus_forest.json"
@@ -3207,6 +3259,10 @@ hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/spectrum/recipe/titration_barrel/infused_beverages/mead_fluid.json"
 hash = "57c6ce716a7f475eea3432b1cdfc03540a733b03f846d26baf4b6edc26622394"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/tempad/loot_modifiers/tempad_loot_modifier.json"
+hash = "ba95c2e15d96f4693a84e59622fce2e3ab9faea8015699726dc179510947009f"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/tf_dnv/recipe/alchemy_table.json"
@@ -6897,4 +6953,4 @@ metafile = true
 
 [[files]]
 file = "user_jvm_args.txt"
-hash = "80c083de79d05d261598750ded8aa62a518cd79c54b50996803bbb7ee8e2313e"
+hash = "7b337fcc90e2c8a26501ca6bcbdb00a00da8ef60153218ad20c4e60913d4125c"

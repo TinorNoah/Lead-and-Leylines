@@ -38,6 +38,9 @@ packwiz-cache/
 __pycache__/
 *.pyc
 
+# Node (join-test bot only; never pack code)
+node_modules/
+
 # OS
 .DS_Store
 Thumbs.db

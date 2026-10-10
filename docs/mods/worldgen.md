@@ -49,7 +49,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Countered's Terrain Slabs | `terrain_slabs-neoforge-3.1.2.jar` | both | Smooth terrain slabs. World data. Architectury already in. |
 | The Lost Cities | `lostcities-1.21-8.4.4.jar` | both | City worlds. World data. |
 | LC²H [Lost Cities: Multithreaded] | `lc2h-omni-4.2.4-LTS.jar` | both | Async city gen on top of Lost Cities 8.4.4. Quantified API required. C2ME is now also in. |
-| Quantified API | `quantified api-omni-2.2.3.jar` | both | LC²H scheduler / optional GPU path. Dedicated Mac smoke fell back to CPU (`liblwjgl.dylib` missing in the isolated probe). |
+| Quantified API | `quantified api-omni-2.2.3.jar` | both | LC²H scheduler, forced CPU (`enableGpuAcceleration=false`, `CPU_ONLY` in `pack/config/QuantifiedAPI/`). No Vulkan probe, no `libvulkan.so.1` spam. |
 | BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | Faster `/locate`. TerraBlender-aware. Does not change generated biomes. |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Generation MSPT. See [performance.md](performance.md). |
 | Feature Recycler | `Feature-Recycler-neoforge-2.0.0.jar` | both | Breaks Minecraft feature-order cycles so Terralith + Oh The Biomes We've Gone can generate. ARR. Not a second structure-spacing mod. |
