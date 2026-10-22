@@ -15,6 +15,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Changed
 
+- Updated mods to their latest 1.21.1 NeoForge builds and moved the loader to NeoForge 21.1.264. Apotheosis, Apothic Compats, irons_apothic, Modern Industrialization and Extended Industrialization stay pinned at their held versions (Apokinetics and the `leylines_patches` fix still target those exact builds).
+
 ### Fixed
 
 ### Removed

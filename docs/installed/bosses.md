@@ -28,7 +28,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | both | `core`, `boss` | Ocean bosses and the maze. |
-| Fragmentum [NeoForge Edition] | `fragmentum-5.0.0+1.21.1-neoforge.jar` | both | `library`, `boss` | Library Aquamirae needs. |
+| Aquamirae 🧩 (Neo)Forge | `aquamirae-neoforge-1.21.1-7.2.13.jar` | both | `core`, `boss` | Ocean bosses and the maze. |
+| Fragmentum 🧩 NeoForge | `fragmentum-5.4.0+1.21.1-neoforge.jar` | both | `library`, `boss` | Library Aquamirae needs. |
 | Illager Arena | `illager_arena-1.0.1-neoforge-1.21.1.jar` | both | `core`, `boss` | Desert arena of illager bosses. |
 | Bosses'Rise - Epic Souls like boss fights | `block_factorys_bosses-2.1.2-neo-1.21.1.jar` | both | `core`, `boss`, `epic-fight` | Extra boss fights that use Epic Fight movesets. |

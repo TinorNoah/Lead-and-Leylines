@@ -1,13 +1,13 @@
 name = "Myths & Legends"
-filename = "mythsandlegends-1.0.7.jar"
+filename = "mythsandlegends-1.0.9.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "993dac60d1aa9372e64d23f9b11ee4bbed96123e"
+hash = "45bef73c9ebcd997d487abc89e7b4d5ea4d024d1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8922514
+file-id = 9100543
 project-id = 1133244

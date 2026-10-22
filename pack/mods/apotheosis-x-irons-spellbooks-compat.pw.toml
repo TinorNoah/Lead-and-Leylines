@@ -1,6 +1,7 @@
 name = "Apotheosis x Iron's Spellbooks Compat"
 filename = "irons_apothic-2.2.5.jar"
 side = "both"
+pin = true
 
 [download]
 hash-format = "sha1"

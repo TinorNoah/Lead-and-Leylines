@@ -1,13 +1,13 @@
 name = "Iron's Spells 'N Spellbooks: Create Additions"
-filename = "ISS-Create-Additions-2.18.0-battery-network-fix.jar"
+filename = "ISS-Create-Additions-1.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "d2ce2a256f7af639cf94f57e662b43031735d2b2"
+hash = "0571a1f85b923868d29122d3661d6296a41f5891"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8985084
+file-id = 9049082
 project-id = 1698578

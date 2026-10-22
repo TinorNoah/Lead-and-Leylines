@@ -9,14 +9,14 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Just Enough Professions (JEP) | `JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar` | client | `addon`, `info`, `jei` | Profession workstations and skills in JEI. |
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.450.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
-| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.5.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.69.0.457.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
+| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.8-standalone.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
 | JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.1.jar` | both | `addon`, `info`, `jei` | Craft from JEI with fewer clicks. |
-| JEI Stuff | `jeistuff-1.21.1-1.2.1.jar` | both | `addon`, `info`, `jei` | Extra JEI pages. |
+| JEI Stuff | `jeistuff-1.21.1-1.3.0.jar` | both | `addon`, `info`, `jei` | Extra JEI pages. |
 | Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | client | `addon`, `info`, `jei` | Mob drops and dungeon loot in JEI. |
 | Smithing Template Viewer for JEI/EMI | `smithingtemplateviewer-1.0.4.jar` | client | `addon`, `info`, `jei` | Smithing templates in JEI. |
 | Not Enough Recipe Book [NERB] | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | `addon`, `info`, `jei` | Removes the vanilla recipe book. |
-| Just Enough Threads [JEI Startup Optimize] | `justenoughthreads-0.14.2+1.21.1.jar` | client | `addon`, `info`, `jei`, `optimizer` | Builds the JEI search index off the main thread. |
+| Just Enough Threads [JEI Startup Optimize] | `justenoughthreads-0.14.5+1.21.1.jar` | client | `addon`, `info`, `jei`, `optimizer` | Builds the JEI search index off the main thread. |
 | ShatterLib \| OctoLib | `OctoLib-NEOFORGE-0.6.2+1.21.jar` | both | `library`, `info` | Library Not Enough Recipe Book uses. |
 
 ## Looking at the world
@@ -24,7 +24,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Jade 🔍 | `Jade-1.21.1-NeoForge-15.10.6.jar` | both | `core`, `info`, `jade` | Block and entity overlay. |
-| Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.1.jar` | both | `addon`, `info`, `jade` | Extra Jade providers. |
+| Jade Addons (Neo/Forge) | `JadeAddons-1.21.1-NeoForge-6.1.2.jar` | both | `addon`, `info`, `jade` | Extra Jade providers. |
 | More Overlays Updated | `moreoverlays-1.24.2-mc1.21.1-neoforge.jar` | client | `core`, `info`, `jei` | Light level, chunk border, and JEI search overlays. |
 
 ## Books
@@ -37,7 +37,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.6.jar` | client | `core`, `info` | Item-tooltip frame. |
+| Tooltip Overhaul | `tooltipoverhaul-neoforge-1.21.1-2.0.7.jar` | client | `core`, `info` | Item-tooltip frame. |
 | Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | `addon`, `info` | Advanced tooltip details. Required by current KubeJS. |
 | TagTooltips | `tagtooltips-neoforge-1.21.1-1.2.0.jar` | client | `addon`, `info` | Hold a key to list item tags inside that frame. |
 | Item Borders [Neo/Forge] | `ItemBorders-1.21-neoforge-1.2.5.jar` | client | `addon`, `info` | Rarity borders on item slots. |

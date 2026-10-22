@@ -8,7 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| IceAndFire Community Edition | `iceandfire-2.1.3.jar` | both | `core`, `mob` | Dragons. Community Edition. |
+| IceAndFire Community Edition | `iceandfire-2.1.4.jar` | both | `core`, `mob` | Dragons. Community Edition. |
 | Jupiter | `jupiter-2.3.7-1.21.1-neoforge.jar` | both | `library`, `mob` | Library Ice and Fire needs. |
 | Uranus | `uranus-3.0-beta.1.jar` | both | `library`, `mob` | Library Ice and Fire needs. |
 
@@ -18,7 +18,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Illager Invasion | `IllagerInvasion-v21.1.6-1.21.1-NeoForge.jar` | both | `core`, `mob` | More illager types. Extensible Enums is inside this jar. |
 | Born in Chaos | `born_in_chaos_[Neoforge]_1.21.1_1.7.6.jar` | both | `core`, `mob` | Chaos mobs and infected ore. |
-| Born In Configuration | `borninconfiguration-3.2.2.jar` | both | `addon`, `mob` | Config screen for Born in Chaos. |
+| Born In Configuration | `borninconfig-NEO.jar` | both | `addon`, `mob` | Config screen for Born in Chaos. |
 | Born in Chaos Jade compat | `infected_ore_info-1.1.0.jar` | both | `compat`, `mob`, `jade` | Jade shows infected diamond ore as diamond ore. |
 | Mutant Monsters | `MutantMonsters-v21.1.1-1.21.1-NeoForge.jar` | both | `core`, `mob` | Mutant versions of vanilla mobs, some boss-sized. |
 
@@ -30,8 +30,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Enderman Overhaul | `endermanoverhaul-neoforge-1.21.1-2.0.3.jar` | both | `addon`, `mob`, `world-data` | Overhauled endermen. |
 | AI Improvements: Performance Tuning | `AI-Improvements-1.21-0.5.3.jar` | both | `addon`, `mob`, `optimizer` | Cheaper, smarter mob AI. |
 | Critters and Companions | `crittersandcompanions-neoforge-1.21.1-2.7.0.jar` | both | `core`, `mob` | Small wildlife and pets. |
-| Companions! | `companions-neoforge-1.21.1-1.3.5.jar` | both | `core`, `mob` | Companion creatures. |
-| Knight Lib | `knightlib-neoforge-1.21.1-2.0.3.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
+| Companions! | `companions-neoforge-1.21.1-1.3.6.jar` | both | `core`, `mob` | Companion creatures. |
+| Knight Lib | `knightlib-neoforge-1.21.1-2.0.5.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
 | Spawn | `spawn-4.0.8-1.21.1.jar` | both | `core`, `mob` | Extra spawn structures and mobs, including the dodo island. |
 | Teal Lib | `teallib-1.3.teal.jar` | both | `library`, `mob` | Library Spawn needs. |
 | Variants&Ventures | `variantsandventures-neoforge-1.0.28+mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
@@ -40,8 +40,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Myths & Legends | `mythsandlegends-1.0.7.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.9.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
+| Myths & Legends | `mythsandlegends-1.0.9.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.12.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
 ## Mob difficulty and farms
@@ -50,4 +50,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Mob Grinding Utils | `mob_grinding_utils-1.1.10+mc1.21.1.jar` | both | `core`, `mob`, `world-data` | Mob farm machines and spikes. |
 | Mob Grinding Utils: Vanillafied (16px) | `Mob Grinding Utils Vanillafied.zip` | client | `resource-pack`, `mob` | Resource pack. Vanilla-styled Mob Grinding Utils textures. |
-| BuffMobs | `buffmobs-3.3.2+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |
+| BuffMobs | `buffmobs-4.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |

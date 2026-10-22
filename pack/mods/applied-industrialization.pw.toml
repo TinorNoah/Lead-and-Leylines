@@ -1,13 +1,13 @@
 name = "Applied Industrialization"
-filename = "Applied-Industrialization-1.3.0.jar"
+filename = "Applied-Industrialization-1.4.4.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "049938c9a0df9a4e2e827ed81ad01f6a0cbbb058"
+hash = "79e04e65d734257f2e0674f8782ad4ace0bb4bba"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9020730
+file-id = 9192506
 project-id = 1671614

@@ -29,7 +29,8 @@ if [[ ! -f "$unix_args" ]]; then
     echo "missing unix_args.txt; NeoForge is not installed yet" >&2
     exit 1
   fi
-  unix_args="${matches[0]}"
+  # several loader versions can linger after a bump; boot the newest, not the first
+  unix_args="$(printf '%s\n' "${matches[@]}" | sort -t. -k1,1n -k2,2n -k3,3n | tail -1)"
 fi
 
 echo "heap ${heap}M (container ${memory}M, ZGC headroom reserved)"

@@ -1,13 +1,13 @@
 name = "[LC²H] | Lost Cities: Multithreaded"
-filename = "lc2h-omni-4.2.4-LTS.jar"
+filename = "lc2h-omni-4.2.5-LTS.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "20845fe885725f0e69a56ef5bbbd5b3fda51b295"
+hash = "90822d40b14cc312cc2d1b0f57562f7eb6e8233f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8928853
+file-id = 9040231
 project-id = 1325431

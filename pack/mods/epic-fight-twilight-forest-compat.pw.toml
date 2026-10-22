@@ -1,13 +1,13 @@
 name = "Epic Fight × Twilight Forest Compat"
-filename = "TwilightForestEFCompat-1.1.7-1.21.1-Neoforge.jar"
+filename = "TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "772d6d8daa28f43a57ba96c056087d5ca3002a64"
+hash = "8cd156ab12474c67a0915ec10d8304aacb930aef"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8968963
+file-id = 9275715
 project-id = 1555371

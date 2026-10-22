@@ -1,13 +1,13 @@
-name = "Aquamirae"
-filename = "aquamirae-neoforge-1.21.1-7.2.10.jar"
+name = "Aquamirae 🧩 (Neo)Forge"
+filename = "aquamirae-neoforge-1.21.1-7.2.13.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "28d18d2da303d50738e080b8a67b60358f6511b9"
+hash = "9ecfe49fcdc9266d4e2d3c6a05b7374ebc5f6f45"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8931374
+file-id = 9228645
 project-id = 536254

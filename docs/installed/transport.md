@@ -18,7 +18,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Logistics Network | `logisticsnetworks-1.21.1-1.16.4.jar` | both | `addon`, `transport`, `tech` | Item, fluid, and energy logistics network. |
+| Logistics Network | `logisticsnetworks-1.21.1-1.17.2.jar` | both | `addon`, `transport`, `tech` | Item, fluid, and energy logistics network. |
 | Modern Dynamics | `Modern-Dynamics-0.9.6.jar` | both | `core`, `transport` | Item and fluid pipes. |
 | XNet | `xnet-1.21-7.0.7.jar` | both | `core`, `transport`, `world-data` | Channel-based item, fluid, and energy networks. |
 | RFTools Base | `rftoolsbase-1.21-6.0.11.jar` | both | `library`, `transport` | Base blocks XNet needs. |

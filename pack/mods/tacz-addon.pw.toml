@@ -1,13 +1,13 @@
 name = "TaCZ addon"
-filename = "taczaddon-1.1.8.2-neoforge-1.21.1.jar"
+filename = "taczaddon-1.1.8.3-neoforge-1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e03eca1f39b0eb448ba4373de1876e472b89ad6e"
+hash = "c699de9a0dcaa91bad0e23cd31cbd81abb7835bc"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8836214
+file-id = 9069262
 project-id = 1238419

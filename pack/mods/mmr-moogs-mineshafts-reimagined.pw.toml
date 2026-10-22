@@ -1,13 +1,13 @@
 name = "MMR - Moog's Mineshafts Reimagined"
-filename = "MoogsMineshaftsReimagined-1.21-1.0.3.jar"
+filename = "MoogsMineshaftsReimagined-universal-1.21-1.1.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "7a11aa5daf87eb8223d83ff2b9cd98a9569f251f"
+hash = "8062c40df67327fa880eafd7991a373035d254a8"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8312865
+file-id = 9025889
 project-id = 1570795

@@ -1,6 +1,7 @@
 name = "Modern Industrialization"
 filename = "Modern-Industrialization-2.5.8.jar"
 side = "both"
+pin = true
 
 [download]
 hash-format = "sha1"

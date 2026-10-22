@@ -13,15 +13,15 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Extended Industrialization | `extended-industrialization-1.16.2-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `world-data` | Extra Modern Industrialization machines. |
 | Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech`, `modern-industrialization` | Solar panels for Modern Industrialization. |
 | Modern Industrialization Structure Viewer | `miviewer-1.1.5.jar` | both | `addon`, `tech`, `modern-industrialization` | In-world MI multiblock preview. |
-| LDLib | `ldlib2-neoforge-1.21.1-2.2.41-all.jar` | both | `library`, `tech`, `modern-industrialization` | Library the MI structure viewer needs. |
+| LDLib | `ldlib2-neoforge-1.21.1-2.2.43-all.jar` | both | `library`, `tech`, `modern-industrialization` | Library the MI structure viewer needs. |
 | Modern Industrial Routers | `modernindustrialrouters-2.1.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `transport` | Router upgrades for Modern Industrialization energy. |
 
 ## Oritech
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Oritech | `oritech-neoforge-1.21.1-1.2.12.jar` | both | `core`, `tech`, `oritech`, `world-data` | Animated factory multiblocks, reactors, and a bedrock extractor. Runs on the pack's shared Forge Energy. |
-| Oritech Things | `oritechthings-0.0.46.jar` | both | `addon`, `tech`, `oritech`, `world-data` | Tiered Speed, Processing, and Capacitor addons, plus accelerator controls. |
+| Oritech | `oritech-neoforge-1.21.1-1.2.13.jar` | both | `core`, `tech`, `oritech`, `world-data` | Animated factory multiblocks, reactors, and a bedrock extractor. Runs on the pack's shared Forge Energy. |
+| Oritech Things | `oritechthings-0.0.48.jar` | both | `addon`, `tech`, `oritech`, `world-data` | Tiered Speed, Processing, and Capacitor addons, plus accelerator controls. |
 | Applied Oritech | `applied_oritech-1.0.4+1.21.1.jar` | both | `compat`, `tech`, `oritech`, `ae2` | ME Dock and pattern provider so Oritech machines join an ME network. |
 
 ## Just Dire Things

@@ -1,13 +1,13 @@
 name = "Mekanism Elements"
-filename = "MekanismElements-1.21.1-3.0.16-NeoForge.jar"
+filename = "MekanismElements-1.21.1-3.0.19-NeoForge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e2887ed1cdde21b02bfb53ec9fe7f9431c2c1017"
+hash = "c9647915b2d9157332d20332829bd817125bff5a"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8839186
+file-id = 9246836
 project-id = 1103224

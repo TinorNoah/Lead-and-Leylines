@@ -8,13 +8,13 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| BetterNether: New Dawn | `BetterNether-21.0.27.jar` | both | `core`, `worldgen`, `nether`, `world-data` | Nether biomes and blocks. |
-| BCLib: New Dawn | `bclib-21.0.26.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether uses. |
-| WorldWeaver: New Dawn | `worldweaver-21.0.25.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether worldgen uses. |
-| WunderLib: New Dawn | `wunderlib-21.0.10.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether uses. |
+| BetterNether: New Dawn | `BetterNether-21.0.29.jar` | both | `core`, `worldgen`, `nether`, `world-data` | Nether biomes and blocks. |
+| BCLib: New Dawn | `bclib-21.0.28.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether uses. |
+| WorldWeaver: New Dawn | `worldweaver-21.0.29.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether worldgen uses. |
+| WunderLib: New Dawn | `wunderlib-21.0.11.jar` | both | `library`, `worldgen`, `nether` | Library BetterNether uses. |
 | Amplified Nether | `Amplified_Nether_26.2_v1.2.16.jar` | both | `addon`, `worldgen`, `nether`, `world-data` | Taller Nether terrain. |
 | Eternal Nether | `EternalNether-v21.1.3-1.21.1-NeoForge.jar` | both | `addon`, `worldgen`, `nether`, `world-data` | Extra Nether biomes. |
-| Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.18.jar` | both | `addon`, `worldgen`, `nether`, `world-data` | Nether biomes and mobs. |
+| Infernal Expansion Redux | `infernalexp-neoforge-1.21.1-0.3.20.jar` | both | `addon`, `worldgen`, `nether`, `world-data` | Nether biomes and mobs. |
 | Jaden's Nether Expansion | `Jadens-Nether-Expansion-2.4.1.jar` | both | `addon`, `worldgen`, `nether`, `jade`, `world-data` | Nether biomes, mobs, and blocks. |
 | Elysium API | `ElysiumAPI-1.21.1-2.0.1.jar` | both | `library`, `worldgen`, `nether` | Library Jaden's Nether Expansion needs. |
 | Nether Remastered | `nether_remastered-2.6-neoforge-1.21.1.jar` | both | `addon`, `worldgen`, `nether`, `world-data` | Nether structures and mobs. |

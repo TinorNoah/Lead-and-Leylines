@@ -2,7 +2,7 @@
 #
 # Pins loader-level launch behaviour so a future NeoForge default change cannot
 # silently alter it. Everything here except the two noted lines is also the
-# NeoForge 21.1.252 default, copied from a real first boot so this file is known
+# NeoForge default, copied from a real 21.1.252 first boot so this file is known
 # to parse. Loader version: pack/pack.toml [versions].
 #
 # Early window (854x480, fbScale 1) renders while the mod list initializes, so

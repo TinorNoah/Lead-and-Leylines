@@ -17,25 +17,25 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Controlling | `Controlling-neoforge-1.21.1-19.0.5.jar` | client | `core`, `client-qol` | Search keybinds. |
 | Mouse Tweaks | `MouseTweaks-neoforge-mc1.21-2.26.1.jar` | client | `core`, `client-qol` | Drag and scroll item moving. |
 | More Mouse Tweaks | `moremousetweaks-neoforge-1.1.1+1.21.1.jar` | client | `addon`, `client-qol` | More mouse inventory moves beside Mouse Tweaks. |
-| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | `addon`, `client-qol` | Extra inventory moves and sorting beside Mouse Tweaks. |
+| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.20.jar` | client | `addon`, `client-qol` | Extra inventory moves and sorting beside Mouse Tweaks. |
 | Recipe Essentials | `recipeessentials-1.21.1-4.7.jar` | client | `addon`, `client-qol` | Recipe book and craft helper tweaks. |
 | KeyBind Bundles | `keybindbundles-1.4.0.jar` | client | `addon`, `client-qol` | Collapse several keybinds into one. |
 | KeybindsPurger | `KeybindsPurger-1.4.0-neoforge-1.21.1.jar` | client | `addon`, `client-qol` | Clears conflicting keybinds. |
 | No Chat Reports | `NoChatReports-NEOFORGE-1.21.1-v2.9.1.jar` | both | `core`, `client-qol` | Chat cannot be reported to Mojang. |
 | Borderless Window | `borderless-neoforge-1.21.1-1.7.5_1-all.jar` | client | `addon`, `client-qol` | Borderless fullscreen window. |
 | FlickerFix | `flickerfix-1.21.1-6.1.0.jar` | client | `addon`, `client-qol`, `stability` | Stops night vision flicker. |
-| Extreme sound muffler - (Neo)Forge | `ExtremeSoundMuffler-3.56_NeoForge-1.21.jar` | client | `addon`, `client-qol` | Mutes sounds you pick. |
+| Extreme sound muffler - (Neo)Forge | `ExtremeSoundMuffler-3.57_NeoForge-1.21.jar` | client | `addon`, `client-qol` | Mutes sounds you pick. |
 | Sound​s | `sounds-2.4.22+lts+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Extra sound effects. |
 | MRU | `mru-1.0.41+1.21.1-neoforge.jar` | client | `library`, `client-qol` | Library Sounds uses. |
-| Sound Physics Remastered | `sound-physics-remastered-neoforge-1.21.1-1.5.1.jar` | client | `addon`, `client-qol` | Reverb and occlusion for sounds. |
+| Sound Physics Remastered | `sound-physics-remastered-neoforge-1.21.1-1.5.2.jar` | client | `addon`, `client-qol` | Reverb and occlusion for sounds. |
 | Searchables | `Searchables-neoforge-1.21.1-1.0.2.jar` | client | `addon`, `client-qol` | Search in more screens. |
-| Better Modlist | `better_modlist-21.1.1.jar` | client | `addon`, `client-qol` | Clearer mods screen. |
+| Better Modlist | `better_modlist-21.1.5.jar` | client | `addon`, `client-qol` | Clearer mods screen. |
 | Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | both | `compat`, `client-qol` | Clearer incompatibility screen. |
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | `addon`, `client-qol` | Crash screen with next steps. |
 | FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | `addon`, `client-qol` | Faster client startup. |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | `addon`, `client-qol` | Caches resource-pack loading. |
-| Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Logging off the client thread. |
-| AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.8_mc1.21.1.jar` | both | `addon`, `client-qol` | Ambient soundscapes. |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.50_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
+| Async Logger | `asynclogger-2.2.3+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Logging off the client thread. |
+| AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | both | `addon`, `client-qol` | Ambient soundscapes. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | `addon`, `client-qol` | Microsoft auth helper. |
 | Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | `core`, `client-qol` | Loads the pack's required resource and data packs. |

@@ -9,11 +9,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Terralith | `Terralith_1.21.x_v2.6.2.jar` | both | `core`, `worldgen`, `world-data` | Overworld biome pack. |
-| Oh The Biomes We've Gone | `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.0.jar` | both | `core`, `worldgen`, `world-data` | Second overworld biome pack. |
-| CorgiLib | `Corgilib-NeoForge-1.21.1-5.0.0.9.jar` | both | `library`, `worldgen` | Library Oh The Biomes We've Gone needs. |
-| Oh The Trees You'll Grow | `Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.2.jar` | both | `addon`, `worldgen`, `world-data` | Sapling data Oh The Biomes We've Gone needs. |
-| Regions Unexplored | `regions-unexplored-0.6.2-neoforge-21.1.jar` | both | `core`, `worldgen`, `world-data` | Third overworld biome pack. |
-| Lithostitched | `lithostitched-1.8.0-neoforge-21.1.jar` | both | `library`, `worldgen` | Worldgen library Terralith and Regions Unexplored use. |
+| Oh The Biomes We've Gone | `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.3.jar` | both | `core`, `worldgen`, `world-data` | Second overworld biome pack. |
+| CorgiLib | `Corgilib-NeoForge-1.21.1-5.0.0.10.jar` | both | `library`, `worldgen` | Library Oh The Biomes We've Gone needs. |
+| Oh The Trees You'll Grow | `Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.5.jar` | both | `addon`, `worldgen`, `world-data` | Sapling data Oh The Biomes We've Gone needs. |
+| Regions Unexplored | `regions-unexplored-0.6.3-neoforge-21.1.jar` | both | `core`, `worldgen`, `world-data` | Third overworld biome pack. |
+| Lithostitched | `lithostitched-1.8.1-neoforge-21.1.jar` | both | `library`, `worldgen` | Worldgen library Terralith and Regions Unexplored use. |
 | TerraBlender (NeoForge) | `TerraBlender-neoforge-1.21.1-4.1.0.8.jar` | both | `addon`, `worldgen`, `world-data` | Mixes those biome sets. Region size is set in pack config. |
 | Block Variants | `block_variants-1.21.1-6.1.1.jar` | both | `addon`, `worldgen`, `world-data` | Extra block variants used by biome mods. |
 | Block Variants - Oh The Biomes We've Gone | `block_variants_bwg-1.21.1-1.0.1.jar` | both | `addon`, `worldgen`, `world-data` | Block variants for Oh The Biomes We've Gone. |

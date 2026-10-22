@@ -14,23 +14,23 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Extra Sodium options. |
 | Colorwheel | `colorwheel-neoforge-1.3.0+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Create rendering path for Iris. |
 | Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Patcher Colorwheel needs. |
-| ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.14+1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Faster immediate-mode rendering. |
-| Entity Culling Fabric/Forge | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Skips entities you cannot see. |
+| ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.15+1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Faster immediate-mode rendering. |
+| Entity Culling Fabric/Forge | `entityculling-neoforge-1.11.3-mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Skips entities you cannot see. |
 | MoreCulling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | `addon`, `rendering`, `optimizer` | Extra block-face culling. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Skips client work that does not change. |
-| AsyncParticles | `AsyncParticles-21.1.4.5+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
-| Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
-| Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.14.3.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
+| AsyncParticles | `AsyncParticles-21.1.4.10+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
+| Particle Rain | `particlerain-4.0.2+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
+| Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.15.1.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |
-| Iris & Oculus Search | `IrisSearch-1.8.1-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |
+| Iris & Oculus Search | `IrisSearch-1.8.3-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |
 | Better Fps - Render Distance | `betterfpsdist-1.21.1-6.1.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper far-chunk rendering. |
 
 ## Connected textures
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Fusion (Connected Textures) | `fusion-1.3.15b-neoforge-mc1.21.1.jar` | client | `core`, `rendering` | Connected textures for resource packs. |
+| Fusion (Connected Textures) | `fusion-1.3.16-neoforge-mc1.21.1.jar` | client | `core`, `rendering` | Connected textures for resource packs. |
 | Fusion 3D Items | `Fusion 3D Items v1.0.1 for Minecraft 1.20-1.21.8.zip` | client | `resource-pack`, `rendering` | Resource pack. 3D item models. |
 | Fusion Connected Glass | `Fusion Connected Glass v1.0.1 for Minecraft 1.20-1.21.8.zip` | client | `resource-pack`, `rendering` | Resource pack. Glass textures connect. |
 
@@ -38,10 +38,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| [EMF] Entity Model Features [Fabric & Forge] | `entity_model_features-3.3.9-1.21-neoforge.jar` | client | `core`, `rendering` | Custom entity models. Some mobs stay on vanilla models while Epic Fight is in. |
-| [ETF] Entity Texture Features - [Fabric & Forge] | `entity_texture_features-7.2.4-1.21-neoforge.jar` | client | `addon`, `rendering` | Custom entity textures. EMF needs this. |
-| EMF Compat: Core | `emf_compat_core_1.21.1_2.0.0.jar` | client | `library`, `rendering` | EMF compat library. |
-| Fresh Animations | `FreshAnimations_v1.10.4.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations. |
+| [EMF] Entity Model Features [Fabric & Forge] | `entity_model_features-3.3.12-1.21-neoforge.jar` | client | `core`, `rendering` | Custom entity models. Some mobs stay on vanilla models while Epic Fight is in. |
+| [ETF] Entity Texture Features - [Fabric & Forge] | `entity_texture_features-7.2.6-1.21-neoforge.jar` | client | `addon`, `rendering` | Custom entity textures. EMF needs this. |
+| EMF Compat: Core | `emf_compat_core_neoforge_1.21.1_2.3.2.jar` | client | `library`, `rendering` | EMF compat library. |
+| Fresh Animations | `FreshAnimations_v1.11.1_1.20+.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations. |
 | Fresh Animations: Extensions | `FA+All_Extensions-v1.8.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations extensions. |
 | Darkest Ages Mobs | `Darkest_Ages_Mobs-1.21.1_1.2.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Darkest Ages mobs. |
 | Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Darkest Ages plus Fresh Animations. |

@@ -703,6 +703,18 @@ Restored by this change: 7 disabled recipes under `lead-leylines-load-fixes/data
 
 **Still unverified:** `neapolitan:strawberry_fields` is injected as a *vanilla* datapack biome (tagged `c:is_plains` and `c:is_rare`, and spliced into the mineshaft / ruined portal / trial chamber biome tags) on a TerraBlender `overworld_region_size = 6` + Terralith pack. A boot-only smoke test cannot show terrain. Check the biome on a real generated chunk before treating this as settled. Note the pack's `lead-leylines-large-climate` datapack overrides `minecraft/worldgen/noise/temperature.json` and `vegetation.json` rather than listing biomes, so the new biome inherits the pack's climate points with no datapack edit — that part is fine.
 
+## 2026-10-23 update wave (all mods + NeoForge)
+
+`packwiz update --all` in `pack/` plus NeoForge `21.1.252` → `21.1.264` in `pack/pack.toml`. 131 mod files changed, plus the Fresh Animations resource pack and the Cyberpunk 2077 Point Blank gun pack. Nothing added, nothing removed, no `side` changes.
+
+**Held: Apotheosis stays at 8.8.0.** The 2026-09-30 reason still holds — Apokinetics 1.0.6 mixins the pre-8.9.0 `GemCaseTile.upgradeGem` / `getUpgradeMatch` signatures, and the mixin fails hard at mod construction. `packwiz update --all` pulled 8.9.0 again, so Apotheosis, Apothic Compats (0.2.4.3) and irons_apothic (2.2.5) were reverted to the held trio and now each carry `pin = true`, which `packwiz update --all` skips (`Version is pinned; run the unpin command to allow updating`). Unpin only when Apokinetics ships a build matching 8.9.0, or the pack drops Apokinetics.
+
+**Jumps worth knowing about:** JEI `19.57.0.450` → `19.69.0.457` together with Just Enough Threads `0.14.2` → `0.14.5`, JEI Stuff `1.2.1` → `1.3.0` and MezzConfig `0.6.5` → `0.6.8-standalone` — the pack's recurring JEI-mixin breakage class, and the dedicated-server smoke test never loads the client JEI path, so a Prism boot is still required (look for `JEI native bulk builder disabled` or a `InvalidInjectionException` in `latest.log`; `config/justenoughthreads-client.toml` `enabled = false` is the escape hatch). Major bumps: BuffMobs `3.3.2` → `4.0.0`, Create Nuclear `1.3.2-beta.3` → `2.0.0`, Supplementaries `3.9.9` → `4.0.2`, TACZ Turrets `2.0.0` → `3.0.0` (jar renamed to `tacz_turrets-neoforge-3.0.0-1.21.1.jar`), and ISS-Create-Additions renumbered `2.18.0` → `1.4`. Particle Rain left beta (`4.0.0-beta.11` → `4.0.2`).
+
+**Also held: Modern Industrialization `2.5.8` and Extended Industrialization `1.16.2-1.21.1`.** `leylines_patches` 0.2.0 declares both as *exact* dependencies, so `--all`'s `2.5.11` / `1.16.4` failed the boot with `Mod leylines_patches requires modern_industrialization 2.5.8`. Both are reverted and carry `pin = true`. Widening that range is a patch-repository change (new `patches-vX.Y.Z`), not a pack-side edit.
+
+The loader bump was not optional: Almanac and Let Me Despawn (as `letmedespawn`) now require NeoForge `[21.1.262,)` and Elite X Quality Guns `[21.1.259,)`, so `21.1.252` no longer satisfies the updated jars.
+
 ## Credits / Attribution
 
 | Mod | Author / project | License note | Required credit |

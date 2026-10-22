@@ -9,15 +9,15 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Create | `create-1.21.1-6.0.10.jar` | both | `core`, `tech`, `create` | Contraptions, kinetics, and trains' base mod. |
-| Create Crafts & Additions | `createaddition-1.7.1.jar` | both | `addon`, `tech`, `create` | Electric motor, alternator, and power. |
+| Create Crafts & Additions | `createaddition-1.7.2.jar` | both | `addon`, `tech`, `create` | Electric motor, alternator, and power. |
 | Create Deco | `createdeco-2.1.3.jar` | both | `addon`, `tech`, `create` | Decoration blocks. |
-| Create Encased | `Create Encased-1.21.1-1.9.0-ht3.jar` | both | `addon`, `tech`, `create` | Encased blocks. |
+| Create Encased | `Create Encased-1.21.1-1.10.0.jar` | both | `addon`, `tech`, `create` | Encased blocks. |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | both | `addon`, `tech`, `create` | Vein mine with Create. |
 | Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | client | `addon`, `tech`, `create` | Cheaper Create rendering. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | `compat`, `tech`, `create`, `jei` | Create recipes in JEI. |
 | Create: Dragons Plus | `CreateDragonsPlus-1.11.9.jar` | both | `library`, `tech`, `create` | Shared Create addon library several factory mods need. |
-| Create: Enchantment Industry | `create-enchantment-industry-2.5.4.jar` | both | `addon`, `tech`, `create`, `world-data` | Liquid experience and automated enchanting. |
-| Create: Central Kitchen | `create-central-kitchen-2.6.2.jar` | both | `addon`, `tech`, `create`, `farmers-delight` | Create processing for Farmer's Delight foods. |
+| Create: Enchantment Industry | `create-enchantment-industry-2.5.4b.jar` | both | `addon`, `tech`, `create`, `world-data` | Liquid experience and automated enchanting. |
+| Create: Central Kitchen | `create-central-kitchen-2.6.2b.jar` | both | `addon`, `tech`, `create`, `farmers-delight` | Create processing for Farmer's Delight foods. |
 | Create: Integrated Farming | `create-integrated-farming-1.4.3.jar` | both | `addon`, `tech`, `create`, `farming` | Create farming automation. |
 | Create: New Age | `create-new-age-1.2.0+neoforge-mc1.21.1.jar` | both | `addon`, `tech`, `create`, `world-data` | Create electricity and magnets. |
 | Create: Bells & Whistles | `bellsandwhistles-0.4.7-1.21.1.jar` | both | `addon`, `tech`, `create` | Train bells, whistles, and decoration. |
@@ -34,7 +34,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Enchantable Machinery | `createenchantablemachinery-3.6.0+mc1.21.1-neoforge.jar` | both | `addon`, `tech`, `create` | Enchant Create machines. |
 | Create: Alloyed | `alloyed-3.0.12+1.21.1-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Steel and bronze for Create. |
 | Create: Applied Kinetics | `createappliedkinetics-1.5.4-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
-| Create Nuclear | `createnuclear-1.3.2-beta.3-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Create nuclear power. |
+| Create Nuclear | `createnuclear-2.0.0-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Create nuclear power. |
 | Create: Metalwork | `createmetalwork-neoforge-1.21.1-3.0.0.jar` | both | `addon`, `tech`, `create` | Extra Create metal blocks and parts. |
 | Create: Shimmer | `create-shimmer-1.3.1.jar` | both | `addon`, `tech`, `create` | Create lighting and ambience blocks. |
 | Create: Fast SchematicCannon | `CreateFastSchematicCannon-2.6.1-neoforge-1.21.1.jar` | both | `addon`, `tech`, `create` | Faster Create schematic cannons. |

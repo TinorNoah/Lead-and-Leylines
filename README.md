@@ -14,7 +14,7 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 | Author | TinorNoah |
 | Pack version | 0.1.26 |
 | Minecraft | 1.21.1 |
-| Mod loader | NeoForge 21.1.252 |
+| Mod loader | NeoForge 21.1.264 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseG1GC`) |
 | Packwiz format | packwiz:1.1.0 |
 | Mods | Performance stack plus Create, Mekanism and Modern Industrialization, FTB Quests, logistics (XNet, Modern Dynamics), storage (Applied Energistics 2, Refined Storage), JEI, biomes, Jade, and worldgen (see [docs/mods/manifest.md](docs/mods/manifest.md)) |

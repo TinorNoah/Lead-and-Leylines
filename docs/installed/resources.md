@@ -13,4 +13,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Alchemistry | `alchemistry-1.21.1-2.4.5.jar` | both | `core`, `resources` | Chemical elements and compounds. |
 | ChemLib | `chemlib-1.21.1-2.1.5.jar` | both | `library`, `resources` | Chemistry items Alchemistry uses. |
 | AlchemyLib | `alchemylib-1.21.1-1.1.6.jar` | both | `library`, `resources` | Library Alchemistry needs. |
-| Netherite Tweaks & Fixes | `netherite_tweaks_luna-1.2.2-neoforge-1.21.1.jar` | both | `addon`, `resources` | Netherite crafting tweaks. |
+| Netherite Tweaks & Fixes | `netherite_tweaks_luna-1.2.3-neoforge-1.21.1.jar` | both | `addon`, `resources` | Netherite crafting tweaks. |

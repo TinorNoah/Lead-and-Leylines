@@ -16,6 +16,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | FTB Quests (NeoForge) | `ftb-quests-neoforge-2101.1.36.jar` | both | `core`, `ftb` | Quest book. |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | `addon`, `ftb` | Lowers quest-book cost. |
 | FTB Filter System | `ftb-filter-system-neoforge-21.1.4.jar` | both | `addon`, `ftb` | Shared item filters. |
-| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.12.jar` | both | `compat`, `ftb` | FTB bridges to other mods. |
+| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.13.jar` | both | `compat`, `ftb` | FTB bridges to other mods. |
 | FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | client | `addon`, `ftb`, `jei` | Quest recipes in JEI. |
 | FTB Ultimine (NeoForge) | `ftb-ultimine-neoforge-2101.1.15.jar` | both | `addon`, `ftb` | Vein mine. |
