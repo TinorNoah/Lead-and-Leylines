@@ -3,11 +3,6 @@ filename = "Cyberpunk_2077_Guns_Pack_1.20.2.zip"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9108/338/Cyberpunk_2077_Guns_Pack_1.20.2.zip"
 hash-format = "sha1"
 hash = "87e8ec07ee8750be3ef4106d1a88a072348922f4"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9108338
-project-id = 1013546

@@ -715,6 +715,8 @@ Restored by this change: 7 disabled recipes under `lead-leylines-load-fixes/data
 
 The loader bump was not optional: Almanac and Let Me Despawn (as `letmedespawn`) now require NeoForge `[21.1.262,)` and Elite X Quality Guns `[21.1.259,)`, so `21.1.252` no longer satisfies the updated jars.
 
+**Eight of the updated files are API-excluded on CurseForge** (`downloadUrl: null` — the authors disabled third-party API downloads on those uploads), so they are pinned to the CurseForge CDN as `[download] url`, the same pattern as Simply More and Overgeared: Fresh Animations `v1.11.1`, Entity Culling `1.11.3`, Subtle Effects `1.15.1`, Epic Fight × Twilight Forest Compat `1.1.8`, Tactical Breaching `1.0.7`, Not Enough Patterns `0.8.1`, Iron's Spells: Create Additions `1.4`, and the Cyberpunk 2077 Point Blank pack `1.20.2`. Each URL was derived from its file id (`files/{id/1000}/{id%1000}/{name}`) and the downloaded bytes matched the sha1 packwiz had already recorded. Keeping `metadata:curseforge` was not an option: the `.mrpack` export aborted and `packwiz-installer` would refuse the file. Consequence: those eight no longer appear in `packwiz update --all` (no `[update]` block) and their jars are embedded in `overrides/mods/` of the CurseForge client zip. Revisit if an author re-enables API downloads, or move to Modrinth metadata where the version exists (Entity Culling, Subtle Effects, Cyberpunk 2077 pack and Fresh Animations all have it).
+
 ## Credits / Attribution
 
 | Mod | Author / project | License note | Required credit |

@@ -3,11 +3,6 @@ filename = "nep-1.21.1-0.8.1.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9256/724/nep-1.21.1-0.8.1.jar"
 hash-format = "sha1"
 hash = "d2b7d5172646ae5ab9406a01b5bf5a8bdfbcc9b9"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9256724
-project-id = 1624304

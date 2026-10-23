@@ -4853,7 +4853,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-spellworks-irons-spells-n-spellbooks.pw.toml"
-hash = "8b37584734655cf3b4ebf68ed44b5df97fca57aada8403102252a51270bb0191"
+hash = "148524955036b90e4544e8f053805154feb6e45d3b7e6f6cc70e7b1a71f9e70c"
 metafile = true
 
 [[files]]
@@ -5048,7 +5048,7 @@ metafile = true
 
 [[files]]
 file = "mods/entityculling.pw.toml"
-hash = "2c30e4316a5ae988b31f83db6f83d3b4b824758ca9e6a2dd8e1f131de418bfed"
+hash = "f4b2be0b17c1d66e572d86483b64acd6713ecfed6f6c92cea94711d5f0904694"
 metafile = true
 
 [[files]]
@@ -5078,7 +5078,7 @@ metafile = true
 
 [[files]]
 file = "mods/epic-fight-twilight-forest-compat.pw.toml"
-hash = "d9999a5ffec240d39e9d44ee504727f96bc53687d6286e6e145c1656170752d0"
+hash = "4d89d8637ef118394f0f83dc161a8f0beef930e0799dc79618517e5661a5614c"
 metafile = true
 
 [[files]]
@@ -6063,7 +6063,7 @@ metafile = true
 
 [[files]]
 file = "mods/not-enough-patterns.pw.toml"
-hash = "228bb76f4191d6c8af06be6d88ad76164f6e18fedafd51b529c1da6343e05903"
+hash = "fb3f5aa67f83eeb4854b43c75c628a4530c50e4ba84d50f2e62f555598a2b58c"
 metafile = true
 
 [[files]]
@@ -6508,7 +6508,7 @@ metafile = true
 
 [[files]]
 file = "mods/subtle-effects.pw.toml"
-hash = "e37f7d0e1286d488fb45b3999436601ffadfdf0621bd9fa929338c9865d149a5"
+hash = "9891a37eb59a22ee75f2dd4c2cb29c308224f90005b9821ec292c6bb015c9378"
 metafile = true
 
 [[files]]
@@ -6583,7 +6583,7 @@ metafile = true
 
 [[files]]
 file = "mods/tacz-tactical-breaching.pw.toml"
-hash = "c7c607cf4268fa404ff497b08b18c13d043d8b8111b72d731d7e79097fed10fa"
+hash = "09c7d1fb4b300c1721431c63b413fcc983c4bf9802cf4cd36af6f0bf8a1a775a"
 metafile = true
 
 [[files]]
@@ -6838,7 +6838,7 @@ metafile = true
 
 [[files]]
 file = "pointblank/cyberpunk-2077-guns-for-vics-point-blank.pw.toml"
-hash = "6b608f7f78f1326f4a065fd489076642efc3d7e35973a1fae1760702bf393436"
+hash = "ce9cca5040e29fd7b751c57b4978c6d7ecc1ef10c766cfa062579077d4f8a5ab"
 metafile = true
 
 [[files]]
@@ -6898,7 +6898,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations.pw.toml"
-hash = "517dae188ff4e8aa3303b9f5f733f373278109c13722d93e232d0cb01d935d5a"
+hash = "cc1f09dff5bdf3dfe8e805646fdeaa404eff081af2ba3d07aad140d2fc7a7eee"
 metafile = true
 
 [[files]]

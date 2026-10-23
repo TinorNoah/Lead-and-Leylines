@@ -3,11 +3,6 @@ filename = "TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9275/715/TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar"
 hash-format = "sha1"
 hash = "8cd156ab12474c67a0915ec10d8304aacb930aef"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9275715
-project-id = 1555371

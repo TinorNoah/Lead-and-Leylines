@@ -3,11 +3,6 @@ filename = "ISS-Create-Additions-1.4.jar"
 side = "both"
 
 [download]
+url = "https://mediafilez.forgecdn.net/files/9049/82/ISS-Create-Additions-1.4.jar"
 hash-format = "sha1"
 hash = "0571a1f85b923868d29122d3661d6296a41f5891"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9049082
-project-id = 1698578
