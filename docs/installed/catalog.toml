@@ -795,12 +795,6 @@ mods = [
   { file = "reinhardts-hbm-neoforgeport.pw.toml", blurb = "Nuclear reactors, radiation, and heavy industry. NeoForge port.", tags = ["core", "tech", "world-data"] },
 ]
 
-[[category.group]]
-name = "Endfield"
-mods = [
-  { file = "endfield-industry.pw.toml", blurb = "Arknights: Endfield production facilities and their power grid.", tags = ["core", "tech", "world-data"] },
-]
-
 [[category]]
 slug = "transport"
 title = "Transport"

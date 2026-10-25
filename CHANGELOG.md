@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.1] - 2026-10-25
+
+### Removed
+
+- Endfield Industry. Machines already placed from it will be missing in existing worlds.
+
 ## [0.2.0] - 2026-10-25
 
 ### Added

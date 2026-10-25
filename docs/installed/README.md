@@ -27,7 +27,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Refined Storage](refined-storage.md) | 8 | Disks, grids, autocrafting, and the addons that extend them, including the wireless crafting grid. |
 | [Mekanism](mekanism.md) | 13 | Machines, factories, gases, and tools. |
 | [Create](create.md) | 32 | Contraptions and kinetics, including trains. |
-| [Automation](automation.md) | 17 | Extra machine mods beside Create and Mekanism. |
+| [Automation](automation.md) | 16 | Extra machine mods beside Create and Mekanism. |
 | [Transport](transport.md) | 18 | Fast travel, item pipes, and routers. |
 | [Resources](resources.md) | 8 | Ores, unification, and chemistry. |
 | [Building](building.md) | 32 | Building tools and decoration. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 22 | Shared libraries used by more than one mod family. |
 
-609 entries, each listed once.
+608 entries, each listed once.
