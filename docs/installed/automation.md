@@ -59,9 +59,3 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Reinhardt's HBM NeoforgePort | `reinhardtshbm-R26102401.jar` | both | `core`, `tech`, `world-data` | Nuclear reactors, radiation, and heavy industry. NeoForge port. |
-
-## Endfield
-
-| Mod | File | Side | Tags | What it adds |
-|---|---|---|---|---|
-| Endfield Industry | `arknights_endfield-1.0.3-1.21.1.jar` | both | `core`, `tech`, `world-data` | Arknights: Endfield production facilities and their power grid. |

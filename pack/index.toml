@@ -5092,11 +5092,6 @@ hash = "db652d3e04c7b6d861f47b78a346f53ac59aae153ab0fa442b887efa4a5d1ed9"
 metafile = true
 
 [[files]]
-file = "mods/endfield-industry.pw.toml"
-hash = "5fb8f2c1e7ebde73c6421df00ae9e0ba48ac6b0a9caac7ac4d7ba6ab625ec9a6"
-metafile = true
-
-[[files]]
 file = "mods/entity-model-features.pw.toml"
 hash = "22185ae1ecd5e0540b49c1ce5cabd8011b0296e8fb4024b18a13ea1308fe6d75"
 metafile = true
