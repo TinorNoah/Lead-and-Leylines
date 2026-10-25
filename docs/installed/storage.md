@@ -44,3 +44,21 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | SuperMartijn642's Config Lib | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | both | `library`, `storage` | Config library Trash Cans needs. |
 | TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | both | `addon`, `storage` | Trash slot in the inventory. |
 | DimStorage | `DimStorage-1.21.1-9.1.1.jar` | both | `addon`, `storage`, `world-data` | Dimensional chests and tanks. |
+
+## Replication
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Replication | `Replication-1.21.1-1.2.7.jar` | both | `core`, `storage`, `tech` | Scans items and replicates them through a matter network. |
+
+## Smartstock
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Smartstock | `smartstock-0.18.16.jar` | both | `core`, `storage`, `world-data` | Wall monitors and terminals; craft from nearby inventories, with an Applied Energistics bridge. |
+
+## Grim Storage
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Grim Storage Industries | `grimstorage-1.17.14.jar` | both | `core`, `storage`, `world-data` | One network for items, fluids, energy, and XP, with autocrafting. |

@@ -51,3 +51,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mob Grinding Utils | `mob_grinding_utils-1.1.10+mc1.21.1.jar` | both | `core`, `mob`, `world-data` | Mob farm machines and spikes. |
 | Mob Grinding Utils: Vanillafied (16px) | `Mob Grinding Utils Vanillafied.zip` | client | `resource-pack`, `mob` | Resource pack. Vanilla-styled Mob Grinding Utils textures. |
 | BuffMobs | `buffmobs-4.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |
+| Animal Pens | `animal_pen-neoforge-1.21-2.5.2.jar` | both | `addon`, `mob`, `optimizer` | Stores farm animals in pens so they stop ticking. |
+| Magnum Torch | `MagnumTorch-v21.1.1-1.21.1-NeoForge.jar` | both | `addon`, `mob`, `gameplay` | Torch that blocks mob spawns over a large area. |
+| Grim Soul Industries | `grimsoul-2.1.27.jar` | both | `core`, `mob`, `tech`, `world-data` | Laser grinders, mob capture, and virtual farms. |

@@ -12,7 +12,15 @@
   // Dedupe identical ingredient lists across recipes. Cuts retained memory in
   // a 570-mod pack where hundreds of mods ship near-identical tag-based
   // ingredient arrays. ATM-10 enables this.
-  "ingredientDedupe": true,
+  //
+  // Ours is off. This feature caches the Ingredient's ItemStack and then makes
+  // it immutable, and Replication has to set the "minecraft:damage" component on
+  // tool ingredients to price them. Every such write throws
+  // ATLUnsupportedOperation, and 2425 recipes (alltheores:copper_ore_hammer and
+  // friends) fail to calculate, so those items cannot be scanned or replicated.
+  // 4372 exceptions per recipe-index in latest.log. 1.1.13 is the newest 1.21.1
+  // build and has no per-mod exclusion, so config is the only fix.
+  "ingredientDedupe": false,
 
   // Pack ships Flux Networks (pack/mods/flux-networks.pw.toml) and Applied Flux
   // (applied-flux.pw.toml). This stops networks in unloaded chunks from ticking.

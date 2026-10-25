@@ -1,0 +1,13 @@
+name = "Grim Soul Industries"
+filename = "grimsoul-2.1.27.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ff9d11e7466d7291fe90d42946303ed747bfb5a1"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9300172
+project-id = 1723025

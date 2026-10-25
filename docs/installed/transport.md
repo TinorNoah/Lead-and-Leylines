@@ -14,6 +14,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Tempad | `tempad-1.21.1-3.0.4-all.jar` | both | `addon`, `transport`, `world-data` | Pocket time-door travel. |
 | Caelus API | `caelus-neoforge-7.0.1+1.21.1.jar` | both | `library`, `transport` | Elytra flight library Elytra Slot needs. |
 
+## SKY ACES
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| SKY ACES | `f22raptor-neoforge-1.21.1-1.8.0.jar` | both | `core`, `transport`, `world-data` | Fighter jets, warbirds, helicopters, warships, and submarines, with a campaign. |
+
 ## Pipes
 
 | Mod | File | Side | Tags | What it adds |
@@ -24,6 +30,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | RFTools Base | `rftoolsbase-1.21-6.0.11.jar` | both | `library`, `transport` | Base blocks XNet needs. |
 | McJtyLib | `mcjtylib-1.21-9.0.21.jar` | both | `library`, `transport` | Library McJty mods need. |
 | Simple Conveyor Belts | `belts-neoforge-0.2.2.jar` | both | `core`, `transport` | Simple item conveyor belts. |
+| Pipe Connector | `pipe_connector-neoforge-0.5.28.jar` | both | `addon`, `transport` | Lays pipe runs automatically along a selected route. |
+| Grim Pipe Industries | `grimpipes-1.5.1.jar` | both | `core`, `transport`, `tech` | Item, fluid, energy, and chemical pipes. |
 
 ## Routers
 

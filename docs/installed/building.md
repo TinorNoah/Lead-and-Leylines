@@ -38,3 +38,5 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Multi Builder Tool | `MultiBuilderTool-1.21.1-1.1.29.jar` | both | `addon`, `building` | Places a multiblock in one click. |
 | Little Big Redstone | `little-big-redstone-1.9.12-1.21.1.jar` | both | `addon`, `building`, `world-data` | Packs a redstone circuit into one block. |
 | Tesseract API (NeoForge) | `tesseract-api-neoforge-1.12.18-1.21.1.jar` | both | `library`, `building` | Library Little Big Redstone uses. |
+| Laser Bridges & Doors [Fabric/Forge/NeoForge] | `laserbridges-1.21.1-neoforge-6.2.jar` | both | `core`, `building`, `world-data` | Laser sources that form platforms and doors when powered. |
+| Deimos Lib | `deimos-1.21.1-neoforge-2.7.jar` | both | `library`, `building` | Library Laser Bridges needs. |

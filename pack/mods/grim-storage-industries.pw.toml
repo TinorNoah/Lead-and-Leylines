@@ -1,0 +1,13 @@
+name = "Grim Storage Industries"
+filename = "grimstorage-1.17.14.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "ae06a2be918fb450b71cbb03a2f5cbb90c9273fa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9300187
+project-id = 1738349

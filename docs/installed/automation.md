@@ -36,3 +36,32 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Charging Gadgets | `charginggadgets-1.14.1.jar` | both | `addon`, `tech` | Charges tools and gadgets. |
 | Flux Networks | `FluxNetworks-1.21.1-8.0.0.jar` | both | `core`, `tech`, `world-data` | Wireless energy networks. |
+
+## Nautec
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+
+## Voltex
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Voltex | `Voltex-3.0.4-neoforge-1.21.1.jar` | both | `core`, `tech`, `world-data` | Industrial machines, heat, fluids, logistics, and nanites. |
+
+## Singulo
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Singulo | `Singulo-0.11.3-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
+
+## HBM's Nuclear Tech
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Reinhardt's HBM NeoforgePort | `reinhardtshbm-R26102401.jar` | both | `core`, `tech`, `world-data` | Nuclear reactors, radiation, and heavy industry. NeoForge port. |
+
+## Endfield
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| Endfield Industry | `arknights_endfield-1.0.3-1.21.1.jar` | both | `core`, `tech`, `world-data` | Arknights: Endfield production facilities and their power grid. |
