@@ -1,0 +1,13 @@
+name = "Smartstock"
+filename = "smartstock-0.18.16.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d38a33aa924d7ec8cadd784568cd83509829234b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9313653
+project-id = 1671735

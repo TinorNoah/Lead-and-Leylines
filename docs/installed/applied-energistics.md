@@ -36,3 +36,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Applied Flux | `AppliedFlux-1.21-2.1.7-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | FE power in ME networks. |
 | ME Requester | `merequester-neoforge-1.21.1-1.5.0.jar` | both | `addon`, `tech`, `storage`, `ae2`, `world-data` | Keeps items and fluids stocked in the ME system. |
 | Applied Construction Sticks | `appliedsticks-1.21.1-1.2.1.jar` | both | `compat`, `building`, `ae2` | Construction sticks that pull items from Applied Energistics. |
+| Growth Accelerator Tiers | `growthacceleratortiers-2.0.1+1.21.1.jar` | both | `addon`, `tech` | Extra AE2 growth accelerator tiers. |

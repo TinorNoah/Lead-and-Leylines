@@ -57,6 +57,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Point Blank Official Extension \|\| Half Life Pack | `halflife-ext v0.8.zip` | both | `content-pack`, `guns`, `point-blank` | Official Half-Life pack. |
 | Cyberpunk 2077 Guns for Vic's Point Blank | `Cyberpunk_2077_Guns_Pack_1.20.2.zip` | both | `content-pack`, `guns`, `point-blank` | Cyberpunk 2077 gun pack. |
 
+## Superb Warfare
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| [SBW] Superb Warfare | `superbwarfare-0.8.9.2-mc1.21.1-c22d98c2.jar` | both | `core`, `guns`, `transport`, `world-data` | Guns, cannons, and ground vehicles. A third firearm system beside TaCZ and Point Blank. |
+
 ## Armageddon
 
 | Mod | File | Side | Tags | What it adds |

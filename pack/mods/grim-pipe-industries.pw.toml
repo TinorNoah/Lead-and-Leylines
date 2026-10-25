@@ -1,0 +1,13 @@
+name = "Grim Pipe Industries"
+filename = "grimpipes-1.5.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "0bdac274287c3dd960a4c460eac992f553c79738"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9300153
+project-id = 1733568

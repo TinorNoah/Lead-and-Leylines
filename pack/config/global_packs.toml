@@ -21,10 +21,15 @@ log_pack_ids = false
 # packwiz filename at global_packs/required_resources/ instead: packwiz's CurseForge export does
 # not emit an overrides entry for them, CurseForge installs texture packs into resourcepacks/ by
 # its own rule, and the folder entry here would then enable only lead-leylines-armageddon-models.
+#
+# These entries name pack files by exact filename, so a resource-pack bump must be mirrored here in
+# the same change. When it is not, the installer deletes the old zip and Global Packs creates an
+# empty directory under the stale name instead: FA v1.11.1 then lost its font marker texture, the
+# default font failed to load, and the client crashed in Twilight Forest's recovery screen.
 [resourcepacks]
 required = [
     "global_packs/required_resources/",
-    "resourcepacks/FreshAnimations_v1.10.4.zip",
+    "resourcepacks/FreshAnimations_v1.11.1_1.20+.zip",
     "resourcepacks/FA+All_Extensions-v1.8.1.zip",
     "resourcepacks/Darkest_Ages_Mobs-1.21.1_1.2.1.zip",
     "resourcepacks/Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip",

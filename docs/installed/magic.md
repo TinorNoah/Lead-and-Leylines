@@ -69,6 +69,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Forbidden and Arcanus | `forbidden_arcanus-2.6.1.jar` | both | `core`, `magic` | Magic blocks, tools, and mobs. |
 | Valhelsia Core | `valhelsia_core-neoforge-1.21.1-1.1.5.jar` | both | `library`, `magic` | Library Forbidden and Arcanus needs. |
+| Neo Vitae | `neovitae-1.21.1-1.1.48.jar` | both | `core`, `magic`, `world-data` | Blood altars, sigils, sentient armour, and a demon dungeon. |
 
 ## Jewelry
 

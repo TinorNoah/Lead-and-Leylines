@@ -116,6 +116,12 @@ mods = [
 ]
 
 [[category.group]]
+name = "Superb Warfare"
+mods = [
+  { file = "superb-warfare.pw.toml", blurb = "Guns, cannons, and ground vehicles. A third firearm system beside TaCZ and Point Blank.", tags = ["core", "guns", "transport", "world-data"] },
+]
+
+[[category.group]]
 name = "Armageddon"
 mods = [
   { file = "armageddon.pw.toml", blurb = "Tiered weapons and armor.", tags = ["core", "melee"] },
@@ -239,6 +245,9 @@ mods = [
   { file = "mob-grinding-utils.pw.toml", blurb = "Mob farm machines and spikes.", tags = ["core", "mob", "world-data"] },
   { file = "mob-grinding-utils-vanillafied.pw.toml", blurb = "Resource pack. Vanilla-styled Mob Grinding Utils textures.", tags = ["resource-pack", "mob"] },
   { file = "buff-mobs.pw.toml", blurb = "Makes mobs harder, per mob type.", tags = ["addon", "mob"] },
+{ file = "animal-pens.pw.toml", blurb = "Stores farm animals in pens so they stop ticking.", tags = ["addon", "mob", "optimizer"] },
+{ file = "magnum-torch.pw.toml", blurb = "Torch that blocks mob spawns over a large area.", tags = ["addon", "mob", "gameplay"] },
+  { file = "grim-soul-industries.pw.toml", blurb = "Laser grinders, mob capture, and virtual farms.", tags = ["core", "mob", "tech", "world-data"] },
 ]
 
 [[category]]
@@ -455,6 +464,7 @@ name = "Forbidden and Arcanus"
 mods = [
   { file = "forbidden-arcanus.pw.toml", blurb = "Magic blocks, tools, and mobs.", tags = ["core", "magic"] },
   { file = "valhelsia-core.pw.toml", blurb = "Library Forbidden and Arcanus needs.", tags = ["library", "magic"] },
+{ file = "neovitae.pw.toml", blurb = "Blood altars, sigils, sentient armour, and a demon dungeon.", tags = ["core", "magic", "world-data"] },
 ]
 
 [[category.group]]
@@ -583,6 +593,24 @@ mods = [
   { file = "dimstorage.pw.toml", blurb = "Dimensional chests and tanks.", tags = ["addon", "storage", "world-data"] },
 ]
 
+[[category.group]]
+name = "Replication"
+mods = [
+  { file = "replication.pw.toml", blurb = "Scans items and replicates them through a matter network.", tags = ["core", "storage", "tech"] },
+]
+
+[[category.group]]
+name = "Smartstock"
+mods = [
+  { file = "smartstock.pw.toml", blurb = "Wall monitors and terminals; craft from nearby inventories, with an Applied Energistics bridge.", tags = ["core", "storage", "world-data"] },
+]
+
+[[category.group]]
+name = "Grim Storage"
+mods = [
+  { file = "grim-storage-industries.pw.toml", blurb = "One network for items, fluids, energy, and XP, with autocrafting.", tags = ["core", "storage", "world-data"] },
+]
+
 [[category]]
 slug = "applied-energistics"
 title = "Applied Energistics"
@@ -619,6 +647,7 @@ mods = [
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
   { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull items from Applied Energistics.", tags = ["compat", "building", "ae2"] },
+{ file = "growth-accelerator-tiers.pw.toml", blurb = "Extra AE2 growth accelerator tiers.", tags = ["addon", "tech"] },
 ]
 
 [[category]]
@@ -743,6 +772,35 @@ mods = [
   { file = "flux-networks.pw.toml", blurb = "Wireless energy networks.", tags = ["core", "tech", "world-data"] },
 ]
 
+[[category.group]]
+name = "Nautec"
+mods = [
+]
+
+[[category.group]]
+name = "Voltex"
+mods = [
+  { file = "voltex.pw.toml", blurb = "Industrial machines, heat, fluids, logistics, and nanites.", tags = ["core", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "Singulo"
+mods = [
+  { file = "singulo.pw.toml", blurb = "Thermocouples up to rotating black holes, multiblocks, and gravity tools.", tags = ["core", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "HBM's Nuclear Tech"
+mods = [
+  { file = "reinhardts-hbm-neoforgeport.pw.toml", blurb = "Nuclear reactors, radiation, and heavy industry. NeoForge port.", tags = ["core", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "Endfield"
+mods = [
+  { file = "endfield-industry.pw.toml", blurb = "Arknights: Endfield production facilities and their power grid.", tags = ["core", "tech", "world-data"] },
+]
+
 [[category]]
 slug = "transport"
 title = "Transport"
@@ -759,6 +817,12 @@ mods = [
 ]
 
 [[category.group]]
+name = "SKY ACES"
+mods = [
+  { file = "fighter-jets-overhaul.pw.toml", blurb = "Fighter jets, warbirds, helicopters, warships, and submarines, with a campaign.", tags = ["core", "transport", "world-data"] },
+]
+
+[[category.group]]
 name = "Pipes"
 mods = [
   { file = "logistics-network.pw.toml", blurb = "Item, fluid, and energy logistics network.", tags = ["addon", "transport", "tech"] },
@@ -767,6 +831,8 @@ mods = [
   { file = "rftools-base.pw.toml", blurb = "Base blocks XNet needs.", tags = ["library", "transport"] },
   { file = "mcjtylib.pw.toml", blurb = "Library McJty mods need.", tags = ["library", "transport"] },
   { file = "simple-conveyor-belts.pw.toml", blurb = "Simple item conveyor belts.", tags = ["core", "transport"] },
+  { file = "pipe-connector.pw.toml", blurb = "Lays pipe runs automatically along a selected route.", tags = ["addon", "transport"] },
+  { file = "grim-pipe-industries.pw.toml", blurb = "Item, fluid, energy, and chemical pipes.", tags = ["core", "transport", "tech"] },
 ]
 
 [[category.group]]
@@ -792,6 +858,8 @@ mods = [
   { file = "chemlib.pw.toml", blurb = "Chemistry items Alchemistry uses.", tags = ["library", "resources"] },
   { file = "alchemylib.pw.toml", blurb = "Library Alchemistry needs.", tags = ["library", "resources"] },
   { file = "netherite-tweaks.pw.toml", blurb = "Netherite crafting tweaks.", tags = ["addon", "resources"] },
+{ file = "hephaestus-forge.pw.toml", blurb = "Melts down ores and gear into molten material.", tags = ["core", "resources", "world-data"] },
+{ file = "hephaestus-tools.pw.toml", blurb = "Modular tools cast in the Hephaestus Forge.", tags = ["addon", "resources"] },
 ]
 
 [[category]]
@@ -832,6 +900,8 @@ mods = [
   { file = "multi-builder-tool.pw.toml", blurb = "Places a multiblock in one click.", tags = ["addon", "building"] },
   { file = "little-big-redstone.pw.toml", blurb = "Packs a redstone circuit into one block.", tags = ["addon", "building", "world-data"] },
   { file = "tesseract-api-neoforge.pw.toml", blurb = "Library Little Big Redstone uses.", tags = ["library", "building"] },
+{ file = "laser-bridges-doors.pw.toml", blurb = "Laser sources that form platforms and doors when powered.", tags = ["core", "building", "world-data"] },
+{ file = "deimos-fabric-forge-neoforge.pw.toml", blurb = "Library Laser Bridges needs.", tags = ["library", "building"] },
 ]
 
 [[category]]
@@ -889,7 +959,7 @@ mods = [
   { file = "artifacts.pw.toml", blurb = "Trinkets that use Curios.", tags = ["core", "gameplay"] },
   { file = "cosmetic-armor-reworked.pw.toml", blurb = "Cosmetic armor over real armor.", tags = ["addon", "gameplay"] },
   { file = "comforts.pw.toml", blurb = "Sleeping bags and hammocks.", tags = ["core", "gameplay"] },
-  { file = "epitaphs.pw.toml", blurb = "Graves.", tags = ["core", "gameplay"] },
+  { file = "graveless.pw.toml", blurb = "A ghost holds your items at the death site for a one-click restore.", tags = ["core", "gameplay"] },
   { file = "akashic-tome.pw.toml", blurb = "One book that holds other books.", tags = ["addon", "gameplay"] },
   { file = "polymorph.pw.toml", blurb = "Picks which recipe crafts when several conflict.", tags = ["core", "gameplay"] },
   { file = "crafting-tweaks.pw.toml", blurb = "Inventory crafting buttons.", tags = ["addon", "gameplay"] },
@@ -901,7 +971,7 @@ mods = [
   { file = "get-it-together-drops.pw.toml", blurb = "Dropped stacks merge by tag.", tags = ["addon", "gameplay"] },
   { file = "heyberryshutup.pw.toml", blurb = "Villagers stop taking berry bush damage.", tags = ["addon", "gameplay"] },
   { file = "in-control.pw.toml", blurb = "Rules for what spawns where.", tags = ["addon", "gameplay"] },
-  { file = "im-fast.pw.toml", blurb = "Stops movement desync kicking or spamming the log.", tags = ["addon", "stability"] },
+{ file = "tool-belt.pw.toml", blurb = "A second belt for tools and weapons.", tags = ["addon", "gameplay"] },
 ]
 
 [[category]]
@@ -1019,6 +1089,8 @@ mods = [
   { file = "dynamic-fps.pw.toml", blurb = "Lowers FPS when the window is unfocused.", tags = ["core", "client-qol"] },
   { file = "colorful-hearts.pw.toml", blurb = "Heart colors.", tags = ["core", "client-qol"] },
   { file = "colourful-everywhere.pw.toml", blurb = "Recolours GUIs with shader presets (NeoForge OptiGUI stand-in).", tags = ["addon", "client-qol"] },
+  { file = "simple-menu.pw.toml", blurb = "Draws the pack's title art behind the vanilla menu buttons.", tags = ["core", "client-qol"] },
+  { file = "collective.pw.toml", blurb = "Serilum's shared config and utility library.", tags = ["library"] },
   { file = "client-tweaks.pw.toml", blurb = "Small client annoyance toggles.", tags = ["addon", "client-qol"] },
   { file = "bad-wither-no-cookie-reloaded.pw.toml", blurb = "Mutes wither, dragon, and raid music.", tags = ["addon", "client-qol"] },
   { file = "default-options.pw.toml", blurb = "Applies pack keybinds and options.", tags = ["addon", "client-qol"] },
@@ -1047,6 +1119,7 @@ mods = [
   { file = "creativecore.pw.toml", blurb = "Library AmbientSounds uses.", tags = ["library", "client-qol"] },
   { file = "neoauth.pw.toml", blurb = "Microsoft auth helper.", tags = ["addon", "client-qol"] },
   { file = "globalpacks.pw.toml", blurb = "Loads the pack's required resource and data packs.", tags = ["core", "client-qol"] },
+{ file = "another-config-manager.pw.toml", blurb = "In-game browser and editor for every mod config.", tags = ["addon", "client-qol"] },
 ]
 
 [[category]]
@@ -1073,8 +1146,6 @@ mods = [
   { file = "fastworkbench.pw.toml", blurb = "Faster crafting lookup.", tags = ["core", "optimizer"] },
   { file = "fastfurnace.pw.toml", blurb = "Faster furnaces.", tags = ["addon", "optimizer"] },
   { file = "fastsuite.pw.toml", blurb = "Faster recipe manager.", tags = ["addon", "optimizer"] },
-  { file = "cerulean.pw.toml", blurb = "Cheaper advancement checks.", tags = ["addon", "optimizer"] },
-  { file = "txnilib.pw.toml", blurb = "Library Cerulean needs.", tags = ["library", "optimizer"] },
   { file = "fluidium.pw.toml", blurb = "Delays fluid ticks far from players. Claimed chunks stay full speed.", tags = ["addon", "optimizer"] },
   { file = "duplicationless.pw.toml", blurb = "Library Fluidium needs. Also blocks a few dupe paths.", tags = ["library", "optimizer"] },
   { file = "observable.pw.toml", blurb = "In-game lag profiler.", tags = ["addon", "optimizer"] },

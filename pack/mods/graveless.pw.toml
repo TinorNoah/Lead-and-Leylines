@@ -1,0 +1,13 @@
+name = "Graveless"
+filename = "graveless-neoforge-1.21.1-1.3.7.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "edbea0c9a27411e06025d87b89b882d280e98820"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9191668
+project-id = 1646227

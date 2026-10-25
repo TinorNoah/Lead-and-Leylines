@@ -31,13 +31,14 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Neruina | `neruina-3.3.3+1.21.1-neoforge.jar` | both | Isolates ticking entity crashes. Requires Configurable. |
 | Configurable | `configurable-3.5.2+1.21.1-neoforge.jar` | both | Required by Neruina. |
 | Clumps | `Clumps-neoforge-1.21.1-19.0.0.1.jar` | both | XP orb merge. |
-| AllTheLeaks | `alltheleaks-1.1.13+1.21.1-neoforge.jar` | both | Known leak patches. |
+| AllTheLeaks | `alltheleaks-1.1.13+1.21.1-neoforge.jar` | both | Known leak patches. `ingredientDedupe` is switched off in `config/alltheleaks.json`: it locks Ingredient ItemStacks and Replication writes `minecraft:damage` onto tool ingredients, which threw 4372 `ATLUnsupportedOperation` exceptions and left 2425 recipes uncalculated. Every other key stays on. |
 | Cupboard | `cupboard-1.21.1-4.2.jar` | both | Required by Smooth Chunk Save. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | Client-side rendering skip work. |
 | Dynamic FPS | `dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar` | client | Lowers FPS when unfocused. File lists 1.21.1. |
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | Crash dump helper. Dedicated boot log: client-only, no-op on server. |
 | Entity Culling | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | Official Extra for Sodium 0.8.13 (fog, particles, FPS overlay). Not Chloride. |
+| Animal Pens | `animal_pen-neoforge-1.21-2.5.2.jar` | both | 2026-10-25. Penned animals stop ticking while staying interactive, so large farms cost nothing. Required dep Architectury is already in. Penned entities cannot be used as a mob-farm kill loop, and captures skip nothing else — verify in game before relying on it for dragons or bosses. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | Item/entity/particle draw. Not Better Block Entities. |
 | AsyncParticles | `AsyncParticles-21.1.4.5+1.21.1.jar` | client | Particle thread. Not Particle Core. Coexists with AAA Particles (Effekseer). |
 | Particle Rain | `particlerain-4.0.0-beta.11+1.21.1-neoforge.jar` | client | Weather particles. |
@@ -57,8 +58,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Create: Threaded Trains | `createthreadedtrains-neoforge-1.21.1-1.0.0.jar` | both | Train network off the server thread. See [configs.md](configs.md). |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | Quest tick cost. Older than Quests 2101.1.36; see [configs.md](configs.md). |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.2.5.jar` | both | Chunk-gen MSPT / placement. Replaces Noisium (incompatible). Not operator pregen; use `/neoforge generate` for that. |
-| Cerulean | `cerulean-neoforge-1.0.0-1.21.1.jar` | both | Advancement InventoryChangeTrigger. Replaces Achievements Optimizer. TxniLib required. |
-| TxniLib | `txnilib-neoforge-1.0.24-1.21.1.jar` | both | Cerulean dependency. |
+| Cerulean | — | — | **Removed 2026-10-25.** Advancement `InventoryChangeTrigger` optimisation, but its TxniLib dependency JarJar-bundles Forgified Fabric API, and the Fabric data-attachment handshake (`fabric:accepted_attachments_v1`) cannot be encoded on NeoForge — starting or creating a world killed the connection with `EncoderException: Failed to encode packet clientbound/minecraft:custom_payload`. Not worth a Fabric compatibility layer. |
+| TxniLib | — | — | **Removed 2026-10-25** with Cerulean. It was the pack's only source of Forgified Fabric API. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | Faster GeckoLib entity rendering. Alpha 1.0.2. Sodium and ImmediatelyFast already in. |
 | FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | Early-load mixins. ARR. First to remove if launch breaks next to ModernFix / quick pack. |
 | Fluidium | `fluidium-1.21.1-1.4.0.jar` | both | Distant fluid tick delay. Not a distant-entity freezer. Duplicationless required. |
@@ -70,6 +71,8 @@ Optimizer configs are now committed under `pack/config/` and pinned to their own
 **Save path, measured.** `scripts/save_bench.py` times `save-all flush` and shutdown against one pre-generated world, 3 trials per configuration. On 1089 chunks at 8 GiB: no save mods 6609 ms flush / 296 ms P99; C2ME alone 3409 ms / 290 ms P99; Fast Async World Save alone 7646 ms / **90 ms** P99; Smooth Chunk Save alone 7339 ms / 292 ms P99. Every configuration wrote a byte-identical world with zero save errors, so reliability did not separate them. Consequences: **Smooth Chunk Save removed** (slower flush than nothing and no spike benefit). **Fast Async World Save kept** — the only save-path mod that cuts the worst tick spike, and it does so with C2ME off *and* on. **C2ME kept**, but note it is not a save-path mod: it is the whole chunk system (threaded chunkgen, async chunk IO, density-function compiler), and its flush win is a side effect of rewriting chunk IO. Do not re-add Smooth Chunk Save.
 
 Note that `scripts/smoke_test.py` cannot confirm this removal. Its CPS and boot numbers are dominated by machine load on this pack: on 2026-10-05, runs with the mod absent measured 129.0s / 13.5 CPS and 122.3s / 14.1 CPS, while a run with the mod present measured 121.3s / 10.9 CPS, so the mod is not what moved those numbers. `save_bench.py` is the tool for save-path questions because its trials run back-to-back against one fixed world.
+
+**Reading the RSS column.** `smoke_test.py` samples the server JVM with `ps`, which counts file-backed pages too: the roughly 2 GB of mapped mod jars becomes resident as the OS cache warms. Across six runs on 2026-10-25, RSS climbed 1786 → 5672 MiB while post-gen MSPT *fell* 3.4 → 2.8 and CPS rose, so that column tracks cache warmth and GC timing, not heap growth. Compare MSPT, CPS and stall length between runs; never compare RSS.
 
 ## Considered / held / dropped
 

@@ -19,6 +19,29 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.0] - 2026-10-25
+
+### Added
+
+- New mods: Animal Pens, Magnum Torch, Another Config Manager, Tool Belt, Pipe Connector, Growth Accelerator Tiers, Hephaestus Forge + Hephaestus Tools, Laser Bridges & Doors, Replication, and Neo Vitae (blood magic and its demon dungeon return).
+- Every player now gets one iron backpack when they start a world, granted by the hidden `lead-leylines-starting-kit` advancement.
+- More mods: Superb Warfare (guns, cannons, ground vehicles), SKY ACES (jets, warbirds, warships, submarines), Endfield Industry, HBM's Nuclear Tech, Voltex, Singulo, Grim Pipe/Soul/Storage Industries, and Smartstock.
+- New title screen: a leyline night painting (glowing causeway, arcane ruins, half-buried rifles) behind the menu buttons, drawn by Simple Menu. The Ice and Fire and Aquamirae themed main menus are off so the pack's own art shows.
+
+### Changed
+
+- Death handling is Graveless instead of Epitaphs: a ghost waits at your death site holding everything and restores it in one click.
+
+### Fixed
+
+- The game no longer crashes on startup with the new mods: two item sprites overflowed the item atlas (a 2048×2048 Superb Warfare texture and a leftover Simply Swords strip), so a small resource pack downscales the first and blanks the second.
+
+### Removed
+
+- Cerulean and TxniLib. TxniLib shipped a bundled Fabric compatibility layer whose data-attachment handshake could not be encoded on NeoForge, so starting or creating a world dropped the connection.
+- I'm Fast. It patched the same vehicle-move limit SKY ACES now patches, and its required mixin ran first, which crashed the game during load. Too Fast stays and covers the player-movement half.
+- Nautec 2, added the same day. Its atlas file pulled every mod's entity textures into the block atlas, which overflowed once the new vehicle mods arrived and crashed the game at startup.
+
 ## [0.1.27] - 2026-10-24
 
 ### Changed

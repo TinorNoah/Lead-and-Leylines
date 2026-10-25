@@ -71,7 +71,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Default Options | `defaultoptions-neoforge-1.21.1-21.1.8.jar` | client | Pack default options. Balm. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | Invulnerability after join. |
 | Packet Fixer | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` | both | Larger network packets. Not Disconnect Packet Fix. |
-| Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | Movement packet speed (singleplayer too). |
+| Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | Movement packet speed (singleplayer too). Its vehicle-constant patch is a `require = 0` no-op since SKY ACES owns that mixin. |
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | Faster leaf decay. |
 | WITS | `wits-neoforge-1.3.1.jar` | both | Structure name overlay. |
 | Lootr | `lootr-neoforge-1.21.1-1.11.38.127.jar` | both | Per-player loot chests. World data. |
@@ -119,6 +119,13 @@ tlin for Forge. AGPL-3.0-or-later. |
 | Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | Required by KubeJS 377. Stacks with Tooltip Overhaul. |
 | Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | Extra inventory moves beside Mouse Tweaks. Balm. Does not depend on Inventory Profiles Next. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
+| Simple Menu | `simplemenu-1.21.1-2.4.jar` | client | Title-screen background image behind vanilla buttons. Chosen over FancyMenu (3.9.14 needs Konkrete + Melody) because the ask was one image, not a menu layout editor. Hooks `PanoramaRenderer.render`, so it only works while no other mod replaces that renderer — Ice and Fire `customMainMenu` and Aquamirae `themed_main_menu` are therefore off. Ships `config/serilum/simplemenu.json` (`setCustomBackground`) and the art at `config/serilum/simplemenu/background/background.png`. Collective. |
+| Collective | `collective-1.21.1-8.65.jar` | client | Serilum shared library. Only Simple Menu uses it, so it stays `client`. |
+| Another Config Manager | `another_config_manager-1.0.0.0.0-neoforge-1.21.1.jar` | client | 2026-10-25. In-game browser and editor for every mod config — the pack ships ~600 mods, most with configs nobody can find. No dependencies. It writes config files directly, so the edited file, not the game, is the source of truth; a pack sync overwrites it again. |
+| Magnum Torch | `MagnumTorch-v21.1.1-1.21.1-NeoForge.jar` | both | 2026-10-25. Blocks mob spawns over a large radius so bases stop needing torch spam. Puzzles Lib already in. Deliberately suppresses spawns in its area, so no mob farms inside the radius. |
+| Pipe Connector | `pipe_connector-neoforge-0.5.28.jar` | both | 2026-10-25. Lays pipe runs automatically along a selected route. Works on the `c:pipes` tag, so it covers Modern Dynamics, XNet, and Mekanism pipes. No dependencies. |
+| Tool Belt | `ToolBelt-1.21.1-2.2.10.jar` | both | 2026-10-25. Extra belt for tools and weapons. No required deps; optional Sewing Kit is not installed. Item, so it must be `both` — a client-only copy would not exist on the server. |
+| Graveless | `graveless-neoforge-1.21.1-1.3.7.jar` | both | 2026-10-25. Replaced Epitaphs: a ghost holds the dropped items at the death site and one click restores them. One death handler only — do not run both. Grave blocks from Epitaphs in existing worlds are orphaned by the swap. |
 
 ## Considered / held / dropped
 
@@ -130,6 +137,7 @@ tlin for Forge. AGPL-3.0-or-later. |
 | JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.449.jar`). |
 | JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |
 | WTHIT | Dropped | Overlaps Jade. |
+| FancyMenu | Held | 3.9.14-1.21.1-neoforge needs Konkrete 1.9.9 + Melody for a full drag-and-drop menu editor. Simple Menu covers the actual ask (one background image) with one dependency. Revisit only if the title screen needs a real redesign: moved buttons, custom logo, layout files. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |
 | No trampling on farmland | Held | Last CurseForge file is 1.20.1. |
 | Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |

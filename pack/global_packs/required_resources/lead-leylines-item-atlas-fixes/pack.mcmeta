@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "pack_format": 34,
+    "description": "Lead and Leylines: item atlas fixes. Downscales Superb Warfare's 2048px bocek sprite and replaces Simply Swords' unreferenced 32x1920 bramblethorn_layer_old leftover."
+  }
+}

@@ -28,6 +28,9 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Sophisticated Backpacks: Ars Compat | `arssophisticatedcompat-0.3.0.jar` | both | Ars items in backpacks. |
 | Sophisticated Storage: Ars Compat | `arssophisticatedstoragecompat-0.3.0.jar` | both | Ars items in Sophisticated storage. |
 | Sophisticated Tactical Backpacks | `militarybackpack-2.0.1.jar` | both | Tactical backpacks and ammo reload. Beta. World data. |
+| Replication | `Replication-1.21.1-1.2.7.jar` | both | 2026-10-25. Scans an item once then replicates it from a matter network. Titanium is the only required dep and was already in. Deliberately a power upgrade beside AE2 and Refined Storage — it duplicates items rather than storing them, so it does not replace either. |
+| Grim Storage Industries | `grimstorage-1.17.14.jar` | both | 2026-10-25. One network for items, fluids, energy, and XP, with autocrafting and its own ore. A third storage network beside AE2 and Refined Storage, taken on request; Ars Nouveau is its required dep and was already in. World data. |
+| Smartstock | `smartstock-0.18.16.jar` | both | 2026-10-25. Wall monitors and terminals, craft-from-nearby-inventories, and an Applied Energistics bridge. Does not replace AE2 terminals — it reads the inventories around it. World data. |
 | Mekanism + Sophisticated Backpacks Compat | `mekanismsophisticatedbackpacks-neoforge-1.21.1-1.0.1+mc1.21.1-neoforge.jar` | both | Chemical tanks in backpacks. |
 | Sophisticated Item Actions | `sophisticateditemactions-1.21.1-0.5.16.423.jar` | both | Pinned 1.21.1; later files are 1.21.11. |
 | Yukami's Sophisticated Backpack Tab | `yukamibackpacktab-1.21.1-2.2.0-neoforge.jar` | client | Inventory backpack tab. |
