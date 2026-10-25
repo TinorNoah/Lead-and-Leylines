@@ -672,7 +672,9 @@ def upload_server_mods(
             print("  continuing; Wings did not report offline")
 
     print(f"server mods zip on GitHub ({zip_size} bytes)")
-    wings.delete(["mods", SERVER_MODS_REMOTE])
+    # Wipe whole folders: extraction overwrites by name, so a renamed file in
+    # mods/, pointblank/ or tacz/ would otherwise survive and duplicate content.
+    wings.delete(["mods", "pointblank", "tacz", SERVER_MODS_REMOTE])
     print("Pelican pulling the server-mods zip from the GitHub Release")
     try:
         wings.pull_file(
