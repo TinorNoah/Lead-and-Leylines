@@ -1,0 +1,13 @@
+---
+description: Delete the Pelican world on every deploy unless the user says to keep it
+alwaysApply: true
+---
+
+# Pelican fresh world
+
+Every Pelican deploy deletes the dedicated-server world. The next start creates a new one.
+
+- Default is `python scripts/deploy_server.py --from-local`, including the Pelican step inside `release.py`. After the server stops, the script deletes the `level-name` folder (usually `world`, plus leftover `world_nether` / `world_the_end`).
+- Pass `--keep-world` only when the user explicitly says to keep the existing world.
+- `--share-only` does not touch the panel, so it does not delete a world.
+- Do not mention the panel or join address in GitHub-facing copy.

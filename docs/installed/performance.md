@@ -11,10 +11,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Leaky - Item Lag Fix | `leaky-1.21-3.6.jar` | both | `addon`, `optimizer` | Cleans up item piles and broken farms. |
 | Chunk Sending | `chunksending-1.21-4.1.jar` | both | `addon`, `optimizer` | Faster chunk packet delivery. |
 | Fast Async World Save[Forge/Neo/Fabric] | `fastasyncworldsave-1.21-2.6.jar` | both | `addon`, `optimizer` | Saves the world without tick spikes. |
-| Invasive Optimizations | `invasiveopts-1.0.25.jar` | both | `addon`, `optimizer` | Deeper optimizations for other mods. |
+| Invasive Optimizations | `invasiveopts-1.0.26.jar` | both | `addon`, `optimizer` | Deeper optimizations for other mods. |
 | Lithium (Fabric/NeoForge) | `lithium-neoforge-0.15.4+mc1.21.1.jar` | both | `core`, `optimizer` | Gameplay and tick optimizer. |
 | FerriteCore ((Neo)Forge) | `ferritecore-7.0.3-neoforge.jar` | both | `core`, `optimizer` | Lower memory use. |
-| ModernFix | `modernfix-neoforge-5.27.26+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |
+| ModernFix | `modernfix-neoforge-5.27.27+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |
 | Concurrent Chunk Management Engine | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.123.jar` | both | `core`, `optimizer` | Threaded chunk generation. |
 | Bye?Pregen! | `byepregen-1.21.1-1.1.3.3.jar` | both | `core`, `optimizer` | Faster chunk generation. Do not add Noisium beside it. |
 | Ksyxis | `Ksyxis-1.4.6.jar` | both | `addon`, `optimizer` | Faster world join. |

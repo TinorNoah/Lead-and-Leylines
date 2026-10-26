@@ -15,6 +15,8 @@ Until a CurseForge file exists, deploy with `python scripts/deploy_server.py --f
 
    `python scripts/deploy_server.py --from-local`
 
+   That deletes the world. The next start creates a new one. Add `--keep-world` only when the user explicitly says to keep the existing world.
+
    Friends: `python scripts/deploy_server.py --share-only`, then send `dist/*.mrpack` (ATLauncher Instances → Import → Browse).
 4. Wait until the panel console shows a boot-complete pattern (NeoForge "Done" / "For help, type") or a crash. Application API keys cannot read live console output; use the panel console (or a `pacc_` client key later).
 5. Flag:

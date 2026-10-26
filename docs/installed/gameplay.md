@@ -23,5 +23,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Fuel Goes Here | `fuelgoeshere-1.21.1-1.2.0.jar` | both | `addon`, `gameplay` | Fuel goes to the fuel slot even when it is smeltable. |
 | Get It Together, Drops! | `getittogetherdrops-neoforge-1.21.5-1.4.jar` | both | `addon`, `gameplay` | Dropped stacks merge by tag. |
 | Hey Berry! SHUT UP | `heyberryshutup-1.21.0-2.0.4.jar` | both | `addon`, `gameplay` | Villagers stop taking berry bush damage. |
-| In Control! | `incontrol-1.21-10.3.0.jar` | both | `addon`, `gameplay` | Rules for what spawns where. |
+| In Control! | `incontrol-1.21-10.3.1.jar` | both | `addon`, `gameplay` | Rules for what spawns where. |
+| Gambling Craft | `gamblingcraft-neoforge-1.0.9-1.21.1.jar` | both | `addon`, `gameplay`, `world-data` | A laptop of loot cases and challenges. |
 | Tool Belt | `ToolBelt-1.21.1-2.2.10.jar` | both | `addon`, `gameplay` | A second belt for tools and weapons. |

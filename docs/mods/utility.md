@@ -86,6 +86,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | Microsoft auth helper. |
 | Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | both | Join-time modlist check. |
 | Crash Utilities | `crashutilities-9.0.4.jar` | both | Extra crash helpers. |
+| Check Engine | `checkengine-neoforge-1.21.1-0.18.1.jar` | both | Pre-launch diagnosis. No gameplay change unless a repair button is used. |
 | ETF | `entity_texture_features-7.2.4-1.21-neoforge.jar` | client | Entity texture variants. |
 | EMF | `entity_model_features-3.3.9-1.21-neoforge.jar` | client | Entity model variants. |
 | Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | Connected textures. Chipped. |
@@ -135,7 +136,7 @@ tlin for Forge. AGPL-3.0-or-later. |
 | Continuity | Held | Needs Connector and Forgified Fabric API, and it targets Sodium 0.6. Fusion is the connected-texture mod. |
 | TooManyRecipeViewers | Dropped | Incompatible with real JEI; its stub reported JEI 19.27.0.343. |
 | JEI | Chosen | Installed as `238222` / `8946440` (`jei-1.21.1-neoforge-19.57.0.449.jar`). |
-| JEI++ (JEI Plus) | Dropped | Latest file `1.0.5` (`1645653` / `8870206`, 2026-09-13) targets JEI 19.56. On JEI 19.57, `jei_plus_plus.mixins.json:BookmarkOverlayMixin` crashes looking for `mezz.jei.gui.input.IUserInputHandler` (moved to `mezz.jei.common.input`). Do not re-add until a build for JEI 19.57 exists. |
+| JEI++ (JEI Plus) | Dropped | Rechecked 2026-10-26: `1.0.8a` (`1645653` / `9332332`) still references `mezz.jei.gui.input.IMouseOverable`, moved to `mezz.jei.common.input` in JEI 19.70. Do not re-add until that mixin matches. |
 | WTHIT | Dropped | Overlaps Jade. |
 | FancyMenu | Held | 3.9.14-1.21.1-neoforge needs Konkrete 1.9.9 + Melody for a full drag-and-drop menu editor. Simple Menu covers the actual ask (one background image) with one dependency. Revisit only if the title screen needs a real redesign: moved buttons, custom logo, layout files. |
 | Inventory Management Deluxe | Dropped | Fabric-only; no 1.21.1 NeoForge file. |

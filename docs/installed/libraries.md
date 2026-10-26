@@ -10,7 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Architectury API | `architectury-13.0.11-neoforge.jar` | both | `library` | API the FTB mods and several others share. |
 | Cloth Config API (Fabric/Forge/NeoForge) | `cloth-config-15.0.140-neoforge.jar` | both | `library` | Config screens. |
-| Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | both | `library` | Config library Subtle Effects uses. |
+| Fzzy Config | `fzzy_config-0.7.7+fix1+1.21+neoforge.jar` | both | `library` | Config library Subtle Effects uses. |
 | YetAnotherConfigLib | `yet_another_config_lib_v3-3.8.2+1.21.1-neoforge.jar` | both | `library` | Config screens. Critters and Companions, Structurify, and Variants & Ventures use it. |
 | GeckoLib | `geckolib-neoforge-1.21.1-4.9.3.jar` | both | `library` | Animation library. Many mob, magic, and gun mods use it. |
 | playerAnimator | `player-animation-lib-forge-2.0.4+1.21.1.jar` | both | `library` | Player animation library. ParCool, Iron's Spells, climbable ropes, and LesRaisins use it. |

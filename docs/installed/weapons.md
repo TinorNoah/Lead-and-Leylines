@@ -22,7 +22,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TaCZ addon | `taczaddon-1.1.8.3-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | both | `compat`, `guns`, `tacz` | Keeps TaCZ loading beside the rest of the pack. |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | both | `addon`, `guns`, `tacz` | Updates older gun-pack data. |
-| [TaCZ] Refit \| Recipe and Stats Editor | `tacz_refit-1.21.1-v005.jar` | both | `addon`, `guns`, `tacz` | Recipe and stat editor. |
+| [TaCZ] Refit \| Recipe and Stats Editor | `tacz_refit-1.21.1-v006.jar` | both | `addon`, `guns`, `tacz` | Recipe and stat editor. |
 | [TaCZ]  Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | both | `addon`, `guns`, `tacz` | Ammo box on a Curios slot. |
 | [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | both | `addon`, `guns`, `tacz` | Applied Energistics ammo box. |
 | Applied TaCZ | `AppliedTaCZ-1.21.1-19.0.1.jar` | both | `addon`, `guns`, `tacz` | Crafts and stores TaCZ guns in Applied Energistics. |
@@ -38,9 +38,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TACZ Armed Piglins | `armedpiglins-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Piglins spawn with guns. |
 | TACZ Armed Skeletons | `armedskeletons-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Skeletons spawn with guns. |
 | TACZ Bandits | `tacz_bandits-1.3.jar` | both | `addon`, `guns`, `tacz` | Gun-using bandits. |
-| TACZ Turrets | `tacz_turrets-neoforge-3.0.0-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
+| TACZ Turrets | `tacz_turrets-neoforge-3.0.1-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
 | [TaCZ] [SBW] Tactical Breaching | `tactical_breaching-tacz-sbw-neoforge-1.21.1-1.0.7.jar` | both | `addon`, `guns`, `tacz` | Door-breaching charges. |
-| Elite X Quality Guns (TACZ) | `Elite x Quality Guns Neoforge v6.0 - 1.21.1Final.jar` | both | `content-pack`, `guns`, `tacz` | Extra gun set. |
+| Elite X Quality Guns (TACZ) | `Elite X Quality Guns NeoForge v6.1 - 1.21.1 Hotfix.jar` | both | `content-pack`, `guns`, `tacz` | Extra gun set. |
 | [UNOFFICIAL] LesRaisins Tactical Equipements | `LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar` | both | `addon`, `guns`, `tacz` | LesRaisins tactical gear. |
 | [TaCZ] CS+ | `csplus-1.3.1-hotfix2.zip` | both | `content-pack`, `guns`, `tacz` | CS+ gun pack. |
 | [TaCZ]MCS2 gunpack | `MCS2_Gunpack_v1.0.4_AWP_tacz1.1.4_hotfix3.zip` | both | `content-pack`, `guns`, `tacz` | MCS2 gun pack. |

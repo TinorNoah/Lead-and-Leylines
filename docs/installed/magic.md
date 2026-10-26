@@ -9,7 +9,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Ars Polymorphia | `ars_polymorphia-1.0.3.jar` | both | `addon`, `magic`, `ars-nouveau` | Polymorph support for Ars storage lecterns. |
-| Ars Unification | `ars_unification-1.2.21.jar` | both | `addon`, `magic`, `ars-nouveau` | Lets Ars Nouveau craft from other mods' recipes. |
+| Ars Unification | `ars_unification-1.2.22.jar` | both | `addon`, `magic`, `ars-nouveau` | Lets Ars Nouveau craft from other mods' recipes. |
 | Ars Nouveau | `ars_nouveau-1.21.1-5.13.3.jar` | both | `core`, `magic`, `ars-nouveau` | Spellcrafting. |
 | Ars Additions | `ars_additions-1.21.1-21.3.0.jar` | both | `addon`, `magic`, `ars-nouveau` | Extra Ars blocks and items. |
 | Ars Elemental | `ars_elemental-1.21.1-0.7.10.4.jar` | both | `addon`, `magic`, `ars-nouveau` | Elemental spells. |
@@ -28,13 +28,17 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.3.jar` | both | `core`, `magic`, `irons-spells` | Spellbooks. Pinned to 3.16.3 so the Create addon keeps working. |
 | Iron's Lib | `irons_lib-1.21.1-2.2.0.jar` | both | `library`, `magic` | Library Iron's Spells needs. |
-| Ace's Spell Utils | `aces_spell_utils-1.2.7.4-1.21.1.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks need. |
-| AzureLib | `azurelib-neo-1.21.1-3.1.23-alpha.2.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks load at runtime. |
+| Ace's Spell Utils | `aces_spell_utils-1.2.7.5-1.21.1.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks need. |
+| AzureLib | `azurelib-neo-1.21.1-3.2.1.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks load at runtime. |
 | Spellbooks Of Twilight : Iron's Spells x The Twilight Forest Addon | `twilight_spellbooks-0.0.4.jar` | both | `addon`, `magic`, `irons-spells`, `twilight-forest` | Twilight Forest spells. |
 | Iron's Spells 'N Spellbooks: Create Additions | `ISS-Create-Additions-1.4.jar` | both | `addon`, `magic`, `create`, `irons-spells` | Create spell tools. |
 | Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.6.0-1.21.1.jar` | both | `addon`, `magic`, `irons-spells`, `farmers-delight`, `food` | Farmer's Delight spells. |
 | Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.5.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
 | KubeJS Iron's Spells | `irons_spells_js-4.0.3.jar` | both | `compat`, `magic`, `irons-spells` | KubeJS hooks for new spells. |
+| FamiliarsLib | `familiarslib-1.21.1-2.0.jar` | both | `library`, `magic`, `irons-spells` | Library Alshanex's Familiars needs. |
+| Alshanex's Familiars | `alshanex_familiars-1.21.1_v5.0.jar` | both | `addon`, `magic`, `irons-spells`, `world-data` | Tameable familiars for Iron's Spells. |
+| HazentouveLib | `hazentouvelib-1.0.11.jar` | both | `library`, `magic`, `irons-spells` | Library Mana Sub Zero needs. |
+| Mana Sub Zero | `mana_sub_zero-1.0.0.jar` | both | `addon`, `magic`, `irons-spells`, `world-data` | Aquamirae spells for Iron's Spells. |
 
 ## Apotheosis
 
@@ -67,7 +71,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Forbidden and Arcanus | `forbidden_arcanus-2.6.1.jar` | both | `core`, `magic` | Magic blocks, tools, and mobs. |
+| Forbidden and Arcanus | `forbidden_arcanus-1.21.1-2.6.2.jar` | both | `core`, `magic` | Magic blocks, tools, and mobs. |
 | Valhelsia Core | `valhelsia_core-neoforge-1.21.1-1.1.5.jar` | both | `library`, `magic` | Library Forbidden and Arcanus needs. |
 | Neo Vitae | `neovitae-1.21.1-1.1.48.jar` | both | `core`, `magic`, `world-data` | Blood altars, sigils, sentient armour, and a demon dungeon. |
 

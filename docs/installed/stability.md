@@ -13,6 +13,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Neruina - Ticking Entity Fixer | `neruina-3.3.5+1.21.1-neoforge.jar` | both | `core`, `stability` | Isolates a ticking entity instead of crashing. |
 | Configurable | `configurable-3.5.3+1.21.1-neoforge.jar` | both | `library`, `stability` | Library Neruina needs. |
 | Crash Utilities | `crashutilities-9.0.4.jar` | both | `core`, `stability` | Crash report tools. |
+| Check Engine | `checkengine-neoforge-1.21.1-0.18.1.jar` | both | `core`, `stability` | Explains a crash, a missing mod, or a broken recipe before launch. |
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | `core`, `stability` | Blocks known crash exploits. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | `core`, `stability` | Login flood protection. |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | `addon`, `stability` | A bad tag entry no longer wipes the whole tag. |

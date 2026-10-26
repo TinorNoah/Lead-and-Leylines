@@ -11,7 +11,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Sodium | `sodium-neoforge-0.8.13+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Renderer. |
 | Iris Shaders | `iris-neoforge-1.8.14-beta.1+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Shader loader for Sodium. |
 | Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar` | client | `core`, `rendering` | Shader patch set for Iris. |
-| Sodium Extra | `sodium-extra-neoforge-0.9.4+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Extra Sodium options. |
+| Sodium Extra | `sodium-extra-neoforge-0.9.5+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Extra Sodium options. |
 | Colorwheel | `colorwheel-neoforge-1.3.0+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Create rendering path for Iris. |
 | Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Patcher Colorwheel needs. |
 | ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.15+1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Faster immediate-mode rendering. |

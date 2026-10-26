@@ -651,12 +651,60 @@ def _follow_redirects(url: str) -> str:
         return final
 
 
+def level_name_from_properties(text: str) -> str:
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", 1)
+        if key.strip() != "level-name":
+            continue
+        name = value.strip()
+        if name and name not in {".", ".."} and "/" not in name and "\\" not in name:
+            return name
+    return "world"
+
+
+def world_folder_names(properties: str) -> list[str]:
+    level = level_name_from_properties(properties)
+    names = [level]
+    for suffix in ("_nether", "_the_end"):
+        extra = f"{level}{suffix}"
+        if extra not in names:
+            names.append(extra)
+    return names
+
+
+def reset_world(wings: Wings) -> None:
+    text = ""
+    if wings.has("server.properties"):
+        text = wings.read_file("/server.properties").decode("utf-8", "replace")
+    targets = world_folder_names(text)
+    print(f"deleting world ({', '.join(targets)}); next start creates a new one")
+    wings.delete(targets)
+
+
+def _demo_world_folders() -> None:
+    assert level_name_from_properties("") == "world"
+    assert level_name_from_properties("level-name=custom\n") == "custom"
+    assert world_folder_names("# level-name=nope\nlevel-name=world\n") == [
+        "world",
+        "world_nether",
+        "world_the_end",
+    ]
+    assert level_name_from_properties("level-name=../etc") == "world"
+
+
+_demo_world_folders()
+
+
 def upload_server_mods(
     wings: Wings,
     *,
     github_url: str,
     zip_size: int,
     expect_jars: bool,
+    keep_world: bool,
 ) -> None:
     print("stopping server so mods can be replaced")
     wings.power("stop", ignore_http=(409,))
@@ -672,6 +720,10 @@ def upload_server_mods(
             print("  continuing; Wings did not report offline")
 
     print(f"server mods zip on GitHub ({zip_size} bytes)")
+    if keep_world:
+        print("keeping the existing world")
+    else:
+        reset_world(wings)
     # Wipe whole folders: extraction overwrites by name, so a renamed file in
     # mods/, pointblank/ or tacz/ would otherwise survive and duplicate content.
     wings.delete(["mods", "pointblank", "tacz", SERVER_MODS_REMOTE])
@@ -750,7 +802,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--reinstall",
         action="store_true",
-        help="reinstall the egg (wipes the world). Local deploys reinstall automatically when NeoForge is missing or versions changed",
+        help="reinstall the egg (wipes the volume). Local deploys reinstall automatically when NeoForge is missing or versions changed",
+    )
+    parser.add_argument(
+        "--keep-world",
+        action="store_true",
+        help="leave the existing world in place (default deletes it so the next start creates a new one)",
     )
     parser.add_argument(
         "--skip-install",
@@ -862,6 +919,10 @@ def deploy_from_local(
 
     existing = existing_github_server_zip(pack)
     if args.dry_run:
+        if args.keep_world:
+            print("dry-run: would keep the existing world")
+        else:
+            print("dry-run: would delete the world so the next start creates a new one")
         if existing:
             print(
                 "dry-run: would have Pelican pull the existing GitHub server-mods zip "
@@ -938,6 +999,7 @@ def deploy_from_local(
         github_url=github_url,
         zip_size=zip_size,
         expect_jars=expect_jars,
+        keep_world=args.keep_world,
     )
     print("starting server")
     wings.power("start")

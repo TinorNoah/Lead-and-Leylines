@@ -8,15 +8,15 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.17.2426.jar` | both | `library`, `storage`, `sophisticated` | Shared library for Backpacks and Storage. |
-| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.14.2222.jar` | both | `core`, `storage`, `sophisticated` | Upgradable backpacks. |
+| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.18.2431.jar` | both | `library`, `storage`, `sophisticated` | Shared library for Backpacks and Storage. |
+| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.15.2227.jar` | both | `core`, `storage`, `sophisticated` | Upgradable backpacks. |
 | Sophisticated Tactical Backpacks (And Ammo Reload Upgrade) | `militarybackpack-2.1.0.jar` | both | `addon`, `storage`, `sophisticated` | Tactical backpacks and an ammo reload upgrade. |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar` | both | `addon`, `storage`, `create`, `sophisticated` | Create inventory on backpacks. |
 | Sophisticated Backpacks / Jade \| Compatibility | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | client | `compat`, `storage`, `jade`, `sophisticated` | Jade labels on backpacks. |
 | Sophisticated Backpacks: Ars Compat   \|   Sophisticated Backpacks Ars-Nouveau Compatibility | `arssophisticatedcompat-0.3.0.jar` | both | `compat`, `storage`, `sophisticated`, `ars-nouveau` | Ars items in Sophisticated Backpacks. |
 | Sophisticated Backpacks RS Bridge \| Quick Deposit into Refined Storage Networks | `backpackrs-1.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `storage`, `sophisticated` | Deposit a backpack into Refined Storage. |
 | Mekanism + Sophisticated Backpacks Compat \| Chemical Tank | `mekanismsophisticatedbackpacks-neoforge-1.21.1-1.0.1+mc1.21.1-neoforge.jar` | both | `compat`, `storage`, `mekanism`, `sophisticated` | Mekanism chemical tanks in backpacks. |
-| Sophisticated Inventory Interactions | `sophisticatedinventoryinteractions-1.21.1-0.1.14.224.jar` | both | `addon`, `storage`, `sophisticated` | Extra inventory clicks. |
+| Sophisticated Inventory Interactions | `sophisticatedinventoryinteractions-1.21.1-0.1.15.233.jar` | both | `addon`, `storage`, `sophisticated` | Extra inventory clicks. |
 | Sophisticated Item Actions | `sophisticateditemactions-1.21.1-0.5.18.441.jar` | both | `addon`, `storage`, `sophisticated` | Item actions on backpack slots. |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.4+1.21.1.jar` | client | `addon`, `storage`, `jei`, `sophisticated` | JEI index of backpack contents. |
 | Yukami's Sophisticated Backpack Tab | `yukamibackpacktab-1.21.1-2.2.0-neoforge.jar` | client | `addon`, `storage`, `sophisticated` | Creative tab for backpack upgrades. |
@@ -26,7 +26,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.6.8.2196.jar` | both | `core`, `storage`, `sophisticated` | Upgradable chests and barrels. |
+| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.6.9.2199.jar` | both | `core`, `storage`, `sophisticated` | Upgradable chests and barrels. |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.23.246.jar` | both | `addon`, `storage`, `create`, `sophisticated` | Create inventory on those chests. |
 | Sophisticated Storage: Ars Compat \| Sophisticated Storage Ars-Nouveau Compatibility | `arssophisticatedstoragecompat-0.3.0.jar` | both | `compat`, `storage`, `sophisticated`, `ars-nouveau` | Ars items in Sophisticated Storage. |
 | Sophisticated Chest Optimized | `sophisticated_chest_optimized-1.0.1.jar` | client | `addon`, `storage`, `sophisticated` | Cheaper chest rendering. |

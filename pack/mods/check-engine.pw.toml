@@ -1,0 +1,13 @@
+name = "Check Engine"
+filename = "checkengine-neoforge-1.21.1-0.18.1.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "7151f8240eb8b4324e43b8ded28e408592fe9ffa"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9287204
+project-id = 1730396

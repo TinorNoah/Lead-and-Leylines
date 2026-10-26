@@ -1,13 +1,13 @@
 name = "Ars Unification"
-filename = "ars_unification-1.2.21.jar"
+filename = "ars_unification-1.2.22.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1cde0f42871f4205d001eddca27ff930fa447a60"
+hash = "30d4b5bcc0ec20431c6bb41730ff9759c3f0ace0"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8784791
+file-id = 9323781
 project-id = 1165429

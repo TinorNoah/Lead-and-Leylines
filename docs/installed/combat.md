@@ -15,12 +15,15 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | [NEOFORGE] Epic Fight Client Tweaks | `efct-1.0.7.jar` | client | `addon`, `melee`, `epic-fight` | Client combat options. |
 | Epic Fight FPS Optimizer | `EpicFight-FPS-Optimizer-1.21.1-NeoForge-v1.0.3.jar` | client | `addon`, `melee`, `epic-fight` | Lowers Epic Fight render cost. |
 | Epic Fight Progressive Difficulty | `efprogressivediff-1.2.2.jar` | both | `addon`, `melee`, `epic-fight` | Fights get harder over time. |
-| Epic Fight: Curios Compat 3.0 | `EpicFight x Curios Compat 3.1.jar` | client | `compat`, `melee`, `epic-fight` | Curios slots while Epic Fight mode is on. Client only. |
+| Epic Fight: Curios Compat 4.0 | `EpicFight x Curios Compat [NeoForge] 4.0.jar` | client | `compat`, `melee`, `epic-fight` | Curios slots while Epic Fight mode is on. Client only. |
 | [NEOFORGE] Epic Fight X Parcool | `epicfightxparcool-1.0.0.jar` | both | `addon`, `melee`, `epic-fight` | ParCool movement during Epic Fight. |
 | Epic Fight X Punchy! Neo | `punchy_epicfight_neoforge.jar` | client | `addon`, `melee`, `epic-fight` | Hides Punchy fists while Epic Fight mode is on. |
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar` | both | `compat`, `melee`, `epic-fight`, `twilight-forest` | Twilight Forest weapons in Epic Fight. |
 | Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | both | `addon`, `melee`, `epic-fight` | Ice and Fire armor in Epic Fight. |
 | Epic Fight x Iron's Spells: Enhanced Animations community port | `efiscompat-2.6.0-neoforge-1.21.1-port.jar` | both | `addon`, `melee`, `epic-fight`, `irons-spells` | Iron's Spells cast animations. |
+| Epic Fight: BK's Poise & Stance | `epicfight_poise-4.2.1-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Replaces Epic Fight stagger with a poise bar. |
+| Epic Fight:BK's Weapon Skills | `bks_weapon_arts-2.0.0-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Swappable weapon skills for Epic Fight. |
+| Epic Fight:BK's Armaments | `er_animations-4.4.0-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Extra Epic Fight weapons and movesets. |
 
 ## Movement
 

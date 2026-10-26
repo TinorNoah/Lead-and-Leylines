@@ -19,6 +19,25 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.2] - 2026-10-26
+
+### Added
+
+- Check Engine. It explains a crash, a missing mod, or a broken recipe before the game finishes loading.
+- Industrial Foregoing, its Souls and Extra addons, plus Soulplied Energistics and Applied Soul so those souls move through Applied Energistics.
+- Epic Fight: BK's Armaments, with the poise system and weapon skills it needs.
+- Alshanex's Familiars and Mana Sub Zero for Iron's Spells.
+- Ryzer Gen, a separate fission reactor.
+- Gambling Craft, a laptop of loot cases.
+
+### Changed
+
+- Updated mods to their latest 1.21.1 NeoForge builds. Apotheosis, Apothic Compats, irons_apothic, Modern Industrialization, and Extended Industrialization stay pinned. Berezka's library stays on the 1.2.9.5 fix instead of the 1.2.9.7 beta. Tesseract API stays on 1.12.18 because 1.12.19 requires Modern Industrialization 2.5.11. Building Gadgets stays on 1.3.9 because Logistics Networks only accepts 1.3.x.
+
+### Fixed
+
+- The pack icon shows when the pack is imported, not only in Prism.
+
 ## [0.2.1] - 2026-10-25
 
 ### Removed
