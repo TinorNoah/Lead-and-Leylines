@@ -105,7 +105,7 @@ Create performance companions (Colorwheel, Create Better FPS, Threaded Trains) a
 | Myths of the Sea | Held | Requires GeckoLib 4.7.4. The pack is on 4.9.3. |
 | Somake Spells | Held | Apothic Attributes is in. Still requires Cataclysm. |
 | Weapons of Legendary Monsters | Held | Forge 1.20.1 only. |
-| Legendary Monsters (+ Box of Structures: LM) | Dropped | Removed 2026-09-27. NeoForge living entities never get default attributes; bosses missing /summon broken. Do not re-add until upstream fixes `EntityAttributeCreationEvent`. |
+| Legendary Monsters (+ Box of Structures: LM) | Dropped | Removed 2026-09-27. NeoForge living entities never get default attributes; bosses missing /summon broken. Rechecked 2026-10-26 against 2.2.4: same attribute listener, issue #6 still open. |
 | Eternal Hunts | Held | Requires Cataclysm, which is not in the pack. |
 | Apothic Nerf | Held | Rewrites the same affixes as Apotheosis Balance Configurator. |
 | Alex's Caves unofficial port, Citadel unofficial port | Dropped | Spellbooks listed them as CurseForge relations. Continued is the caves mod. Do not re-add Citadel. |

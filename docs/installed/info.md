@@ -9,11 +9,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Just Enough Professions (JEP) | `JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar` | client | `addon`, `info`, `jei` | Profession workstations and skills in JEI. |
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.69.0.457.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
-| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.8-standalone.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.70.0.460.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
+| MezzConfig | `mezz_config-1.21.1-neoforge-0.6.9-standalone.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
 | JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.1.jar` | both | `addon`, `info`, `jei` | Craft from JEI with fewer clicks. |
 | JEI Stuff | `jeistuff-1.21.1-1.3.0.jar` | both | `addon`, `info`, `jei` | Extra JEI pages. |
-| Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.17.jar` | client | `addon`, `info`, `jei` | Mob drops and dungeon loot in JEI. |
+| Just Enough Resources (JER) | `JustEnoughResources-NeoForge-1.21.1-1.6.0.57.jar` | client | `addon`, `info`, `jei` | Mob drops and dungeon loot in JEI. |
 | Smithing Template Viewer for JEI/EMI | `smithingtemplateviewer-1.0.4.jar` | client | `addon`, `info`, `jei` | Smithing templates in JEI. |
 | Not Enough Recipe Book [NERB] | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | `addon`, `info`, `jei` | Removes the vanilla recipe book. |
 | Just Enough Threads [JEI Startup Optimize] | `justenoughthreads-0.14.5+1.21.1.jar` | client | `addon`, `info`, `jei`, `optimizer` | Builds the JEI search index off the main thread. |

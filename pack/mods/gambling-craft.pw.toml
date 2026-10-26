@@ -1,0 +1,8 @@
+name = "Gambling Craft"
+filename = "gamblingcraft-neoforge-1.0.9-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9229/179/gamblingcraft-neoforge-1.0.9-1.21.1.jar"
+hash-format = "sha1"
+hash = "d7a12fdacfdf9bb49103a643bd764603d26a42b4"

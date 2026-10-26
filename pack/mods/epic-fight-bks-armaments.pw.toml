@@ -1,0 +1,13 @@
+name = "Epic Fight:BK's Armaments"
+filename = "er_animations-4.4.0-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "025e0b49dddc4d934ff775aa3ba09e738fd1dd5c"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9300127
+project-id = 1633792

@@ -41,7 +41,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Myths & Legends | `mythsandlegends-1.0.9.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.12.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.13.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
 ## Mob difficulty and farms

@@ -24,7 +24,7 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Myths of the Sea | Requires GeckoLib 4.7.4. The pack is on 4.9.3. |
 | Somake Spells | Apothic Attributes is in. Still requires Cataclysm. |
 | Weapons of Legendary Monsters | Forge 1.20.1 only. Project 1169738. |
-| Legendary Monsters (+ Box of Structures: Legendary Monsters) | Removed 2026-09-27. Living entities never get default attributes on NeoForge 1.21.1 (`has no attributes`; bosses missing /summon fails — upstream #6). No LM-only library deps were in the pack. Do not re-add until a build registers `EntityAttributeCreationEvent` correctly. |
+| Legendary Monsters (+ Box of Structures: Legendary Monsters) | Removed 2026-09-27. Living entities never get default attributes on NeoForge 1.21.1 (`has no attributes`; bosses missing /summon fails — upstream #6). Rechecked 2026-10-26: 2.2.4 (CurseForge 944035 / 9301784, 2026-10-23) still has the same `RegisterAttributes` listener as the June source, its changelog does not mention attributes or spawning, and issue #6 is still open. Box of Structures has no file newer than 2026-09-24. Do not re-add until a build actually makes `/summon` and arena bosses work. |
 | Eternal Hunts | Requires Cataclysm, Mowzie's Mobs, and Born in Chaos. Cataclysm is not in the pack. |
 | Chunk Pregenerator (+ Carbon Config) | Removed 2026-09-26. Hang on dedicated-server stop (`Pregen Chunk Task Queue`). Operator pregen is `/neoforge generate`. Do not re-add without fixing that shutdown hang. |
 | JEI / REI / EMI WorldGen | Removed 2026-09-26. Worldgen pages in JEI. Do not re-add; JER stays for mob/dungeon loot. |
@@ -101,10 +101,13 @@ This file lists **only mods that are not in `pack/mods/`**.
 | EpicFight-Nightfall (+ Invincible Lib) | Dedicated server crash: `EffekUnits.VFXENABLE` reads client config before load (e.g. Sophisticated Backpacks spawn potions). Do not re-add without a proven dedicated-server fix. AAA Particles stays in the pack. |
 | Vic's Point Blank - Interaction | Dropped 2026-09-24. `InteractionManager` is marked client-only and crashes a dedicated server during config load. Do not re-add. |
 | Mekanism Covers | Client join crash vs Sodium 0.8.13 (`SodiumBlockRendererMixin.putTranslucentVertexColor`, 0 targets). Latest 1.21.1 file is still 1.3-BETA (2025-01-10). Do not re-add until a Sodium 0.8-compatible build ships. |
-| JEI++ (JEI Plus) | Client join crash on JEI 19.57: `BookmarkOverlayMixin` needs `mezz.jei.gui.input.IUserInputHandler`, which that JEI build moved to `mezz.jei.common.input`. Latest file is still 1.0.5 for JEI 19.56 (2026-09-13). Do not re-add until a 19.57 build ships. |
+| JEI++ (JEI Plus) | Rechecked 2026-10-26 against 1.0.8a (1645653 / 9332332). The old `IUserInputHandler` reference is gone, but `RecipeSlotClickTargetFactoryMixin` still hard-references `mezz.jei.gui.input.IMouseOverable`, which JEI 19.70 moved to `mezz.jei.common.input`. That mixin is not skipped by the config plugin. Do not re-add until that reference matches the installed JEI. |
+| Industrial Foregoing: Extra Upgrades (`1161049`) | Removed the same day it was tried, 2026-10-26. `ifeu.mixins.json` is required, and `MixinStasisChamberTile` misses `Mob.heal` on the current NeoForge build, which stops Industrial Foregoing from registering. Latest file is still 3.3.008 (2026-07-14). Do not re-add until that mixin is optional or retargeted. |
 | Loading Backgrounds | Cosmetic + Architectury + ARR. Skip. |
 | Too Many Entities | Client limiter + Architectury + Cloth. Skip. |
 | GPUTape | ToadLib. Modest vs Sodium/Iris/ImmediatelyFast. Skip. |
+| Mixin Helper (`1492883`) | Asked 2026-10-26 as a way to fix the pinned-mod breaks. 1.1.2 only changes mixin priority and blacklists. It contains no Apotheosis, Modern Industrialization, Tesseract, or Building Gadgets fix. Author warning: wrong settings crash and can corrupt a world. Skip. |
+| Golden Tweaks (`1697081`) | Asked 2026-10-26 as a compatibility fixer. 4.7.5 is another pack's mixin and datapack pile (Thaumcraft, Bakeries, Mekanism slot limits, Apotheosis salvage, FTB quest auto-complete). It does not fix the pinned version mismatches. License is PolyForm-Noncommercial-1.0.0. Skip. |
 
 ## 1.20.1 Forge pack — not on 1.21.1 NeoForge yet
 

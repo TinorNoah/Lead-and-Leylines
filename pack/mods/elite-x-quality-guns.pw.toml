@@ -1,13 +1,13 @@
 name = "Elite X Quality Guns (TACZ)"
-filename = "Elite x Quality Guns Neoforge v6.0 - 1.21.1Final.jar"
+filename = "Elite X Quality Guns NeoForge v6.1 - 1.21.1 Hotfix.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "e461dfa1eccb09846eb589ff30ee2ce57f0036a2"
+hash = "e92b5225fd4aa22d40fb19d237eca68bc90e3dc8"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9143989
+file-id = 9306736
 project-id = 1084662

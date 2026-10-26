@@ -1,0 +1,13 @@
+name = "Mana Sub Zero"
+filename = "mana_sub_zero-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "eda3081afb66be0cc6e24dbc21daae7a5a5c3a6b"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9217512
+project-id = 1582698

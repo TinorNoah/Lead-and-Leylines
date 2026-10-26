@@ -1,13 +1,13 @@
-name = "Epic Fight: Curios Compat 3.0"
-filename = "EpicFight x Curios Compat 3.1.jar"
+name = "Epic Fight: Curios Compat 4.0"
+filename = "EpicFight x Curios Compat [NeoForge] 4.0.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "c2ca8b71a11dfa1da3a10e7b3aaa11ea24f96151"
+hash = "be6647c9679e4d367aea8e5cc39a103eaf1049ad"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9288645
+file-id = 9296370
 project-id = 1389133

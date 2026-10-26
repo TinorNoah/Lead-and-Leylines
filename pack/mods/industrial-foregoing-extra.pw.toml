@@ -1,0 +1,13 @@
+name = "Industrial Foregoing Extra"
+filename = "industrialforegoingextra-2101.1-build.3.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2d0bc45d116232591efbdbf96a103eb3dc44cbd9"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9319255
+project-id = 1702552

@@ -149,6 +149,9 @@ mods = [
   { file = "epic-fight-twilight-forest-compat.pw.toml", blurb = "Twilight Forest weapons in Epic Fight.", tags = ["compat", "melee", "epic-fight", "twilight-forest"] },
   { file = "ice-and-fire-x-epic-fight.pw.toml", blurb = "Ice and Fire armor in Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
   { file = "neo-forge-epic-fight-x-irons-spells-enhanced.pw.toml", blurb = "Iron's Spells cast animations.", tags = ["addon", "melee", "epic-fight", "irons-spells"] },
+  { file = "epic-fight-bks-poise-stance.pw.toml", blurb = "Replaces Epic Fight stagger with a poise bar.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-bks-weapon-skills.pw.toml", blurb = "Swappable weapon skills for Epic Fight.", tags = ["addon", "melee", "epic-fight"] },
+  { file = "epic-fight-bks-armaments.pw.toml", blurb = "Extra Epic Fight weapons and movesets.", tags = ["addon", "melee", "epic-fight"] },
 ]
 
 [[category.group]]
@@ -430,6 +433,10 @@ mods = [
   { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
   { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
   { file = "kubejs-irons-spells.pw.toml", blurb = "KubeJS hooks for new spells.", tags = ["compat", "magic", "irons-spells"] },
+  { file = "familiarslib.pw.toml", blurb = "Library Alshanex's Familiars needs.", tags = ["library", "magic", "irons-spells"] },
+  { file = "alshanexs-familiars.pw.toml", blurb = "Tameable familiars for Iron's Spells.", tags = ["addon", "magic", "irons-spells", "world-data"] },
+  { file = "hazentouvelib.pw.toml", blurb = "Library Mana Sub Zero needs.", tags = ["library", "magic", "irons-spells"] },
+  { file = "mana-sub-zero.pw.toml", blurb = "Aquamirae spells for Iron's Spells.", tags = ["addon", "magic", "irons-spells", "world-data"] },
 ]
 
 [[category.group]]
@@ -646,6 +653,8 @@ mods = [
   { file = "applied-mekanistics.pw.toml", blurb = "Mekanism machines on ME networks.", tags = ["addon", "tech", "storage", "ae2", "mekanism"] },
   { file = "applied-flux.pw.toml", blurb = "FE power in ME networks.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "merequester.pw.toml", blurb = "Keeps items and fluids stocked in the ME system.", tags = ["addon", "tech", "storage", "ae2", "world-data"] },
+  { file = "soulplied-energistics.pw.toml", blurb = "Moves Industrial Foregoing souls through an ME network.", tags = ["addon", "tech", "storage", "ae2"] },
+  { file = "applied-soul.pw.toml", blurb = "ME disks for Industrial Foregoing souls.", tags = ["addon", "tech", "storage", "ae2"] },
   { file = "applied-construction-sticks.pw.toml", blurb = "Construction sticks that pull items from Applied Energistics.", tags = ["compat", "building", "ae2"] },
 { file = "growth-accelerator-tiers.pw.toml", blurb = "Extra AE2 growth accelerator tiers.", tags = ["addon", "tech"] },
 ]
@@ -787,6 +796,20 @@ mods = [
 name = "Singulo"
 mods = [
   { file = "singulo.pw.toml", blurb = "Thermocouples up to rotating black holes, multiblocks, and gravity tools.", tags = ["core", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "Industrial Foregoing"
+mods = [
+  { file = "industrial-foregoing.pw.toml", blurb = "Machines for farming, mobs, and resources.", tags = ["core", "tech", "world-data"] },
+  { file = "industrial-foregoing-souls.pw.toml", blurb = "Warden souls that speed Industrial Foregoing machines.", tags = ["addon", "tech", "world-data"] },
+  { file = "industrial-foregoing-extra.pw.toml", blurb = "More Industrial Foregoing machines.", tags = ["addon", "tech", "world-data"] },
+]
+
+[[category.group]]
+name = "Ryzer Gen"
+mods = [
+  { file = "ryzer-gen.pw.toml", blurb = "A small fission reactor you design rod by rod. Alpha.", tags = ["core", "tech", "world-data"] },
 ]
 
 [[category.group]]
@@ -965,6 +988,7 @@ mods = [
   { file = "get-it-together-drops.pw.toml", blurb = "Dropped stacks merge by tag.", tags = ["addon", "gameplay"] },
   { file = "heyberryshutup.pw.toml", blurb = "Villagers stop taking berry bush damage.", tags = ["addon", "gameplay"] },
   { file = "in-control.pw.toml", blurb = "Rules for what spawns where.", tags = ["addon", "gameplay"] },
+  { file = "gambling-craft.pw.toml", blurb = "A laptop of loot cases and challenges.", tags = ["addon", "gameplay", "world-data"] },
 { file = "tool-belt.pw.toml", blurb = "A second belt for tools and weapons.", tags = ["addon", "gameplay"] },
 ]
 
@@ -1158,6 +1182,7 @@ mods = [
   { file = "neruina.pw.toml", blurb = "Isolates a ticking entity instead of crashing.", tags = ["core", "stability"] },
   { file = "configurable.pw.toml", blurb = "Library Neruina needs.", tags = ["library", "stability"] },
   { file = "crash-utilities.pw.toml", blurb = "Crash report tools.", tags = ["core", "stability"] },
+  { file = "check-engine.pw.toml", blurb = "Explains a crash, a missing mod, or a broken recipe before launch.", tags = ["core", "stability"] },
   { file = "crashexploitfixer.pw.toml", blurb = "Blocks known crash exploits.", tags = ["core", "stability"] },
   { file = "login-protection.pw.toml", blurb = "Login flood protection.", tags = ["core", "stability"] },
   { file = "lmft.pw.toml", blurb = "A bad tag entry no longer wipes the whole tag.", tags = ["addon", "stability"] },

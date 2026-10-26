@@ -9,6 +9,7 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
 import tomllib
 import urllib.error
 import urllib.parse
@@ -89,6 +90,46 @@ def _fetch(url: str, filename: str) -> Path:
     return target
 
 
+# Launchers do not agree on one path. packwiz only writes overrides/icon.png.
+# Modrinth and Prism imports also check the archive root. ATLauncher only
+# reads instance.png in the instance folder, which is where it copies overrides.
+PACK_ICON_PATHS = ("icon.png", "overrides/icon.png", "overrides/instance.png")
+
+
+def embed_pack_icon(archive: Path, icon: Path) -> None:
+    data = icon.read_bytes()
+    rewritten = archive.with_suffix(archive.suffix + ".tmp")
+    with zipfile.ZipFile(archive) as source, zipfile.ZipFile(
+        rewritten, "w", compression=zipfile.ZIP_DEFLATED
+    ) as out:
+        for item in source.infolist():
+            name = item.filename.replace("\\", "/")
+            if name in PACK_ICON_PATHS:
+                continue
+            out.writestr(item, source.read(item.filename))
+        for name in PACK_ICON_PATHS:
+            out.writestr(name, data)
+    rewritten.replace(archive)
+
+
+def _demo_embed_pack_icon() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        archive = root / "pack.zip"
+        icon = root / "icon.png"
+        icon.write_bytes(b"png-bytes")
+        with zipfile.ZipFile(archive, "w") as out:
+            out.writestr("manifest.json", "{}")
+            out.writestr("overrides/icon.png", b"old")
+        embed_pack_icon(archive, icon)
+        with zipfile.ZipFile(archive) as saved:
+            names = {item.replace("\\", "/") for item in saved.namelist()}
+            assert "manifest.json" in names
+            for path in PACK_ICON_PATHS:
+                assert path in names
+                assert saved.read(path) == b"png-bytes"
+
+
 def bundle_unresolvable_mods(mrpack: Path) -> list[str]:
     """Move CurseForge-only mods from the mrpack index into overrides/mods/.
 
@@ -155,6 +196,11 @@ def export_client_artifacts(pack: dict[str, str]) -> dict[str, Path]:
         str(paths["mrpack"]),
     )
     bundle_unresolvable_mods(paths["mrpack"])
+    icon = PACK_DIR / "icon.png"
+    if icon.is_file():
+        embed_pack_icon(paths["client_zip"], icon)
+        embed_pack_icon(paths["mrpack"], icon)
+        print("pack icon embedded for launcher imports")
     findings = report_embedded_mods(paths["client_zip"], paths["mrpack"])
     print_report(findings)
     return paths
@@ -433,3 +479,7 @@ def build_all() -> tuple[dict[str, str], dict[str, Path]]:
     paths = export_client_artifacts(pack)
     build_server_mods_zip(pack, paths["server_zip"])
     return pack, paths
+
+
+if __name__ == "__main__":
+    _demo_embed_pack_icon()

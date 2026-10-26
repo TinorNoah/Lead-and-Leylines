@@ -1,13 +1,13 @@
 name = "Multi Builder Tool"
-filename = "MultiBuilderTool-1.21.1-1.1.29.jar"
+filename = "MultiBuilderTool-1.21.1-1.1.30.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "ee57526aae1654197cedb59cc95c813212df6d1b"
+hash = "5d036077d1e92a3b04deccaea1c958fe9c81ede1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8797925
+file-id = 9319628
 project-id = 827020

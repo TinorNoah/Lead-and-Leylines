@@ -1,13 +1,13 @@
 name = "Singulo"
-filename = "Singulo-0.11.3-1.21.1N.jar"
+filename = "Singulo-0.12.0-1.21.1N.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "44e8a87f493b7fcbbd731fb7a01cc5bc582b126a"
+hash = "2bb59e03756ee51c28bd90f5459cd478a7f61eb7"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9306797
+file-id = 9324269
 project-id = 1734662

@@ -1,0 +1,13 @@
+name = "Ryzer Gen"
+filename = "ryzergen-0.2.2-alpha.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "1fa955c0e575c38ef880403308ef11c3698c7124"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9234306
+project-id = 1713781

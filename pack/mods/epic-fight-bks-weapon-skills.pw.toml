@@ -1,0 +1,13 @@
+name = "Epic Fight:BK's Weapon Skills"
+filename = "bks_weapon_arts-2.0.0-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2ba0c56b111cafa81143ecd0c8e6b7044b333577"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9300088
+project-id = 1655573
