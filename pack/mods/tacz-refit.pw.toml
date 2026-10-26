@@ -3,11 +3,6 @@ filename = "tacz_refit-1.21.1-v006.jar"
 side = "both"
 
 [download]
+url = "https://edge.forgecdn.net/files/9319/967/tacz_refit-1.21.1-v006.jar"
 hash-format = "sha1"
 hash = "7e5b8dd9b90a57e05accb1ee4c413a181ce62225"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 9319967
-project-id = 1545968

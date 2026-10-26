@@ -515,6 +515,7 @@ Added on request, after a compatibility pass. Required libraries that were not a
 | Applied Soul | `appliedsoul-1.21.1-2.1.0-hotfix.jar` | 1337114 / 8711537 | ME disks for those souls. AE2 19.2.18 satisfies `[19.2.15,)`. |
 | Ryzer Gen | `ryzergen-0.2.2-alpha.jar` | 1713781 / 9234306 | Separate fission reactor. Alpha. Sits beside HBM. |
 | Gambling Craft | `gamblingcraft-neoforge-1.0.9-1.21.1.jar` | 1750722 / 9229179 | Loot-case laptop. `allowModDistribution` is false, so the packwiz file is a CurseForge CDN URL pin, same pattern as Simply More. |
+| TaCZ Refit | `tacz_refit-1.21.1-v006.jar` | 1545968 / 9319967 | Updated file has no CurseForge API download. Pinned to the CDN URL so the installer and the mrpack export can fetch it. |
 
 Held, not installed:
 
