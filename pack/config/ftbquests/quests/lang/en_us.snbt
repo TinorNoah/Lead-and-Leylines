@@ -1,0 +1,88 @@
+{
+	chapter.1000000000000012.title: "Steam Age"
+	chapter.1000000000000012.chapter_subtitle: "Bronze, coke, and steel"
+	chapter_group.1000000000000011.title: "Technology"
+	quest.1000000000000013.title: "MI Guidebook"
+	quest.1000000000000013.quest_desc: [
+		"The guidebook is the mod's own manual for ports and multiblock shapes. Recipes stay in JEI."
+		"This chapter is the Steam Age. Electric machines replace these, so build one working set and move on."
+	]
+	quest.1000000000000017.title: "Forge Hammer"
+	quest.1000000000000017.quest_desc: [
+		"The forge hammer turns two ingots into one plate, and it pulls extra raw metal from ore blocks."
+		"It is the first processing step, before any machine."
+	]
+	quest.100000000000001B.title: "Iron Hammer"
+	quest.100000000000001B.quest_desc: [
+		"The iron hammer sits in the forge hammer's tool slot. It raises the yield and unlocks more shapes, and the hammer wears down."
+	]
+	quest.100000000000001F.title: "Bronze Ingots"
+	quest.100000000000001F.quest_desc: [
+		"Hammer copper and tin into dust. Three copper dust and one tin dust make four bronze dust. Smelt the dust into ingots."
+		"Every steam machine is bronze."
+	]
+	quest.1000000000000023.title: "Bronze Machine Casings"
+	quest.1000000000000023.quest_desc: [
+		"A casing is eight bronze plates around a bronze gear. Machines, hatches, and the boiler all start from casings."
+	]
+	quest.1000000000000027.title: "Bronze Boiler"
+	quest.1000000000000027.quest_desc: [
+		"The bronze boiler burns fuel and pushes steam into adjacent machines, up to 8 mb each tick."
+		"One mb of steam is one EU. A bronze machine draws 2 EU per tick, so one hot boiler feeds about four machines."
+	]
+	quest.100000000000002B.title: "Bronze Water Pump"
+	quest.100000000000002B.quest_desc: [
+		"The pump needs steam before it pulls water. Set the boiler against the pump, then send that water back into the boiler so the boiler stays full."
+	]
+	quest.100000000000002F.title: "Bronze Compressor"
+	quest.100000000000002F.quest_desc: [
+		"The compressor turns plates into denser parts. It runs on the same steam as the other bronze machines. One is enough for the steam age."
+	]
+	quest.1000000000000033.title: "Coke Oven"
+	quest.1000000000000033.quest_desc: [
+		"The coke oven is a hollow brick shell. It needs the controller, 21 bricks, an item input, an item output, and a fluid input, because the oven runs on steam."
+		"Add a fluid output hatch to keep the creosote. Hold a wrench to preview the shape, and hold a hatch to see where it fits. Coke is the fuel that starts steel."
+	]
+	quest.100000000000003C.title: "Steam Blast Furnace"
+	quest.100000000000003C.quest_desc: [
+		"Macerate coke into coke dust and mix it with iron for uncooked steel dust. The steam blast furnace smelts that into steel."
+		"The shell matches the coke oven, with fire clay bricks and one extra hollow layer: 29 fire clay bricks and the same three hatches. Craft another set of hatches if the first set is already on the coke oven."
+		"Recipes at 3 and 4 EU per tick need a steel hatch."
+	]
+	quest.1000000000000044.title: "Steel Machine Casings"
+	quest.1000000000000044.quest_desc: [
+		"Steel casings use eight plates and a gear, the same shape as bronze. They are the hull for steel machines and for the upgrade."
+	]
+	quest.1000000000000048.title: "Steel Upgrade"
+	quest.1000000000000048.quest_desc: [
+		"A steel upgrade turns a bronze machine into the steel version. An unpacker splits that machine back apart."
+		"The analog circuit is the craft that leaves the steam age."
+	]
+	quest.100000000000004C.title: "Analog Circuit"
+	quest.100000000000004C.quest_desc: [
+		"The analog circuit is the first circuit. It takes a resistor, an inductor, a capacitor, copper wire, and an analog circuit board."
+		"This chapter ends on that craft. Electricity comes next."
+	]
+	quest.1000000000000050.title: "Bronze Macerator"
+	quest.1000000000000050.quest_desc: [
+		"The macerator grinds ores into more dust than the forge hammer. One covers the steam age."
+	]
+	quest.1000000000000054.title: "Bronze Furnace"
+	quest.1000000000000054.quest_desc: [
+		"The bronze furnace smelts on a fraction of the fuel a vanilla furnace uses. It still wants steam from the boiler."
+	]
+	quest.1000000000000058.title: "Bronze Mixer"
+	quest.1000000000000058.quest_desc: [
+		"The mixer turns three copper dust and one tin dust into four bronze dust, and it is the better way to make uncooked steel dust."
+	]
+	quest.100000000000005C.title: "Lubricant"
+	quest.100000000000005C.quest_desc: [
+		"Mix creosote from the coke oven's fluid output with redstone. A bucket is enough to learn the fluid."
+		"On an electric machine, lubricant adds efficiency ticks."
+	]
+	quest.1000000000000060.title: "Steam Quarry"
+	quest.1000000000000060.quest_desc: [
+		"The quarry spends drills to pull ore. It wants a lot of steel, and a bronze drill is used up by chance."
+		"Read the shape in the guidebook before spending the plates. This quest asks for the controller."
+	]
+}

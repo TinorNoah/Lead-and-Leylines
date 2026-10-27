@@ -41,6 +41,22 @@ file = "config/fml.toml"
 hash = "113cf4d277aae11c5f138fc4e30a6b6bb00f06b28c6687b4230af117179a6004"
 
 [[files]]
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "fe1c3eb0102bfe3e45ca96e30b529aa8f5635365bcb0dbe05c06a3dc1a69d89e"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/steam_age.snbt"
+hash = "e411400660bc702b3f1403b449161cb17b782b6c89b9aed08f9c091196802543"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "c6008e62509a7d3f07db0769fdc75b1fc84d28c6348c4b1a631a4d317f7791ab"
+
+[[files]]
+file = "config/ftbquests/quests/lang/en_us.snbt"
+hash = "d9cba527c01ec09f7adaf346e509f0ee1e88d31322094d82b474b17e43fe3b25"
+
+[[files]]
 file = "config/global_packs.toml"
 hash = "cc36c134302bf47ea65d25bcd76e7b4dc8d5ee9747539541502f4ea5e6e722db"
 

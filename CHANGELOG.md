@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.3] - 2026-10-27
+
+### Added
+
+- A Modern Industrialization Steam Age quest chapter. Each step pays a small stack of materials and some experience.
+
 ## [0.2.2] - 2026-10-26
 
 ### Added
