@@ -1,0 +1,571 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "steam_age"
+	group: "1000000000000011"
+	icon: { count: 1, id: "modern_industrialization:guidebook" }
+	id: "1000000000000012"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1000000000000013"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000015"
+					item: { count: 1, id: "minecraft:copper_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000016"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000014"
+					item: { count: 1, id: "modern_industrialization:guidebook" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000013"]
+			id: "1000000000000017"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000019"
+					item: { count: 1, id: "minecraft:iron_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000001A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000018"
+					item: { count: 1, id: "modern_industrialization:forge_hammer" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000017"]
+			id: "100000000000001B"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "100000000000001D"
+					item: { count: 1, id: "modern_industrialization:tin_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000001E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000001C"
+					item: { count: 1, id: "modern_industrialization:iron_hammer" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000001B"]
+			id: "100000000000001F"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000021"
+					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000022"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "1000000000000020"
+					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000001F"]
+			id: "1000000000000023"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 4
+					id: "1000000000000025"
+					item: { count: 1, id: "modern_industrialization:bronze_plate" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000026"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1000000000000024"
+					item: { count: 1, id: "modern_industrialization:bronze_machine_casing" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000023"]
+			id: "1000000000000027"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000029"
+					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000002A"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000028"
+					item: { count: 1, id: "modern_industrialization:bronze_boiler" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000027"]
+			id: "100000000000002B"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "100000000000002D"
+					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000002E"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000002C"
+					item: { count: 1, id: "modern_industrialization:bronze_water_pump" }
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000002B"]
+			id: "100000000000002F"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 16
+					id: "1000000000000031"
+					item: { count: 1, id: "minecraft:coal" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000032"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000030"
+					item: { count: 1, id: "modern_industrialization:bronze_compressor" }
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000002F"]
+			id: "1000000000000033"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 16
+					id: "100000000000003A"
+					item: { count: 1, id: "minecraft:coal" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000003B"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000034"
+					item: { count: 1, id: "modern_industrialization:coke_oven" }
+					type: "item"
+				}
+				{
+					id: "1000000000000035"
+					item: { count: 1, id: "modern_industrialization:bronze_item_input_hatch" }
+					type: "item"
+				}
+				{
+					id: "1000000000000036"
+					item: { count: 1, id: "modern_industrialization:bronze_item_output_hatch" }
+					type: "item"
+				}
+				{
+					id: "1000000000000037"
+					item: { count: 1, id: "modern_industrialization:bronze_fluid_input_hatch" }
+					type: "item"
+				}
+				{
+					id: "1000000000000038"
+					item: { count: 1, id: "modern_industrialization:bronze_fluid_output_hatch" }
+					type: "item"
+				}
+				{
+					count: 21L
+					id: "1000000000000039"
+					item: { count: 1, id: "minecraft:bricks" }
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000033"]
+			id: "100000000000003C"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000042"
+					item: { count: 1, id: "modern_industrialization:coke" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000043"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000003D"
+					item: { count: 1, id: "modern_industrialization:steam_blast_furnace" }
+					type: "item"
+				}
+				{
+					count: 29L
+					id: "100000000000003E"
+					item: { count: 1, id: "modern_industrialization:fire_clay_bricks" }
+					type: "item"
+				}
+				{
+					id: "100000000000003F"
+					item: { count: 1, id: "modern_industrialization:bronze_item_input_hatch" }
+					type: "item"
+				}
+				{
+					id: "1000000000000040"
+					item: { count: 1, id: "modern_industrialization:bronze_item_output_hatch" }
+					type: "item"
+				}
+				{
+					id: "1000000000000041"
+					item: { count: 1, id: "modern_industrialization:bronze_fluid_input_hatch" }
+					type: "item"
+				}
+			]
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000003C"]
+			id: "1000000000000044"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 4
+					id: "1000000000000046"
+					item: { count: 1, id: "modern_industrialization:steel_plate" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000047"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1000000000000045"
+					item: { count: 1, id: "modern_industrialization:steel_machine_casing" }
+					type: "item"
+				}
+			]
+			x: 20.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000044"]
+			id: "1000000000000048"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "100000000000004A"
+					item: { count: 1, id: "modern_industrialization:steel_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000004B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000049"
+					item: { count: 1, id: "modern_industrialization:steel_upgrade" }
+					type: "item"
+				}
+			]
+			x: 22.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000048"]
+			id: "100000000000004C"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 16
+					id: "100000000000004E"
+					item: { count: 1, id: "minecraft:copper_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000004F"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000004D"
+					item: { count: 1, id: "modern_industrialization:analog_circuit" }
+					type: "item"
+				}
+			]
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000023"]
+			id: "1000000000000050"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000052"
+					item: { count: 1, id: "minecraft:iron_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000053"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000051"
+					item: { count: 1, id: "modern_industrialization:bronze_macerator" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000027"]
+			id: "1000000000000054"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 16
+					id: "1000000000000056"
+					item: { count: 1, id: "minecraft:coal" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000057"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000055"
+					item: { count: 1, id: "modern_industrialization:bronze_furnace" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["100000000000002F"]
+			id: "1000000000000058"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "100000000000005A"
+					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000005B"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000059"
+					item: { count: 1, id: "modern_industrialization:bronze_mixer" }
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000033"]
+			id: "100000000000005C"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 4
+					id: "100000000000005E"
+					item: { count: 1, id: "minecraft:redstone" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000005F"
+					type: "xp"
+					xp: 100
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "100000000000005D"
+					item: { count: 1, id: "modern_industrialization:lubricant_bucket" }
+					type: "item"
+				}
+			]
+			x: 16.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000048"]
+			id: "1000000000000060"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 8
+					id: "1000000000000062"
+					item: { count: 1, id: "modern_industrialization:steel_ingot" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000063"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000061"
+					item: { count: 1, id: "modern_industrialization:steam_quarry" }
+					type: "item"
+				}
+			]
+			x: 22.0d
+			y: 2.5d
+		}
+	]
+}
