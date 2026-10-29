@@ -19,6 +19,12 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.4] - 2026-10-30
+
+### Fixed
+
+- The game no longer crashes on startup. Just Enough Items is back on 19.57.0.450, because 19.69 and 19.70 break Reinhardt's HBM's fluid tooltip hook, which takes the recipe viewer and the quest book down with it.
+
 ## [0.2.3] - 2026-10-27
 
 ### Added
