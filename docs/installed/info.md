@@ -9,7 +9,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Just Enough Professions (JEP) | `JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar` | client | `addon`, `info`, `jei` | Profession workstations and skills in JEI. |
-| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.70.0.460.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
+| Just Enough Items (JEI) | `jei-1.21.1-neoforge-19.57.0.450.jar` | both | `core`, `info`, `jei` | Recipe viewer. |
 | MezzConfig | `mezz_config-1.21.1-neoforge-0.6.9-standalone.jar` | both | `library`, `info`, `jei` | Config library JEI uses. |
 | JEI QuickCraft | `jei-quickcraft-1.21.1-neoforge-1.1.jar` | both | `addon`, `info`, `jei` | Craft from JEI with fewer clicks. |
 | JEI Stuff | `jeistuff-1.21.1-1.3.0.jar` | both | `addon`, `info`, `jei` | Extra JEI pages. |
