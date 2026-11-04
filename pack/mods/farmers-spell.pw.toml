@@ -3,9 +3,9 @@ filename = "farmers-spell-n-spellbook-1.0.7.0-1.21.1.jar"
 side = "both"
 
 [download]
+url = "https://edge.forgecdn.net/files/9350/536/farmers-spell-n-spellbook-1.0.7.0-1.21.1.jar"
 hash-format = "sha1"
 hash = "6bb6b337bae337f1754f747ed96f3c82c2af20c8"
-mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
