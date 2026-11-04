@@ -5324,7 +5324,7 @@ metafile = true
 
 [[files]]
 file = "mods/farmers-spell.pw.toml"
-hash = "bb6670d8f64a25f7bccecd3616fc7554603f0d9db79d6845bf2de74d5ea0d578"
+hash = "05a734d822d825a3bac8c2dcc39ae18a692b24bb55bd1d2f3a7e4a0973200fdb"
 metafile = true
 
 [[files]]
@@ -7164,7 +7164,7 @@ metafile = true
 
 [[files]]
 file = "resourcepacks/fresh-animations-extensions.pw.toml"
-hash = "e4b3b6df0bc0e3df74aaded79006b06110e8f33de3e45bca25f70bd7468a0a45"
+hash = "ebd72c001ec8ecb170379d2aec2eea36829f71507f8f60c0c284de975566457d"
 metafile = true
 
 [[files]]

@@ -3,9 +3,9 @@ filename = "FA-All_Extensions-v1.10.1.zip"
 side = "client"
 
 [download]
+url = "https://edge.forgecdn.net/files/9389/506/FA-All_Extensions-v1.10.1.zip"
 hash-format = "sha1"
 hash = "33c6cc4d621ba7f27e2d5c45269ac28f2287deae"
-mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
