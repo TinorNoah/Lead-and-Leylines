@@ -19,7 +19,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar` | both | `core`, `guns`, `tacz` | Guns. Unofficial 1.21.1 port. |
 | Gunsmith Lib | `gunsmithlib-neoforge-1.21.1-tacz1.1.8-6.4.5.jar` | both | `library`, `guns`, `tacz` | Library Ragnarok and other TaCZ addons use. |
-| TaCZ addon | `taczaddon-1.1.8.3-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
+| TaCZ addon | `taczaddon-1.1.8.3-fix-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | both | `compat`, `guns`, `tacz` | Keeps TaCZ loading beside the rest of the pack. |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | both | `addon`, `guns`, `tacz` | Updates older gun-pack data. |
 | [TaCZ] Refit \| Recipe and Stats Editor | `tacz_refit-1.21.1-v006.jar` | both | `addon`, `guns`, `tacz` | Recipe and stat editor. |
@@ -38,13 +38,13 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | TACZ Armed Piglins | `armedpiglins-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Piglins spawn with guns. |
 | TACZ Armed Skeletons | `armedskeletons-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Skeletons spawn with guns. |
 | TACZ Bandits | `tacz_bandits-1.3.jar` | both | `addon`, `guns`, `tacz` | Gun-using bandits. |
-| TACZ Turrets | `tacz_turrets-neoforge-3.0.1-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
+| TACZ Turrets | `tacz_turrets-neoforge-4.1.1-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
 | [TaCZ] [SBW] Tactical Breaching | `tactical_breaching-tacz-sbw-neoforge-1.21.1-1.0.7.jar` | both | `addon`, `guns`, `tacz` | Door-breaching charges. |
 | Elite X Quality Guns (TACZ) | `Elite X Quality Guns NeoForge v6.1 - 1.21.1 Hotfix.jar` | both | `content-pack`, `guns`, `tacz` | Extra gun set. |
 | [UNOFFICIAL] LesRaisins Tactical Equipements | `LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar` | both | `addon`, `guns`, `tacz` | LesRaisins tactical gear. |
 | [TaCZ] CS+ | `csplus-1.3.1-hotfix2.zip` | both | `content-pack`, `guns`, `tacz` | CS+ gun pack. |
 | [TaCZ]MCS2 gunpack | `MCS2_Gunpack_v1.0.4_AWP_tacz1.1.4_hotfix3.zip` | both | `content-pack`, `guns`, `tacz` | MCS2 gun pack. |
-| [TACZ Addons] Daffa's Arsenal | `daffas_arsenal-3.7.1.1.jar` | both | `content-pack`, `guns`, `tacz` | Daffa's Arsenal gun pack. |
+| [TACZ Addons] Daffa's Arsenal | `daffasarsenal-3.8.0.2_neoforge.jar` | both | `content-pack`, `guns`, `tacz` | Daffa's Arsenal gun pack. |
 
 ## Vic's Point Blank
 
@@ -67,5 +67,5 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Armageddon | `Armageddon for NeoForge 1.21.1 (v3.2.0) - Polished.jar` | both | `core`, `melee` | Tiered weapons and armor. |
+| Armageddon | `Armageddon-for-NeoForge-1.21.1-v3.3.0c-Polished.jar` | both | `core`, `melee` | Tiered weapons and armor. |
 | Armageddon Tooltips | `armageddontooltips-1.0.0.jar` | both | `addon`, `melee` | Labels which Armageddon tier a tool is. |

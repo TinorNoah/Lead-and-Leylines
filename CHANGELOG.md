@@ -19,6 +19,27 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.5] - 2026-11-05
+
+### Added
+
+- A Modern Industrialization Electric Age quest chapter. It unlocks after the Steam Age Analog Circuit, and each step still pays a small stack and some experience.
+- A Modern Industrialization Oil Age quest chapter. It unlocks after the Electric Age wiremill and walks drills, the oil rig, distillery, chemical reactor, diesel, and the LV diesel generator.
+- A Getting Started quest chapter. The Welcome quest pays an Akashic Tome so guidebooks can live in one item; more tip quests will land here later.
+
+### Changed
+
+- New players no longer get a pile of mod guidebooks on join. The quest book and the starting iron backpack still arrive; craft the guides when you want them.
+- Modern Industrialization quest rewards now roll a random MI material from a shared loot table instead of a fixed stack, and still pay experience.
+- Updated about sixty mods and the Fresh Animations Extensions pack. JEI stays on 19.57.
+- Apotheosis moved to 8.9 with Create: Apokinetics 1.0.12 and matching Apothic Compats / Iron's Apothic builds.
+- Building Gadgets moved to 21.1.1 with Logistics Network 1.18 so the two stay compatible.
+- Modern Industrialization moved to 2.5.12 with Extended Industrialization 1.16.5, Tesseract API 1.12.20, and Lead and Leylines Patches 0.2.1.
+
+### Fixed
+
+### Removed
+
 ## [0.2.4] - 2026-10-30
 
 ### Fixed

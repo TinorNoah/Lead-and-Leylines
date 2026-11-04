@@ -1,13 +1,13 @@
 name = "Punchy! - First person animations"
-filename = "punchy-2.8g-neoforge-1.21.1.jar"
+filename = "punchy-3.0-neoforge-1.21.1-birthday.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "ef71196a74e882ee52629753267229ddcdedcf68"
+hash = "f0beccecce3d7e882648ccbb7dfc98cf6aa50758"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9239897
+file-id = 9359456
 project-id = 1374153

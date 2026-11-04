@@ -1,0 +1,339 @@
+#World generation. Changes apply after a restart, and only to chunks generated after that.
+#Every recipe asks for common tags (c:ingots/uranium, c:raw_materials/lead, ...), so ores and metals
+#from other mods work in their place.
+[worldgen]
+	#Generate this mod's ores at all. Off: none of them generate, whatever each ore's own switch says.
+	generate_ores = true
+	#Generate uranium ore in the Overworld. Turn off if another mod already supplies it.
+	uranium_ore = true
+	#Generate lead ore in the Overworld. Turn off if another mod already supplies it.
+	lead_ore = true
+	#Generate silver ore in the Overworld. Turn off if another mod already supplies it.
+	silver_ore = true
+	#Generate aluminium ore in the Overworld. Turn off if another mod already supplies it.
+	aluminium_ore = true
+	#Generate fluorite ore in the Overworld. Turn off if another mod already supplies it.
+	fluorite_ore = true
+	#Generate salt ore in the Overworld. Turn off if another mod already supplies it.
+	salt_ore = true
+	#Generate tungsten ore in the Overworld. Turn off if another mod already supplies it.
+	tungsten_ore = true
+	#Generate monazite ore in the Overworld. Turn off if another mod already supplies it.
+	monazite_ore = true
+
+#Microreactor balance.
+[microreactor]
+	#FE per tick running dry at operating temperature. Water adds about 28%, overdrive about 85%.
+	# Default: 200
+	# Range: 1 ~ 1000000
+	output = 200
+	#How long one sealed fuel core burns, in ticks (48000 is 40 minutes of running).
+	# Default: 48000
+	# Range: > 20
+	fuel_life = 48000
+	#Water boiled off per tick while running with coolant, in mB.
+	# Default: 1
+	# Range: 0 ~ 1000
+	coolant_use = 1
+	#With the safeties off, losing coolant makes the reactor explode. Off: the interlock re-arms itself instead.
+	#A reactor with its safeties on can never melt down.
+	meltdowns = true
+	#Meltdown explosion strength (TNT is 4).
+	# Default: 5.0
+	# Range: 0.0 ~ 20.0
+	meltdown_power = 5.0
+
+#Cables.
+[cables]
+	#FE per tick an energy cable moves from each input (a pushing generator or an extract side).
+	# Default: 1000
+	# Range: > 1
+	energy_rate = 1000
+	#Items an item pipe's extract side pulls at a time.
+	# Default: 8
+	# Range: 1 ~ 4096
+	item_batch = 8
+	#Ticks between pulls (20 is one second). The default moves 8 items a second per extract side.
+	# Default: 20
+	# Range: 1 ~ 1200
+	item_interval = 20
+	#mB per tick a fluid pipe moves from each input (a pushing machine or an extract side).
+	# Default: 250
+	# Range: > 1
+	fluid_rate = 250
+	#mB per tick a gas pipe moves from each input. Gases are light, so this is higher than for liquids.
+	# Default: 1000
+	# Range: > 1
+	gas_rate = 1000
+
+#Water and steam.
+[water]
+	#mB of water per tick an intake pump draws, from the water source block under it.
+	# Default: 100
+	# Range: 1 ~ 100000
+	pump_rate = 100
+	#FE per tick an intake pump uses while pumping.
+	# Default: 10
+	# Range: 0 ~ 100000
+	pump_energy = 10
+	#mB of steam the microreactor makes from each mB of water it boils.
+	# Default: 10
+	# Range: 0 ~ 1600
+	steam_per_water = 10
+	#mB of gas each block of a pressure tank holds.
+	# Default: 32000
+	# Range: 1 ~ 100000000
+	tank_capacity = 32000
+	#mB of liquid each block of a fluid tank holds.
+	# Default: 16000
+	# Range: 1 ~ 100000000
+	fluid_tank_capacity = 16000
+
+#Modular battery rack. Each module adds capacity and charge rate; a cabinet holds up to 6.
+[battery]
+	#FE one lead-acid module holds.
+	# Default: 200000
+	# Range: 1 ~ 100000000
+	lead_acid_capacity = 200000
+	#FE per tick one lead-acid module can charge or discharge.
+	# Default: 500
+	# Range: 1 ~ 1000000
+	lead_acid_rate = 500
+	#FE one LFP rack holds in a Container Battery (20 slots).
+	# Default: 2000000
+	# Range: 1 ~ 100000000
+	lfp_rack_capacity = 2000000
+	#FE per tick one LFP rack can take in or give out. A quarter of it without coolant.
+	# Default: 2000
+	# Range: 1 ~ 1000000
+	lfp_rack_rate = 2000
+	#mB of coolant (water) a Container Battery's fan unit uses per tick while energy moves.
+	# Default: 2
+	# Range: 0 ~ 1000
+	container_coolant_use = 2
+
+#Fission power station.
+[fission_station]
+	#Percent of the normal heat each fuel rod makes, and each coolant channel carries (so also power out).
+	# Default: 100
+	# Range: 1 ~ 10000
+	output_percent = 100
+	#Percent of the normal water a station boils. Normal is 1 mB per 50 heat (1 per 25 in overdrive):
+	#a strong core needs several intake pumps, and more in overdrive.
+	# Default: 100
+	# Range: 1 ~ 10000
+	water_use_percent = 100
+	#With the safeties off, a core left unstable or overheating explodes. Off: the interlock re-arms itself and SCRAMs instead.
+	meltdowns = true
+	#Meltdown explosion strength (TNT is 4).
+	# Default: 8.0
+	# Range: 0.0 ~ 20.0
+	meltdown_power = 8.0
+	#Radius in blocks of the crater a station meltdown digs, on top of the blast. 0 leaves only the blast.
+	# Default: 24
+	# Range: 0 ~ 64
+	meltdown_crater_radius = 24
+	#In overdrive, how long a fuel channel may sit without a live rod before the core goes unstable.
+	# Default: 300
+	# Range: 10 ~ 3600
+	flux_tilt_seconds = 300
+	#How long each bay of a station's coolant reserve holds an overdrive core that has lost its cooling,
+	#in seconds. A reserve has 1, 3 or 5 bays, so the default gives 2, 6 or 10 minutes.
+	# Default: 120
+	# Range: 10 ~ 3600
+	reserve_seconds_per_bay = 120
+	#With the flow stopped, a hot core's decay heat boils the sodium, which bursts a seal and burns inside the
+	#bund wall for 30 seconds (setting anyone inside alight; no blocks burn), and the loop must be refilled.
+	#Off: the sodium boils in place and nothing burns.
+	sodium_fire = true
+
+#Steady state: a reactor that keeps running builds a streak of fuel loads burned without downtime, which
+#raises its power output (not its fuel burn or heat) up to a cap per tier. More than 5 seconds of downtime
+#costs a quarter of the streak. The bonus reaches a quarter of the cap at 8 loads, half at 32, all at 128.
+[steady_state]
+	#Off: no streak and no bonus.
+	enabled = true
+	#The microreactor's cap, in percent of its normal output.
+	# Default: 125
+	# Range: 100 ~ 1000
+	microreactor_cap_percent = 125
+	#The fission station's cap, in percent.
+	# Default: 150
+	# Range: 100 ~ 1000
+	station_cap_percent = 150
+	#The breeder's cap, in percent.
+	# Default: 175
+	# Range: 100 ~ 1000
+	breeder_cap_percent = 175
+	#Scales the milestones (8, 32 and 128 loads): 50 halves them.
+	# Default: 100
+	# Range: 1 ~ 1000
+	milestone_percent = 100
+
+#Breeder reactor (tier 4).
+[breeder]
+	#Percent of the normal heat each breeder fuel assembly makes (so also power out, and how fast blankets breed).
+	#The sodium loop carries more in step, so layouts and flow settings play the same.
+	# Default: 100
+	# Range: 1 ~ 10000
+	output_percent = 100
+
+#The fuel cycle.
+[fuel_cycle]
+	#Spent fuel comes out of reactors hot and must cool in a Spent Fuel Pool before the Core Cracker or
+	#Reprocessor takes it. Off: reactors give out spent fuel already cool, and the pool is optional.
+	require_cooling = true
+	#Seconds a depleted microreactor core cools in the pool.
+	# Default: 300
+	# Range: 1 ~ 86400
+	core_cooling_seconds = 300
+	#Seconds a spent fission rod cools in the pool.
+	# Default: 600
+	# Range: 1 ~ 86400
+	rod_cooling_seconds = 600
+	#mB of water each cooling item boils off per tick in the pool (decay heat).
+	# Default: 2
+	# Range: 0 ~ 1000
+	pool_water_use = 2
+
+#The reactor announcer: spoken warnings from the reactors' control systems.
+[announcer]
+	#Reactors speak when something worth hearing happens (safeties, SCRAM, coolant loss, meltdown).
+	#Off here turns it off for everyone; each player can also use the Voice/Speech volume slider.
+	enabled = true
+
+#New players.
+[players]
+	#Give each player an Operator's Handbook the first time they join a world. It is craftable too.
+	give_handbook = false
+
+#The overworld's sky.
+[sky]
+	#Draw the overworld's sun as a round, glowing disc in place of vanilla's square one.
+	#Read on each client. The Dyson swarm always uses it.
+	round_sun = true
+
+#Radiation. Only running reactors and meltdowns emit it.
+[radiation]
+	#Players take a radiation dose near running reactors and meltdown sites.
+	enabled = true
+	#Multiplies every dose rate. 0.5 halves radiation, 2 doubles it.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	strength = 1.0
+	#Mobs (animals, monsters, villagers) take a dose too, so strong reactors make no-go zones and
+	#can run mob farms. Turn off to keep villagers near reactors safe.
+	affect_mobs = true
+
+#Processing machines. The energy one operation costs is its draw times its time, so raising either
+#makes it dearer. Machines marked as gated need their full draw every tick (design section 5).
+[machines]
+
+	[machines.core_cracker]
+		#Percent of the normal FE per tick drawn while working (20 FE/t).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+	[machines.reprocessor]
+		#Percent of the normal FE per tick drawn while working (80 FE/t).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+	[machines.fuel_fabricator]
+		#Percent of the normal FE per tick drawn while working (40 FE/t).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+	[machines.lithium_extractor]
+		#Percent of the normal FE per tick drawn while working (40 FE/t).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+	[machines.electrorefiner]
+		#Percent of the normal FE per tick drawn while working (1500 FE/t, which is also its minimum draw).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+	[machines.monazite_processor]
+		#Percent of the normal FE per tick drawn while working (2000 FE/t, which is also its minimum draw).
+		# Default: 100
+		# Range: 1 ~ 100000
+		draw_percent = 100
+		#Percent of each recipe's normal time.
+		# Default: 100
+		# Range: 1 ~ 100000
+		time_percent = 100
+
+#Mega drill: mines the 7 x 7 under its base a layer at a time, from its base down to bedrock.
+[mega_drill]
+	#FE per tick while charging and firing, at speed 1. It grows with the square of the speed
+	#(a Mk I head is speed 1, Mk II 2, Mk III 3, and each speed module adds 1).
+	# Default: 160
+	# Range: 1 ~ 1000000
+	draw = 160
+	#Percent of the normal time a layer takes (5 seconds charging and 4 heating at speed 1).
+	# Default: 100
+	# Range: 1 ~ 10000
+	time_percent = 100
+	#mB of water a layer takes to cool the bore, drawn while the beam fires.
+	# Default: 4000
+	# Range: 0 ~ 1000000
+	water_per_layer = 4000
+	#Percent chance a layer wears the tungsten tip. A tip lasts 160 wearing layers, so 50 makes it last twice as long.
+	# Default: 100
+	# Range: 0 ~ 100
+	tip_wear_percent = 100
+	#Water and lava in the pit's wall set into obsidian as each layer is mined, so nothing flows in.
+	glaze_walls = true
+	#Once the shaft reaches bedrock, bore on into the deep crust for ore (loot tables
+	#ryzergen:mega_drill/deep_bore_mk1 to _mk3, by head). Off: it stops at bedrock, for packs with void miners.
+	deep_bore = true
+	#Percent of the shaft's draw the deep bore uses.
+	# Default: 400
+	# Range: 1 ~ 100000
+	deep_bore_draw_percent = 400
+	#Draws from the head's deep bore table each cycle (a cycle is 9 seconds at speed 1).
+	# Default: 3
+	# Range: 1 ~ 64
+	deep_bore_ore_per_cycle = 3
+
+#Assembler: a robot cell that crafts any crafting-table recipe from its patterns.
+[assembler]
+	#FE per tick while the arm works, at speed 1. It grows with the square of the speed (each speed module adds 1).
+	# Default: 40
+	# Range: 0 ~ 1000000
+	draw = 40
+	#Draw the real items on the belts, the bed and in the arm's grip. Off: the arm still moves, carrying nothing.
+	show_items = true
+
+#Unfinished content.
+[preview]
+	#Turn on unfinished content from the next tier: lithium target rods (tritium for fusion) and the
+	#creative previews.
+	#Needs a restart (or /reload) to add or remove their recipes.
+	next_tier = false

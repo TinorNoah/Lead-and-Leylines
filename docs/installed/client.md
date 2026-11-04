@@ -12,7 +12,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | client | `core`, `client-qol` | Heart colors. |
 | Colourful Everywhere | `colourfuleverywhere-1.21-1.3.6.jar` | client | `addon`, `client-qol` | Recolours GUIs with shader presets (NeoForge OptiGUI stand-in). |
 | Simple Menu | `simplemenu-1.21.1-2.4.jar` | client | `core`, `client-qol` | Draws the pack's title art behind the vanilla menu buttons. |
-| Collective | `collective-1.21.1-8.65.jar` | client | `library` | Serilum's shared config and utility library. |
+| Collective | `collective-1.21.1-8.74.jar` | client | `library` | Serilum's shared config and utility library. |
 | Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | both | `addon`, `client-qol` | Small client annoyance toggles. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | `addon`, `client-qol` | Mutes wither, dragon, and raid music. |
 | Default Options | `defaultoptions-neoforge-1.21.1-21.1.8.jar` | client | `addon`, `client-qol` | Applies pack keybinds and options. |
@@ -35,10 +35,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Better Compatibility Checker | `better-compatability-checker-neoforge-21.1.8.jar` | both | `compat`, `client-qol` | Clearer incompatibility screen. |
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | `addon`, `client-qol` | Crash screen with next steps. |
 | FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | `addon`, `client-qol` | Faster client startup. |
-| ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | `addon`, `client-qol` | Caches resource-pack loading. |
+| ResourcePackCached | `rpc-1.3.0+1.21-1.21.11-neoforge.jar` | client | `addon`, `client-qol` | Caches resource-pack loading. |
 | Async Logger | `asynclogger-2.2.3+1.21.1-neoforge.jar` | client | `addon`, `client-qol` | Logging off the client thread. |
 | AmbientSounds 6 | `AmbientSounds_NEOFORGE_v6.3.11_mc1.21.1.jar` | both | `addon`, `client-qol` | Ambient soundscapes. |
-| CreativeCore | `CreativeCore_NEOFORGE_v2.13.51_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
+| CreativeCore | `CreativeCore_NEOFORGE_v2.13.52_mc1.21.1.jar` | both | `library`, `client-qol` | Library AmbientSounds uses. |
 | NeoAuth | `NeoAuth-1.21.1-1.0.1.jar` | client | `addon`, `client-qol` | Microsoft auth helper. |
 | Global Packs | `globalpacks-neoforge-1.21.1-21.0.6.jar` | both | `core`, `client-qol` | Loads the pack's required resource and data packs. |
 | Another Config Manager | `another_config_manager-1.0.0.0.0-neoforge-1.21.1.jar` | client | `addon`, `client-qol` | In-game browser and editor for every mod config. |

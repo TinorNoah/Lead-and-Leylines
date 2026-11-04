@@ -12,18 +12,18 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Iris Shaders | `iris-neoforge-1.8.14-beta.1+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Shader loader for Sodium. |
 | Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar` | client | `core`, `rendering` | Shader patch set for Iris. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.5+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Extra Sodium options. |
-| Colorwheel | `colorwheel-neoforge-1.3.0+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Create rendering path for Iris. |
+| Colorwheel | `colorwheel-neoforge-1.3.1-mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Create rendering path for Iris. |
 | Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Patcher Colorwheel needs. |
 | ImmediatelyFast | `ImmediatelyFast-NeoForge-1.6.15+1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Faster immediate-mode rendering. |
 | Entity Culling Fabric/Forge | `entityculling-neoforge-1.11.3-mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Skips entities you cannot see. |
-| MoreCulling | `moreculling-neoforge-1.21.1-1.0.10.jar` | client | `addon`, `rendering`, `optimizer` | Extra block-face culling. |
+| MoreCulling | `moreculling-neoforge-1.21.1-1.0.11.jar` | client | `addon`, `rendering`, `optimizer` | Extra block-face culling. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Skips client work that does not change. |
 | AsyncParticles | `AsyncParticles-21.1.4.10+1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
 | Particle Rain | `particlerain-4.0.2+1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
 | Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.15.1.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |
-| Iris & Oculus Search | `IrisSearch-1.8.3-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |
+| Iris & Oculus Search | `IrisSearch-1.8.4-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |
 | Better Fps - Render Distance | `betterfpsdist-1.21.1-6.1.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper far-chunk rendering. |
 
 ## Connected textures
@@ -42,7 +42,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | [ETF] Entity Texture Features - [Fabric & Forge] | `entity_texture_features-7.2.6-1.21-neoforge.jar` | client | `addon`, `rendering` | Custom entity textures. EMF needs this. |
 | EMF Compat: Core | `emf_compat_core_neoforge_1.21.1_2.3.2.jar` | client | `library`, `rendering` | EMF compat library. |
 | Fresh Animations | `FreshAnimations_v1.11.1_1.20+.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations. |
-| Fresh Animations: Extensions | `FA+All_Extensions-v1.8.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations extensions. |
+| Fresh Animations: Extensions | `FA-All_Extensions-v1.10.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Fresh Animations extensions. |
 | Darkest Ages Mobs | `Darkest_Ages_Mobs-1.21.1_1.2.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Darkest Ages mobs. |
 | Darkest Ages Mobs + Fresh Animations | `Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip` | client | `resource-pack`, `rendering` | Resource pack. Darkest Ages plus Fresh Animations. |
 | Boss Refreshed | `boss-refreshed-v2-1.19-1.21.zip` | client | `resource-pack`, `rendering` | Resource pack. Dragon, wither, warden, and elder guardian models. |

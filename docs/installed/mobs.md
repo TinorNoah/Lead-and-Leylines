@@ -34,14 +34,14 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Knight Lib | `knightlib-neoforge-1.21.1-2.0.5.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
 | Spawn | `spawn-4.0.8-1.21.1.jar` | both | `core`, `mob` | Extra spawn structures and mobs, including the dodo island. |
 | Teal Lib | `teallib-1.3.teal.jar` | both | `library`, `mob` | Library Spawn needs. |
-| Variants&Ventures | `variantsandventures-neoforge-1.0.28+mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
+| Variants&Ventures | `variantsandventures-neoforge-1.0.29-mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
 
 ## Folklore
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Myths & Legends | `mythsandlegends-1.0.9.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.13.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
+| Myths & Legends | `mythsandlegends-1.1.0.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.0.15.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
 ## Mob difficulty and farms
@@ -53,4 +53,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | BuffMobs | `buffmobs-4.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |
 | Animal Pens | `animal_pen-neoforge-1.21-2.5.2.jar` | both | `addon`, `mob`, `optimizer` | Stores farm animals in pens so they stop ticking. |
 | Magnum Torch | `MagnumTorch-v21.1.1-1.21.1-NeoForge.jar` | both | `addon`, `mob`, `gameplay` | Torch that blocks mob spawns over a large area. |
-| Grim Soul Industries | `grimsoul-2.1.27.jar` | both | `core`, `mob`, `tech`, `world-data` | Laser grinders, mob capture, and virtual farms. |
+| Grim Soul Industries | `grimsoul-2.1.28.jar` | both | `core`, `mob`, `tech`, `world-data` | Laser grinders, mob capture, and virtual farms. |

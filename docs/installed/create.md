@@ -11,7 +11,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create | `create-1.21.1-6.0.10.jar` | both | `core`, `tech`, `create` | Contraptions, kinetics, and trains' base mod. |
 | Create Crafts & Additions | `createaddition-1.7.2.jar` | both | `addon`, `tech`, `create` | Electric motor, alternator, and power. |
 | Create Deco | `createdeco-2.1.3.jar` | both | `addon`, `tech`, `create` | Decoration blocks. |
-| Create Encased | `Create Encased-1.21.1-1.10.0.jar` | both | `addon`, `tech`, `create` | Encased blocks. |
+| Create Encased | `Create Encased-1.21.1-1.10.0-fix1.jar` | both | `addon`, `tech`, `create` | Encased blocks. |
 | Create Ultimine | `createultimine-1.21.1-neoforge-1.3.2.jar` | both | `addon`, `tech`, `create` | Vein mine with Create. |
 | Create Better FPS | `createbetterfps-1.21.1-1.1.5.jar` | client | `addon`, `tech`, `create` | Cheaper Create rendering. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | `compat`, `tech`, `create`, `jei` | Create recipes in JEI. |
@@ -33,7 +33,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Create: Dynamic Village | `dynamicvillage-0.9-1.21.1.jar` | both | `addon`, `tech`, `create`, `worldgen` | Create-themed villages. |
 | Create: Enchantable Machinery | `createenchantablemachinery-3.6.0+mc1.21.1-neoforge.jar` | both | `addon`, `tech`, `create` | Enchant Create machines. |
 | Create: Alloyed | `alloyed-3.0.12+1.21.1-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Steel and bronze for Create. |
-| Create: Applied Kinetics | `createappliedkinetics-1.5.4-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
+| Create: Applied Kinetics | `createappliedkinetics-1.5.5-1.21.1.jar` | both | `compat`, `tech`, `create`, `ae2` | Create kinetics for Applied Energistics. |
 | Create Nuclear | `createnuclear-2.0.0-neoforge.jar` | both | `addon`, `tech`, `create`, `world-data` | Create nuclear power. |
 | Create: Metalwork | `createmetalwork-neoforge-1.21.1-3.0.0.jar` | both | `addon`, `tech`, `create` | Extra Create metal blocks and parts. |
 | Create: Shimmer | `create-shimmer-1.3.1.jar` | both | `addon`, `tech`, `create` | Create lighting and ambience blocks. |

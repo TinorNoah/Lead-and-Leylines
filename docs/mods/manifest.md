@@ -523,6 +523,18 @@ Held, not installed:
 - **Overgeared 1.6.20** (1277786 / 9331561, 2026-10-26) still stubs vanilla diamond tool and armor recipes as shapeless `minecraft:air` with the `"item"` shape 1.21.1 rejects. That is the same boot error and missing diamond-armor recipe that caused the 2026-10-02 removal. OverForged, Overgeared JEI Compat, and Overgeared: Universal Compatibility all require Overgeared, so they stay out with it.
 - **Industrial Foregoing: Extra Upgrades 3.3.008** (1161049 / 8428353) was installed, then removed in the same pass. `ifeu.mixins.json` is `required: true`, and `MixinStasisChamberTile` fails its `Mob.heal` redirect (0 targets). That aborts Industrial Foregoing registry and the server never finishes loading. No newer 1.21.1 file exists.
 
+## 2026-11-05 MI / EI / Tesseract + patches 0.2.1
+
+Published [Lead-and-Leylines-Patches `patches-v0.2.1`](https://github.com/TinorNoah/Lead-and-Leylines-Patches/releases/tag/patches-v0.2.1) (no Mixin code change): exact deps moved to MI `2.5.12` and EI `1.16.5-1.21.1` after `javap` showed identical `getAllEnchantments` descriptors and still no upstream null-guard. Pack now ships `leylines-patches-0.2.1.jar`, Modern Industrialization **2.5.12**, Extended Industrialization **1.16.5-1.21.1**, Tesseract API **1.12.20**; removed those `pin = true` entries. Still pinned: JEI 19.57, Berezka 1.2.9.5-fix. Client Creative Search path remains unverified.
+
+## 2026-11-05 Apotheosis set + Building Gadgets
+
+Lifted the Apotheosis hold after jar inspection: Apokinetics **1.0.12** declares `apotheosis [8.9.0,)` and its `GemCaseTileMixin` no longer injects the pre-8.9 `Container` parameter. Updated together to Apotheosis **8.9.0**, Apokinetics **1.0.12**, Apothic Compats **0.2.6**, irons_apothic **2.2.8**; removed their `pin = true`. Lifted Building Gadgets: Logistics Networks **1.18.0** widens optional `buildinggadgets2` to `[1.3.8,)`, so Building Gadgets **21.1.1** is in.
+
+## 2026-11-03 update wave
+
+`packwiz update --all` moved ~60 mods (plus Fresh Animations Extensions) to newest 1.21.1 NeoForge files. Pins left in place: JEI 19.57.0.450 (HBM `JeiFluidHelperMixin` still breaks 19.70; `pin = true` added), Apokinetics 1.0.6 (`pin = true` — 1.0.12 available but not verified against Apotheosis 8.8), Apotheosis / Apothic Compats / irons_apothic, MI 2.5.8 / EI 1.16.2, Tesseract 1.12.18, Building Gadgets 1.3.9, Berezka 1.2.9.5-fix. Notable majors taken: Punchy 3.0, TACZ Turrets 4.1.1, Check Engine 0.24.0, HBM R26102901 (JEI hold unchanged). Armageddon 3.3.0c geo comma paths unchanged vs `lead-leylines-armageddon-models`.
+
 ## 2026-10-30 JEI pinned back to 19.57
 
 JEI 19.69.0.457 and 19.70.0.460 both break the client at launch. Reinhardt's HBM's `client.JeiFluidHelperMixin` fails verification against the newer `mezz.jei.neoforge.platform.FluidHelper.getTooltip` bytecode (`VerifyError: Bad type on operand stack`, `invokespecial` at @96), so `mezz.jei.neoforge.platform.PlatformHelper` cannot be instantiated, JEI reports `Failed to create mod instance`, NeoForge marks the mod-loading state broken, and the resource reload that follows crashes the game (`FTB Quests theme file is missing!`). HBM `R26102601` and `R26102901` still ship the same mixin. JEI is back on 19.57.0.450 (9009406), which every installed dependency floor accepts (highest is `jeistuff` `[19.54.0.0,)`). Confirmed by client boot on 2026-10-30: 19.70 crashes, 19.57 reaches the title screen. TaCZ Tactical Breaching 1.0.7 also crashes some launches on its own (`Cannot get config value before config is loaded`, `ClientWeaponHeatHandler.tick`) with a healthy JEI, so it is unrelated.

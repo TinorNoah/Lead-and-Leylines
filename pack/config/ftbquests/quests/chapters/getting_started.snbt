@@ -1,0 +1,40 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "getting_started"
+	group: "1000000000000010"
+	icon: { count: 1, id: "akashictome:tome" }
+	id: "1000000000000501"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "1000000000000502"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 1
+					id: "1000000000000504"
+					item: { count: 1, id: "akashictome:tome" }
+					type: "item"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000505"
+					type: "xp"
+					xp: 50
+				}
+			]
+			shape: "gear"
+			tasks: [
+				{
+					id: "1000000000000503"
+					type: "checkmark"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+	]
+}

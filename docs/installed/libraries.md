@@ -17,10 +17,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Kotlin for Forge | `kotlinforforge-5.12.0-all.jar` | both | `library` | Kotlin runtime. AE2 addons, Better P2P, Fzzy Config, Observable, and Tempad need it. |
 | AAA Particles | `aaa_particles-neoforge-1.21.1-2.3.4.jar` | both | `library` | Effekseer particle engine. Epic Fight, Archaion, and Gunsmith Lib use it. |
 | Bookshelf | `bookshelf-neoforge-1.21.1-21.1.81.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, and Enchantment Descriptions use. |
-| Balm | `balm-neoforge-1.21.1-21.0.66.jar` | both | `library` | Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use. |
+| Balm | `balm-neoforge-1.21.1-21.0.67.jar` | both | `library` | Library Waystones, TrashSlot, Crafting Tweaks, and Client Tweaks use. |
 | Athena | `athena-neoforge-1.21.1-4.0.6.jar` | both | `library` | Connected textures Chipped uses. |
 | Resourceful Lib | `resourcefullib-neoforge-1.21-3.0.12.jar` | both | `library` | Library Variants & Ventures, Chipped, and Handcrafted use. |
-| Puzzles Lib | `puzzleslib-v21.1.65-mc1.21.1+neoforge.jar` | both | `library` | Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use. |
+| Puzzles Lib | `puzzleslib-v21.1.66-mc1.21.1+neoforge.jar` | both | `library` | Library Mutant Monsters, Illager Invasion, Eternal Nether, Visual Workbench, and Fast Item Frames use. |
 | Prickle | `prickle-neoforge-1.21.1-21.1.11.jar` | both | `library` | Library Botany Pots, Botany Trees, AttributeFix, Fallen Gems, and Enchantment Descriptions use. |
 | Placebo | `Placebo-1.21.1-9.9.4.jar` | both | `library` | Library the Fast mods and Apotheosis use. |
 | Cupboard | `cupboard-1.21.1-4.2.jar` | both | `library` | Library Fast Async World Save, Loot Integrations, Clickable Advancements, and Login Protection use. |
@@ -29,7 +29,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| KubeJS | `kubejs-neoforge-2101.7.2-build.377.jar` | both | `library` | Script recipes, items, and events. |
+| KubeJS | `kubejs-neoforge-2101.7.2-build.381.jar` | both | `library` | Script recipes, items, and events. |
 | KubeJS Additions | `kubejsadditions-neoforge-1.21.1-6.0.0.jar` | both | `library` | Extra KubeJS helpers. |
 | KubeJS Create | `kubejs-create-neoforge-2101.3.1-build.18.jar` | both | `library`, `create` | KubeJS hooks for Create. |
 | Ponder for KubeJS | `ponderjs-neoforge-1.21.1-2.4.0.jar` | both | `library`, `create` | Ponder scenes from KubeJS scripts. |

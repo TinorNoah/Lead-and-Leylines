@@ -13,7 +13,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Applied Energistics 2 | `appliedenergistics2-19.2.18.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
 | Glodium | `Glodium-1.21-2.2-neoforge.jar` | both | `library`, `tech`, `storage`, `ae2` | Library Applied Flux and ExtendedAE need. |
 | Applied Energistics 2 Wireless Terminals | `ae2wtlib-19.5.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Wireless terminals. |
-| GuideME | `guideme-21.1.20.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2, Modern Industrialization, and Little Big Redstone use. |
+| GuideME | `guideme-21.1.22.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2, Modern Industrialization, and Little Big Redstone use. |
 | AE2: Crafting Tree | `ae2ct-1.21.1-1.1.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Crafting tree view. |
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | `addon`, `tech`, `storage`, `ae2`, `jei` | AE2 recipes in JEI. |
 | AE2 Things [Forge] | `AE2-Things-1.4.2-beta.jar` | both | `addon`, `tech`, `storage`, `ae2` | DISK drives and extra cells. |
@@ -22,7 +22,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Extra Disks | `ExtraDisks-1.21.1-4.0.15.jar` | both | `addon`, `tech`, `storage`, `ae2` | More disk items. |
 | AE Additions - ExtraCells2 Fork | `AEAdditions-1.21.1-6.0.2.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extra cell types. |
 | AdvancedAE | `AdvancedAE-1.6.12-1.21.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Advanced AE machines. |
-| ExtendedAE | `ExtendedAE-1.21-2.2.42-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extended pattern providers. |
+| ExtendedAE | `ExtendedAE-1.21-2.2.43-neoforge.jar` | both | `addon`, `tech`, `storage`, `ae2` | Extended pattern providers. |
 | Not Enough Patterns | `nep-1.21.1-0.8.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | More pattern slots. |
 | Better P2P | `betterp2p-1.5.2.jar` | both | `addon`, `tech`, `storage`, `ae2` | Easier P2P setup. |
 | AE2 Import Export Card | `ae2importexportcard-1.21.1-1.9.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Import and export cards. |

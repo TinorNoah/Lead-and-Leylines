@@ -1,4 +1,13 @@
 {
+	chapter_group.1000000000000010.title: "Getting Started"
+	chapter.1000000000000501.title: "Getting Started"
+	chapter.1000000000000501.chapter_subtitle: "Tips for the confluence"
+	quest.1000000000000502.title: "Welcome"
+	quest.1000000000000502.quest_desc: [
+		"This world is a leyline confluence. Mods brought their own manuals, and they stack up fast."
+		"Claim the Akashic Tome. Right-click guidebooks onto it to keep every manual in one item. Shift-right-click to open the tome and pick a book."
+		"More tips will land in this chapter. Technology quests start in their own group when you are ready."
+	]
 	chapter.1000000000000012.title: "Steam Age"
 	chapter.1000000000000012.chapter_subtitle: "Bronze, coke, and steel"
 	chapter_group.1000000000000011.title: "Technology"
@@ -84,5 +93,105 @@
 	quest.1000000000000060.quest_desc: [
 		"The quarry spends drills to pull ore. It wants a lot of steel, and a bronze drill is used up by chance."
 		"Read the shape in the guidebook before spending the plates. This quest asks for the controller."
+	]
+	chapter.1000000000000201.title: "Electric Age"
+	chapter.1000000000000201.chapter_subtitle: "EU, cables, and permanent machines"
+	quest.1000000000000202.title: "Battery Alloy"
+	quest.1000000000000202.quest_desc: [
+		"Mix lead and antimony into battery alloy. Four ingots open the electric hull."
+		"Steam machines still run. Electric lines are the ones you keep."
+	]
+	quest.1000000000000206.title: "Tin Cable"
+	quest.1000000000000206.quest_desc: [
+		"Tin cable is LV wire. It carries up to 256 EU per tick and only joins LV machines."
+		"A steam turbine only pushes power out of its output face."
+	]
+	quest.100000000000020A.title: "Redstone Battery"
+	quest.100000000000020A.quest_desc: [
+		"The redstone battery stores EU for the basic machine hull. Craft one before the hull."
+	]
+	quest.100000000000020E.title: "Basic Machine Hull"
+	quest.100000000000020E.quest_desc: [
+		"The basic machine hull is the LV machine body: steel casing, analog circuit, batteries, and tin cable."
+		"Right-clicking later hulls upgrades a machine's voltage tier."
+	]
+	quest.1000000000000212.title: "Motor"
+	quest.1000000000000212.quest_desc: [
+		"Motors turn copper wire and a magnetic steel rod into motion. Almost every electric machine wants at least one."
+	]
+	quest.1000000000000216.title: "Pumps, Pistons, Conveyors"
+	quest.1000000000000216.quest_desc: [
+		"Pump, piston, and conveyor are the three LV parts that sit next to the motor."
+		"Craft one of each. They feed compressors, macerators, and item movement."
+	]
+	quest.100000000000021C.title: "LV Steam Turbine"
+	quest.100000000000021C.quest_desc: [
+		"The LV steam turbine turns steam into electricity: one mb of steam is one EU, up to 32 mb each tick."
+		"Cable only on the output side. This is the first permanent power step."
+	]
+	quest.1000000000000220.title: "Electric Wiremill"
+	quest.1000000000000220.quest_desc: [
+		"The electric wiremill pulls wire without the forge hammer. Build it once and keep it."
+		"This chapter ends here. MV and oil wait for later ages."
+	]
+	quest.1000000000000224.title: "Electric Macerator"
+	quest.1000000000000224.quest_desc: [
+		"The electric macerator replaces the bronze one for ore dust. It runs on EU from the turbine."
+	]
+	quest.1000000000000228.title: "Electric Compressor"
+	quest.1000000000000228.quest_desc: [
+		"The electric compressor presses plates and curved parts on EU. Keep the bronze compressor only if you still need steam recipes."
+	]
+	quest.100000000000022C.title: "LV to MV Transformer"
+	quest.100000000000022C.quest_desc: [
+		"The LV to MV transformer has five LV inputs and one MV output. Use it when electrum cable and MV machines show up."
+	]
+
+	reward_table.10000000000003A0.title: "MI Materials"
+	chapter.1000000000000401.title: "Oil Age"
+	chapter.1000000000000401.chapter_subtitle: "Drills, crude, and diesel power"
+	quest.1000000000000402.title: "Steel Drill"
+	quest.1000000000000402.quest_desc: [
+		"The oil drilling rig eats steel drills. Stock four before you sink the multiblock."
+		"This chapter unlocks after the Electric Age wiremill."
+	]
+	quest.1000000000000406.title: "Oil Drilling Rig"
+	quest.1000000000000406.quest_desc: [
+		"The oil drilling rig is a multiblock. Read the shape in the MI guidebook, then place the controller."
+		"It pulls crude oil from the world as long as drills stay in the inventory."
+	]
+	quest.100000000000040A.title: "Crude Oil"
+	quest.100000000000040A.quest_desc: [
+		"Bring eight buckets of crude oil. That is enough to learn the fluid line without flooding your base."
+	]
+	quest.100000000000040E.title: "Distillery"
+	quest.100000000000040E.quest_desc: [
+		"The distillery splits oil fluids into lighter cuts. Pipe crude in and read JEI for the products."
+	]
+	quest.1000000000000412.title: "Chemical Reactor"
+	quest.1000000000000412.quest_desc: [
+		"The chemical reactor handles the oil chemistry recipes that the distillery cannot finish alone."
+		"Keep EU and pipes ready. Several fuels and rubbers pass through here."
+	]
+	quest.1000000000000416.title: "Diesel"
+	quest.1000000000000416.quest_desc: [
+		"Diesel is the fuel that makes the LV diesel generator worth building. Fill eight buckets."
+	]
+	quest.100000000000041A.title: "LV Diesel Generator"
+	quest.100000000000041A.quest_desc: [
+		"The LV diesel generator burns diesel for EU. It is the second permanent power line after the steam turbine."
+		"This chapter ends here. MV machines wait for the next age."
+	]
+	quest.100000000000041E.title: "Lubricant"
+	quest.100000000000041E.quest_desc: [
+		"Lubricant keeps drills and some machines happier. Craft four buckets once the chemical reactor is up."
+	]
+	quest.1000000000000422.title: "Diesel Mining Drill"
+	quest.1000000000000422.quest_desc: [
+		"The diesel mining drill is a handheld digger that drinks diesel. Useful while you still dig by hand."
+	]
+	quest.1000000000000426.title: "Rubber Sheet"
+	quest.1000000000000426.quest_desc: [
+		"Rubber sheets show up in cables and seals. Make a stack once oil chemistry is online."
 	]
 }

@@ -8,14 +8,14 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| FTB Library (NeoForge) | `ftb-library-neoforge-2101.1.37.jar` | both | `library`, `ftb` | Library the other FTB mods need. |
+| FTB Library (NeoForge) | `ftb-library-neoforge-2101.1.39.jar` | both | `library`, `ftb` | Library the other FTB mods need. |
 | FTB Teams (NeoForge) | `ftb-teams-neoforge-2101.1.11.jar` | both | `core`, `ftb` | Teams. |
 | FTB Ranks (NeoForge) | `ftb-ranks-neoforge-2101.1.5.jar` | both | `core`, `ftb` | Ranks and permissions. |
-| FTB Chunks (NeoForge) | `ftb-chunks-neoforge-2101.1.22.jar` | both | `core`, `ftb` | Claims and the chunk map. |
+| FTB Chunks (NeoForge) | `ftb-chunks-neoforge-2101.1.23.jar` | both | `core`, `ftb` | Claims and the chunk map. |
 | FTB Essentials (Forge & Fabric) | `ftb-essentials-neoforge-2101.1.10.jar` | both | `addon`, `ftb` | Homes, warps, and kit commands. |
-| FTB Quests (NeoForge) | `ftb-quests-neoforge-2101.1.37.jar` | both | `core`, `ftb` | Quest book. |
+| FTB Quests (NeoForge) | `ftb-quests-neoforge-2101.1.38.jar` | both | `core`, `ftb` | Quest book. |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | `addon`, `ftb` | Lowers quest-book cost. |
 | FTB Filter System | `ftb-filter-system-neoforge-21.1.4.jar` | both | `addon`, `ftb` | Shared item filters. |
-| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.13.jar` | both | `compat`, `ftb` | FTB bridges to other mods. |
+| FTB XMod Compat | `ftb-xmod-compat-neoforge-21.1.14.jar` | both | `compat`, `ftb` | FTB bridges to other mods. |
 | FTB JEI Extras | `ftb-jei-extras-21.1.7.jar` | client | `addon`, `ftb`, `jei` | Quest recipes in JEI. |
 | FTB Ultimine (NeoForge) | `ftb-ultimine-neoforge-2101.1.15.jar` | both | `addon`, `ftb` | Vein mine. |

@@ -1,0 +1,302 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "oil_age"
+	group: "1000000000000011"
+	icon: { count: 1, id: "modern_industrialization:lv_diesel_generator" }
+	id: "1000000000000401"
+	images: [ ]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["1000000000000220"]
+			hide_until_deps_visible: true
+			id: "1000000000000402"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000404"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000405"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1000000000000403"
+					item: { count: 1, id: "modern_industrialization:steel_drill" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000402"]
+			id: "1000000000000406"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000408"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000409"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000407"
+					item: { count: 1, id: "modern_industrialization:oil_drilling_rig" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000406"]
+			id: "100000000000040A"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "100000000000040C"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000040D"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "100000000000040B"
+					item: { count: 1, id: "modern_industrialization:crude_oil_bucket" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000040A"]
+			id: "100000000000040E"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000410"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000411"
+					type: "xp"
+					xp: 200
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000040F"
+					item: { count: 1, id: "modern_industrialization:distillery" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000040E"]
+			id: "1000000000000412"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000414"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000415"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000413"
+					item: { count: 1, id: "modern_industrialization:chemical_reactor" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000412"]
+			id: "1000000000000416"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000418"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000419"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "1000000000000417"
+					item: { count: 1, id: "modern_industrialization:diesel_bucket" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000416"]
+			id: "100000000000041A"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "100000000000041C"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000041D"
+					type: "xp"
+					xp: 300
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000041B"
+					item: { count: 1, id: "modern_industrialization:lv_diesel_generator" }
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000412"]
+			id: "100000000000041E"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000420"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000421"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					count: 4L
+					id: "100000000000041F"
+					item: { count: 1, id: "modern_industrialization:lubricant_bucket" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000416"]
+			id: "1000000000000422"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000424"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000425"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000423"
+					item: { count: 1, id: "modern_industrialization:diesel_mining_drill" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1000000000000412"]
+			id: "1000000000000426"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "1000000000000428"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000429"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					count: 16L
+					id: "1000000000000427"
+					item: { count: 1, id: "modern_industrialization:rubber_sheet" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: -2.5d
+		}
+	]
+}

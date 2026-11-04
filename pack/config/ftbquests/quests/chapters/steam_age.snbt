@@ -14,10 +14,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000015"
-					item: { count: 1, id: "minecraft:copper_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C0"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -42,10 +42,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000019"
-					item: { count: 1, id: "minecraft:iron_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C1"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -70,10 +70,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "100000000000001D"
-					item: { count: 1, id: "modern_industrialization:tin_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C2"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -98,10 +98,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000021"
-					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C3"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -127,10 +127,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 4
-					id: "1000000000000025"
-					item: { count: 1, id: "modern_industrialization:bronze_plate" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C4"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -156,10 +156,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000029"
-					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C5"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -184,10 +184,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "100000000000002D"
-					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C6"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -212,10 +212,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 16
-					id: "1000000000000031"
-					item: { count: 1, id: "minecraft:coal" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C7"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -240,10 +240,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 16
-					id: "100000000000003A"
-					item: { count: 1, id: "minecraft:coal" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C8"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -294,10 +294,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000042"
-					item: { count: 1, id: "modern_industrialization:coke" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003C9"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -343,10 +343,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 4
-					id: "1000000000000046"
-					item: { count: 1, id: "modern_industrialization:steel_plate" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CA"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -372,10 +372,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "100000000000004A"
-					item: { count: 1, id: "modern_industrialization:steel_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CB"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -400,10 +400,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 16
-					id: "100000000000004E"
-					item: { count: 1, id: "minecraft:copper_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CC"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -428,10 +428,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000052"
-					item: { count: 1, id: "minecraft:iron_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CD"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -457,10 +457,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 16
-					id: "1000000000000056"
-					item: { count: 1, id: "minecraft:coal" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CE"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -486,10 +486,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "100000000000005A"
-					item: { count: 1, id: "modern_industrialization:bronze_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003CF"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -515,10 +515,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 4
-					id: "100000000000005E"
-					item: { count: 1, id: "minecraft:redstone" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003D0"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"
@@ -544,10 +544,10 @@
 			rewards: [
 				{
 					auto: "disabled"
-					count: 8
-					id: "1000000000000062"
-					item: { count: 1, id: "modern_industrialization:steel_ingot" }
-					type: "item"
+					exclude_from_claim_all: true
+					id: "10000000000003D1"
+					table_id: 1152921504606847904L
+					type: "random"
 				}
 				{
 					auto: "disabled"

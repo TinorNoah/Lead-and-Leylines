@@ -1,0 +1,496 @@
+[reaper]
+	#Ticks between Reaper Block attack cycles with no Speed cards (20 ticks = 1 second).
+	# Default: 30
+	# Range: 2 ~ 200
+	baseInterval = 30
+	#Fastest attack interval in ticks, reached with a full stack of Speed cards.
+	# Default: 12
+	# Range: 1 ~ 200
+	minInterval = 12
+	#Damage per hit with no Damage cards.
+	# Default: 4.0
+	# Range: 0.0 ~ 10000.0
+	baseDamage = 4.0
+	#Extra damage per hit for each Damage card.
+	# Default: 2.0
+	# Range: 0.0 ~ 10000.0
+	damagePerCard = 2.0
+	#Ticks between item and XP collection sweeps.
+	# Default: 10
+	# Range: 1 ~ 200
+	collectInterval = 10
+	#If false, mobs with a name tag are never attacked. Players are not affected by this.
+	killNamedMobs = false
+	#If false, tamed pets (wolves, cats, horses...) are never attacked.
+	killTamedPets = false
+
+[fan]
+	#How many blocks in front of the Mob Fan it pushes, with no Range cards.
+	# Default: 4
+	# Range: 1 ~ 32
+	baseRange = 4
+	#Extra blocks of push range per Range card.
+	# Default: 2
+	# Range: 0 ~ 16
+	rangePerCard = 2
+	#How hard the Mob Fan pushes each tick (speed added per tick, in blocks).
+	# Default: 0.3
+	# Range: 0.0 ~ 4.0
+	pushForce = 0.3
+	#Fastest the Mob Fan can push something, in blocks per tick (1.0 = 20 blocks per second).
+	# Default: 1.5
+	# Range: 0.1 ~ 10.0
+	maxSpeed = 1.5
+
+[xpTank]
+	#Maximum XP points one XP Tank can hold.
+	# Default: 1000000
+	# Range: > 100
+	capacity = 1000000
+	#Radius in blocks the XP Tank pulls XP orbs from, with no Range cards.
+	# Default: 3
+	# Range: 1 ~ 32
+	baseRadius = 3
+	#Extra radius per Range card.
+	# Default: 2
+	# Range: 0 ~ 16
+	radiusPerCard = 2
+
+[spawner]
+	#Ticks between Essence Spawner spawns with no Speed cards (20 ticks = 1 second).
+	# Default: 300
+	# Range: 10 ~ 6000
+	baseInterval = 300
+	#Fastest spawn interval in ticks, reached with a full stack of Speed cards.
+	# Default: 40
+	# Range: 1 ~ 6000
+	minInterval = 40
+	#How far from the Essence Spawner mobs can appear (horizontal radius), with no Range cards.
+	# Default: 4
+	# Range: 1 ~ 20
+	baseRadius = 4
+	#The spawner pauses while this many of its mob are already around it (keeps TPS healthy).
+	# Default: 30
+	# Range: 1 ~ 1000
+	entityCap = 30
+	#A player must be this close for the spawner to run, unless it has a No Player Needed card.
+	# Default: 16
+	# Range: 1 ~ 128
+	playerRange = 16
+	#If true, the Reaper Spawner needs FE (from the Reaper Generator or any power mod) to run.
+	requirePower = true
+	#FE the Reaper Spawner can store.
+	# Default: 100000
+	# Range: > 1000
+	energyCapacity = 100000
+	#Base FE for each spawn. The spawner charges this up while its timer fills, then spawns.
+	# Default: 2000
+	# Range: > 0
+	energyPerSpawn = 2000
+	#Extra FE added to each spawn's cost for every mob it spawns (Count cards raise this).
+	# Default: 400
+	# Range: > 0
+	energyPerMob = 400
+
+[generator]
+	#FE the Reaper Generator can store.
+	# Default: 1000000
+	# Range: > 1000
+	capacity = 1000000
+	#Most FE per tick the Reaper Generator pushes out of each energy side.
+	# Default: 10000
+	# Range: > 1
+	maxOutputPerSide = 10000
+	#Multiplies the FE per tick of every fuel. Fuel values themselves live in the data map
+	#data/grimsoul/data_maps/item/generator_fuel.json (add modded mob drops with a datapack).
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	fuelMultiplier = 1.0
+
+[energyCell]
+	#FE one Reaper Energy Cell can store.
+	# Default: 10000000
+	# Range: > 1000
+	capacity = 10000000
+	#Most FE per tick an Energy Cell takes in, and pushes out of each output side.
+	# Default: 50000
+	# Range: > 1
+	maxTransfer = 50000
+
+[dataCore]
+	#Total data a Data Core needs to reach Whispering, Restless, Wraithbound and Soulforged.
+	dataPerTier = [25, 150, 600, 2500]
+	#Virtualization success chance in percent for Hollow, Whispering, Restless, Wraithbound and Soulforged cores.
+	successChance = [10, 40, 65, 85, 100]
+	#If true, Data Cores can be bound to bosses (Wither, Ender Dragon, modded bosses in c:bosses).
+	allowBosses = false
+
+[simulation]
+	#FE the Simulation Chamber can store.
+	# Default: 1000000
+	# Range: > 1000
+	energyCapacity = 1000000
+	#Ticks per simulation with no Speed cards.
+	# Default: 120
+	# Range: 1 ~ 72000
+	baseInterval = 120
+	#Ticks per simulation with a full stack of Speed cards.
+	# Default: 6
+	# Range: 1 ~ 72000
+	minInterval = 6
+	#FE per simulation for a mob with 20 health. Tougher mobs cost more (scaled by max health).
+	# Default: 10000
+	# Range: > 0
+	baseCost = 10000
+	#How much of the power cost a full set of Efficiency cards removes (0.75 = 75% cheaper).
+	# Default: 0.75
+	# Range: 0.0 ~ 1.0
+	maxEfficiency = 0.75
+	#Data a core gains from each successful simulation (0 = cores only level from real kills).
+	# Default: 2
+	# Range: 0 ~ 1000
+	dataPerRun = 2
+
+[guide]
+	#If true, every player gets a Grim Soul Codex (the in-game guide book) the first time they join a world.
+	giveOnFirstJoin = false
+
+[compat]
+	#Apotheosis only: chance (0-1) that a hostile mob killed with a Player Kill card (Reaper Block or
+	#Virtualization Chamber) also drops a random Apotheosis affix weapon, tool or armor piece.
+	#Its rarity follows the nearest player's World Tier and luck. 0 turns this off.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	apotheosisGearChance = 0.05
+
+[soulForge]
+	#FE the Soul Forge can store.
+	# Default: 200000
+	# Range: > 1000
+	energyCapacity = 200000
+	#Ticks for a spawn egg craft (20 ticks = 1 second).
+	# Default: 200
+	# Range: 1 ~ 72000
+	eggTime = 200
+	#Total FE for a spawn egg craft, spread evenly over its time.
+	# Default: 60000
+	# Range: > 0
+	eggEnergy = 60000
+	#Ticks for a Boss Core craft.
+	# Default: 1200
+	# Range: 1 ~ 72000
+	bossTime = 1200
+	#Total FE for a Boss Core craft.
+	# Default: 300000
+	# Range: > 0
+	bossEnergy = 300000
+	#Ticks for a soulbound item craft.
+	# Default: 100
+	# Range: 1 ~ 72000
+	soulboundTime = 100
+	#Total FE for a soulbound item craft.
+	# Default: 20000
+	# Range: > 0
+	soulboundEnergy = 20000
+	#Most FE per tick the Soul Forge accepts from cables and generators.
+	# Default: 10000
+	# Range: > 1
+	maxInputPerTick = 10000
+	#If false, the Soul Forge won't make spawn eggs from Soulforged cores.
+	eggEnabled = true
+	#If false, the Soul Forge won't make Boss Core cards.
+	bossEnabled = true
+	#If false, the Soul Forge won't make soulbound items.
+	soulboundEnabled = true
+
+	[blocks.reaper_block]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.mob_fan]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.xp_tank]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.essence_spawner]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.reaper_generator]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.simulation_chamber]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.output_crate]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.energy_cell]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.soul_forge]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[blocks.soul_forge_casing]
+		#How long this block takes to break. Vanilla stone is 1.5, iron block 5.0, obsidian 50.
+		# Default: 3.5
+		# Range: 0.0 ~ 1000.0
+		hardness = 3.5
+		#How well this block survives explosions. Vanilla stone is 6.0, obsidian 1200.
+		# Default: 6.0
+		# Range: 0.0 ~ 10000.0
+		blastResistance = 6.0
+
+	[items.settings_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.soul_steel]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.reapers_lantern]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.data_core]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.guide_book]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.speed_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.range_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.damage_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.looting_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.player_kill_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.storage_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.void_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.fire_aspect_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.beheading_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.harvest_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.count_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.no_player_needed_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.ignore_light_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.ignore_spawn_conditions_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.no_ai_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.efficiency_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.boss_core_card]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.reaper_block]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.mob_fan]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.xp_tank]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.essence_spawner]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.reaper_generator]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.simulation_chamber]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.output_crate]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.energy_cell]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.soul_forge]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
+
+	[items.soul_forge_casing]
+		#Most of this item that fit in one slot. 0 keeps the mod's default. Up to 64.
+		# Default: 0
+		# Range: 0 ~ 64
+		maxStackSize = 0
