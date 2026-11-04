@@ -1,0 +1,337 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "circle"
+	filename: "electric_age"
+	group: "1000000000000011"
+	icon: { count: 1, id: "modern_industrialization:lv_steam_turbine" }
+	id: "1000000000000201"
+	images: [ ]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["100000000000004C"]
+			hide_until_deps_visible: true
+			id: "1000000000000202"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D2"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000205"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1000000000000203"
+					item: { count: 1, id: "modern_industrialization:battery_alloy_ingot" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000202"]
+			id: "1000000000000206"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D3"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000209"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "1000000000000207"
+					item: { count: 1, id: "modern_industrialization:tin_cable" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000206"]
+			id: "100000000000020A"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D4"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000020D"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000020B"
+					item: { count: 1, id: "modern_industrialization:redstone_battery" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000020A"]
+			id: "100000000000020E"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D5"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000211"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000020F"
+					item: { count: 1, id: "modern_industrialization:basic_machine_hull" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000020E"]
+			id: "1000000000000212"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D6"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000215"
+					type: "xp"
+					xp: 100
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000213"
+					item: { count: 1, id: "modern_industrialization:motor" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000212"]
+			id: "1000000000000216"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D7"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000021B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000217"
+					item: { count: 1, id: "modern_industrialization:pump" }
+					type: "item"
+				}
+				{
+					id: "1000000000000218"
+					item: { count: 1, id: "modern_industrialization:piston" }
+					type: "item"
+				}
+				{
+					id: "1000000000000219"
+					item: { count: 1, id: "modern_industrialization:conveyor" }
+					type: "item"
+				}
+			]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1000000000000216"]
+			id: "100000000000021C"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D8"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000021F"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "100000000000021D"
+					item: { count: 1, id: "modern_industrialization:lv_steam_turbine" }
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000021C"]
+			id: "1000000000000220"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003D9"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000223"
+					type: "xp"
+					xp: 250
+				}
+			]
+			tasks: [
+				{
+					id: "1000000000000221"
+					item: { count: 1, id: "modern_industrialization:electric_wiremill" }
+					type: "item"
+				}
+			]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["100000000000021C"]
+			id: "1000000000000224"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003DA"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "1000000000000227"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000225"
+					item: { count: 1, id: "modern_industrialization:electric_macerator" }
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["100000000000021C"]
+			id: "1000000000000228"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003DB"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000022B"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "1000000000000229"
+					item: { count: 1, id: "modern_industrialization:electric_compressor" }
+					type: "item"
+				}
+			]
+			x: 12.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["100000000000020E"]
+			id: "100000000000022C"
+			rewards: [
+				{
+					auto: "disabled"
+					exclude_from_claim_all: true
+					id: "10000000000003DC"
+					table_id: 1152921504606847904L
+					type: "random"
+				}
+				{
+					auto: "disabled"
+					id: "100000000000022F"
+					type: "xp"
+					xp: 150
+				}
+			]
+			shape: "square"
+			tasks: [
+				{
+					id: "100000000000022D"
+					item: { count: 1, id: "modern_industrialization:lv_mv_transformer" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 2.5d
+		}
+	]
+}

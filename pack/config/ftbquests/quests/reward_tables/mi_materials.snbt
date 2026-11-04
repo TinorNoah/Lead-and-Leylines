@@ -1,0 +1,105 @@
+{
+	id: "10000000000003A0"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			count: 16
+			id: "10000000000003A1"
+			item: { count: 1, id: "modern_industrialization:bronze_ingot" }
+		}
+		{
+			count: 8
+			id: "10000000000003A2"
+			item: { count: 1, id: "modern_industrialization:steel_ingot" }
+		}
+		{
+			count: 16
+			id: "10000000000003A3"
+			item: { count: 1, id: "modern_industrialization:tin_ingot" }
+		}
+		{
+			count: 8
+			id: "10000000000003A4"
+			item: { count: 1, id: "modern_industrialization:battery_alloy_ingot" }
+		}
+		{
+			count: 16
+			id: "10000000000003A5"
+			item: { count: 1, id: "modern_industrialization:copper_wire" }
+		}
+		{
+			count: 8
+			id: "10000000000003A6"
+			item: { count: 1, id: "modern_industrialization:tin_cable" }
+		}
+		{
+			count: 8
+			id: "10000000000003A7"
+			item: { count: 1, id: "modern_industrialization:bronze_plate" }
+		}
+		{
+			count: 8
+			id: "10000000000003A8"
+			item: { count: 1, id: "modern_industrialization:steel_plate" }
+		}
+		{
+			count: 8
+			id: "10000000000003A9"
+			item: { count: 1, id: "modern_industrialization:rubber_sheet" }
+		}
+		{
+			count: 16
+			id: "10000000000003AA"
+			item: { count: 1, id: "modern_industrialization:coke" }
+		}
+		{
+			count: 4
+			id: "10000000000003AB"
+			item: { count: 1, id: "modern_industrialization:bronze_curved_plate" }
+			weight: 0.8f
+		}
+		{
+			count: 8
+			id: "10000000000003AC"
+			item: { count: 1, id: "modern_industrialization:steel_rod" }
+			weight: 0.8f
+		}
+		{
+			count: 8
+			id: "10000000000003AD"
+			item: { count: 1, id: "modern_industrialization:copper_plate" }
+		}
+		{
+			count: 16
+			id: "10000000000003AE"
+			item: { count: 1, id: "modern_industrialization:fire_clay_brick" }
+			weight: 0.8f
+		}
+		{
+			count: 8
+			id: "10000000000003AF"
+			item: { count: 1, id: "modern_industrialization:fluid_pipe" }
+			weight: 0.8f
+		}
+		{
+			count: 8
+			id: "10000000000003B0"
+			item: { count: 1, id: "modern_industrialization:item_pipe" }
+			weight: 0.8f
+		}
+		{
+			count: 1
+			id: "10000000000003B1"
+			item: { count: 1, id: "modern_industrialization:analog_circuit" }
+			weight: 0.4f
+		}
+		{
+			count: 1
+			id: "10000000000003B2"
+			item: { count: 1, id: "modern_industrialization:motor" }
+			weight: 0.4f
+		}
+	]
+	use_title: true
+}

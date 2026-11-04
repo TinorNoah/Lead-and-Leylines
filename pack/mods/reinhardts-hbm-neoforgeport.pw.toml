@@ -1,13 +1,13 @@
 name = "Reinhardt's HBM NeoforgePort"
-filename = "reinhardtshbm-R26102401.jar"
+filename = "reinhardtshbm-R26102901.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "6ac4533cd0d0c21a84717688eafc2112729351fd"
+hash = "37142d076893aff65a52443a8b97a315ee00ed5f"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9301259
+file-id = 9357357
 project-id = 1695029

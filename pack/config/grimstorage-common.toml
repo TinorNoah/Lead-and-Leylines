@@ -1,0 +1,16 @@
+#Give each player a Grim Storage Guide the first time they join a world.
+giveGuideOnFirstJoin = false
+#Most crafting jobs one network runs at the same time.
+# Default: 32
+# Range: 1 ~ 256
+maxJobsPerNetwork = 32
+#Largest number of blocks one network can join together.
+#A network bigger than this is only partly connected, and the Network Controller shows a warning.
+# Default: 16384
+# Range: 256 ~ 1048576
+maxNetworkBlocks = 16384
+#Most crafting jobs one player can have running on a network at the same time, so one big order
+#can't take every slot on a shared network. Set it to the same as maxJobsPerNetwork for no limit.
+# Default: 16
+# Range: 1 ~ 256
+maxJobsPerPlayer = 16

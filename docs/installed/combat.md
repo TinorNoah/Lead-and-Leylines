@@ -21,9 +21,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar` | both | `compat`, `melee`, `epic-fight`, `twilight-forest` | Twilight Forest weapons in Epic Fight. |
 | Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | both | `addon`, `melee`, `epic-fight` | Ice and Fire armor in Epic Fight. |
 | Epic Fight x Iron's Spells: Enhanced Animations community port | `efiscompat-2.6.0-neoforge-1.21.1-port.jar` | both | `addon`, `melee`, `epic-fight`, `irons-spells` | Iron's Spells cast animations. |
-| Epic Fight: BK's Poise & Stance | `epicfight_poise-4.2.1-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Replaces Epic Fight stagger with a poise bar. |
-| Epic Fight:BK's Weapon Skills | `bks_weapon_arts-2.0.0-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Swappable weapon skills for Epic Fight. |
-| Epic Fight:BK's Armaments | `er_animations-4.4.0-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Extra Epic Fight weapons and movesets. |
+| Epic Fight: BK's Poise & Stance | `epicfight_poise-4.2.7-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Replaces Epic Fight stagger with a poise bar. |
+| Epic Fight:BK's Weapon Skills | `bks_weapon_arts-2.0.13-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Swappable weapon skills for Epic Fight. |
+| Epic Fight:BK's Armaments | `er_animations-4.5.11-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Extra Epic Fight weapons and movesets. |
 
 ## Movement
 
@@ -31,4 +31,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | ParCool! ~ Minecraft Parkour ~ | `ParCool-1.21.1-4.0.1.6.jar` | both | `core`, `melee` | Parkour: dodge, wall run, crawl. |
 | ParCool+ Compatibility++  | `ParCool-CompatibilityAddon-1.21.1-3.4.3.3-1.2.1.jar` | both | `compat`, `melee` | ParCool bridges to other mods. |
-| Punchy! - First person animations | `punchy-2.8g-neoforge-1.21.1.jar` | client | `core`, `melee` | First-person punch animation. Hidden while Epic Fight mode is on. |
+| Punchy! - First person animations | `punchy-3.0-neoforge-1.21.1-birthday.jar` | client | `core`, `melee` | First-person punch animation. Hidden while Epic Fight mode is on. |
