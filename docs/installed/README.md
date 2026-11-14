@@ -11,7 +11,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | Category | Mods | What you'll find |
 |---|---:|---|
 | [Weapons](weapons.md) | 41 | Guns, gun packs, and the addons that change those guns. |
-| [Combat](combat.md) | 19 | How the player fights in melee and moves. |
+| [Combat](combat.md) | 18 | How the player fights in melee and moves. |
 | [Bosses](bosses.md) | 9 | Boss mods and any structure addons that rebuild their arenas. |
 | [Mobs](mobs.md) | 25 | Creatures, wildlife, and the libraries those mods need. |
 | [Structures](structures.md) | 45 | Dungeons, villages, and the tools that space or label them. |
@@ -39,6 +39,6 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Client](client.md) | 32 | Client-only comfort. |
 | [Performance](performance.md) | 19 | Tick, memory, and chunk-saving work that runs on the server and in singleplayer. |
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
-| [Libraries](libraries.md) | 18 | Shared libraries used by more than one mod family. |
+| [Libraries](libraries.md) | 19 | Shared libraries used by more than one mod family. |
 
 609 entries, each listed once.
