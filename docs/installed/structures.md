@@ -22,7 +22,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | When Dungeons Arise - Forge! | `DungeonsArise-1.21.1-2.1.68-release.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Large overworld dungeons. |
 | When Dungeons Arise - Seven Seas | `DungeonsAriseSevenSeas-1.21.x-1.0.4-neoforge.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Ocean dungeons for When Dungeons Arise. |
-| Loot Integrations | `lootintegrations-1.21.1-4.7.jar` | both | `library`, `structure`, `world-data` | Library that mixes mod loot into structure chests. |
+| Loot Integrations | `lootintegrations-1.21.1-4.9.jar` | both | `library`, `structure`, `world-data` | Library that mixes mod loot into structure chests. |
 | Loot Integrations: When Dungeons Arise & Co | `lootintegration_wda-1.8.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Modded loot in When Dungeons Arise chests. |
 | Dungeon Now Loading Tricky Trials Port | `dungeonnowloading-neoforge-1.21.1-2.11.6.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Unofficial port of Dungeon Now Loading. |
 | Awesome Dungeon | `awesomedungeon-neoforge-1.21.1-3.2.0.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Extra dungeon set. |
@@ -54,7 +54,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Luki's Ancient Cities | `lukis-ancient-cities-v1.2.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New ancient city layouts. |
 | Luki's Woodland Mansions | `lukis-woodland-mansions-v1.0-1.21-1.21.4.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New woodland mansion layouts. |
 | The Lost Cities | `lostcities-1.21-8.4.6.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Ruined city worldgen. |
-| [LC²H] \| Lost Cities: Multithreaded | `lc2h-omni-4.2.5-LTS.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Multithreaded Lost Cities generation. |
+| [LC²H] \| Lost Cities: Multithreaded | `lc2h-omni-4.3.0-LTS.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Multithreaded Lost Cities generation. |
 | [QAPI] \| Quantified API | `quantified api-omni-2.2.4.jar` | both | `library`, `structure`, `worldgen` | Library Lost Cities: Multithreaded needs. |
 | Compat Structure | `compatstructures-1.0.3.jar` | both | `compat`, `structure`, `worldgen`, `world-data` | Structures that bridge other structure mods. |
 | Compat API | `compatapi-1.0.3.jar` | both | `library`, `structure` | Library Compat Structure needs. |

@@ -1,0 +1,42 @@
+{
+  "type": "f22raptor:workbench",
+  "station": "aircraft_assembly",
+  "ingredients": [
+    {
+      "item": "f22raptor:command_console",
+      "count": 1
+    },
+    {
+      "item": "f22raptor:radar_antenna",
+      "count": 1
+    },
+    {
+      "item": "f22raptor:patriot_launcher",
+      "count": 2
+    },
+    {
+      "item": "f22raptor:ciws",
+      "count": 2
+    },
+    {
+      "item": "f22raptor:fuel_truck",
+      "count": 1
+    },
+    {
+      "item": "f22raptor:munitions_loader",
+      "count": 2
+    },
+    {
+      "item": "modern_industrialization:quantum_circuit",
+      "count": 4
+    },
+    {
+      "item": "minecraft:nether_star",
+      "count": 1
+    }
+  ],
+  "result": {
+    "id": "kubejs:deployable_airbase",
+    "count": 1
+  }
+}

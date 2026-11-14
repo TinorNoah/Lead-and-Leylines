@@ -183,7 +183,7 @@ def sync_overlay_and_mods(pack: dict[str, str], work: Path) -> None:
     if mods_dir.exists():
         shutil.rmtree(mods_dir)
     mods_dir.mkdir(parents=True)
-    for folder in ("pointblank", "tacz"):
+    for folder in ("pointblank", "tacz", "kubejs"):
         extra = work / folder
         if extra.exists():
             shutil.rmtree(extra)
@@ -193,7 +193,7 @@ def sync_overlay_and_mods(pack: dict[str, str], work: Path) -> None:
             name = info.filename.replace("\\", "/")
             if name.startswith("mods/") and name.lower().endswith(".jar"):
                 archive.extract(info, work)
-            if name.startswith(("pointblank/", "tacz/", "config/", "global_packs/")):
+            if name.startswith(("pointblank/", "tacz/", "config/", "global_packs/", "kubejs/")):
                 archive.extract(info, work)
 
 

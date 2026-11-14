@@ -1,0 +1,257 @@
+#Flight model. Speeds in blocks/tick (1 b/t = 20 m/s, elytra cruise ~1.7 b/t).
+[flight]
+	#Maximum level-flight speed at full military throttle.
+	# Default: 2.7
+	# Range: 0.5 ~ 8.0
+	maxSpeed = 2.7
+	#Maximum level-flight speed with afterburner engaged.
+	# Default: 4.0
+	# Range: 0.5 ~ 10.0
+	afterburnerMaxSpeed = 4.0
+	#Speed limit applied by the landing mode autothrottle.
+	# Default: 1.35
+	# Range: 0.3 ~ 4.0
+	landingModeMaxSpeed = 1.35
+	#Engine acceleration at full throttle (b/t per tick).
+	# Default: 0.0135
+	# Range: 0.001 ~ 0.2
+	thrustAcceleration = 0.0135
+	#Afterburner power: thrust multiplier while lit. Must be >= (afterburnerMaxSpeed/maxSpeed)^2 to actually reach afterburnerMaxSpeed.
+	# Default: 2.4
+	# Range: 1.0 ~ 6.0
+	afterburnerThrustMultiplier = 2.4
+	#Extra thrust multiplier applied near zero speed so the jet can get moving easily.
+	# Default: 2.2
+	# Range: 1.0 ~ 5.0
+	lowSpeedThrustBoost = 2.2
+	#Induced drag factor: how much speed is bled while turning / pulling. Parasitic drag is derived from thrust and maxSpeed.
+	# Default: 0.012
+	# Range: 0.0 ~ 0.2
+	drag = 0.012
+	#Gravity applied to the airframe (b/t per tick).
+	# Default: 0.045
+	# Range: 0.0 ~ 0.2
+	gravity = 0.045
+	#Below this airspeed the wings stop producing enough lift and control authority drops.
+	# Default: 0.85
+	# Range: 0.1 ~ 4.0
+	stallSpeed = 0.85
+	#Speed at which the jet can rotate and lift off.
+	# Default: 1.05
+	# Range: 0.1 ~ 4.0
+	takeoffSpeed = 1.05
+	#Maximum pitch rate at optimal speed (degrees per tick).
+	# Default: 4.2
+	# Range: 0.1 ~ 30.0
+	pitchRate = 4.2
+	#Maximum roll rate at optimal speed (degrees per tick).
+	# Default: 10.0
+	# Range: 0.1 ~ 45.0
+	rollRate = 10.0
+	#Maximum rudder yaw rate (degrees per tick).
+	# Default: 1.6
+	# Range: 0.1 ~ 15.0
+	yawRate = 1.6
+	#How fast angular rates follow stick input (0-1). Lower = heavier, more inertia.
+	# Default: 0.18
+	# Range: 0.01 ~ 1.0
+	controlResponse = 0.18
+	#Throttle change per tick while holding the throttle keys (0-1 range).
+	# Default: 0.02
+	# Range: 0.001 ~ 0.5
+	throttleRate = 0.02
+	#Wheel brake / air brake deceleration factor.
+	# Default: 0.035
+	# Range: 0.0 ~ 0.5
+	brakeStrength = 0.035
+	#Rolling friction while on the ground with gear down.
+	# Default: 0.004
+	# Range: 0.0 ~ 0.5
+	groundFriction = 0.004
+	#How many seconds of flight path ahead of a fast piloted aircraft the server starts loading and generating with priority. 0 disables it.
+	# Default: 3.0
+	# Range: 0.0 ~ 10.0
+	chunkPreloadSeconds = 3.0
+
+#Fuel system. Fuel units are abstract; 1 unit ~ 1 tick of full military throttle.
+[fuel]
+	# Default: 12000.0
+	# Range: 100.0 ~ 1000000.0
+	fuelCapacity = 12000.0
+	#Fuel burned per tick with engine running at idle.
+	# Default: 0.12
+	# Range: 0.0 ~ 100.0
+	idleConsumption = 0.12
+	#Additional fuel per tick at 100% throttle.
+	# Default: 0.9
+	# Range: 0.0 ~ 100.0
+	throttleConsumption = 0.9
+	#Consumption multiplier while afterburner is lit.
+	# Default: 4.5
+	# Range: 1.0 ~ 50.0
+	afterburnerMultiplier = 4.5
+	#Fuel added by one Jet Fuel canister.
+	# Default: 3000.0
+	# Range: 1.0 ~ 1000000.0
+	fuelPerItem = 3000.0
+	#Fraction of capacity below which the low fuel warning triggers.
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	lowFuelWarning = 0.15
+	#Fraction of fuel a freshly placed F-22 comes with.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	initialFuel = 0.25
+
+#Airframe damage
+[damage]
+	# Default: 200.0
+	# Range: 1.0 ~ 100000.0
+	maxIntegrity = 200.0
+	#Impact speed (b/t) below which collisions cause no damage (small bumps with trees).
+	# Default: 0.9
+	# Range: 0.0 ~ 10.0
+	collisionSafeSpeed = 0.9
+	#Damage per b/t of impact speed above the safe speed (squared curve).
+	# Default: 55.0
+	# Range: 0.0 ~ 10000.0
+	collisionDamageMultiplier = 55.0
+	# Default: 1.5
+	# Range: 0.0 ~ 100.0
+	explosionDamageMultiplier = 1.5
+	# Default: 0.6
+	# Range: 0.0 ~ 100.0
+	projectileDamageMultiplier = 0.6
+	#Fraction of airframe damage also applied to the engine.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	engineDamageShare = 0.5
+	# Default: 60.0
+	# Range: 0.0 ~ 100000.0
+	repairPerKit = 60.0
+	#Integrity restored by each use of the repair wrench (the aircraft must be parked).
+	# Default: 8.0
+	# Range: 0.0 ~ 100000.0
+	wrenchRepairAmount = 8.0
+	#Impact speed (b/t) at which a crash destroys the airframe outright, whatever its integrity.
+	# Default: 2.0
+	# Range: 0.5 ~ 20.0
+	catastrophicImpactSpeed = 2.0
+	#Base power of the explosion when the F-22 is destroyed (TNT = 4). Remaining fuel and munitions make it bigger. 0 disables it.
+	# Default: 6.0
+	# Range: 0.0 ~ 16.0
+	catastrophicExplosionPower = 6.0
+	#Whether the wreck explosion destroys blocks.
+	catastrophicExplosionBreaksBlocks = true
+	#Whether the wreck explosion starts fires.
+	catastrophicExplosionFire = true
+	#Build one military airbase per world near the first player (runway, hangars, tower).
+	generateAirbase = false
+	#Enemy bombers now and then raid the airbase while a player is there (about once per day).
+	baseRaids = true
+	#Weather affects flight: wind gusts, rain drag, storm turbulence and lightning, high-altitude icing.
+	weatherEffects = true
+
+#Weapons
+[weapons]
+	# Default: 7.0
+	# Range: 0.0 ~ 1000.0
+	cannonDamage = 7.0
+	#Ticks between cannon rounds.
+	# Default: 2
+	# Range: 1 ~ 100
+	cannonFireInterval = 2
+	# Default: 480
+	# Range: 1 ~ 100000
+	cannonCapacity = 480
+	# Default: 120
+	# Range: 1 ~ 100000
+	roundsPerAmmoBox = 120
+	#Round speed relative to the aircraft (b/t).
+	# Default: 7.0
+	# Range: 1.0 ~ 30.0
+	cannonMuzzleVelocity = 7.0
+	#Ticks before a cannon round self-destructs (limits range).
+	# Default: 30
+	# Range: 1 ~ 400
+	cannonRoundLifetime = 30
+	# Default: 30.0
+	# Range: 0.0 ~ 10000.0
+	basicMissileDamage = 30.0
+	# Default: 3.0
+	# Range: 0.0 ~ 16.0
+	basicMissileExplosionRadius = 3.0
+	# Default: 45.0
+	# Range: 0.0 ~ 10000.0
+	advancedMissileDamage = 45.0
+	# Default: 4.0
+	# Range: 0.0 ~ 16.0
+	advancedMissileExplosionRadius = 4.0
+	# Default: 80.0
+	# Range: 0.0 ~ 10000.0
+	torpedoDamage = 80.0
+	# Default: 5.0
+	# Range: 0.0 ~ 16.0
+	torpedoExplosionRadius = 5.0
+	#Whether missile warheads destroy blocks on impact.
+	missileImpactBreaksBlocks = true
+	#Minimum ticks between missile launch requests.
+	# Default: 30
+	# Range: 0 ~ 1200
+	missileCooldown = 30
+	#Side bays (short range IR missiles).
+	# Default: 2
+	# Range: 0 ~ 16
+	basicMissileCapacity = 2
+	#Main ventral bay (radar-guided missiles).
+	# Default: 6
+	# Range: 0 ~ 16
+	advancedMissileCapacity = 6
+
+#Ejection seat and parachute
+[ejection]
+	#Parachute sink rate in blocks per tick (0.2 b/t = 4 m/s).
+	# Default: 0.18
+	# Range: 0.05 ~ 1.0
+	parachuteDescentSpeed = 0.18
+
+#Sonic boom
+[sonic_boom]
+	#Speed (b/t) considered Mach 1. Crossing it upwards triggers the boom.
+	# Default: 3.2
+	# Range: 0.5 ~ 20.0
+	supersonicSpeed = 3.2
+	#The boom re-arms only after dropping below this speed.
+	# Default: 2.95
+	# Range: 0.1 ~ 20.0
+	subsonicRearmSpeed = 2.95
+	#Minimum ticks between two booms.
+	# Default: 200
+	# Range: 0 ~ 12000
+	cooldownTicks = 200
+	#Duration of the vapour cone / camera shake effect in ticks.
+	# Default: 30
+	# Range: 1 ~ 400
+	effectDurationTicks = 30
+	# Default: 10.0
+	# Range: 0.0 ~ 64.0
+	shockwaveRadius = 10.0
+	# Default: 0.8
+	# Range: 0.0 ~ 10.0
+	shockwaveKnockback = 0.8
+
+#Units shown on the HUD
+[hud]
+	#km/h shown per block/tick. Default maps supersonicSpeed to ~1225 km/h (Mach 1).
+	# Default: 383.0
+	# Range: 1.0 ~ 10000.0
+	speedDisplayFactor = 383.0
+	#Y level shown as 0 m altitude.
+	# Default: 63
+	# Range: -1024 ~ 1024
+	seaLevel = 63
+
+#Personal flight styles (arcade / realistic / simulator, War Thunder like). Each pilot picks one in the client config.
+[flight_style]
+	#Let pilots fly with their own flight style and mouse aim. When false everybody flies the classic model with the virtual stick.
+	allowPersonalFlightStyles = true

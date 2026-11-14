@@ -32,8 +32,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Configurable | `configurable-3.5.2+1.21.1-neoforge.jar` | both | Required by Neruina. |
 | Clumps | `Clumps-neoforge-1.21.1-19.0.0.1.jar` | both | XP orb merge. |
 | AllTheLeaks | `alltheleaks-1.1.13+1.21.1-neoforge.jar` | both | Known leak patches. `ingredientDedupe` is switched off in `config/alltheleaks.json`: it locks Ingredient ItemStacks and Replication writes `minecraft:damage` onto tool ingredients, which threw 4372 `ATLUnsupportedOperation` exceptions and left 2425 recipes uncalculated. Every other key stays on. |
-| Cupboard | `cupboard-1.21.1-4.2.jar` | both | Required by Smooth Chunk Save. |
-| BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | Client-side rendering skip work. |
+| Cupboard | `cupboard-1.21.1-4.2.jar` | both | Required by Connectivity, Fast Async World Save, Chunk Sending, Leaky, Loot Integrations, Login Protection, Clickable Advancements. |
+| BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | Client-side lightmap, block-entity renderer, and empty-overlay skip work (`enable_sky_color_caching: false` in `pack/config/badoptimizations.txt` so Epic Fight `FakeLevel` does not NPE). |
 | Dynamic FPS | `dynamic-fps-3.11.4+minecraft-1.21.0-neoforge.jar` | client | Lowers FPS when unfocused. File lists 1.21.1. |
 | Crash Assistant | `CrashAssistant-neoforge-1.20.6-1.21.4-1.11.12.jar` | client | Crash dump helper. Dedicated boot log: client-only, no-op on server. |
 | Entity Culling | `entityculling-neoforge-1.11.2-mc1.21.1.jar` | client | Occlusion culling. Custom tr7zw license; referenced via CurseForge, not bundled. |
@@ -48,9 +48,9 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Fzzy Config | `fzzy_config-0.7.7+1.21+neoforge.jar` | both | Required by Subtle Effects. |
 | Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | Jigsaw/NBT structure gen. Resourceful Config required. |
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | both | SLO dependency. |
-| Ksyxis | `Ksyxis-1.4.5.jar` | both | Unloads unused spawn chunks. |
-| Disconnect Packet Fix | `disconnect-packet-fix-neoforge-2.0.1.jar` | both | MC-271325 disconnect packets. |
-| quick pack | `quick-pack-neoforge-1.5.0+1.21.1.jar` | both | Faster zip datapack/resourcepack parse. Complements ModernFix. |
+| Ksyxis | `Ksyxis-1.4.6.jar` | both | Unloads unused spawn chunks. |
+| Connectivity | `connectivity-1.21.1-7.7.jar` | both | Network packet/login-timeout fix (replaced Disconnect Packet Fix and Packet Fixer on 2026-10-01). |
+| quick pack | `quick-pack-neoforge-1.5.1+1.21.1.jar` | both | Faster zip datapack/resourcepack parse. Complements ModernFix. |
 | CrashExploitFixer | `crashexploitfixer-neoforge-2.0.0+1.21.4.jar` | both | Crash-exploit filter; file tags 1.21.1–1.21.4. |
 | Async Logger | `asynclogger-2.2.2+1.21.1-neoforge.jar` | client | Async log writes. |
 | ResourcePackCached | `rpc-1.2.5+1.20.5-1.21.4-neoforge.jar` | client | Keeps server resource packs across rejoins. |
@@ -61,11 +61,14 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Cerulean | — | — | **Removed 2026-10-25.** Advancement `InventoryChangeTrigger` optimisation, but its TxniLib dependency JarJar-bundles Forgified Fabric API, and the Fabric data-attachment handshake (`fabric:accepted_attachments_v1`) cannot be encoded on NeoForge — starting or creating a world killed the connection with `EncoderException: Failed to encode packet clientbound/minecraft:custom_payload`. Not worth a Fabric compatibility layer. |
 | TxniLib | — | — | **Removed 2026-10-25** with Cerulean. It was the pack's only source of Forgified Fabric API. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | Faster GeckoLib entity rendering. Alpha 1.0.2. Sodium and ImmediatelyFast already in. |
-| FastBoot | `fastboot-1.21.x-v1.3neo.jar` | client | Early-load mixins. ARR. First to remove if launch breaks next to ModernFix / quick pack. |
+| FastBoot | — | — | **Removed 2026-11-14.** `neoforge.mods.toml` used invalid `mixinConfigs = [...]` syntax so 0 mixins loaded, and all 3 mixins in the jar only called `LOGGER.info` (`NoOpDataFixer` was unreferenced dead code). ModernFix `DFUBlaster` already handles DFU. |
 | Fluidium | `fluidium-1.21.1-1.4.0.jar` | both | Distant fluid tick delay. Not a distant-entity freezer. Duplicationless required. |
 | Duplicationless | `duplicationless-1.21.1-1.2.1.jar` | both | Fluidium hard dep. Same author. Do not treat as DoesPotatoTick. |
-| MemGuard | `memguard-1.0.4.jar` | both | Heap monitor only in 1.0.4 (Create 6-unsafe mixins removed). Complements AllTheLeaks. |
-| C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.122.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
+| MemGuard | — | — | **Removed 2026-11-14.** Single 50-line `ServerTickEvent` logger with zero memory fixes; superseded by AllTheLeaks's post-GC memory monitor. |
+| Invasive Optimizations | `invasiveopts-1.0.26.jar` | both | Verified 10 active mixins fixing hot-path bugs in AE2 (`AEItemKey` maxDamage cache), Botany Pots (hopper sleep/backoff), Create (`ClipboardBlockItem` fast-fail + fan recipe cache), Oritech (`PoweredFurnace` cache), and Placebo (zero-alloc `DynamicHolder`/`CachedObject`). |
+| Leaky | `leaky-1.21-3.8.jar` | both | Item cluster alerts, `/leaky` OP diagnostics, and item-physics throttling; `pack/config/leaky.json` sets auto-delete thresholds to `1000000` so player/Create drops are never deleted. |
+| fix GPU memory leak | `gpumemleakfix-1.21-1.8.jar` | client | `RenderTargetMixin.finalize()` cleans up GC'd OpenGL FBOs/textures that skipped `destroyBuffers()`. |
+| C2ME | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.124.jar` | both | Threaded chunk gen/IO. Alpha. OpenCL module not shipped. |
 Optimizer configs are now committed under `pack/config/` and pinned to their own mod defaults so a mod update cannot silently change them: `modernfix-mixins.properties`, `fml.toml`, `alltheleaks.json`, `c2me.toml`, `chunksending.json`, `ferritecore-mixin.toml`. One real override: `mixin.perf.dynamic_resources=true`, unverified on a real client. Leaf overlap and Threaded Trains notes: [configs.md](configs.md).
 
 **Save path, measured.** `scripts/save_bench.py` times `save-all flush` and shutdown against one pre-generated world, 3 trials per configuration. On 1089 chunks at 8 GiB: no save mods 6609 ms flush / 296 ms P99; C2ME alone 3409 ms / 290 ms P99; Fast Async World Save alone 7646 ms / **90 ms** P99; Smooth Chunk Save alone 7339 ms / 292 ms P99. Every configuration wrote a byte-identical world with zero save errors, so reliability did not separate them. Consequences: **Smooth Chunk Save removed** (slower flush than nothing and no spike benefit). **Fast Async World Save kept** — the only save-path mod that cuts the worst tick spike, and it does so with C2ME off *and* on. **C2ME kept**, but note it is not a save-path mod: it is the whole chunk system (threaded chunkgen, async chunk IO, density-function compiler), and its flush win is a side effect of rewriting chunk IO. Do not re-add Smooth Chunk Save.

@@ -1,13 +1,13 @@
 name = "EMF Compat: TACZ"
-filename = "emf_compat_tacz_neoforge_1.21.1_1.0.1.jar"
+filename = "emf_compat_tacz_neoforge_1.21.1_1.1.0.jar"
 side = "client"
 
 [download]
 hash-format = "sha1"
-hash = "c889d52bd54ff1d200af7073d84385f9a2418b85"
+hash = "c18996ea77362821d09f28031befab70d42cbf96"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9103543
+file-id = 9524726
 project-id = 1629329

@@ -1,0 +1,20 @@
+{
+  "itemsettings": {
+    "detectionThreshold": 32,
+    "reportThreshold": 100,
+    "reportNotification": "NEAREST_PLAYER_LIMITED, ALL_OP",
+    "highlightitems": true,
+    "wasteFactor": 60,
+    "autoremoval": {
+      "autoremovethreshold": 1000000,
+      "autoRemoveDelay": 30,
+      "autoremovenodelaythreshold": 1000000
+    }
+  },
+  "performance": {
+    "improveItemPerformance": true
+  },
+  "entitySection": {
+    "entitySectionLogThreshold": 150
+  }
+}

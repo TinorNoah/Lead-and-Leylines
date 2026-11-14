@@ -8,12 +8,12 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Industrialization Overdrive | `industrialization_overdrive-1.14.0+1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization` | Extra Modern Industrialization machines. |
+| Industrialization Overdrive | `industrialization_overdrive-1.15.1-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization` | Extra Modern Industrialization machines. |
 | Modern Industrialization | `Modern-Industrialization-2.5.12.jar` | both | `core`, `tech`, `modern-industrialization`, `world-data` | A separate factory tech tree. |
 | Extended Industrialization | `extended-industrialization-1.16.5-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `world-data` | Extra Modern Industrialization machines. |
 | Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech`, `modern-industrialization` | Solar panels for Modern Industrialization. |
 | Modern Industrialization Structure Viewer | `miviewer-1.1.5.jar` | both | `addon`, `tech`, `modern-industrialization` | In-world MI multiblock preview. |
-| LDLib | `ldlib2-neoforge-1.21.1-2.2.45-all.jar` | both | `library`, `tech`, `modern-industrialization` | Library the MI structure viewer needs. |
+| LDLib | `ldlib2-neoforge-1.21.1-2.2.46.a-all.jar` | both | `library`, `tech`, `modern-industrialization` | Library the MI structure viewer needs. |
 | Modern Industrial Routers | `modernindustrialrouters-2.1.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `transport` | Router upgrades for Modern Industrialization energy. |
 
 ## Oritech
@@ -22,7 +22,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Oritech | `oritech-neoforge-1.21.1-1.2.13.jar` | both | `core`, `tech`, `oritech`, `world-data` | Animated factory multiblocks, reactors, and a bedrock extractor. Runs on the pack's shared Forge Energy. |
 | Oritech Things | `oritechthings-0.0.48.jar` | both | `addon`, `tech`, `oritech`, `world-data` | Tiered Speed, Processing, and Capacitor addons, plus accelerator controls. |
-| Applied Oritech | `applied_oritech-1.0.6-1.21.1.jar` | both | `compat`, `tech`, `oritech`, `ae2` | ME Dock and pattern provider so Oritech machines join an ME network. |
+| Applied Oritech | `applied_oritech-1.0.7-1.21.1.jar` | both | `compat`, `tech`, `oritech`, `ae2` | ME Dock and pattern provider so Oritech machines join an ME network. |
 
 ## Just Dire Things
 
@@ -46,13 +46,13 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Voltex | `Voltex-3.0.4-neoforge-1.21.1.jar` | both | `core`, `tech`, `world-data` | Industrial machines, heat, fluids, logistics, and nanites. |
+| Voltex | `Voltex-3.0.5-neoforge-1.21.1.jar` | both | `core`, `tech`, `world-data` | Industrial machines, heat, fluids, logistics, and nanites. |
 
 ## Singulo
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Singulo | `Singulo-0.14.0-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
+| Singulo | `Singulo-0.18.0-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
 
 ## Industrial Foregoing
 
@@ -66,10 +66,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Ryzer Gen | `ryzergen-0.2.2-alpha.jar` | both | `core`, `tech`, `world-data` | A small fission reactor you design rod by rod. Alpha. |
+| Ryzer Gen | `ryzergen-0.2.3-alpha.jar` | both | `core`, `tech`, `world-data` | A small fission reactor you design rod by rod. Alpha. |
 
 ## HBM's Nuclear Tech
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Reinhardt's HBM NeoforgePort | `reinhardtshbm-R26102901.jar` | both | `core`, `tech`, `world-data` | Nuclear reactors, radiation, and heavy industry. NeoForge port. |
+| Reinhardt's HBM NeoforgePort | `reinhardtshbm-R26110801.jar` | both | `core`, `tech`, `world-data` | Nuclear reactors, radiation, and heavy industry. NeoForge port. |

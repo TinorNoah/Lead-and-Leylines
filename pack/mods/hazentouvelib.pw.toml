@@ -1,13 +1,13 @@
 name = "HazentouveLib"
-filename = "hazentouvelib-1.0.11.jar"
+filename = "hazentouvelib-1.0.12.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "2ecd8cc5f41c5581d03e52e457ed45ec787cb04c"
+hash = "88f82f4a3b543b730a70c6541873ab5746e8de53"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8977077
+file-id = 9506484
 project-id = 1528722

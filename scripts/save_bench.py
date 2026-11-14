@@ -304,7 +304,7 @@ def assemble_server(pack: dict[str, str], dest: Path) -> Path:
             name = info.filename.replace("\\", "/")
             if name.startswith("mods/") and name.lower().endswith(".jar"):
                 archive.extract(info, dest)
-            if name.startswith(("pointblank/", "tacz/", "config/", "global_packs/")):
+            if name.startswith(("pointblank/", "tacz/", "config/", "global_packs/", "kubejs/")):
                 archive.extract(info, dest)
     return dest
 

@@ -16,10 +16,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | FerriteCore ((Neo)Forge) | `ferritecore-7.0.3-neoforge.jar` | both | `core`, `optimizer` | Lower memory use. |
 | ModernFix | `modernfix-neoforge-5.27.27+mc1.21.1.jar` | both | `core`, `optimizer` | Launch and mixin fixes. |
 | Concurrent Chunk Management Engine | `c2me-neoforge-mc1.21.1-0.4.0-alpha.0.124.jar` | both | `core`, `optimizer` | Threaded chunk generation. |
-| Bye?Pregen! | `byepregen-1.21.1-1.1.3.4.jar` | both | `core`, `optimizer` | Faster chunk generation. Do not add Noisium beside it. |
+| Bye?Pregen! | `byepregen-1.21.1-1.2.0.0.jar` | both | `core`, `optimizer` | Faster chunk generation. Do not add Noisium beside it. |
 | Ksyxis | `Ksyxis-1.4.6.jar` | both | `addon`, `optimizer` | Faster world join. |
-| Let Me Despawn | `letmedespawn-neoforge-1.21.1-1.26.10.2.jar` | both | `core`, `optimizer` | Lets persistent mobs despawn. |
-| Almanac Lib | `almanac-neoforge-1.21.1-1.26.10.3.jar` | both | `library`, `optimizer` | Library Let Me Despawn needs. |
+| Let Me Despawn | `letmedespawn-neoforge-1.21.1-1.26.11.1.jar` | both | `core`, `optimizer` | Lets persistent mobs despawn. |
+| Almanac Lib | `almanac-neoforge-1.21.1-1.26.11.1.jar` | both | `library`, `optimizer` | Library Let Me Despawn needs. |
 | Clumps | `Clumps-neoforge-1.21.1-19.0.0.1.jar` | both | `core`, `optimizer` | Merges XP orbs. |
 | FastWorkbench | `FastWorkbench-1.21.1-9.1.3.jar` | both | `core`, `optimizer` | Faster crafting lookup. |
 | FastFurnace | `FastFurnace-1.21.1-9.0.1.jar` | both | `addon`, `optimizer` | Faster furnaces. |

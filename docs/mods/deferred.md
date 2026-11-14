@@ -78,18 +78,14 @@ This file lists **only mods that are not in `pack/mods/`**.
 | Adaptive Performance Tweaks | Auto-cuts view distance / spawns / items. Skip. |
 | TCT ClearLag | Deletes entities. ARR + TCT Core. Skip. |
 | Dimensional Threading Reforked | One world per thread. Skip. |
-| Invasive Optimizations | Author: disable this first if anything breaks. Optional Create / Pipez patches on a mixed pack. Skip. |
 | Ixeris | Moves input off-thread. Skip. Asked again 2026-09-26. Still skip. |
 | Nolijium | Fog, sky, particles, and darkness overlap Sodium / Iris. Last 1.21.1 file is 2025-03. Optional Embeddium. Skip. |
-| Inventory Essentials | Installed 2026-09-26 beside Inventory Profiles Next (user override). **Stale 2026-10-05:** Inventory Profiles Next was removed; Inventory Essentials declares no IPN dependency and still works standalone, so this row now needs a real justification or removal. |
-| Modern Dynamics | Installed 2026-09-26 after Pipez removal. |
+| Recipe Essentials (`recipe-essentials-forge-fabric`, CF `907856`) | Removed 2026-11-14. `PatchedDataComponentMap$onInit` forced eager `DataComponentMap.hashCode()` on every `ItemStack` init (+32.7 s JEI Farmer's Delight stall), `ReloadableServerResourcesMixin` was immediately overwritten by FastSuite, `RecipeManagerMixin` lost to ModernFix, and Not Enough Recipe Book already strips the vanilla recipe book. |
+| FastBoot (`fastboot`, CF `1030285`), MemGuard (`memorymod`, CF `1468440`), AI Improvements (`ai-improvements`, CF `233019`), Structure Essentials (`structure-essentials-forge-fabric`, CF `832882`), In Control! (`in-control`, CF `257356`) | Removed 2026-11-14 after bytecode audit: FastBoot's `neoforge.mods.toml` failed to register its `LOGGER.info`-only mixins; MemGuard only logged heap ticks (AllTheLeaks covers memory); AI Improvements had all goal removals off while allocating `HashSet`s per mob join and a 256 KB `atan2` LUT; Structure Essentials was bypassed by BiomeSpy, mutated `/locate` timeout `+30s` per call, masked C2ME RNG checks, and contended on `ConcurrentHashMap` per feature placement; In Control had empty `[]` configs while writing `"incontrol:joined"` NBT to every mob and querying `LOOTING` on every kill. |
 | Pretty X Smart Pipez, Pretty X Smart Pipez Mekanism Edition | Resource packs, not mods. `allowModDistribution` is false, so they cannot ship. Skip. |
-| Rechiseled (+ Chipped / Create / AE2) | Installed 2026-09-26 beside Chipped (user override). |
-| Mob Grinding Utils (+ Vanillafied) | Installed 2026-09-26. |
 | Create: Copper & Zinc | Skipped 2026-09-26; Create: Alloyed is the metal addon. |
 | Modern Industrialization Extentended Integrations | Dropped 2026-09-26. Crashes MI 2.5.8: `Machine casing model "modern_industrialization:iv" does not exist` in `miei` stress hatches. Do not re-add until a build matches current MI casings. |
 | Krypton Reno | Real project is `krypton-fnp` (`krypton_fnp-neoforge-1.21.1-0.2.28.1`). File exists. Still hold: network mixins next to Lithium / NeoForge. |
-| Fast Item Frames | Installed 2026-09-26. World data + Puzzles Lib (already in). |
 | BetterGrassify | Required Forgified Fabric API. Skip. |
 | Roxy | Translation layer for Fabric Voxy `0.2.16-beta` (1.21.11 jar). Voxy is out. Skip. |
 | Ecliptic Seasons : Fabricated | Fabric rewrite. Bundles listed it as a required dep; packwiz skipped it on NeoForge. Skip. |

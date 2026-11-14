@@ -1,13 +1,13 @@
 name = "ParCool! ~ Minecraft Parkour ~"
-filename = "ParCool-1.21.1-4.0.1.6.jar"
+filename = "ParCool-1.21.1-4.0.2.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "19426b6b00df0c3785cd30e51a0c21ca818814ba"
+hash = "34f1f737127c523c2f228557caac1b1c14edf0c1"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9205907
+file-id = 9415760
 project-id = 482378

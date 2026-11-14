@@ -17,28 +17,28 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| [UNOFFICIAL] TaCZ NeoForge Port | `tacz-neoforge-1.21.1-1.1.8-hotfix-r7.jar` | both | `core`, `guns`, `tacz` | Guns. Unofficial 1.21.1 port. |
-| Gunsmith Lib | `gunsmithlib-neoforge-1.21.1-tacz1.1.8-6.4.5.jar` | both | `library`, `guns`, `tacz` | Library Ragnarok and other TaCZ addons use. |
-| TaCZ addon | `taczaddon-1.1.8.3-fix-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
+| [TaCZ] Timeless and Classics Zero Guns | `tacz-neoforge-1.21.1-1.2.0.jar` | both | `core`, `guns`, `tacz`, `world-data` | Official 1.21.1 TaCZ firearms, attachments, and ammo. |
+| Gunsmith Lib | `gunsmithlib-neoforge-1.21.1-tacz1.2.0-7.1.1.jar` | both | `library`, `guns`, `tacz` | Library Ragnarok and other TaCZ addons use. |
+| TaCZ addon | `taczaddon-1.2.0-neoforge-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Extra TaCZ parts and behavior. |
 | [TaCZ] Runtime Compat | `taczruntimecompat-1.0.1.jar` | both | `compat`, `guns`, `tacz` | Keeps TaCZ loading beside the rest of the pack. |
 | TaCZ Pack Upgrader | `tacz-pack-upgrader-2.1.3.jar` | both | `addon`, `guns`, `tacz` | Updates older gun-pack data. |
 | [TaCZ] Refit \| Recipe and Stats Editor | `tacz_refit-1.21.1-v006.jar` | both | `addon`, `guns`, `tacz` | Recipe and stat editor. |
-| [TaCZ]  Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.0.jar` | both | `addon`, `guns`, `tacz` | Ammo box on a Curios slot. |
-| [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.3-hotfix2.jar` | both | `addon`, `guns`, `tacz` | Applied Energistics ammo box. |
+| [TaCZ]  Curios For Ammo Box | `curios_for_ammo_box-1.21.1-1.2.1.jar` | both | `addon`, `guns`, `tacz` | Ammo box on a Curios slot. |
+| [TaCZ] Applied Ammo Box | `applied_ammo_box-1.21.1-1.2.4.jar` | both | `addon`, `guns`, `tacz` | Applied Energistics ammo box. |
 | Applied TaCZ | `AppliedTaCZ-1.21.1-19.0.1.jar` | both | `addon`, `guns`, `tacz` | Crafts and stores TaCZ guns in Applied Energistics. |
 | Create: Timeless and Classics Zero [TaCZ] Unofficial Port | `tacz_c-1.0.2+neoforge.1.21.1.jar` | both | `addon`, `guns`, `tacz`, `create` | Create recipes for TaCZ. |
 | TACZ / Jade Compatibility \|Timeless and classics Zero addon | `tacz-jade-1.21.1-neoforge-1.0.0.jar` | client | `compat`, `guns`, `tacz`, `jade` | Jade labels for guns. |
 | [JET] Just Enough TaCZ | `just_enough_tacz-1.2.0.jar` | client | `addon`, `guns`, `tacz`, `jei` | Gun recipes in JEI. |
 | Berezka's library | `berezka_api-1.2.9.5-fix-neoforge-1.21.1.jar` | both | `library`, `guns`, `tacz` | Library Just Enough TaCZ needs. |
-| EMF Compat: TACZ | `emf_compat_tacz_neoforge_1.21.1_1.0.1.jar` | client | `compat`, `guns`, `tacz` | Entity Model Features support for guns. |
+| EMF Compat: TACZ | `emf_compat_tacz_neoforge_1.21.1_1.1.0.jar` | client | `compat`, `guns`, `tacz` | Entity Model Features support for guns. |
 | Don't Punch My TACZ | `dont-punch-my-tacz-v0.5.2-1.21.1-neo.jar` | client | `addon`, `guns`, `tacz` | Hides Punchy fists while a gun is held. |
 | Epic Fight × TacZ First-Person Compat | `epictaczcompat_1.21.1_0.6.0.jar` | client | `compat`, `guns`, `tacz`, `epic-fight` | First-person TaCZ aim while Epic Fight is installed. |
-| Apotheosis Modern Ragnarok: Zero | `apotheosis_modern_ragnarok-neoforge-1.21.1-tacz1.1.8-7.0.1.jar` | both | `addon`, `guns`, `tacz`, `apotheosis` | Apotheosis affixes on TaCZ guns. |
+| Apotheosis Modern Ragnarok: Zero | `apotheosis_modern_ragnarok-neoforge-1.21.1-tacz1.2.0-8.0.0.jar` | both | `addon`, `guns`, `tacz`, `apotheosis` | Apotheosis affixes on TaCZ guns. |
 | TACZ Armed Pillagers | `pillagerguns-neoforge-1.21.1-1.1.0.jar` | both | `addon`, `guns`, `tacz` | Pillagers spawn with guns. |
 | TACZ Armed Piglins | `armedpiglins-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Piglins spawn with guns. |
 | TACZ Armed Skeletons | `armedskeletons-neoforge-1.21.1-1.0.0.jar` | both | `addon`, `guns`, `tacz` | Skeletons spawn with guns. |
 | TACZ Bandits | `tacz_bandits-1.3.jar` | both | `addon`, `guns`, `tacz` | Gun-using bandits. |
-| TACZ Turrets | `tacz_turrets-neoforge-4.1.1-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
+| TACZ Turrets | `tacz_turrets-neoforge-4.3.0-1.21.1.jar` | both | `addon`, `guns`, `tacz` | Placeable gun turrets. |
 | [TaCZ] [SBW] Tactical Breaching | `tactical_breaching-tacz-sbw-neoforge-1.21.1-1.0.7.jar` | both | `addon`, `guns`, `tacz` | Door-breaching charges. |
 | Elite X Quality Guns (TACZ) | `Elite X Quality Guns NeoForge v6.1 - 1.21.1 Hotfix.jar` | both | `content-pack`, `guns`, `tacz` | Extra gun set. |
 | [UNOFFICIAL] LesRaisins Tactical Equipements | `LesRaisins-Tactical-Equipements-1.21.1-0.4.3.jar` | both | `addon`, `guns`, `tacz` | LesRaisins tactical gear. |
@@ -61,7 +61,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| [SBW] Superb Warfare | `superbwarfare-0.8.9.2-mc1.21.1-c22d98c2.jar` | both | `core`, `guns`, `transport`, `world-data` | Guns, cannons, and ground vehicles. A third firearm system beside TaCZ and Point Blank. |
+| [SBW] Superb Warfare | `superbwarfare-0.8.9.2-hotfix-mc1.21.1-e0c2b27f.jar` | both | `core`, `guns`, `transport`, `world-data` | Guns, cannons, and ground vehicles. A third firearm system beside TaCZ and Point Blank. |
 
 ## Armageddon
 

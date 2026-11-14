@@ -74,7 +74,7 @@ mods = [
 [[category.group]]
 name = "Timeless and Classics Zero"
 mods = [
-  { file = "tacz-1-21-1.pw.toml", blurb = "Guns. Unofficial 1.21.1 port.", tags = ["core", "guns", "tacz"] },
+  { file = "timeless-and-classics-zero.pw.toml", blurb = "Official 1.21.1 TaCZ firearms, attachments, and ammo.", tags = ["core", "guns", "tacz", "world-data"] },
   { file = "gunsmith-lib.pw.toml", blurb = "Library Ragnarok and other TaCZ addons use.", tags = ["library", "guns", "tacz"] },
   { file = "tacz-addon.pw.toml", blurb = "Extra TaCZ parts and behavior.", tags = ["addon", "guns", "tacz"] },
   { file = "tacz-runtime-compat.pw.toml", blurb = "Keeps TaCZ loading beside the rest of the pack.", tags = ["compat", "guns", "tacz"] },
@@ -225,7 +225,6 @@ name = "Companions and wildlife"
 mods = [
   { file = "creeper-overhaul.pw.toml", blurb = "Overhauled creepers.", tags = ["addon", "mob", "world-data"] },
   { file = "enderman-overhaul.pw.toml", blurb = "Overhauled endermen.", tags = ["addon", "mob", "world-data"] },
-  { file = "ai-improvements.pw.toml", blurb = "Cheaper, smarter mob AI.", tags = ["addon", "mob", "optimizer"] },
   { file = "critters-and-companions.pw.toml", blurb = "Small wildlife and pets.", tags = ["core", "mob"] },
   { file = "companions-mod.pw.toml", blurb = "Companion creatures.", tags = ["core", "mob"] },
   { file = "knight-lib.pw.toml", blurb = "Library Companions and Olympus share.", tags = ["library", "mob"] },
@@ -356,7 +355,7 @@ name = "Finding biomes"
 mods = [
   { file = "natures-compass.pw.toml", blurb = "Locates biomes.", tags = ["core", "worldgen", "world-data"] },
   { file = "explorers-compass.pw.toml", blurb = "Locates structures. This is the structure finder.", tags = ["core", "worldgen", "world-data"] },
-  { file = "biomespy.pw.toml", blurb = "Names the biome you are in.", tags = ["core", "worldgen", "world-data"] },
+  { file = "biomespy.pw.toml", blurb = "Faster /locate biome and structure search.", tags = ["addon", "worldgen", "optimizer"] },
 ]
 
 [[category]]
@@ -432,7 +431,6 @@ mods = [
   { file = "create-spellworks-irons-spells-n-spellbooks.pw.toml", blurb = "Create spell tools.", tags = ["addon", "magic", "create", "irons-spells"] },
   { file = "farmers-spell.pw.toml", blurb = "Farmer's Delight spells.", tags = ["addon", "magic", "irons-spells", "farmers-delight", "food"] },
   { file = "apotheosis-x-irons-spellbooks-compat.pw.toml", blurb = "Apotheosis gear for these spells.", tags = ["compat", "magic", "apotheosis", "irons-spells"] },
-  { file = "kubejs-irons-spells.pw.toml", blurb = "KubeJS hooks for new spells.", tags = ["compat", "magic", "irons-spells"] },
   { file = "familiarslib.pw.toml", blurb = "Library Alshanex's Familiars needs.", tags = ["library", "magic", "irons-spells"] },
   { file = "alshanexs-familiars.pw.toml", blurb = "Tameable familiars for Iron's Spells.", tags = ["addon", "magic", "irons-spells", "world-data"] },
   { file = "hazentouvelib.pw.toml", blurb = "Library Mana Sub Zero needs.", tags = ["library", "magic", "irons-spells"] },
@@ -534,7 +532,6 @@ mods = [
   { file = "botany-trees.pw.toml", blurb = "Grows trees in pots.", tags = ["core", "farming"] },
   { file = "harvest-with-ease.pw.toml", blurb = "Harvest crops in an area.", tags = ["core", "farming"] },
   { file = "agritech-evolved.pw.toml", blurb = "Farming machines and crop processing.", tags = ["addon", "farming", "tech", "world-data"] },
-  { file = "kubejs-botany-pots.pw.toml", blurb = "KubeJS hooks for Botany Pots.", tags = ["compat", "farming"] },
   { file = "cobweb.pw.toml", blurb = "Library Harvest with ease needs.", tags = ["library", "farming"] },
 ]
 
@@ -697,7 +694,6 @@ mods = [
   { file = "mekajadeupgrades.pw.toml", blurb = "Jade labels for Mekanism upgrades.", tags = ["addon", "tech", "mekanism", "jade"] },
   { file = "just-enough-mekanism-multiblocks.pw.toml", blurb = "Multiblock preview in JEI.", tags = ["addon", "tech", "mekanism", "jei"] },
   { file = "mekanism-curios.pw.toml", blurb = "Portable QIO in a Curios slot.", tags = ["addon", "tech", "mekanism"] },
-  { file = "kubejs-mekanism.pw.toml", blurb = "KubeJS hooks for Mekanism.", tags = ["compat", "tech", "mekanism"] },
 ]
 
 [[category]]
@@ -929,7 +925,6 @@ intro = """Maps and dimensions. Biome and structure finders are in [Biomes](biom
 [[category.group]]
 name = "Maps"
 mods = [
-  { file = "structure-essentials-forge-fabric.pw.toml", blurb = "Faster structure locating and a nearby-structure command.", tags = ["addon", "exploration", "worldgen"] },
   { file = "xaeros-minimap.pw.toml", blurb = "Minimap.", tags = ["core", "exploration"] },
   { file = "xaeros-world-map.pw.toml", blurb = "World map.", tags = ["core", "exploration"] },
   { file = "icon-xaeros.pw.toml", blurb = "Resource pack. Map icons.", tags = ["resource-pack", "exploration"] },
@@ -987,9 +982,7 @@ mods = [
   { file = "fuelgoeshere.pw.toml", blurb = "Fuel goes to the fuel slot even when it is smeltable.", tags = ["addon", "gameplay"] },
   { file = "get-it-together-drops.pw.toml", blurb = "Dropped stacks merge by tag.", tags = ["addon", "gameplay"] },
   { file = "heyberryshutup.pw.toml", blurb = "Villagers stop taking berry bush damage.", tags = ["addon", "gameplay"] },
-  { file = "in-control.pw.toml", blurb = "Rules for what spawns where.", tags = ["addon", "gameplay"] },
-  { file = "gambling-craft.pw.toml", blurb = "A laptop of loot cases and challenges.", tags = ["addon", "gameplay", "world-data"] },
-{ file = "tool-belt.pw.toml", blurb = "A second belt for tools and weapons.", tags = ["addon", "gameplay"] },
+  { file = "tool-belt.pw.toml", blurb = "A second belt for tools and weapons.", tags = ["addon", "gameplay"] },
 ]
 
 [[category]]
@@ -1115,8 +1108,7 @@ mods = [
   { file = "controlling.pw.toml", blurb = "Search keybinds.", tags = ["core", "client-qol"] },
   { file = "mouse-tweaks.pw.toml", blurb = "Drag and scroll item moving.", tags = ["core", "client-qol"] },
   { file = "moremousetweaks.pw.toml", blurb = "More mouse inventory moves beside Mouse Tweaks.", tags = ["addon", "client-qol"] },
-  { file = "inventory-essentials.pw.toml", blurb = "Extra inventory moves and sorting beside Mouse Tweaks.", tags = ["addon", "client-qol"] },
-  { file = "recipe-essentials-forge-fabric.pw.toml", blurb = "Recipe book and craft helper tweaks.", tags = ["addon", "client-qol"] },
+  { file = "inventory-essentials.pw.toml", blurb = "Hotbar tool and block auto-refill plus armor-set swap.", tags = ["addon", "client-qol"] },
   { file = "keybind-bundles.pw.toml", blurb = "Collapse several keybinds into one.", tags = ["addon", "client-qol"] },
   { file = "keybindspurger.pw.toml", blurb = "Clears conflicting keybinds.", tags = ["addon", "client-qol"] },
   { file = "no-chat-reports.pw.toml", blurb = "Chat cannot be reported to Mojang.", tags = ["core", "client-qol"] },
@@ -1130,7 +1122,6 @@ mods = [
   { file = "better-modlist-neoforge.pw.toml", blurb = "Clearer mods screen.", tags = ["addon", "client-qol"] },
   { file = "better-compatibility-checker.pw.toml", blurb = "Clearer incompatibility screen.", tags = ["compat", "client-qol"] },
   { file = "crash-assistant.pw.toml", blurb = "Crash screen with next steps.", tags = ["addon", "client-qol"] },
-  { file = "fastboot.pw.toml", blurb = "Faster client startup.", tags = ["addon", "client-qol"] },
   { file = "resourcepackcached.pw.toml", blurb = "Caches resource-pack loading.", tags = ["addon", "client-qol"] },
   { file = "asynclogger.pw.toml", blurb = "Logging off the client thread.", tags = ["addon", "client-qol"] },
   { file = "ambientsounds.pw.toml", blurb = "Ambient soundscapes.", tags = ["addon", "client-qol"] },
@@ -1178,7 +1169,6 @@ intro = """Crash isolation, leak patches, and network fixes."""
 name = "Stability"
 mods = [
   { file = "alltheleaks.pw.toml", blurb = "Patches known memory leaks.", tags = ["core", "stability"] },
-  { file = "memorymod.pw.toml", blurb = "Logs heap use. Complements AllTheLeaks.", tags = ["core", "stability"] },
   { file = "neruina.pw.toml", blurb = "Isolates a ticking entity instead of crashing.", tags = ["core", "stability"] },
   { file = "configurable.pw.toml", blurb = "Library Neruina needs.", tags = ["library", "stability"] },
   { file = "crash-utilities.pw.toml", blurb = "Crash report tools.", tags = ["core", "stability"] },
@@ -1226,10 +1216,6 @@ mods = [
 name = "KubeJS"
 mods = [
   { file = "kubejs.pw.toml", blurb = "Script recipes, items, and events.", tags = ["library"] },
-  { file = "kubejs-additions.pw.toml", blurb = "Extra KubeJS helpers.", tags = ["library"] },
-  { file = "kubejs-create.pw.toml", blurb = "KubeJS hooks for Create.", tags = ["library", "create"] },
-  { file = "ponder.pw.toml", blurb = "Ponder scenes from KubeJS scripts.", tags = ["library", "create"] },
   { file = "rhino.pw.toml", blurb = "JavaScript runtime KubeJS uses.", tags = ["library"] },
-  { file = "lootjs.pw.toml", blurb = "Loot table scripts for KubeJS.", tags = ["addon"] },
 ]
 

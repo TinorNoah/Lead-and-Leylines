@@ -1,13 +1,13 @@
 name = "TACZ Turrets"
-filename = "tacz_turrets-neoforge-4.1.1-1.21.1.jar"
+filename = "tacz_turrets-neoforge-4.3.0-1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "483804f9f83510f25245eec1a400a8fb8ae9ab72"
+hash = "30278e2ac70a5c79d61fb6fc7d8692f2b3e03407"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9389367
+file-id = 9500512
 project-id = 1376660

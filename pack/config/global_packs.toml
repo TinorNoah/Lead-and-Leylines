@@ -30,7 +30,7 @@ log_pack_ids = false
 required = [
     "global_packs/required_resources/",
     "resourcepacks/FreshAnimations_v1.11.1_1.20+.zip",
-    "resourcepacks/FA+All_Extensions-v1.8.1.zip",
+    "resourcepacks/FA-All_Extensions-v1.10.1.zip",
     "resourcepacks/Darkest_Ages_Mobs-1.21.1_1.2.1.zip",
     "resourcepacks/Darkest_Ages_Mobs+FA-1.21.1_1.2.1.zip",
     "resourcepacks/Icon Xaero's 1.22.zip",

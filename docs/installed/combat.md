@@ -29,6 +29,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| ParCool! ~ Minecraft Parkour ~ | `ParCool-1.21.1-4.0.1.6.jar` | both | `core`, `melee` | Parkour: dodge, wall run, crawl. |
+| ParCool! ~ Minecraft Parkour ~ | `ParCool-1.21.1-4.0.2.0.jar` | both | `core`, `melee` | Parkour: dodge, wall run, crawl. |
 | ParCool+ Compatibility++  | `ParCool-CompatibilityAddon-1.21.1-3.4.3.3-1.2.1.jar` | both | `compat`, `melee` | ParCool bridges to other mods. |
-| Punchy! - First person animations | `punchy-3.0-neoforge-1.21.1-birthday.jar` | client | `core`, `melee` | First-person punch animation. Hidden while Epic Fight mode is on. |
+| Punchy! - First person animations | `punchy-3.2a-neoforge-1.21.1.jar` | client | `core`, `melee` | First-person punch animation. Hidden while Epic Fight mode is on. |

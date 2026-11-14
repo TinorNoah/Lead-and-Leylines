@@ -11,7 +11,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Terralith | `Terralith_1.21.x_v2.6.2.jar` | both | `core`, `worldgen`, `world-data` | Overworld biome pack. |
 | Oh The Biomes We've Gone | `Oh-The-Biomes-Weve-Gone-NeoForge-2.6.3.jar` | both | `core`, `worldgen`, `world-data` | Second overworld biome pack. |
 | CorgiLib | `Corgilib-NeoForge-1.21.1-5.0.0.10.jar` | both | `library`, `worldgen` | Library Oh The Biomes We've Gone needs. |
-| Oh The Trees You'll Grow | `Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.5.jar` | both | `addon`, `worldgen`, `world-data` | Sapling data Oh The Biomes We've Gone needs. |
+| Oh The Trees You'll Grow | `Oh-The-Trees-Youll-Grow-neoforge-1.21.1-5.3.6.jar` | both | `addon`, `worldgen`, `world-data` | Sapling data Oh The Biomes We've Gone needs. |
 | Regions Unexplored | `regions-unexplored-0.6.3-neoforge-21.1.jar` | both | `core`, `worldgen`, `world-data` | Third overworld biome pack. |
 | Lithostitched | `lithostitched-1.8.1-neoforge-21.1.jar` | both | `library`, `worldgen` | Worldgen library Terralith and Regions Unexplored use. |
 | TerraBlender (NeoForge) | `TerraBlender-neoforge-1.21.1-4.1.0.8.jar` | both | `addon`, `worldgen`, `world-data` | Mixes those biome sets. Region size is set in pack config. |
@@ -33,4 +33,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | both | `core`, `worldgen`, `world-data` | Locates biomes. |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | both | `core`, `worldgen`, `world-data` | Locates structures. This is the structure finder. |
-| BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | `core`, `worldgen`, `world-data` | Names the biome you are in. |
+| BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | `addon`, `worldgen`, `optimizer` | Faster /locate biome and structure search. |
