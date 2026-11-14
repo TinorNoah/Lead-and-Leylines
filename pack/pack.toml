@@ -1,12 +1,12 @@
 name = "Lead and Leylines"
 author = "TinorNoah"
-version = "0.2.6"
+version = "0.2.7"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "09dcdab3f53f91ccf5f6a498590675023ff57cdf4d18a50a6c9cef081821edd3"
+hash = "ce0aa9c8800a8da5af769d5c1af5883120d6060e029c9332bbb23a133db8b812"
 
 [versions]
 minecraft = "1.21.1"

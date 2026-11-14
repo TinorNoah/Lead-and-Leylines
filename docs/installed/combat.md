@@ -19,7 +19,6 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | [NEOFORGE] Epic Fight X Parcool | `epicfightxparcool-1.0.0.jar` | both | `addon`, `melee`, `epic-fight` | ParCool movement during Epic Fight. |
 | Epic Fight X Punchy! Neo | `punchy_epicfight_neoforge.jar` | client | `addon`, `melee`, `epic-fight` | Hides Punchy fists while Epic Fight mode is on. |
 | Epic Fight × Twilight Forest Compat | `TwilightForestEFCompat-1.1.8-1.21.1-Neoforge.jar` | both | `compat`, `melee`, `epic-fight`, `twilight-forest` | Twilight Forest weapons in Epic Fight. |
-| Ice and Fire X Epic Fight | `iceandfire-ce-epicfight-armor-compat-1.0.0.jar` | both | `addon`, `melee`, `epic-fight` | Ice and Fire armor in Epic Fight. |
 | Epic Fight x Iron's Spells: Enhanced Animations community port | `efiscompat-2.6.0-neoforge-1.21.1-port.jar` | both | `addon`, `melee`, `epic-fight`, `irons-spells` | Iron's Spells cast animations. |
 | Epic Fight: BK's Poise & Stance | `epicfight_poise-4.2.7-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Replaces Epic Fight stagger with a poise bar. |
 | Epic Fight:BK's Weapon Skills | `bks_weapon_arts-2.0.13-neoforge.jar` | both | `addon`, `melee`, `epic-fight` | Swappable weapon skills for Epic Fight. |

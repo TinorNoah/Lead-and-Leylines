@@ -1,0 +1,8 @@
+name = "Player Animation Library"
+filename = "PlayerAnimationLibNeoforge-1.1.6+mc.1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/8674/792/PlayerAnimationLibNeoforge-1.1.6+mc.1.21.1.jar"
+hash-format = "sha1"
+hash = "856b2e281b405dab7ca1584a7e9d053e76cc268b"

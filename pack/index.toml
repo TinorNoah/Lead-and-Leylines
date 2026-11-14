@@ -5624,11 +5624,6 @@ hash = "bb45fd8d63908c2c96b96d6b863a748b0d673b37310af207bb352c007af05dd0"
 metafile = true
 
 [[files]]
-file = "mods/ice-and-fire-x-epic-fight.pw.toml"
-hash = "61b5e167a4957ee6550da535d4f092e9be2af8896f8e81b722571faab1668ff3"
-metafile = true
-
-[[files]]
 file = "mods/iceandfire-ce.pw.toml"
 hash = "4c233e9518a334c3449b89ff295ea1553450f4118bcd494ae0c55275d3edadcd"
 metafile = true
@@ -6371,6 +6366,11 @@ metafile = true
 [[files]]
 file = "mods/placebo.pw.toml"
 hash = "1762970777e293ba6d7a6a7b43dde2ac87604820e0fd90dd712beb744d068266"
+metafile = true
+
+[[files]]
+file = "mods/player-animation-library.pw.toml"
+hash = "a27024ba958e0fe4bb39e39176668e35e115a9e0416f77a9abcdc6a341251661"
 metafile = true
 
 [[files]]

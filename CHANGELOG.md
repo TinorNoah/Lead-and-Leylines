@@ -19,6 +19,20 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.7] - 2026-11-14
+
+### Added
+
+- Player Animation Library 1.1.6 so Hephaestus Tools 1.0.12 can load (separate from playerAnimator).
+
+### Changed
+
+### Fixed
+
+### Removed
+
+- Ice and Fire CE × Epic Fight Armor Compat, which only accepts Ice and Fire CE below 2.2 while the pack is on 2.2.
+
 ## [0.2.6] - 2026-11-14
 
 ### Added

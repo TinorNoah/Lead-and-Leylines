@@ -29,4 +29,5 @@ The single list of open work. Details live in the linked docs — this file is t
 
 ## Upstream (waiting on others)
 
+- [ ] **Ice and Fire CE × Epic Fight Armor Compat** — removed 2026-11-14; only file wants `iceandfire` below 2.2. Recheck CurseForge project `1634414` around **2026-11-21** for a NeoForge 1.21.1 build that accepts CE 2.2 ([deferred.md](mods/deferred.md)).
 - [x] **Tonywww2/JEI-Optimize#12** — JET 0.14.9 restores 19.57 ABI (pack bumped 2026-11-13). Prism client re-measure still needed.
