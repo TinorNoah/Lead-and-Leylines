@@ -12,5 +12,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Botany Trees | `botanytrees-neoforge-1.21.1-21.1.7.jar` | both | `core`, `farming` | Grows trees in pots. |
 | Harvest with ease | `harvest-with-ease-neoforge-1.21-9.4.0.jar` | both | `core`, `farming` | Harvest crops in an area. |
 | Agritech: Evolved (ATE) | `agritechevolved-1.1.0.5+mc-1.21.1.jar` | both | `addon`, `farming`, `tech`, `world-data` | Farming machines and crop processing. |
-| KubeJS Botany Pots | `kjsbotanypots-1.3.2.jar` | both | `compat`, `farming` | KubeJS hooks for Botany Pots. |
 | Cobweb | `cobweb-neoforge-1.21-1.4.0.jar` | both | `library`, `farming` | Library Harvest with ease needs. |

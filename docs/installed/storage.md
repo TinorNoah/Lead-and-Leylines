@@ -8,8 +8,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.25.2451.jar` | both | `library`, `storage`, `sophisticated` | Shared library for Backpacks and Storage. |
-| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.19.2243.jar` | both | `core`, `storage`, `sophisticated` | Upgradable backpacks. |
+| Sophisticated Core | `sophisticatedcore-1.21.1-1.5.35.2473.jar` | both | `library`, `storage`, `sophisticated` | Shared library for Backpacks and Storage. |
+| Sophisticated Backpacks | `sophisticatedbackpacks-1.21.1-3.26.21.2249.jar` | both | `core`, `storage`, `sophisticated` | Upgradable backpacks. |
 | Sophisticated Tactical Backpacks (And Ammo Reload Upgrade) | `militarybackpack-2.1.0.jar` | both | `addon`, `storage`, `sophisticated` | Tactical backpacks and an ammo reload upgrade. |
 | Sophisticated Backpacks Create Integration | `sophisticatedbackpackscreateintegration-1.21.1-0.2.3.194.jar` | both | `addon`, `storage`, `create`, `sophisticated` | Create inventory on backpacks. |
 | Sophisticated Backpacks / Jade \| Compatibility | `jade-sophisticated-backpacks-1.21.1-neoforge-1.0.2.jar` | client | `compat`, `storage`, `jade`, `sophisticated` | Jade labels on backpacks. |
@@ -26,7 +26,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.6.15.2219.jar` | both | `core`, `storage`, `sophisticated` | Upgradable chests and barrels. |
+| Sophisticated Storage | `sophisticatedstorage-1.21.1-1.6.18.2229.jar` | both | `core`, `storage`, `sophisticated` | Upgradable chests and barrels. |
 | Sophisticated Storage Create Integration | `sophisticatedstoragecreateintegration-1.21.1-0.1.23.246.jar` | both | `addon`, `storage`, `create`, `sophisticated` | Create inventory on those chests. |
 | Sophisticated Storage: Ars Compat \| Sophisticated Storage Ars-Nouveau Compatibility | `arssophisticatedstoragecompat-0.3.0.jar` | both | `compat`, `storage`, `sophisticated`, `ars-nouveau` | Ars items in Sophisticated Storage. |
 | Sophisticated Chest Optimized | `sophisticated_chest_optimized-1.0.1.jar` | client | `addon`, `storage`, `sophisticated` | Cheaper chest rendering. |
@@ -36,11 +36,11 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Functional Storage | `functionalstorage-1.21.1-1.5.8.jar` | both | `core`, `storage` | Drawers. |
-| Titanium | `titanium-1.21-4.0.51.jar` | both | `library`, `storage` | Library Functional Storage needs. |
+| Titanium | `titanium-1.21-4.0.52.jar` | both | `library`, `storage` | Library Functional Storage needs. |
 | Packing Tape | `PackingTape-1.21.1-0.15.6.jar` | both | `core`, `storage` | Picks up chests and machines. |
 | quick pack | `quick-pack-neoforge-1.5.1+1.21.1.jar` | both | `addon`, `storage` | Packs items into bundles. |
 | Trash Cans | `trashcans-1.1.2-neoforge-mc1.21.jar` | both | `core`, `storage` | Void trash cans. |
-| SuperMartijn642's Core Lib | `supermartijn642corelib-1.1.26-neoforge-mc1.21.jar` | both | `library`, `storage` | Library Trash Cans needs. |
+| SuperMartijn642's Core Lib | `supermartijn642corelib-1.1.26a-neoforge-mc1.21.jar` | both | `library`, `storage` | Library Trash Cans needs. |
 | SuperMartijn642's Config Lib | `supermartijn642configlib-1.1.8-neoforge-mc1.21.jar` | both | `library`, `storage` | Config library Trash Cans needs. |
 | TrashSlot | `trashslot-neoforge-1.21.1-21.1.11.jar` | both | `addon`, `storage` | Trash slot in the inventory. |
 | DimStorage | `DimStorage-1.21.1-9.1.1.jar` | both | `addon`, `storage`, `world-data` | Dimensional chests and tanks. |

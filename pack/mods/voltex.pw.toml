@@ -1,13 +1,13 @@
 name = "Voltex"
-filename = "Voltex-3.0.4-neoforge-1.21.1.jar"
+filename = "Voltex-3.0.5-neoforge-1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "6f9a65cef20cde6922240d82844800c80cf38715"
+hash = "7548a6db48a74eae5a98844d48ab9253440bf58a"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9309390
+file-id = 9508553
 project-id = 1579019

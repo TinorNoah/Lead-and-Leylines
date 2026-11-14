@@ -29,3 +29,4 @@ key_key.ars_nouveau.open_documentation:key.keyboard.f12
 key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.f7
 key_key.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.home
 key_key.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.end
+key_key.inventoryessentials.sort_inventory:key.keyboard.unknown

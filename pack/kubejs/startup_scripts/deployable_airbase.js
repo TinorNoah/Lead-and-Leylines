@@ -1,0 +1,10 @@
+StartupEvents.registry('item', event => {
+  event.create('kubejs:deployable_airbase')
+    .displayName('Deployable Military Airbase')
+    .maxStackSize(1)
+    .rarity('epic')
+    .glow(true)
+    .modelGenerator(m => m.parent('f22raptor:item/portable_hangar'))
+    .tooltip(Text.gray('Deploys a full SKY ACES military airbase: runway, hangars, tower, radar, Patriot & CIWS defenses.'))
+    .tooltip(Text.yellow('Stand on flat Overworld land, face where the runway should extend, and right-click.'))
+})

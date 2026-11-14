@@ -22,7 +22,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | AE2 JEI Integration | `ae2jeiintegration-1.2.1.jar` | client | Extra AE2 JEI pages. |
 | Refined Storage - JEI Integration | `refinedstorage-jei-integration-neoforge-1.0.0.jar` | client | RS recipe transfer. Pinned 1.0.0; 2.0.x is Minecraft 26.1.2. |
 | JEIOptimizer | `jeioptimizer-1.21.1-1.2.0-19.56.jar` | client | Dropped. Faster JEI ingredient filter on world join, but built against JEI 19.56 and replaced by Just Enough Threads, which then broke on JEI 19.57. ARR. |
-| Just Enough Threads | `justenoughthreads-0.14.2+1.21.1.jar` | client | Re-added 2026-10-01 at 0.14.2 after 0.14.1 broke JEI on 19.57. 0.14.2 skips `JeiNativeSearchBuilderMixin` when the single-arg `ElementSearch` constructor is absent, so JEI starts. Off-thread ingredient index; `config/justenoughthreads-client.toml` `enabled = false` is the escape hatch. ARR, client-only (the server smoke test does not load it). |
+| Just Enough Threads | `justenoughthreads-0.14.9-1.21.1.jar` | client | Bumped 2026-11-13 to 0.14.9 (Tonywww2/JEI-Optimize#12). Restores budgeted ingredient filter, native bulk builder, startup render guard, anvil/grindstone recipes, and Mekanism Nutritional Liquifier compaction on JEI 19.57. Escape hatch: `config/justenoughthreads-client.toml` `enabled = false`. ARR, client-only (server smoke does not load it). |
 | Sophisticated JEI Index | `sophisticated_jei_index-1.2.3+1.21.1.jar` | client | Backpack recipe transfer. |
 | Smithing Template Viewer | `smithingtemplateviewer-1.0.4.jar` | client | Armor trim preview in JEI. 1.1.0 is 26.1.2-only. |
 | Create JEI Compat | `createjeicompat-1.0.3.jar` | client | Paginated sequenced-assembly recipes with 7+ steps. |
@@ -70,7 +70,6 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Toast Control | `ToastControl-1.21.1-9.0.1.jar` | client | Toast spam filter. Placebo. |
 | Default Options | `defaultoptions-neoforge-1.21.1-21.1.8.jar` | client | Pack default options. Balm. |
 | Login Protection | `logprot-1.21.1-3.6.jar` | both | Invulnerability after join. |
-| Packet Fixer | `packetfixer-3.3.1-1.20.5-1.21.X-merged.jar` | both | Larger network packets. Not Disconnect Packet Fix. |
 | Too Fast | `toofast-1.21.0-0.4.3.6.jar` | both | Movement packet speed (singleplayer too). Its vehicle-constant patch is a `require = 0` no-op since SKY ACES owns that mixin. |
 | Accelerated Decay | `accelerated-decay-neoforge-21.0.0.jar` | both | Faster leaf decay. |
 | WITS | `wits-neoforge-1.3.1.jar` | both | Structure name overlay. |
@@ -116,9 +115,9 @@ tlin for Forge. AGPL-3.0-or-later. |
 | Not Enough Recipe Book | `Not Enough Recipe Book-NEOFORGE-0.4.3+1.21.jar` | both | Removes the vanilla recipe book. OctoLib. JEI stays. |
 | Observable | `observable-5.4.4.jar` | both | In-game lag profiler. Kotlin for Forge and Architectury. |
 | Load My F***ing Tags | `lmft-1.1.1+1.21.9-neoforge.jar` | both | A bad tag entry does not wipe the tag. |
-| KubeJS | `kubejs-neoforge-2101.7.2-build.377.jar` | both | Scripting. Rhino. Build 377 needs Better Advanced Tooltips (installed). LootJS, Iron's Spells, Mekanism, Create, Botany Pots, Additions, and Ponder addons are in. No scripts ship yet. |
-| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | Required by KubeJS 377. Stacks with Tooltip Overhaul. |
-| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.19.jar` | client | Extra inventory moves beside Mouse Tweaks. Balm. Does not depend on Inventory Profiles Next. |
+| KubeJS | `kubejs-neoforge-2101.7.2-build.381.jar` | both | Scripting (`pack/kubejs/` registers `kubejs:deployable_airbase`). Rhino + Better Advanced Tooltips required. All 7 KubeJS addons removed 2026-11-14 until a script needs them — see Held/Dropped table below for re-add reference. |
+| Better Advanced Tooltips | `better-advanced-tooltips-2101.1.0-build.5.jar` | client | Required by KubeJS 377+. Stacks with Tooltip Overhaul. |
+| Inventory Essentials | `inventoryessentials-neoforge-1.21.1-21.1.20.jar` | client | Kept for unique hotbar broken-tool and depleted-stack auto-refill (`enableToolRefill`, `enableStackRefill`) plus `Space+Click` armor-set swap; `pack/config/inventoryessentials-common.toml` and `defaultoptions/keybindings.txt` disable its colliding `Shift+Drag`, `Shift+Ctrl+Click`, and `Middle-Click` sort binds so Mouse Tweaks, More Mouse Tweaks, and Sophisticated Inventory Interactions own container clicks cleanly. Balm. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | Elevator blocks. World data. |
 | Simple Menu | `simplemenu-1.21.1-2.4.jar` | client | Title-screen background image behind vanilla buttons. Chosen over FancyMenu (3.9.14 needs Konkrete + Melody) because the ask was one image, not a menu layout editor. Hooks `PanoramaRenderer.render`, so it only works while no other mod replaces that renderer — Ice and Fire `customMainMenu` and Aquamirae `themed_main_menu` are therefore off. Ships `config/serilum/simplemenu.json` (`setCustomBackground`) and the art at `config/serilum/simplemenu/background/background.png`. Collective. |
 | Collective | `collective-1.21.1-8.65.jar` | client | Serilum shared library. Only Simple Menu uses it, so it stays `client`. |
@@ -144,6 +143,7 @@ tlin for Forge. AGPL-3.0-or-later. |
 | Fresh Moves / Fresh Animations: Player Extension | Held | Both replace the player model. Epic Fight already owns player combat animation. |
 | The Rename Compat Project | Dropped | Latest zip is resource pack format 42 (1.21.2). 1.21.1 only accepts format 34 unless the pack declares a range that includes 34. |
 | Legendary Tooltips, Simply Tooltips | Dropped | Tooltip Overhaul stays the frame skin. Better Advanced Tooltips is in only because KubeJS 377 requires it. Tag Tooltips shows tags while its key is held. |
-| Inventory Essentials | Chosen | Installed beside Inventory Profiles Next (2026-09-26 override). **Stale 2026-10-05:** IPN was removed; Inventory Essentials declares no IPN dependency, so re-decide this row. |
+| KubeJS Create (`kubejs-create`, CF `429371`), KubeJS Mekanism (`kubejs-mekanism`, CF `418651`), KubeJS Botany Pots (`kubejs-botany-pots`, CF `832870`) | Held (removed 2026-11-14) | Zero-tick-cost JSON recipe-schema wrappers (`38 KB`, `58 KB`, `14 KB`; `createoreexcavation` registers its own fallback `ProcessingOutputJS` when `kubejs_create` is absent). Safe to re-add if a KubeJS progression script ever wants shorthand `event.recipes.create.*` / `mekanism.*` / `botanypots.*` builders instead of datapack JSON or `event.custom`. |
+| KubeJS Iron's Spells (`kubejs-irons-spells`, CF `980834`), LootJS (`lootjs`, CF `570630`), KubeJS Additions (`kubejs-additions`, CF `594387`), PonderJS (`ponder`, CF `622888`) | Held / Dropped (removed 2026-11-14) | Unused with active runtime overhead: `irons_spells_js` mixins `PathfinderMob` globally (adding 2 `SynchedEntityData` IDs, `MagicData`, `"usedSpecial"` NBT, and overwriting `lookControl` on every mob); `lootjs` runs 19 mixins and allocates `LootBucket` on every loot roll (pack uses declarative loot JSON); `kubejsadditions` allocates `EntityEnterChunkEventJS` on every entity chunk crossing; `ponderjs` (`1.57 MB`, client-only) bundled duplicate Ponder/Flywheel JiJ jars. Re-add individual jars only if a script explicitly requires them (`ponderjs` must be `side = "client"` if ever re-added). |
 | Nolijium | Dropped | Fog, sky, particle, and darkness toggles overlap Sodium / Iris. Last 1.21.1 file is 2025-03 and optional Embeddium. |
 | Ixeris | Dropped | Off-thread input. Already skipped. |

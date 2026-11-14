@@ -24,6 +24,7 @@ PACK_DIR = ROOT / "pack"
 MODS_DIR = PACK_DIR / "mods"
 CONFIG_DIR = PACK_DIR / "config"
 GLOBAL_PACKS_DIR = PACK_DIR / "global_packs"
+KUBEJS_DIR = PACK_DIR / "kubejs"
 # Instance folders that are not mods/: Point Blank zips, TaCZ gun-pack jars.
 SIDED_FOLDERS = ("pointblank", "tacz")
 DIST_DIR = ROOT / "dist"
@@ -438,6 +439,10 @@ def build_server_mods_zip(pack: dict[str, str], dest: Path) -> Path:
     if GLOBAL_PACKS_DIR.is_dir():
         shutil.copytree(GLOBAL_PACKS_DIR, work / "global_packs", dirs_exist_ok=True)
         print("  copied pack/global_packs into server zip")
+
+    if KUBEJS_DIR.is_dir():
+        shutil.copytree(KUBEJS_DIR, work / "kubejs", dirs_exist_ok=True)
+        print("  copied pack/kubejs into server zip")
 
     if included == 0:
         print("  no server/both mods; writing an empty server-mods zip")

@@ -1,6 +1,7 @@
 name = "Agritech: Evolved (ATE)"
 filename = "agritechevolved-1.1.0.5+mc-1.21.1.jar"
 side = "both"
+pin = true
 
 [download]
 hash-format = "sha1"

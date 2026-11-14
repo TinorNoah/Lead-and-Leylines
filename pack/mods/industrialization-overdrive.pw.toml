@@ -1,13 +1,13 @@
 name = "Industrialization Overdrive"
-filename = "industrialization_overdrive-1.14.0+1.21.1.jar"
+filename = "industrialization_overdrive-1.15.1-1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "bad56e7585fb8b993ba3935e6e64c4bb3d501c0a"
+hash = "f16686629b0bf96f2a152602c9480ecd0ae9b3ad"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8873846
+file-id = 9467724
 project-id = 1089065

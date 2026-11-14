@@ -9,9 +9,9 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | FTB Library (NeoForge) | `ftb-library-neoforge-2101.1.39.jar` | both | `library`, `ftb` | Library the other FTB mods need. |
-| FTB Teams (NeoForge) | `ftb-teams-neoforge-2101.1.11.jar` | both | `core`, `ftb` | Teams. |
+| FTB Teams (NeoForge) | `ftb-teams-neoforge-2101.1.12.jar` | both | `core`, `ftb` | Teams. |
 | FTB Ranks (NeoForge) | `ftb-ranks-neoforge-2101.1.5.jar` | both | `core`, `ftb` | Ranks and permissions. |
-| FTB Chunks (NeoForge) | `ftb-chunks-neoforge-2101.1.23.jar` | both | `core`, `ftb` | Claims and the chunk map. |
+| FTB Chunks (NeoForge) | `ftb-chunks-neoforge-2101.1.24.jar` | both | `core`, `ftb` | Claims and the chunk map. |
 | FTB Essentials (Forge & Fabric) | `ftb-essentials-neoforge-2101.1.10.jar` | both | `addon`, `ftb` | Homes, warps, and kit commands. |
 | FTB Quests (NeoForge) | `ftb-quests-neoforge-2101.1.38.jar` | both | `core`, `ftb` | Quest book. |
 | FTB Quests Optimizer | `FTBQuestsOptimizer-neoforge-3.2.0-1.21.1.jar` | both | `addon`, `ftb` | Lowers quest-book cost. |

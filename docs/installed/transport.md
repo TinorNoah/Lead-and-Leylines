@@ -18,7 +18,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| SKY ACES | `f22raptor-neoforge-1.21.1-1.22.0.jar` | both | `core`, `transport`, `world-data` | Fighter jets, warbirds, helicopters, warships, and submarines, with a campaign. |
+| SKY ACES | `f22raptor-neoforge-1.21.1-1.32.0.jar` | both | `core`, `transport`, `world-data` | Fighter jets, warbirds, helicopters, warships, and submarines, with a campaign. |
 
 ## Pipes
 

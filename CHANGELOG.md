@@ -19,6 +19,31 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.6] - 2026-11-14
+
+### Added
+
+- Deployable Military Airbase (`kubejs:deployable_airbase`), crafted in SKY ACES's Aircraft Assembly station to deploy a full military airbase (runway, hangars, radar, Patriot, and CIWS defenses) where you face in the Overworld.
+
+### Changed
+
+- Migrated Timeless and Classics Zero from the unofficial 1.21.1 port (`1.1.8`) to the official 1.21.1 NeoForge `1.2.0` release, and updated 71 installed mods across combat, tech, magic, storage, rendering, and worldgen (including SKY ACES `1.32.0`, Ice and Fire CE `2.2`, Reinhardt's HBM `R26110801`, Singulo `0.18.0`, Supplementaries `4.1.0`, Ars Nouveau `5.13.5`, Sophisticated Backpacks/Storage/Core, Bye?Pregen! `1.2.0.0`, LC²H `4.3.0`, Colorwheel `1.3.2`, AllTheLeaks `1.1.16`, GunsmithLib `7.1.1`, Apotheosis Modern Ragnarok `8.0.0`, TaCZ Turrets `4.3.0`, and TaCZ Addon `1.2.0`).
+- Just Enough Threads 0.14.9, which restores JEI 19.57 startup optimizations that earlier builds had to leave off (faster recipe-viewer indexing, less freeze after joining), plus main-thread routing for four JEI plugins so hidden items filter cleanly.
+- SKY ACES no longer auto-generates a free military airbase at spawn on first world join, eliminating a ~3-minute initial world-join server freeze; craft the Deployable Military Airbase instead.
+- Leaky keeps glowing item-pile lag warnings and `/leaky` diagnostics without automatically deleting dropped player or farm items.
+- Inventory Essentials keeps automatic hotbar tool/block refill and armor-set swap, while disabling its conflicting Shift-drag, Shift+Ctrl-click, and middle-click sort bindings beside Mouse Tweaks, More Mouse Tweaks, and Sophisticated Inventory Interactions.
+
+### Fixed
+
+- Epic Fight's `FakeLevel` biome-manager startup error caused by BadOptimizations sky-color caching.
+- Fresh Animations Extensions failing to auto-enable on clean installs due to an older filename in Global Packs.
+- FTB Quests Optimizer skipping sequential-task order checks on item-consuming quest tasks.
+
+### Removed
+
+- Gambling Craft (forced laptop/guide handouts, End death gate until a huge casino balance, and a periodic Rage Fit that kills players who do not open a case in time).
+- Pruned 13 redundant, broken, or unused technical jars with no gameplay loss: Recipe Essentials (caused a 33-second JEI recipe stall), FastBoot, MemGuard, AI Improvements, Structure Essentials, In Control!, and seven unused KubeJS scripting addons (KubeJS Create, Mekanism, Iron's Spells, Botany Pots, Additions, LootJS, and PonderJS).
+
 ## [0.2.5] - 2026-11-05
 
 ### Added

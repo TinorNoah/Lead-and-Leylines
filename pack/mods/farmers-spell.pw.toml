@@ -1,13 +1,13 @@
 name = "Farmer's Spell 'n Spell Book"
-filename = "farmers-spell-n-spellbook-1.0.7.0-1.21.1.jar"
+filename = "farmers-spell-n-spellbook-1.0.7.1-1.21.1.jar"
 side = "both"
 
 [download]
-url = "https://edge.forgecdn.net/files/9350/536/farmers-spell-n-spellbook-1.0.7.0-1.21.1.jar"
+url = "https://edge.forgecdn.net/files/9419/45/farmers-spell-n-spellbook-1.0.7.1-1.21.1.jar"
 hash-format = "sha1"
-hash = "6bb6b337bae337f1754f747ed96f3c82c2af20c8"
+hash = "ce0ab69210e38da89aabc6f1a0993c6526b30517"
 
 [update]
 [update.curseforge]
-file-id = 9350536
+file-id = 9419045
 project-id = 1631240

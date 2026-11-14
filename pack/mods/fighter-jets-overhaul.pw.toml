@@ -1,13 +1,13 @@
 name = "SKY ACES"
-filename = "f22raptor-neoforge-1.21.1-1.22.0.jar"
+filename = "f22raptor-neoforge-1.21.1-1.32.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "3a3125cba64e5ec7afc584069527fd1059977685"
+hash = "d9905918c3224ad14f97d2418b2073554dc42d1c"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9410823
+file-id = 9599092
 project-id = 1696628

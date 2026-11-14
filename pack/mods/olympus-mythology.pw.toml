@@ -1,13 +1,13 @@
 name = "Olympus!"
-filename = "olympusmythology-neoforge-1.21.1-1.0.15.jar"
+filename = "olympusmythology-neoforge-1.21.1-1.1.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "432a0528be893f345ff02711c6ea33d7d198638e"
+hash = "a7ffbc0cecdada97e8bae5e458df44fb3107422a"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9387960
+file-id = 9562397
 project-id = 1667111

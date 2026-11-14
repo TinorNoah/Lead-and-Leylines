@@ -12,7 +12,7 @@ Copied from [`pack/pack.toml`](pack/pack.toml). Change that file when bumping; d
 |---|---|
 | Pack | Lead and Leylines |
 | Author | TinorNoah |
-| Pack version | 0.2.5 |
+| Pack version | 0.2.6 |
 | Minecraft | 1.21.1 |
 | Mod loader | NeoForge 21.1.264 |
 | Java | 21 (`pack/user_jvm_args.txt`: `-XX:+UseG1GC`) |
@@ -33,9 +33,9 @@ Prism and other launchers must use the Minecraft version and NeoForge version in
 
 ### Memory
 
-Allocate **8 GB** to start, and **12 GB** if you run shaders or a high render distance. Do not allocate your entire system RAM: the JVM needs native memory on top of the Java heap, and over-allocating gets the process killed by the OS instead of failing gracefully. The dedicated server reserves 2 GB below its container limit for exactly this reason (see [`server/run.sh`](server/run.sh)).
+Allocate **8–9 GB** on **16 GB** machines, and **10–12 GB** on **24–32 GB+** machines or when running shaders / high render distance. Do not allocate your entire system RAM (and never set 12 GB on a 16 GB machine, especially macOS unified memory): the JVM needs ~2 GB of native memory on top of the Java heap, plus GPU texture atlases and OS memory, and over-allocating causes swap stalls or OS OOM kills. The dedicated server reserves 2 GB below its container limit for this reason (see [`server/run.sh`](server/run.sh)).
 
-Where the numbers come from: the server side is measured. Across the runs recorded in [`docs/smoke-runs/`](docs/smoke-runs/), the dedicated server's resident memory after worldgen peaks at about 7.4 GB inside an 8 GB container, so 8 GB is the floor for this pack's server and the client should not be given less. **The client figures are an estimate, not a measurement** — the local test harness only boots a dedicated server and never loads client mods, so nobody has recorded this pack's client memory on real hardware. If you get stutter, GC pauses, or a crash on world join, raise the allocation before filing a bug, and note what you used.
+Where the numbers come from: both sides are measured. Across the runs in [`docs/smoke-runs/`](docs/smoke-runs/), the dedicated server's resident memory after worldgen peaks at about 7.4 GB inside an 8 GB container. On a singleplayer Prism client + integrated server (`AllTheLeaks` post-GC evaluations), steady-state retained heap is **5.9–6.3 GB**, peaking transiently around **7.4 GB** during initial spawn chunk generation — so **9 GB** (`9216 MB`) gives G1GC's 20% reserve comfortable worldgen headroom on 16 GB systems without swapping.
 
 To check what you actually have: F3 shows allocated memory in the top-left. If allocated and used are close together and the number is at your cap, you are out of RAM.
 
