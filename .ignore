@@ -1,0 +1,5 @@
+# Hidden from ripgrep-based agent search (still readable). Generated or noisy.
+docs/installed/catalog.json
+docs/smoke-runs/
+site/bun.lock
+scripts/join-test/package-lock.json

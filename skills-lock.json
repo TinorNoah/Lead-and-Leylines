@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "skills": {
+    "kubejs-modding": {
+      "source": "SirEdvin/minecraft-modding-skills",
+      "commit": "9ac8a4f54815af44210b5ebc349afe97ed70527e",
+      "sourceType": "github",
+      "skillPath": "skills/kubejs-modding/SKILL.md",
+      "computedHash": "3c9f0412c0314a50761782de6724c11b93f5b581232fbee3245304eb66ec2e5b",
+      "installMode": "copy"
+    },
+    "minecraft-datapack": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "commit": "22d61ce6b7a0c5f215008824aa6b94ecc73f2a43",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-datapack/SKILL.md",
+      "computedHash": "78ad3dcc8fc4770d260a23127054bc7f937061964fdb0ee6a32542979bc27ccb",
+      "installMode": "copy"
+    },
+    "minecraft-modpack-authoring": {
+      "source": "SirEdvin/minecraft-modding-skills",
+      "commit": "9ac8a4f54815af44210b5ebc349afe97ed70527e",
+      "sourceType": "github",
+      "skillPath": "skills/minecraft-modpack-authoring/SKILL.md",
+      "computedHash": "d5cf0f359761f0d7c58c4f74f0f974ec17b7b388166d4aa0a136bdec213ec4be",
+      "installMode": "copy"
+    },
+    "minecraft-resource-pack": {
+      "source": "Jahrome907/minecraft-agent-skills",
+      "commit": "22d61ce6b7a0c5f215008824aa6b94ecc73f2a43",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/minecraft-resource-pack/SKILL.md",
+      "computedHash": "cff6c02668b371d122e56f65fabd160d7f039a902334583751c060da6de82ab2",
+      "installMode": "copy"
+    }
+  }
+}
