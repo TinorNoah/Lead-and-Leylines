@@ -17,6 +17,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Fixed
 
+- Joining a server no longer fails with "Network Protocol Error" on the first try. Modern Industrialization machines show Jade tooltips again, Singulo recipes appear in JEI, and rejoining a server no longer drops Create Connected's settings (Lead and Leylines Patches 0.2.4).
+
 ### Removed
 
 ## [0.2.8] - 2026-11-20
