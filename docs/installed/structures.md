@@ -54,7 +54,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Luki's Ancient Cities | `lukis-ancient-cities-v1.2.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New ancient city layouts. |
 | Luki's Woodland Mansions | `lukis-woodland-mansions-v1.0-1.21-1.21.4.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | New woodland mansion layouts. |
 | The Lost Cities | `lostcities-1.21-8.4.6.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Ruined city worldgen. |
-| [LC²H] \| Lost Cities: Multithreaded | `lc2h-omni-4.3.0-LTS.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Multithreaded Lost Cities generation. |
+| [LC²H] \| Lost Cities: Multithreaded | `lc2h-omni-4.3.1-LTS.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Multithreaded Lost Cities generation. |
 | [QAPI] \| Quantified API | `quantified api-omni-2.2.4.jar` | both | `library`, `structure`, `worldgen` | Library Lost Cities: Multithreaded needs. |
 | Compat Structure | `compatstructures-1.0.3.jar` | both | `compat`, `structure`, `worldgen`, `world-data` | Structures that bridge other structure mods. |
 | Compat API | `compatapi-1.0.3.jar` | both | `library`, `structure` | Library Compat Structure needs. |
@@ -64,7 +64,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Structurify - Structure Control | `structurify-neoforge-2.0.43+mc1.21.1.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Pushes normal-spaced structures farther apart. New chunks only. |
-| Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.12.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Faster structure placement. |
+| Structure Layout Optimizer | `structure_layout_optimizer-neoforge-1.0.13.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Faster structure placement. |
 | Resourceful Config | `resourcefulconfig-neoforge-1.21-3.0.11.jar` | both | `library`, `structure`, `worldgen` | Library Structure Layout Optimizer needs. |
 | WITS (What Is This Structure?) | `wits-neoforge-1.3.1.jar` | both | `addon`, `structure`, `worldgen`, `world-data` | Names the structure you are standing in. |
 | Lootr (Forge & NeoForge) | `lootr-neoforge-1.21.1-1.11.38.127.jar` | both | `core`, `structure`, `worldgen`, `world-data` | Per-player structure loot. |

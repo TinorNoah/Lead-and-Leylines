@@ -12,7 +12,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Colorful Hearts | `colorfulhearts-neoforge-1.21.1-10.5.9.jar` | client | `core`, `client-qol` | Heart colors. |
 | Colourful Everywhere | `colourfuleverywhere-1.21-1.3.6.jar` | client | `addon`, `client-qol` | Recolours GUIs with shader presets (NeoForge OptiGUI stand-in). |
 | Simple Menu | `simplemenu-1.21.1-2.4.jar` | client | `core`, `client-qol` | Draws the pack's title art behind the vanilla menu buttons. |
-| Collective | `collective-1.21.1-8.86.jar` | client | `library` | Serilum's shared config and utility library. |
+| Collective | `collective-1.21.1-8.87.jar` | client | `library` | Serilum's shared config and utility library. |
 | Client Tweaks | `clienttweaks-neoforge-1.21.1-21.1.15.jar` | both | `addon`, `client-qol` | Small client annoyance toggles. |
 | Bad Wither No Cookie - Reloaded | `bwncr-neoforge-1.21.1-3.20.4.jar` | client | `addon`, `client-qol` | Mutes wither, dragon, and raid music. |
 | Default Options | `defaultoptions-neoforge-1.21.1-21.1.8.jar` | client | `addon`, `client-qol` | Applies pack keybinds and options. |

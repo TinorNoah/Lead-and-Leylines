@@ -10,7 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | AE2 Network Analyser | `AE2NetworkAnalyzer-1.21-2.1.5-neoforge.jar` | both | `addon`, `tech`, `ae2` | Visual analyser for ME networks. |
 | Applied Industrialization | `Applied-Industrialization-1.4.4.jar` | both | `addon`, `tech`, `ae2`, `modern-industrialization` | AE2 blocks for Modern Industrialization. |
-| Applied Energistics 2 | `appliedenergistics2-19.2.19.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
+| Applied Energistics 2 | `appliedenergistics2-19.2.20.jar` | both | `core`, `tech`, `storage`, `ae2` | ME networks and autocrafting. |
 | Glodium | `Glodium-1.21-2.2-neoforge.jar` | both | `library`, `tech`, `storage`, `ae2` | Library Applied Flux and ExtendedAE need. |
 | Applied Energistics 2 Wireless Terminals | `ae2wtlib-19.5.1.jar` | both | `addon`, `tech`, `storage`, `ae2` | Wireless terminals. |
 | GuideME | `guideme-21.1.22.jar` | both | `library`, `tech`, `storage`, `ae2` | In-game guide AE2, Modern Industrialization, and Little Big Redstone use. |

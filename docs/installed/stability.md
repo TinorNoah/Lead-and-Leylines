@@ -23,4 +23,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Lead and Leylines Patches | `leylines-patches-0.2.1.jar` | both | `core`, `stability` | Pack-owned fixes for confirmed mod conflicts. |
+| Lead and Leylines Patches | `leylines-patches-0.2.2.jar` | both | `core`, `stability` | Pack-owned fixes for confirmed mod conflicts. |

@@ -1,13 +1,13 @@
 name = "Little Big Redstone"
-filename = "little-big-redstone-1.9.13-1.21.1.jar"
+filename = "little-big-redstone-1.9.14-1.21.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "989fba9ee7f8ccf984a043a1018ed7ecb7b22d4a"
+hash = "52a2014c98c602887e21f1ab7ae9d69a0196a4aa"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9303735
+file-id = 9635715
 project-id = 1180560

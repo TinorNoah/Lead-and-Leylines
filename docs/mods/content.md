@@ -76,7 +76,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Not Enough Glyphs | `not_enough_glyphs-1.21.1-4.6.2.jar` | both | Extra Ars glyphs. World data. SauceLib is embedded. |
 | Neo Vitae | — | — | Removed 2026-09-26 (blood magic / demon dungeon). BMAddon removed with it. |
 | Just Dire Things | `justdirethings-1.5.7.jar` | both | Automation tools and blocks beside Create and Mekanism. World data. 1.5.7 is the 1.21.1 file. |
-| Modern Industrialization | `Modern-Industrialization-2.5.8.jar` | both | Separate factory tech tree. World data. GuideME. GrandPower is embedded. Router energy upgrades are in. |
+| Modern Industrialization | `Modern-Industrialization-2.5.13.jar` | both | Separate factory tech tree. World data. GuideME. GrandPower is embedded. Router energy upgrades are in. |
+| CelesTech | `celestech-0.1.2-hotfix-alpha-1.21.1-neoforge.jar` | both | Added 2026-11-20 on request. Star-powered tech tree: shoot down stars for energy, asteroid mining rockets, implants. Alpha (0.1.0 shipped 2026-11-17), ARR with CurseForge distribution allowed. Needs only GeckoLib; Create / Flywheel optional and already in. Adds overworld ilmenite, pentlandite, and spodumene ores beside other mods' titanium / nickel / lithium (Almost Unified does not unify worldgen). 9 Mixins marked required: client ones touch `LevelRenderer` sky (moon, stars, eclipse) and check for an active shader pack, so a client boot with Iris / Euphoria is the real check. No atlas JSON. World data; not a clean uninstall. |
 | Modular Routers | `modular-routers-13.2.7+mc1.21.1.jar` | both | Programmable routers beside Modern Dynamics / XNet. World data. Mekanistic Routers adds Mekanism modules. |
 | Little Big Redstone | `little-big-redstone-1.9.11-1.21.1.jar` | both | Compact redstone. World data. Tesseract API and GuideME. |
 | Mining Gadgets | `mininggadgets-1.18.8.jar` | both | Laser mining. World data. Create Ultimine and FTB Ultimine stay. |

@@ -1,13 +1,13 @@
 name = "BiomeSpy"
-filename = "biomespy-neoforge-1.21.1-1.3.3.jar"
+filename = "biomespy-neoforge-1.21.1-1.4.0.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "079f612d2b3eed5502896c7cd691969f33b7ab1c"
+hash = "4d44d63f516862ac298c705126b871cc2635f091"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 7488072
+file-id = 9627742
 project-id = 1376024

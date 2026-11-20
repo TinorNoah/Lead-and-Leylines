@@ -1,13 +1,13 @@
 name = "Additional Attributes"
-filename = "additional_attributes-1.21.1-1.2.2.jar"
+filename = "additional_attributes-1.21.1-1.2.3.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "c0b51977a06b3578023a4e16772aa1f8d2b6bcca"
+hash = "ce0d8497fba2d52281f409e11327a1c0ada76aa6"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6388896
+file-id = 9687889
 project-id = 986624

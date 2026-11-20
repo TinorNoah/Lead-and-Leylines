@@ -8,7 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Curios API | `curios-neoforge-9.5.1+1.21.1.jar` | both | `core`, `gameplay` | Extra equipment slots. Trinket API for the pack. |
+| Curios API | `curios-neoforge-9.6.0-1.21.1.jar` | both | `core`, `gameplay` | Extra equipment slots. Trinket API for the pack. |
 | Artifacts | `artifacts-neoforge-13.2.5.jar` | both | `core`, `gameplay` | Trinkets that use Curios. |
 | Cosmetic Armor Reworked | `cosmeticarmorreworked-1.21.1-v1-neoforge.jar` | both | `addon`, `gameplay` | Cosmetic armor over real armor. |
 | Comforts | `comforts-neoforge-9.0.5+1.21.1.jar` | both | `core`, `gameplay` | Sleeping bags and hammocks. |

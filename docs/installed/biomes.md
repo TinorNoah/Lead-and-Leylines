@@ -33,4 +33,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Nature's Compass | `NaturesCompass-1.21.1-3.4.0-neoforge.jar` | both | `core`, `worldgen`, `world-data` | Locates biomes. |
 | Explorer's Compass | `ExplorersCompass-1.21.1-3.4.0-neoforge.jar` | both | `core`, `worldgen`, `world-data` | Locates structures. This is the structure finder. |
-| BiomeSpy | `biomespy-neoforge-1.21.1-1.3.3.jar` | both | `addon`, `worldgen`, `optimizer` | Faster /locate biome and structure search. |
+| BiomeSpy | `biomespy-neoforge-1.21.1-1.4.0.jar` | both | `addon`, `worldgen`, `optimizer` | Faster /locate biome and structure search. |

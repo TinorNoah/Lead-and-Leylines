@@ -8,7 +8,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Waystones | `waystones-neoforge-1.21.1-21.1.46.jar` | both | `core`, `transport` | Teleport stones. |
+| Waystones | `waystones-neoforge-1.21.1-21.1.47.jar` | both | `core`, `transport` | Teleport stones. |
 | Elytra Slot | `elytraslot-neoforge-9.0.2+1.21.1.jar` | both | `core`, `transport` | Elytra in a Curios slot. |
 | OpenBlocks Elevator | `elevatorid-neoforge-1.21.1-1.11.4.jar` | both | `addon`, `transport`, `world-data` | Elevator blocks. Jump or sneak to change floors. |
 | Tempad | `tempad-1.21.1-3.0.4-all.jar` | both | `addon`, `transport`, `world-data` | Pocket time-door travel. |

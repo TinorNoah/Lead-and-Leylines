@@ -1,13 +1,13 @@
 name = "Invasive Optimizations"
-filename = "invasiveopts-1.0.26.jar"
+filename = "invasiveopts-1.0.27.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "5d86d01e60c499fdd53298450c3276a6e19fbe23"
+hash = "42b33c8d7f1f84a4f17d9cebd679d94502b2e88b"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9320633
+file-id = 9661447
 project-id = 1528432

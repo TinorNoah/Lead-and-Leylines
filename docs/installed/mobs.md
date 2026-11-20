@@ -29,18 +29,18 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Creeper Overhaul | `CreeperOverhaul-neoforge-1.21.1-4.0.6.jar` | both | `addon`, `mob`, `world-data` | Overhauled creepers. |
 | Enderman Overhaul | `endermanoverhaul-neoforge-1.21.1-2.0.3.jar` | both | `addon`, `mob`, `world-data` | Overhauled endermen. |
 | Critters and Companions | `crittersandcompanions-neoforge-1.21.1-2.7.0.jar` | both | `core`, `mob` | Small wildlife and pets. |
-| Companions! | `companions-neoforge-1.21.1-1.3.7.jar` | both | `core`, `mob` | Companion creatures. |
+| Companions! | `companions-neoforge-1.21.1-1.3.8.jar` | both | `core`, `mob` | Companion creatures. |
 | Knight Lib | `knightlib-neoforge-1.21.1-2.0.5.jar` | both | `library`, `mob` | Library Companions and Olympus share. |
 | Spawn | `spawn-4.0.8-1.21.1.jar` | both | `core`, `mob` | Extra spawn structures and mobs, including the dodo island. |
 | Teal Lib | `teallib-1.3.teal.jar` | both | `library`, `mob` | Library Spawn needs. |
-| Variants&Ventures | `variantsandventures-neoforge-1.0.29-mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
+| Variants&Ventures | `variantsandventures-neoforge-1.0.30-mc1.21.1.jar` | both | `addon`, `mob` | Variants of vanilla mobs. |
 
 ## Folklore
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Myths & Legends | `mythsandlegends-1.1.0.jar` | both | `core`, `mob` | Folklore creatures, relics, and structures. |
-| Olympus! | `olympusmythology-neoforge-1.21.1-1.1.1.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
+| Olympus! | `olympusmythology-neoforge-1.21.1-1.1.2.jar` | both | `core`, `mob` | Greek artifacts, mobs, and structures. |
 | Archaion: Echoes of the Fallen | `archaion-1.21.1-1.4.4.jar` | both | `core`, `mob` | Fallen-age mobs and structures. |
 
 ## Mob difficulty and farms
@@ -49,7 +49,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Mob Grinding Utils | `mob_grinding_utils-1.1.10+mc1.21.1.jar` | both | `core`, `mob`, `world-data` | Mob farm machines and spikes. |
 | Mob Grinding Utils: Vanillafied (16px) | `Mob Grinding Utils Vanillafied.zip` | client | `resource-pack`, `mob` | Resource pack. Vanilla-styled Mob Grinding Utils textures. |
-| BuffMobs | `buffmobs-4.0.0+mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |
+| BuffMobs | `buffmobs-4.0.2-mc1.21.1-neoforge.jar` | both | `addon`, `mob` | Makes mobs harder, per mob type. |
 | Animal Pens | `animal_pen-neoforge-1.21-2.5.2.jar` | both | `addon`, `mob`, `optimizer` | Stores farm animals in pens so they stop ticking. |
 | Magnum Torch | `MagnumTorch-v21.1.1-1.21.1-NeoForge.jar` | both | `addon`, `mob`, `gameplay` | Torch that blocks mob spawns over a large area. |
 | Grim Soul Industries | `grimsoul-2.1.28.jar` | both | `core`, `mob`, `tech`, `world-data` | Laser grinders, mob capture, and virtual farms. |

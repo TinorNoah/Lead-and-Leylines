@@ -10,7 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Farmer's Delight | `FarmersDelight-1.21.1-1.3.4.jar` | both | `core`, `food`, `farmers-delight` | Cooking, crops, and meals. |
 | Corn Delight[Forge] | `corn_delight-1.2.10-1.21.1.jar` | both | `addon`, `food`, `farmers-delight` | Corn crops and foods. |
-| Mysterious Mountain Lib | `mysterious_mountain_lib-1.2.15-1.21.1.jar` | both | `library`, `food` | Library Corn Delight needs. |
+| Mysterious Mountain Lib | `mysterious_mountain_lib-1.3.16-1.21.1.jar` | both | `library`, `food` | Library Corn Delight needs. |
 | My Nether's Delight | `MyNethersDelight-1.21.1-1.10.4.1.jar` | both | `addon`, `food`, `farmers-delight` | Nether foods. |
 | Jaden's Nether Expansion Delight | `jadensnetherexpansiondelight-1.21.1-1.0.4a-neoforge.jar` | both | `addon`, `food`, `jade`, `farmers-delight` | Foods from Jaden's Nether Expansion. |
 | Ars Nouveau's Flavors & Delight | `arsdelight-2.2.5.jar` | both | `addon`, `food`, `ars-nouveau`, `farmers-delight` | Foods from Ars Nouveau. |
