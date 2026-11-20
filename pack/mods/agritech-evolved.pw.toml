@@ -1,14 +1,13 @@
 name = "Agritech: Evolved (ATE)"
-filename = "agritechevolved-1.1.0.5+mc-1.21.1.jar"
+filename = "agritechevolved-1.1.0.6-mc-1.21.1.jar"
 side = "both"
-pin = true
 
 [download]
 hash-format = "sha1"
-hash = "10eb644af0292c0fb1d8fd1a88e1508e3d4f6f53"
+hash = "18aeeeafe6d8f57f1a3c2e5e96ef95ed7261d51b"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8863518
+file-id = 9419900
 project-id = 1287394

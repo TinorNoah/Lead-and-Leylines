@@ -794,6 +794,12 @@ mods = [
 ]
 
 [[category.group]]
+name = "CelesTech"
+mods = [
+  { file = "celestech.pw.toml", blurb = "Star-powered tech: shoot down stars for energy, send mining rockets to asteroids, and fit implants. Alpha.", tags = ["core", "tech", "resources", "world-data"] },
+]
+
+[[category.group]]
 name = "Industrial Foregoing"
 mods = [
   { file = "industrial-foregoing.pw.toml", blurb = "Machines for farming, mobs, and resources.", tags = ["core", "tech", "world-data"] },

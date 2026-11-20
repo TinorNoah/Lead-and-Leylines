@@ -10,7 +10,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Sodium | `sodium-neoforge-0.8.13+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Renderer. |
 | Iris Shaders | `iris-neoforge-1.8.14-beta.1+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Shader loader for Sodium. |
-| Euphoria Patches | `EuphoriaPatcher-1.10.5-r5.9.3-neoforge.jar` | client | `core`, `rendering` | Shader patch set for Iris. |
+| Euphoria Patches | `EuphoriaPatcher-1.11.2-r5.10-neoforge.jar` | client | `core`, `rendering` | Shader patch set for Iris. |
 | Sodium Extra | `sodium-extra-neoforge-0.9.5+mc1.21.1.jar` | client | `core`, `rendering`, `optimizer` | Extra Sodium options. |
 | Colorwheel | `colorwheel-neoforge-1.3.2-mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Create rendering path for Iris. |
 | Colorwheel Patcher | `colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Patcher Colorwheel needs. |
@@ -19,8 +19,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | MoreCulling | `moreculling-neoforge-1.21.1-1.0.11.jar` | client | `addon`, `rendering`, `optimizer` | Extra block-face culling. |
 | Flerovium | `flerovium-neoforge-1.21.1-1.2.0-all.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper block-entity rendering. |
 | BadOptimizations | `BadOptimizations-2.4.1-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Skips client work that does not change. |
-| AsyncParticles | `AsyncParticles-21.1.4.11-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
-| Particle Rain | `particlerain-4.0.3-1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
+| AsyncParticles | `AsyncParticles-21.1.4.13-1.21.1.jar` | client | `addon`, `rendering`, `optimizer` | Particle rendering off the main thread. |
+| Particle Rain | `particlerain-4.0.4-1.21.1-neoforge.jar` | client | `addon`, `rendering` | Weather drawn with particles. |
 | Subtle Effects | `SubtleEffects-neoforge-1.21.1-1.15.1.jar` | client | `addon`, `rendering` | Extra ambient particles and sounds. |
 | GeckolibBetterFPS | `gbf-1.21.1-1.0.2.jar` | client | `addon`, `rendering`, `optimizer` | Cheaper GeckoLib animations. |
 | Iris & Oculus Search | `IrisSearch-1.8.4-neoforge.jar` | client | `addon`, `rendering` | Search bar for Iris shader settings. |

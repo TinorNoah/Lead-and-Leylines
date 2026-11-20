@@ -1,6 +1,6 @@
 ---
 name: minecraft-modding
-description: Use this skill whenever the user wants to add, remove, update, or troubleshoot Minecraft mods, mod packs, or a modded instance (Forge, Fabric, NeoForge, or Quilt). Trigger it any time a mod name, a modpack, a launcher instance, or terms like "mod loader", "crash log", "mods folder", or "modrinth/curseforge" come up — even if the user just says "add X mod" without asking for a full workflow. Make sure to use this skill before installing, downloading, or recommending any Minecraft mod, since skipping the compatibility and dependency checks here is the single biggest cause of broken modded instances.
+description: Use before adding, removing, updating, recommending, or troubleshooting any mod in this pack (including crash logs). Research, compatibility, approval, manifest.
 ---
 
 # Minecraft Modding

@@ -1,13 +1,13 @@
 name = "Gunsmith Lib"
-filename = "gunsmithlib-neoforge-1.21.1-tacz1.2.0-7.1.1.jar"
+filename = "gunsmithlib-neoforge-1.21.1-tacz1.2.0_hotfix-7.1.3.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "efc3cae21ae43e31144abcf3b523ec0c85482c40"
+hash = "06b32ad863e41464b6c389995a246419de6ac52e"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9501047
+file-id = 9702991
 project-id = 1264058

@@ -1,13 +1,13 @@
 name = "Epic Fight: BK's Poise & Stance"
-filename = "epicfight_poise-4.2.7-neoforge.jar"
+filename = "epicfight_poise-5.0.0-neoforge.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "1811815ee705e2c1914c57a24f359d860360b866"
+hash = "02a75adf30a239d6a95642a723e04d41858d2f43"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 9336137
+file-id = 9653649
 project-id = 1566891

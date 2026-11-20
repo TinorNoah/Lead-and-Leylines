@@ -25,7 +25,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | FramedBlocks | `FramedBlocks-10.6.3.jar` | both | `addon`, `building`, `world-data` | Picture frames for any block. |
 | Visual Workbench | `VisualWorkbench-v21.1.2-1.21.1-NeoForge.jar` | both | `addon`, `building` | Items stay on the crafting table. |
 | Amendments | `amendments-1.21-2.2.7-neoforge.jar` | both | `core`, `building` | Lanterns, hanging signs, and small block tweaks. |
-| Supplementaries | `supplementaries-1.21.1-4.1.0-neoforge.jar` | both | `core`, `building` | Jars, ropes, signs, and furniture. |
+| Supplementaries | `supplementaries-1.21.1-4.1.3-neoforge.jar` | both | `core`, `building` | Jars, ropes, signs, and furniture. |
 | Moonlight Lib | `moonlight-1.21.1-3.8.3-neoforge.jar` | both | `library`, `building` | Moonlight library Supplementaries and Amendments use. |
 | Glassential Renewed | `Glassential-renewed-1.21.1-3.4.7.jar` | both | `addon`, `building`, `world-data` | More glass types. |
 | Measurements | `Measurements-neoforge-1.21.1-3.0.3.jar` | both | `addon`, `building` | Tape measure. |
@@ -36,7 +36,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Rechiseled: Create | `rechiseledcreate-1.1.1-neoforge-mc1.21.jar` | both | `compat`, `building`, `create` | Rechiseled variants for Create blocks. |
 | Rechiseled: Applied Energistics 2 | `rechiseledae-1.0.1-neoforge-mc1.21.1.jar` | both | `compat`, `building`, `ae2` | Autocraft Rechiseled blocks in Applied Energistics. |
 | Multi Builder Tool | `MultiBuilderTool-1.21.1-1.1.31.jar` | both | `addon`, `building` | Places a multiblock in one click. |
-| Little Big Redstone | `little-big-redstone-1.9.13-1.21.1.jar` | both | `addon`, `building`, `world-data` | Packs a redstone circuit into one block. |
-| Tesseract API (NeoForge) | `tesseract-api-neoforge-1.12.20-1.21.1.jar` | both | `library`, `building` | Library Little Big Redstone uses. |
+| Little Big Redstone | `little-big-redstone-1.9.14-1.21.1.jar` | both | `addon`, `building`, `world-data` | Packs a redstone circuit into one block. |
+| Tesseract API (NeoForge) | `tesseract-api-neoforge-1.12.21-1.21.1.jar` | both | `library`, `building` | Library Little Big Redstone uses. |
 | Laser Bridges & Doors [Fabric/Forge/NeoForge] | `laserbridges-1.21.1-neoforge-6.3.jar` | both | `core`, `building`, `world-data` | Laser sources that form platforms and doors when powered. |
 | Deimos Lib | `deimos-1.21.1-neoforge-2.8.jar` | both | `library`, `building` | Library Laser Bridges needs. |

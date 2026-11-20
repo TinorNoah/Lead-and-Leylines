@@ -19,6 +19,22 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.8] - 2026-11-20
+
+### Added
+
+- CelesTech (alpha), a tech tree powered by stars: shoot stars down for energy, send mining rockets to asteroids, and fit implants. It adds ilmenite, pentlandite, and spodumene ores to the Overworld.
+
+### Changed
+
+- Updated mods to their latest 1.21.1 NeoForge builds and moved the loader to NeoForge 21.1.267. Modern Industrialization is on 2.5.13 with Tesseract API 1.12.21, BK's Armaments, Poise & Stance, and Weapon Skills are on their new major versions, Lead and Leylines Patches 0.2.3 keeps servers starting with that Armaments build, and Agritech: Evolved is on 1.1.0.6. JEI and Berezka's library stay pinned, and Ars Elemental stays on 0.7.10.4 because 0.7.11.2 stops dedicated servers from starting.
+
+### Fixed
+
+- The game no longer crashes while loading because of Sophisticated Tactical Backpacks' TaCZ gun HUD hook.
+
+### Removed
+
 ## [0.2.7] - 2026-11-14
 
 ### Added

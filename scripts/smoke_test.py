@@ -733,7 +733,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 
 
 def wipe_runtime(work: Path) -> None:
-    for name in ("world", "logs", "crash-reports"):
+    for name in ("world", "logs", "crash-reports", "checkengine"):
         path = work / name
         if path.is_dir():
             shutil.rmtree(path)

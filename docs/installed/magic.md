@@ -26,17 +26,17 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.3.jar` | both | `core`, `magic`, `irons-spells` | Spellbooks. Pinned to 3.16.3 so the Create addon keeps working. |
-| Iron's Lib | `irons_lib-1.21.1-2.3.0.jar` | both | `library`, `magic` | Library Iron's Spells needs. |
+| Iron's Spells 'n Spellbooks | `irons_spellbooks-1.21.1-3.16.4.jar` | both | `core`, `magic`, `irons-spells` | Spellbooks. Pinned to 3.16.3 so the Create addon keeps working. |
+| Iron's Lib | `irons_lib-1.21.1-2.4.0.jar` | both | `library`, `magic` | Library Iron's Spells needs. |
 | Ace's Spell Utils | `aces_spell_utils-1.2.7.5-1.21.1.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks need. |
 | AzureLib | `azurelib-neo-1.21.1-3.2.8.jar` | both | `library`, `magic`, `irons-spells`, `twilight-forest` | Library the Twilight spellbooks load at runtime. |
 | Spellbooks Of Twilight : Iron's Spells x The Twilight Forest Addon | `twilight_spellbooks-0.0.4.jar` | both | `addon`, `magic`, `irons-spells`, `twilight-forest` | Twilight Forest spells. |
 | Iron's Spells 'N Spellbooks: Create Additions | `ISS-Create-Additions-1.4.jar` | both | `addon`, `magic`, `create`, `irons-spells` | Create spell tools. |
 | Farmer's Spell 'n Spell Book | `farmers-spell-n-spellbook-1.0.7.1-1.21.1.jar` | both | `addon`, `magic`, `irons-spells`, `farmers-delight`, `food` | Farmer's Delight spells. |
 | Apotheosis x Iron's Spellbooks Compat | `irons_apothic-2.2.8.jar` | both | `compat`, `magic`, `apotheosis`, `irons-spells` | Apotheosis gear for these spells. |
-| FamiliarsLib | `familiarslib-1.21.1-2.0.jar` | both | `library`, `magic`, `irons-spells` | Library Alshanex's Familiars needs. |
-| Alshanex's Familiars | `alshanex_familiars-1.21.1_v5.0.jar` | both | `addon`, `magic`, `irons-spells`, `world-data` | Tameable familiars for Iron's Spells. |
-| HazentouveLib | `hazentouvelib-1.0.12.jar` | both | `library`, `magic`, `irons-spells` | Library Mana Sub Zero needs. |
+| FamiliarsLib | `familiarslib-1.21.1-2.1.jar` | both | `library`, `magic`, `irons-spells` | Library Alshanex's Familiars needs. |
+| Alshanex's Familiars | `alshanex_familiars-1.21.1_v5.1.jar` | both | `addon`, `magic`, `irons-spells`, `world-data` | Tameable familiars for Iron's Spells. |
+| HazentouveLib | `hazentouvelib-1.0.14.jar` | both | `library`, `magic`, `irons-spells` | Library Mana Sub Zero needs. |
 | Mana Sub Zero | `mana_sub_zero-1.0.0.jar` | both | `addon`, `magic`, `irons-spells`, `world-data` | Aquamirae spells for Iron's Spells. |
 
 ## Apotheosis
@@ -47,10 +47,10 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Apothic Attributes | `ApothicAttributes-1.21.1-2.11.0.jar` | both | `library`, `magic`, `apotheosis` | Attribute library Apotheosis needs. |
 | Apothic Enchanting | `ApothicEnchanting-1.21.1-1.6.4.jar` | both | `core`, `magic`, `apotheosis` | Enchanting overhaul. |
 | Apothic Spawners | `ApothicSpawners-1.21.1-1.4.0.jar` | both | `core`, `magic`, `apotheosis` | Movable and editable spawners. |
-| Additional Attributes | `additional_attributes-1.21.1-1.2.2.jar` | both | `library`, `magic` | Attributes Fallen Gems needs. |
+| Additional Attributes | `additional_attributes-1.21.1-1.2.3.jar` | both | `library`, `magic` | Attributes Fallen Gems needs. |
 | AttributeFix | `attributefix-neoforge-1.21.1-21.1.3.jar` | both | `library`, `magic` | Fixes attribute stacking. Fallen Gems needs it. |
 | Fallen Gems & Affixes | `fallen_gems_affixes-1.21.1-1.0.0.jar` | both | `addon`, `magic`, `apotheosis` | Extra gems and affixes. |
-| Apothic Compats | `apothic_compats-0.2.6.jar` | both | `compat`, `magic`, `apotheosis` | Apotheosis loot data for other mods. |
+| Apothic Compats | `apothic_compats-0.2.6.1.jar` | both | `compat`, `magic`, `apotheosis` | Apotheosis loot data for other mods. |
 | Apotheosis No Flight | `apotheosisnoflight-1.21.1-1.0.0.jar` | both | `addon`, `magic`, `apotheosis` | Turns off flight potions and charms. |
 | Apotheosis Balance Configurator | `apotheosis_balance-1.21.1-2.1.0.jar` | both | `addon`, `magic`, `apotheosis` | Affix numbers in a config. |
 | Apothic Tooltip Cleanup | `apothic_tooltip_cleanup-1.3.0.jar` | client | `addon`, `magic`, `apotheosis` | Shorter affix lines. Client only. Tooltip Overhaul still draws the frame. |
@@ -62,7 +62,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 |---|---|---|---|---|
 | Spectrum | `spectrum-1.12.9-1.21.1-neo.jar` | both | `core`, `magic` | Progression magic. |
 | Revelationary | `revelationary-neoforge-1.5.2+1.21.1.jar` | both | `library`, `magic` | Library Spectrum needs. |
-| Modonomicon | `modonomicon-1.21.1-neoforge-1.123.0.jar` | both | `library`, `magic` | In-game book Spectrum uses. |
+| Modonomicon | `modonomicon-1.21.1-neoforge-1.123.1.jar` | both | `library`, `magic` | In-game book Spectrum uses. |
 | Lodestone | `lodestone-1.21.1-1.8.2.jar` | both | `library`, `magic` | Library Spectrum needs. |
 | SpectrumJEI | `SpectrumJEI-21.1.11.1+neoforge.jar` | client | `addon`, `magic`, `jei` | Spectrum recipes in JEI. |
 
@@ -71,8 +71,8 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Forbidden and Arcanus | `forbidden_arcanus-1.21.1-2.6.2.jar` | both | `core`, `magic` | Magic blocks, tools, and mobs. |
-| Valhelsia Core | `valhelsia_core-neoforge-1.21.1-1.1.5.jar` | both | `library`, `magic` | Library Forbidden and Arcanus needs. |
-| Neo Vitae | `neovitae-1.21.1-1.1.53.jar` | both | `core`, `magic`, `world-data` | Blood altars, sigils, sentient armour, and a demon dungeon. |
+| Valhelsia Core | `valhelsia_core-neoforge-1.21.1-1.1.6.jar` | both | `library`, `magic` | Library Forbidden and Arcanus needs. |
+| Neo Vitae | `neovitae-1.21.1-1.1.54.jar` | both | `core`, `magic`, `world-data` | Blood altars, sigils, sentient armour, and a demon dungeon. |
 
 ## Jewelry
 

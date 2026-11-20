@@ -1,0 +1,13 @@
+name = "CelesTech"
+filename = "celestech-0.1.2-hotfix-alpha-1.21.1-neoforge.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "d6cb4e128fd215fcc58bfbf5c1af65cb58effad8"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9705284
+project-id = 1797008

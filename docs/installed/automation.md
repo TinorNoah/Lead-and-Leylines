@@ -9,7 +9,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
 | Industrialization Overdrive | `industrialization_overdrive-1.15.1-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization` | Extra Modern Industrialization machines. |
-| Modern Industrialization | `Modern-Industrialization-2.5.12.jar` | both | `core`, `tech`, `modern-industrialization`, `world-data` | A separate factory tech tree. |
+| Modern Industrialization | `Modern-Industrialization-2.5.13.jar` | both | `core`, `tech`, `modern-industrialization`, `world-data` | A separate factory tech tree. |
 | Extended Industrialization | `extended-industrialization-1.16.5-1.21.1.jar` | both | `addon`, `tech`, `modern-industrialization`, `world-data` | Extra Modern Industrialization machines. |
 | Solar Industrialization | `solar_industrialization-1.0.8.jar` | both | `addon`, `tech`, `modern-industrialization` | Solar panels for Modern Industrialization. |
 | Modern Industrialization Structure Viewer | `miviewer-1.1.5.jar` | both | `addon`, `tech`, `modern-industrialization` | In-world MI multiblock preview. |
@@ -52,7 +52,13 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Singulo | `Singulo-0.18.0-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
+| Singulo | `Singulo-0.20.0-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
+
+## CelesTech
+
+| Mod | File | Side | Tags | What it adds |
+|---|---|---|---|---|
+| CelesTech | `celestech-0.1.2-hotfix-alpha-1.21.1-neoforge.jar` | both | `core`, `tech`, `resources`, `world-data` | Star-powered tech: shoot down stars for energy, send mining rockets to asteroids, and fit implants. Alpha. |
 
 ## Industrial Foregoing
 
