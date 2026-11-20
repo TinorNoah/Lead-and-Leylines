@@ -1,0 +1,8 @@
+{
+  "name": "book.betternether.category.intro",
+  "description": "book.betternether.category.intro.desc",
+  "icon": "betternether:nether_reed_stem",
+  "entries": [
+    "betternether:intro/welcome"
+  ]
+}

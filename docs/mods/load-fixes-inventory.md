@@ -275,7 +275,7 @@ See short summary in [configs.md](configs.md) “Orphan loot tables”.
 
 From the same audit — not silenced by datapack:
 
-- Patchouli BetterEnd / BetterNether books (`use_resource_pack` false)
+- Patchouli BetterEnd book (`use_resource_pack` false; upstream says it is intentional, and the pack never hands out the book). The BetterNether book loads now. Its two bad icons, and bad icons or recipe pages in the Animal Pens, Industrial Foregoing, Iron's Spells and Twilight Delight books, are fixed by full English entry copies in `pack/global_packs/required_resources/lead-leylines-guidebook-fixes/` (2026-11-21). Re-check those copies against the mod's file when one of those mods updates. BK's Weapon Skills 3.0.0 still lists four greatswords that BK's Armaments 5.0.0 removed; left for upstream.
 - KubeJS `mbtool` plugin ClassNotFound
 - My Nether’s Delight `minersdelight:cup_variant` WARN (Miner's Delight not installed)
 - Mass `Entity … has no attributes` log noise (now includes `neapolitan:chimpanzee` and `neapolitan:plantain_spider`; this is the normal pack-wide pattern, roughly 470 lines, not a Neapolitan defect)
@@ -349,8 +349,16 @@ Jupiter `Cannot find suitable entry` WARN flood (flat key lookup vs nested
 tables in Oritech/CableTiers/RS-addons configs — keys exist, mods read them
 fine), Epic Fight's `air_slash` params without a registered skill, Elite X
 guns' missing `_backup` reload script, Moonlight's Quark color sets (Quark is
-out by policy), Modern Ragnarok `projection_magic` min>max power, and the
-fallen_gems/Apotheosis staff gem-bonus overlap.
+out by policy), and Modern Ragnarok `projection_magic` min>max power.
+
+### Duplicate gem bonuses — disabled 2026-11-21
+
+Apotheosis rejects a second extra gem bonus whose item categories overlap one already on that gem, and the order it applies them in is random per load. Each client re-applies the synced bonuses in its own order, so a tooltip could disagree with the server. The load-fixes datapack disables these with `neoforge:false` files at the mod's `data/<ns>/extra_gem_bonuses/` path:
+
+- Fallen Gems & Affixes 1.0.0 `the_nether/inferno_staffs` and `core/{guardian,lunar,solar,ballast,lightning}_staffs`. Its `con_cat_bonus` resolves to `irons_apothic:staff` when Iron's Apothic is loaded, so it collides with Iron's Apothic 2.2.8's own staff bonus on the same gem. Iron's Apothic's bonuses are kept. Players lose Fallen's elemental spell-power bonus on those six gems on staffs.
+- Modern Ragnarok 8.0.0 `core/brawlers_classic`. Upstream meant to disable it with `"conditions": [{"type": "forge:false"}]`, which is old Forge syntax and is ignored on NeoForge. Its all-guns attack-damage bonus overlaps `core/brawlers`.
+
+Delete an override if upstream drops or fixes the file. Check: no `categories overlap` WARN from `apotheosis` in the client or server log.
 
 ---
 
