@@ -18,6 +18,8 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 ### Fixed
 
 - Joining a server no longer fails with "Network Protocol Error" on the first try. Modern Industrialization machines show Jade tooltips again, Singulo recipes appear in JEI, and rejoining a server no longer drops Create Connected's settings (Lead and Leylines Patches 0.2.4).
+- Gems socketed into staffs now always get Iron's Apothic's bonus. Before, Inferno, Guardian, Lunar, Solar, Ballast and Lightning gems picked between Iron's Apothic and Fallen Gems & Affixes at random each time the game loaded, and the tooltip could differ from what the server applied. The Brawler's gem keeps its intended gun bonuses instead of sometimes switching to a leftover flat-damage bonus.
+- Fixed blank icons and empty recipe pages in the Animal Pens, BetterNether, Industrial Foregoing, Iron's Spells and Twilight Delight guide books.
 
 ### Removed
 

@@ -3161,6 +3161,10 @@ file = "global_packs/required_data/lead-leylines-load-fixes/data/apotheosis/data
 hash = "639ed6d6e6ecb87d6c1c0acf86de38eff1af77ba470ac23cb1c2f660f93b9887"
 
 [[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/apotheosis_modern_ragnarok/extra_gem_bonuses/core/brawlers_classic.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/apothic_pointblank/tags/item/gun/small_arms.json"
 hash = "9fdc750e854f5d13ff780b9050370e42f130eeb11a6cb62a8c6cb2db0939d438"
 
@@ -3243,6 +3247,30 @@ hash = "f4dc21e8164f6cf248f2e134770e956a61fd0d4299093c7ae6ccc2ffc59ab158"
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/eclipticseasons/tags/worldgen/biome/rainless.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/core/ballast_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/core/guardian_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/core/lightning_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/core/lunar_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/core/solar_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
+
+[[files]]
+file = "global_packs/required_data/lead-leylines-load-fixes/data/fallen_gems_affixes/extra_gem_bonuses/the_nether/inferno_staffs.json"
+hash = "21b11674b18c3fb0d8292095cf7c12bca82ef4054ec3f1cd8d1e0222d1655629"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/data/farmersdelight/tags/block/pies.json"
@@ -3446,7 +3474,7 @@ hash = "de947cc471e598e0da5f3d77e9533024a10b9ee97e1feff74078cecf0b5c9697"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-load-fixes/pack.mcmeta"
-hash = "4e885becc110f2b1f81bd20f538d2d826b41681b6b755edd7052daa79f9f184c"
+hash = "85563123175f6d4e78a1304dd1bdfba85a23c02353879b637b8cbbbc725abfd3"
 
 [[files]]
 file = "global_packs/required_data/lead-leylines-nether-fire-dragons/data/iceandfire/tags/worldgen/biome/structure_gen/fire.json"
@@ -4103,6 +4131,38 @@ hash = "4533e4a137fcd77c3b1f9f4ca0c454aaa594e3b1c282c285b58d2b0b48378d23"
 [[files]]
 file = "global_packs/required_resources/lead-leylines-armageddon-models/pack.mcmeta"
 hash = "ec5710535f284ea0861e8ac8b91ad2d3370fd2af64227323a99546ffb43b77d1"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/animal_pen/patchouli_books/guide_book/en_us/entries/animals/animal_parrot.json"
+hash = "5a58f52c4dd91ce8b7de5832f2e444f847590e9fa9a0fa953974520e33bf5925"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/betternether/patchouli_books/betternether_book/en_us/categories/intro.json"
+hash = "5e26a5801f38c453fc7658cfcf19ce66c7f668e4380b80423243e81054d097bd"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/betternether/patchouli_books/betternether_book/en_us/entries/intro/welcome.json"
+hash = "8b107b6f7541452ceffd3bd9c0bf6a0f2fcaa236f447875c629cae6c1c28372f"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/industrialforegoing/patchouli_books/industrial_foregoing/en_us/entries/basics/addons.json"
+hash = "83aaafd8eb01f3ce70d424aa7b119851d11419f80f1cf84a68eef6f3e15bbf77"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/industrialforegoing/patchouli_books/industrial_foregoing/en_us/entries/tools/infinity_backpack.json"
+hash = "34871367047bd1ec90ac1614d7027db841d190a8b0eef8f85f1c7dd654f41e19"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/irons_spellbooks/patchouli_books/iss_guide_book/en_us/entries/progression/late_game.json"
+hash = "33a419e8319ed05e6972e7076c4ca9e7f2d67c83a5ad431870710f6bf4f6eee6"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/assets/twilightdelight/patchouli_books/twilight_guide/en_us/entries/tricks/twilight_rich_soil.json"
+hash = "183008a8cb4e8e3e383dcda384c7def432285383aad5c2c81425f9505bcb3ccd"
+
+[[files]]
+file = "global_packs/required_resources/lead-leylines-guidebook-fixes/pack.mcmeta"
+hash = "7cb9bcab2464e8424182ae6af95e78e1fc37ffd8ffd8a61ded8bc0e17e36a2d2"
 
 [[files]]
 file = "global_packs/required_resources/lead-leylines-item-atlas-fixes/assets/simplyswords/textures/item/bramblethorn_layer_old.png"
