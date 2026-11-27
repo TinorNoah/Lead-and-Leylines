@@ -790,7 +790,7 @@ mods = [
 [[category.group]]
 name = "Singulo"
 mods = [
-  { file = "singulo.pw.toml", blurb = "Thermocouples up to rotating black holes, multiblocks, and gravity tools.", tags = ["core", "tech", "world-data"] },
+  { file = "singulo.pw.toml", blurb = "Thermocouples up to rotating black holes, multiblocks, gravity tools, and a factory monitor.", tags = ["core", "tech", "world-data"] },
 ]
 
 [[category.group]]
@@ -941,6 +941,7 @@ mods = [
   { file = "the-twilight-forest.pw.toml", blurb = "Twilight Forest dimension.", tags = ["core", "exploration", "twilight-forest"] },
   { file = "tw-resurrection.pw.toml", blurb = "Respawn Twilight Forest bosses.", tags = ["addon", "exploration", "twilight-forest", "world-data"] },
   { file = "twilight-forest-dungeons-villages.pw.toml", blurb = "Twilight Forest villages and dungeons.", tags = ["addon", "exploration", "twilight-forest", "world-data"] },
+  { file = "twilight-endgame.pw.toml", blurb = "Ruler of the Land boss at the Final Castle plateau.", tags = ["addon", "exploration", "twilight-forest", "world-data"] },
 ]
 
 [[category]]

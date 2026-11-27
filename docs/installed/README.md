@@ -31,7 +31,7 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Transport](transport.md) | 18 | Fast travel, item pipes, and routers. |
 | [Resources](resources.md) | 8 | Ores, unification, and chemistry. |
 | [Building](building.md) | 32 | Building tools and decoration. |
-| [Exploration](exploration.md) | 6 | Maps and dimensions. |
+| [Exploration](exploration.md) | 7 | Maps and dimensions. |
 | [FTB](ftb.md) | 11 | Claims, teams, quests, and the shared FTB library. |
 | [Gameplay](gameplay.md) | 16 | Small world and inventory changes. |
 | [Recipes and overlays](info.md) | 31 | JEI, Jade, and tooltip frames. |
@@ -41,4 +41,4 @@ The searchable browser UI lives in [`site/`](../../site/README.md) (Docker / Dok
 | [Stability](stability.md) | 11 | Crash isolation, leak patches, and network fixes. |
 | [Libraries](libraries.md) | 19 | Shared libraries used by more than one mod family. |
 
-610 entries, each listed once.
+611 entries, each listed once.

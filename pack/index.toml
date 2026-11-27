@@ -6650,7 +6650,7 @@ metafile = true
 
 [[files]]
 file = "mods/singulo.pw.toml"
-hash = "c72205d54610dce81ee1768d4a7d1660ddbf8a15828a03787d8634d3dfde9b8c"
+hash = "62b68a91be6d23bb764767e27533580b4c341e78f4f71e16abb449cc624bd34e"
 metafile = true
 
 [[files]]
@@ -6966,6 +6966,11 @@ metafile = true
 [[files]]
 file = "mods/tw-resurrection.pw.toml"
 hash = "ef9e0f93cd87d638dd7691cd7a6e360e5bff7c7a57e3494927cf7f12cc45537b"
+metafile = true
+
+[[files]]
+file = "mods/twilight-endgame.pw.toml"
+hash = "b8e2141e4224dfd4d086454b17b35954d724d4403c5008ea3d4e682b56168a5a"
 metafile = true
 
 [[files]]

@@ -1,0 +1,13 @@
+name = "Twilight Endgame"
+filename = "TwilightEndgame-1.0.0-1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://edge.forgecdn.net/files/9374/726/TwilightEndgame-1.0.0-1.21.1.jar"
+hash-format = "sha1"
+hash = "f45b86ec6e9d00d7c8e0d7b44ff37bd18d4e16fc"
+
+[update]
+[update.curseforge]
+file-id = 9374726
+project-id = 1761533
