@@ -52,7 +52,7 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 
 | Mod | File | Side | Tags | What it adds |
 |---|---|---|---|---|
-| Singulo | `Singulo-0.20.0-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, and gravity tools. |
+| Singulo | `Singulo-0.21.1-1.21.1N.jar` | both | `core`, `tech`, `world-data` | Thermocouples up to rotating black holes, multiblocks, gravity tools, and a factory monitor. |
 
 ## CelesTech
 

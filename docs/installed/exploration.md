@@ -19,3 +19,4 @@ Each mod is listed once. Decision notes stay in [`docs/mods/`](../mods/manifest.
 | The Twilight Forest | `twilightforest-1.21.1-4.8.3345-universal.jar` | both | `core`, `exploration`, `twilight-forest` | Twilight Forest dimension. |
 | Twilight Forest Bosses Resurrection | `tfbr-1.21.1-4.2.2.jar` | both | `addon`, `exploration`, `twilight-forest`, `world-data` | Respawn Twilight Forest bosses. |
 | Twilight Forest - Dungeons & Villages | `tf_dnv-neoforge-2.0.3.jar` | both | `addon`, `exploration`, `twilight-forest`, `world-data` | Twilight Forest villages and dungeons. |
+| Twilight Endgame | `TwilightEndgame-1.0.0-1.21.1.jar` | both | `addon`, `exploration`, `twilight-forest`, `world-data` | Ruler of the Land boss at the Final Castle plateau. |

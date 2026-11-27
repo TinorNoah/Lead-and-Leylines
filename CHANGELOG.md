@@ -19,6 +19,16 @@ Minecraft 1.20.1 Forge history lives on branch `forge-1.20.1` (tag `archive/forg
 
 ### Removed
 
+## [0.2.10] - 2026-11-27
+
+### Added
+
+- Added Twilight Endgame (Ruler of the Land boss at the Twilight Forest Final Castle).
+
+### Changed
+
+- Updated Singulo from 0.20.0 to 0.21.1 (Jade/WTHIT on machines, factory monitor, portable android printers, manual Precision Assembler, and related content; JEI no longer aborts Singulo recipe registration on a null third-party recipe result).
+
 ## [0.2.9] - 2026-11-21
 
 ### Fixed

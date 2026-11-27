@@ -13,7 +13,8 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | FTB Library | `ftb-library-neoforge-2101.1.36.jar` | both | Required by FTB Quests / Teams. ARR. |
 | FTB Teams | `ftb-teams-neoforge-2101.1.11.jar` | both | Shared quest progress. ARR. |
 | FTB Quests | `ftb-quests-neoforge-2101.1.36.jar` | both | Quest book. World data. ARR. |
-| The Twilight Forest | `twilightforest-1.21.1-4.8.3345-universal.jar` | both | Dimension. World data. Thread-safety addon still 1.20.1-only. Bosses Resurrection and Dungeons & Villages are in. |
+| The Twilight Forest | `twilightforest-1.21.1-4.8.3345-universal.jar` | both | Dimension. World data. Thread-safety addon still 1.20.1-only. Bosses Resurrection, Dungeons & Villages, and Twilight Endgame (Final Castle boss) are in. |
+| Twilight Endgame | `TwilightEndgame-1.0.0-1.21.1.jar` | both | Ruler of the Land at the Final Castle plateau. World data. |
 | The Lost Cities | `lostcities-1.21-8.4.4.jar` | both | City generation. World data. LC²H 4.2.3-LTS is in for multithreaded gen. |
 | Aquamirae | `aquamirae-neoforge-1.21.1-7.2.10.jar` | both | Ocean structures, boss, and items. World data. Requires GeckoLib and Fragmentum. Modrinth pin. |
 | Supplementaries | `supplementaries-1.21.1-3.9.9-neoforge.jar` | both | Decor and utility blocks. World data. Moonlight. |
@@ -42,7 +43,7 @@ Target is whatever Minecraft + NeoForge are in [`pack/pack.toml`](../../pack/pac
 | Endfield Industry | — | — | Removed 2026-10-25 on request, same day it went in. World data: machines already placed from it are missing in existing worlds. GeckoLib stays; other mods still need it. |
 | Reinhardt's HBM NeoforgePort | `reinhardtshbm-R26102401.jar` | both | Nuclear tech: reactors, radiation, bombs, heavy industry. A young single-author port of a famously large mod, taken on request. World data. |
 | Voltex | `Voltex-3.0.4-neoforge-1.21.1.jar` | both | Industrial machines, heat, fluids, logistics, and nanites. Another full tech tree beside Modern Industrialization, Mekanism, Oritech, and Nautec. World data. |
-| Singulo | `Singulo-0.11.3-1.21.1N.jar` | both | Thermocouples to rotating black holes: multiblocks, wormholes, gravity tools. World data. |
+| Singulo | `Singulo-0.21.1-1.21.1N.jar` | both | Thermocouples to rotating black holes: multiblocks, wormholes, gravity tools, factory monitor, portable android printers. World data. |
 | Grim Pipe Industries | `grimpipes-1.5.1.jar` | both | Item, fluid, energy, and chemical pipes. Sits beside Modern Dynamics, XNet, and Simple Conveyor Belts instead of replacing them. World data. |
 | Grim Soul Industries | `grimsoul-2.1.27.jar` | both | Laser grinders, mob capture, and virtual farms. Apotheosis was already in. World data. |
 | Comforts | `comforts-neoforge-9.0.5+1.21.1.jar` | both | Sleeping bags and hammocks. World data. |
